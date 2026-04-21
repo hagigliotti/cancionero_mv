@@ -151,10 +151,7 @@ function renderAlphabet() {
     btn.innerText = letter;
     btn.classList.add("alpha-btn");
 
-    // verificar si existe canción que empiece con esa letra
-    const exists = archivos.some(file => {
-      return true; // luego se valida contra data real al cargar
-    });
+    const exists = true;
 
     if (exists) {
       btn.classList.add("active");
