@@ -1,36 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Cancionero</title>
+<meta charset="UTF-8">
+<title>Cancionero</title>
+
+<style>
+body {
+  font-family: Arial;
+  margin: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.cancion {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+button {
+  margin-top: 10px;
+}
+</style>
+
 </head>
 <body>
 
-<h1>Cancionero</h1>
+<h1>🎶 Cancionero</h1>
 
-<input type="text" placeholder="Buscar canción...">
+<input type="text" id="buscador" placeholder="Buscar canción..." onkeyup="buscar()">
 
-<h2>Canción 1</h2>
+<!-- CANCIÓN 1 -->
+<div class="cancion">
+<h2 class="titulo">Alabanza 1</h2>
 
-<a href="https://youtube.com" target="_blank">🎵 Escuchar</a><br><br>
+<a href="https://youtube.com" target="_blank">🎵 Escuchar</a><br>
 
-<button onclick="toggleIdioma()">🌍 Cambiar idioma</button>
+<button onclick="toggleIdioma('letra1')">🌍 Cambiar idioma</button>
 
-<p id="letra">
-Letra en español...
+<p id="letra1" data-es="Dios es amor..." data-en="God is love...">
+Dios es amor...
 </p>
 
-<input type="checkbox"> Cantada
+<label>
+<input type="checkbox" onchange="guardar('c1')" id="c1"> Cantada
+</label>
+</div>
+
+<!-- CANCIÓN 2 -->
+<div class="cancion">
+<h2 class="titulo">Alabanza 2</h2>
+
+<a href="https://youtube.com" target="_blank">🎵 Escuchar</a><br>
+
+<button onclick="toggleIdioma('letra2')">🌍 Cambiar idioma</button>
+
+<p id="letra2" data-es="Cristo vive..." data-en="Christ lives...">
+Cristo vive...
+</p>
+
+<label>
+<input type="checkbox" onchange="guardar('c2')" id="c2"> Cantada
+</label>
+</div>
+
+<!-- CANCIÓN 3 -->
+<div class="cancion">
+<h2 class="titulo">Alabanza 3</h2>
+
+<a href="https://youtube.com" target="_blank">🎵 Escuchar</a><br>
+
+<button onclick="toggleIdioma('letra3')">🌍 Cambiar idioma</button>
+
+<p id="letra3" data-es="Santo es el Señor..." data-en="Holy is the Lord...">
+Santo es el Señor...
+</p>
+
+<label>
+<input type="checkbox" onchange="guardar('c3')" id="c3"> Cantada
+</label>
+</div>
 
 <script>
-function toggleIdioma() {
-  let letra = document.getElementById("letra");
-  if (letra.innerHTML === "Letra en español...") {
-    letra.innerHTML = "Lyrics in English...";
-  } else {
-    letra.innerHTML = "Letra en español...";
+
+// BUSCADOR
+function buscar() {
+  let input = document.getElementById("buscador").value.toLowerCase();
+  let canciones = document.getElementsByClassName("cancion");
+
+  for (let c of canciones) {
+    let titulo = c.getElementsByClassName("titulo")[0].innerText.toLowerCase();
+    c.style.display = titulo.includes(input) ? "" : "none";
   }
 }
+
+// CAMBIO DE IDIOMA
+function toggleIdioma(id) {
+  let p = document.getElementById(id);
+
+  if (p.innerText === p.dataset.es) {
+    p.innerText = p.dataset.en;
+  } else {
+    p.innerText = p.dataset.es;
+  }
+}
+
+// GUARDAR CHECKBOX
+function guardar(id) {
+  let estado = document.getElementById(id).checked;
+  localStorage.setItem(id, estado);
+}
+
+// CARGAR CHECKBOX
+window.onload = function() {
+  ["c1","c2","c3"].forEach(id => {
+    let valor = localStorage.getItem(id);
+    if (valor === "true") {
+      document.getElementById(id).checked = true;
+    }
+  });
+}
+
 </script>
 
 </body>
