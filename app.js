@@ -21,10 +21,30 @@ let archivos = [];
 
 // INICIALIZAR
 async function init() {
-  const indexRes = await fetch(basePath + "index.json");
-  archivos = await indexRes.json();
+  try {
+    const url = "canciones/index.json";
 
-  cargarIndice();
+    console.log("Cargando:", url);
+
+    const indexRes = await fetch(url);
+
+    if (!indexRes.ok) {
+      throw new Error("No se pudo cargar index.json: " + indexRes.status);
+    }
+
+    archivos = await indexRes.json();
+
+    console.log("Archivos cargados:", archivos);
+
+    archivos = archivos.sort();
+
+    cargarIndice();
+
+  } catch (err) {
+    console.error("ERROR INIT:", err);
+    document.getElementById("indice").innerHTML =
+      "❌ Error cargando canciones. Revisar consola.";
+  }
 }
 
 init();
