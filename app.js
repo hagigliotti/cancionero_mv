@@ -1,5 +1,5 @@
 const archivos = [
-  "canciones/abre_mis_ojos.json"
+  "cancionero/canciones/abre_mis_ojos.json"
 ];
 
 // Cargar índice
