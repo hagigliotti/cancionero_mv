@@ -6,8 +6,26 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "DroplineRegular";
+  src: url("fonts/dropline-font/DroplineRegular-Wpegz.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Wiltype";
+  src: url("fonts/wiltype-font/Wiltype-9MA1y.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 h1 {
   font-family: "Octosale", "Segoe UI Emoji", sans-serif;
+}
+
+h2 {
+  font-family: "DroplineRegular", "Segoe UI Emoji", sans-serif;
 }
 
 
