@@ -1,3 +1,17 @@
+/*FUENTES*/
+@font-face {
+  font-family: "Octosale";
+  src: url("fonts/octosale-font/Octosale-LV114.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Octosale", "Segoe UI Emoji", sans-serif;
+}
+
+
+/*ACORDES*/
 .song-line {
   font-family: monospace;
   /*line-height: 1.4;*/
