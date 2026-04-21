@@ -1,4 +1,4 @@
-const basePath = "cancionero/canciones/";
+const basePath = "canciones/";
 
 const indexRes = await fetch(basePath + "index.json");
 const archivos = await indexRes.json();
