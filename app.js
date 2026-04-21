@@ -1,3 +1,5 @@
+console.log("APP JS CARGADO");
+
 const basePath = "canciones/";
 
 const indexRes = await fetch(basePath + "index.json");
@@ -21,6 +23,7 @@ let archivos = [];
 
 // INICIALIZAR
 async function init() {
+  console.log("INIT EJECUTANDO");
   try {
     const url = "canciones/index.json";
 
