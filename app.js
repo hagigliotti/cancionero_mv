@@ -15,8 +15,14 @@ async function init() {
     })
   );
 
+  // 👇 DEBUG
+  console.log("Canciones cargadas:", canciones.length);
+
   cargarIndice();
   renderAlphabet();
+
+  // 👇 DEBUG
+  console.log("Contenido alfabeto:", document.getElementById("alfabeto").innerHTML);
 }
 
 init();
