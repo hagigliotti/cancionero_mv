@@ -3,25 +3,25 @@
   "idiomas": {
     "es": {
       "titulo": "Abre mis ojos",
-      "audio": "https://youtube.com",
+      "audio_url": "https://youtube.com",
       "letra": "Abre mis ojos, Jesús quiero verte,\nconmigo tenerte, decir que te amo."
     },
     
     "it": {
       "titulo": "Apri i miei occhi",
-      "audio": "https://youtube.com",
+      "audio_url": "https://youtube.com",
       "letra": "Apri i miei occhi, Signore..."
       
     },
     "en": {
       "titulo": "Open my eyes",
-      "audio": "https://youtube.com",
+      "audio_url": "https://youtube.com",
       "letra": "Open the eyes of my heart Lord..."
       
     },
     "pt": {
       "titulo": "Abra os meus olhos",
-      "audio": "https://youtube.com",
+      "audio_url": "https://youtube.com",
       "letra": "Abra os meus olhos, ó Cristo..."
       
     }

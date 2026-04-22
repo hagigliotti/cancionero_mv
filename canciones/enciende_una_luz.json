@@ -4,22 +4,22 @@
     "es": {
       "titulo": "Enciende una luz",
       "letra": "Enciende una luz\ny dejala brillar\nes la luz de Jesus\nque brilla en todo lugar",
-      "audio": "https://youtube.com"
+      "audio_url": "https://youtube.com"
     },
     "it": {
       "titulo": "Enciende una luz",
       "letra": "Enciende una luz\ny dejala brillar\nes la luz de Jesus\nque brilla en todo lugar",
-      "audio": "https://youtube.com"
+      "audio_url": "https://youtube.com"
     },
     "en": {
       "titulo": "Enciende una luz",
       "letra": "Enciende una luz\ny dejala brillar\nes la luz de Jesus\nque brilla en todo lugar",
-      "audio": "https://youtube.com"
+      "audio_url": "https://youtube.com"
     },
     "pt": {
       "titulo": "Enciende una luz",
       "letra": "Enciende una luz\ny dejala brillar\nes la luz de Jesus\nque brilla en todo lugar",
-      "audio": "https://youtube.com"
+      "audio_url": "https://youtube.com"
     }
   }
 }
