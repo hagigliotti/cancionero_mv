@@ -50,6 +50,10 @@ h3 {
 }
 
 .alpha-btn {
+  width: 36px;
+  height: 36px;
+  text-align: center;
+
   font-size: 14px;
   padding: 6px 10px;
 
@@ -61,6 +65,9 @@ h3 {
 
   min-width: 34px;
   flex: 0 0 auto;
+
+  aspect-ratio: 1/1;
+  border-radius: 6px;
 }
 
 .alpha-btn.active {
@@ -77,6 +84,45 @@ h3 {
 .alpha-btn.selected {
   background: #111;
   color: #fff;
+}
+
+#alfabeto {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(35px, 1fr));
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  justify-items: center;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.active-letter {
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  transform: scale(1.1);
+}
+
+#indice li {
+  animation: fadeIn 0.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* BOTON DE OCULTAR ÍNDICE */
@@ -121,4 +167,19 @@ h3 {
   background: black;
   color: white;
   text-align: center;
+  padding: 2px 12px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 1px;
 }
+
+.proyector {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.proyector .song-line {
+  margin-bottom: 20px;
+}
+
+

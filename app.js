@@ -1,5 +1,6 @@
 const basePath = "canciones/";
 let canciones = [];
+let letraActiva = null;
 
 // =========================
 // INICIALIZACIÓN
@@ -133,6 +134,7 @@ const alphabets = {
 };
 
 function renderAlphabet() {
+
   const idioma = document.getElementById("idioma").value;
   const container = document.getElementById("alfabeto");
 
@@ -142,8 +144,14 @@ function renderAlphabet() {
 
   letters.split("").forEach(letter => {
     const btn = document.createElement("button");
+    
     btn.innerText = letter;
     btn.classList.add("alpha-btn");
+
+      btn.classList.add("alpha-btn");
+      if (letter === letraActiva) {
+        btn.classList.add("active-letter");
+      }
 
     // TODOS activos para * y #
     if (letter === "*" || letter === "#") {
@@ -174,6 +182,8 @@ function renderAlphabet() {
 // FILTRO POR LETRA
 // =========================
 function filtrarPorLetra(letter) {
+  letraActiva = letter;
+  renderAlphabet();
   const idioma = document.getElementById("idioma").value;
   const indice = document.getElementById("indice");
 
@@ -246,10 +256,19 @@ function bandera(lang) {
 // LETRAS
 // =========================
 function renderLyrics(text) {
-  const lines = text.split("\n");
+  if (!text) return "";
+
+  // ✔️ Si ya es array (tu caso actual)
+  const lines = Array.isArray(text) ? text : text.split("\n");
+
   let html = "";
 
   for (let line of lines) {
+    if (line === "") {
+      html += `<div class="song-line empty"></div>`;
+      continue;
+    }
+
     const parsed = parseChordLine(line);
 
     html += `
@@ -306,21 +325,31 @@ function filtrarCanciones(texto) {
 
   indice.innerHTML = "";
 
-  const q = texto.toLowerCase();
+  const q = texto.toLowerCase().trim();
 
   canciones.forEach(cancion => {
     const song = cancion.idiomas?.[idioma];
     if (!song) return;
 
-    const match =
-      song.titulo.toLowerCase().includes(q) ||
-      song.letra.toLowerCase().includes(q);
+    const letraTexto = Array.isArray(song.letra)
+      ? song.letra.join(" ")
+      : (song.letra || "");
 
-    if (match) {
+    const enTitulo = song.titulo.toLowerCase().includes(q);
+    const enLetra = letraTexto.toLowerCase().includes(q);
+
+    if (enTitulo || enLetra) {
       let li = document.createElement("li");
       li.innerText = song.titulo;
       li.onclick = () => mostrarCancion(cancion);
       indice.appendChild(li);
     }
   });
+}
+
+// =========================
+// PROYECTOR
+// =========================
+function toggleProyector() {
+  document.body.classList.toggle("proyector");
 }
