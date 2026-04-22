@@ -8,21 +8,22 @@ async function init() {
   const indexRes = await fetch(basePath + "index.json");
   const ids = await indexRes.json();
 
-  canciones = await Promise.all(
-    ids.map(async (id) => {
-      const res = await fetch(basePath + id + ".json");
-      return await res.json();
-    })
-  );
+  canciones = [];
 
-  // 👇 DEBUG
+  for (let id of ids) {
+    try {
+      const res = await fetch(basePath + id + ".json");
+      const data = await res.json();
+      canciones.push(data);
+    } catch (e) {
+      console.error("Error cargando:", id, e);
+    }
+  }
+
   console.log("Canciones cargadas:", canciones.length);
 
   cargarIndice();
   renderAlphabet();
-
-  // 👇 DEBUG
-  console.log("Contenido alfabeto:", document.getElementById("alfabeto").innerHTML);
 }
 
 init();
