@@ -1,0 +1,25 @@
+{
+  "id": "enciende_una_luz",
+  "idiomas": {
+    "es": {
+      "titulo": "Enciende una luz",
+      "letra": "Enciende una luz\ny dejala brillar\nes la luz de Jesus\nque brilla en todo lugar",
+      "audio": "https://youtube.com"
+    },
+    "it": {
+      "titulo": "Enciende una luz",
+      "letra": "Enciende una luz\ny dejala brillar\nes la luz de Jesus\nque brilla en todo lugar",
+      "audio": "https://youtube.com"
+    },
+    "en": {
+      "titulo": "Enciende una luz",
+      "letra": "Enciende una luz\ny dejala brillar\nes la luz de Jesus\nque brilla en todo lugar",
+      "audio": "https://youtube.com"
+    },
+    "pt": {
+      "titulo": "Enciende una luz",
+      "letra": "Enciende una luz\ny dejala brillar\nes la luz de Jesus\nque brilla en todo lugar",
+      "audio": "https://youtube.com"
+    }
+  }
+}

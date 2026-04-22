@@ -1,51 +1,26 @@
 {
   "id": "abre_mis_ojos_oh_cristo",
-  "titulo_original": "Open the Eyes of My Heart",
-  "autor": "Michael W. Smith",
-  "compositor": "Michael W. Smith",
-  "traductor": "",
-  "year": "2001",
-  "tonalidad": "",
-  "tempo_bpm": "",
-  "compas": "",
-  "ritmo": "",
-  "tags": ["worship"],
-
   "idiomas": {
     "es": {
-      "titulo": "Abre mis ojos, oh Cristo.",
-      "audio_url": "",
+      "titulo": "Abre mis ojos, oh Cristo",
+      "audio": "https://youtube.com",
       "letra": "[D]Abre mis ojos, oh Cristo,\n[A]Abre mis ojos, Señor,\nYo quiero [G]verte,\nYo quiero[D] verte. x2"
+      
     },
-
-    "en": {
-      "titulo": "Open the eyes of my heart",
-      "audio_url": "",
-      "letra": "Open the eyes of my heart Lord"
-    },
-
     "it": {
       "titulo": "Apri i miei occhi, Signore",
-      "audio_url": "",
-      "letra": "Apri i miei occhi, Signore..."
+      "audio": "https://youtube.com",
+      "letra": "Apri i miei occhi, Signore..." 
     },
-
+    "en": {
+      "titulo": "Open the eyes of my heart Lord",
+      "audio": "https://youtube.com",
+      "letra": "Open the eyes of my heart Lord..."
+    },
     "pt": {
       "titulo": "Abra os meus olhos, ó Cristo",
-      "audio_url": "",
+      "audio": "https://youtube.com",
       "letra": "Abra os meus olhos, ó Cristo..."
-    },
-
-    "fr": {
-      "titulo": "",
-      "audio_url": "",
-      "letra": ""
-    },
-
-    "de": {
-      "titulo": "",
-      "audio_url": "",
-      "letra": ""
     }
   }
 }

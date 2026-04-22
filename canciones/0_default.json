@@ -1,0 +1,51 @@
+{
+  "id": "",
+  "titulo_original": "",
+  "autor": "",
+  "compositor": "",
+  "traductor": "",
+  "year": "",
+  "tonalidad": "",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "tags": [],
+
+  "idiomas": {
+    "es": {
+      "titulo": "",
+      "audio_url": "",
+      "letra": ""
+    },
+
+    "en": {
+      "titulo": "",
+      "audio_url": "",
+      "letra": ""
+    },
+
+    "it": {
+      "titulo": "",
+      "audio_url": "",
+      "letra": ""
+    },
+
+    "pt": {
+      "titulo": "",
+      "audio_url": "",
+      "letra": ""
+    },
+
+    "fr": {
+      "titulo": "",
+      "audio_url": "",
+      "letra": ""
+    },
+    
+    "de": {
+      "titulo": "",
+      "audio_url": "",
+      "letra": ""
+    }
+  }
+}
