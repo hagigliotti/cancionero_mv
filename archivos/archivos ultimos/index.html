@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<title>Cancionero MV</title>
+</head>
+<body>
+
+<h1><center>🎶 Cancionero MV 🎶</center></h1>
+
+<!-- busqueda blanda -->
+<input id="buscador" type="text" placeholder="🔎 Buscar canción..." />
+  
+<!-- selector idioma -->
+<select id="idioma" onchange="cargarIndice(); renderAlphabet();">
+  <option value="es" selected>🇦🇷 Español</option>
+  <option value="it">🇮🇹 Italiano</option>
+  <option value="pt">🇧🇷 Portugués</option>
+  <option value="en">🇺🇸 English</option>
+</select>
+
+<h3>Índice</h3>
+<ul id="indice"></ul>
+
+<!-- menu de letras -->
+<div id="alfabeto" class="alphabet-bar"></div>
+
+<hr>
+
+<div id="contenido"></div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

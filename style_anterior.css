@@ -1,0 +1,185 @@
+/***  TIPOS DE FUENTES: fonts ***/
+@font-face {
+  font-family: "Octosale";
+  src: url("fonts/octosale-font/Octosale-LV114.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DroplineRegular";
+  src: url("fonts/dropline-font/DroplineRegular-Wpegz.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Wiltype";
+  src: url("fonts/wiltype-font/Wiltype-9MA1y.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Octosale", "Segoe UI Emoji", sans-serif;
+}
+
+h3 {
+  font-family: "DroplineRegular", "Segoe UI Emoji", sans-serif;
+}
+
+/*** BOTONES DEL ALFABETO PARA EL MENU ***/
+.alphabet-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  padding: 8px;
+  margin: 10px 0;
+
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.alpha-btn {
+  width: 36px;
+  height: 36px;
+  text-align: center;
+
+  font-size: 14px;
+  padding: 6px 10px;
+
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+
+  border-radius: 6px;
+  cursor: pointer;
+
+  min-width: 34px;
+  flex: 0 0 auto;
+
+  aspect-ratio: 1/1;
+  border-radius: 6px;
+}
+
+.alpha-btn.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.alpha-btn.disabled {
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.alpha-btn.selected {
+  background: #111;
+  color: #fff;
+}
+
+#alfabeto {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(35px, 1fr));
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  justify-items: center;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.active-letter {
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  transform: scale(1.1);
+}
+
+#indice li {
+  animation: fadeIn 0.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* BOTON DE OCULTAR ÍNDICE */
+.btn-toggle {
+  background: #111827;
+  color: white;
+  border: none;
+  padding: 3px 12px;
+  border-radius: 1px;
+  margin: 10px 0;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-toggle:hover {
+  background: #374151;
+}
+
+.hidden {
+  display: none;
+}
+
+/*** ACORDES ***/
+.song-line {
+  font-family: monospace;
+  /*line-height: 1.4;*/
+}
+
+.chords {
+  white-space: pre;
+  color: #d9534f;
+}
+
+.lyrics {
+  white-space: pre;
+}
+
+
+/*** MODO IGLESIA / TELEPRONTER ***/
+.church-mode {
+  font-size: 2em;
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 2px 12px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 1px;
+}
+
+.proyector {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.proyector .song-line {
+  margin-bottom: 20px;
+}
+
+

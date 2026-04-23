@@ -23,3 +23,54 @@
     }
   }
 }
+
+
+
+[
+     {
+    "id": "enciende_una_luz",
+    "titulo_original": "Enciende una luz",
+    "autor": "Marcos Witt",
+    "referencia": "San Mateo 5:16",
+    "tags": ["adoración", "testimonio", "fe"],
+    "tonalidad": "G",
+    "tempo_bpm": 65,
+
+    "idiomas": {
+        "es": {
+        "titulo": "Enciende una luz",
+        "audio": "https://open.spotify.com/",
+        "letra": [
+            "Enciende una luz y dejala brillar",
+            "La luz de Jesus, que brille en todo lugar",
+            "No la puedes esconder, no te puedes callar",
+            "Ante tal necesidad, enciende una luz en la obscuridad",
+            "",
+            "Y como pues invocarán a aquel en quien no han creído?",
+            "Y como creerán en aquel de quien no han oído?",
+            "Y como oirán si nadie les predica?",
+            "Hermosos son los pies, de los que anuncian la paz",
+            "Las buenas nuevas de Jesús",
+            "",
+            "Enciende una luz y dejala brillar",
+            "La luz de Jesus, que brille en todo lugar",
+            "No la puedes esconder, no te puedes callar",
+            "Ante tal necesidad, enciende una luz en la obscuridad",
+            ]
+        },
+        "en": {
+        "titulo": "Turn on a Light",
+        "audio_url": "",
+        "letra": [
+            "Turn on a light and let it shine",
+            "The light of Jesus that shines everywhere",
+            "You can't hide it, you can't be quiet",
+            "In the face of such need, turn on a light in the darkness",
+            ""
+        ]
+      }
+    }
+   }
+]
+
+

@@ -1,0 +1,82 @@
+/***  TIPOS DE FUENTES: fonts ***/
+@font-face {
+  font-family: "Octosale";
+  src: url("fonts/octosale-font/Octosale-LV114.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DroplineRegular";
+  src: url("fonts/dropline-font/DroplineRegular-Wpegz.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Wiltype";
+  src: url("fonts/wiltype-font/Wiltype-9MA1y.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Octosale", "Segoe UI Emoji", sans-serif;
+}
+
+h3 {
+  font-family: "DroplineRegular", "Segoe UI Emoji", sans-serif;
+}
+
+/*** BOTONES DEL ALFABETO PARA EL MENU ***/
+.alphabet-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 10px 0;
+}
+
+.alpha-btn {
+  font-size: 12px;
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+  border-radius: 4px;
+  cursor: pointer;
+  min-width: 28px;
+}
+
+.alpha-btn.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.alpha-btn.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/*** ACORDES ***/
+.song-line {
+  font-family: monospace;
+  /*line-height: 1.4;*/
+}
+
+.chords {
+  white-space: pre;
+  color: #d9534f;
+}
+
+.lyrics {
+  white-space: pre;
+}
+
+
+/*** MODO IGLESIA / TELEPRONTER ***/
+.church-mode {
+  font-size: 2em;
+  background: black;
+  color: white;
+  text-align: center;
+}

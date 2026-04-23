@@ -1,39 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Cancionero MV</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1><center>🎶 Cancionero MV 🎶</center></h1>
+<h1>🎶 Cancionero MV</h1>
 
-<!-- busqueda blanda -->
-<input id="buscador" type="text" placeholder="🔎 Buscar canción..." />
+<div class="top-bar">
+    <!-- BUSCADOR -->
+    <input id="buscador" type="text" placeholder="🔎 Buscar canción o letra..." />
+    <button id="toggleLista" onclick="toggleLista()">📂 Mostrar canciones</button>
 
-<!-- ocultar indice -->
-<button id="toggleIndice" onclick="toggleIndice()" class="btn-toggle">Ocultar índice</button>
+    <!-- IDIOMAS -->
+    <select id="idioma">
+        <option value="en">🇺🇸 English</option>
+        <option value="es" selected>🇦🇷 Español</option>
+        <option value="it">🇮🇹 Italiano</option>
+        <option value="pt">🇧🇷 Português</option>
+    </select>
 
-<!-- selector idioma -->
-<select id="idioma" onchange="cargarIndice(); renderAlphabet();">
-  <option value="es" selected>🇦🇷 Español</option>
-  <option value="it">🇮🇹 Italiano</option>
-  <option value="pt">🇧🇷 Portugués</option>
-  <option value="en">🇺🇸 English</option>
-</select>
+    <!-- CLARO / OSCURO -->
+    <button id="themeToggle" onclick="toggleTheme()">☀️</button>
+</div>
+<!-- ALFABETO -->
+<div id="alfabeto"></div>
 
-<button onclick="toggleProyector()">Proyecion</button>
-
-
-<h3>Índice</h3>
-<!-- menu de letras -->
-<div id="alfabeto" class="alphabet-bar"></div>
-<ul id="indice"></ul>
+<!-- ÍNDICE -->
+<ul id="indice" class="hidden"></ul>
 
 <hr>
 
+<!-- CONTENIDO -->
 <div id="contenido"></div>
 
 <script src="app.js"></script>

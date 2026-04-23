@@ -1,123 +1,109 @@
-/***  TIPOS DE FUENTES: fonts ***/
-@font-face {
-  font-family: "Octosale";
-  src: url("fonts/octosale-font/Octosale-LV114.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "DroplineRegular";
-  src: url("fonts/dropline-font/DroplineRegular-Wpegz.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Wiltype";
-  src: url("fonts/wiltype-font/Wiltype-9MA1y.ttf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
+body {
+  margin: 0;
+  font-family: system-ui;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 h1 {
-  font-family: "Octosale", "Segoe UI Emoji", sans-serif;
-}
-
-h3 {
-  font-family: "DroplineRegular", "Segoe UI Emoji", sans-serif;
-}
-
-/*** BOTONES DEL ALFABETO PARA EL MENU ***/
-.alphabet-bar {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 6px;
-
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-
-  padding: 8px;
-  margin: 10px 0;
-
-  background: #ffffff;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.alpha-btn {
-  width: 36px;
-  height: 36px;
   text-align: center;
-
-  font-size: 14px;
-  padding: 6px 10px;
-
-  border: 1px solid #ccc;
-  background: #f5f5f5;
-
-  border-radius: 6px;
-  cursor: pointer;
-
-  min-width: 34px;
-  flex: 0 0 auto;
-
-  aspect-ratio: 1/1;
-  border-radius: 6px;
+  padding: 10px;
 }
 
-.alpha-btn.active {
-  background: #2563eb;
-  color: white;
-  border-color: #2563eb;
+#buscador {
+  width: 95%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
 }
 
-.alpha-btn.disabled {
-  opacity: 0.25;
-  pointer-events: none;
-}
-
-.alpha-btn.selected {
-  background: #111;
-  color: #fff;
+#idioma {
+  margin: 10px;
+  padding: 8px;
+  border-radius: 8px;
 }
 
 #alfabeto {
   display: flex;
-  grid-template-columns: repeat(auto-fit, minmax(35px, 1fr));
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: wrap;          /* 🔥 permite múltiples filas */
+  justify-content: center;  /* centra los botones */
   gap: 6px;
-  justify-items: center;
-  align-items: center;
-
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: white;
-  padding: 8px;
-  border-bottom: 1px solid #ddd;
+  padding: 10px;
 }
 
-.active-letter {
-  background: #007bff;
+.alpha {
+  min-width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: none;
+  background: #1e293b;
   color: white;
-  font-weight: bold;
-  transform: scale(1.1);
+}
+
+.alpha.active {
+  background: #3b82f6;
+}
+
+#indice {
+  width: 90%;        /* 🔥 ocupa el 80% */
+  margin: 0 auto;    /* 🔥 centrado perfecto */
+  padding: 0;
 }
 
 #indice li {
+  list-style: none;
+
+  padding: 10px;
+  margin: 10px 0;   /* 🔥 solo vertical */
+  
+  background: #1e293b;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#contenido {
+  padding: 15px;
+}
+
+.meta {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.lyrics div {
+  font-family: monospace;
+  margin: 3px 0;
+}
+
+
+/*BOTON DE OCULTAR CANCIONES*/
+.hidden {
+  display: none;
+}
+
+#toggleLista {
+  margin: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #3b82f6;
+  color: white;
+}
+
+/*visualizar lista de canciones*/
+.hidden {
+  display: none;
+}
+
+.fade-in {
   animation: fadeIn 0.2s ease-in;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(5px);
+    transform: translateY(-5px);
   }
   to {
     opacity: 1;
@@ -125,61 +111,102 @@ h3 {
   }
 }
 
-/* BOTON DE OCULTAR ÍNDICE */
-.btn-toggle {
-  background: #111827;
-  color: white;
+#toggleLista {
+  margin: 10px;
+  padding: 8px 12px;
   border: none;
-  padding: 3px 12px;
-  border-radius: 1px;
-  margin: 10px 0;
-  cursor: pointer;
-  font-size: 12px;
-}
-
-.btn-toggle:hover {
-  background: #374151;
-}
-
-.hidden {
-  display: none;
-}
-
-/*** ACORDES ***/
-.song-line {
-  font-family: monospace;
-  /*line-height: 1.4;*/
-}
-
-.chords {
-  white-space: pre;
-  color: #d9534f;
-}
-
-.lyrics {
-  white-space: pre;
-}
-
-
-/*** MODO IGLESIA / TELEPRONTER ***/
-.church-mode {
-  font-size: 2em;
-  background: black;
+  border-radius: 8px;
+  background: #3b82f6;
   color: white;
-  text-align: center;
-  padding: 2px 12px;
-  margin: 10px 0;
+}
+
+/* CLARO / OSCURO */
+/* BOTÓN TEMA */
+#themeToggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* 🔥 lo hace redondo */
+  border: none;
   cursor: pointer;
-  border-radius: 1px;
+  font-size: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
 }
 
-.proyector {
-  font-size: 1.5rem;
-  line-height: 2rem;
+/* ☀️ MODO CLARO → botón negro */
+.light-mode  {
+  background: #000000;
+  color: #ffffff;
 }
 
-.proyector .song-line {
-  margin-bottom: 20px;
+/* 🌙 MODO OSCURO → botón blanco */
+.dark-mode  {
+  background: #ffffff;
+  color: #000000;
 }
 
+/* LISTA */
+.light-mode #indice li {
+  background: #f1f5f9;
+  color: black;
+}
 
+.dark-mode #indice li {
+  background: #1e293b;
+  color: white;
+}
+
+/* BOTONES ALFABETO */
+.light-mode .alpha {
+  background: #e2e8f0;
+  color: black;
+}
+
+.dark-mode .alpha {
+  background: #1e293b;
+  color: white;
+}
+
+/*barra*/
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+}
+
+/* buscador ocupa todo el espacio */
+#buscador {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* botones compactos */
+#toggleLista,
+#themeToggle {
+  flex-shrink: 0;
+}
+
+/* select compacto */
+#idioma {
+  flex-shrink: 0;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+@media (max-width: 480px) {
+  #idioma {
+    width: 60px;
+  }
+
+  #toggleLista {
+    font-size: 14px;
+    padding: 6px;
+  }
+}
