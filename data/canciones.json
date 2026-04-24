@@ -1,5 +1,5 @@
 [
-  {
+ {
   "id": "abba_nunca_falla",
   "titulo_original": "Abba (Nunca falla)",
   "autor": "Marcos Brunet",
@@ -12,7 +12,7 @@
   "referencia_biblica": "San Juan 1:12",
   "tags": ["Adoración", "Worship"],
   "idiomas": {
-    "es": {
+    "es": { 
       "titulo": "Abba (Nunca falla)",
       "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
       "traductor": "-",
@@ -39,7 +39,8 @@
           "br","br",
           "[Am]Abba[Em], [D/F#]tu [G]amor nunca falla, siempre me abrazas. [x4]"
         ]
-    }}
+      }
+    }
   },
   {
     "id": "enciende_una_luz",
@@ -85,178 +86,278 @@
     }
   },
   {
-  "id": "diez_mil_razones",
-  "titulo_original": "10,000 Reasons (Bless the Lord)",
-  "autor": "Matt Redman, Jonas Myrin",
-  "compositor": "Matt Redman, Jonas Myrin",
-  "year": "2011",
-  "tonalidad": "Sol mayor (G)",
-  "tempo_bpm": "70 bpm (aprox.)",
-  "compas": "4/4",
-  "ritmo": "Balada de adoración (Worship)",
-  "audio": "https://open.spotify.com/track/16e4Q3plJrKkncoLKR1CQ1",
-  "referencia": "Salmos 103:1",
-  "tags": ["adoración", "alabanza", "worship", "cristiana", "iglesia", "congregacional"],
+    "id": "diez_mil_razones",
+    "titulo_original": "10,000 Reasons (Bless the Lord)",
+    "autor": "Matt Redman, Jonas Myrin",
+    "compositor": "Matt Redman, Jonas Myrin",
+    "year": "2011",
+    "tonalidad": "Sol mayor (G)",
+    "tempo_bpm": "70 bpm (aprox.)",
+    "compas": "4/4",
+    "ritmo": "Balada de adoración (Worship)",
+    "audio": "https://open.spotify.com/track/16e4Q3plJrKkncoLKR1CQ1",
+    "referencia": "Salmos 103:1",
+    "tags": ["adoración", "alabanza", "worship", "cristiana", "iglesia", "congregacional"],
 
-  "idiomas": {
-    "es": {
-      "titulo": "Diez mil razones (Bendice al Señor)",
-      "audio_url": "https://open.spotify.com/intl-it/track/4Z7vEiQvCUnjvOStbE9Dfg",
-      "letra": [
-        "Que todo lo que soy alabe al Señor",
-        "Con todo mi corazón",
-        "De Tu grande amor, cantaré",
-        "Tu nombre alabaré",
-        "br","br",
-        "Sale el Sol, es un nuevo amanecer",
-        "Cantaré a ti otra vez",
-        "Sea lo que venga, confiaré en ti",
-        "Alabaré en el anochecer",
-        "br","br",
-        "Que todo lo que soy alabe al Señor",
-        "Con todo mi corazón",
-        "De Tu grande amor, cantaré",
-        "Tu nombre alabaré",
-        "br","br",
-        "Tu amor no tiene fin",
-        "Y Tú eres para siempre",
-        "Y bondadoso es Tu corazón",
-        "Por todo lo que has hecho, yo sigo cantando",
-        "Diez mil razones para alabar",
-        "br","br",
-        "Que todo lo que soy alabe al Señor",
-        "Con todo mi corazón",
-        "De Tu grande amor, cantaré",
-        "Tu nombre alabaré",
-        "br","br",
-        "Y en ese día, cuando ya no tenga fuerza",
-        "Y se acerque Tu gloria",
-        "Mi alma cantará de tu amor sin final",
-        "Diez mil años y para siempre más",
-        "br","br",
-        "Bless the lord!",
-        "br","br",
-        "Oh, my soul",
-        "Oh, my soul",
-        "Worship his holy name",
-        "Sing like never before",
-        "Oh, my soul",
-        "I worship his holy name",
-        "br","br",
-        "We worship his holy name",
-        "We worship his holy name"
-      ]
-    },
+    "idiomas": {
+      "es": {
+        "titulo": "Diez mil razones (Bendice al Señor)",
+        "audio_url": "https://open.spotify.com/intl-it/track/4Z7vEiQvCUnjvOStbE9Dfg",
+        "letra": [
+          "Que todo lo que soy alabe al Señor",
+          "Con todo mi corazón",
+          "De Tu grande amor, cantaré",
+          "Tu nombre alabaré",
+          "br","br",
+          "Sale el Sol, es un nuevo amanecer",
+          "Cantaré a ti otra vez",
+          "Sea lo que venga, confiaré en ti",
+          "Alabaré en el anochecer",
+          "br","br",
+          "Que todo lo que soy alabe al Señor",
+          "Con todo mi corazón",
+          "De Tu grande amor, cantaré",
+          "Tu nombre alabaré",
+          "br","br",
+          "Tu amor no tiene fin",
+          "Y Tú eres para siempre",
+          "Y bondadoso es Tu corazón",
+          "Por todo lo que has hecho, yo sigo cantando",
+          "Diez mil razones para alabar",
+          "br","br",
+          "Que todo lo que soy alabe al Señor",
+          "Con todo mi corazón",
+          "De Tu grande amor, cantaré",
+          "Tu nombre alabaré",
+          "br","br",
+          "Y en ese día, cuando ya no tenga fuerza",
+          "Y se acerque Tu gloria",
+          "Mi alma cantará de tu amor sin final",
+          "Diez mil años y para siempre más",
+          "br","br",
+          "Bless the lord!",
+          "br","br",
+          "Oh, my soul",
+          "Oh, my soul",
+          "Worship his holy name",
+          "Sing like never before",
+          "Oh, my soul",
+          "I worship his holy name",
+          "br","br",
+          "We worship his holy name",
+          "We worship his holy name"
+        ]
+      },
+      "en": {
+        "titulo": "10,000 Reasons (Bless the Lord)",
+        "audio_url": "https://open.spotify.com/track/16e4Q3plJrKkncoLKR1CQ1",
+        "letra": [
+          "Bless the Lord, oh my soul",
+          "Oh my soul",
+          "Worship His holy name",
+          "Sing like never before",
+          "Oh my soul",
+          "I'll worship Your holy name",
+          "br","br",
+          "The Sun comes up, it's a new day dawning",
+          "It's time to sing Your song again",
+          "Whatever may pass, and whatever lies before me",
+          "Let me be singing when the evening comes",
+          "br","br",
+          "Bless the Lord, oh my soul",
+          "Oh my soul",
+          "Worship His holy name",
+          "Sing like never before",
+          "Oh my soul",
+          "I'll worship Your holy name",
+          "br","br",
+          "You're rich in love, and You're slow to anger",
+          "Your name is great, and Your heart is kind",
+          "For all Your goodness I will keep on singing",
+          "Ten thousand reasons for my heart to find",
+          "br","br",
+          "Bless the Lord, oh my soul",
+          "Oh my soul",
+          "Worship His holy name",
+          "Sing like never before",
+          "Oh my soul",
+          "I'll worship Your holy name",
+          "br","br",
+          "And on that day when my strength is failing",
+          "The end draws near and my time has come",
+          "Still my soul will sing Your praise unending",
+          "Ten thousand years and then forevermore",
+          "Forevermore",
+          "br","br",
+          "Bless the Lord, oh my soul",
+          "Oh my soul",
+          "Worship His holy name",
+          "Sing like never before",
+          "Oh my soul",
+          "I'll worship Your holy name"
+        ]
+      },
+      "it": {
+        "titulo": "Diecimila ragioni (10.000 Reasons)",
+        "audio_url": "",
+        "letra": [
+          "(Ritornello)",
+          "br","br",
+          "Benedici il Signore, anima mia",
+          "Anima mia",
+          "Loda il Suo Santo Nome",
+          "Canta come mai prima",
+          "Anima mia",
+          "Adorerò il Tuo Santo Nome",
+          "br","br",
+          "(Strofa 1)",
+          "Sorge il sole, è un nuovo giorno",
+          "È tempo di cantare ancora",
+          "Qualunque cosa passi, e qualunque cosa io affronti",
+          "Lasciami cantare quando la sera arriva",
+          "br","br",
+          "(Ritornello)",
+          "br","br",
+          "(Strofa 2)",
+          "Tu sei ricco d'amore e sei lento all'ira",
+          "E il Tuo Nome è grande e il Tuo cuore è buono",
+          "Per la Tua bontà, io continuerò a cantare",
+          "Diecimila ragioni per il mio cuore per trovare",
+          "br","br",
+          "(Ritornello)",
+          "br","br",
+          "(Strofa 3)",
+          "E in quel giorno, quando la mia forza verrà meno",
+          "La fine si avvicina e il mio tempo è giunto",
+          "Ancora la mia anima canterà il Tuo amore senza fine",
+          "Diecimila anni e poi l'eternità",
+          "br","br",
+          "(Ritornello)"
+        ]
+      }
+    }
+  },
+  {
+    "id": "open-the-eyes-of-my-heart",
+    "titulo_original": "Open the Eyes of My Heart",
+    "autor": "Michael W. Smith",
+    "compositor": "Paul Baloche",
+    "year": "1997",
+    "tonalidad": "E Major",
+    "tempo_bpm": "114",
+    "compas": "4/4",
+    "ritmo": "Pop/Rock Worship",
+    "referencia_biblica": "Efesios 1:18",
+    "tags": ["Adoración", "Exaltación", "Whorship", "Praise"],
 
-    "en": {
-      "titulo": "10,000 Reasons (Bless the Lord)",
-      "audio_url": "https://open.spotify.com/track/16e4Q3plJrKkncoLKR1CQ1",
-      "letra": [
-        "Bless the Lord, oh my soul",
-        "Oh my soul",
-        "Worship His holy name",
-        "Sing like never before",
-        "Oh my soul",
-        "I'll worship Your holy name",
-        "br","br",
-        "The Sun comes up, it's a new day dawning",
-        "It's time to sing Your song again",
-        "Whatever may pass, and whatever lies before me",
-        "Let me be singing when the evening comes",
-        "br","br",
-        "Bless the Lord, oh my soul",
-        "Oh my soul",
-        "Worship His holy name",
-        "Sing like never before",
-        "Oh my soul",
-        "I'll worship Your holy name",
-        "br","br",
-        "You're rich in love, and You're slow to anger",
-        "Your name is great, and Your heart is kind",
-        "For all Your goodness I will keep on singing",
-        "Ten thousand reasons for my heart to find",
-        "br","br",
-        "Bless the Lord, oh my soul",
-        "Oh my soul",
-        "Worship His holy name",
-        "Sing like never before",
-        "Oh my soul",
-        "I'll worship Your holy name",
-        "br","br",
-        "And on that day when my strength is failing",
-        "The end draws near and my time has come",
-        "Still my soul will sing Your praise unending",
-        "Ten thousand years and then forevermore",
-        "Forevermore",
-        "br","br",
-        "Bless the Lord, oh my soul",
-        "Oh my soul",
-        "Worship His holy name",
-        "Sing like never before",
-        "Oh my soul",
-        "I'll worship Your holy name"
-      ]
-    },
+    "idiomas": {
+      "es": {
+        "titulo": "Abre mis ojos oh Cristo",
+        "audio_url": "https://open.spotify.com/track/1063065C7B652E2A6874BB",
+        "traductor": "Danilo Montero / Varios",
+        "letra": [
+          "Abre mis ojos oh Cristo",
+          "Abre mis ojos Señor",
+          "Yo quiero verte",
+          "Yo quiero verte",
+          "Verte alto y exaltado",
+          "Brillando en la luz de tu gloria",
+          "Derrama tu amor y poder",
+          "Mientras cantamos santo, santo, santo",
+          "Santo, santo, santo",
+          "Yo quiero verte"
+        ]
+      },
 
-    "it": {
-      "titulo": "Diecimila ragioni (10.000 Reasons)",
-      "audio_url": "",
-      "letra": [
-        "(Ritornello)",
-        "br","br",
-        "Benedici il Signore, anima mia",
-        "Anima mia",
-        "Loda il Suo Santo Nome",
-        "Canta come mai prima",
-        "Anima mia",
-        "Adorerò il Tuo Santo Nome",
-        "br","br",
-        "(Strofa 1)",
-        "Sorge il sole, è un nuovo giorno",
-        "È tempo di cantare ancora",
-        "Qualunque cosa passi, e qualunque cosa io affronti",
-        "Lasciami cantare quando la sera arriva",
-        "br","br",
-        "(Ritornello)",
-        "br","br",
-        "(Strofa 2)",
-        "Tu sei ricco d'amore e sei lento all'ira",
-        "E il Tuo Nome è grande e il Tuo cuore è buono",
-        "Per la Tua bontà, io continuerò a cantare",
-        "Diecimila ragioni per il mio cuore per trovare",
-        "br","br",
-        "(Ritornello)",
-        "br","br",
-        "(Strofa 3)",
-        "E in quel giorno, quando la mia forza verrà meno",
-        "La fine si avvicina e il mio tempo è giunto",
-        "Ancora la mia anima canterà il Tuo amore senza fine",
-        "Diecimila anni e poi l'eternità",
-        "br","br",
-        "(Ritornello)"
-      ]
-    },
+      "en": {
+        "titulo": "Open the Eyes of My Heart",
+        "audio_url": "https://open.spotify.com/track/30I5S0285mS9Zf69T1N8R2",
+        "traductor": "N/A (Original)",
+        "letra": [
+          "Open the eyes of my heart, Lord",
+          "Open the eyes of my heart",
+          "I want to see You",
+          "I want to see You",
+          "To see You high and lifted up",
+          "Shining in the light of Your glory",
+          "Pour out Your power and love",
+          "As we sing holy, holy, holy",
+          "Holy, holy, holy",
+          "I want to see You"
+        ]
+      },
 
-    "pt": {
-      "titulo": "",
-      "audio_url": "",
-      "letra": [
-      ]
-    },
+      "it": {
+        "titulo": "Apri i miei occhi Signore",
+        "audio_url": "https://open.spotify.com/track/4XvN7VvO9vXqW6qW6XW6X",
+        "traductor": "Comunità Maria",
+        "letra": [
+          "Apri i miei occhi Signore",
+          "Apri i miei occhi del cuor",
+          "Io voglio vederti",
+          "Io voglio vederti",
+          "Vederti alto ed esaltato",
+          "Splendente nella luce di gloria",
+          "Effondi il tuo amore e il poter",
+          "Cantiamo santo, santo, santo",
+          "Santo, santo, santo",
+          "Io voglio vederti"
+        ]
+      },
 
-    "fr": {
-      "titulo": "",
-      "audio_url": "",
-      "letra": [
-      ]
-    },
-    
-    "de": {
-      "titulo": "",
-      "audio_url": "",
-      "letra": [
-      ]
+      "pt": {
+        "titulo": "Abra os Olhos do Meu Coração",
+        "audio_url": "https://open.spotify.com/track/5l0R6R7R8R9R0R1R2R3R4",
+        "traductor": "David Quinlan",
+        "letra": [
+          "Abra os olhos do meu coração",
+          "Abra os olhos do meu coração",
+          "Eu quero Te ver",
+          "Eu quero Te ver",
+          "Te ver exaltado e alto",
+          "Brilhando na luz da Tua glória",
+          "Derrame o Teu poder e amor",
+          "Enquanto cantamos santo, santo, santo",
+          "Santo, santo, santo",
+          "Eu quero Te ver"
+        ]
+      },
+
+      "fr": {
+        "titulo": "Ouvre les yeux de mon coeur",
+        "audio_url": "https://open.spotify.com/track/2n3O4P5Q6R7S8T9U0V1W2",
+        "traductor": "Exaltet / Paul Baloche",
+        "letra": [
+          "Ouvre les yeux de mon cœur, Seigneur",
+          "Ouvre les yeux de mon cœur",
+          "Je veux Te voir",
+          "Je veux Te voir",
+          "Te voir élevé au plus haut",
+          "Rayonnant de l'éclat de Ta gloire",
+          "Répands Ta force et Ton amour",
+          "Alors que nous chantons saint, saint, saint",
+          "Saint, saint, saint",
+          "Je veux Te voir"
+        ]
+      },
+      
+      "de": {
+        "titulo": "Öffne die Augen des Herzens",
+        "audio_url": "https://open.spotify.com/track/1a2b3c4d5e6f7g8h9i0j1",
+        "traductor": "Worship Connect",
+        "letra": [
+          "Öffne die Augen des Herzens",
+          "Öffne die Augen des Herzens",
+          "Ich will dich sehen",
+          "Ich will dich sehen",
+          "Dich sehen hoch erhoben Herr",
+          "Strahlend im Licht deiner Herrlichkeit",
+          "Gieß aus deine Liebe und Kraft",
+          "Wir singen Heilig, Heilig, Heilig",
+          "Heilig, Heilig, Heilig",
+          "Ich will dich sehen"
+        ]
+      }
     }
   }
-}
 ]
