@@ -43,6 +43,9 @@ function selectLetter(l) {
     closeList();
     letraActiva = null;
     renderAlphabet();
+
+    // 👉 limpiar pantalla
+    document.getElementById("contenido").innerHTML = "";
     return;
   }
 
@@ -52,6 +55,9 @@ function selectLetter(l) {
   openList();
   renderAlphabet();
   renderList(l);
+
+  // 👉 limpiar canción activa al cambiar letra
+  document.getElementById("contenido").innerHTML = "";
 }
 
 // ===================== HELPERS =====================
@@ -97,7 +103,7 @@ function renderList(letter) {
   `).join("");
 }
 
-// ===================== OPEN / CLOSE LIST =====================
+// ===================== OPEN / CLOSE =====================
 function openList() {
   const list = document.getElementById("indice");
   list.classList.remove("hidden");
@@ -132,8 +138,8 @@ function openSong(id) {
     <div class="meta">
       <div><b>Original:</b> ${song.titulo_original || ""}</div>
       <div><b>Autor:</b> ${song.autor || ""}</div>
-      <div><b>Referencia:</b> ${song.referencia || ""}</div>
-      <div><b>Tonalidad:</b> ${song.tonalidad || ""} | BPM: ${song.tempo_bpm || ""}</div>
+      <div><b>Referencia bíblica:</b> ${song.referencia_biblica || ""}</div>
+      <div><b>Tonalidad:</b> ${song.tonalidad || ""} <b>| BPM:</b> ${song.tempo_bpm || ""}</div>
       <div><b>Tags:</b> ${(song.tags || []).join(", ")}</div>
     </div>
   `;
@@ -142,7 +148,7 @@ function openSong(id) {
     <h2>${s.titulo || song.titulo_original}</h2>
     ${meta}
     <div class="lyrics">
-      ${(s.letra || []).map(l => `<div>${l}</div>`).join("")}
+      ${renderLyrics(s.letra)}
     </div>
   `;
 }
@@ -151,7 +157,17 @@ function openSong(id) {
 function search(q) {
   const query = q.toLowerCase().trim();
 
-  if (query.length > 0 && !listaVisible) {
+  const list = document.getElementById("indice");
+
+  // 👉 SI ESTÁ VACÍO: NO MOSTRAR NADA
+  if (query.length === 0) {
+    list.innerHTML = "";
+    listaVisible = false;
+    return;
+  }
+
+  // abre lista si estaba cerrada
+  if (!listaVisible) {
     openList();
     listaVisible = true;
   }
@@ -167,14 +183,12 @@ function search(q) {
 
   result = sortByTitle(result);
 
-  document.getElementById("indice").innerHTML =
-    result.map(c =>
-      `<li onclick="openSong('${c.id}')">
-        ${c.idiomas?.[idiomaActual]?.titulo || "Sin título"}
-      </li>`
-    ).join("");
+  list.innerHTML = result.map(c =>
+    `<li onclick="openSong('${c.id}')">
+      ${c.idiomas?.[idiomaActual]?.titulo || "Sin título"}
+    </li>`
+  ).join("");
 }
-
 // ===================== THEME =====================
 function toggleTheme() {
   const body = document.body;
@@ -209,3 +223,93 @@ function loadTheme() {
     btn.innerText = "🌙";
   }
 }
+
+// ===================== LETRA CON ACORDES =====================
+function renderLyrics(text) {
+  if (!text) return "";
+
+  const lines = Array.isArray(text) ? text : text.split("\n");
+
+  return lines.map(line => {
+
+    // 👉 salto de línea explícito
+    if (!line || line === "br") {
+      return `<div class="song-break"></div>`;
+    }
+
+    const parsed = parseChordLine(line);
+
+    const chordsHtml = parsed.chords.map(c => `
+      <span class="chord" style="left:${c.pos}ch">
+        ${c.chord}
+      </span>
+    `).join("");
+
+    return `
+      <div class="song-line">
+        <div class="chord-line">${chordsHtml}</div>
+        <div class="lyrics-line">${parsed.lyrics}</div>
+      </div>
+    `;
+  }).join("");
+}
+
+// ===================== PARSEO DE ACORDES =====================
+function parseChordLine(line) {
+  const regex = /\[([A-G#b♯♭mM0-9\/]+)\]/g;
+
+  let chords = [];
+  let clean = "";
+  let lastIndex = 0;
+
+  let match;
+
+  while ((match = regex.exec(line)) !== null) {
+    const chord = match[1];
+    const index = match.index;
+
+    // texto antes del acorde
+    clean += line.substring(lastIndex, index);
+
+    chords.push({
+      chord,
+      pos: clean.length // posición real en texto limpio
+    });
+
+    lastIndex = index + match[0].length;
+  }
+
+  clean += line.substring(lastIndex);
+
+  return { chords, lyrics: clean };
+}
+
+// ===================== TAMAÑO LETRA =====================
+let fontSizes = ["font-small", "font-medium", "font-large"];
+let fontIndex = 1; // medio por defecto
+
+function toggleFontSize() {
+    document.body.classList.remove(...fontSizes);
+
+    fontIndex = (fontIndex + 1) % fontSizes.length;
+
+    document.body.classList.add(fontSizes[fontIndex]);
+}
+
+// ===================== MODO PROYECTOR =====================
+
+function toggleProyector() {
+  document.body.classList.toggle("proyector");
+}
+
+
+function toggleProjectorMode() {
+    document.body.classList.toggle("projector");
+
+    // opcional: forzar letra grande en proyector
+    if (document.body.classList.contains("projector")) {
+        document.body.classList.remove(...fontSizes);
+        document.body.classList.add("font-large");
+    }
+}
+

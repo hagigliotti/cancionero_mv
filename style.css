@@ -210,3 +210,80 @@ h1 {
     padding: 6px;
   }
 }
+
+/*COLORES DE LA CUADRATURA*/
+.song-line {
+  position: relative;
+  margin-bottom: 4px; /* antes 10px */
+  font-family: monospace;
+}
+
+.chord-line {
+  position: relative;
+  height: 14px; /* antes 18px */
+}
+
+.chord {
+  position: absolute;
+  top: 0;
+  font-weight: bold;
+}
+
+/* modo oscuro */
+.dark-mode .chord {
+  color: red;
+}
+
+/* modo claro */
+.light-mode .chord {
+  color: yellow;
+}
+
+.lyrics-line {
+  white-space: pre;
+}
+
+.lyrics div {
+  margin: 0;
+}
+
+.song-break {
+  height: 18px;
+}
+
+
+/* ===== TAMAÑO LETRA ===== */
+body.font-small #contenido {
+    font-size: 16px;
+}
+
+body.font-medium #contenido {
+    font-size: 20px;
+}
+
+body.font-large #contenido {
+    font-size: 26px;
+}
+
+/* ===== MODO PROYECTOR ===== */
+body.projector {
+    background: black;
+    color: white;
+}
+
+body.projector h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+body.projector #contenido {
+    font-size: 3rem;
+    line-height: 1.6;
+    padding: 40px;
+}
+
+body.projector .top-bar,
+body.projector #alfabeto,
+body.projector #indice {
+    display: none;
+}
