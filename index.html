@@ -14,26 +14,30 @@
 <h1>🎶 Cancionero MV</h1>
 
 <div class="top-bar">
-    <!-- BUSCADOR -->
-    <input id="buscador" type="text" placeholder="🔎 Buscar canción o letra..." />
-    <button id="toggleLista" onclick="toggleLista()">📁</button> 
-    <!-- TAMAÑO LETRA -->
-    <button id="fontSizeBtn" onclick="toggleFontSize()">🔠</button>
 
-    <!-- MODO PROYECCIÓN -->
+  <!-- FILA 1: BUSCADOR -->
+  <div class="top-row">
+    <input id="buscador" type="text" placeholder="🔎 Buscar canción o letra..." />
+  </div>
+
+  <!-- FILA 2: CONTROLES -->
+  <div class="controls-row">
+    <button id="toggleLista" onclick="toggleLista()">📁</button> 
+    <button id="fontSizeBtn" onclick="toggleFontSize()">🔠</button>
     <button id="projectorBtn" onclick="toggleProjectorMode()">📽️</button>
 
-    <!-- IDIOMAS -->
     <select id="idioma">
-        <option value="en">🇺🇸 English</option>
-        <option value="es" selected>🇦🇷 Español</option>
-        <option value="it">🇮🇹 Italiano</option>
-        <option value="pt">🇧🇷 Português</option>
+      <option value="en">🇺🇸 English</option>
+      <option value="es" selected>🇦🇷 Español</option>
+      <option value="it">🇮🇹 Italiano</option>
+      <option value="pt">🇧🇷 Português</option>
     </select>
 
-    <!-- CLARO / OSCURO -->
     <button id="themeToggle" onclick="toggleTheme()">☀️</button>
+  </div>
+
 </div>
+
 <!-- ALFABETO -->
 <div id="alfabeto"></div>
 

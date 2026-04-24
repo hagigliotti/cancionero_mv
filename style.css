@@ -62,7 +62,11 @@ h1 {
 }
 
 #contenido {
-  padding: 15px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* 👈 evita scroll horizontal */
+  box-sizing: border-box;
+  padding: 0 15px; /* 👈 margen izquierdo y derecho */
 }
 
 .meta {
@@ -177,14 +181,30 @@ h1 {
 /*barra*/
 .top-bar {
   display: flex;
+  flex-direction: column; /* 👈 fuerza una sola columna */
+  gap: 10px;
+  width: 100%;
+}
+
+/* BUSCADOR ARRIBA */
+.top-row {
+  width: 100%;
+}
+
+/* CONTROLES ABAJO EN UNA SOLA FILA */
+.controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* 👈 centra horizontalmente */
+  gap: 10px;
   align-items: center;
-  gap: 8px;
-  padding: 10px;
 }
 
 /* buscador ocupa todo el espacio */
 #buscador {
-  flex: 1;
+  width: 99%;
+  max-width: 100%;
+  box-sizing: border-box; /* 👈 clave */
   padding: 10px;
   border-radius: 10px;
   border: 1px solid #000;
@@ -211,9 +231,12 @@ h1 {
 
 /*COLORES DE LA CUADRATURA*/
 .song-line {
-  position: relative;
-  margin-bottom: 4px; /* antes 10px */
-  font-family: monospace;
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: break-word;   /* 👈 rompe palabras largas */
+  word-break: break-word;      /* 👈 fuerza salto si es necesario */
+  white-space: normal;         /* 👈 permite multilinea */
+  box-sizing: border-box;
 }
 
 .chord-line {
