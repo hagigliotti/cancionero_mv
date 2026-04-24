@@ -54,24 +54,41 @@ function selectLetter(l) {
   renderList(l);
 }
 
+// ===================== HELPERS =====================
+function normalize(t) {
+  return (t || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toUpperCase();
+}
+
+function sortByTitle(data) {
+  return data.sort((a, b) => {
+    const aT = a.idiomas?.[idiomaActual]?.titulo || "";
+    const bT = b.idiomas?.[idiomaActual]?.titulo || "";
+    return normalize(aT).localeCompare(normalize(bT));
+  });
+}
+
 // ===================== LISTA =====================
 function renderList(letter) {
   const list = document.getElementById("indice");
-  list.innerHTML = "";
 
-  let data = canciones;
+  let data = [...canciones];
 
   if (letter && letter !== "*") {
     if (letter === "#") {
-      data = canciones.filter(c =>
-        /^\d/.test(c.idiomas?.es?.titulo || "")
+      data = data.filter(c =>
+        /^\d/.test(c.idiomas?.[idiomaActual]?.titulo || "")
       );
     } else {
-      data = canciones.filter(c =>
-        normalize(c.idiomas?.es?.titulo?.charAt(0)) === letter
+      data = data.filter(c =>
+        normalize(c.idiomas?.[idiomaActual]?.titulo?.charAt(0)) === letter
       );
     }
   }
+
+  data = sortByTitle(data);
 
   list.innerHTML = data.map(c => `
     <li onclick="openSong('${c.id}')">
@@ -86,16 +103,14 @@ function openList() {
   list.classList.remove("hidden");
   list.classList.add("fade-in");
 
-  document.getElementById("toggleLista").innerText =
-    "📁 Ocultar canciones";
+  document.getElementById("toggleLista").innerText = "📂";
 }
 
 function closeList() {
   const list = document.getElementById("indice");
   list.classList.add("hidden");
 
-  document.getElementById("toggleLista").innerText =
-    "📂 Canciones";
+  document.getElementById("toggleLista").innerText = "📁";
 
   listaVisible = false;
 }
@@ -141,7 +156,7 @@ function search(q) {
     listaVisible = true;
   }
 
-  const result = canciones.filter(c => {
+  let result = canciones.filter(c => {
     const s = c.idiomas?.[idiomaActual];
 
     return (
@@ -150,20 +165,14 @@ function search(q) {
     );
   });
 
+  result = sortByTitle(result);
+
   document.getElementById("indice").innerHTML =
     result.map(c =>
       `<li onclick="openSong('${c.id}')">
         ${c.idiomas?.[idiomaActual]?.titulo || "Sin título"}
       </li>`
     ).join("");
-}
-
-// ===================== HELPERS =====================
-function normalize(t) {
-  return (t || "")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toUpperCase();
 }
 
 // ===================== THEME =====================
