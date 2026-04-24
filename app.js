@@ -10,7 +10,7 @@ const FLAGS = {
   es: "🇦🇷",
   en: "🇺🇸",
   it: "🇮🇹",
-  pt: "🇵🇹",
+  pt: "🇧🇷",
   fr: "🇫🇷",
   de: "🇩🇪"
 };
@@ -22,6 +22,7 @@ async function init() {
 
   renderAlphabet();
   loadTheme();
+  handleMenuVisibility();
 
   document.getElementById("indice").classList.add("hidden");
 
@@ -402,5 +403,16 @@ function toggleProjectorMode() {
   if (document.body.classList.contains("projector")) {
     document.body.classList.remove(...fontSizes);
     document.body.classList.add("font-large");
+  }
+}
+
+function isMobileOrTablet() {
+  return /Mobi|Android|iPhone|iPad|iPod|Tablet/i.test(navigator.userAgent);
+}
+
+function handleMenuVisibility() {
+  if (isMobileOrTablet()) {
+    document.getElementById("alfabeto").style.display = "none";
+    document.getElementById("indice").style.display = "none";
   }
 }

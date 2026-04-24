@@ -303,10 +303,19 @@ body.projector #contenido {
     padding: 40px;
 }
 
-body.projector .top-bar,
-body.projector #alfabeto,
-body.projector #indice {
-    display: none;
+
+
+/* 👇 la barra principal SE MANTIENE */
+body.projector .top-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ❌ NO ocultar alfabeto si lo quieres usar */
+body.projector #alfabeto {
+    display: flex;
+    justify-content: center;
 }
 
 /*Banderitas para cambiar de idioma en la cancion*/
