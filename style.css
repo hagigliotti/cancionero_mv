@@ -107,6 +107,10 @@ h1 {
   transform: scale(1.05);
 }
 
+#toggleLista {
+  display: none;
+}
+
 /*visualizar lista de canciones*/
 .hidden {
   display: none;
@@ -188,7 +192,7 @@ h1 {
 
 /* BUSCADOR ARRIBA */
 .top-row {
-  width: 100%;
+  width: 98%;
 }
 
 /* CONTROLES ABAJO EN UNA SOLA FILA */
@@ -231,45 +235,41 @@ h1 {
 
 /*COLORES DE LA CUADRATURA*/
 .song-line {
-  width: 100%;
-  max-width: 100%;
-  overflow-wrap: break-word;   /* 👈 rompe palabras largas */
-  word-break: break-word;      /* 👈 fuerza salto si es necesario */
-  white-space: normal;         /* 👈 permite multilinea */
-  box-sizing: border-box;
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 6px;
 }
 
-.chord-line {
+.lyrics {
+  white-space: pre-wrap;
+}
+
+.chord-wrap {
   position: relative;
-  height: 14px; /* antes 18px */
+  display: inline-block;
+  width: 0;
 }
 
 .chord {
   position: absolute;
-  top: 0;
+  top: -2.4em;
+  left: 0;
   font-weight: bold;
+  font-size: 0.85em;
+  white-space: nowrap;
 }
 
-/* modo oscuro */
+/* colores */
 .dark-mode .chord {
   color: red;
 }
 
-/* modo claro */
 .light-mode .chord {
   color: yellow;
 }
 
-.lyrics-line {
-  white-space: pre;
-}
-
-.lyrics div {
-  margin: 0;
-}
-
 .song-break {
-  height: 18px;
+  height: 10px; /* espacio entre estrofas */
 }
 
 
@@ -376,4 +376,77 @@ body.projector #alfabeto {
 .audio a:visited,
 .audio a:active {
   color: inherit;
+}
+
+/* idiomas */
+#idioma {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background: #1e293b;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 8px 28px 8px 12px;
+  font-size: 14px;
+
+  cursor: pointer;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='white' d='M5.5 7l4.5 5 4.5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 14px;
+}
+
+.light-mode #idioma {
+  background: #b6b6b657;
+  color: white;
+}
+
+.dark-mode #idioma {
+  background: #e2e8f0;
+  color: black;
+}
+
+@media (max-width: 480px) {
+  #idioma {
+    font-size: 13px;
+    padding: 6px 24px 6px 10px;
+  }
+}
+
+/* ===================== selector cancionero o himnario ==================== */
+#libro {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background: #1e293b;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 8px 28px 8px 12px;
+  font-size: 14px;
+
+  cursor: pointer;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='white' d='M5.5 7l4.5 5 4.5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 14px;
+}
+
+.light-mode #libro {
+  background: #1e293b;
+  color: white;
+}
+
+.dark-mode #libro {
+  background: #e2e8f0;
+  color: black;
 }
