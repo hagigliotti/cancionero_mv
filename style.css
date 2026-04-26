@@ -250,7 +250,7 @@ h1 {
 
 /*COLORES DE LA CUADRATURA*/
 .song-line {
-  font-size: 20px;
+  font-size: 12px;
   line-height: 1.8;
   margin-bottom: 6px;
 }
@@ -301,6 +301,19 @@ body.font-large #contenido {
     font-size: 26px;
 }
 
+@media (max-width: 480px) {
+
+  .song-line {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .chord {
+    font-size: 0.65em;
+    top: -1.8em;
+  }
+
+}
 /* ===== MODO PROYECTOR ===== */
 body.projector {
     background: black;
