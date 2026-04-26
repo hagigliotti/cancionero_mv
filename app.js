@@ -331,6 +331,8 @@ function openSong(id) {
     return;
   }
 
+  const isProjector = document.body.classList.contains("projector");
+
   const num = getNumeroHimno(song);
 
   const tituloFinal = num
@@ -341,20 +343,33 @@ function openSong(id) {
 
   const meta = `
     <div class="meta">
+
       <div><b>Original:</b> ${song.titulo_original || ""}</div>
-      <div><b>Autor:</b> ${song.autor || ""}</div>
-      <div><b>Compositor:</b> ${song.compositor || ""}</div>
-      <div><b>Año:</b> ${song.year || ""}</div>
-      <div><b>Referencia bíblica:</b> ${song.referencia_biblica || song.referencia || ""}</div>
-      <div><b>Tonalidad:</b> ${song.tonalidad || ""} <b>| BPM:</b> ${song.tempo_bpm || ""}</div>
-      <div><b>Compás:</b> ${song.compas || ""} <b>| Ritmo:</b> ${song.ritmo || ""}</div>
-      <div><b>Tags:</b> ${(song.tags || []).join(", ")}</div>
+
+      <div>
+        <b>Autor:</b> ${song.autor || ""} |
+        <b>Compositor:</b> ${song.compositor || ""} |
+        <b>Año:</b> ${song.year || ""}
+      </div>
+
+      <div>
+        <b>Referencia bíblica:</b> ${song.referencia_biblica || song.referencia || ""}
+      </div>
+
+      <div>
+        <b>Tonalidad:</b> ${song.tonalidad || ""} |
+        <b>BPM:</b> ${song.tempo_bpm || ""} |
+        <b>Compás:</b> ${song.compas || ""} |
+        <b>Ritmo:</b> ${song.ritmo || ""} |
+        <b>Tags:</b> ${(song.tags || []).join(", ")}
+      </div>
 
       ${audioHtml}
 
       <div class="flags">
         <b>Idioma/s:</b> ${renderLanguageFlags(song)}
       </div>
+
     </div>
   `;
 
@@ -501,3 +516,20 @@ function handleMenuVisibility() {
     document.getElementById("indice").classList.add("hidden");
   }
 }
+
+// ===================== BOTON INFO =====================
+function info() {
+  document.getElementById("infoModal").style.display = "block";
+}
+
+function cerrarInfo() {
+  document.getElementById("infoModal").style.display = "none";
+}
+
+// Cerrar haciendo click fuera del cuadro
+window.onclick = function(event) {
+  const modal = document.getElementById("infoModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <title>🎶 Cancionero MV</title>
 
@@ -15,9 +16,28 @@
 
 <div class="top-bar">
 
-<!-- FILA 1: BUSCADOR -->
-<div class="top-row">
+  <!-- FILA 1: CONTROLES -->
+  <div class="controls-row">
 
+    <select id="idioma">
+      <option value="en">🇺🇸 English</option>
+      <option value="es" selected>🇦🇷 Español</option>
+      <option value="it">🇮🇹 Italiano</option>
+      <option value="pt">🇧🇷 Português</option>
+    </select>
+
+    <button id="themeToggle" onclick="toggleTheme()">☀️</button>
+
+    <button id="infobtn" onclick="info()">ℹ</button>
+
+  </div>
+
+<!-- FILA 2: BUSCADOR -->
+<div class="menu-row">
+
+</div>
+
+<div class="top-row">
   <div class="buscador-container">
     <input 
       id="buscador" 
@@ -33,26 +53,12 @@
     </select>
   </div>
 
-  <button id="themeToggle" onclick="toggleTheme()">☀️</button>
-</div>
-
-  <!-- FILA 2: CONTROLES -->
-  <div class="controls-row">
-    
-
-    <button id="toggleLista" onclick="toggleLista()">📁</button> 
-    <button id="fontSizeBtn" onclick="toggleFontSize()">🔠</button>
+  <button id="toggleLista" onclick="toggleLista()">📁</button> 
+     <!-- <button id="fontSizeBtn" onclick="toggleFontSize()">🔠</button> -->
     <button id="projectorBtn" onclick="toggleProjectorMode()">📽️</button>
 
-    <select id="idioma">
-      <option value="en">🇺🇸 English</option>
-      <option value="es" selected>🇦🇷 Español</option>
-      <option value="it">🇮🇹 Italiano</option>
-      <option value="pt">🇧🇷 Português</option>
-    </select>
+</div>
 
-    
-  </div>
 
 </div>
 
@@ -69,5 +75,73 @@
 
 <script src="app.js"></script>
 
+<!-- BOTÓN INFO -->
+
+<!-- POPUP INFO -->
+<div id="infoModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarInfo()">&times;</span>
+
+    <h2>📖 Cancionero Digital</h2>
+
+    <p><strong>Versión:</strong> 1.0</p>
+    <p><strong>Última actualización:</strong> 2026</p>
+
+    <hr>
+
+    <p><strong>Desarrollo:</strong> Hernando Gigliotti</p>
+    <p><strong>Rol:</strong> Diseño, programación y compilación</p>
+
+    <hr>
+
+    <p><strong>Fuente del contenido:</strong></p>
+    <ul>
+      <li>Cancionero Hosanna 2023</li>
+      <li>Cancionero Iglesia de Olivos</li>
+      <li>Cancioneros varios</li>
+      <li>Innario GA Compagnon 2024</li>
+      <li>Internet</li>
+    </ul>
+
+    <p style="font-size: 0.9em;">
+      Este material es una recopilación con fines comunitarios y sin fines de lucro.
+      Las canciones pertenecen a sus respectivos autores.
+    </p>
+
+    <hr>
+
+    <p><strong>Funcionalidades:</strong></p>
+    <ul>
+      <li>Búsqueda de canciones</li>
+      <li>Modo proyector</li>
+      <li>Multi-idioma</li>
+      <li>Visualización de acordes</li>
+    </ul>
+
+    <hr>
+
+    <p><strong>Contacto:</strong></p>
+    <div class="social-links">
+
+      <a href="https://www.youtube.com/@hagigliotti" target="_blank">
+        <i class="fa-brands fa-youtube"></i> 
+      </a>
+
+      <a href="https://x.com/hagigliotti" target="_blank">
+        <i class="fa-brands fa-x-twitter"></i> 
+      </a>
+
+      <a href="https://www.instagram.com/hagigliotti" target="_blank">
+        <i class="fa-brands fa-instagram"></i> 
+      </a>
+
+      <a href="https://www.youtube.com/@hagproducciones" target="_blank">
+        <i class="fa-brands fa-youtube"></i> HAG Producciones
+      </a>
+
+    </div>
+
+  </div>
+</div>
 </body>
 </html>

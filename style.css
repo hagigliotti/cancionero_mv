@@ -72,6 +72,7 @@ h1 {
   overflow-x: hidden; /* 👈 evita scroll horizontal */
   box-sizing: border-box;
   padding: 0 15px; /* 👈 margen izquierdo y derecho */
+  font-size: 18px;
 }
 
 .meta {
@@ -103,6 +104,7 @@ h1 {
   font-size: 16px;
   cursor: pointer;
   transition: 0.2s;
+  border: 1px solid #000;
 }
 
 #toggleLista:hover,
@@ -139,6 +141,22 @@ h1 {
 /* CLARO / OSCURO */
 /* BOTÓN TEMA */
 #themeToggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+}
+
+#infobtn {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -213,9 +231,10 @@ h1 {
 .controls-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* 👈 centra horizontalmente */
+  justify-content: flex-end; /* 👈 esto lo manda a la derecha */
   gap: 10px;
   align-items: center;
+  padding-right: 15px; /* 👈 espacio desde el borde derecho */
 }
 
 /* buscador ocupa todo el espacio */
@@ -250,8 +269,10 @@ h1 {
 
 /*COLORES DE LA CUADRATURA*/
 .song-line {
-  font-size: 12px;
+  font-size: 1em;
   line-height: 1.8;
+  /*font-size: 16px;*/
+  /*line-height: 2.2; /*altura de cuadratura*/
   margin-bottom: 6px;
 }
 
@@ -272,6 +293,7 @@ h1 {
   font-weight: bold;
   font-size: 0.85em;
   white-space: nowrap;
+  font-size: 0.85em;
 }
 
 /* colores */
@@ -287,10 +309,10 @@ h1 {
   height: 10px; /* espacio entre estrofas */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 460px) {
 
   .song-line {
-    font-size: 14px !important;
+    font-size: 10px !important;
     line-height: 1.5;
   }
 
@@ -317,6 +339,11 @@ body.font-medium #contenido {
 body.font-large #contenido {
     font-size: 26px;
 }
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 /* ===== MODO PROYECTOR ===== */
 body.projector {
     background: black;
@@ -332,6 +359,11 @@ body.projector #contenido {
     font-size: 3rem;
     line-height: 1.6;
     padding: 40px;
+    /*estrofas*/
+}
+
+body.projector .song-break {
+  height: 40px; /* espacio entre estrofas */
 }
 
 
@@ -430,6 +462,8 @@ body.projector #alfabeto {
   background-repeat: no-repeat;
   background-position: right 8px center;
   background-size: 14px;
+
+  border: 1px solid #000;
 }
 
 .light-mode #idioma {
@@ -483,4 +517,68 @@ body.projector #alfabeto {
 .dark-mode #libro {
   background: #e2e8f0;
   color: black;
+}
+
+/* ===== boton info ===== */
+/* MODAL FONDO */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* CONTENIDO */
+.modal-content {
+  background: #fff;
+  margin: 5% auto;
+  padding: 25px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* BOTÓN CERRAR */
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* DARK MODE (opcional si ya lo usás) */
+body.dark .modal-content {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+/* CONTACTO REDES SOCIALES */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.2s;
+}
+
+.social-links a:hover {
+  opacity: 0.7;
+}
+
+.icon {
+  font-size: 18px;
 }
