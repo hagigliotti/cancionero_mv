@@ -482,7 +482,6 @@ function isMobileOrTablet() {
 
 function handleMenuVisibility() {
   if (isMobileOrTablet()) {
-    document.getElementById("alfabeto").style.display = "none";
     document.getElementById("indice").style.display = "none";
   }
 }
