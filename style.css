@@ -223,7 +223,7 @@ h1 {
   width: 99%;
   max-width: 100%;
   box-sizing: border-box; /* 👈 clave */
-  padding: 10px;
+  padding: 8px;
   border-radius: 10px;
   border: 1px solid #000;
   font-size: 16px;
