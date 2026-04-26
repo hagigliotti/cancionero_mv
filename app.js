@@ -214,6 +214,8 @@ function tieneIdioma(c) {
 // ===================== OPEN / CLOSE =====================
 function openList() {
   const list = document.getElementById("indice");
+
+  list.style.display = "block"; // 👈 CLAVE
   list.classList.remove("hidden");
   list.classList.add("fade-in");
 
@@ -479,9 +481,8 @@ function loadTheme() {
 function isMobileOrTablet() {
   return /Mobi|Android|iPhone|iPad|iPod|Tablet/i.test(navigator.userAgent);
 }
-
 function handleMenuVisibility() {
   if (isMobileOrTablet()) {
-    document.getElementById("indice").style.display = "none";
+    document.getElementById("indice").classList.add("hidden");
   }
 }
