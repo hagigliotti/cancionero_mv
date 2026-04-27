@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>🎶 Cancionero MV</title>
+
+  <!-- ICONOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <h1>🎶 Cancionero MV</h1>
+
+  <!-- ===================== TOP BAR ===================== -->
+  <div class="top-bar">
+
+    <div class="top-inline">
+
+      <!-- ☰ MENU -->
+      <div class="menu-wrapper">
+        <button type="button" id="menuBtn" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div id="dropdownMenu" class="dropdown-menu">
+
+          <div class="menu-item" onclick="abrirInfoDesdeMenu()">ℹ Acerca de...</div>
+
+          <div class="divider"></div>
+
+          <div class="menu-item">
+            📖 Libro:
+            <select id="menuLibro">
+              <option value="cancionero">Cancionero MV</option>
+              <option value="himnario">Himnario Adventista</option>
+            </select>
+          </div>
+
+          <div class="menu-item">
+            🌐 Idioma:
+            <select id="menuIdioma">
+              <option value="es">🇦🇷 Español</option>
+              <option value="en">🇺🇸 English</option>
+              <option value="it">🇮🇹 Italiano</option>
+              <option value="pt">🇧🇷 Português</option>
+            </select>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="menu-item">⭐ Favoritos</div>
+
+          <div class="divider"></div>
+
+        <div class="menu-item font-controls">
+          🅰️ Tamaño:
+          <button type="button" onclick="cambiarFuente(1)">A+</button>
+          <button type="button" onclick="resetFuente()">A</button>
+          <button type="button" onclick="cambiarFuente(-1)">A-</button>
+        </div>
+          
+
+          <div class="divider"></div>
+
+          <div class="menu-item" onclick="toggleProjectorMode()">📽️ Proyector</div>
+          <div class="menu-item" onclick="toggleTheme()">🌙 / ☀️ Tema</div>
+
+          <div class="divider"></div>
+
+          <a class="menu-item" href="mailto:hagigliotti@gmail.com">📩 Feedback</a>
+
+          <a class="menu-item" href="https://www.paypal.com/" target="_blank" rel="noopener noreferrer">
+            💖 Donaciones
+          </a>
+
+        </div>
+      </div>
+
+      <!-- 🔎 BUSCADOR -->
+      <input id="buscador" type="text" placeholder="🔎 Buscar..." />
+
+      <!-- 🌐 IDIOMA (botón rápido) -->
+      <div class="lang-wrapper">
+        <button type="button" id="langBtn">🇦🇷</button>
+
+        <select id="idioma">
+          <option value="es" selected>🇦🇷</option>
+          <option value="en">🇺🇸</option>
+          <option value="it">🇮🇹</option>
+          <option value="pt">🇧🇷</option>
+        </select>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===================== CONTROLES ===================== -->
+  <div class="top-row">
+    <button type="button" id="toggleLista" onclick="toggleLista()">📁</button> 
+  </div>
+
+  <!-- ===================== ALFABETO ===================== -->
+  <div id="alfabeto"></div>
+
+  <!-- ===================== ÍNDICE ===================== -->
+  <ul id="indice" class="hidden"></ul>
+
+  <hr>
+
+  <!-- ===================== CONTENIDO ===================== -->
+  <div id="contenido"></div>
+
+</div>
+
+<!-- ===================== MODAL INFO ===================== -->
+<div id="infoModal" class="modal" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+
+    <span class="close" onclick="cerrarInfo()">&times;</span>
+
+    <h2>📖 Cancionero Digital</h2>
+
+    <p><strong>Versión:</strong> 1.0</p>
+    <p><strong>Última actualización:</strong> 2026</p>
+
+    <hr>
+
+    <p><strong>Desarrollo:</strong> Hernando Gigliotti</p>
+    <p><strong>Rol:</strong> Diseño, programación y compilación</p>
+
+    <hr>
+
+    <p><strong>Fuente del contenido:</strong></p>
+    <ul>
+      <li>Cancionero Hosanna 2023</li>
+      <li>Cancionero Iglesia de Olivos</li>
+      <li>Cancioneros varios</li>
+      <li>Innario GA Compagnon 2024</li>
+      <li>Internet</li>
+    </ul>
+
+    <p style="font-size: 0.9em;">
+      Este material es una recopilación con fines comunitarios y sin fines de lucro.
+      Las canciones pertenecen a sus respectivos autores.
+    </p>
+
+    <hr>
+
+    <p><strong>Funcionalidades:</strong></p>
+    <ul>
+      <li>Búsqueda de canciones</li>
+      <li>Modo proyector</li>
+      <li>Multi-idioma</li>
+      <li>Visualización de acordes</li>
+    </ul>
+
+    <hr>
+
+    <p><strong>Contacto:</strong></p>
+    <div class="social-links">
+
+      <a href="https://www.youtube.com/@hagigliotti" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+
+      <a href="https://x.com/hagigliotti" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+
+      <a href="https://www.instagram.com/hagigliotti" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a href="https://www.youtube.com/@hagproducciones" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-youtube"></i> HAG Producciones
+      </a>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- JS -->
+<script src="app.js"></script>
+
+</body>
+</html>
