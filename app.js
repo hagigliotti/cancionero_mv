@@ -13,15 +13,13 @@ let idiomaActual = "es";
 let listaVisible = false;
 let letraActiva = null;
 
-// ===================== FLAGS =====================
-const FLAGS = {
-  es: "🇦🇷",
-  en: "🇺🇸",
-  it: "🇮🇹",
-  pt: "🇧🇷",
-  fr: "🇫🇷",
-  de: "🇩🇪"
-};
+// ===================== DATA ACTUAL =====================
+function getDataActual() {
+  return libroActual === "himnario" ? himnos : canciones;
+}
+
+
+
 
 // ===================== INIT =====================
 async function init() {
@@ -33,6 +31,7 @@ async function init() {
 
   renderAlphabet();
   loadTheme();
+  updateThemeMenuText();
 
   // 👇 ACÁ (justo después de loadTheme)
   if (localStorage.getItem("projector") === "on") {
@@ -47,14 +46,18 @@ async function init() {
     .addEventListener("input", e => search(e.target.value));
 
   document.getElementById("idioma")
-  .addEventListener("change", e => {
-    if (libroActual === "himnario") return;
+    .addEventListener("change", e => {
 
-    idiomaActual = e.target.value;
+      if (libroActual === "himnario") return;
 
-    renderAlphabet();
-    renderList(letraActiva);
-  });
+      idiomaActual = e.target.value;
+
+      // 🔥 sincronizar menú
+      document.getElementById("menuIdioma").value = e.target.value;
+
+      renderAlphabet();
+      renderList(letraActiva);
+    });
 
   document.getElementById("libro")
   .addEventListener("change", e => {
@@ -94,10 +97,6 @@ async function init() {
 
 init();
 
-// ===================== DATA ACTUAL =====================
-function getDataActual() {
-  return libroActual === "himnario" ? himnos : canciones;
-}
 
 // ===================== HELPERS =====================
 function normalize(t) {
@@ -120,133 +119,219 @@ function getNumeroHimno(c) {
   return c.idiomas?.[idiomaActual]?.numero_himno ?? "";
 }
 
-// ===================== ALFABETO =====================
-function renderAlphabet() {
-  const container = document.getElementById("alfabeto");
 
-  let letrasDisponibles = new Set();
 
-  getDataActual().forEach(c => {
-    const titulo = c.idiomas?.[idiomaActual]?.titulo;
-    if (!titulo) return;
 
-    const letra = normalize(titulo.charAt(0));
 
-    if (/^\d/.test(letra)) {
-      letrasDisponibles.add("#");
-    } else {
-      letrasDisponibles.add(letra);
-    }
-  });
 
-  let letras = Array.from(letrasDisponibles).sort();
 
-  // 🔥 siempre incluir #
-  if (libroActual === "himnario" && !letras.includes("#")) {
-    letras.unshift("#");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ===================== MOBILE =====================
+function isMobileOrTablet() {
+  return /Mobi|Android|iPhone|iPad|iPod|Tablet/i.test(navigator.userAgent);
+}
+function handleMenuVisibility() {
+  if (isMobileOrTablet()) {
+    document.getElementById("indice").classList.add("hidden");
   }
-
-  // siempre incluir *
-  letras.unshift("*");
-
-  container.innerHTML = letras.map(l =>
-    `<button class="alpha ${l === letraActiva ? "active" : ""}"
-      onclick="selectLetter('${l}')">${l}</button>`
-  ).join("");
 }
 
-function selectLetter(l) {
-  if (letraActiva === l && listaVisible) {
-    closeList();
-    letraActiva = null;
-    renderAlphabet();
-    document.getElementById("contenido").innerHTML = "";
-    return;
+
+// ==================================================================================================================================
+// ===== MENU =================================================================
+function toggleMenu() {
+  document.getElementById("dropdownMenu").classList.toggle("active");
+}
+
+// cerrar al hacer click fuera
+window.addEventListener("click", function(e) {
+
+  // ===== MODAL INFO =====
+  const modal = document.getElementById("infoModal");
+  if (e.target === modal) {
+    modal.style.display = "none";
   }
 
-  letraActiva = l;
-  listaVisible = true;
+  // ===== MENU =====
+  const menu = document.getElementById("dropdownMenu");
+  const btn = document.getElementById("menuBtn");
 
-  openList();
+  if (menu && btn && !menu.contains(e.target) && !btn.contains(e.target)) {
+    menu.classList.remove("active");
+  }
+
+});
+
+// abrir info desde menú (y cerrar menú)
+function abrirInfoDesdeMenu() {
+  document.getElementById("dropdownMenu").classList.remove("active");
+  info();
+}
+
+let fontSizeLevel = 0;
+
+function cambiarFuente(step) {
+  fontSizeLevel += step;
+
+  document.body.classList.remove("font-small", "font-large", "no-chords");
+
+  if (fontSizeLevel > 0) {
+    document.body.classList.add("font-large", "no-chords");
+  } else if (fontSizeLevel < 0) {
+    document.body.classList.add("font-small", "no-chords");
+  }
+}
+
+function resetFuente() {
+  fontSizeLevel = 0;
+  document.body.classList.remove("font-small", "font-large", "no-chords");
+}
+
+// ===== BOTON ACERCA DE.... =================================================================
+function info() {
+  document.getElementById("infoModal").style.display = "block";
+}
+
+function cerrarInfo() {
+  document.getElementById("infoModal").style.display = "none";
+}
+
+// Cerrar haciendo click fuera del cuadro
+window.onclick = function(event) {
+  const modal = document.getElementById("infoModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
+
+// ===== CAMBIO DE IDIOMA ============================================================================
+function renderLanguageFlags(song) {
+  const idiomas = song.idiomas || {};
+
+  return Object.keys(idiomas)
+    .filter(lang => idiomas[lang]?.titulo)
+    .map(lang => `
+      <span class="flag ${lang === idiomaActual ? "active" : ""}"
+            onclick="changeLanguage('${lang}', '${song.id}')">
+        ${FLAGS[lang] || "🌐"}
+      </span>
+    `).join("");
+}
+
+function changeLanguage(lang, songId) {
+  idiomaActual = lang;
+  document.getElementById("idioma").value = lang;
+
   renderAlphabet();
-  renderList(l);
-
-  document.getElementById("contenido").innerHTML = "";
+  openSong(songId);
 }
 
-// ===================== LISTA =====================
-function renderList(letter) {
-  const list = document.getElementById("indice");
+function getAvailableFlags(song) {
+  const idiomas = song.idiomas || {};
 
-  let data = getDataActual().filter(tieneIdioma);
+  return Object.keys(idiomas)
+    .filter(lang => idiomas[lang]?.titulo)
+    .map(lang => FLAGS[lang] || "🌐")
+    .join(" ");
+}
 
-  // 🔤 FILTRO POR LETRA
-  if (letter && letter !== "*" && letter !== "#") {
-    data = data.filter(c =>
-      normalize(c.idiomas?.[idiomaActual]?.titulo?.charAt(0)) === letter
-    );
-  }
+// ===== FLAGS ================================================
+const FLAGS = {
+  es: "🇦🇷",
+  en: "🇺🇸",
+  it: "🇮🇹",
+  pt: "🇧🇷",
+  fr: "🇫🇷",
+  de: "🇩🇪"
+};
 
-  // 🔢 ORDEN NUMÉRICO SOLO PARA #
-  if (libroActual === "himnario" && letter === "#") {
-    data.sort((a, b) =>
-      (Number(getNumeroHimno(a)) || 0) -
-      (Number(getNumeroHimno(b)) || 0)
-    );
+// ===== PROYECTOR ============================================================================
+function toggleProjectorMode() {
+  const body = document.body;
+
+  if (body.classList.contains("projector")) {
+    body.classList.remove("projector");
+    localStorage.setItem("projector", "off");
   } else {
-    data = sortByTitle(data);
+    body.classList.add("projector");
+    localStorage.setItem("projector", "on");
+  }
+}
+
+// ===== THEME ================================================================================
+function updateThemeMenuText() {
+  const item = document.getElementById("themeMenuItem");
+  if (!item) return;
+
+  const isLight = document.body.classList.contains("light-mode");
+
+  if (isLight) {
+    item.innerHTML = "👓 Tema claro";
+  } else {
+    item.innerHTML = "🕶️ Tema oscuro";
+  }
+}
+
+function toggleTheme() {
+  const body = document.body;
+
+  if (body.classList.contains("light-mode")) {
+    body.classList.replace("light-mode", "dark-mode");
+    localStorage.setItem("theme", "dark");
+  } else {
+    body.classList.replace("dark-mode", "light-mode");
+    localStorage.setItem("theme", "light");
   }
 
-  list.innerHTML = data.map(c => {
-    const titulo = c.idiomas?.[idiomaActual]?.titulo || "Sin título";
-    const num = getNumeroHimno ? getNumeroHimno(c) : "";
-
-    const flags = getAvailableFlags(c);
-
-    let baseTitle = "";
-
-    if (libroActual === "himnario") {
-      baseTitle = `${num ? num + " - " : ""}${titulo}`;
-    } else {
-      baseTitle = titulo;
-    }
-
-    return `
-      <li onclick="openSong('${c.id}')">
-        <div style="display:flex; justify-content:space-between; gap:10px;">
-          <span>${baseTitle}</span>
-          <span style="opacity:0.7; font-size:14px;">${flags}</span>
-        </div>
-      </li>
-    `;
-  }).join("");
+  updateThemeMenuText();
 }
 
-// ===================== eliminar cancion de LISTA si no hay cancion =====================
-function tieneIdioma(c) {
-  return c.idiomas?.[idiomaActual]?.titulo;
-}
-// ===================== OPEN / CLOSE =====================
-function openList() {
-  const list = document.getElementById("indice");
+function loadTheme() {
+  const saved = localStorage.getItem("theme");
+  const body = document.body;
 
-  list.style.display = "block"; // 👈 CLAVE
-  list.classList.remove("hidden");
-  list.classList.add("fade-in");
-
-  document.getElementById("toggleLista").innerText = "📂";
+  if (saved === "light") {
+    body.classList.add("light-mode");
+  } else {
+    body.classList.add("dark-mode");
+  }
+  updateThemeMenuText();
 }
 
-function closeList() {
-  const list = document.getElementById("indice");
-  list.classList.add("hidden");
 
-  document.getElementById("toggleLista").innerText = "📁";
 
-  listaVisible = false;
-}
 
-// ===================== SEARCH - BUSQUEDA BLANDA =====================
+// ===== SEARCH - BUSQUEDA BLANDA =================================================================
 function search(q) {
   const query = normalize(q.trim());
   const list = document.getElementById("indice");
@@ -325,35 +410,247 @@ function search(q) {
   }).join("");
 }
 
-// ===================== FLAGS =====================
-function renderLanguageFlags(song) {
-  const idiomas = song.idiomas || {};
 
-  return Object.keys(idiomas)
-    .filter(lang => idiomas[lang]?.titulo)
-    .map(lang => `
-      <span class="flag ${lang === idiomaActual ? "active" : ""}"
-            onclick="changeLanguage('${lang}', '${song.id}')">
-        ${FLAGS[lang] || "🌐"}
-      </span>
-    `).join("");
+// ===== BOTON IDIOMA INTELIGENTE =================================================================
+const langBtn = document.getElementById("langBtn");
+const idiomaSelect = document.getElementById("idioma");
+
+let pressTimer;
+
+// actualizar bandera inicial
+function updateLangFlag() {
+  const selected = idiomaSelect.value;
+  const flag = idiomaSelect.options[idiomaSelect.selectedIndex].text;
+  langBtn.innerText = flag;
 }
+updateLangFlag();
 
-function changeLanguage(lang, songId) {
-  idiomaActual = lang;
-  document.getElementById("idioma").value = lang;
+// CLICK → cambiar idioma rápido
+langBtn.addEventListener("click", () => {
+  let index = idiomaSelect.selectedIndex;
+  index = (index + 1) % idiomaSelect.options.length;
+  idiomaSelect.selectedIndex = index;
+  idiomaSelect.dispatchEvent(new Event("change"));
+  updateLangFlag();
+});
+
+// HOLD → abrir selector real
+langBtn.addEventListener("mousedown", () => {
+  pressTimer = setTimeout(() => {
+    idiomaSelect.style.pointerEvents = "auto";
+    idiomaSelect.style.opacity = "1";
+    idiomaSelect.focus();
+    idiomaSelect.click();
+  }, 500);
+});
+
+langBtn.addEventListener("mouseup", () => {
+  clearTimeout(pressTimer);
+});
+
+langBtn.addEventListener("mouseleave", () => {
+  clearTimeout(pressTimer);
+});
+
+// cuando cambia idioma
+idiomaSelect.addEventListener("change", () => {
+  updateLangFlag();
+
+  idiomaActual = idiomaSelect.value;
+
+  // 👇 ESTA ES LA LÍNEA CLAVE
+  document.getElementById("menuIdioma").value = idiomaSelect.value;
 
   renderAlphabet();
-  openSong(songId);
+  renderList(letraActiva);
+
+  idiomaSelect.style.opacity = "0";
+  idiomaSelect.style.pointerEvents = "none";
+});
+
+// ===================== ALFABETO =====================
+function renderAlphabet() {
+  const container = document.getElementById("alfabeto");
+
+  let letrasDisponibles = new Set();
+
+  getDataActual().forEach(c => {
+    const titulo = c.idiomas?.[idiomaActual]?.titulo;
+    if (!titulo) return;
+
+    const letra = normalize(titulo.charAt(0));
+
+    if (/^\d/.test(letra)) {
+      letrasDisponibles.add("#");
+    } else {
+      letrasDisponibles.add(letra);
+    }
+  });
+
+  let letras = Array.from(letrasDisponibles).sort();
+
+  // 🔥 siempre incluir #
+  if (libroActual === "himnario" && !letras.includes("#")) {
+    letras.unshift("#");
+  }
+
+  // siempre incluir *
+  letras.unshift("*");
+
+  container.innerHTML = letras.map(l =>
+    `<button class="alpha ${l === letraActiva ? "active" : ""}"
+      onclick="selectLetter('${l}')">${l}</button>`
+  ).join("");
 }
 
-function getAvailableFlags(song) {
-  const idiomas = song.idiomas || {};
+function selectLetter(l) {
+  if (letraActiva === l && listaVisible) {
+    closeList();
+    letraActiva = null;
+    renderAlphabet();
+    document.getElementById("contenido").innerHTML = "";
+    return;
+  }
 
-  return Object.keys(idiomas)
-    .filter(lang => idiomas[lang]?.titulo)
-    .map(lang => FLAGS[lang] || "🌐")
-    .join(" ");
+  letraActiva = l;
+  listaVisible = true;
+
+  openList();
+  renderAlphabet();
+  renderList(l);
+
+  document.getElementById("contenido").innerHTML = "";
+}
+
+
+// ==================================================================================================================================
+// ===================== OPEN / CLOSE LISTA DE CANCIONES =====================
+function openList() {
+  const list = document.getElementById("indice");
+
+  list.style.display = "block"; // 👈 CLAVE
+  list.classList.remove("hidden");
+  list.classList.add("fade-in");
+
+  document.getElementById("toggleLista").innerText = "📂";
+}
+
+function closeList() {
+  const list = document.getElementById("indice");
+  list.classList.add("hidden");
+
+  document.getElementById("toggleLista").innerText = "📁";
+
+  listaVisible = false;
+}
+
+// ===================== LISTA =====================
+function renderList(letter) {
+  const list = document.getElementById("indice");
+
+  let data = getDataActual().filter(tieneIdioma);
+
+  // 🔤 FILTRO POR LETRA
+  if (letter && letter !== "*" && letter !== "#") {
+    data = data.filter(c =>
+      normalize(c.idiomas?.[idiomaActual]?.titulo?.charAt(0)) === letter
+    );
+  }
+
+  // 🔢 ORDEN NUMÉRICO SOLO PARA #
+  if (libroActual === "himnario" && letter === "#") {
+    data.sort((a, b) =>
+      (Number(getNumeroHimno(a)) || 0) -
+      (Number(getNumeroHimno(b)) || 0)
+    );
+  } else {
+    data = sortByTitle(data);
+  }
+
+  list.innerHTML = data.map(c => {
+    const titulo = c.idiomas?.[idiomaActual]?.titulo || "Sin título";
+    const num = getNumeroHimno ? getNumeroHimno(c) : "";
+
+    const flags = getAvailableFlags(c);
+
+    let baseTitle = "";
+
+    if (libroActual === "himnario") {
+      baseTitle = `${num ? num + " - " : ""}${titulo}`;
+    } else {
+      baseTitle = titulo;
+    }
+
+    return `
+      <li onclick="openSong('${c.id}')">
+        <div style="display:flex; justify-content:space-between; gap:10px;">
+          <span>${baseTitle}</span>
+          <span style="opacity:0.7; font-size:14px;">${flags}</span>
+        </div>
+      </li>
+    `;
+  }).join("");
+}
+
+// ===================== eliminar cancion de LISTA si no hay cancion =====================
+function tieneIdioma(c) {
+  return c.idiomas?.[idiomaActual]?.titulo;
+}
+
+// ===================== LETRA =====================
+function renderLyrics(text) {
+  if (!text) return "";
+
+  const lines = Array.isArray(text) ? text : text.split("\n");
+
+  return lines.map(line => {
+    if (!line || line === "br") return `<div class="song-break"></div>`;
+
+    return renderChordLine(line);
+  }).join("");
+}
+
+function renderChordLine(line) {
+  if (!line) return "";
+
+  const regex = /\[([^\]]+)\]/g;
+
+  let output = "";
+  let lastIndex = 0;
+
+  let match;
+
+  while ((match = regex.exec(line)) !== null) {
+    const chord = match[1];
+    const index = match.index;
+
+    // texto antes del acorde
+    const text = line.slice(lastIndex, index);
+
+    if (text) {
+      output += `<span class="lyrics">${escapeHtml(text)}</span>`;
+    }
+
+    // acorde asociado a la siguiente palabra
+    output += `<span class="chord-wrap"><span class="chord">${chord}</span></span>`;
+
+    lastIndex = regex.lastIndex;
+  }
+
+  function escapeHtml(str) {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+  // resto final
+  const rest = line.slice(lastIndex).replace(regex, "");
+  if (rest) {
+    output += `<span class="lyrics">${escapeHtml(rest)}</span>`;
+  }
+
+  return `<div class="song-line">${output}</div>`;
 }
 
 // ===================== OPEN SONG =====================
@@ -446,231 +743,3 @@ function renderAudioLink(song, idiomaData) {
     </div>
   `;
 }
-
-// ===================== LETRA =====================
-function renderLyrics(text) {
-  if (!text) return "";
-
-  const lines = Array.isArray(text) ? text : text.split("\n");
-
-  return lines.map(line => {
-    if (!line || line === "br") return `<div class="song-break"></div>`;
-
-    return renderChordLine(line);
-  }).join("");
-}
-
-function renderChordLine(line) {
-  if (!line) return "";
-
-  const regex = /\[([^\]]+)\]/g;
-
-  let output = "";
-  let lastIndex = 0;
-
-  let match;
-
-  while ((match = regex.exec(line)) !== null) {
-    const chord = match[1];
-    const index = match.index;
-
-    // texto antes del acorde
-    const text = line.slice(lastIndex, index);
-
-    if (text) {
-      output += `<span class="lyrics">${escapeHtml(text)}</span>`;
-    }
-
-    // acorde asociado a la siguiente palabra
-    output += `<span class="chord-wrap"><span class="chord">${chord}</span></span>`;
-
-    lastIndex = regex.lastIndex;
-  }
-
-  function escapeHtml(str) {
-  return str
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
-}
-
-  // resto final
-  const rest = line.slice(lastIndex).replace(regex, "");
-  if (rest) {
-    output += `<span class="lyrics">${escapeHtml(rest)}</span>`;
-  }
-
-  return `<div class="song-line">${output}</div>`;
-}
-
-// ===================== THEME =====================
-function toggleTheme() {
-  const body = document.body;
-  const btn = document.getElementById("themeToggle");
-
-  if (body.classList.contains("light-mode")) {
-    body.classList.replace("light-mode", "dark-mode");
-    btn.innerText = "🌙";
-    localStorage.setItem("theme", "dark");
-  } else {
-    body.classList.replace("dark-mode", "light-mode");
-    btn.innerText = "☀️";
-    localStorage.setItem("theme", "light");
-  }
-}
-
-function loadTheme() {
-  const saved = localStorage.getItem("theme");
-  const body = document.body;
-  const btn = document.getElementById("themeToggle");
-
-  if (saved === "light") {
-    body.classList.add("light-mode");
-    btn.innerText = "☀️";
-  } else {
-    body.classList.add("dark-mode");
-    btn.innerText = "🌙";
-  }
-}
-// ===================== PROYECTOR =====================
-function toggleProjectorMode() {
-  const body = document.body;
-
-  if (body.classList.contains("projector")) {
-    body.classList.remove("projector");
-    localStorage.setItem("projector", "off");
-  } else {
-    body.classList.add("projector");
-    localStorage.setItem("projector", "on");
-  }
-}
-
-// ===================== MOBILE =====================
-function isMobileOrTablet() {
-  return /Mobi|Android|iPhone|iPad|iPod|Tablet/i.test(navigator.userAgent);
-}
-function handleMenuVisibility() {
-  if (isMobileOrTablet()) {
-    document.getElementById("indice").classList.add("hidden");
-  }
-}
-
-// ===================== BOTON INFO =====================
-function info() {
-  document.getElementById("infoModal").style.display = "block";
-}
-
-function cerrarInfo() {
-  document.getElementById("infoModal").style.display = "none";
-}
-
-// Cerrar haciendo click fuera del cuadro
-window.onclick = function(event) {
-  const modal = document.getElementById("infoModal");
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-};
-
-// ===================== MENU =====================
-function toggleMenu() {
-  document.getElementById("dropdownMenu").classList.toggle("active");
-}
-
-// cerrar al hacer click fuera
-window.addEventListener("click", function(e) {
-
-  // ===== MODAL INFO =====
-  const modal = document.getElementById("infoModal");
-  if (e.target === modal) {
-    modal.style.display = "none";
-  }
-
-  // ===== MENU =====
-  const menu = document.getElementById("dropdownMenu");
-  const btn = document.getElementById("menuBtn");
-
-  if (menu && btn && !menu.contains(e.target) && !btn.contains(e.target)) {
-    menu.classList.remove("active");
-  }
-
-});
-
-// abrir info desde menú (y cerrar menú)
-function abrirInfoDesdeMenu() {
-  document.getElementById("dropdownMenu").classList.remove("active");
-  info();
-}
-
-let fontSizeLevel = 0;
-
-function cambiarFuente(step) {
-  fontSizeLevel += step;
-
-  document.body.classList.remove("font-small", "font-large", "no-chords");
-
-  if (fontSizeLevel > 0) {
-    document.body.classList.add("font-large", "no-chords");
-  } else if (fontSizeLevel < 0) {
-    document.body.classList.add("font-small", "no-chords");
-  }
-}
-
-function resetFuente() {
-  fontSizeLevel = 0;
-  document.body.classList.remove("font-small", "font-large", "no-chords");
-}
-
-// NO SE QUE ES
-// ===== BOTON IDIOMA INTELIGENTE =====
-const langBtn = document.getElementById("langBtn");
-const idiomaSelect = document.getElementById("idioma");
-
-let pressTimer;
-
-// actualizar bandera inicial
-function updateLangFlag() {
-  const selected = idiomaSelect.value;
-  const flag = idiomaSelect.options[idiomaSelect.selectedIndex].text;
-  langBtn.innerText = flag;
-}
-updateLangFlag();
-
-// CLICK → cambiar idioma rápido
-langBtn.addEventListener("click", () => {
-  let index = idiomaSelect.selectedIndex;
-  index = (index + 1) % idiomaSelect.options.length;
-  idiomaSelect.selectedIndex = index;
-  idiomaSelect.dispatchEvent(new Event("change"));
-  updateLangFlag();
-});
-
-// HOLD → abrir selector real
-langBtn.addEventListener("mousedown", () => {
-  pressTimer = setTimeout(() => {
-    idiomaSelect.style.pointerEvents = "auto";
-    idiomaSelect.style.opacity = "1";
-    idiomaSelect.focus();
-    idiomaSelect.click();
-  }, 500);
-});
-
-langBtn.addEventListener("mouseup", () => {
-  clearTimeout(pressTimer);
-});
-
-langBtn.addEventListener("mouseleave", () => {
-  clearTimeout(pressTimer);
-});
-
-// cuando cambia idioma
-idiomaSelect.addEventListener("change", () => {
-  updateLangFlag();
-
-  idiomaActual = idiomaSelect.value;
-  renderAlphabet();
-  renderList(letraActiva);
-
-  idiomaSelect.style.opacity = "0";
-  idiomaSelect.style.pointerEvents = "none";
-});

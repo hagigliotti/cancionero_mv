@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>🎶 Cancionero MV</title>
+  <title>GESTIONE ORDINI</title>
+   <!-- <title>🎶 Cancionero MV</title> -->
 
   <!-- ICONOS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -17,7 +18,8 @@
 
 <div class="app">
 
-  <h1>🎶 Cancionero MV</h1>
+  <h1>GESTIONE ORDINI</h1>
+  <!-- <h1>🎶 Cancionero MV</h1> -->
 
   <!-- ===================== TOP BAR ===================== -->
   <div class="top-bar">
@@ -46,7 +48,7 @@
 
           <div class="menu-item">
             🌐 Idioma:
-            <select id="menuIdioma">
+            <select id="menuIdioma" disabled>
               <option value="es">🇦🇷 Español</option>
               <option value="en">🇺🇸 English</option>
               <option value="it">🇮🇹 Italiano</option>
@@ -62,29 +64,41 @@
 
         <div class="menu-item font-controls">
           🅰️ Tamaño:
-          <button type="button" onclick="cambiarFuente(1)">A+</button>
-          <button type="button" onclick="resetFuente()">A</button>
           <button type="button" onclick="cambiarFuente(-1)">A-</button>
+          <button type="button" onclick="resetFuente()">A</button>
+          <button type="button" onclick="cambiarFuente(1)">A+</button>
         </div>
           
 
           <div class="divider"></div>
 
-          <div class="menu-item" onclick="toggleProjectorMode()">📽️ Proyector</div>
-          <div class="menu-item" onclick="toggleTheme()">🌙 / ☀️ Tema</div>
+          <div class="menu-title">
+            🧩 Modos de visualización:
+          </div>
+
+          <div class="menu-item sub-item" onclick="toggleProjectorMode()">
+            📽️ Proyector
+          </div>
+
+          <div id="themeMenuItem" class="menu-item sub-item" onclick="toggleTheme()">
+            🕶️ Tema oscuro
+          </div>
 
           <div class="divider"></div>
 
           <a class="menu-item" href="mailto:hagigliotti@gmail.com">📩 Feedback</a>
 
+          <div class="divider"></div>
+
           <a class="menu-item" href="https://www.paypal.com/" target="_blank" rel="noopener noreferrer">
             💖 Donaciones
           </a>
+          <div class="divider"></div>
 
         </div>
       </div>
 
-      <!-- 🔎 BUSCADOR -->
+      <!-- 🔎 BUSCADOR 👓🕶️-->
       <input id="buscador" type="text" placeholder="🔎 Buscar..." />
 
       <!-- 🌐 IDIOMA (botón rápido) -->

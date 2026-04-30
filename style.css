@@ -1,7 +1,9 @@
+/* ==================================  BASE  ============================================================================= */
 body {
   margin: 0;
   font-family: system-ui;
   transition: background 0.3s ease, color 0.3s ease;
+  font-size: 16px;
 }
 
 h1 {
@@ -9,28 +11,257 @@ h1 {
   padding: 10px;
 }
 
-#buscador {
-  width: 95%;
-  margin: 10px;
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ===== TOP INLINE ===== */
+.top-inline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   padding: 10px;
-  border-radius: 10px;
-  border: none;
 }
 
-/* SELECT tamaño fijo y ordenado */
-.select-container {
-  width: 200px;
+/* - - - */
+/* Evita desbordes horizontales en todos los dispositivos */
+html, body {
+  /*overflow-x: hidden;*/
 }
 
-#idioma {
-  margin: 10px;
-  padding: 8px;
-  border-radius: 8px;
+/* Ajustes generales móviles */
+#contenido {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.song-line {
+  font-size: 14px;
 }
 
 #alfabeto {
+  gap: 4px;
+}
+
+.alpha {
+  min-width: 32px;
+  height: 32px;
+  font-size: 14px;
+}
+
+/* ==================================  MENU PRINCIPAl  ==================================================================== */
+
+/* -------------------- BOTON MENU -------------------- */
+/* Seccion Menu en html */
+.menu-wrapper {
+  position: relative;
+}
+
+#menuBtn {
+  font-size: 18px;
+  padding: 6px 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  Color: #1e293b; 
+}
+
+/* modo oscuro */
+.light-mode #menuBtn {
+  color: white;
+}
+
+/* modo proyector */
+.projector #menuBtn {
+  color: white;
+}
+
+#menuBtn:hover {
+  opacity: 0.7;
+}
+
+/* MENU */
+.menu-wrapper {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  width: 240px;
+  display: none;
+  z-index: 9999;
+  color: #1e293b;
+}
+
+.dropdown-menu.active {
+  display: block;
+}
+
+.menu-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  /*text-decoration: none; /* quita subrayado */
+  /*color: inherit;        /* mantiene el color del menú */
+}
+
+.menu-item a,             /* quita subrayado solo a los items del menu */
+a.menu-item {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-item:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.divider {              /* linea divisoria */
+  height: 1px;
+  background: #ddd;
+  margin: 5px 0;
+}
+
+
+.sub-item {
+  padding-left: 40px;  /* tabulacion en el submenú*/
+  position: relative;
+}
+
+.sub-item::before {   /* linea en el borde del submenú */
+  content: "";
+  position: absolute;
+  left: 25px;         /* separacion del borde izquierdo */
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: rgba(0,0,0,0.2);
+
+}
+
+.menu-title {
+  padding: 10px 15px;
+  /*font-weight: bold;*/
+  /*opacity: 0.7;*/
+  cursor: default;
+}
+
+
+.menu-title:hover {   /* evitar efecto hover en los items del menu que no son clickeables */
+  background: none;
+}
+
+
+
+/* *** Acerca de... */
+  /* Encontrar la programación en >> Acerca de...*/
+
+
+/* *** Libro: Cancionero MV o Himnarios */
+
+/* *** Idiomas */
+  /* Encontrar la programación en >> Idiomas*/
+
+
+
+
+/* ===== BOTON IDIOMA ===== */
+.lang-wrapper {
+  position: relative;
+}
+
+/* BOTON REDONDO */
+#langBtn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  background: #1e293b;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.light-mode #langBtn {
+  background: white;
+  color: #1e293b;
+}
+
+/* *** Favoritos */
+
+/* *** Tamano de letra: A+ A A- */
+/* Tamano: A- */
+body.font-small #contenido {
+    font-size: 14px;
+}
+/* Tamano: A */
+body.font-medium #contenido {
+    font-size: 20px;
+}
+/* Tamano: A+ */
+body.font-large #contenido {
+    font-size: 26px;
+}
+
+/* *** Proyector */
+/* *** Tema: Claro / Oscuro */
+/* *** Feedback */
+/* *** Donaciones */
+
+
+/* -------------------- INPUT BUSCADOR -------------------- */
+/* *** CONTENEDOR GENERAL */
+.top-bar {
   display: flex;
-  flex-wrap: wrap;          /* 🔥 permite múltiples filas */
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+/* *** FILA SUPERIOR */
+.top-row {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* *** CONTENEDOR BUSCADOR */
+.buscador-container {
+  flex: 1;
+}
+
+/* *** INPUT BUSCADOR */
+#buscador {
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+
+  margin: 10px;
+  padding: 10px;
+
+  border-radius: 10px;
+  border: 1px solid #000;
+
+  font-size: 16px;
+}
+
+/* *** estado focus */
+#buscador:focus {
+  outline: none;
+  border: 2px solid #3b82f6;
+}
+
+/* -------------------- BOTON CAMBIAR DE IDIOMA CON BANDERAS ------------------------------------- */
+
+
+
+/* -------------------- MENU ALFABETO ------------------------------------------------------------ */
+#alfabeto {
+  display: flex;
+  flex-wrap: wrap;          /* permite múltiples filas */
   justify-content: center;  /* centra los botones */
   gap: 6px;
   padding: 10px;
@@ -41,17 +272,16 @@ h1 {
   height: 36px;
   border-radius: 8px;
   border: none;
-  background: #1e293b;
-  color: white;
 }
 
 .alpha.active {
-  background: #3b82f6;
+  background: #ff0000;
 }
 
+/* **********  INDICE (Lista de canciones debajo del alfabeto) ********** */ 
 #indice {
-  width: 90%;        /* 🔥 ocupa el 80% */
-  margin: 0 auto;    /* 🔥 centrado perfecto */
+  width: 90%;         /* ocupa el 90% */
+  margin: 0 auto;     /* centrado perfecto */
   padding: 0;
 }
 
@@ -59,7 +289,7 @@ h1 {
   list-style: none;
 
   padding: 10px;
-  margin: 10px 0;   /* 🔥 solo vertical */
+  margin: 10px 0;   /* solo vertical */
   
   background: #1e293b;
   border-radius: 20px;
@@ -69,9 +299,9 @@ h1 {
 #contenido {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden; /* 👈 evita scroll horizontal */
+  overflow-x: hidden; /* evita scroll horizontal */
   box-sizing: border-box;
-  padding: 0 15px; /* 👈 margen izquierdo y derecho */
+  padding: 0 15px; /* margen izquierdo y derecho */
   font-size: 18px;
 }
 
@@ -86,7 +316,6 @@ h1 {
   margin: 3px 0;
 }
 
-
 /*BOTON DE OCULTAR CANCIONES*/
 .hidden {
   display: none;
@@ -100,7 +329,7 @@ h1 {
   border: none;
   border-radius: 100px;
   background: #b6b6b657;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 16px;
   cursor: pointer;
   transition: 0.2s;
@@ -118,10 +347,6 @@ h1 {
   display: none;
 }
 
-/*visualizar lista de canciones*/
-.hidden {
-  display: none;
-}
 
 .fade-in {
   animation: fadeIn 0.2s ease-in;
@@ -138,250 +363,85 @@ h1 {
   }
 }
 
-/* CLARO / OSCURO */
-/* BOTÓN TEMA */
-#themeToggle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid #000;
-  cursor: pointer;
-  font-size: 18px;
-  margin-top: 8px;
+/* -------------------- MENU LISTA DE CANCIONES AL SELECCIONAR UNA LETRA ------------------------- */
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  transition: all 0.3s ease;
-}
+/****/
 
-#infobtn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid #000;
-  cursor: pointer;
-  font-size: 18px;
-  margin-top: 8px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  transition: all 0.3s ease;
-}
 
-/* ☀️ MODO CLARO → botón negro */
-.light-mode  {
-  background: #000000;
-  color: #ffffff;
-}
 
-/* 🌙 MODO OSCURO → botón blanco */
-.dark-mode  {
-  background: #ffffff;
-  color: #000000;
-}
 
-/* LISTA */
-.light-mode #indice li {
-  background: #f1f5f9;
-  color: black;
-}
 
-.dark-mode #indice li {
+
+
+/* **********  IDIOMAS Y BANDERAS  ********** */
+/* =====  SELECT IDIOMA (base) ===== */
+#idioma {
+  margin: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
   background: #1e293b;
+  color: white;
+
+  border: 1px solid #000;
+  font-size: 14px;
+  cursor: pointer;
+
+  padding: 8px 28px 8px 12px;
+
+  /* icono flecha */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='white' d='M5.5 7l4.5 5 4.5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 14px;
+}
+
+/* ===== MODOS DE COLOR ===== */
+.light-mode #idioma {
+  background: #b6b6b657;
   color: white;
 }
 
-/* BOTONES ALFABETO */
-.light-mode .alpha {
+.dark-mode #idioma {
   background: #e2e8f0;
   color: black;
 }
 
-.dark-mode .alpha {
-  background: #1e293b;
-  color: white;
-}
-
-/*barra*/
-.top-bar {
-  display: flex;
-  flex-direction: column; /* 👈 fuerza una sola columna */
-  gap: 10px;
-  width: 100%;
-}
-
-/* BUSCADOR ARRIBA */
-.top-row {
-  display: flex;
-  gap: 10px;
-  padding: 10px;
-  /*width: 98%;*/
-}
-
-/* BUSCADOR ocupa todo el espacio disponible */
-.buscador-container {
-  flex: 1;
-}
-
-/* CONTROLES ABAJO EN UNA SOLA FILA */
-.controls-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end; /* 👈 esto lo manda a la derecha */
-  gap: 10px;
-  align-items: center;
-  padding-right: 15px; /* 👈 espacio desde el borde derecho */
-}
-
-/* buscador ocupa todo el espacio */
-#buscador {
-  width: 99%;
-  max-width: 100%;
-  box-sizing: border-box; /* 👈 clave */
-  padding: 8px;
-  border-radius: 10px;
-  border: 1px solid #000;
-  font-size: 16px;
-}
-
-/* botones compactos */
-#toggleLista,
-#themeToggle {
-  flex-shrink: 0;
-}
-
-/* select compacto */
-#idioma {
-  flex-shrink: 0;
-  padding: 8px;
-  border-radius: 8px;
-}
-
+/* ===== RESPONSIVE ===== */
 @media (max-width: 480px) {
   #idioma {
     width: 60px;
+    font-size: 13px;
+    padding: 6px 24px 6px 10px;
   }
 }
 
-/*COLORES DE LA CUADRATURA*/
-.song-line {
-  font-size: 1em;
-  line-height: 1.8;
-  /*font-size: 16px;*/
-  /*line-height: 2.2; /*altura de cuadratura*/
-  margin-bottom: 6px;
-}
-
-.lyrics {
-  white-space: pre-wrap;
-}
-
-.chord-wrap {
-  position: relative;
-  display: inline-block;
-  width: 0;
-}
-
-.chord {
+/* ===== SELECT OCULTO ===== */
+#idioma.hidden {
   position: absolute;
-  top: -2.4em;
-  left: 0;
-  font-weight: bold;
-  font-size: 0.85em;
-  white-space: nowrap;
-  font-size: 0.85em;
+  opacity: 0;
+  pointer-events: none;
 }
 
-/* colores */
-.dark-mode .chord {
-  color: red;
-}
-
-.light-mode .chord {
-  color: yellow;
-}
-
-.song-break {
-  height: 10px; /* espacio entre estrofas */
-}
-
-@media (max-width: 460px) {
-
-  .song-line {
-    font-size: 10px !important;
-    line-height: 1.5;
-  }
-
-  .lyrics {
-    font-size: inherit;
-  }
-
-  .chord {
-    font-size: 0.65em !important;
-    top: -1.8em;
-  }
-
-}
-
-/* ===== TAMAÑO LETRA ===== */
-body.font-small #contenido {
-    font-size: 16px;
-}
-
-body.font-medium #contenido {
-    font-size: 20px;
-}
-
-body.font-large #contenido {
-    font-size: 26px;
-}
-
-html {
-  -webkit-text-size-adjust: 100%;
-}
-
-/* ===== MODO PROYECTOR ===== */
-body.projector {
-    background: black;
-    color: white;
-}
-
-body.projector h1 {
-    font-size: 3rem;
-    text-align: center;
-}
-
-body.projector #contenido {
-    font-size: 3rem;
-    line-height: 1.6;
-    padding: 40px;
-    /*estrofas*/
-}
-
-body.projector .song-break {
-  height: 40px; /* espacio entre estrofas */
+/* ===== BOTÓN MENÚ IDIOMA ===== */
+#menuIdioma:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 
-
-/* 👇 la barra principal SE MANTIENE */
-body.projector .top-bar {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* ❌ NO ocultar alfabeto si lo quieres usar */
-body.projector #alfabeto {
-    display: flex;
-    justify-content: center;
-}
-
-/*Banderitas para cambiar de idioma en la cancion*/
+/* ===== BANDERAS PARA CAMBIAR EL IDIOMA ===== */
 .flags {
   margin-top: 8px;
   display: flex;
@@ -414,112 +474,79 @@ body.projector #alfabeto {
   border-bottom: 2px solid #38bdf8;
 }
 
-/* ===================== icono apple music, spotify o youtube =====================*/
-.audio a {
-  text-decoration: none;
-  font-weight: 600;
+/* **********  MODO CLARO/OSCURO  ********** */
+/* MODO CLARO 👓 → botón negro */
+.light-mode  {
+  background: #1e293b;  /*Fondo negro*/
+  color: #ffffff;       /*Letras blancas*/
 }
 
-/* Spotify */
-.audio a.spotify {
-  color: #1DB954; /* verde Spotify estándar */
+/* MODO OSCURO 🕶️ → botón blanco */
+.dark-mode  {
+  background: #ffffff;  /*Fondo blanco*/
+  color: #1e293b;       /*Letras negras 000000*/
 }
 
-/* Apple Music */
-.audio a.apple {
-  color: #ff2d55; /* rosa/rojo Apple Music */
+/* COLOR DE FONDO LISTA */
+.light-mode #indice li {
+  background: #e2e8f0; 
+  color: #1e293b;
 }
 
-/* YouTube */
-.audio a.youtube {
-  color: #ff0000; /* rojo YouTube */
-}
-
-/* evitar cambios del navegador */
-.audio a:visited,
-.audio a:active {
-  color: inherit;
-}
-
-/* idiomas */
-#idioma {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
+.dark-mode #indice li {
   background: #1e293b;
   color: white;
-
-  border: none;
-  border-radius: 8px;
-
-  padding: 8px 28px 8px 12px;
-  font-size: 14px;
-
-  cursor: pointer;
-
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='white' d='M5.5 7l4.5 5 4.5-5z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 8px center;
-  background-size: 14px;
-
-  border: 1px solid #000;
 }
 
-.light-mode #idioma {
-  background: #b6b6b657;
-  color: white;
-}
-
-.dark-mode #idioma {
+/* BOTONES ALFABETO */
+.light-mode .alpha {
   background: #e2e8f0;
-  color: black;
+  color: #1e293b;
+  font-weight: bold;
 }
 
-@media (max-width: 480px) {
-  #idioma {
-    font-size: 13px;
-    padding: 6px 24px 6px 10px;
-  }
-}
-
-/* ===================== selector cancionero o himnario ==================== */
-#libro {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
+.dark-mode .alpha {
   background: #1e293b;
   color: white;
-
-  border: 1px solid #000;
-  border-radius: 8px;
-
-  padding: 10px 28px 10px 12px;
-  font-size: 14px;
-
-  cursor: pointer;
-
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='white' d='M5.5 7l4.5 5 4.5-5z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 8px center;
-  background-size: 14px;
-
-  width: 100%;
-  margin-top: 9px;
+  font-weight: bold;
 }
 
-.light-mode #libro {
-  background: #1e293b;
-  color: white;
+/* ===== MODO PROYECTOR ===== */
+body.projector {
+    background: black;
+    color: white;
 }
 
-.dark-mode #libro {
-  background: #e2e8f0;
-  color: black;
+body.projector h1 {
+    font-size: 3rem;
+    text-align: center;
 }
 
-/* ===== boton info ===== */
+body.projector #contenido {
+    font-size: 3rem;
+    line-height: 1.6;
+    padding: 40px;
+    /*estrofas*/
+}
+
+body.projector .song-break {
+  height: 40px; /* espacio entre estrofas */
+}
+
+/* 👇 la barra principal SE MANTIENE */
+body.projector .top-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* NO ocultar alfabeto si lo quieres usar */
+body.projector #alfabeto {
+    display: flex;
+    justify-content: center;
+}
+
+/* ====================  ACERCA DE....  ==================== */
 /* MODAL FONDO */
 .modal {
   display: none;
@@ -584,194 +611,283 @@ body.dark .modal-content {
 }
 
 
-/* ===== Boton Menu ===== */
-#menuBtn {
-  font-size: 18px;
-  padding: 6px 10px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
+/* ====================  MUSICA: CANCIONES E INFO PREVIA  ==================== */
+/* ========== icono apple music, spotify o youtube ==========
+.audio a {
+  text-decoration: none;
+  font-weight: 600;
 }
 
-#menuBtn:hover {
-  opacity: 0.7;
+/* Spotify */
+.audio a.spotify {
+  color: #1DB954; /* verde Spotify estándar */
+}
+
+/* Apple Music */
+.audio a.apple {
+  color: #ff2d55; /* rosa/rojo Apple Music */
+}
+
+/* YouTube */
+.audio a.youtube {
+  color: #ff0000; /* rojo YouTube */
+}
+
+/* evitar cambios del navegador */
+.audio a:visited,
+.audio a:active {
+  color: inherit;
 }
 
 
-/* ===== MENU ===== */
-.menu-wrapper {
+/* ====================  MUSICA: CUADRATURA Y ACORDES  ==================== */
+/* ========== COLORES DE LA CUADRATURA ==========*/
+.song-line {
+  font-size: 1em;
+  line-height: 1.8;
+  /*font-size: 16px;*/
+  /*line-height: 2.2; /*altura de cuadratura*/
+  margin-bottom: 6px;
+}
+
+.lyrics {
+  white-space: pre-wrap;
+}
+
+.chord-wrap {
   position: relative;
+  display: inline-block;
+  width: 0;
 }
 
-.dropdown-menu {
+.chord {
   position: absolute;
-  top: 40px;
-  right: 0;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-  width: 240px;
-  display: none;
-  z-index: 999;
-  overflow: hidden;
-}
-
-.dropdown-menu.active {
-  display: block;
-}
-
-.menu-item {
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.menu-item:hover {
-  background: rgba(0,0,0,0.05);
-}
-
-.menu-item select {
-  width: 100%;
-  margin-top: 5px;
-}
-
-.divider {
-  height: 1px;
-  background: #ddd;
-  margin: 5px 0;
-}
-
-/* DARK MODE */
-body.dark .dropdown-menu {
-  background: #1e1e1e;
-  color: white;
-}
-
-body.dark .menu-item:hover {
-  background: rgba(255,255,255,0.1);
-}
-
-body.font-large {
-  font-size: 1.4em;
-}
-
-body.font-small {
+  top: -2.4em;
+  left: 0;
+  font-weight: bold;
+  font-size: 0.85em;
+  white-space: nowrap;
   font-size: 0.85em;
 }
 
-/* ocultar acordes */
-body.no-chords .acorde {
-  display: none;
+/* colores */
+.dark-mode .chord {
+  color: red;
 }
 
-.menu-wrapper {
-  position: relative;
+.light-mode .chord {
+  color: rgb(53, 255, 2);
 }
 
-.dropdown-menu {
-  position: absolute;
-  top: 45px;
-  right: 0;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-  width: 240px;
-  display: none;
-  z-index: 9999;
+.song-break {
+  height: 10px; /* espacio entre estrofas */
 }
 
-.dropdown-menu.active {
-  display: block;
-}
+@media (max-width: 460px) {
 
-.menu-item {
-  padding: 10px 15px;
-  cursor: pointer;
-}
+  .song-line {
+    font-size: 10px !important;
+    line-height: 1.5;
+  }
 
-.menu-item:hover {
-  background: rgba(0,0,0,0.05);
-}
+  .lyrics {
+    font-size: inherit;
+  }
 
-.divider {
-  height: 1px;
-  background: #ddd;
-  margin: 5px 0;
+  .chord {
+    font-size: 0.65em !important;
+    top: -1.8em;
+  }
+
 }
 
 
-/* no se que es */
-/* ===== TOP INLINE ===== */
-.top-inline {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px;
-}
 
-/* BUSCADOR FLEX */
-#buscador {
-  flex: 1;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #000;
-}
 
-/* ===== BOTON IDIOMA ===== */
-.lang-wrapper {
-  position: relative;
-}
 
-/* BOTON REDONDO */
-#langBtn {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: 1px solid #000;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ====================  selector cancionero o himnario  ==================== */
+#libro {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
   background: #1e293b;
-  font-size: 20px;
+  color: white;
+
+  border: 1px solid #000;
+  border-radius: 8px;
+
+  padding: 10px 28px 10px 12px;
+  font-size: 14px;
+
   cursor: pointer;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='white' d='M5.5 7l4.5 5 4.5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 14px;
+
+  width: 100%;
+  margin-top: 9px;
 }
 
-/* SELECT OCULTO */
-#idioma {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
+.light-mode #libro {
+  background: #1e293b;
+  color: white;
 }
 
-/* MENU */
-.menu-wrapper {
-  position: relative;
+.dark-mode #libro {
+  background: #e2e8f0;
+  color: black;
 }
 
-.dropdown-menu {
-  position: absolute;
-  top: 45px;
-  left: 0;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-  width: 240px;
-  display: none;
-  z-index: 9999;
+/* dispositivos varios*/
+/* =======================================================================
+   MÓVILES GRANDES (>= 480px)
+   ======================================================================= */
+@media (min-width: 480px) {
+
+  #contenido {
+    font-size: 17px;
+  }
+
+  .song-line {
+    font-size: 15px;
+  }
+
+  #alfabeto {
+    gap: 6px;
+  }
+
+  .alpha {
+    min-width: 34px;
+    height: 34px;
+    font-size: 15px;
+  }
 }
 
-.dropdown-menu.active {
-  display: block;
+/* =======================================================================
+   TABLETS (>= 768px)
+   ======================================================================= */
+@media (min-width: 768px) {
+
+  .top-inline {
+    gap: 15px;
+  }
+
+  #contenido {
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  .song-line {
+    font-size: 16px;
+  }
+
+  #indice {
+    width: 80%;
+  }
+
+  #buscador {
+    font-size: 18px;
+  }
+
+  .alpha {
+    min-width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
 }
 
-.menu-item {
-  padding: 10px 15px;
-  cursor: pointer;
+/* =======================================================================
+   DESKTOP (>= 1024px)
+   ======================================================================= */
+@media (min-width: 1024px) {
+
+  #contenido {
+    font-size: 20px;
+    padding: 30px;
+  }
+
+  .song-line {
+    font-size: 18px;
+  }
+
+  #indice {
+    width: 70%;
+  }
+
+  #buscador {
+    font-size: 18px;
+  }
+
+  .alpha {
+    min-width: 40px;
+    height: 40px;
+  }
 }
 
-.menu-item:hover {
-  background: rgba(0,0,0,0.05);
+/* =======================================================================
+   PANTALLAS GRANDES (>= 1280px)
+   ======================================================================= */
+@media (min-width: 1280px) {
+
+  #indice {
+    width: 60%;
+  }
+
+  #contenido {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 }
 
-.divider {
-  height: 1px;
-  background: #ddd;
-  margin: 5px 0;
+/* =======================================================================
+   PROYECTOR (SEPARADO DEL RESPONSIVE)
+   ======================================================================= */
+body.projector {
+
+  background: black;
+  color: white;
+
+}
+
+body.projector h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+body.projector #contenido {
+  font-size: 3rem;
+  line-height: 1.6;
+  padding: 40px;
+}
+
+body.projector .song-line {
+  font-size: 3rem;
+  line-height: 1.6;
+}
+
+body.projector .song-break {
+  height: 40px;
+}
+
+body.projector #alfabeto {
+  justify-content: center;
 }
