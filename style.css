@@ -523,7 +523,6 @@ body.projector .song-break {
   height: 40px; /* espacio entre estrofas */
 }
 
-/* 👇 la barra principal SE MANTIENE */
 body.projector .top-bar {
   display: flex;
   flex-direction: column;
@@ -631,6 +630,30 @@ body.dark .modal-content {
   color: inherit;
 }
 
+.audio a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.audio a.spotify {
+  color: #1DB954;
+}
+
+.audio a.youtube {
+  color: #ff0000;
+}
+
+.audio a.applemusic {
+  color: #ff2d55;
+}
+
+/* evitar override del navegador */
+.audio a:visited,
+.audio a:active,
+.audio a:hover {
+  opacity: 0.85;
+}
+
 
 /* ====================  MUSICA: CUADRATURA Y ACORDES  ==================== */
 /* ========== COLORES DE LA CUADRATURA ==========*/
@@ -690,7 +713,6 @@ body.dark .modal-content {
     font-size: 0.65em !important;
     top: -1.8em;
   }
-
 }
 
 

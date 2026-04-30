@@ -18,9 +18,6 @@ function getDataActual() {
   return libroActual === "himnario" ? himnos : canciones;
 }
 
-
-
-
 // ===================== INIT =====================
 async function init() {
   const res1 = await fetch(DATA_URLS.cancionero);
@@ -33,7 +30,6 @@ async function init() {
   loadTheme();
   updateThemeMenuText();
 
-  // 👇 ACÁ (justo después de loadTheme)
   if (localStorage.getItem("projector") === "on") {
     document.body.classList.add("projector");
   }
@@ -52,7 +48,7 @@ async function init() {
 
       idiomaActual = e.target.value;
 
-      // 🔥 sincronizar menú
+      // sincronizar menú
       document.getElementById("menuIdioma").value = e.target.value;
 
       renderAlphabet();
@@ -64,7 +60,7 @@ async function init() {
 
     libroActual = e.target.value;
 
-    // 🔥 cerrar menú aquí
+    // cerrar menú aquí
     closeMenu();
 
     // reset estado UI
@@ -122,38 +118,37 @@ function sortByTitle(data) {
   });
 }
 
-// 👉 NUEVO helper clave
+// NUEVO helper clave
 function getNumeroHimno(c) {
   return c.idiomas?.[idiomaActual]?.numero_himno ?? "";
 }
 
-
 // ===================== BOTON LIMPIAR ======================
 function clearAll() {
-  // 🔎 limpiar buscador
+  // limpiar buscador
   const buscador = document.getElementById("buscador");
   if (buscador) buscador.value = "";
 
-  // 📄 limpiar contenido
+  // limpiar contenido
   document.getElementById("contenido").innerHTML = "";
 
-  // 📂 cerrar lista
+  // cerrar lista
   closeList();
   listaVisible = false;
 
-  // 🔤 reset letra activa
+  // reset letra activa
   letraActiva = null;
 
-  // 🔁 refrescar alfabeto
+  // refrescar alfabeto
   renderAlphabet();
 
-  // 🔁 limpiar índice visual
+  // limpiar índice visual
   document.getElementById("indice").innerHTML = "";
 
-  // 📌 opcional: cerrar dropdown menu si está abierto
+  // cerrar dropdown menu si está abierto
   document.getElementById("dropdownMenu")?.classList.remove("active");
 
-  // 🔝 volver arriba
+  // volver arriba
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -162,8 +157,8 @@ function updateAppTitle() {
   const isHimnario = libroActual === "himnario";
 
   const titleText = isHimnario
-    ? "🎵 Himnario Adventista 🎵"
-    : "🎶 Cancionero MV 🎶";
+    ? "🎵 Himnario Adventista"
+    : "🎶 Cancionero MV";
 
   // Cambia el H1
   const h1 = document.querySelector("h1");
@@ -858,7 +853,9 @@ function renderAudioLink(song, idiomaData) {
   return `
     <div class="audio">
       <b>Audio:</b>
-      <a href="${url}" target="_blank">${icon} ${label}</a>
+      <a href="${url}" target="_blank" class="${label.toLowerCase().replace(" ", "")}">
+        ${icon} ${label}
+      </a>
     </div>
   `;
 }
