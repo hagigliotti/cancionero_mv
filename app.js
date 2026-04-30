@@ -573,10 +573,16 @@ function renderAlphabet() {
   letras.unshift("*");
 
   container.innerHTML =
-    letras.map(l =>
-      `<button class="alpha ${l === letraActiva ? "active" : ""}"
-        onclick="selectLetter('${l}')">${l}</button>`
-    ).join("") +
+    letras.map(l => {
+
+      const label = 
+        l === "*" ? "🔤" :
+        l === "#" ? "#️⃣" :
+        l;
+
+      return `<button class="alpha ${l === letraActiva ? "active" : ""}"
+        onclick="selectLetter('${l}')">${label}</button>`;
+    }).join("") +
     `<button class="clear-btn" onclick="clearAll()">Limpiar</button>`;
 }
 

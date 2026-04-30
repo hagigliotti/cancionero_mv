@@ -21,7 +21,7 @@
   <h1>🎶 Cancionero MV</h1>
   <!-- <h1>GESTIONE ORDINI</h1> -->
 
-  <!-- ===================== TOP BAR ===================== -->
+  <!-- ===================== TOP BAR =====================  -->
   <div class="top-bar">
 
     <div class="top-inline">
@@ -38,7 +38,7 @@
 
           <div class="divider"></div>
 
-          <div class="menu-item">
+          <div class="menu-item"">
             📖 Libro:
             <select id="menuLibro">
               <option value="cancionero"">Cancionero MV</option>
@@ -58,17 +58,28 @@
 
           <div class="divider"></div>
 
-          <div class="menu-item">⭐ Favoritos</div>
+          <div class="menu-item" onclick="closeMenu()">⭐ Favoritos</div>
 
           <div class="divider"></div>
 
-        <div class="menu-item font-controls">
-          🅰️ Tamaño:
-          <button type="button" onclick="cambiarFuente(-1)">A-</button>
-          <button type="button" onclick="resetFuente()">A</button>
-          <button type="button" onclick="cambiarFuente(1)">A+</button>
-        </div>
+          <div class="menu-item font-controls">
+            🅰️ Tamaño:
+            <button type="button" onclick="cambiarFuente(-1)">A-</button>
+            <button type="button" onclick="resetFuente()">A</button>
+            <button type="button" onclick="cambiarFuente(1)">A+</button>
+          </div>
           
+          <div class="divider"></div>
+
+          <div class="menu-title">
+            🎼 Transposición:
+          </div>
+
+          <div class="menu-item sub-item">
+            <button onclick="transposeDown()">⬇️ -1</button>
+            <button onclick="resetTranspose()">⏺️ 0</button>
+            <button onclick="transposeUp()">⬆️ +1</button>
+          </div>
 
           <div class="divider"></div>
 
@@ -147,15 +158,16 @@
 
     <hr>
 
-    <p><strong>Desarrollo:</strong> Hernando Gigliotti</p>
-    <p><strong>Rol:</strong> Diseño, programación y compilación</p>
+    <p><strong>Creator, Lead Software Engineer (Full-Stack):</strong> Hernando Gigliotti</p>
+    <p><strong>Developer back-end:</strong> Elisa Vilaltella</p>
+    <p><strong>Digital Music Encoding:</strong> name</p>
 
     <hr>
 
     <p><strong>Fuente del contenido:</strong></p>
     <ul>
       <li>Cancionero Hosanna 2023</li>
-      <li>Cancionero Iglesia de Olivos</li>
+      <li>Cancionero Iglesia de Olivos (Argentina)</li>
       <li>Cancioneros varios</li>
       <li>Innario GA Compagnon 2024</li>
       <li>Internet</li>
@@ -170,10 +182,11 @@
 
     <p><strong>Funcionalidades:</strong></p>
     <ul>
-      <li>Búsqueda de canciones</li>
-      <li>Modo proyector</li>
+      <li>Búsqueda de canciones, compositores, etc.</li>
+      <li>Modo proyector (iglesia)</li>
       <li>Multi-idioma</li>
       <li>Visualización de acordes</li>
+      <li>Transportacion de acordes</li>
     </ul>
 
     <hr>
