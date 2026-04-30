@@ -61,8 +61,13 @@ async function init() {
 
   document.getElementById("menuLibro")
   .addEventListener("change", e => {
+
     libroActual = e.target.value;
 
+    // 🔥 cerrar menú aquí
+    closeMenu();
+
+    // reset estado UI
     letraActiva = null;
     listaVisible = false;
 
@@ -80,7 +85,9 @@ async function init() {
     }
 
     renderAlphabet();
-    applyFontSize();
+    closeList();
+    handleMenuVisibility();
+    updateAppTitle();
 });
 
   document.getElementById("menuIdioma").addEventListener("change", e => {
@@ -150,10 +157,28 @@ function clearAll() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
+// ===================== CAMBIAR EL NOMBRE DE LA PAGINA Y TITULO ======================
+function updateAppTitle() {
+  const isHimnario = libroActual === "himnario";
 
+  const titleText = isHimnario
+    ? "🎵 Himnario Adventista 🎵"
+    : "🎶 Cancionero MV 🎶";
 
+  // Cambia el H1
+  const h1 = document.querySelector("h1");
+  if (h1) h1.innerText = titleText;
 
+  // Cambia el título del navegador
+  document.title = titleText;
+}
 
+// ===================== DETECCION AUTOMATICA DE LIBRO (CANCIONERO O HIMANRIO) ======================
+
+function detectLibroBySong(song) {
+  if (himnos.some(h => h.id === song.id)) return "himnario";
+  return "cancionero";
+}
 
 
 
@@ -203,20 +228,25 @@ function toggleMenu() {
 }
 
 // cerrar al hacer click fuera
-window.addEventListener("click", function(e) {
+window.addEventListener("click", function (e) {
 
-  // ===== MODAL INFO =====
-  const modal = document.getElementById("infoModal");
-  if (e.target === modal) {
-    modal.style.display = "none";
-  }
-
-  // ===== MENU =====
   const menu = document.getElementById("dropdownMenu");
   const btn = document.getElementById("menuBtn");
 
+  const modal = document.getElementById("infoModal");
+  const modalContent = modal?.querySelector(".modal-content");
+
+  // ===== MENU =====
   if (menu && btn && !menu.contains(e.target) && !btn.contains(e.target)) {
-    menu.classList.remove("active");
+    closeMenu();
+  }
+
+  // ===== MODAL INFO =====
+  if (modal && modal.style.display === "block") {
+    // cerrar SOLO si clic fuera del contenido del modal
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
   }
 
 });
@@ -227,6 +257,9 @@ function abrirInfoDesdeMenu() {
   info();
 }
 
+function closeMenu() {
+  document.getElementById("dropdownMenu")?.classList.remove("active");
+}
 
 // ===== BOTON ACERCA DE.... =================================================================
 function info() {
@@ -703,20 +736,47 @@ function renderChordLine(line) {
 // ===================== OPEN SONG =====================
 function openSong(id) {
   const song = [...canciones, ...himnos].find(c => c.id === id);
+
+  if (!song) {
+    document.getElementById("contenido").innerHTML =
+      "<p>⚠️ Canción no disponible.</p>";
+    return;
+  }
+
+  // 🔥 detectar libro real de la canción
+  const detectedLibro = detectLibroBySong(song);
+
+  // 🔄 si cambia el libro, sincronizar todo
+  if (libroActual !== detectedLibro) {
+    libroActual = detectedLibro;
+
+    const idiomaSelect = document.getElementById("idioma");
+
+    if (libroActual === "himnario") {
+      idiomaActual = "es";
+      idiomaSelect.value = "es";
+      idiomaSelect.disabled = true;
+    } else {
+      idiomaSelect.disabled = false;
+    }
+
+    // UI global
+    renderAlphabet();
+    updateAppTitle();
+  }
+
   const s = song?.idiomas?.[idiomaActual];
 
-  // ✅ cerrar lista y resetear estado visual
+  // ✅ cerrar lista y reset UI
   closeList();
   listaVisible = false;
-  letraActiva = null; // 🔥 importante: evita inconsistencias con el alfabeto
+  letraActiva = null;
 
-  if (!song || !s) {
+  if (!s) {
     document.getElementById("contenido").innerHTML =
       "<p>⚠️ Canción no disponible en este idioma.</p>";
     return;
   }
-
-  const isProjector = document.body.classList.contains("projector");
 
   const num = getNumeroHimno(song);
 
@@ -766,7 +826,7 @@ function openSong(id) {
     </div>
   `;
 
-  // ✅ UX MEJORADO: subir arriba automáticamente
+  // UX
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 

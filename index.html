@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>GESTIONE ORDINI</title>
-   <!-- <title>🎶 Cancionero MV</title> -->
+  <title>🎶 Cancionero MV</title>
+   <!-- <title>GESTIONE ORDINI</title> -->
 
   <!-- ICONOS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -18,8 +18,8 @@
 
 <div class="app">
 
-  <h1>GESTIONE ORDINI</h1>
-  <!-- <h1>🎶 Cancionero MV</h1> -->
+  <h1>🎶 Cancionero MV</h1>
+  <!-- <h1>GESTIONE ORDINI</h1> -->
 
   <!-- ===================== TOP BAR ===================== -->
   <div class="top-bar">
@@ -41,8 +41,8 @@
           <div class="menu-item">
             📖 Libro:
             <select id="menuLibro">
-              <option value="cancionero">Cancionero MV</option>
-              <option value="himnario">Himnario Adventista</option>
+              <option value="cancionero"">Cancionero MV</option>
+              <option value="himnario"">Himnario Adventista</option>
             </select>
           </div>
 
@@ -76,11 +76,11 @@
             🧩 Modos de visualización:
           </div>
 
-          <div class="menu-item sub-item" onclick="toggleProjectorMode()">
+          <div class="menu-item sub-item" onclick="toggleProjectorMode(); closeMenu()">
             📽️ Proyector
           </div>
 
-          <div id="themeMenuItem" class="menu-item sub-item" onclick="toggleTheme()">
+          <div id="themeMenuItem" class="menu-item sub-item" onclick="toggleTheme(); closeMenu()">
             🕶️ Tema oscuro
           </div>
 
