@@ -57,24 +57,29 @@
   "compas": "4/4",
   "ritmo": "balada",
   "referencia_biblica": "Salmos 116:1, 2",
-  "tags": ["Adoración", "Clásico", "Gratitud"],
+  "tags": ["Adoración", "Clásico", "Gratitud", "Worship"],
 
   "idiomas": {
     "es": {
-      "titulo": "A ti, Jesús",
-      "audio_url": "",
+      "titulo": "A ti, Señor",
+      "audio_url": "https://open.spotify.com/intl-es/track/1pvS9HylBSoYdlteJhUZDd?si=7326e73e72004a44",
       "traductor": "Desconocido",
       "letra": [
-        "[F]A ti, Jesús, [C]alzaré mi [F]voz",
+        "[F]A ti, Señor, [C]alzaré mi [F]voz",
         "para [Bb]adorar[Gm]te, mi Salva[C]dor.[C7]",
         "[F]Acepta hoy, mi [C]rey y Se[F]ñor,",
-        "[F7]el humilde [Bb]don [Gm]de mi [Bb]amor [C]en ora[F]ción."
+        "[F7]el humilde [Bb]don [Gm]de mi [Bb]amor [C]en ora[F]ción.",
+        "",
+        "[F]Te amo oh Dios, [C]alzo a tí mi [F]voz",
+        "mi [Bb]ser lo [Gm]anhela con devo[C]ción.[C7]",
+        "[F]Que mi alma [C]con gratitud Se[F]ñor",
+        "[F7]eleve a ti [Bb]una [Bb]dulce [C]can[F]ción. (x2)"
       ]
     },
 
     "en": {
       "titulo": "I love you, Lord",
-      "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
+      "audio_url": "https://open.spotify.com/intl-es/track/3mIyisrMRbIpsInWOd3JTd?si=257ef60816d14364",
       "traductor": "-",
       "letra": [
         "[F]I love You, Lord, [C]and I lift my [F]voice",
@@ -93,17 +98,6 @@
         "[F]Alegra-Te, ó [C]meu Salva[F]dor,",
         "[F7]Com o [Bb]som do [Gm]meu [Bb]louvor [C]e do meu [F]amor."
       ]
-    },
-
-    "it": {
-      "titulo": "Io t'amo, o Re",
-      "traductor": "Comunità Maria",
-      "letra": [
-        "[F]Io t'amo, o Re, [C]ed elevo la [F]voce",
-        "per [Bb]adorar[Gm]Ti, anima [C]mia [C7]gioisci!",
-        "[F]Godi, o mio Re, [C]di quel che [F]odi,",
-        "[F7]sia un [Bb]dolce, [Gm]dolce [Bb]suon [C]al Tuo [F]orecchio."
-      ]
     }
   }
 },
@@ -118,12 +112,12 @@
   "compas": "4/4",
   "ritmo": "worship",
   "referencia_biblica": "Lucas 14:33",
-  "tags": ["Adoración", "Hillsong", "Entrega"],
+  "tags": ["Adoración", "Hillsong", "Entrega", "Whorship"],
 
   "idiomas": {
       "es": {
         "titulo": "A ti me rindo",
-        "audio_url": "",
+        "audio_url": "https://open.spotify.com/intl-es/track/4CpXovlU8Md47zl5fNt6WR?si=8ff2fcdafe9f44ad",
         "traductor": "Hillsong Worship",
         "letra": [
         "[Am]Ante ti postrado [C]estoy, aquí.",
@@ -152,7 +146,7 @@
 
       "en": {
       "titulo": "I Surrender",
-      "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
+      "audio_url": "https://open.spotify.com/intl-es/track/2Ilbv0FdK3FDydyjwLYbz9?si=1dd0c7eaaa3a4b65",
       "traductor": "-",
       "letra": [
         "[Am]Here I am down on my [C]knees again",
@@ -243,18 +237,29 @@
         "[D]Abre mis [G]ojos, [A]Jesús quiero [D]verte,[Bm]",
         "conmigo te[Em]nerte, [A]decir que te [G]amo.[D]",
         "[D]Abre mi [G]oído, [A]hoy quiero escu[D]charte.[Bm]",
-        "¡Abre mis [Em]ojos [A]para contem[G]plarte![D]"
+        "¡Abre mis [Em]ojos [A]para contem[G]plarte![D]",
+        "",
+        "[D]Abre mis [G]ojos, [A]Jesús quiero [D]verte,[Bm]",
+        "conmigo te[Em]nerte, [A]decir que te [G]amo.[D]",
+        "[D]Abre mi [G]oído, [A]hoy quiero escu[D]charte.[Bm]",
+        "¡Abre mis [Em]ojos [A]para contem[G]plarte![D] (x2)"
+
       ]
     },
     "en": {
       "titulo": "Open Our Eyes, Lord",
-      "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
+      "audio_url": "https://open.spotify.com/intl-es/track/1Dj8ivrq5Q0mW5jehGTUop?si=d0c26c2eafba4f62",
       "traductor": "-",
       "letra": [
         "[D]Open our [G]eyes, Lord, [A]we want to [D]see Jesus,[Bm]",
         "To reach out and [Em]touch Him, [A]and say that we [G]love Him.[D]",
         "[D]Open our [G]ears, Lord, [A]and help us to [D]listen,[Bm]",
-        "Open our [Em]eyes, Lord, [A]we want to [G]see Jesus.[D]"
+        "Open our [Em]eyes, Lord, [A]we want to [G]see Jesus.[D]",
+        "",
+        "[D]Open our [G]eyes, Lord, [A]we want to [D]see Jesus,[Bm]",
+        "To reach out and [Em]touch Him, [A]and say that we [G]love Him.[D]",
+        "[D]Open our [G]ears, Lord, [A]and help us to [D]listen,[Bm]",
+        "Open our [Em]eyes, Lord, [A]we want to [G]see Jesus.[D] (x2)"
       ]
     },
     "pt": {
@@ -319,7 +324,7 @@
   "idiomas": {
     "es": {
       "titulo": "Abre mis ojos, Señor",
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/5iI4CdQvwwrrrBAVi88e9e?si=bd476b755006419c",
       "traductor": "Desconocido",
       "letra": [
         "[D]Abre mis ojos, Señor,",
@@ -380,7 +385,7 @@
       ]
     },
     "it": {
-      "titulo": "Apri i miei occhi",
+      "titulo": "Apri i miei occhi del cuore",
       "traductor": "RNS",
       "letra": [
         "[D]Apri i miei occhi del cuore, Dio",
@@ -417,8 +422,8 @@
   "idiomas": {
     "es": {
       "titulo": "Agnus dei",
-      "audio_url": "",
-      "traductor": "Misión Vida",
+      "audio_url": "https://open.spotify.com/intl-es/track/6TCTLO5PX5MJa5KN1Asibl?si=8be077456f7f4e66",
+      "traductor": "Desconocido",
       "letra": [
         "[G] Ale[C]lu[G]ya, ale[C]lu[Em]ya! Te ala[D]bamos, Se[C]ñor, nuestro [G]Rey.",
         "[G] Ale[C]lu[G]ya, ale[C]lu[Em]ya! Te ala[D]bamos, Se[C]ñor, nuestro [G]Rey.",
@@ -432,7 +437,7 @@
     },
     "en": {
       "titulo": "Agnus Dei",
-      "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
+      "audio_url": "https://open.spotify.com/intl-es/track/1N9SysNAP8j4wbAIHzlM9m?si=6697f706725e4098",
       "traductor": "-",
       "letra": [
         "[G] Alle[C]lu[G]ia, alle[C]lu[Em]ia! For the [D]Lord God Al[C]mighty [G]reigns.",
@@ -447,6 +452,7 @@
     },
     "pt": {
       "titulo": "Agnus Dei",
+      "audio_url": "https://open.spotify.com/intl-es/track/16hnXXqWrwbQGoNtvLx72r?si=c5712a753b5a449b",
       "traductor": "David Quinlan",
       "letra": [
         "[G] Ale[C]lu[G]ia, ale[C]lu[Em]ia! Pois o [D]Senhor Deus To[C]do-Pode[G]roso reina.",
@@ -491,7 +497,7 @@
   "idiomas": {
     "es": {
       "titulo": "Alabaré",
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/10fMN6ZyntPNkP46uBaqB1?si=a50bbc0362864e6a",
       "traductor": "-",
       "letra": [
         "[D]Alabaré, alabaré, ala[Bm]baré, alabaré,",
@@ -509,7 +515,7 @@
 },
 {
   "id": "al_comenzar_la_semana",
-  "titulo_original": "Al comenzar la semana",
+  "titulo_original": "Al comenzar este sábado",
   "autor": "Desconocido",
   "compositor": "Desconocido",
   "year": "Desconocido",
@@ -523,7 +529,7 @@
   "idiomas": {
     "es": {
       "titulo": "Al comenzar la semana",
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/5MJ8DFLauPlvNTNGlbJZZx?si=dedd8715d6264a6a",
       "traductor": "-",
       "letra": [
         "[G]Al comenzar la semana, [C]¡qué ale[G]gría que me [D]da",
@@ -561,7 +567,7 @@
   "idiomas": {
     "es": {
       "titulo": "Al encuentro de Jesús",
-      "audio_url": "",
+      "audio_url": "https://www.youtube.com/watch?v=UVuli_xt5bs&list=RDUVuli_xt5bs&start_radio=1",
       "traductor": "-",
       "letra": [
         "[E]Al encuentro de Jesús e[B]levo [A]mi [E]voz,",
@@ -586,8 +592,8 @@
 {
   "id": "al_lado_de_jesus",
   "titulo_original": "Al lado de Jesús",
-  "autor": "Desconocido",
-  "compositor": "Desconocido",
+  "autor": "Primera Fe",
+  "compositor": "Primera Fe",
   "year": "Desconocido",
   "tonalidad": "Do Mayor (C)",
   "tempo_bpm": "85 bpm",
@@ -599,7 +605,7 @@
   "idiomas": {
     "es": {
       "titulo": "Al lado de Jesús",
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/4HtVl7sQxvG8d1d5snMZEy?si=d4301577726d4e8d",
       "traductor": "-",
       "letra": [
         "[C]La vida es dura, lo sé [G]bien, los problemas nublan tu [Am]fe.",
@@ -620,23 +626,6 @@
         "",
         "[G]Laralala, [Am]laralala, [F]la, [C]la. [F]Cami[G]na al lado de Je[C]sús."
       ]
-    },
-    "pt": {
-      "titulo": "Ao lado de Jesus",
-      "audio_url": "",
-      "traductor": "Desconocido",
-      "letra": [
-        "[C]A vida é dura, eu bem [G]sei, os problemas nublam sua [Am]fé.",
-        "Mas há uma es[F]colha para estar [C]bem, escute o [F]que eu lhe di[C]rei:",
-        "[C]Cristo é luz para o seu cami[G]nhar, está disposto a ouvir seu cla[Am]mor.",
-        "Te dá [F]amor, te dá [C]paz e forças [F]para [G]vencer [Am].",
-        "É [F]porto seguro para descan[C]sar, [G] [Am]é o bom [F]Pastor que dá segu[C]ran[G]ça.",
-        "",
-        "[C]Sempre é o seu amigo [G]fiel, é manancial para sua [Am]sede.",
-        "Não há o [F]que te[C]mer se vai [F]ao [G]lado de Je[C]sus.",
-        "Ele mud[C]ará sua ati[G]tude, Ele é a vida e a [Am]luz.",
-        "Olhe [F]sempre para a [C]cruz, caminhe [F]ao [G]lado de Je[C]sus."
-      ]
     }
   }
 },
@@ -656,14 +645,14 @@
   "idiomas": {
     "es": {
       "titulo": "Alegre voy cantando",
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/2pNw22LMg6REMr9MAMvwej?si=f30689be90e54b41",
       "traductor": "-",
       "letra": [
-        "[G]Alegre voy cantando en el [C]camino de la [Am]dicha y la ver[D]dad. [G] - [Em] - [C] - [D]",
+        "[G]Alegre voy cantando en el [C]camino de la [Am]vida y la ver[D]dad. [G] - [Em] - [C] - [D]",
         "[G]A cada paso en[C]cuentro un mo[Am]tivo de a[D]mor y felici[G]dad.",
         "",
         "Coro:",
-        "Y [Em]alegre voy can[C]tando, [D]sí [G]alegre [Em]voy can[C]tando. [D]",
+        "Si [Em]alegre voy can[C]tando, [D]sí [G]alegre [Em]voy can[C]tando. [D]",
         "Con Je[G]sús, mi Salva[C]dor, [D]y así [G]yo vivi[C]ré",
         "por la eter[D]nidad, [G]sí, [C]por la [D]eterni[G]dad.",
         "",
@@ -706,7 +695,7 @@
   "idiomas": {
     "es": {
       "titulo": "Alma misionera",
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/6f7mT8i8Yg4ZwVAkTCq0D7?si=c4133db48e4444e7",
       "traductor": "-",
       "letra": [
         "[G]Señor, [D]toma mi vida [Em]nueva [C]antes de que la es[G]pera desgas[D]te años en mí.",
@@ -717,6 +706,10 @@
         "[G]Donde falte la espe[D]ranza, donde [Em]todo sea [C]triste simplemente [G]por [C]no sa[D]ber de [G]ti.",
         "",
         "[G]Te doy [D]mi corazón sin[Em]cero [C]para gritar sin [G]miedo lo her[D]moso que es tu amor.",
+        "Tendre mis manos sin cansancio tu historia entre mis labios y fuerza en la oracion",
+        "",
+        "coro",
+        "Y asi me marchare coantando, por calles predicando, lo hermoso que es tu amor.",
         "[G]Señor, [D]tengo alma misio[Em]nera, [C]condúceme a la [G]tierra que [C]tenga [D]sed de [G]ti.[D]"
       ]
     },
@@ -770,7 +763,7 @@
   "idiomas": {
     "es": {
       "titulo": "Alto, escúchame",
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/4bOQA47v0L3S4OSxOyoI5J?si=410beb6055b64bcf",
       "traductor": "-",
       "letra": [
         "[E]Alto, escúchame, no [A]sigas [B]caminando [E]más.",
@@ -793,11 +786,12 @@
   "autor": "Naftali Herz Imber",
   "compositor": "Basada en una melodía italiana del siglo XVII llamada La Mantovana por Bedřich Smetana",
   "tonalidad": "La Menor (Am)",
-  "referencia_biblica": "Salmos 121",
+  "referencia_biblica": "Salmo 121",
   "tags": ["Música tradicional hebrea"],
   "idiomas": {
     "es": {
       "titulo": "Alzaré mis ojos",
+      "audio_url": "https://open.spotify.com/intl-es/track/4ExA7ngx24fjobzbmxna3c?si=2c6a4b719f344941",
       "letra": [
         "[Am]Alzaré mis ojos [Dm]a los [Am]montes.",
         "[Dm]¿De dónde ven[Am]drá [E]mi so[Am]corro?",
@@ -822,6 +816,7 @@
     },
     "he": {
       "titulo": "Hatikvah (הַתִּקְוָה)",
+      "audio_url": "https://open.spotify.com/intl-es/track/1mmiS92bNewNo1DfUai5am?si=90d2afaa0dd4459d",
       "traductor": "Naftali Herz Imber",
       "letra": [
         "[Am]Kol od ba[Dm]levav pe[Am]nimah (כֹּל עוֹד בַּלֵּבָב פְּנִימָה)",
@@ -854,7 +849,7 @@
   "idiomas": {
     "es": {
       "titulo": "Amor, amor",
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/4lUyqsYCCMcmkqAnlOhjRb?si=6c0cc53fc6ae495e",
       "traductor": "-",
       "letra": [
         "[Dm]Amor, amor, [C]amor, [Dm]amor, [A]es el evangelio en una palabra.",
@@ -890,7 +885,7 @@
     },
     "pt": {
       "titulo": "Amor, amor",
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/4lUyqsYCCMcmkqAnlOhjRb?si=6c0cc53fc6ae495e",
       "traductor": "Desconocido",
       "letra": [
         "[Dm]Amor, a[C]mor, a[Dm]mor, a[A]mor,",
@@ -917,7 +912,7 @@
   "idiomas": {
     "es": {
       "titulo": "Amor sin condición",
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/4grfKR7wfoHZeWjb9QjTTE?si=3cdc08de1ea94e6c",
       "traductor": "Abels Worship",
       "letra": [
         "[C#m]Aun antes de ha[B]blar, tu voz po[A]día oír,",
@@ -944,38 +939,6 @@
         "mon[A]te que no escales, para encon[E]trarme a mí.",
         "No hay [C#m]pared que no de[B]rrumbas,",
         "ca[A]dena que no rompas, para encon[E]trarme a mí."
-      ]
-    },
-    "en": {
-      "titulo": "Reckless Love",
-      "audio_url": "",
-      "traductor": "-",
-      "letra": [
-        "Before I spoke a [C#m]word, You were [B]whispering over [A]me.",
-        "You have [C#m]been so, [B]so good to [A]me.",
-        "Before I drew a [C#m]breath, You [B]breathed Your life in [A]me.",
-        "You have [C#m]been so, [B]so kind to [A]me.",
-        "",
-        "Oh, the over[C#m]whelming, [B]never-ending, [A]reckless love of [E]God.",
-        "Oh, it [C#m]chases me down, [B]fights 'til I'm found, [A]leaves the ninety-[E]nine.",
-        "I couldn't [C#m]earn it, and I [B]don't deserve it, [A]still, You give Your[E]self away.",
-        "Oh, the over[C#m]whelming, [B]never-ending, [A]reckless love of [E]God."
-      ]
-    },
-    "pt": {
-      "titulo": "Ousado Amor",
-      "audio_url": "",
-      "traductor": "Isaias Saad",
-      "letra": [
-        "Antes de eu fa[C#m]lar, Tu can[B]tavas sobre [A]mim.",
-        "Tu tens [C#m]sido tão, [B]tão bom para [A]mim.",
-        "Antes de eu nas[C#m]cer, Teu so[B]pro em mim vi[A]veu.",
-        "Tu tens [C#m]sido tão, [B]tão bom para [A]mim.",
-        "",
-        "Oh, imenso e [C#m]infinito, [B]ousado a[A]mor de [E]Deus.",
-        "Oh, que me [C#m]segue e me per[B]segue, e deixa as [A]noventa e [E]nove.",
-        "Não posso gan[C#m]há-lo, nem me[B]recê-lo, mas a[A]ssim Se entre[E]gou.",
-        "Oh, imenso e [C#m]infinito, [B]ousado a[A]mor de [E]Deus."
       ]
     }
   }
@@ -1046,7 +1009,7 @@
   "compas": "4/4",
   "ritmo": "corito / alegre",
   "referencia_biblica": "Juan 21:15",
-  "tags": ["Amistad", "Amor a Cristo", "Testimonio"],
+  "tags": ["Amistad", "Amor a Cristo", "Testimonio", "Canon"],
 
   "idiomas": {
     "es": {
@@ -1054,33 +1017,16 @@
       "audio_url": "",
       "traductor": "-",
       "letra": [
-        "A[C]migo, ¿amas a Cristo?",
-        "Sí, [G]amo a mi Se[C]ñor.",
-        "¿Y por qué amas a Cristo?",
-        "Porque [G]Él me amó pri[C]mero.",
-        "",
+        "- Amigo, ¿amas a Cristo?",
+        "- ¡Oh sí yo le amo!",
+        "- seguro le amas?",
+        "-¡seguro le amo!",
+        "¿ porque que tu le amas?",
+        "eh aqui el motivo: Primero El me amó a mi",
         "Coro:",
-        "¿[C]Amas a [F]Cristo?",
-        "Sí, [G]amo a mi Se[C]ñor.",
-        "¿Y por [C]qué amas a [F]Cristo?",
-        "Porque [G]Él me amó pri[C]mero."
-      ]
-    },
-    "pt": {
-      "titulo": "Amigo, amas a Cristo?",
-      "audio_url": "",
-      "traductor": "Desconocido",
-      "letra": [
-        "A[C]migo, amas a Cristo?",
-        "Sim, [G]amo ao meu Se[C]nhor.",
-        "E por que amas a Cristo?",
-        "Porque [G]Ele amou-me pri[C]meiro.",
-        "",
-        "Coro:",
-        "A[C]mas a [F]Cristo?",
-        "Sim, [G]amo ao meu Se[C]nhor.",
-        "E por [C]que amas a [F]Cristo?",
-        "Porque [G]Ele amou-me pri[C]meiro."
+        "Es por eso que debemos amarle",
+        "¡Oh cuanto amo a Cristo!, ¡Oh cuanto amo a Cristo!",
+        "Cuanto amo a Cristo, primero El me amó a mi"
       ]
     }
   }
@@ -1126,8 +1072,8 @@
   }
 },
 {
-  "id": "way_maker",
-  "titulo_original": "Way Maker",
+  "id": "waymaker",
+  "titulo_original": "Waymaker",
   "autor": "Sinach (Osinachi Kalu Okoro Egbu)",
   "compositor": "Sinach",
   "year": "2015",
@@ -1140,9 +1086,9 @@
 
   "idiomas": {
     "es": {
-      "titulo": "Aquí estás / Way Maker",
-      "audio_url": "",
-      "traductor": "Priscilla Bueno",
+      "titulo": "Abres caminos / Waymaker",
+      "audio_url": "https://open.spotify.com/intl-es/track/5rAZEl2NlSsc9ws7s1dykp?si=5ef19641d5614f7f",
+      "traductor": "",
       "letra": [
         "[C]Aquí estás, te vemos mo[G]ver.",
         "Te ado[D]raré, te ado[Em]raré.",
@@ -1169,8 +1115,8 @@
       ]
     },
     "en": {
-      "titulo": "Way Maker",
-      "audio_url": "https://www.youtube.com/watch?v=n4XWfwLHeLM",
+      "titulo": "Waymaker",
+      "audio_url": "https://open.spotify.com/intl-es/track/0hLsDRLsfvwExXMBeDS53k?si=f0e267a0ab5f45b7",
       "traductor": "-",
       "letra": [
         "You are [G]here, moving in our [D]midst, I worship [Em]You, I worship [C]You.",
@@ -1187,7 +1133,7 @@
     },
     "it": {
       "titulo": "Aprirai una via",
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/7t8fxi06k76NjobLDOMWn8?si=e0ce1eb52592494d",
       "traductor": "Desconocido",
       "letra": [
         "[C]Tu sei qui, ti muovi tra di [G]noi, [D]adoro te, adoro [Em]te.",
@@ -1220,8 +1166,9 @@
 
   "idiomas": {
     "es": {
-      "titulo": "A Jesus dale todo / Arco iris / Has corrido",
-      "audio_url": "",
+      "titulo": "A Jesus entrega todo",
+      "titulo2": "Arco iris / Has corrido",
+      "audio_url": "https://open.spotify.com/intl-es/track/1GdcEMGXs8TKht3jGNwU2m?si=2564f95694b34dc7",
       "traductor": "-",
       "letra": [
         "[D]¿Has corrido [D7]tras un arco [G]iris",
@@ -1243,7 +1190,7 @@
     },
     "en": {
       "titulo": "Give Them All to Jesus",
-      "audio_url": "https://open.spotify.com/intl-it/track/2l0eZ3NJPhh5xfwg2iwpax?si=3915f7ef28e545e7",
+      "audio_url": "https://open.spotify.com/intl-es/track/5vpRPI8gJJAewj8LHwDmQP?si=17171e6509e74b79",
       "traductor": "-",
       "letra": [
         "Are you tired of chasing pretty rainbows?",
@@ -1287,62 +1234,6 @@
   }
 },
 {
-  "id": "atardece",
-  "titulo_original": "El pueblo que conoce a su Dios",
-  "autor": "Pablo C. Rodriguez y Rubén L. Duré",
-  "compositor": "Pablo C. Rodriguez y Rubén L. Duré",
-  "year": "1990",
-  "tonalidad": "Sol Mayor (G)",
-  "tempo_bpm": "85 bpm",
-  "compas": "4/4",
-  "ritmo": "Himno / Balada",
-  "referencia_biblica": "1 Corintios 15:58",
-  "tags": ["Desafío", "Servicio", "Gracia", "Fidelidad"],
-
-  "idiomas": {
-    "es": {
-      "titulo": "Atardece",
-      "audio_url": "",
-      "traductor": "-",
-      "letra": [
-        "[G]Atardece en el [Bm]mundo, hay vio[C]lencia [D]y mal[G]dad.",
-        "Desafi[C]antes, las tinie[G]blas,",
-        "hoy [A]ocultan la ver[D]dad.",
-        "",
-        "Coro:",
-        "Más el [G]pueblo que a su Dios co[Bm]noce,",
-        "se esfor[C]zará [D]y ha[G]rá.",
-        "[C]De pie, de pie, oh [B]pueblo, co[Em]noces a tu [D]Dios;",
-        "[G]levántate y con[Am]cluye la [G]obra [D]que Él te [G]dio.",
-        "",
-        "[G]Atardece en el [Bm]cielo, ya la [C]gracia [D]cesa[G]rá.",
-        "Lanza [C]Dios un desa[G]fío:",
-        "“¿Qu[A]ién mi obra acaba[D]rá?”"
-      ]
-    },
-    "pt": {
-      "titulo": "Anoitece",
-      "audio_url": "",
-      "traductor": "Desconocido",
-      "letra": [
-        "[G]Anoitece no [Bm]mundo, há vio[C]lência [D]e mal[G]dade.",
-        "Desafi[C]antes, as tre[G]vas,",
-        "hoje o[A]cultam a ver[D]dade.",
-        "",
-        "Coro:",
-        "Mas o [G]povo que ao seu Deus co[Bm]nhece,",
-        "se esfor[C]çará [D]e fa[G]rá.",
-        "[C]De pé, de pé, ó [B]povo, co[Em]nheces ao teu [D]Deus;",
-        "[G]levanta e con[Am]clui a [G]obra [D]que Ele te [G]deu.",
-        "",
-        "[G]Anoitece no [Bm]céu, e a [C]graça [D]cessa[G]rá.",
-        "Lança [C]Deus um desa[G]fio:",
-        "“Quem [A]minha obra acaba[D]rá?”"
-      ]
-    }
-  }
-},
-{
   "id": "avancemos",
   "titulo_original": "Avancemos",
   "autor": "Joel Barrios",
@@ -1358,7 +1249,7 @@
   "idiomas": {
     "es": {
       "titulo": "Avancemos",
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/2K57VJVpndg6QUOLqnoI8D?si=879f2b432ef04516",
       "traductor": "-",
       "letra": [
         "[D]Avancemos [G]en la [D]luz, [A]",
@@ -1375,19 +1266,6 @@
         "Sal[E]gamos pues a tra[A]bajar de la mano,",
         "u[E]nidos [B]por una [E]meta igual."
       ]
-    },
-    "pt": {
-      "titulo": "Avancemos",
-      "audio_url": "",
-      "traductor": "Desconocido",
-      "letra": [
-        "[D]Avancemos [G]na [D]luz, [A]",
-        "Com [D]fé e [G]com valor lutemos",
-        "u[D]nidos [A]por uma [D-D7]meta igual.",
-        "[G]A seara é [D]grande e [G]poucos trabalhadores [A]são.",
-        "Sa[D]iamos pois a tra[G]balhar de mãos dadas,",
-        "u[D]nidos [A]por uma [D]meta igual."
-      ]
     }
   }
 },
@@ -1400,7 +1278,7 @@
 },
 {
   "id": "cuando_empieza_el_santo_sabado",
-  "titulo_original": "Al comenzar la semana",
+  "titulo_original": "Al comenzar este sábado",
   "autor": "Desconocido",
   "compositor": "Desconocido",
   "year": "Desconocido",
@@ -1414,7 +1292,7 @@
   "idiomas": {
     "es": {
       "titulo": "Cuando empieza el Santo Sábado",
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/5MJ8DFLauPlvNTNGlbJZZx?si=dedd8715d6264a6a",
       "traductor": "-",
       "letra": [
         "[G]Cuando empieza el santo Sábado, [C]¡qué ale[G]gría que me [D]da",
@@ -1446,7 +1324,7 @@
   "idiomas": {
     "es": {
       "titulo": "Diez mil razones (Bendice al Señor)",
-      "audio_url": "https://open.spotify.com/intl-it/track/4Z7vEiQvCUnjvOStbE9Dfg",
+      "audio_url": "https://open.spotify.com/intl-es/track/0B0XKO9t9WJjUP7qxwTC8c?si=42ba04e594f14030",
       "letra": [
         "Que todo lo que soy alabe al Señor",
         "Con todo mi corazón",
@@ -1494,7 +1372,7 @@
     },
     "en": {
       "titulo": "10,000 Reasons (Bless the Lord)",
-      "audio_url": "https://open.spotify.com/track/16e4Q3plJrKkncoLKR1CQ1",
+      "audio_url": "https://open.spotify.com/intl-es/track/0fxpHpK3aw2nFWII6yveDD?si=5d045794a14a4247",
       "letra": [
           "Bless the Lord, oh my soul",
           "Oh my soul",
@@ -1543,39 +1421,8 @@
       },
       "it": {
         "titulo": "Diecimila ragioni (10.000 Reasons)",
-        "audio_url": "",
+        "audio_url": "https://open.spotify.com/intl-es/track/27anRlrwjMYve3K0fGPJkH?si=36b39c383a4040e8",
         "letra": [
-          "(Ritornello)",
-          "br","br",
-          "Benedici il Signore, anima mia",
-          "Anima mia",
-          "Loda il Suo Santo Nome",
-          "Canta come mai prima",
-          "Anima mia",
-          "Adorerò il Tuo Santo Nome",
-          "br","br",
-          "(Strofa 1)",
-          "Sorge il sole, è un nuovo giorno",
-          "È tempo di cantare ancora",
-          "Qualunque cosa passi, e qualunque cosa io affronti",
-          "Lasciami cantare quando la sera arriva",
-          "br","br",
-          "(Ritornello)",
-          "br","br",
-          "(Strofa 2)",
-          "Tu sei ricco d'amore e sei lento all'ira",
-          "E il Tuo Nome è grande e il Tuo cuore è buono",
-          "Per la Tua bontà, io continuerò a cantare",
-          "Diecimila ragioni per il mio cuore per trovare",
-          "br","br",
-          "(Ritornello)",
-          "br","br",
-          "(Strofa 3)",
-          "E in quel giorno, quando la mia forza verrà meno",
-          "La fine si avvicina e il mio tempo è giunto",
-          "Ancora la mia anima canterà il Tuo amore senza fine",
-          "Diecimila anni e poi l'eternità",
-          "br","br",
           "(Ritornello)"
         ]
       }
@@ -1596,7 +1443,7 @@
   "idiomas": {
       "es": {
         "titulo": "Enciende una luz",
-        "audio": "https://open.spotify.com/",
+        "audio": "https://open.spotify.com/intl-es/track/1UEwI2FyRaowh1kUWCzNLg?si=b1fb33d9c150481d",
         "letra": [
           "Enciende una luz y dejala brillar",
           "La luz de Jesus, que brille en todo lugar",
@@ -1692,7 +1539,7 @@
     "idiomas": {
       "es": {
         "titulo": "Tengo Paz",
-        "audio_url": "",
+        "audio_url": "https://open.spotify.com/intl-es/track/2c4PAj2uhN7frkIDNpk8JG?si=c97dd27a9edc4a2f",
         "traductor": "Ricardo Martins",
         "numero_himno": "",
         "letra": [
@@ -1733,7 +1580,7 @@
 
       "pt": {
         "titulo": "Tenho Paz",
-        "audio_url": "",
+        "audio_url": "https://open.spotify.com/intl-es/track/00gQlL5wLo1puyxaTrXIdn?si=717d103f3f8e4dbd",
         "traductor": "",
         "numero_himno": "",
         "letra": [
@@ -1792,8 +1639,8 @@
     "idiomas": {
       "en": {
         "titulo": "Worthy Of It All (Worthy)",
-        "audio_url": "https://www.youtube.com/watch?v=N_8VfR8W1pM",
-        "traductor": "Original",
+        "audio_url": "https://open.spotify.com/intl-es/track/7pNuIYrXqvpkrspeuzPHRu?si=3c1e1d9b4661409c",
+        "traductor": "-",
         "letra": [
           "All the saints and angels",
           "They bow before Your throne",

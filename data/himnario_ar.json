@@ -1,206 +1,247 @@
 [
-  {
-    "id": "himno-001",
-    "titulo_original": "Cantad alegres al Señor",
-    "autor": "",
-    "compositor": "",
-    "year": "",
-    "tonalidad": "",
-    "tempo_bpm": "",
-    "compas": "",
-    "ritmo": "Himno",
-    "referencia_biblica": "",
-    "tags": ["Alabanza", "Adoración", "Apertura"],
+{
+  "id": "himno-001",
+  "titulo_original": "Cantad alegres al Señor",
+  "autor": "",
+  "compositor": "",
+  "year": "",
+  "tonalidad": "",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "Himno",
+  "referencia_biblica": "",
+  "tags": ["Alabanza", "Adoración", "Apertura"],
 
-    "idiomas": {
-      "es": {
-        "titulo": "Cantad alegres al Señor",
-        "audio_url": "",
-        "traductor": "",
-        "numero_himno": "1",
-        "letra": [
-          "<small><b>1</b></small>",
-          "Cantad alegres al Señor,",
-          "mortales todos por doquier;",
-          "servidle siempre con fervor,",
-          "obedecedle con placer.",
-          "<small><b>2</b></small>",
-          "Con gratitud canción alzad",
-          "al Hacedor que el ser os dio;",
-          "al Dios excelso venerad,",
-          "que como Padre nos amó.",
-          "<small><b>3</b></small>",
-          "Su pueblo somos: salvará",
-          "a los que busquen al Señor;",
-          "ninguno de ellos dejará;",
-          "él los ampara con su amor."
-        ]
-      }
-    }
-  },
-  {
-    "id": "himno-002",
-    "titulo_original": "O Worship the Lord in the Beauty of Holiness",
-    "autor": "John S. B. Monsell",
-    "compositor": "Edwin S. Ufford",
-    "year": "1863",
-    "tonalidad": "Ab",
-    "tempo_bpm": "92",
-    "compas": "3/4",
-    "ritmo": "Himno",
-    "referencia_biblica": "1 Crónicas 16:29; Salmos 96:9",
-    "tags": ["Adoración", "Santidad", "Consagración"],
-
-    "idiomas": {
-      "es": {
-        "titulo": "Da gloria al Señor",
-        "audio_url": "",
-        "traductor": "",
-        "numero_himno": "2",
-        "letra": [
-          "<small><b>1</b></small>",
-          "Da gloria al Señor, de rodillas adórale",
-          "en la hermosura de su santidad,",
-          "tu plena obediencia cual oro ofreciéndole",
-          "con el incienso de grata humildad.",
-          "<small><b>2</b></small>",
-          "La carga del mal deposita hoy a sus pies,",
-          "la llevará sobre su corazón;",
-          "tus penas te quitará,",
-          "limpiando tus lágrimas,",
-          "guiando tus pies a mayor bendición.",
-          "<small><b>3</b></small>",
-          "En sus santos atrios adonde convídate,",
-          "aunque eres pobre no temas entrar;",
-          "la firme, constante fe y el puro, sencillo amor:",
-          "tales ofrendas pon sobre el altar.",
-          "<small><b>4</b></small>",
-          "Y cuando tus dones le entregues a tu Señor,",
-          "por su Hijo amado los aceptará;",
-          "y tras noche lúgubre habrá aurora espléndida:",
-          "gozo, alegría y paz te dará."
-        ]
-      }
-    }
-  },
-  {
-    "id": "himno-003",
-    "titulo_original": "Come, Pure Hearts, in Sweetest Measures",
-    "autor": "Adam de San Víctor",
-    "compositor": "Robert Schumann",
-    "year": "1839",
-    "tonalidad": "C",
-    "tempo_bpm": "96",
-    "compas": "4/4",
-    "ritmo": "Himno",
-    "referencia_biblica": "Apocalipsis 5:11-13; Mateo 28:6",
-    "tags": ["Resurrección", "Alabanza", "Triunfo"],
-
-    "idiomas": {
-      "es": {
-        "titulo": "Unidos en espíritu",
-        "audio_url": "",
-        "traductor": "",
-        "numero_himno": "3",
-        "letra": [
-          "<small><b>1</b></small>",
-          "Unidos en espíritu al coro celestial,",
-          "cantemos con los ángeles un cántico triunfal.",
-          "Y si vertimos lágrimas al frente de la cruz,",
-          "rebose hoy el júbilo, pues vive el buen Jesús.",
-          "<small><b>2</b></small>",
-          "Lo que en el triste Gólgota derrota pareció,",
-          "desde el sellado túmulo en triunfo se cambió.",
-          "Vencido el enemigo está, menguado su poder;",
-          "y el mortal su súbdito ya no habrá de ser.",
-          "<small><b>3</b></small>",
-          "Jesús, de gloria Príncipe, autor de nuestra paz,",
-          "ven, muéstranos benévolo tu esplendorosa faz.",
-          "Y acepta el dulce cántico de nuestra gratitud,",
-          "por tu valiosa dádiva de la eternal salud."
-        ]
-      }
-    }
-  },
-  {
-    "id": "himno-004",
-    "titulo_original": "Praise the Lord, Ye Heavens Adore Him",
-    "autor": "Anónimo",
-    "compositor": "John B. Dykes",
-    "year": "1861",
-    "tonalidad": "F",
-    "tempo_bpm": "105",
-    "compas": "4/4",
-    "ritmo": "Himno",
-    "referencia_biblica": "Salmos 146:2; Efesios 1:3",
-    "tags": ["Alabanza", "Gratitud", "Gracia"],
-
-    "idiomas": {
-      "es": {
-        "titulo": "Alabanzas sin cesar",
-        "audio_url": "",
-        "traductor": "",
-        "numero_himno": "4",
-        "letra": [
-          "<small><b>1</b></small>",
-          "Alabanzas sin cesar entonemos al Señor;",
-          "himnos mil a su bondad entonemos con amor.",
-          "Él nos da la plenitud de su gracia celestial;",
-          "es la fuente de salud para el infeliz mortal.",
-          "<small><b>2</b></small>",
-          "Del pecado abrumador él nos vino a libertar;",
-          "nos ofrece salvación, y nos llama sin cesar.",
-          "Ya podemos recorrer el camino terrenal",
-          "sin temor hasta obtener nuestra herencia celestial.",
-          "<small><b>3</b></small>",
-          "Y entretanto que el Señor nos reciba donde está,",
-          "entonemos el loor que bondadoso aceptará.",
-          "Mientras huelle nuestro pie este mundo pecador,",
-          "ofrezcámosle con fe nuestro canto, nuestro amor."
-        ]
-      }
-    }
-  }, 
-  {
-    "id": "himno-005",
-    "titulo_original": "We Come, O Glorious God",
-    "autor": "Mary Ann J. J. T. Maitland",
-    "compositor": "George Friedrich Händel",
-    "year": "1746",
-    "tonalidad": "Bb",
-    "tempo_bpm": "100",
-    "compas": "4/4",
-    "ritmo": "Himno",
-    "referencia_biblica": "1 Crónicas 29:13; 2 Corintios 13:14",
-    "tags": ["Alabanza", "Trinidad", "Guía Divina"],
-
-    "idiomas": {
-      "es": {
-        "titulo": "A ti, glorioso Dios",
-        "audio_url": "",
-        "traductor": "",
-        "numero_himno": "5",
-        "letra": [
-          "<small><b>1</b></small>",
-          "A ti, glorioso Dios, cantamos alabanzas;",
-          "rendímoste honor por todas tus grandezas.",
-          "Nos das tu bendición en nuestra senda aquí;",
-          "nos guiarás, Señor, a tu mansión allí.",
-          "<small><b>2</b></small>",
-          "Ven siempre, oh gran Dios, muy cerca de nosotros;",
-          "con celo y con fervor queremos ir a otros.",
-          "Tu brazo protector del mal nos guardará;",
-          "en lucha y aflicción consuelo nos será.",
-          "<small><b>3</b></small>",
-          "Oh Padre, eterno Dios, cantámoste loores,",
-          "y al Hijo Redentor, Señor de los señores,",
-          "y al Santo Espíritu, el gran Consolador:",
-          "al grande, trino Dios cantamos con fervor."
-        ]
-      }
+  "idiomas": {
+    "es": {
+      "titulo": "Cantad alegres al Señor",
+      "audio_url": "",
+      "traductor": "",
+      "numero_himno": "1",
+      "letra": [
+        "<small><b>1</b></small>",
+        "Cantad alegres al Señor,",
+        "mortales todos por doquier;",
+        "servidle siempre con fervor,",
+        "obedecedle con placer.",
+        "<small><b>2</b></small>",
+        "Con gratitud canción alzad",
+        "al Hacedor que el ser os dio;",
+        "al Dios excelso venerad,",
+        "que como Padre nos amó.",
+        "<small><b>3</b></small>",
+        "Su pueblo somos: salvará",
+        "a los que busquen al Señor;",
+        "ninguno de ellos dejará;",
+        "él los ampara con su amor."
+      ]
     }
   }
+},
+{
+  "id": "himno-002",
+  "titulo_original": "O Worship the Lord in the Beauty of Holiness",
+  "autor": "John S. B. Monsell",
+  "compositor": "Edwin S. Ufford",
+  "year": "1863",
+  "tonalidad": "Ab",
+  "tempo_bpm": "92",
+  "compas": "3/4",
+  "ritmo": "Himno",
+  "referencia_biblica": "1 Crónicas 16:29; Salmos 96:9",
+  "tags": ["Adoración", "Santidad", "Consagración"],
 
+  "idiomas": {
+    "es": {
+      "titulo": "Da gloria al Señor",
+      "audio_url": "",
+      "traductor": "",
+      "numero_himno": "2",
+      "letra": [
+        "<small><b>1</b></small>",
+        "Da gloria al Señor, de rodillas adórale",
+        "en la hermosura de su santidad,",
+        "tu plena obediencia cual oro ofreciéndole",
+        "con el incienso de grata humildad.",
+        "<small><b>2</b></small>",
+        "La carga del mal deposita hoy a sus pies,",
+        "la llevará sobre su corazón;",
+        "tus penas te quitará,",
+        "limpiando tus lágrimas,",
+        "guiando tus pies a mayor bendición.",
+        "<small><b>3</b></small>",
+        "En sus santos atrios adonde convídate,",
+        "aunque eres pobre no temas entrar;",
+        "la firme, constante fe y el puro, sencillo amor:",
+        "tales ofrendas pon sobre el altar.",
+        "<small><b>4</b></small>",
+        "Y cuando tus dones le entregues a tu Señor,",
+        "por su Hijo amado los aceptará;",
+        "y tras noche lúgubre habrá aurora espléndida:",
+        "gozo, alegría y paz te dará."
+      ]
+    }
+  }
+},
+{
+  "id": "himno-003",
+  "titulo_original": "Come, Pure Hearts, in Sweetest Measures",
+  "autor": "Adam de San Víctor",
+  "compositor": "Robert Schumann",
+  "year": "1839",
+  "tonalidad": "C",
+  "tempo_bpm": "96",
+  "compas": "4/4",
+  "ritmo": "Himno",
+  "referencia_biblica": "Apocalipsis 5:11-13; Mateo 28:6",
+  "tags": ["Resurrección", "Alabanza", "Triunfo"],
+
+  "idiomas": {
+  "es": {
+    "titulo": "Unidos en espíritu",
+    "audio_url": "",
+    "traductor": "",
+    "numero_himno": "3",
+    "letra": [
+      "<small><b>1</b></small>",
+      "Unidos en espíritu al coro celestial,",
+      "cantemos con los ángeles un cántico triunfal.",
+      "Y si vertimos lágrimas al frente de la cruz,",
+      "rebose hoy el júbilo, pues vive el buen Jesús.",
+      "<small><b>2</b></small>",
+      "Lo que en el triste Gólgota derrota pareció,",
+      "desde el sellado túmulo en triunfo se cambió.",
+      "Vencido el enemigo está, menguado su poder;",
+      "y el mortal su súbdito ya no habrá de ser.",
+      "<small><b>3</b></small>",
+      "Jesús, de gloria Príncipe, autor de nuestra paz,",
+      "ven, muéstranos benévolo tu esplendorosa faz.",
+      "Y acepta el dulce cántico de nuestra gratitud,",
+      "por tu valiosa dádiva de la eternal salud."
+      ]
+    }
+  }
+},
+{
+  "id": "himno-004",
+  "titulo_original": "Praise the Lord, Ye Heavens Adore Him",
+  "autor": "Anónimo",
+  "compositor": "John B. Dykes",
+  "year": "1861",
+  "tonalidad": "F",
+  "tempo_bpm": "105",
+  "compas": "4/4",
+  "ritmo": "Himno",
+  "referencia_biblica": "Salmos 146:2; Efesios 1:3",
+  "tags": ["Alabanza", "Gratitud", "Gracia"],
+
+  "idiomas": {
+  "es": {
+    "titulo": "Alabanzas sin cesar",
+    "audio_url": "",
+    "traductor": "",
+    "numero_himno": "4",
+    "letra": [
+      "<small><b>1</b></small>",
+      "Alabanzas sin cesar entonemos al Señor;",
+      "himnos mil a su bondad entonemos con amor.",
+      "Él nos da la plenitud de su gracia celestial;",
+      "es la fuente de salud para el infeliz mortal.",
+      "<small><b>2</b></small>",
+      "Del pecado abrumador él nos vino a libertar;",
+      "nos ofrece salvación, y nos llama sin cesar.",
+      "Ya podemos recorrer el camino terrenal",
+      "sin temor hasta obtener nuestra herencia celestial.",
+      "<small><b>3</b></small>",
+      "Y entretanto que el Señor nos reciba donde está,",
+      "entonemos el loor que bondadoso aceptará.",
+      "Mientras huelle nuestro pie este mundo pecador,",
+      "ofrezcámosle con fe nuestro canto, nuestro amor."
+      ]
+    }
+  }
+}, 
+{
+  "id": "himno-005",
+  "titulo_original": "We Come, O Glorious God",
+  "autor": "Mary Ann J. J. T. Maitland",
+  "compositor": "George Friedrich Händel",
+  "year": "1746",
+  "tonalidad": "Bb",
+  "tempo_bpm": "100",
+  "compas": "4/4",
+  "ritmo": "Himno",
+  "referencia_biblica": "1 Crónicas 29:13; 2 Corintios 13:14",
+  "tags": ["Alabanza", "Trinidad", "Guía Divina"],
+
+  "idiomas": {
+  "es": {
+    "titulo": "A ti, glorioso Dios",
+    "audio_url": "",
+    "traductor": "",
+    "numero_himno": "5",
+    "letra": [
+      "<small><b>1</b></small>",
+      "A ti, glorioso Dios, cantamos alabanzas;",
+      "rendímoste honor por todas tus grandezas.",
+      "Nos das tu bendición en nuestra senda aquí;",
+      "nos guiarás, Señor, a tu mansión allí.",
+      "<small><b>2</b></small>",
+      "Ven siempre, oh gran Dios, muy cerca de nosotros;",
+      "con celo y con fervor queremos ir a otros.",
+      "Tu brazo protector del mal nos guardará;",
+      "en lucha y aflicción consuelo nos será.",
+      "<small><b>3</b></small>",
+      "Oh Padre, eterno Dios, cantámoste loores,",
+      "y al Hijo Redentor, Señor de los señores,",
+      "y al Santo Espíritu, el gran Consolador:",
+      "al grande, trino Dios cantamos con fervor."
+    ]
+    }
+  }
+},
+
+
+
+
+
+
+{
+  "id": "himno-578",
+  "titulo_original": "El pueblo que conoce a su Dios",
+  "autor": "Pablo C. Rodriguez y Rubén L. Duré",
+  "compositor": "Pablo C. Rodriguez y Rubén L. Duré",
+  "year": "1990",
+  "tonalidad": "Sol Mayor (G)",
+  "tempo_bpm": "85 bpm",
+  "compas": "4/4",
+  "ritmo": "Himno / Balada",
+  "referencia_biblica": "1 Corintios 15:58",
+  "tags": ["Desafío", "Servicio", "Gracia", "Fidelidad"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "El pueblo que conoce a su Dios",
+      "audio_url": "https://www.youtube.com/watch?v=kVEmRCIU3eE",
+      "traductor": "-",
+      "letra": [
+        "[G]Atardece en el [Bm]mundo, hay vio[C]lencia [D]y mal[G]dad.",
+        "Desafi[C]antes, las tinie[G]blas,",
+        "hoy [A]ocultan la ver[D]dad.",
+        "",
+        "Coro:",
+        "Más el [G]pueblo que a su Dios co[Bm]noce,",
+        "se esfor[C]zará [D]y ha[G]rá.",
+        "[C]De pie, de pie, oh [B]pueblo, co[Em]noces a tu [D]Dios;",
+        "[G]levántate y con[Am]cluye la [G]obra [D]que Él te [G]dio.",
+        "",
+        "[G]Atardece en el [Bm]cielo, ya la [C]gracia [D]cesa[G]rá.",
+        "Lanza [C]Dios un desa[G]fío:",
+        "“¿Qu[A]ién mi obra acaba[D]rá?”"
+      ]
+    }
+  }
+}
 
 
 ]
