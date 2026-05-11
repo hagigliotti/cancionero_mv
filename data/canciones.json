@@ -1,5 +1,9 @@
 [
- {
+{
+  "_comment1": "LETRA A ---------------------------------------------------------------------------------------------------------------------------------------    LETRA A"
+},
+
+{
   "id": "abba_nunca_falla",
   "titulo_original": "Abba (Nunca falla)",
   "autor": "Marcos Brunet",
@@ -17,141 +21,1560 @@
       "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
       "traductor": "-",
       "letra": [
-          "[G]Escucho tu [C]corazón,",
-          "cada latido está llamando mi [C]nombre.",
-          "Soy atraído otra vez por tu [C]sangre,",
-          "me siento tan amado por [G]ti.",
-          "br","br",
-          "Me encuentro en tu [C]corazón,",
-          "decidiste aceptarme por [G]siempre.",
-          "Tu amor por mí es tan sorprend[C]ente,",
-          "me siento tan mimado por [G]ti.",
-          "br","br",
-          "Y es tan [D/F#]bello saber que soy [Em]hijo",
-          "y que [D/F#]tengo un lugar en tu [G]mesa.",
-          "No hay [D/F#]nada mejor que escuchar tu [Em]voz",
-          "diciendo: [D/F#]nuestra comunión es [G]eterna.",
-          "br","br",
-          "Oh, oh, oh, [Am]oh, oh, oh, oh, [D/F#]oh,",
-          "me amaste prim[G]ero, con amor verdadero.",
-          "Oh, oh, oh, [Am]oh, oh, oh, oh, [D/F#]oh,",
-          "y mi respuesta es adorar, [G]mi respuesta es adorar.",
-          "br","br",
-          "[Am]Abb[Em]a,[D/F#] tu [G]amor nunca falla, siempre me abrazas. (x4)"
-        ]
-      }
+        "[G]Escucho tu [C]corazón,",
+        "cada latido está llamando mi [C]nombre.",
+        "Soy atraído otra vez por tu [C]sangre,",
+        "me siento tan amado por [G]ti.",
+        "br","br",
+        "Me encuentro en tu [C]corazón,",
+        "decidiste aceptarme por [G]siempre.",
+        "Tu amor por mí es tan sorprend[C]ente,",
+        "me siento tan mimado por [G]ti.",
+        "br","br",
+        "Y es tan [D/F#]bello saber que soy [Em]hijo",
+        "y que [D/F#]tengo un lugar en tu [G]mesa.",
+        "No hay [D/F#]nada mejor que escuchar tu [Em]voz",
+        "diciendo: [D/F#]nuestra comunión es [G]eterna.",
+        "br","br",
+        "Oh, oh, oh, [Am]oh, oh, oh, oh, [D/F#]oh,",
+        "me amaste prim[G]ero, con amor verdadero.",
+        "Oh, oh, oh, [Am]oh, oh, oh, oh, [D/F#]oh,",
+        "y mi respuesta es adorar, [G]mi respuesta es adorar.",
+        "br","br",
+        "[Am]Abb[Em]a,[D/F#] tu [G]amor nunca falla, siempre me abrazas. (x4)"
+      ]
     }
-  },
-  {
-    "id": "enciende_una_luz",
-    "titulo_original": "Enciende una luz",
-    "autor": "Marcos Witt",
-    "referencia_biblica": "San Mateo 5:16",
-    "tags": ["adoración", "testimonio", "fe"],
-    "tonalidad": "G",
-    "tempo_bpm": 65,
-    "idiomas": {
-      "es": {
-        "titulo": "Enciende una luz",
-        "audio": "https://open.spotify.com/",
-        "letra": [
-          "Enciende una luz y dejala brillar",
-          "La luz de Jesus, que brille en todo lugar",
-          "No la puedes esconder, no te puedes callar",
-          "Ante tal necesidad, enciende una luz en la obscuridad",
-          "br","br",
-          "Y como pues invocarán a aquel en quien no han creído?",
-          "Y como creerán en aquel de quien no han oído?",
-          "Y como oirán si nadie les predica?",
-          "Hermosos son los pies, de los que anuncian la paz",
-          "Las buenas nuevas de Jesús",
-          "br","br",
-          "Enciende una luz y dejala brillar",
-          "La luz de Jesus, que brille en todo lugar",
-          "No la puedes esconder, no te puedes callar",
-          "Ante tal necesidad, enciende una luz en la obscuridad"
-        ]
-      },
-      "en": {
-        "titulo": "Turn on a Light",
-        "audio_url": "",
-        "letra": [
-          "Turn on a light and let it shine",
-          "The light of Jesus that shines everywhere",
-          "You can't hide it, you can't be quiet",
-          "In the face of such need, turn on a light in the darkness",
-          ""
-        ]
-      }
-    }
-  },
-  {
-    "id": "diez_mil_razones",
-    "titulo_original": "10,000 Reasons (Bless the Lord)",
-    "autor": "Matt Redman, Jonas Myrin",
-    "compositor": "Matt Redman, Jonas Myrin",
-    "year": "2011",
-    "tonalidad": "Sol mayor (G)",
-    "tempo_bpm": "70 bpm (aprox.)",
-    "compas": "4/4",
-    "ritmo": "Balada de adoración (Worship)",
-    "audio": "https://open.spotify.com/track/16e4Q3plJrKkncoLKR1CQ1",
-    "referencia": "Salmos 103:1",
-    "tags": ["adoración", "alabanza", "worship", "cristiana", "iglesia", "congregacional"],
+  }
+},
+{
+  "id": "a_ti_jesus",
+  "titulo_original": "I love you, Lord",
+  "autor": "Laurie Klein",
+  "compositor": "Laurie Klein",
+  "year": "1978",
+  "tonalidad": "Fa Mayor (F)",
+  "tempo_bpm": "70 bpm",
+  "compas": "4/4",
+  "ritmo": "balada",
+  "referencia_biblica": "Salmos 116:1, 2",
+  "tags": ["Adoración", "Clásico", "Gratitud"],
 
-    "idiomas": {
+  "idiomas": {
+    "es": {
+      "titulo": "A ti, Jesús",
+      "audio_url": "",
+      "traductor": "Desconocido",
+      "letra": [
+        "[F]A ti, Jesús, [C]alzaré mi [F]voz",
+        "para [Bb]adorar[Gm]te, mi Salva[C]dor.[C7]",
+        "[F]Acepta hoy, mi [C]rey y Se[F]ñor,",
+        "[F7]el humilde [Bb]don [Gm]de mi [Bb]amor [C]en ora[F]ción."
+      ]
+    },
+
+    "en": {
+      "titulo": "I love you, Lord",
+      "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
+      "traductor": "-",
+      "letra": [
+        "[F]I love You, Lord, [C]and I lift my [F]voice",
+        "To [Bb]worship [Gm]You, O my [C]soul re[C7]joice!",
+        "[F]Take joy, my King, [C]in what You [F]hear,",
+        "[F7]May it be a [Bb]sweet, [Gm]sweet [Bb]sound [C]in Your [F]ear."
+      ]
+    },
+
+    "pt": {
+      "titulo": "Eu Te amo, ó Deus",
+      "traductor": "Desconocido",
+      "letra": [
+        "[F]Eu Te amo, ó Deus, [C]e com a minha [F]voz",
+        "Te [Bb]adora[Gm]rei, ó meu [C]Rei e [C7]Senhor.",
+        "[F]Alegra-Te, ó [C]meu Salva[F]dor,",
+        "[F7]Com o [Bb]som do [Gm]meu [Bb]louvor [C]e do meu [F]amor."
+      ]
+    },
+
+    "it": {
+      "titulo": "Io t'amo, o Re",
+      "traductor": "Comunità Maria",
+      "letra": [
+        "[F]Io t'amo, o Re, [C]ed elevo la [F]voce",
+        "per [Bb]adorar[Gm]Ti, anima [C]mia [C7]gioisci!",
+        "[F]Godi, o mio Re, [C]di quel che [F]odi,",
+        "[F7]sia un [Bb]dolce, [Gm]dolce [Bb]suon [C]al Tuo [F]orecchio."
+      ]
+    }
+  }
+},
+{
+  "id": "a_ti_me_rindo",
+  "titulo_original": "I Surrender",
+  "autor": "Matt Crocker",
+  "compositor": "Matt Crocker",
+  "year": "2012",
+  "tonalidad": "La Menor (Am)",
+  "tempo_bpm": "76 bpm",
+  "compas": "4/4",
+  "ritmo": "worship",
+  "referencia_biblica": "Lucas 14:33",
+  "tags": ["Adoración", "Hillsong", "Entrega"],
+
+  "idiomas": {
       "es": {
-        "titulo": "Diez mil razones (Bendice al Señor)",
-        "audio_url": "https://open.spotify.com/intl-it/track/4Z7vEiQvCUnjvOStbE9Dfg",
+        "titulo": "A ti me rindo",
+        "audio_url": "",
+        "traductor": "Hillsong Worship",
         "letra": [
-          "Que todo lo que soy alabe al Señor",
-          "Con todo mi corazón",
-          "De Tu grande amor, cantaré",
-          "Tu nombre alabaré",
-          "br","br",
-          "Sale el Sol, es un nuevo amanecer",
-          "Cantaré a ti otra vez",
-          "Sea lo que venga, confiaré en ti",
-          "Alabaré en el anochecer",
-          "br","br",
-          "Que todo lo que soy alabe al Señor",
-          "Con todo mi corazón",
-          "De Tu grande amor, cantaré",
-          "Tu nombre alabaré",
-          "br","br",
-          "Tu amor no tiene fin",
-          "Y Tú eres para siempre",
-          "Y bondadoso es Tu corazón",
-          "Por todo lo que has hecho, yo sigo cantando",
-          "Diez mil razones para alabar",
-          "br","br",
-          "Que todo lo que soy alabe al Señor",
-          "Con todo mi corazón",
-          "De Tu grande amor, cantaré",
-          "Tu nombre alabaré",
-          "br","br",
-          "Y en ese día, cuando ya no tenga fuerza",
-          "Y se acerque Tu gloria",
-          "Mi alma cantará de tu amor sin final",
-          "Diez mil años y para siempre más",
-          "br","br",
-          "Bless the lord!",
-          "br","br",
-          "Oh, my soul",
-          "Oh, my soul",
-          "Worship his holy name",
-          "Sing like never before",
-          "Oh, my soul",
-          "I worship his holy name",
-          "br","br",
-          "We worship his holy name",
-          "We worship his holy name"
-        ]
-      },
+        "[Am]Ante ti postrado [C]estoy, aquí.",
+        "Te rindo mi [G]ser, te rindo mi [F]ser.",
+        "Con tu [Am]amor atráeme, [C]Señor.",
+        "Vengo a tus [G]pies, vengo a tus [F]pies.",
+        "A ti me [Am]rindo. [C] - [G] - [F]",
+        "",
+        "[Am]Lléname de gracia, in[C]úndame.",
+        "Sacia mi [G]sed, sacia mi [F]sed.",
+        "Mi [Am]corazón levanta un [C]clamor:",
+        "“Háblame, [G]Dios, háblame [F]Dios.”",
+        "",
+        "A ti me [Am]rindo, a ti me [C]rindo.",
+        "Te quiero co[Dm]nocer, más de ti co[F]nocer.",
+        "",
+        "Con tu a[F]liento, [C]Dios, sopla en mi in[G]terior.",
+        "Cumple, Se[Dm]ñor, tu vo[Am]luntad en [G]mí.",
+        "Con tu [F]gran po[C]der muévete en mi [G]ser.",
+        "Cumple, Se[Dm]ñor, tu vo[Am]luntad en [G]mí.",
+        "",
+        "A ti me [Am]rindo, a ti me [C]rindo.",
+        "Te quiero co[Dm]nocer, más de ti co[F]nocer."
+      ]
+    },
+
       "en": {
-        "titulo": "10,000 Reasons (Bless the Lord)",
-        "audio_url": "https://open.spotify.com/track/16e4Q3plJrKkncoLKR1CQ1",
-        "letra": [
+      "titulo": "I Surrender",
+      "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
+      "traductor": "-",
+      "letra": [
+        "[Am]Here I am down on my [C]knees again",
+        "Surrendering [G]all, surrendering [F]all",
+        "Find me [Am]here, Lord as You [C]draw me near",
+        "Desperate for [G]You, desperate for [F]You",
+        "I sur[Am]render",
+        "",
+          "Drench my [Am]soul as mercy and [C]grace unfold",
+        "I hunger and [G]thirst, I hunger and [F]thirst",
+        "With arms [Am]stretched wide, I know You [C]hear my cry",
+        "Speak to me [G]now, speak to me [F]now",
+        "",
+        "I sur[Am]render, I sur[C]render",
+        "I want to [Dm]know You more, I want to [F]know You more",
+        "",
+        "Like a [F]mighty [C]rushing wind, Jesus [G]breathe within",
+        "Lord, have Your [Dm]way, Lord, have Your [Am]way in [G]me",
+        "Like a [F]mighty [C]storm, stir within my [G]soul",
+        "Lord, have Your [Dm]way, Lord, have Your [Am]way in [G]me"
+      ]
+    },
+    "pt": {
+      "titulo": "Eis-me Aqui (Rendido Estou)",
+      "audio_url": "",
+      "traductor": "Aline Barros / Hillsong em Português",
+      "letra": [
+        "[Am]Eis-me aqui, prostrado [C]outra vez",
+        "Pra tudo en[G]tregar, pra tudo en[F]tregar",
+        "Com Teu [Am]amor, atrai-me, [C]Senhor",
+        "Sede tenho de [G]Ti, sede tenho de [F]Ti",
+        "Eu me [Am]rendo",
+        "",
+        "Enche-[Am]me de graça e [C]misericórdia",
+        "Sacia o meu [G]ser, sacia o meu [F]ser",
+        "Meu cora[Am]ção clama por [C]Ti",
+        "Fala-me, [G]Deus, fala-me, [F]Deus",
+        "",
+        "Eu me [Am]rendo, eu me [C]rendo",
+        "Pra Te co[Dm]nhecer, mais de Ti co[F]nhecer",
+        "",
+        "Como um [F]vento [C]forte, sopra em meu [G]viver",
+        "Faz o Teu [Dm]querer, faz o Teu [Am]querer em [G]mim",
+        "Como um [F]fogo ar[C]dente, brilha em meu [G]ser",
+        "Faz o Teu [Dm]querer, faz o Teu [Am]querer em [G]mim"
+      ]
+    },
+    "it": {
+      "titulo": "Io mi arrendo",
+      "traductor": "Hillsong In Italiano",
+      "letra": [
+        "[Am]Eccomi, prostrato ai [C]piedi Tuoi",
+        "Tutto Ti [G]do, tutto Ti [F]do",
+        "Attrat[Am]to dal Tuo amore, [C]Signore",
+        "Smanio per [G]Te, smanio per [F]Te",
+        "Io mi a[Am]rrendo",
+        "",
+        "Io mi a[Am]rrendo, io mi a[C]rrendo",
+        "Ti voglio co[Dm]noscere, sempre più co[F]noscere",
+        "",
+        "Come un [F]vento [C]soffia dentro [G]me",
+        "Fa la [Dm]Tua volon[Am]tà in [G]me",
+        "Con po[F]tenza [C]muoviti nel mio [G]sen",
+        "Fa la [Dm]Tua volon[Am]tà in [G]me"
+      ]
+    }
+  }
+},
+{
+  "id": "abre_mis_ojos",
+  "titulo_original": "Open Our Eyes, Lord",
+  "autor": "Robert Cull",
+  "compositor": "Robert Cull",
+  "year": "1976",
+  "tonalidad": "Re Mayor (D)",
+  "tempo_bpm": "66 bpm",
+  "compas": "4/4",
+  "ritmo": "balada",
+  "referencia_biblica": "Salmos 119:18",
+  "tags": ["Adoración", "Clásico", "Petición"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Abre mis ojos",
+      "audio_url": "",
+      "traductor": "Desconocido",
+      "letra": [
+        "[D]Abre mis [G]ojos, [A]Jesús quiero [D]verte,[Bm]",
+        "conmigo te[Em]nerte, [A]decir que te [G]amo.[D]",
+        "[D]Abre mi [G]oído, [A]hoy quiero escu[D]charte.[Bm]",
+        "¡Abre mis [Em]ojos [A]para contem[G]plarte![D]"
+      ]
+    },
+    "en": {
+      "titulo": "Open Our Eyes, Lord",
+      "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
+      "traductor": "-",
+      "letra": [
+        "[D]Open our [G]eyes, Lord, [A]we want to [D]see Jesus,[Bm]",
+        "To reach out and [Em]touch Him, [A]and say that we [G]love Him.[D]",
+        "[D]Open our [G]ears, Lord, [A]and help us to [D]listen,[Bm]",
+        "Open our [Em]eyes, Lord, [A]we want to [G]see Jesus.[D]"
+      ]
+    },
+    "pt": {
+      "titulo": "Abre os Meus Olhos",
+      "audio_url": "",
+      "traductor": "Vincit",
+      "letra": [
+        "[D]Abre os meus [G]olhos, [A]pois quero ver [D]Cristo,[Bm]",
+        "Sentir Sua pre[Em]sença, [A]dizer que O [G]amo.[D]",
+        "[D]Abre os ou[G]vidos, [A]ajuda-me a ou[D]vir-Te,[Bm]",
+        "Abre os meus [Em]olhos, [A]pois quero ver [G]Cristo.[D]"
+      ]
+    },
+    "it": {
+      "titulo": "Apri i Miei Occhi",
+      "audio_url": "",
+      "traductor": "Comunità Maria",
+      "letra": [
+        "[D]Apri i miei [G]occhi, [A]Signore, Ti [D]prego,[Bm]",
+        "voglio toc[Em]carTi, [A]voglio amar[G]Ti.[D]",
+        "[D]Apri le o[G]recchie, [A]Signore, Ti [D]prego,[Bm]",
+        "apri i miei [Em]occhi, [A]voglio ve[G]derTi.[D]"
+      ]
+    },
+    "fr": {
+      "titulo": "Ouvre nos yeux",
+      "audio_url": "",
+      "traductor": "Jeunesse en Mission",
+      "letra": [
+        "[D]Ouvre nos [G]yeux, Seigneur, [A]nous voulons [D]voir Jésus,[Bm]",
+        "Le toucher du [Em]doigt, [A]Lui dire qu'on [G]L'aime.[D]",
+        "[D]Ouvre nos o[G]reilles, [A]Seigneur, fais-nous [D]entendre,[Bm]",
+        "Ouvre nos [Em]yeux, Seigneur, [A]nous voulons [G]voir Jésus.[D]"
+      ]
+    },  
+    "de": {
+      "titulo": "Öffne die Augen",
+      "audio_url": "",
+      "traductor": "Desconocido",
+      "letra": [
+        "[D]Öffne die [G]Augen, [A]wir wollen [D]Dich sehen,[Bm]",
+        "Dich fast schon be[Em]rühren [A]und sagen: Wir [G]lieben Dich.[D]",
+        "[D]Öffne die [G]Ohren, [A]Herr, hilf uns zu [D]hören,[Bm]",
+        "Öffne die [Em]Augen, [A]wir wollen [G]Dich sehen.[D]"
+      ]
+    }
+  }
+},
+{
+  "id": "abre_mis_ojos_senor",
+  "titulo_original": "Open the eyes of my heart",
+  "autor": "Paul Baloche",
+  "compositor": "Paul Baloche",
+  "year": "1997",
+  "tonalidad": "Re Mayor (D)",
+  "tempo_bpm": "110 bpm",
+  "compas": "4/4",
+  "ritmo": "pop-rock",
+  "referencia_biblica": "Apocalipsis 4:8",
+  "tags": ["Adoración", "Michael W. Smith", "Clásico"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Abre mis ojos, Señor",
+      "audio_url": "",
+      "traductor": "Desconocido",
+      "letra": [
+        "[D]Abre mis ojos, Señor,",
+        "[A]abre mis ojos, Señor,",
+        "yo quiero [G]verte,",
+        "yo quiero [D]verte. [x2]",
+        "",
+        "Quiero [A]ver tu majes[Bm]tad",
+        "[Em]brillando sobre toda la [A]tierra,",
+        "sentir tu [A7]gran poder y [Bm]amor,",
+        "yo quiero [G]estar en tu pre[A]sencia.",
+        "",
+        "[D]Santo, Santo, Santo,",
+        "[A]Santo, Santo, Santo,",
+        "[G]Santo, Santo, [A]Santo,",
+        "tú eres [D]Santo."
+      ]
+    },
+    "en": {
+      "titulo": "Open the eyes of my heart",
+      "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
+      "traductor": "-",
+      "letra": [
+        "[D]Open the eyes of my heart, Lord",
+        "[A]Open the eyes of my heart",
+        "I want to [G]see You",
+        "I want to [D]see You [x2]",
+        "",
+        "To see You [A]high and lifted [Bm]up",
+        "[Em]Shining in the light of Your [A]glory",
+        "Pour out Your [A7]power and [Bm]love",
+        "As we sing [G]Holy, Holy, [A]Holy",
+        "",
+        "[D]Holy, Holy, Holy",
+        "[A]Holy, Holy, Holy",
+        "[G]Holy, Holy, [A]Holy",
+        "I want to [D]see You"
+      ]
+    },
+    "pt": {
+      "titulo": "Abre os olhos do meu coração",
+      "traductor": "David Quinlan",
+      "letra": [
+        "[D]Abre os olhos do meu coração",
+        "[A]Abre os olhos do meu coração",
+        "Eu quero Te [G]ver",
+        "Eu quero Te [D]ver [x2]",
+        "",
+        "Quero con[A]templar Tua majes[Bm]tade",
+        "[Em]E o brilho da Tua [A]glória",
+        "Derrama o [A7]Teu amor e po[Bm]der",
+        "Pois Tu és [G]Santo, Santo, [A]Santo",
+        "",
+        "[D]Santo, Santo, Santo",
+        "[A]Santo, Santo, Santo",
+        "[G]Santo, Santo, [A]Santo",
+        "Eu quero Te [D]ver"
+      ]
+    },
+    "it": {
+      "titulo": "Apri i miei occhi",
+      "traductor": "RNS",
+      "letra": [
+        "[D]Apri i miei occhi del cuore, Dio",
+        "[A]Apri i miei occhi del cuore",
+        "Io voglio ve[G]derTi",
+        "Io voglio ve[D]derTi [x2]",
+        "",
+        "Vedere Te, [A]grande e splen[Bm]dente",
+        "[Em]Nella luce della Tua [A]gloria",
+        "Inonda il [A7]cuore del Tuo a[Bm]more",
+        "Mentre can[G]tiamo Santo, [A]Santo",
+        "",
+        "[D]Santo, Santo, Santo",
+        "[A]Santo, Santo, Santo",
+        "[G]Santo, Santo, [A]Santo",
+        "Io voglio ve[D]derTi"
+      ]
+    }
+  }
+},
+{
+  "id": "agnus_dei",
+  "titulo_original": "Agnus Dei",
+  "autor": "Michael W. Smith",
+  "compositor": "Michael W. Smith",
+  "year": "1990",
+  "tonalidad": "Sol Mayor (G)",
+  "tempo_bpm": "68 bpm",
+  "compas": "4/4",
+  "ritmo": "himno / adoración",
+  "referencia_biblica": "Salmos 22:1 / Apocalipsis 19:6",
+  "tags": ["Adoración", "Clásico", "Majestuoso"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Agnus dei",
+      "audio_url": "",
+      "traductor": "Misión Vida",
+      "letra": [
+        "[G] Ale[C]lu[G]ya, ale[C]lu[Em]ya! Te ala[D]bamos, Se[C]ñor, nuestro [G]Rey.",
+        "[G] Ale[C]lu[G]ya, ale[C]lu[Em]ya! Te ala[D]bamos, Se[C]ñor, nuestro [G]Rey.",
+        "Ale[G]lu[C]ya![Em]",
+        "",
+        "[C]San[D]to, [D]San[G]to, eres [C]San[G]to, mi Salva[D]dor.",
+        "Digno eres [G]tú, [C]digno eres [G]tú, [C]digno eres tú.",
+        "Tú eres [D]San[G]to, [D]San[G]to, eres [C]San[G]to, mi [Em]Salva[D]dor.",
+        "Digno eres [Em]tú, [C]digno eres [Em]tú. [C]A[D]m[G]én."
+      ]
+    },
+    "en": {
+      "titulo": "Agnus Dei",
+      "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
+      "traductor": "-",
+      "letra": [
+        "[G] Alle[C]lu[G]ia, alle[C]lu[Em]ia! For the [D]Lord God Al[C]mighty [G]reigns.",
+        "[G] Alle[C]lu[G]ia, alle[C]lu[Em]ia! For the [D]Lord God Al[C]mighty [G]reigns.",
+        "Alle[G]lu[C]ia![Em]",
+        "",
+        "[C]Ho[D]ly, [D]Ho[G]ly, are You [C]Ho[G]ly, Little Lamb of [D]God.",
+        "Worthy is the [G]Lamb, [C]worthy is the [G]Lamb, [C]worthy is the Lamb.",
+        "You are [D]Ho[G]ly, [D]Ho[G]ly, are You [C]Ho[G]ly, Little Lamb of [Em]God.[D]",
+        "Worthy is the [Em]Lamb, [C]worthy is the [Em]Lamb. [C]A[D]m[G]en."
+      ]
+    },
+    "pt": {
+      "titulo": "Agnus Dei",
+      "traductor": "David Quinlan",
+      "letra": [
+        "[G] Ale[C]lu[G]ia, ale[C]lu[Em]ia! Pois o [D]Senhor Deus To[C]do-Pode[G]roso reina.",
+        "[G] Ale[C]lu[G]ia, ale[C]lu[Em]ia! Pois o [D]Senhor Deus To[C]do-Pode[G]roso reina.",
+        "Ale[G]lu[C]ia![Em]",
+        "",
+        "[C]San[D]to, [D]San[G]to, Tu és [C]San[G]to, Cordeiro de [D]Deus.",
+        "Digno és [G]Tu, [C]digno és [G]Tu, [C]digno és Tu.",
+        "Tu és [D]San[G]to, [D]San[G]to, Tu és [C]San[G]to, Cordeiro de [Em]Deus.[D]",
+        "Digno és [Em]Tu, [C]digno és [Em]Tu. [C]A[D]m[G]ém."
+      ]
+    },
+    "it": {
+      "titulo": "Agnus Dei",
+      "traductor": "RNS",
+      "letra": [
+        "[G] Alle[C]lu[G]ia, alle[C]lu[Em]ia! Il Si[D]gnore Dio l'Onni[C]potente [G]regna.",
+        "[G] Alle[C]lu[G]ia, alle[C]lu[Em]ia! Il Si[D]gnore Dio l'Onni[C]potente [G]regna.",
+        "Alle[G]lu[C]ia![Em]",
+        "",
+        "[C]San[D]to, [D]San[G]to, Tu sei [C]San[G]to, l'Agnello di [D]Dio.",
+        "Degno sei [G]Tu, [C]degno sei [G]Tu, [C]degno sei Tu.",
+        "Tu sei [D]San[G]to, [D]San[G]to, Tu sei [C]San[G]to, l'Agnello di [Em]Dio.[D]",
+        "Degno sei [Em]Tu, [C]degno sei [Em]Tu. [C]A[D]m[G]en."
+      ]
+    }
+  }
+},
+{
+  "id": "alabare",
+  "titulo_original": "Alabaré",
+  "autor": "Manuel José Alonso y José Pagán",
+  "compositor": "Manuel José Alonso y José Pagán",
+  "year": "1970",
+  "tonalidad": "Re Mayor (D)",
+  "tempo_bpm": "120 bpm",
+  "compas": "4/4",
+  "ritmo": "coro alegre / marcha",
+  "referencia_biblica": "Salmos 22:22 / Apocalipsis 7:9",
+  "tags": ["Júbilo", "Clásico", "Himno"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Alabaré",
+      "audio_url": "",
+      "traductor": "-",
+      "letra": [
+        "[D]Alabaré, alabaré, ala[Bm]baré, alabaré,",
+        "[G]alaba[A]ré a mi Se[D]ñor Je[G]sús.[D]",
+        "[D]Y cantaré y cantaré, y can[Bm]taré, y cantaré,",
+        "[G]y can[A]taré a mi Se[D]ñor Je[G]sús.[D]",
+        "",
+        "[D]Juan vio el número de los redimidos",
+        "y todos ala[A]baban al Señor.",
+        "[A]Unos cantaban, otros oraban,",
+        "y [A7]todos ala[D]baban al Señor."
+      ]
+    }
+  }
+},
+{
+  "id": "al_comenzar_la_semana",
+  "titulo_original": "Al comenzar la semana",
+  "autor": "Desconocido",
+  "compositor": "Desconocido",
+  "year": "Desconocido",
+  "tonalidad": "Sol Mayor (G)",
+  "tempo_bpm": "115 bpm",
+  "compas": "4/4",
+  "ritmo": "corito / alegre",
+  "referencia_biblica": "Hechos 2:46, 47",
+  "tags": ["Comunión", "Bienvenida", "Hermandad"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Al comenzar la semana",
+      "audio_url": "",
+      "traductor": "-",
+      "letra": [
+        "[G]Al comenzar la semana, [C]¡qué ale[G]gría que me [D]da",
+        "el estar con mis hermanos en [D]este [D7]lindo lu[G]gar!",
+        "[G]Enlacemos nuestras manos [C]para [G]juntos ala[C]bar",
+        "el [Cm]nombre de Jesu[G]cristo, [Em]nuestro a[D]migo más le[G]al."
+      ]
+    },
+    "pt": {
+      "titulo": "Ao começar a semana",
+      "audio_url": "",
+      "traductor": "Desconocido",
+      "letra": [
+        "[G]Ao começar a semana, [C]quanta ale[G]gria me [D]dá",
+        "Estar com meus irmãos [D]neste [D7]belo lu[G]gar!",
+        "[G]Unamos nossas mãos [C]para [G]juntos lou[C]var",
+        "O [Cm]nome de Jesus [G]Cristo, [Em]nosso a[D]migo mais le[G]al."
+      ]
+    }
+  }
+},
+{
+  "id": "al_encuentro_de_jesus",
+  "titulo_original": "Al encuentro de Jesús",
+  "autor": "Emilse Impoco y Pablo Cordoba",
+  "compositor": "Emilse Impoco y Pablo Cordoba",
+  "year": "2000",
+  "tonalidad": "Mi Mayor (E)",
+  "tempo_bpm": "80 bpm",
+  "compas": "4/4",
+  "ritmo": "canon / adoración",
+  "referencia_biblica": "Amós 4:12",
+  "tags": ["Canon", "Alabanza", "Encuentro"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Al encuentro de Jesús",
+      "audio_url": "",
+      "traductor": "-",
+      "letra": [
+        "[E]Al encuentro de Jesús e[B]levo [A]mi [E]voz,",
+        "a su gloria [E]rindo [B]ala[A]ban[E]za.",
+        "[E]Su bondad exal[B]taré, [A]su gracia can[E]taré.",
+        "[E]Glorificaré su a[B]mor y [A]su gran po[E]der."
+      ]
+    },
+    "pt": {
+      "titulo": "Ao encontro de Jesus",
+      "audio_url": "",
+      "traductor": "Desconocido",
+      "letra": [
+        "[E]Ao encontro de Jesus e[B]levo a [A]minha [E]voz,",
+        "À sua glória [E]rendo [B]ala[A]ban[E]ça.",
+        "[E]Sua bondade exal[B]tarei, [A]sua graça can[E]tarei.",
+        "[E]Glorificarei Seu a[B]mor e [A]Seu grande po[E]der."
+      ]
+    }
+  }
+},
+{
+  "id": "al_lado_de_jesus",
+  "titulo_original": "Al lado de Jesús",
+  "autor": "Desconocido",
+  "compositor": "Desconocido",
+  "year": "Desconocido",
+  "tonalidad": "Do Mayor (C)",
+  "tempo_bpm": "85 bpm",
+  "compas": "4/4",
+  "ritmo": "balada / pop",
+  "referencia_biblica": "1 Juan 2:6",
+  "tags": ["Consuelo", "Confianza", "Amistad"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Al lado de Jesús",
+      "audio_url": "",
+      "traductor": "-",
+      "letra": [
+        "[C]La vida es dura, lo sé [G]bien, los problemas nublan tu [Am]fe.",
+        "Mas hay una [F]opción para estar [C]bien, escucha [F]lo que te di[C]ré:",
+        "[C]Cristo es luz para tu cami[G]nar, está dispuesto a atender tu ansie[Am]dad.",
+        "Te da [F]amor, te da [C]paz y te da [F]fuerzas [G]al lu[Am]char.",
+        "Es [F]puerto seguro para descan[C]sar, [G] [Am]es el buen [F]Pastor que da segu[C]ri[G]dad.",
+        "",
+        "[C]Siempre es tu amigo [G]fiel, es manantial para tu [Am]sed.",
+        "No hay [F]nada que te[C]mer si vas [F]al [G]lado de Je[C]sús.",
+        "Él cam[C]biará tu acti[G]tud, Él es vida es la [Am]luz.",
+        "Mira [F]siempre hacia la [C]cruz, camina [F]al [G]lado de Je[C]sús.",
+        "",
+        "[C]Es la solución para tu males[G]tar, es el remedio que puede sa[Am]nar.",
+        "El [F]bello tesoro que puedes ha[C]llar, camina [F]al [G]lado de Je[C]sús.",
+        "[G]Le da sabor a tu amargo vi[G]vir es la razón de poder son[Am]reír.",
+        "Con [F]Él tú puedes ser fe[C]liz, camina [F]al [G]lado de Je[C]sús.",
+        "",
+        "[G]Laralala, [Am]laralala, [F]la, [C]la. [F]Cami[G]na al lado de Je[C]sús."
+      ]
+    },
+    "pt": {
+      "titulo": "Ao lado de Jesus",
+      "audio_url": "",
+      "traductor": "Desconocido",
+      "letra": [
+        "[C]A vida é dura, eu bem [G]sei, os problemas nublam sua [Am]fé.",
+        "Mas há uma es[F]colha para estar [C]bem, escute o [F]que eu lhe di[C]rei:",
+        "[C]Cristo é luz para o seu cami[G]nhar, está disposto a ouvir seu cla[Am]mor.",
+        "Te dá [F]amor, te dá [C]paz e forças [F]para [G]vencer [Am].",
+        "É [F]porto seguro para descan[C]sar, [G] [Am]é o bom [F]Pastor que dá segu[C]ran[G]ça.",
+        "",
+        "[C]Sempre é o seu amigo [G]fiel, é manancial para sua [Am]sede.",
+        "Não há o [F]que te[C]mer se vai [F]ao [G]lado de Je[C]sus.",
+        "Ele mud[C]ará sua ati[G]tude, Ele é a vida e a [Am]luz.",
+        "Olhe [F]sempre para a [C]cruz, caminhe [F]ao [G]lado de Je[C]sus."
+      ]
+    }
+  }
+},
+{
+  "id": "alegre_voy_cantando",
+  "titulo_original": "Alegre voy cantando",
+  "autor": "Desconocido",
+  "compositor": "Desconocido",
+  "year": "Desconocido",
+  "tonalidad": "Sol Mayor (G)",
+  "tempo_bpm": "115 bpm",
+  "compas": "4/4",
+  "ritmo": "corito / alegre",
+  "referencia_biblica": "Romanos 12:12",
+  "tags": ["Júbilo", "Gratitud", "Segunda Venida"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Alegre voy cantando",
+      "audio_url": "",
+      "traductor": "-",
+      "letra": [
+        "[G]Alegre voy cantando en el [C]camino de la [Am]dicha y la ver[D]dad. [G] - [Em] - [C] - [D]",
+        "[G]A cada paso en[C]cuentro un mo[Am]tivo de a[D]mor y felici[G]dad.",
+        "",
+        "Coro:",
+        "Y [Em]alegre voy can[C]tando, [D]sí [G]alegre [Em]voy can[C]tando. [D]",
+        "Con Je[G]sús, mi Salva[C]dor, [D]y así [G]yo vivi[C]ré",
+        "por la eter[D]nidad, [G]sí, [C]por la [D]eterni[G]dad.",
+        "",
+        "[G]Yo sé que Jesucristo a [C]esta tierra ya en [Am]breve volve[D]rá. [G] - [Em] - [C] - [D]",
+        "[G]Y pronto en las [C]nubes de los [Am]cielos todo [D]ojo lo ve[G]rá."
+      ]
+    },
+    "pt": {
+      "titulo": "Alegre vou cantando",
+      "audio_url": "",
+      "traductor": "Desconocido",
+      "letra": [
+        "[G]Alegre vou cantando no [C]caminho da di[Am]ta e da ver[D]dade. [G] - [Em] - [C] - [D]",
+        "[G]A cada passo en[C]contro um mo[Am]tivo de a[D]mor e felici[G]dade.",
+        "",
+        "Coro:",
+        "E [Em]alegre vou can[C]tando, [D]sim [G]alegre [Em]vou can[C]tando. [D]",
+        "Com Je[G]sus, meu Salva[C]dor, [D]e assim [G]eu vive[C]rei",
+        "Pela eter[D]nidade, [G]sim, [C]pela [D]eterni[G]dade.",
+        "",
+        "[G]Eu sei que Jesus Cristo a [C]esta terra muito [Am]breve volta[D]rá. [G] - [Em] - [C] - [D]",
+        "[G]E logo sobre as [C]nuvens dos [Am]céus todo o [D]olho o ve[G]rá."
+      ]
+    }
+  }
+},
+{
+  "id": "alma_misionera",
+  "titulo_original": "Alma misionera",
+  "autor": "Enrique García Vélez",
+  "compositor": "Enrique García Vélez",
+  "year": "1979",
+  "tonalidad": "Sol Mayor (G)",
+  "tempo_bpm": "84 bpm",
+  "compas": "4/4",
+  "ritmo": "balada / folclore",
+  "referencia_biblica": "Isaías 6:8",
+  "tags": ["Misión", "Servicio", "Entrega"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Alma misionera",
+      "audio_url": "",
+      "traductor": "-",
+      "letra": [
+        "[G]Señor, [D]toma mi vida [Em]nueva [C]antes de que la es[G]pera desgas[D]te años en mí.",
+        "[G]Estoy [D]dispuesto a lo que [Em]quieras, [C]no importa dónde [G]sea, tú [C]lláma[D]me a ser[G]vir.[D]",
+        "",
+        "Coro:",
+        "[G]Llévame donde los [D]hombres necesi[Em]ten tus pa[C]labras, necesi[G]ten mis ganas de vi[D]vir.",
+        "[G]Donde falte la espe[D]ranza, donde [Em]todo sea [C]triste simplemente [G]por [C]no sa[D]ber de [G]ti.",
+        "",
+        "[G]Te doy [D]mi corazón sin[Em]cero [C]para gritar sin [G]miedo lo her[D]moso que es tu amor.",
+        "[G]Señor, [D]tengo alma misio[Em]nera, [C]condúceme a la [G]tierra que [C]tenga [D]sed de [G]ti.[D]"
+      ]
+    },
+    "en": {
+      "titulo": "Missionary Soul",
+      "audio_url": "",
+      "traductor": "Desconocido",
+      "letra": [
+        "[G]Lord, [D]take my life a[Em]new [C]before the wait [G]wears out the [D]years in me.",
+        "[G]I am [D]ready for what You [Em]want, [C]no matter where it [G]is, just [C]call [D]me to [G]serve.[D]",
+        "",
+        "Chorus:",
+        "[G]Take me where [D]people need Your [Em]words, [C]where they need my [G]desire to [D]live.",
+        "[G]Where hope is [D]missing, where [Em]everything is [C]sad, simply [G]for [C]not [D]knowing [G]You.",
+        "",
+        "[G]I give [D]You my sincere [Em]heart [C]to shout without [G]fear how [D]beautiful is Your love.",
+        "[G]Lord, [D]I have a missionary [Em]soul, [C]lead me to the [G]land that [C]thirsts [D]for [G]You.[D]"
+      ]
+    },
+    "pt": {
+      "titulo": "Alma Missionária",
+      "audio_url": "",
+      "traductor": "Zezinho",
+      "letra": [
+        "[G]Senhor, [D]toma minha vida [Em]nova [C]antes que a es[G]pera desgas[D]te anos em mim.",
+        "[G]Estou [D]disposto ao que [Em]queiras, [C]não importa onde [G]seja, Tu [C]chama-[D]me a ser[G]vir.[D]",
+        "",
+        "Coro:",
+        "[G]Leva-me onde os [D]homens neces[Em]sitem Tua pa[C]lavra, neces[G]sitem força de vi[D]ver.",
+        "[G]Onde falte a espe[D]rança, onde [Em]tudo seja [C]triste simplesmente [G]por [C]não [D]Saber de [G]Ti.",
+        "",
+        "[G]Te dou [D]meu coração sin[Em]cero [C]para gritar sem [G]medo como é [D]bom o Teu amor.",
+        "[G]Senhor, [D]tenho alma missio[Em]nária, [C]conduz-me à [G]terra que [C]tenha [D]sede de [G]Ti.[D]"
+      ]
+    }
+  }
+},
+{
+  "id": "alto_escuchame",
+  "titulo_original": "Alto, escúchame",
+  "autor": "Desconocido",
+  "compositor": "Desconocido",
+  "year": "Desconocido",
+  "tonalidad": "Mi Mayor (E)",
+  "tempo_bpm": "95 bpm",
+  "compas": "4/4",
+  "ritmo": "balada / pop",
+  "referencia_biblica": "2 Corintios 5:17",
+  "tags": ["Testimonio", "Evangelismo", "Conversión"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Alto, escúchame",
+      "audio_url": "",
+      "traductor": "-",
+      "letra": [
+        "[E]Alto, escúchame, no [A]sigas [B]caminando [E]más.",
+        "[E]Hoy quiero decirte lo que [A]hizo [B]Dios en [E]mí.",
+        "[E]Tienes que saber que un [A]día yo a[B]cepté al Se[E]ñor,",
+        "soy un [E]hombre nuevo y [A]ahora [B]vivo para [E]Él. [E7]",
+        "",
+        "Coro:",
+        "¡Qué ale[A]gría es [B]ser un testigo de [E]Dios! [B/D#] [C#m]",
+        "Es sen[A]tirlo con [B]fe, en el cora[E]zón. [B/D#] [C#m]",
+        "Y [A]aunque todos te [B]digan que eso no es ver[E]dad [B/D#] [C#m]",
+        "yo [F#m]lo siento en mi [B]vida aún [E]más."
+      ]
+    }
+  }
+},
+{
+  "id": "alzare_mis_ojos_hatikvah",
+  "titulo_original": "Hatikvah / Alzaré mis ojos",
+  "autor": "Naftali Herz Imber",
+  "compositor": "Basada en una melodía italiana del siglo XVII llamada La Mantovana por Bedřich Smetana",
+  "tonalidad": "La Menor (Am)",
+  "referencia_biblica": "Salmos 121",
+  "tags": ["Música tradicional hebrea"],
+  "idiomas": {
+    "es": {
+      "titulo": "Alzaré mis ojos",
+      "letra": [
+        "[Am]Alzaré mis ojos [Dm]a los [Am]montes.",
+        "[Dm]¿De dónde ven[Am]drá [E]mi so[Am]corro?",
+        "[Am]Mi socorro viene [Dm]de Jeho[Am]vá",
+        "[Dm]que hizo los [Am]cielos [E]y la [Am]tierra.",
+        "",
+        "[F]No dará tu [G]pie resba[Am]ladero",
+        "[F]ni se dor[G]mirá el que te [Am]guarda.",
+        "[Dm]He aquí no se [Am]adorme[Dm]cerá [G]ni dor[Am]mirá",
+        "[Dm]el que [Am]guarda a [E]Isra[Am]el.",
+        "",
+        "[Am]Jehová es tu [Dm]Salva[Am]dor,",
+        "[Dm]Jehová es tu [Am]sombra y tu [E]mano de[Am]recha.",
+        "[Am]El sol no te fati[Dm]gará de [Am]día [Dm]ni la [Am]luna [E]de [Am]noche.",
+        "",
+        "[F]Jehová te guar[G]dará de todo [Am]mal,",
+        "[F]Él guar[G]dará tu [Am]alma.",
+        "[Dm]Jehová guardará tu [G]salida y tu en[Am]trada",
+        "[Dm]desde [Am]ahora [E]y para [Am]siempre,",
+        "[Dm]desde [Am]ahora [E]y para [Am]siempre."
+      ]
+    },
+    "he": {
+      "titulo": "Hatikvah (הַתִּקְוָה)",
+      "traductor": "Naftali Herz Imber",
+      "letra": [
+        "[Am]Kol od ba[Dm]levav pe[Am]nimah (כֹּל עוֹד בַּלֵּבָב פְּנִימָה)",
+        "[Dm]Nefesh yehu[Am]di ho[E]mi[Am]yah, (נֶפֶשׁ יְהוּדִי הוֹמִיָּה,)",
+        "[Am]Ulfa'atei miz[Dm]rach ka[Am]dimah, (וּלְפַאֲתֵי מִזְרָח קָדִימָה,)",
+        "[Dm]Ayin leTzi[Am]yon tzo[E]fi[Am]yah. (עַיִן לְצִיּוֹן צוֹפִיָּה;)",
+        "",
+        "Od lo avda tikvatenu (עוֹד לֹא אָבְדָה תִּקְוָתֵנוּ,)",
+        "Hatikva bat shnot alpayim: (הַתִּקְוָה בַּת שְׁנוֹת אַלְפַּיִם,)",
+        "Lihyot am jofshi be'artzenu (לִהְיוֹת עַם חָפְשִׁי בְּאַרְצֵנוּ,)",
+        "Eretz Tzion v'Yerushalayim. (אֶרֶץ צִיּוֹן וִירוּשָׁלַיִם.)"
+
+      ]
+    }
+  }
+},
+{
+  "id": "amor_amor_amor_amor",
+  "titulo_original": "Love, love, love, love",
+  "autor": "Desconocido",
+  "compositor": "Desconocido",
+  "year": "Desconocido",
+  "tonalidad": "Re Menor (Dm)",
+  "tempo_bpm": "85 bpm",
+  "compas": "4/4",
+  "ritmo": "canon / suave",
+  "referencia_biblica": "Mateo 19:19",
+  "tags": ["Amor", "Evangelio", "Prójimo", "Canon"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Amor, amor",
+      "audio_url": "",
+      "traductor": "-",
+      "letra": [
+        "[Dm]Amor, amor, [C]amor, [Dm]amor, [A]es el evangelio en una palabra.",
+        "[Dm]Ama tu [C]prójimo [Dm]como a ti [A]mismo.",
+        "[Dm]Dios es [C]amor, [Dm] - [A] Dios es [C]amor. [Dm] - [A]",
+        "",
+        "[Dm]Jesús, Jesús, [C]Jesús, [Dm]Jesús, [A]haz que mi vida sea un ejemplo.",
+        "[Dm]Hazlo, Se[C]ñor, tan [Dm]solo en un ins[A]tante.",
+        "[Dm]Hazlo Se[C]ñor, [Dm] - [A] [Dm]hazlo Se[C]ñor. [Dm] - [A] - [Dm]"
+      ]
+    },
+    "en": {
+      "titulo": "Love, love",
+      "audio_url": "",
+      "traductor": "-",
+      "letra": [
+        "[Dm]Love, love, [C]love, [Dm]love,",
+        "[A]The Gospel in a [Dm]word is [C]love. [Dm]-[A]",
+        "[Dm]Love your [C]neighbor [Dm]as your[A]self,",
+        "For [Dm]God is [C]love. [Dm] - [A]"
+      ]
+    },
+    "it": {
+      "titulo": "Amore, amore",
+      "audio_url": "",
+      "traductor": "Desconocido",
+      "letra": [
+        "[Dm]Amore, a[C]more, a[Dm]more, a[A]more,",
+        "Il Van[Dm]gelo in una [C]parola è a[Dm]mor. [A]",
+        "[Dm]Ama il [C]prossimo [Dm]come te [A]stesso,",
+        "Per[Dm]ché Dio è a[C]mor. [Dm] - [A]"
+      ]
+    },
+    "pt": {
+      "titulo": "Amor, amor",
+      "audio_url": "",
+      "traductor": "Desconocido",
+      "letra": [
+        "[Dm]Amor, a[C]mor, a[Dm]mor, a[A]mor,",
+        "O Evan[Dm]gelho em uma [C]palavra é a[Dm]mor. [A]",
+        "[Dm]Ama o teu [C]próximo [Dm]como a ti [A]mesmo,",
+        "Pois [Dm]Deus é a[C]mor. [Dm] - [A]"
+      ]
+    }
+  }
+},
+{
+  "id": "amor_sin_condicion_reckless_love",
+  "titulo_original": "Reckless Love",
+  "autor": "Cory Asbury, Caleb Culver, Ran Jackson",
+  "compositor": "Cory Asbury, Caleb Culver, Ran Jackson",
+  "year": "2017",
+  "tonalidad": "Fa Sostenido Menor (F#m) / Do Sostenido Menor (C#m)",
+  "tempo_bpm": "83 bpm",
+  "compas": "6/8",
+  "ritmo": "balada worship",
+  "referencia_biblica": "Juan 15:13",
+  "tags": ["Amor de Dios", "Gracia", "Sacrificio", "Worship"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Amor sin condición",
+      "audio_url": "",
+      "traductor": "Abels Worship",
+      "letra": [
+        "[C#m]Aun antes de ha[B]blar, tu voz po[A]día oír,",
+        "has [C#m]sido tan [B]bueno para [A]mí.",
+        "[C#m]Antes de respi[B]rar, soplaste tu a[A]liento en mí,",
+        "has [C#m]sido tan [B]bueno para [A]mí.",
+        "",
+        "[Coro]:",
+        "Tu a[C#m]mor me envuelve, me [B]sostiene,",
+        "a[A]mor sin condi[E]ción.",
+        "Me per[C#m]sigue y deja las [B]noventa",
+        "y [A]nueve, y va por [E]mí.",
+        "No [C#m]puedo ganarlo ni me[B]recerlo,",
+        "tu a[A]mor se entre[E]gó por mí.",
+        "Tu a[C#m]mor me envuelve, me [B]sostiene,",
+        "a[A]mor sin condi[E]ción.",
+        "",
+        "[C#m]Cuando ene[B]migo fui tu a[A]mor luchó por mí,",
+        "has [C#m]sido tan [B]bueno para [A]mí.",
+        "[C#m]Cuando in[B]digno fui, pa[A]gaste el precio por mí,",
+        "has [C#m]sido tan [B]bueno para [A]mí.",
+        "",
+        "No hay [C#m]sombra que no a[B]lumbres,",
+        "mon[A]te que no escales, para encon[E]trarme a mí.",
+        "No hay [C#m]pared que no de[B]rrumbas,",
+        "ca[A]dena que no rompas, para encon[E]trarme a mí."
+      ]
+    },
+    "en": {
+      "titulo": "Reckless Love",
+      "audio_url": "",
+      "traductor": "-",
+      "letra": [
+        "Before I spoke a [C#m]word, You were [B]whispering over [A]me.",
+        "You have [C#m]been so, [B]so good to [A]me.",
+        "Before I drew a [C#m]breath, You [B]breathed Your life in [A]me.",
+        "You have [C#m]been so, [B]so kind to [A]me.",
+        "",
+        "Oh, the over[C#m]whelming, [B]never-ending, [A]reckless love of [E]God.",
+        "Oh, it [C#m]chases me down, [B]fights 'til I'm found, [A]leaves the ninety-[E]nine.",
+        "I couldn't [C#m]earn it, and I [B]don't deserve it, [A]still, You give Your[E]self away.",
+        "Oh, the over[C#m]whelming, [B]never-ending, [A]reckless love of [E]God."
+      ]
+    },
+    "pt": {
+      "titulo": "Ousado Amor",
+      "audio_url": "",
+      "traductor": "Isaias Saad",
+      "letra": [
+        "Antes de eu fa[C#m]lar, Tu can[B]tavas sobre [A]mim.",
+        "Tu tens [C#m]sido tão, [B]tão bom para [A]mim.",
+        "Antes de eu nas[C#m]cer, Teu so[B]pro em mim vi[A]veu.",
+        "Tu tens [C#m]sido tão, [B]tão bom para [A]mim.",
+        "",
+        "Oh, imenso e [C#m]infinito, [B]ousado a[A]mor de [E]Deus.",
+        "Oh, que me [C#m]segue e me per[B]segue, e deixa as [A]noventa e [E]nove.",
+        "Não posso gan[C#m]há-lo, nem me[B]recê-lo, mas a[A]ssim Se entre[E]gou.",
+        "Oh, imenso e [C#m]infinito, [B]ousado a[A]mor de [E]Deus."
+      ]
+    }
+  }
+},
+{
+  "id": "amor_tan_grande",
+  "titulo_original": "Amor tan grande",
+  "autor": "Desconocido",
+  "compositor": "Desconocido",
+  "year": "Desconocido",
+  "tonalidad": "Do Mayor (C)",
+  "tempo_bpm": "80 bpm",
+  "compas": "4/4",
+  "ritmo": "balada / adoración",
+  "referencia_biblica": "Juan 3:16",
+  "tags": ["Amor de Dios", "Sacrificio", "Gracia"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Amor tan grande",
+      "audio_url": "",
+      "traductor": "-",
+      "letra": [
+        "[C]Amor tan grande, pro[F]fundo y su[C]blime",
+        "es el a[G]mor de mi Crea[C]dor.",
+        "[C]No hay nada en el mundo que [F]pueda igua[C]larse",
+        "al tierno a[G]mor de mi Buen Salva[C]dor.",
+        "",
+        "Coro:",
+        "[C]Dios de amor, [F]Dios de a[C]mor,",
+        "tú eres [G]el Dios de a[C]mor.",
+        "[C]No hay otro Dios [F]fuera de [C]ti,",
+        "fuera de [G]ti para mí no hay a[C]mor.",
+        "",
+        "[C]Él solo nos ama, nos [F]guarda y nos [C]guía",
+        "por el sen[G]dero de luz y de [C]paz.",
+        "[C]Él solo nos llena de [F]paz y ale[C]gría,",
+        "porque Él [G]es nuestro Dios de a[C]mor."
+      ]
+    },
+    "pt": {
+      "titulo": "Amor tão grande",
+      "audio_url": "",
+      "traductor": "Desconocido",
+      "letra": [
+        "[C]Amor tão grande, pro[F]fundo e su[C]blime,",
+        "É o a[G]mor do meu Cria[C]dor.",
+        "[C]Não há no mundo quem [F]possa igua[C]lar-se",
+        "Ao terno a[G]mor do meu Bom Salva[C]dor.",
+        "",
+        "Coro:",
+        "[C]Deus de amor, [F]Deus de a[C]mor,",
+        "Tu és [G]o Deus de a[C]mor.",
+        "[C]Não há outro Deus [F]além de [C]Ti,",
+        "Além de [G]Ti, para mim não há a[C]mor."
+      ]
+    }
+  }
+},
+{
+  "id": "amigo_amas_a_cristo",
+  "titulo_original": "Amigo, ¿amas a Cristo?",
+  "autor": "Desconocido",
+  "compositor": "Desconocido",
+  "year": "Desconocido",
+  "tonalidad": "Do Mayor (C)",
+  "tempo_bpm": "110 bpm",
+  "compas": "4/4",
+  "ritmo": "corito / alegre",
+  "referencia_biblica": "Juan 21:15",
+  "tags": ["Amistad", "Amor a Cristo", "Testimonio"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Amigo, ¿amas a Cristo?",
+      "audio_url": "",
+      "traductor": "-",
+      "letra": [
+        "A[C]migo, ¿amas a Cristo?",
+        "Sí, [G]amo a mi Se[C]ñor.",
+        "¿Y por qué amas a Cristo?",
+        "Porque [G]Él me amó pri[C]mero.",
+        "",
+        "Coro:",
+        "¿[C]Amas a [F]Cristo?",
+        "Sí, [G]amo a mi Se[C]ñor.",
+        "¿Y por [C]qué amas a [F]Cristo?",
+        "Porque [G]Él me amó pri[C]mero."
+      ]
+    },
+    "pt": {
+      "titulo": "Amigo, amas a Cristo?",
+      "audio_url": "",
+      "traductor": "Desconocido",
+      "letra": [
+        "A[C]migo, amas a Cristo?",
+        "Sim, [G]amo ao meu Se[C]nhor.",
+        "E por que amas a Cristo?",
+        "Porque [G]Ele amou-me pri[C]meiro.",
+        "",
+        "Coro:",
+        "A[C]mas a [F]Cristo?",
+        "Sim, [G]amo ao meu Se[C]nhor.",
+        "E por [C]que amas a [F]Cristo?",
+        "Porque [G]Ele amou-me pri[C]meiro."
+      ]
+    }
+  }
+},
+{
+  "id": "apasionado_por_jesus",
+  "titulo_original": "Apasionado por Jesús",
+  "autor": "César Bentancourt",
+  "compositor": "César Bentancourt",
+  "year": "Desconocido",
+  "tonalidad": "Do Mayor (C)",
+  "tempo_bpm": "90 bpm",
+  "compas": "4/4",
+  "ritmo": "balada pop / adoración",
+  "referencia_biblica": "Lucas 24:32",
+  "tags": ["Pasión", "Entrega", "Evangelismo"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Apasionado por Jesús",
+      "audio_url": "",
+      "traductor": "-",
+      "letra": [
+        "[C]No es solo emo[Em]ción, [F]es una ver[G]dad.",
+        "[C]En mi cora[Em]zón [F]hay una espe[G]ranza [E].",
+        "[Am]No puedo espe[Em]rar, [F]al mundo le voy a con[C]tar [E]",
+        "que [Am]Cristo Je[C]sús es mi pa[G]sión.",
+        "",
+        "Coro:",
+        "[C]Dios hazme vi[G]vir, apa[Am]sionado por tu [Em]ser,",
+        "ena[F]morado de tu [C]ley.",
+        "Es mi de[Dm]cisión y mi peti[G]ción.",
+        "[C]Sí, el mundo sa[G]brá que mi cora[Am]zón alegre es[Em]tá",
+        "apa[F]sionado por Je[C]sús,",
+        "dis[Dm]puesto a lle[G]var a muchos hasta tu ho[C]gar. [F]-[C]",
+        "",
+        "[C]Yo quiero que [Em]muchos, [F]lo sientan i[G]gual.",
+        "[C]Que esperen con [Em]fe, [F]que Cristo ven[G]drá [E].",
+        "[Am]Y muchos, a[Em]sí, po[F]damos alzar con va[C]lor [E]",
+        "la [Am]santa ban[Em]dera de salva[G]ción."
+      ]
+    }
+  }
+},
+{
+  "id": "way_maker",
+  "titulo_original": "Way Maker",
+  "autor": "Sinach (Osinachi Kalu Okoro Egbu)",
+  "compositor": "Sinach",
+  "year": "2015",
+  "tonalidad": "Sol Mayor (G)",
+  "tempo_bpm": "68 bpm",
+  "compas": "4/4",
+  "ritmo": "worship / balada",
+  "referencia_biblica": "Isaías 43:19",
+  "tags": ["Milagros", "Luz", "Fidelidad", "Adoración"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Aquí estás / Way Maker",
+      "audio_url": "",
+      "traductor": "Priscilla Bueno",
+      "letra": [
+        "[C]Aquí estás, te vemos mo[G]ver.",
+        "Te ado[D]raré, te ado[Em]raré.",
+        "[C]Aquí estás, obrando en [G]mí.",
+        "Te ado[D]raré, te ado[Em]raré. [x2]",
+        "",
+        "Coro:",
+        "[C]Milagroso, abres camino,",
+        "[G]cumples promesas, luz en tinieblas.",
+        "Mi [D]Dios, así eres [Em]tú. [x2]",
+        "",
+        "[C]Aquí estás, sanando mi co[G]razón.",
+        "Te ado[D]raré, te ado[Em]raré.",
+        "[C]Aquí estás, tocando mi co[G]razón.",
+        "Te ado[D]raré, te ado[Em]raré.",
+        "",
+        "Así eres [C]tú, así eres [G]tú.",
+        "Así eres [D]tú, así eres [Em]tú. [x2]",
+        "",
+        "[C]Aunque no pueda ver, estás obrando.",
+        "[G]Aunque no pueda ver, estás obrando.",
+        "[D]Siempre estás, siempre estás obrando.",
+        "[Em]Siempre estás, siempre estás obrando. [x4]"
+      ]
+    },
+    "en": {
+      "titulo": "Way Maker",
+      "audio_url": "https://www.youtube.com/watch?v=n4XWfwLHeLM",
+      "traductor": "-",
+      "letra": [
+        "You are [G]here, moving in our [D]midst, I worship [Em]You, I worship [C]You.",
+        "You are [G]here, working in this [D]place, I worship [Em]You, I worship [C]You.",
+        "",
+        "Chorus:",
+        "[G]Way maker, miracle worker, [D]promise keeper, light in the darkness,",
+        "[Em]my God, that is who You [C]are.",
+        "",
+        "Bridge:",
+        "Even when I [G]don't see it, You're working, even when I [D]don't feel it, You're working.",
+        "You never [Em]stop, You never stop working, You never [C]stop, You never stop working."
+      ]
+    },
+    "it": {
+      "titulo": "Aprirai una via",
+      "audio_url": "",
+      "traductor": "Desconocido",
+      "letra": [
+        "[C]Tu sei qui, ti muovi tra di [G]noi, [D]adoro te, adoro [Em]te.",
+        "[C]Tu sei qui, operi tra [G]noi, [D]adoro te, adoro [Em]te.",
+        "",
+        "Chorus:",
+        "[C]Tu sei fedele, miracoloso, [G]sei potente, luce nel buio,",
+        "[D]sei tu che aprirai una [Em]via.",
+        "[C]Fedele, miracoloso, [G]sei potente, luce nel buio,",
+        "[D]sei tu che aprirai una [Em]via.",
+        "",
+        "[C]Tu sei qui, tocca il cuore [G]mio, [D]adoro te, adoro [Em]te.",
+        "[C]Tu sei qui, guariscimi si[G]gnor, [D]adoro te, adoro [Em]te."
+      ]
+    }
+  }
+},
+{
+  "id": "way_maker_aqui_estas",
+  "titulo_original": "Way Maker",
+  "autor": "Osinachi Okoro",
+  "compositor": "Osinachi Okoro",
+  "year": "2015",
+  "tonalidad": "Do Mayor (C)",
+  "tempo_bpm": "68 bpm",
+  "compas": "4/4",
+  "ritmo": "worship / balada",
+  "referencia_biblica": "Filipenses 2:13",
+  "tags": ["Milagros", "Luz", "Fidelidad", "Adoración"],
+
+  "idiomas": {
+     "es": {
+      "titulo": "Aquí estás",
+      "audio_url": "",
+      "traductor": "-",
+      "letra": [
+        "[C]Aquí estás, te vemos mo[G]ver.",
+        "Te ado[D]raré, te ado[Em]raré.",
+        "[C]Aquí estás, obrando en [G]mí.",
+        "Te ado[D]raré, te ado[Em]raré.",
+        "",
+        "Coro:",
+        "[C]Milagroso, abres camino, [G]cumples promesas, luz en tinieblas.",
+        "Mi [D]Dios, así eres [Em]tú.",
+        "",
+        "[C]Aquí estás, sanando mi co[G]razón.",
+        "Te ado[D]raré, te ado[Em]raré.",
+        "[C]Aquí estás, tocando mi co[G]razón.",
+        "Te ado[D]raré, te ado[Em]raré.",
+        "",
+        "Así eres [C]tú, así eres [G]tú.",
+        "Así eres [D]tú, así eres [Em]tú.",
+        "",
+        "[C]Aunque no pueda ver, estás obrando.",
+        "[G]Aunque no pueda ver, estás obrando.",
+        "[D]Siempre estás, siempre estás obrando.",
+        "[Em]Siempre estás, siempre estás obrando."
+      ]
+    },
+    "en": {
+      "titulo": "Way Maker",
+      "audio_url": "https://www.youtube.com/watch?v=n4XWfwLHeLM",
+      "traductor": "-",
+      "letra": [
+        "You are here, moving in our midst, I worship You, I worship You.",
+        "You are here, working in this place, I worship You, I worship You.",
+        "",
+        "Chorus:",
+        "Way maker, miracle worker, promise keeper, light in the darkness,",
+        "my God, that is who You are.",
+        "",
+        "Bridge:",
+        "Even when I don't see it, You're working, even when I don't feel it, You're working.",
+        "You never stop, You never stop working, You never stop, You never stop working."
+      ]
+    },
+    "it": {
+      "titulo": "Aprirai una via",
+      "audio_url": "",
+      "traductor": "Desconocido",
+      "letra": [
+        "[C]Tu sei qui, ti muovi tra di [G]noi, [D]adoro te, adoro [Em]te.",
+        "[C]Tu sei qui, operi tra [G]noi, [D]adoro te, adoro [Em]te.",
+        "",
+        "Coro:",
+        "[C]Tu sei fedele, miracolosa, [G]sei potente, luce nel buio,",
+        "[D]sei tu che aprirai una [Em]via.",
+        "[C]Fedele, miracolosa, [G]sei potente, luce nel buio,",
+        "[D]sei tu che aprirai una [Em]via.",
+        "",
+        "[C]Tu sei qui, tocca il cuore [G]mio, [D]adoro te, adoro [Em]te.",
+        "[C]Tu sei qui, guariscimi si[G]gnor, [D]adoro te, adoro [Em]te."
+      ]
+    }
+  }
+},
+{
+  "id": "give_them_all_to_jesus",
+  "titulo_original": "Give Them All to Jesus",
+  "autor": "Bob Benson y Phil Johnson",
+  "compositor": "Bob Benson y Phil Johnson",
+  "year": "1975",
+  "tonalidad": "Re Mayor (D)",
+  "tempo_bpm": "80 bpm",
+  "compas": "4/4",
+  "ritmo": "balada / adoración",
+  "referencia_biblica": "Mateo 11:28",
+  "tags": ["Entrega", "Consuelo", "Confianza"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "A Jesus dale todo / Arco iris / Has corrido",
+      "audio_url": "",
+      "traductor": "-",
+      "letra": [
+        "[D]¿Has corrido [D7]tras un arco [G]iris",
+        "[A]y ahora muy cansado es[D]tás?",
+        "[D]Toma todos [D7]esos sueños [G]rotos",
+        "[A]y a los pies de Cristo ponlos [D-G-A]ya.",
+        "",
+        "Coro:",
+        "[D]A Jesús, a [F#m] Je[G]sús, a Jesús dale [A]todo:",
+        "[Em]sueños rotos y un [A]débil cora[D-G-A]zón.",
+        "[D]A Jesús, a [F#m] Je[G]sús, a Jesús dale [A]todo,",
+        "[Em]la tristeza en [A]gozo cambia[D]rá.",
+        "",
+        "[D]Tan solo el [D7]sol Él nunca prome[G]tió,",
+        "[A]Él sabe bien que habrá tor[D]mentas.",
+        "[D]Él nos ofrece [D7]un nuevo cora[G]zón",
+        "[A]para cantar en medio del do[D-G-A]lor."
+      ]
+    },
+    "en": {
+      "titulo": "Give Them All to Jesus",
+      "audio_url": "https://open.spotify.com/intl-it/track/2l0eZ3NJPhh5xfwg2iwpax?si=3915f7ef28e545e7",
+      "traductor": "-",
+      "letra": [
+        "Are you tired of chasing pretty rainbows?",
+        "Are you tired of spinning round and round?",
+        "Wrap up all the shattered dreams of your life",
+        "And at the feet of Jesus lay them down",
+        "",
+        "Chorus:",
+        "Give them all, give them all, give them all to Jesus",
+        "Shattered dreams, wounded hearts, broken toys,",
+        "Give them all, give them all, give them all to Jesus",
+        "And he will turn your sorrow into joy",
+        "",
+        "He never said there'd only be sunshine",
+        "He never said there'd be no rain",
+        "He only promised a heart full of singing",
+        "About the very thing that once brought pain",
+        "",
+        "Chorus:",
+        "Give them all, give them all, give them all to Jesus",
+        "Shattered dreams, wounded hearts, broken toys,",
+        "Give them all, give them all, give them all to Jesus",
+        "And he will turn your sorrow into joy"
+      ]
+    },
+    "pt": {
+      "titulo": "Entregue a Jesus",
+      "audio_url": "",
+      "traductor": "Desconocido",
+      "letra": [
+        "Você já correu atrás de um arco-íris e cansado está?",
+        "Tome todos esses sonhos rompidos e aos pés de Cristo coloque já.",
+        "",
+        "Coro:",
+        "A Jesus, a Jesus, a Jesus entregue tudo:",
+        "Sonhos vãos e um fraco coração.",
+        "A Jesus, a Jesus, a Jesus entregue tudo,",
+        "E a tristeza em gozo mudará."
+      ]
+    }
+  }
+},
+{
+  "id": "atardece",
+  "titulo_original": "El pueblo que conoce a su Dios",
+  "autor": "Pablo C. Rodriguez y Rubén L. Duré",
+  "compositor": "Pablo C. Rodriguez y Rubén L. Duré",
+  "year": "1990",
+  "tonalidad": "Sol Mayor (G)",
+  "tempo_bpm": "85 bpm",
+  "compas": "4/4",
+  "ritmo": "Himno / Balada",
+  "referencia_biblica": "1 Corintios 15:58",
+  "tags": ["Desafío", "Servicio", "Gracia", "Fidelidad"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Atardece",
+      "audio_url": "",
+      "traductor": "-",
+      "letra": [
+        "[G]Atardece en el [Bm]mundo, hay vio[C]lencia [D]y mal[G]dad.",
+        "Desafi[C]antes, las tinie[G]blas,",
+        "hoy [A]ocultan la ver[D]dad.",
+        "",
+        "Coro:",
+        "Más el [G]pueblo que a su Dios co[Bm]noce,",
+        "se esfor[C]zará [D]y ha[G]rá.",
+        "[C]De pie, de pie, oh [B]pueblo, co[Em]noces a tu [D]Dios;",
+        "[G]levántate y con[Am]cluye la [G]obra [D]que Él te [G]dio.",
+        "",
+        "[G]Atardece en el [Bm]cielo, ya la [C]gracia [D]cesa[G]rá.",
+        "Lanza [C]Dios un desa[G]fío:",
+        "“¿Qu[A]ién mi obra acaba[D]rá?”"
+      ]
+    },
+    "pt": {
+      "titulo": "Anoitece",
+      "audio_url": "",
+      "traductor": "Desconocido",
+      "letra": [
+        "[G]Anoitece no [Bm]mundo, há vio[C]lência [D]e mal[G]dade.",
+        "Desafi[C]antes, as tre[G]vas,",
+        "hoje o[A]cultam a ver[D]dade.",
+        "",
+        "Coro:",
+        "Mas o [G]povo que ao seu Deus co[Bm]nhece,",
+        "se esfor[C]çará [D]e fa[G]rá.",
+        "[C]De pé, de pé, ó [B]povo, co[Em]nheces ao teu [D]Deus;",
+        "[G]levanta e con[Am]clui a [G]obra [D]que Ele te [G]deu.",
+        "",
+        "[G]Anoitece no [Bm]céu, e a [C]graça [D]cessa[G]rá.",
+        "Lança [C]Deus um desa[G]fio:",
+        "“Quem [A]minha obra acaba[D]rá?”"
+      ]
+    }
+  }
+},
+{
+  "id": "avancemos",
+  "titulo_original": "Avancemos",
+  "autor": "Joel Barrios",
+  "compositor": "Joel Barrios",
+  "year": "Desconocido",
+  "tonalidad": "Re Mayor (D) / Mi Mayor (E)",
+  "tempo_bpm": "110 bpm",
+  "compas": "4/4",
+  "ritmo": "Alegre",
+  "referencia_biblica": "Mateo 9:37",
+  "tags": ["Servicio", "Misión", "Unidad", "Evangelismo"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Avancemos",
+      "audio_url": "",
+      "traductor": "-",
+      "letra": [
+        "[D]Avancemos [G]en la [D]luz, [A]",
+        "Con [D]fe y con [G]valor luchemos",
+        "u[D]nidos [A]por una [D-D7]meta igual.",
+        "[G]La mies es [D]mucha y [G]pocos los obreros [A]son.",
+        "Sal[D]gamos pues a tra[G]bajar de la mano,",
+        "u[D]nidos [A]por una [D]meta igual.",
+        "",
+        "[E]Avancemos [A]en la [E]luz, [B]",
+        "Con [E]fe y con [A]valor luchemos",
+        "u[E]nidos [B]por una [E-E7]meta igual.",
+        "[A]La mies es [E]mucha y [A]pocos los obreros [B]son.",
+        "Sal[E]gamos pues a tra[A]bajar de la mano,",
+        "u[E]nidos [B]por una [E]meta igual."
+      ]
+    },
+    "pt": {
+      "titulo": "Avancemos",
+      "audio_url": "",
+      "traductor": "Desconocido",
+      "letra": [
+        "[D]Avancemos [G]na [D]luz, [A]",
+        "Com [D]fé e [G]com valor lutemos",
+        "u[D]nidos [A]por uma [D-D7]meta igual.",
+        "[G]A seara é [D]grande e [G]poucos trabalhadores [A]são.",
+        "Sa[D]iamos pois a tra[G]balhar de mãos dadas,",
+        "u[D]nidos [A]por uma [D]meta igual."
+      ]
+    }
+  }
+},
+
+{
+  "_comment2": "LETRA B ---------------------------------------------------------------------------------------------------------------------------------------    LETRA B"
+},
+{
+  "_comment3": "LETRA C ---------------------------------------------------------------------------------------------------------------------------------------    LETRA C"
+},
+{
+  "id": "cuando_empieza_el_santo_sabado",
+  "titulo_original": "Al comenzar la semana",
+  "autor": "Desconocido",
+  "compositor": "Desconocido",
+  "year": "Desconocido",
+  "tonalidad": "Sol Mayor (G)",
+  "tempo_bpm": "115 bpm",
+  "compas": "4/4",
+  "ritmo": "corito / alegre",
+  "referencia_biblica": "Hechos 2:46, 47",
+  "tags": ["Comunión", "Sábado", "Hermandad"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Cuando empieza el Santo Sábado",
+      "audio_url": "",
+      "traductor": "-",
+      "letra": [
+        "[G]Cuando empieza el santo Sábado, [C]¡qué ale[G]gría que me [D]da",
+        "el estar con mis hermanos en [D]este [D7]lindo lu[G]gar!",
+        "[G]Enlacemos nuestras manos [C]para [G]juntos ala[C]bar",
+        "el [Cm]nombre de Jesu[G]cristo, [Em]nuestro a[D]migo más le[G]al."
+      ]
+    }
+  }
+},
+
+{
+  "_comment4": "LETRA D ---------------------------------------------------------------------------------------------------------------------------------------    LETRA D"
+},
+{
+  "id": "diez_mil_razones",
+  "titulo_original": "10,000 Reasons (Bless the Lord)",
+  "autor": "Matt Redman, Jonas Myrin",
+  "compositor": "Matt Redman, Jonas Myrin",
+  "year": "2011",
+  "tonalidad": "Sol mayor (G)",
+  "tempo_bpm": "70 bpm (aprox.)",
+  "compas": "4/4",
+  "ritmo": "Balada de adoración (Worship)",
+  "audio": "https://open.spotify.com/track/16e4Q3plJrKkncoLKR1CQ1",
+  "referencia": "Salmos 103:1",
+  "tags": ["adoración", "alabanza", "worship", "cristiana", "iglesia", "congregacional"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Diez mil razones (Bendice al Señor)",
+      "audio_url": "https://open.spotify.com/intl-it/track/4Z7vEiQvCUnjvOStbE9Dfg",
+      "letra": [
+        "Que todo lo que soy alabe al Señor",
+        "Con todo mi corazón",
+        "De Tu grande amor, cantaré",
+        "Tu nombre alabaré",
+        "br","br",
+        "Sale el Sol, es un nuevo amanecer",
+        "Cantaré a ti otra vez",
+        "Sea lo que venga, confiaré en ti",
+        "Alabaré en el anochecer",
+        "br","br",
+        "Que todo lo que soy alabe al Señor",
+        "Con todo mi corazón",
+        "De Tu grande amor, cantaré",
+        "Tu nombre alabaré",
+        "br","br",
+        "Tu amor no tiene fin",
+        "Y Tú eres para siempre",
+        "Y bondadoso es Tu corazón",
+        "Por todo lo que has hecho, yo sigo cantando",
+        "Diez mil razones para alabar",
+        "br","br",
+        "Que todo lo que soy alabe al Señor",
+        "Con todo mi corazón",
+        "De Tu grande amor, cantaré",
+        "Tu nombre alabaré",
+        "br","br",
+        "Y en ese día, cuando ya no tenga fuerza",
+        "Y se acerque Tu gloria",
+        "Mi alma cantará de tu amor sin final",
+        "Diez mil años y para siempre más",
+        "br","br",
+        "Bless the lord!",
+        "br","br",
+        "Oh, my soul",
+        "Oh, my soul",
+        "Worship his holy name",
+        "Sing like never before",
+        "Oh, my soul",
+        "I worship his holy name",
+        "br","br",
+        "We worship his holy name",
+        "We worship his holy name"
+      ]
+    },
+    "en": {
+      "titulo": "10,000 Reasons (Bless the Lord)",
+      "audio_url": "https://open.spotify.com/track/16e4Q3plJrKkncoLKR1CQ1",
+      "letra": [
           "Bless the Lord, oh my soul",
           "Oh my soul",
           "Worship His holy name",
@@ -237,130 +1660,202 @@
       }
     }
   },
-  {
-    "id": "open-the-eyes-of-my-heart",
-    "titulo_original": "Open the Eyes of My Heart",
-    "autor": "Michael W. Smith",
-    "compositor": "Paul Baloche",
-    "year": "1997",
-    "tonalidad": "E Major",
-    "tempo_bpm": "114",
-    "compas": "4/4",
-    "ritmo": "Pop/Rock Worship",
-    "referencia_biblica": "Efesios 1:18",
-    "tags": ["Adoración", "Exaltación", "Whorship", "Praise"],
 
-    "idiomas": {
+{
+  "_comment5": "LETRA E ---------------------------------------------------------------------------------------------------------------------------------------    LETRA E"
+},
+{
+  "id": "enciende_una_luz",
+  "titulo_original": "Enciende una luz",
+  "autor": "Marcos Witt",
+  "referencia_biblica": "San Mateo 5:16",
+  "tags": ["adoración", "testimonio", "fe"],
+  "tonalidad": "G",
+  "tempo_bpm": 65,
+  "idiomas": {
       "es": {
-        "titulo": "Abre mis ojos oh Cristo",
-        "audio_url": "https://open.spotify.com/track/1063065C7B652E2A6874BB",
-        "traductor": "Danilo Montero / Varios",
+        "titulo": "Enciende una luz",
+        "audio": "https://open.spotify.com/",
         "letra": [
-          "Abre mis ojos oh Cristo",
-          "Abre mis ojos Señor",
-          "Yo quiero verte",
-          "Yo quiero verte",
-          "Verte alto y exaltado",
-          "Brillando en la luz de tu gloria",
-          "Derrama tu amor y poder",
-          "Mientras cantamos santo, santo, santo",
-          "Santo, santo, santo",
-          "Yo quiero verte"
+          "Enciende una luz y dejala brillar",
+          "La luz de Jesus, que brille en todo lugar",
+          "No la puedes esconder, no te puedes callar",
+          "Ante tal necesidad, enciende una luz en la obscuridad",
+          "br","br",
+          "Y como pues invocarán a aquel en quien no han creído?",
+          "Y como creerán en aquel de quien no han oído?",
+          "Y como oirán si nadie les predica?",
+          "Hermosos son los pies, de los que anuncian la paz",
+          "Las buenas nuevas de Jesús",
+          "br","br",
+          "Enciende una luz y dejala brillar",
+          "La luz de Jesus, que brille en todo lugar",
+          "No la puedes esconder, no te puedes callar",
+          "Ante tal necesidad, enciende una luz en la obscuridad"
         ]
       },
-
       "en": {
-        "titulo": "Open the Eyes of My Heart",
-        "audio_url": "https://open.spotify.com/track/30I5S0285mS9Zf69T1N8R2",
-        "traductor": "N/A (Original)",
+        "titulo": "Turn on a Light",
+        "audio_url": "",
         "letra": [
-          "Open the eyes of my heart, Lord",
-          "Open the eyes of my heart",
-          "I want to see You",
-          "I want to see You",
-          "To see You high and lifted up",
-          "Shining in the light of Your glory",
-          "Pour out Your power and love",
-          "As we sing holy, holy, holy",
-          "Holy, holy, holy",
-          "I want to see You"
-        ]
-      },
-
-      "it": {
-        "titulo": "Apri i miei occhi Signore",
-        "audio_url": "https://open.spotify.com/track/4XvN7VvO9vXqW6qW6XW6X",
-        "traductor": "Comunità Maria",
-        "letra": [
-          "Apri i miei occhi Signore",
-          "Apri i miei occhi del cuor",
-          "Io voglio vederti",
-          "Io voglio vederti",
-          "Vederti alto ed esaltato",
-          "Splendente nella luce di gloria",
-          "Effondi il tuo amore e il poter",
-          "Cantiamo santo, santo, santo",
-          "Santo, santo, santo",
-          "Io voglio vederti"
-        ]
-      },
-
-      "pt": {
-        "titulo": "Abra os Olhos do Meu Coração",
-        "audio_url": "https://open.spotify.com/track/5l0R6R7R8R9R0R1R2R3R4",
-        "traductor": "David Quinlan",
-        "letra": [
-          "Abra os olhos do meu coração",
-          "Abra os olhos do meu coração",
-          "Eu quero Te ver",
-          "Eu quero Te ver",
-          "Te ver exaltado e alto",
-          "Brilhando na luz da Tua glória",
-          "Derrame o Teu poder e amor",
-          "Enquanto cantamos santo, santo, santo",
-          "Santo, santo, santo",
-          "Eu quero Te ver"
-        ]
-      },
-
-      "fr": {
-        "titulo": "Ouvre les yeux de mon coeur",
-        "audio_url": "https://open.spotify.com/track/2n3O4P5Q6R7S8T9U0V1W2",
-        "traductor": "Exaltet / Paul Baloche",
-        "letra": [
-          "Ouvre les yeux de mon cœur, Seigneur",
-          "Ouvre les yeux de mon cœur",
-          "Je veux Te voir",
-          "Je veux Te voir",
-          "Te voir élevé au plus haut",
-          "Rayonnant de l'éclat de Ta gloire",
-          "Répands Ta force et Ton amour",
-          "Alors que nous chantons saint, saint, saint",
-          "Saint, saint, saint",
-          "Je veux Te voir"
-        ]
-      },
-      
-      "de": {
-        "titulo": "Öffne die Augen des Herzens",
-        "audio_url": "https://open.spotify.com/track/1a2b3c4d5e6f7g8h9i0j1",
-        "traductor": "Worship Connect",
-        "letra": [
-          "Öffne die Augen des Herzens",
-          "Öffne die Augen des Herzens",
-          "Ich will dich sehen",
-          "Ich will dich sehen",
-          "Dich sehen hoch erhoben Herr",
-          "Strahlend im Licht deiner Herrlichkeit",
-          "Gieß aus deine Liebe und Kraft",
-          "Wir singen Heilig, Heilig, Heilig",
-          "Heilig, Heilig, Heilig",
-          "Ich will dich sehen"
+          "Turn on a light and let it shine",
+          "The light of Jesus that shines everywhere",
+          "You can't hide it, you can't be quiet",
+          "In the face of such need, turn on a light in the darkness",
+          ""
         ]
       }
     }
   },
-  {
+{
+  "_comment6": "LETRA F ---------------------------------------------------------------------------------------------------------------------------------------    LETRA F"
+},
+{
+  "_comment7": "LETRA G ---------------------------------------------------------------------------------------------------------------------------------------    LETRA G"
+},
+{
+  "_comment8": "LETRA H ---------------------------------------------------------------------------------------------------------------------------------------    LETRA H"
+},
+{
+  "_comment9": "LETRA I ---------------------------------------------------------------------------------------------------------------------------------------    LETRA I"
+},
+{
+  "_comment10": "LETRA J ---------------------------------------------------------------------------------------------------------------------------------------    LETRA J"
+},
+{
+  "_comment11": "LETRA K ---------------------------------------------------------------------------------------------------------------------------------------    LETRA K"
+},
+{
+  "_comment12": "LETRA L ---------------------------------------------------------------------------------------------------------------------------------------    LETRA L"
+},
+{
+  "_comment13": "LETRA M ---------------------------------------------------------------------------------------------------------------------------------------    LETRA M"
+},
+{
+  "_comment14": "LETRA N ---------------------------------------------------------------------------------------------------------------------------------------    LETRA N"
+},
+{
+  "_comment15": "LETRA NIE ---------------------------------------------------------------------------------------------------------------------------------------    LETRA ENIE"
+},
+{
+  "_comment16": "LETRA O ---------------------------------------------------------------------------------------------------------------------------------------    LETRA O"
+},
+{
+  "_comment17": "LETRA P ---------------------------------------------------------------------------------------------------------------------------------------    LETRA P"
+},
+{
+  "_comment18": "LETRA Q ---------------------------------------------------------------------------------------------------------------------------------------    LETRA Q"
+},
+{
+  "_comment19": "LETRA R ---------------------------------------------------------------------------------------------------------------------------------------    LETRA R"
+},
+{
+  "_comment20": "LETRA S ---------------------------------------------------------------------------------------------------------------------------------------    LETRA S"
+},
+{
+  "_comment21": "LETRA T ---------------------------------------------------------------------------------------------------------------------------------------    LETRA T"
+},
+{
+    "id": "tenho-paz-arautos",
+    "titulo_original": "Tenho Paz",
+    "autor": "Pedro Valença",
+    "compositor": "Pedro Valença",
+    "year": "2016",
+    "tonalidad": "A (forma de los acordes en el tono de E)",
+    "tempo_bpm": "74",
+    "compas": "4/4",
+    "ritmo": "Balada",
+    "referencia_biblica": "Filipenses 4:7; Juan 14:27",
+    "tags": ["Paz", "Confianza", "Contemporáneo", "Arautos do Rei"],
+
+    "idiomas": {
+      "es": {
+        "titulo": "Tengo Paz",
+        "audio_url": "",
+        "traductor": "Ricardo Martins",
+        "numero_himno": "",
+        "letra": [
+          "INTRO: [E] - [B] - [C#m] - [A]",
+          "No creas que en mis [E]días siempre brilla el sol",
+          "Pues nubes apar[B]ecen y sin avisar",
+          "Y cuando está osc[C#M]uro",
+          "Yo también tengo [A]miedo",
+          "No pienses que mis [A]flores nunca morirán",
+          "A veces he p[B]edido y me han dicho no",
+          "A veces yo e[C#m]spero, a veces yo me [A]canso",
+          "br,br",
+          "Mas nada[B] me impedirá sonreír y alegre est[A]ar", 
+          "Yo puedo en Él confiar",
+          "[E]A cada paso mi Dios conmigo est[B]á",
+          "br,br",
+          "<small><b>Coro</b></small>",
+          "[B]Y tengo paz, en Cristo tengo [A]paz",
+          "[E]Yo paso la tormenta",
+          "Seguro y escon[B]dido en el Señor",
+          "Tengo paz, no puedo entend[A]er",
+          "Que en medio del desi[E]erto",
+          "Renace la esperan[B]za por doquier",
+          "Tengo [E]paz",
+          "El [A]universo riges con po[E]der",
+          "Que me podría arrebat[B]ar, la paz",
+          "Las [A]tempestades no me alcan[E]zarán",
+          "Si estoy contigo tengo [B]paz",
+          "br,br",
+          "[B]Y tengo paz, en Cristo tengo [A]paz",
+          "[E]Yo paso la tormenta",
+          "Seguro y escon[B]dido en el Señor",
+          "Tengo paz, no puedo entend[A]er",
+          "Que en medio del desi[E]erto",
+          "Renace la esperan[B]za por doquier"
+        ]
+      },
+
+      "pt": {
+        "titulo": "Tenho Paz",
+        "audio_url": "",
+        "traductor": "",
+        "numero_himno": "",
+        "letra": [
+          "Não é que os meus dias sejam sempre sol",
+          "Pois nuvens aparecem sem me avisar",
+          "E quando está escuro",
+          "Eu também tenho medo",
+          "Não é que minhas flores nunca murcharão",
+          "Pois quantas vezes peço e recebo não",
+          "As vezes eu espero",
+          "As vezes eu me canso",
+          "Mas nada vai me impedir de sorrir e me alegrar",
+          "Eu posso confiar",
+          "Pois todo tempo",
+          "Meu Deus comigo está",
+          "<small><b>Coro</b></small>",
+          "Eu tenho paz",
+          "Em Cristo eu tenho paz",
+          "Eu venço as tempestades",
+          "Seguro e escondido no Senhor",
+          "Tenho paz",
+          "Não posso entender",
+          "No meio do deserto",
+          "Eu vejo a esperança renascer",
+          "Tenho paz",
+          "Tu Tens o universo em Tuas Mãos",
+          "Quem poderia me roubar a paz",
+          "A tempestade não me alcançará",
+          "Estou Contigo eu tenho paz"
+        ]
+      }
+    }
+  },
+{
+  "_comment22": "LETRA U ---------------------------------------------------------------------------------------------------------------------------------------    LETRA U"
+},
+{
+  "_comment23": "LETRA V ---------------------------------------------------------------------------------------------------------------------------------------    LETRA V"
+},
+{
+  "_comment24": "LETRA W ---------------------------------------------------------------------------------------------------------------------------------------    LETRA W"
+},
+{
     "id": "worthy-of-it-all-cece-winans",
     "titulo_original": "Worthy Of It All",
     "autor": "CeCe Winans",
@@ -436,94 +1931,26 @@
       }
     }
   },
-  {
-    "id": "tenho-paz-arautos",
-    "titulo_original": "Tenho Paz",
-    "autor": "Pedro Valença",
-    "compositor": "Pedro Valença",
-    "year": "2016",
-    "tonalidad": "A (forma de los acordes en el tono de E)",
-    "tempo_bpm": "74",
-    "compas": "4/4",
-    "ritmo": "Balada",
-    "referencia_biblica": "Filipenses 4:7; Juan 14:27",
-    "tags": ["Paz", "Confianza", "Contemporáneo", "Arautos do Rei"],
+{
+  "_comment25": "LETRA X ---------------------------------------------------------------------------------------------------------------------------------------    LETRA X"
+},
+{
+  "_comment26": "LETRA Y ---------------------------------------------------------------------------------------------------------------------------------------    LETRA Y"
+},
+{
+  "_comment27": "LETRA Z ---------------------------------------------------------------------------------------------------------------------------------------    LETRA Z"
+},
+{
+  "_comment28": "Numeros  ---------------------------------------------------------------------------------------------------------------------------------------    Numeros "
+}
 
-    "idiomas": {
-      "pt": {
-        "titulo": "Tenho Paz",
-        "audio_url": "",
-        "traductor": "",
-        "numero_himno": "",
-        "letra": [
-          "Não é que os meus dias sejam sempre sol",
-          "Pois nuvens aparecem sem me avisar",
-          "E quando está escuro",
-          "Eu também tenho medo",
-          "Não é que minhas flores nunca murcharão",
-          "Pois quantas vezes peço e recebo não",
-          "As vezes eu espero",
-          "As vezes eu me canso",
-          "Mas nada vai me impedir de sorrir e me alegrar",
-          "Eu posso confiar",
-          "Pois todo tempo",
-          "Meu Deus comigo está",
-          "<small><b>Coro</b></small>",
-          "Eu tenho paz",
-          "Em Cristo eu tenho paz",
-          "Eu venço as tempestades",
-          "Seguro e escondido no Senhor",
-          "Tenho paz",
-          "Não posso entender",
-          "No meio do deserto",
-          "Eu vejo a esperança renascer",
-          "Tenho paz",
-          "Tu Tens o universo em Tuas Mãos",
-          "Quem poderia me roubar a paz",
-          "A tempestade não me alcançará",
-          "Estou Contigo eu tenho paz"
-        ]
-      },
-      "es": {
-        "titulo": "Tengo Paz",
-        "audio_url": "",
-        "traductor": "Ricardo Martins",
-        "numero_himno": "",
-        "letra": [
-          "INTRO: [E] - [B] - [C#m] - [A]",
-          "No creas que en mis [E]días siempre brilla el sol",
-          "Pues nubes apar[B]ecen y sin avisar",
-          "Y cuando está osc[C#M]uro",
-          "Yo también tengo [A]miedo",
-          "No pienses que mis [A]flores nunca morirán",
-          "A veces he p[B]edido y me han dicho no",
-          "A veces yo e[C#m]spero, a veces yo me [A]canso",
-          "br,br",
-          "Mas nada[B] me impedirá sonreír y alegre est[A]ar", 
-          "Yo puedo en Él confiar",
-          "[E]A cada paso mi Dios conmigo est[B]á",
-          "br,br",
-          "<small><b>Coro</b></small>",
-          "[B]Y tengo paz, en Cristo tengo [A]paz",
-          "[E]Yo paso la tormenta",
-          "Seguro y escon[B]dido en el Señor",
-          "Tengo paz, no puedo entend[A]er",
-          "Que en medio del desi[E]erto",
-          "Renace la esperan[B]za por doquier",
-          "Tengo [E]paz",
-          "El [A]universo riges con po[E]der",
-          "Que me podría arrebat[B]ar, la paz",
-          "Las [A]tempestades no me alcan[E]zarán",
-          "Si estoy contigo tengo [B]paz",
-          "br,br",
-          "[B]Y tengo paz, en Cristo tengo [A]paz",
-          "[E]Yo paso la tormenta",
-          "Seguro y escon[B]dido en el Señor",
-          "Tengo paz, no puedo entend[A]er",
-          "Que en medio del desi[E]erto",
-          "Renace la esperan[B]za por doquier"
-        ]
-      }
-    }
-  }
+
+
+
+  
+
+  
+
+  
+  
 ]
