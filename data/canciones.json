@@ -76,7 +76,6 @@
         "[F7]eleve a ti [Bb]una [Bb]dulce [C]can[F]ción. (x2)"
       ]
     },
-
     "en": {
       "titulo": "I love you, Lord",
       "audio_url": "https://open.spotify.com/intl-es/track/3mIyisrMRbIpsInWOd3JTd?si=257ef60816d14364",
@@ -88,7 +87,6 @@
         "[F7]May it be a [Bb]sweet, [Gm]sweet [Bb]sound [C]in Your [F]ear."
       ]
     },
-
     "pt": {
       "titulo": "Eu Te amo, ó Deus",
       "traductor": "Desconocido",
@@ -143,30 +141,29 @@
         "Te quiero co[Dm]nocer, más de ti co[F]nocer."
       ]
     },
-
-      "en": {
-      "titulo": "I Surrender",
-      "audio_url": "https://open.spotify.com/intl-es/track/2Ilbv0FdK3FDydyjwLYbz9?si=1dd0c7eaaa3a4b65",
-      "traductor": "-",
-      "letra": [
-        "[Am]Here I am down on my [C]knees again",
-        "Surrendering [G]all, surrendering [F]all",
-        "Find me [Am]here, Lord as You [C]draw me near",
-        "Desperate for [G]You, desperate for [F]You",
-        "I sur[Am]render",
-        "",
-          "Drench my [Am]soul as mercy and [C]grace unfold",
-        "I hunger and [G]thirst, I hunger and [F]thirst",
-        "With arms [Am]stretched wide, I know You [C]hear my cry",
-        "Speak to me [G]now, speak to me [F]now",
-        "",
-        "I sur[Am]render, I sur[C]render",
-        "I want to [Dm]know You more, I want to [F]know You more",
-        "",
-        "Like a [F]mighty [C]rushing wind, Jesus [G]breathe within",
-        "Lord, have Your [Dm]way, Lord, have Your [Am]way in [G]me",
-        "Like a [F]mighty [C]storm, stir within my [G]soul",
-        "Lord, have Your [Dm]way, Lord, have Your [Am]way in [G]me"
+    "en": {
+    "titulo": "I Surrender",
+    "audio_url": "https://open.spotify.com/intl-es/track/2Ilbv0FdK3FDydyjwLYbz9?si=1dd0c7eaaa3a4b65",
+    "traductor": "-",
+    "letra": [
+      "[Am]Here I am down on my [C]knees again",
+      "Surrendering [G]all, surrendering [F]all",
+      "Find me [Am]here, Lord as You [C]draw me near",
+      "Desperate for [G]You, desperate for [F]You",
+      "I sur[Am]render",
+      "",
+      "Drench my [Am]soul as mercy and [C]grace unfold",
+      "I hunger and [G]thirst, I hunger and [F]thirst",
+      "With arms [Am]stretched wide, I know You [C]hear my cry",
+      "Speak to me [G]now, speak to me [F]now",
+      "",
+      "I sur[Am]render, I sur[C]render",
+      "I want to [Dm]know You more, I want to [F]know You more",
+      "",
+      "Like a [F]mighty [C]rushing wind, Jesus [G]breathe within",
+      "Lord, have Your [Dm]way, Lord, have Your [Am]way in [G]me",
+      "Like a [F]mighty [C]storm, stir within my [G]soul",
+      "Lord, have Your [Dm]way, Lord, have Your [Am]way in [G]me"
       ]
     },
     "pt": {
@@ -243,7 +240,6 @@
         "conmigo te[Em]nerte, [A]decir que te [G]amo.[D]",
         "[D]Abre mi [G]oído, [A]hoy quiero escu[D]charte.[Bm]",
         "¡Abre mis [Em]ojos [A]para contem[G]plarte![D] (x2)"
-
       ]
     },
     "en": {
