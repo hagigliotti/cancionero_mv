@@ -1165,7 +1165,7 @@
         "[C]Aunque no pueda ver, estás obrando.",
         "[G]Aunque no pueda ver, estás obrando.",
         "[D]Siempre estás, siempre estás obrando.",
-        "[Em]Siempre estás, siempre estás obrando. [x4]"
+        "[Em]Siempre estás, siempre estás obrando. (x4)"
       ]
     },
     "en": {
@@ -1197,85 +1197,6 @@
         "[C]Tu sei fedele, miracoloso, [G]sei potente, luce nel buio,",
         "[D]sei tu che aprirai una [Em]via.",
         "[C]Fedele, miracoloso, [G]sei potente, luce nel buio,",
-        "[D]sei tu che aprirai una [Em]via.",
-        "",
-        "[C]Tu sei qui, tocca il cuore [G]mio, [D]adoro te, adoro [Em]te.",
-        "[C]Tu sei qui, guariscimi si[G]gnor, [D]adoro te, adoro [Em]te."
-      ]
-    }
-  }
-},
-{
-  "id": "way_maker_aqui_estas",
-  "titulo_original": "Way Maker",
-  "autor": "Osinachi Okoro",
-  "compositor": "Osinachi Okoro",
-  "year": "2015",
-  "tonalidad": "Do Mayor (C)",
-  "tempo_bpm": "68 bpm",
-  "compas": "4/4",
-  "ritmo": "worship / balada",
-  "referencia_biblica": "Filipenses 2:13",
-  "tags": ["Milagros", "Luz", "Fidelidad", "Adoración"],
-
-  "idiomas": {
-     "es": {
-      "titulo": "Aquí estás",
-      "audio_url": "",
-      "traductor": "-",
-      "letra": [
-        "[C]Aquí estás, te vemos mo[G]ver.",
-        "Te ado[D]raré, te ado[Em]raré.",
-        "[C]Aquí estás, obrando en [G]mí.",
-        "Te ado[D]raré, te ado[Em]raré.",
-        "",
-        "Coro:",
-        "[C]Milagroso, abres camino, [G]cumples promesas, luz en tinieblas.",
-        "Mi [D]Dios, así eres [Em]tú.",
-        "",
-        "[C]Aquí estás, sanando mi co[G]razón.",
-        "Te ado[D]raré, te ado[Em]raré.",
-        "[C]Aquí estás, tocando mi co[G]razón.",
-        "Te ado[D]raré, te ado[Em]raré.",
-        "",
-        "Así eres [C]tú, así eres [G]tú.",
-        "Así eres [D]tú, así eres [Em]tú.",
-        "",
-        "[C]Aunque no pueda ver, estás obrando.",
-        "[G]Aunque no pueda ver, estás obrando.",
-        "[D]Siempre estás, siempre estás obrando.",
-        "[Em]Siempre estás, siempre estás obrando."
-      ]
-    },
-    "en": {
-      "titulo": "Way Maker",
-      "audio_url": "https://www.youtube.com/watch?v=n4XWfwLHeLM",
-      "traductor": "-",
-      "letra": [
-        "You are here, moving in our midst, I worship You, I worship You.",
-        "You are here, working in this place, I worship You, I worship You.",
-        "",
-        "Chorus:",
-        "Way maker, miracle worker, promise keeper, light in the darkness,",
-        "my God, that is who You are.",
-        "",
-        "Bridge:",
-        "Even when I don't see it, You're working, even when I don't feel it, You're working.",
-        "You never stop, You never stop working, You never stop, You never stop working."
-      ]
-    },
-    "it": {
-      "titulo": "Aprirai una via",
-      "audio_url": "",
-      "traductor": "Desconocido",
-      "letra": [
-        "[C]Tu sei qui, ti muovi tra di [G]noi, [D]adoro te, adoro [Em]te.",
-        "[C]Tu sei qui, operi tra [G]noi, [D]adoro te, adoro [Em]te.",
-        "",
-        "Coro:",
-        "[C]Tu sei fedele, miracolosa, [G]sei potente, luce nel buio,",
-        "[D]sei tu che aprirai una [Em]via.",
-        "[C]Fedele, miracolosa, [G]sei potente, luce nel buio,",
         "[D]sei tu che aprirai una [Em]via.",
         "",
         "[C]Tu sei qui, tocca il cuore [G]mio, [D]adoro te, adoro [Em]te.",
