@@ -448,10 +448,12 @@ function search(q) {
     return matchIdiomas || matchGlobal;
   });
 
-  const sorted = sortByTitle(results);
+  const sorted = sortByTitle(results).filter(c =>
+    c.idiomas?.[idiomaActual]?.titulo?.trim()
+  );
 
   list.innerHTML = sorted.map(c => {
-    const titulo = c.idiomas?.[idiomaActual]?.titulo || "Sin título";
+    const titulo = c.idiomas?.[idiomaActual]?.titulo;
     const num = getNumeroHimno(c);
     const flags = getAvailableFlags(c);
 
@@ -636,7 +638,9 @@ function closeList() {
 function renderList(letter) {
   const list = document.getElementById("indice");
 
-  let data = getDataActual().filter(tieneIdioma);
+  let data = getDataActual().filter(c =>
+    c.idiomas?.[idiomaActual]?.titulo?.trim()
+  );
 
   // 🔤 FILTRO POR LETRA
   if (letter && letter !== "*" && letter !== "#") {
@@ -656,7 +660,7 @@ function renderList(letter) {
   }
 
   list.innerHTML = data.map(c => {
-    const titulo = c.idiomas?.[idiomaActual]?.titulo || "Sin título";
+    const titulo = c.idiomas?.[idiomaActual]?.titulo;
     const num = getNumeroHimno ? getNumeroHimno(c) : "";
 
     const flags = getAvailableFlags(c);
