@@ -457,11 +457,9 @@ function search(q) {
 
     let baseTitle = "";
 
-    if (c.numero_himno !== undefined || num) {
-      baseTitle = `${num ? num + " - " : ""}${titulo}`;
-    } else {
-      baseTitle = titulo;
-    }
+    baseTitle = num
+    ? `${num} - ${titulo}`
+    : titulo;
 
     return `
       <li onclick="selectSong('${c.id}')">
