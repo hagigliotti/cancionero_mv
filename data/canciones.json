@@ -3174,6 +3174,87 @@
   "_comment8": "LETRA H ---------------------------------------------------------------------------------------------------------------------------------------    LETRA H"
 },
 {
+  "id": "himno_conquistadores",
+  "titulo_original": "Pathfinder Song",
+  "autor": "Henry Berg",
+  "compositor": "Henry Berg",
+  "year": "1949",
+  "tonalidad": "",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "Marcha",
+  "referencia_biblica": "",
+  "tags": [
+    "Multilingue",
+    "Jóvenes",
+    "Club"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Himno de los Conquistadores",
+      "audio_url": "",
+      "traductor": "Isolina Waldvogel",
+      "letra": [
+        "Conquistadores somos,",
+        "los siervos del buen Señor,",
+        "adelante vamos ya luchando",
+        "bien con gran valor.",
+        "Salgamos a proclamar,",
+        "las nuevas de salvación,",
+        "Jesús va llevarnos pronto",
+        "a su real mansión."
+      ]
+    },
+    "en": {
+      "titulo": "Pathfinder Song",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "We are the Pathfinders strong,",
+        "The servants of God are we.",
+        "Faithful as we march along,",
+        "In kindness, truth, and purity.",
+        "A message to tell to the world,",
+        "A truth that will set us free.",
+        "King Jesus the Savior is coming back,",
+        "For you, and me."
+      ]
+    },
+    "pt": {
+      "titulo": "Hino dos Desbravadores",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "Nós somos os desbravadores",
+        "Os servos do Rei dos Reis",
+        "Sempre avante assim marchamos",
+        "Fiéis às Suas leis",
+        "Devemos ao mundo anunciar",
+        "As novas da salvação",
+        "Que Cristo virá em breve dar o galardão",
+        "Nós somos os desbravadores",
+        "Os servos do Rei dos Reis",
+        "Sempre avante assim marchamos"
+      ]
+    },
+    "fr": {
+      "titulo": "Nous sommes les Explorateurs",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "Nous sommes les Explorateurs,",
+        "Les serviteurs du Seigneur;",
+        "Bons, loyaux et purs,",
+        "Marchant Fideles a la verite.",
+        "Nous voulons annoncer a tous",
+        "Un message liberateur,",
+        "Bientot des cieux revient le Sauveur",
+        "Pour moi, pour vous."
+      ]
+    }
+  }
+},
+{
   "id": "hablar_con_dios",
   "titulo_original": "Falar com Deus",
   "autor": "Lineu Soares",
