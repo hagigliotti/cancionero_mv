@@ -102,8 +102,6 @@ async function init() {
 init();
 
 
-
-
 // ===================== HELPERS =====================
 function normalize(t) {
   return (t || "")
@@ -124,8 +122,6 @@ function sortByTitle(data) {
 function getNumeroHimno(c) {
   return c.idiomas?.[idiomaActual]?.numero_himno ?? "";
 }
-
-
 
 // ===================== BOTON LIMPIAR ======================
 function clearAll() {
@@ -360,14 +356,18 @@ function applyFontSize() {
   const chordSize =
     BASE_CHORD_SIZE + (fontSizeLevel * STEP_SIZE);
 
-  // SOLO texto real
-  document.querySelectorAll(".song-lyrics .lyrics").forEach(el => {
+  // letra canción
+  document.querySelectorAll(".lyrics").forEach(el => {
     el.style.fontSize = `${lyricsSize}px`;
   });
 
-  // SOLO acordes
-  document.querySelectorAll(".song-lyrics .chord-wrap").forEach(el => {
+  // tablatura/acordes
+  document.querySelectorAll(".chord-wrap").forEach(el => {
     el.style.fontSize = `${chordSize}px`;
+  });
+
+  document.querySelectorAll(".chord").forEach(el => {
+    el.style.fontWeight = "bold";
   });
 }
 
@@ -391,12 +391,6 @@ function resetFuente() {
 
 // ===== PROYECTOR ============================================================================
 function toggleProjectorMode() {
-
-  // 🚫 BLOQUEO EN MÓVILES Y TABLETS
-  if (isMobileOrTablet()) {
-    return;
-  }
-
   const body = document.body;
 
   if (body.classList.contains("projector")) {
