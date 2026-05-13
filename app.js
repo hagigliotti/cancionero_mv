@@ -30,9 +30,7 @@ async function init() {
   loadTheme();
   updateThemeMenuText();
 
-  if (localStorage.getItem("projector") === "on") {
-    document.body.classList.add("projector");
-  }
+
 
   handleMenuVisibility();
 
