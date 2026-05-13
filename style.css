@@ -196,6 +196,36 @@ a.menu-item {
 /* Tamano: A- */
 
 
+
+/* ===================== LETRA Y ACORDES ===================== */
+
+/* letra más grande */
+.lyrics {
+  font-size: 26px;
+  line-height: 1.8;
+}
+
+/* acordes aún más visibles */
+.chord-wrap {
+  font-size: 22px;
+}
+
+.chord {
+  font-weight: bold;
+}
+
+.song-lyrics .lyrics {
+  font-size: 26px;
+}
+
+.song-lyrics .chord-wrap {
+  font-size: 22px;
+}
+
+.song-lyrics .chord {
+  font-weight: bold;
+}
+
 /* *** Proyector */
 /* *** Tema: Claro / Oscuro */
 /* *** Feedback */
@@ -666,7 +696,7 @@ body.dark .modal-content {
 }
 
 .lyrics {
-  white-space: pre-wrap;
+  font-size: 1.4rem;
 }
 
 .chord-wrap {

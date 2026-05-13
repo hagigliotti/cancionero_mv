@@ -279,6 +279,11 @@ function renderLanguageFlags(song) {
 
   return Object.keys(idiomas)
     .filter(lang => idiomas[lang]?.titulo)
+    .sort((a, b) => {
+      const nameA = FLAG_NAMES[a] || a;
+      const nameB = FLAG_NAMES[b] || b;
+      return nameA.localeCompare(nameB);
+    })
     .map(lang => `
       <span class="flag ${lang === idiomaActual ? "active" : ""}"
             onclick="changeLanguage('${lang}', '${song.id}')">
@@ -300,6 +305,11 @@ function getAvailableFlags(song) {
 
   return Object.keys(idiomas)
     .filter(lang => idiomas[lang]?.titulo)
+    .sort((a, b) => {
+      const nameA = FLAG_NAMES[a] || a;
+      const nameB = FLAG_NAMES[b] || b;
+      return nameA.localeCompare(nameB);
+    })
     .map(lang => FLAGS[lang] || "🌐")
     .join(" ");
 }
@@ -311,31 +321,67 @@ const FLAGS = {
   it: "🇮🇹",
   pt: "🇧🇷",
   fr: "🇫🇷",
-  de: "🇩🇪"
+  de: "🇩🇪",
+  he: "🇮🇱"
+};
+const FLAG_NAMES = {
+  es: "Argentina",
+  en: "Estados Unidos",
+  il: "Israel",
+  it: "Italia",
+  pt: "Brasil",
+  fr: "Francia",
+  de: "Alemania"
 };
 
 // ===== CAMBIO DE TAMANO DE FUENTE (A+ A A-) ====================================================================
+// 0 = tamaño default
+// -5 = mínimo
+// +5 = máximo
+
 let fontSizeLevel = 0;
 
-function applyFontSize() {
-  const scale = 1 + (fontSizeLevel * 0.08);
+// tamaños BASE
+const BASE_LYRICS_SIZE = 26;
+const BASE_CHORD_SIZE = 22;
 
-  document.body.style.transform = `scale(${scale})`;
-  document.body.style.transformOrigin = "top left";
-  document.body.style.width = `${100 / scale}%`;
+// cuánto aumenta/disminuye por click
+const STEP_SIZE = 2;
+
+function applyFontSize() {
+
+  const lyricsSize =
+    BASE_LYRICS_SIZE + (fontSizeLevel * STEP_SIZE);
+
+  const chordSize =
+    BASE_CHORD_SIZE + (fontSizeLevel * STEP_SIZE);
+
+  // SOLO texto real
+  document.querySelectorAll(".song-lyrics .lyrics").forEach(el => {
+    el.style.fontSize = `${lyricsSize}px`;
+  });
+
+  // SOLO acordes
+  document.querySelectorAll(".song-lyrics .chord-wrap").forEach(el => {
+    el.style.fontSize = `${chordSize}px`;
+  });
 }
 
 function cambiarFuente(step) {
+
   fontSizeLevel += step;
 
-  if (fontSizeLevel > 5) fontSizeLevel = 5;
-  if (fontSizeLevel < -3) fontSizeLevel = -3;
+  // límites
+  if (fontSizeLevel > 10) fontSizeLevel = 10;
+  if (fontSizeLevel < -10) fontSizeLevel = -10;
 
   applyFontSize();
 }
 
 function resetFuente() {
+
   fontSizeLevel = 0;
+
   applyFontSize();
 }
 
@@ -833,7 +879,7 @@ function openSong(id) {
   document.getElementById("contenido").innerHTML = `
     <h2>${tituloFinal}</h2>
     ${meta}
-    <div class="lyrics">
+    <div class="song-lyrics">
       ${renderLyrics(s.letra)}
     </div>
   `;
