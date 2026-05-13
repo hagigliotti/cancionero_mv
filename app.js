@@ -84,6 +84,17 @@ async function init() {
     closeList();
     handleMenuVisibility();
     updateAppTitle();
+
+    if (isMobileOrTablet()) {
+      const projectorItem = document.querySelector(
+        '.menu-item.sub-item[onclick*="toggleProjectorMode"]'
+      );
+
+      if (projectorItem) {
+        projectorItem.style.opacity = "0.4";
+        projectorItem.style.pointerEvents = "none";
+      }
+    }
 });
 
   document.getElementById("menuIdioma").addEventListener("change", e => {
@@ -100,6 +111,8 @@ async function init() {
 }
 
 init();
+
+
 
 
 // ===================== HELPERS =====================
@@ -122,6 +135,8 @@ function sortByTitle(data) {
 function getNumeroHimno(c) {
   return c.idiomas?.[idiomaActual]?.numero_himno ?? "";
 }
+
+
 
 // ===================== BOTON LIMPIAR ======================
 function clearAll() {
@@ -387,6 +402,12 @@ function resetFuente() {
 
 // ===== PROYECTOR ============================================================================
 function toggleProjectorMode() {
+
+  // 🚫 BLOQUEO EN MÓVILES Y TABLETS
+  if (isMobileOrTablet()) {
+    return;
+  }
+
   const body = document.body;
 
   if (body.classList.contains("projector")) {

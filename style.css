@@ -25,14 +25,16 @@ html {
 
 /* - - - */
 /* Evita desbordes horizontales en todos los dispositivos */
-html, body {
-  /*overflow-x: hidden;*/
-}
 
 /* Ajustes generales móviles */
+
 #contenido {
-  padding: 10px;
-  font-size: 16px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* evita scroll horizontal */
+  box-sizing: border-box;
+  padding: 0 15px; /* margen izquierdo y derecho */
+  font-size: 18px;
 }
 
 .song-line {
@@ -210,10 +212,6 @@ a.menu-item {
   font-size: 22px;
 }
 
-.chord {
-  font-weight: bold;
-}
-
 .song-lyrics .lyrics {
   font-size: 26px;
 }
@@ -315,15 +313,9 @@ a.menu-item {
   border-radius: 20px;
   cursor: pointer;
 }
-
+/*
 #contenido {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden; /* evita scroll horizontal */
-  box-sizing: border-box;
-  padding: 0 15px; /* margen izquierdo y derecho */
-  font-size: 18px;
-}
+*/
 
 .meta {
   font-size: 12px;
@@ -533,30 +525,42 @@ a.menu-item {
 
 /* ===== MODO PROYECTOR ===== */
 body.projector {
-    background: black;
-    color: white;
+  background: black;
+  color: white;
 }
 
+/* TÍTULO */
 body.projector h1 {
-    font-size: 3rem;
-    text-align: center;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
-body.projector #contenido {
-    font-size: 3rem;
-    line-height: 1.6;
-    padding: 40px;
-    /*estrofas*/
+/* CONTENIDO PRINCIPAL */
+body.projector .song-line {
+  font-size: 1em;
+  line-height: 1.15;
+  margin-bottom: 2px;
 }
 
+/* LETRA */
+body.projector .lyrics {
+  font-size: 1em;
+}
+
+/* ACORDES (CLAVE) */
+body.projector .chord {
+  font-size: 0.6em;
+  top: -1.4em;
+}
+
+/* CONTENEDOR DE ACORDE */
+body.projector .chord-wrap {
+  width: 0; /* importante para alineación */
+}
+
+/* ESPACIO ENTRE ESTROFAS */
 body.projector .song-break {
-  height: 40px; /* espacio entre estrofas */
-}
-
-body.projector .top-bar {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  height: 18px;  /* menor separación */
 }
 
 /* NO ocultar alfabeto si lo quieres usar */
@@ -707,12 +711,11 @@ body.dark .modal-content {
 
 .chord {
   position: absolute;
-  top: -2.4em;
+  top: -2.5em;                            /*ESTO SUBE Y BAJA LA TABLATURA CON RESPECTO A LA LINEA DE TEXTO DE LA CANCION*/
   left: 0;
   font-weight: bold;
   font-size: 0.85em;
   white-space: nowrap;
-  font-size: 0.85em;
 }
 
 /* colores */
@@ -906,7 +909,6 @@ body.dark .modal-content {
    PROYECTOR (SEPARADO DEL RESPONSIVE)
    ======================================================================= */
 body.projector {
-
   background: black;
   color: white;
 
@@ -918,9 +920,8 @@ body.projector h1 {
 }
 
 body.projector #contenido {
-  font-size: 3rem;
-  line-height: 1.6;
-  padding: 40px;
+  font-size: 2.8rem;
+  line-height: 1.15;
 }
 
 body.projector .song-line {
