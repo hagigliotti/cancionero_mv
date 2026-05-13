@@ -84,17 +84,6 @@ async function init() {
     closeList();
     handleMenuVisibility();
     updateAppTitle();
-
-    if (isMobileOrTablet()) {
-      const projectorItem = document.querySelector(
-        '.menu-item.sub-item[onclick*="toggleProjectorMode"]'
-      );
-
-      if (projectorItem) {
-        projectorItem.style.opacity = "0.4";
-        projectorItem.style.pointerEvents = "none";
-      }
-    }
 });
 
   document.getElementById("menuIdioma").addEventListener("change", e => {

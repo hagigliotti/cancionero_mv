@@ -27,14 +27,9 @@ html {
 /* Evita desbordes horizontales en todos los dispositivos */
 
 /* Ajustes generales móviles */
-
 #contenido {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden; /* evita scroll horizontal */
-  box-sizing: border-box;
-  padding: 0 15px; /* margen izquierdo y derecho */
-  font-size: 18px;
+  padding: 10px;
+  font-size: 16px;
 }
 
 .song-line {
@@ -313,9 +308,15 @@ a.menu-item {
   border-radius: 20px;
   cursor: pointer;
 }
-/*
+
 #contenido {
-*/
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* evita scroll horizontal */
+  box-sizing: border-box;
+  padding: 0 15px; /* margen izquierdo y derecho */
+  font-size: 18px;
+}
 
 .meta {
   font-size: 12px;
