@@ -30,7 +30,9 @@ async function init() {
   loadTheme();
   updateThemeMenuText();
 
-
+  if (localStorage.getItem("projector") === "on") {
+    document.body.classList.add("projector");
+  }
 
   handleMenuVisibility();
 
@@ -881,7 +883,7 @@ function openSong(id) {
   document.getElementById("contenido").innerHTML = `
     <h2>${tituloFinal}</h2>
     ${meta}
-    <div class="song-lyrics">
+    <div class="lyrics">
       ${renderLyrics(s.letra)}
     </div>
   `;
