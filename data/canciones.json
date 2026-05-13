@@ -1135,6 +1135,46 @@
     }
   }
 },
+{
+  "id": "arroyo_ancho",
+  "titulo_original": "Arroyo ancho",
+  "autor": "Desconocido",
+  "compositor": "Desconocido",
+  "year": "",
+  "tonalidad": "Em",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "",
+  "tags": [
+    "Español",
+    "Cristiano"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Arroyo ancho",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[Em]Arroyo [Am]ancho [D]no lo podremos cru[Em]zar,",
+        "[Em]pero [Am]una piedra, [D]la distancia acorta[Em]rá.",
+        "[Am]No pongas la ma[Em]dera,",
+        "[Am]pues ella flo[Em]tará,",
+        "[Em]pon una [Am]piedra firme",
+        "[D]y así seguro cruza[E]rás.",
+        "",
+        "[Am]Hoy te quiero con[D]tar,",
+        "[G]que hay razón para exis[B7]tir, [Em]",
+        "[C]que hay razón para luchar [D]y vi[Em]vir. [E]",
+        "[Am]Hay arroyos que cru[D]zar,",
+        "[G]y una piedra en que pi[B7]sar; [Em]",
+        "[C]esa piedra angu[D]lar",
+        "[Em/Am]que es Jesús, [Em/Am]que es Jesús,",
+        "[E]que es Jesús."
+      ]
+    }
+  }
+},
 
 {
   "_comment2": "LETRA B ---------------------------------------------------------------------------------------------------------------------------------------    LETRA B"
@@ -1381,6 +1421,210 @@
         "",
         "Buscas [G]luces en la [Am]oscuri[F]dad",
         "que [G]no tengan [Am]miedo de bri[G]llar."
+      ]
+    }
+  }
+},
+{
+  "id": "blessed_be_your_name",
+  "titulo_original": "Blessed Be Your Name",
+  "autor": "Matt Redman",
+  "compositor": "Matt Redman",
+  "year": "",
+  "tonalidad": "SOL",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Job 1:21",
+  "tags": [],
+  "idiomas": {
+    "en": {
+      "titulo": "Blessed Be Your Name",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[SOL]Blessed Be Your [RE]Name",
+        "[MI-]In the land that is [DO]plentiful",
+        "[SOL]Where Your streams of [RE]abundance flow",
+        "[DO]Blessed be Your name",
+        "",
+        "Blessed Be Your name",
+        "When I'm found in the desert place",
+        "Though I walk through the wilderness",
+        "Blessed Be Your name",
+        "",
+        "[SOL]Every blessing You [RE]pour out,",
+        "[MI-]I'll Turn back to [DO]praise",
+        "[SOL]When the darkness [RE]closes in, Lord",
+        "[LA]Still I [DO]will say",
+        "",
+        "Rit. [SOL]Blessed be the name [RE]of the Lord",
+        "[MI-]Blessed be Your [DO]name",
+        "Blessed be the name of the Lord",
+        "Blessed be Your glorious name",
+        "",
+        "Blessed be Your name",
+        "When the sun's shining down on me",
+        "When the world's 'all as it should be'",
+        "Blessed be Your name",
+        "",
+        "Blessed be Your name",
+        "On the road marked with suffering",
+        "Though there's pain in the offering",
+        "Blessed be Your name",
+        "",
+        "Every blessing You pour out I'll",
+        "Turn back to praise",
+        "When the darkness closes in, Lord",
+        "Still I'll say",
+        "",
+        "Rit. Blessed be the name of the Lord",
+        "Blessed be Your name",
+        "Blessed be the name of the Lord",
+        "Blessed be Your glorious name",
+        "",
+        "[SOL]You give and [RE]take away",
+        "[MI-]You give and [DO]take away",
+        "My heart will choose to say",
+        "[LA]Lord blessed be Your name X2",
+        "",
+        "Blessed be the name of the Lord",
+        "Blessed be Your name",
+        "Blessed be the name of the Lord",
+        "Blessed be Your glorious name X2"
+      ]
+    }
+  }
+},
+{
+  "id": "brilla_en_el_sitio_donde_estes",
+  "titulo_original": "Brilla en el sitio donde estés",
+  "autor": "Desconocido",
+  "compositor": "Desconocido",
+  "year": "",
+  "tonalidad": "C",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Himno"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Brilla en el sitio donde estés",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[C] Nunca esperes el momento de una gran ac[G7]ción,",
+        "ni que pueda lejos ir tu [C] luz;",
+        "tus pequeños actos pueden ser de bendi[F]ción,",
+        "[G] brilla en el [C] sitio donde estés.",
+        "",
+        "Coro",
+        "[C] Brilla en el [G] sitio donde estés,",
+        "[G7] brilla en el [C] sitio donde estés.",
+        "Puedes con tu [C7] luz algún perdido resca[F]tar,",
+        "[G] brilla en el [C] sitio donde estés.",
+        "",
+        "[C] Puedes en tu cielo alguna nube disi[G7]par,",
+        "haz a un lado tu egoísmo [C] cruel.",
+        "Aunque solo un corazón pudieres conso[F]lar,",
+        "[G] brilla en el [C] sitio donde estés.",
+        "",
+        "Coro",
+        "[C] Brilla en el [G] sitio donde estés,",
+        "[G7] brilla en el [C] sitio donde estés.",
+        "Puedes con tu [C7] luz algún perdido resca[F]tar,",
+        "[G] brilla en el [C] sitio donde estés.",
+        "",
+        "[C] Puede tu talento alguna cosa descu[G7]brir",
+        "do tu luz podrá resplande[C]cer.",
+        "De tu mano el Pan de vida puede aquí ve[F]nir,",
+        "[G] brilla en el [C] sitio donde estés.",
+        "",
+        "Coro",
+        "[C] Brilla en el [G] sitio donde estés,",
+        "[G7] brilla en el [C] sitio donde estés.",
+        "Puedes con tu [C7] luz algún perdido resca[F]tar,",
+        "[G] brilla en el [C] sitio donde estés."
+      ]
+    }
+  }
+},
+
+
+
+{
+  "_comment3": "LETRA C ---------------------------------------------------------------------------------------------------------------------------------------    LETRA C"
+},
+{
+  "id": "celebrad_a_cristo",
+  "titulo_original": "Celebrad a Cristo",
+  "autor": "Desconocido",
+  "compositor": "Desconocido",
+  "year": "",
+  "tonalidad": "E",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Alabanza"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Celebrad a Cristo",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "INTRO [E] [Bm] [A] [B7] (2 veces)",
+        "",
+        "[E] ¡Celebrad a [A] Cristo, [B7] celeb[E]rad! [E-A-B7-E]",
+        "[E] ¡Celebrad a [A] Cristo, [B7] celeb[E]rad! [C-D-E]",
+        "",
+        "[B7] ¡Resucitó, [C#m] resucitó! [B7] Y Él vive para [C#m] siempre.",
+        "[B7] ¡Resucitó, [C#m] resucitó! [B] // ¡Vamos a [B] celeb[A]rar! [B] //",
+        "[E] ¡Resucitó el Señor!"
+      ]
+    }
+  }
+},
+{
+  "id": "cristo_rompe_las_cadenas",
+  "titulo_original": "Cristo rompe las cadenas",
+  "autor": "Desconocido",
+  "compositor": "Desconocido",
+  "year": "",
+  "tonalidad": "G",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Coros"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Cristo rompe las cadenas",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[G] Cristo rompe las cadenas",
+        "las cadenas del pecado",
+        "[C] Cristo rompe las [G] cadenas",
+        "[Am] [D] [G] y me libra a mí",
+        "",
+        "Como es posible, vivir sin ti Jesus",
+        "si el firmamento de la vida eres Tu",
+        "Tu me salvaste del pecado y de la muerte",
+        "Como es posible, vivir sin ti Jesus?"
       ]
     }
   }
@@ -2219,19 +2463,19 @@
       "letra": [
         "            [Bm]",
         "Cuando el pueblo de Dios ora",
-        "[G]      [F#]   [G]      [F#]           [Bm]",
+        "[G]     [F#]  [G]     [F#]          [Bm]",
         "suceden cosas, suceden cosas maravillosas.",
         "            [Bm]",
         "Cuando el pueblo de Dios ora",
-        "[G]      [F#]   [G]      [F#]           [Bm]",
+        "[G]     [F#]  [G]     [F#]          [Bm]",
         "suceden cosas, suceden cosas maravillosas.",
-        "            [Em]           [Bm]",
+        "            [Em]          [Bm]",
         "Hay sanidad, hay salvación,",
-        "      [F#]                 [Bm]",
+        "      [F#]                [Bm]",
         "y se siente la presencia del Señor.",
-        "            [Em]           [Bm]",
+        "            [Em]          [Bm]",
         "Hay sanidad, hay salvación,",
-        "      [F#]                 [Bm]",
+        "      [F#]                [Bm]",
         "y se siente la presencia del Señor.",
         "            [Bm]",
         "Cuando el pueblo de Dios ora."
@@ -2260,12 +2504,12 @@
         "[A]Cuando miro los claros [C#m]cielos y [D]lo que es [Bm]obra de tus [E]dedos,",
         "[A]digo: ¿qué es el [F#m]hombre para [D]que te a[E]cuerdes de [A - E/G#]él?",
         "[F#m]Digo: ¿qué es el [D]hombre para [E]que te acuerdes de [A - E/G#]él?",
-        "        [F#m]       [C#m]       [D] [Bm]       [E]",
+        "        [F#m]      [C#m]      [D][Bm]      [E]",
         "Todo lo pusiste debajo de sus pies,",
-        "        [F#m]       [C#m]       [D] [Bm]       [E]",
+        "        [F#m]      [C#m]      [D][Bm]      [E]",
         "todo lo que pasa por la senda de la mar.",
         "[A]¡Oh! [F#m]Jehová, Se[D]ñor nuestro, ¡[E]cuán grande es tu [A - E/G#]nombre",
-        "        [F#m]       [D]             [E] [A]",
+        "        [F#m]      [D]            [E][A]",
         "en toda la tierra y en mi corazón!"
       ]
     }
@@ -2309,7 +2553,7 @@
   }
 },
 {
-  "id": "cuenta_conmigoa",
+  "id": "cuenta_conmigo",
   "titulo_original": "Cuenta conmigo",
   "autor": "Gisel Barra",
   "compositor": "Gisel Barra",
@@ -2355,100 +2599,6 @@
       ]
     }
   }
-},
-{
-  "id": "blessed_be_your_name",
-  "titulo_original": "Blessed Be Your Name",
-  "autor": "Matt Redman",
-  "compositor": "Matt Redman",
-  "year": "",
-  "tonalidad": "SOL",
-  "tempo_bpm": "",
-  "compas": "",
-  "ritmo": "",
-  "referencia_biblica": "Job 1:21",
-  "tags": [],
-  "idiomas": {
-    "en": {
-      "titulo": "Blessed Be Your Name",
-      "audio_url": "",
-      "traductor": "",
-      "letra": [
-        "[SOL]Blessed Be Your [RE]Name",
-        "[MI-]In the land that is [DO]plentiful",
-        "[SOL]Where Your streams of [RE]abundance flow",
-        "[DO]Blessed be Your name",
-        "",
-        "Blessed Be Your name",
-        "When I'm found in the desert place",
-        "Though I walk through the wilderness",
-        "Blessed Be Your name",
-        "",
-        "[SOL]Every blessing You [RE]pour out,",
-        "[MI-]I'll Turn back to [DO]praise",
-        "[SOL]When the darkness [RE]closes in, Lord",
-        "[LA]Still I [DO]will say",
-        "",
-        "Rit. [SOL]Blessed be the name [RE]of the Lord",
-        "[MI-]Blessed be Your [DO]name",
-        "Blessed be the name of the Lord",
-        "Blessed be Your glorious name",
-        "",
-        "Blessed be Your name",
-        "When the sun's shining down on me",
-        "When the world's 'all as it should be'",
-        "Blessed be Your name",
-        "",
-        "Blessed be Your name",
-        "On the road marked with suffering",
-        "Though there's pain in the offering",
-        "Blessed be Your name",
-        "",
-        "Every blessing You pour out I'll",
-        "Turn back to praise",
-        "When the darkness closes in, Lord",
-        "Still I'll say",
-        "",
-        "Rit. Blessed be the name of the Lord",
-        "Blessed be Your name",
-        "Blessed be the name of the Lord",
-        "Blessed be Your glorious name",
-        "",
-        "[SOL]You give and [RE]take away",
-        "[MI-]You give and [DO]take away",
-        "My heart will choose to say",
-        "[LA]Lord blessed be Your name X2",
-        "",
-        "Blessed be the name of the Lord",
-        "Blessed be Your name",
-        "Blessed be the name of the Lord",
-        "Blessed be Your glorious name X2"
-      ]
-    }
-  }
-},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-  "_comment3": "LETRA C ---------------------------------------------------------------------------------------------------------------------------------------    LETRA C"
 },
 {
   "id": "camminero",
@@ -2574,6 +2724,218 @@
     }
   }
 },
+{
+  "id": "caminando_voy",
+  "titulo_original": "Caminando voy",
+  "autor": "Desconocido",
+  "compositor": "Desconocido",
+  "year": "",
+  "tonalidad": "D",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "",
+  "tags": [
+    "Español",
+    "Coros"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Caminando voy",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[D]Caminando voy, para Ca[A]náan",
+        "[A7]caminando voy, para Ca[D]náan",
+        "[D7]caminando voy, para Ca[G]náan...",
+        "Oh! Gloria a [D]Dios",
+        "[A7]caminando voy para Ca[D]náan.",
+        "",
+        "Si usted no va, no me impida a mí",
+        "si usted no va, no me impida a mí",
+        "si usted no va, no me impida a mí...",
+        "Oh! Gloria a Dios",
+        "caminando voy para Canáan.",
+        "",
+        "Al venir Jesús, yo me voy con Él",
+        "al venir Jesús, yo me voy con Él",
+        "al venir Jesús, yo me voy con Él...",
+        "Oh! Gloria a Dios",
+        "caminando voy para Canáan."
+      ]
+    }
+  }
+},
+{
+  "id": "con_jesus_soy_feliz",
+  "titulo_original": "Con Jesús soy feliz",
+  "autor": "Desconocido",
+  "compositor": "Desconocido",
+  "year": "",
+  "tonalidad": "A",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Infantil"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Con Jesús soy feliz",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[A] Con Jesús soy feliz",
+        "[D] porque sé que [E] Él me ama.",
+        "[A] Con Jesús soy feliz",
+        "[B] porque toma mi [E] mano.",
+        "",
+        "Coro:",
+        "[A] Y me guía el [D] Señor,",
+        "[E] y me libra del [A] mal,",
+        "[D] Él mis pasos con[E]duce",
+        "[E7] con po[A]der.",
+        "",
+        "Con Jesús soy feliz",
+        "Él conoce mis luchas.",
+        "Con Jesús soy feliz,",
+        "su presencia me anima."
+      ]
+    }
+  }
+},
+{
+  "id": "cada_dia_con_cristo",
+  "titulo_original": "Cada día con Cristo",
+  "autor": "Desconocido",
+  "compositor": "Desconocido",
+  "year": "",
+  "tonalidad": "E",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Himno"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Cada día con Cristo",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[E] Cada día con Cristo,",
+        "[E7] me llena de perfecta [B7] paz,",
+        "cada día con Cristo, le amo [E] más y más.",
+        "",
+        "Él me salva y guarda",
+        "[E7] y sé que pronto volve[A]rá.",
+        "[Am] Y vivir con [E] Cris[Bm]to, [F#m] más dulce [B7] cada [E] día será/"
+      ]
+    }
+  }
+},
+{
+  "id": "cada_dia_con_dios",
+  "titulo_original": "Cada día con Dios",
+  "autor": "Desconocido",
+  "compositor": "Desconocido",
+  "year": "",
+  "tonalidad": "G",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Alabanza"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Cada día con Dios",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[G] Que bendición es despertar",
+        "[C] si [D] Dios a mi lado es[G]tá.",
+        "[C] No hay nada como comen[A]zar",
+        "con el cada [D] día [D7].",
+        "[G] Lo más lindo es pen[G7]sar",
+        "en [C] Él en primer lugar,",
+        "[G] orar, su Palabra [C] leer",
+        "[D] y andar con [G] Él.",
+        "",
+        "Que bendición es trabajar",
+        "si Dios a mi lado está.",
+        "No hay nada como continuar",
+        "con El cada día.",
+        "Lo más lindo es pensar",
+        "en Él en segundo lugar,",
+        "orar, su Palabra leer y andar con Él.",
+        "",
+        "Qué bendición es descansar",
+        "si Dios a mi lado está.",
+        "No hay nada como terminar con El cada día.",
+        "Lo más lindo es pensar",
+        "en Él en último lugar,",
+        "orar, su Palabra leer y confiar en Él."
+      ]
+    }
+  }
+}, 
+{
+  "id": "caminando_caminando",
+  "titulo_original": "Caminando, caminando",
+  "autor": "Desconocido",
+  "compositor": "Desconocido",
+  "year": "",
+  "tonalidad": "A",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Coros"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Caminando, caminando",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[A] Gozándome yo voy al hogar ce[E]lestial",
+        "caminando, [A] caminando.",
+        "Pues no me importa más el placer terre[E]nal",
+        "caminando para [E7] aquel [A] hogar.",
+        "",
+        "Coro:",
+        "[A] Caminando, camin[D]ando,",
+        "[E] para aquel hogar donde [D] está Je[A]sús.",
+        "Caminando, caminan[D]do,",
+        "[E] de la mano del [E7] Señor Je[A]sús.",
+        "",
+        "Yo quiero pecadores conmigo llevar",
+        "caminando, caminando.",
+        "Que en Cristo puedan ellos salud encontrar",
+        "caminando para aquel hogar.",
+        "",
+        "Entonces con mi Cristo por siempre estaré",
+        "caminando, caminando.",
+        "Su nombre sacrosanto yo alabaré,",
+        "caminando para aquel hogar."
+      ]
+    }
+  }
+},
+
 
 {
   "_comment4": "LETRA D ---------------------------------------------------------------------------------------------------------------------------------------    LETRA D"
@@ -3759,6 +4121,37 @@
 },
 {
   "_comment17": "LETRA P ---------------------------------------------------------------------------------------------------------------------------------------    LETRA P"
+},
+{
+  "id": "paz",
+  "titulo_original": "Paz",
+  "autor": "Desconocido",
+  "compositor": "Desconocido",
+  "year": "",
+  "tonalidad": "Dm",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Reflexión"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Paz",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[Dm] Paz no es la ausencia",
+        "[G] de problemas hoy,",
+        "[Dm] es saber como enfren[G]tar",
+        "[Dm] los problemas de la vida terre[G]nal",
+        "[F] pidiendo la [C] fuerza [Dm] hoy."
+      ]
+    }
+  }
 },
 {
   "id": "parlare_con_te",
@@ -5220,6 +5613,47 @@
 },
 {
   "_comment26": "LETRA Y ---------------------------------------------------------------------------------------------------------------------------------------    LETRA Y"
+},
+{
+  "id": "yo_nunca_ire_hacia_atras",
+  "titulo_original": "Yo nunca iré hacia atrás",
+  "autor": "Desconocido",
+  "compositor": "Desconocido",
+  "year": "",
+  "tonalidad": "D",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Coros"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Yo nunca iré hacia atrás",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[D]Cuando recuerdo que nació en [G] Belén",
+        "[A7]Yo nunca me iré hacia [D]atrás [A7]",
+        "[D]Cuando recuerdo que nació en [G] Belén",
+        "[A7]Yo nunca me iré hacia [D]atrás [A7]",
+        "",
+        "[D] No, [G] no, no, no, no",
+        "[A7]Yo nunca me iré hacia [D]atrás [A7]",
+        "[D] No, [G] no, no, no, no",
+        "[A7]Yo nunca me iré hacia [D]atrás [A7]",
+        "",        
+        "Cuando recuerdo que él murió por mí",
+        "Yo nunca me iré hacia atrás",
+        "",
+        "Cuando recuerdo que él vendrá otra vez",
+        "Yo nunca me iré hacia atrás"
+      ]
+    }
+  }
 },
 {
   "_comment27": "LETRA Z ---------------------------------------------------------------------------------------------------------------------------------------    LETRA Z"
