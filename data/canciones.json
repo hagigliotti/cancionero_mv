@@ -2935,7 +2935,136 @@
     }
   }
 },
-
+{
+  "id": "en_tus_manos_rotas_vi",
+  "titulo_original": "En tus manos rotas vi",
+  "autor": "",
+  "compositor": "",
+  "year": "",
+  "tonalidad": "C",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "En tus manos rotas vi",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[C] En tus manos [G] rotas vi, [Am] todo tu amor [Em] por mí,",
+        "[F] comprendí en[Dm]tonces tu amis[G]tad.",
+        "[C] Me ha comprado tu [G] dolor,",
+        "[Am] soy un hijo [Em] de tu amor",
+        "[F] quiero ser tu [G] siervo de ver[C] dad. [C7]",
+        "",
+        "Coro:",
+        "[F] En tus manos [G] rotas",
+        "[C] tómame [Am] Señor,",
+        "[F] quiero compar[G]tir tu gran do[C]lor. [C7]",
+        "[F] Toma tú mis [G] manos,",
+        "[C] rómpelas por [Am] ti",
+        "[F] con la herida [G] que en tus manos [C] vi.",
+        "",
+        "Era un pájaro sin luz que al posarse en tu cruz",
+        "escapó de la oscuridad.",
+        "Encontré mi juventud cuando me diste salud",
+        "hoy soy siervo de tu voluntad."
+      ]
+    }
+  }
+},
+{
+  "id": "el_hombre_que_anduvo_en_galilea",
+  "titulo_original": "El hombre que anduvo en Galilea",
+  "autor": "",
+  "compositor": "",
+  "year": "",
+  "tonalidad": "C",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Corito"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "El hombre que anduvo en Galilea",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[C] El hombre que anduvo en Galilea",
+        "se llamaba Jesús de Naza[G]ret,",
+        "ahora está conmigo",
+        "renueva hoy mi vida",
+        "y aumenta cada día más y más mi [G7] fe. [C]",
+        "",
+        "Coro:",
+        "[C] Fe más fe, [F] amor más amor,",
+        "[C] el que no tiene [D] pida al Salva[G]dor.",
+        "[C] Pues sin fe, [F] y sin amor",
+        "[C] no puede a[G]gradar al Se[C]ñor."
+      ]
+    }
+  }
+},
+{
+  "id": "en_momentos_asi",
+  "titulo_original": "In moments like these",
+  "autor": "David Graham",
+  "compositor": "David Graham",
+  "year": "",
+  "tonalidad": "C",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "En momentos así",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[C] En momentos [Am] así",
+        "[F] Levanto mis [G] manos",
+        "[F] Levanto mis [G] manos a [C] Cristo [G7]",
+        "[C] En momentos [Am] así",
+        "[F] Yo canto [G] canciones",
+        "[F] Yo canto [G] canciones a [C] Él [C7]",
+        "",
+        "[F] [G] Yo te [C] alabo [C7] Senor",
+        "[F] [G] Yo te [C] alabo [C7] Senor",
+        "[F] [G] Yo te [Am]alaboo",
+        "[F] [G] Yo te [C] alabo [C7] Senor",
+        "", 
+        "[C] En momentos [Am] así",
+        "[F] Levanto mi [G] voz",
+        "[F] Levanto mi [G] canto a [C] Cristo [G7]",
+        "[C] En momentos [Am] así",
+        "[F] Levanto mi [G] ser",
+        "[F] Levanto mis [G] manos a [C] Él [C7]",
+        "",
+        "[F] [G] Cuanto te [C] amo [C7] Dios",
+        "[F] [G] Cuanto te [C] amo [C7] Dios",
+        "[F] [G] Cuanto te a[Am]mo",
+        "[C] [G7] Te a[C]mo"
+      ]
+    }
+  }
+},
 
 {
   "_comment4": "LETRA D ---------------------------------------------------------------------------------------------------------------------------------------    LETRA D"
@@ -2956,7 +3085,7 @@
 
   "idiomas": {
     "es": {
-      "titulo": "Diez mil razones (Bendice al Señor)",
+      "titulo": "10.000 razones (Bendice al Señor)",
       "audio_url": "https://open.spotify.com/intl-es/track/0B0XKO9t9WJjUP7qxwTC8c?si=42ba04e594f14030",
       "letra": [
         "Que todo lo que soy alabe al Señor",
@@ -3053,6 +3182,864 @@
       }
     }
   },
+{
+  "id": "da_una_sonrisa",
+  "titulo_original": "Da una sonrisa",
+  "autor": "",
+  "compositor": "",
+  "year": "",
+  "tonalidad": "D",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Proverbios 15:13",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Infantil"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Da una sonrisa",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[D] Da una son[A]risa, una sonrisa [D] cierta,",
+        "una sonrisa [A] abierta, llena de a[D]mor.",
+        "[D] Da una son[A]risa, una sonrisa [D] cierta,",
+        "una sonrisa [A] abierta, llena de a[D]mor.",
+        "",
+        "[D7] Quien tiene a Je[G]sús vi[A]virá para go[F#m]zar,",
+        "es[Bm]tá siempre con[Em]tento aun[A7]que le vaya [D] mal.",
+        "Tropieza a[A7]quí, se cae a[D]llá,",
+        "se le[D7]vanta de [G] nuevo y se [A] pone a can[D]tar.",
+        "Se le[D7]vanta de [G] nuevo y se [A] pone a can[D]tar."
+      ]
+    }
+  }
+},
+{
+  "id": "dad_gloria_al_senor",
+  "titulo_original": "I will magnify the Lord",
+  "autor": "Michael O´shields",
+  "compositor": "Michael O´shields",
+  "year": "",
+  "tonalidad": "C",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Lucas 2:14",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Alabanza"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Dad gloria al Señor",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[C] Dad [Dm] gloria al Se[C/E - G]ñor",
+        "Dad gloria al Señor",
+        "[C] pues [G] Él merece todo ho[C - Ab - Bb]nor.",
+        "pues Él merece todo honor.",
+        "[C] Dad [Dm] gloria al Se[C/E - G]ñor",
+        "Dad gloria al Señor",
+        "[C] pues [G] Él merece todo ho[C - Ab - Bb]nor.",
+        "pues Él merece todo honor.",
+        "",
+        "[C] Hosanna, [F] bendecido [C] es,",
+        "[F] la roca de mi sal[C]vación, es exal[G]tado.",
+        "[C] Hosanna, [F] bendecido [C] es,",
+        "[F] la roca de mi sal[C]vación, es exal[G]tado. [C]"
+      ]
+    }
+  }
+},
+{
+  "id": "dad_gracias",
+  "titulo_original": "Give thanks",
+  "autor": "Don Moen",
+  "compositor": "Don Moen",
+  "year": "",
+  "tonalidad": "E",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "1 Corintios 1:4, 5",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Dad gracias",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[E] Dad gracias de co[B]razón, dad gracias al [C#m] Santísimo, [G#m]",
+        "[A] dad gracias por[E/G#]que ha dado a su [D] hijo Je[B]sús.",
+        "[E] Dad gracias de co[B]razón, dad gracias al [C#m] Santísimo, [G#m]",
+        "[A] dad gracias por[E/G#]que ha dado a su [D] hijo Je[B]sús.",
+        "",
+        "[G#m] Y ahora diga el [C#m] débil “fuerte soy”, [F#m] diga el pobre [B] “rico soy” [E]",
+        "por [C#m] lo que hizo el Se[D]ñor por [B] mí.",
+        "[G#m] Y ahora diga el [C#m] débil “fuerte soy”, [F#m] diga el pobre [B] “rico soy” [E]",
+        "por [C#m] lo que hizo el Se[D]ñor por [B] mí.",
+        "",
+        "[E-A] Dad gracias, [E-A] dad gracias, [E] dad gracias."
+      ]
+    }
+  }
+},
+{
+  "id": "dame_a_cristo",
+  "titulo_original": "Give me Jesus",
+  "autor": "Negro spiritual",
+  "compositor": "Negro spiritual",
+  "year": "",
+  "tonalidad": "A",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Salmos 73:25",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Espiritual"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Dame a Cristo",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[A] De mañana al desper[F#m]tar,",
+        "[D] de mañana al desper[A]tar,",
+        "[A] de mañana al desper[F#m]tar,",
+        "[D] dame a [A] Cristo.",
+        "",
+        "Coro:",
+        "[C#m] Dame a [E] Cristo,",
+        "dame a [A] Cristo, [A7]",
+        "[D] nada más quiero [A] yo,",
+        "[D] dame a [A] Cristo.",
+        "",
+        "[A] En la noche al descan[F#m]sar,",
+        "[D] en la noche al descan[A]tar,",
+        "[A] en la noche al descan[F#m]sar,",
+        "[D] dame a [A] Cristo.",
+        "",
+        "[Coro]"
+      ]
+    }
+  }
+},
+{
+  "id": "dame_fe",
+  "titulo_original": "Dame fe",
+  "autor": "Daniel Orellana",
+  "compositor": "Daniel Orellana",
+  "year": "",
+  "tonalidad": "E",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Santiago 1:6",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Dame fe",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[E] Hay montañas que tengo que mo[B]ver",
+        "con la [C#m7] fe que no duda de [A] nada.",
+        "[E] Hay batallas que tengo que ven[B]cer",
+        "con la [C#m7] fe que camina sobre [A] agua.",
+        "",
+        "[B] Ojos necesitan ser a[C#m7]biertos,",
+        "[G#m7] vidas necesitan sani[A]dad.",
+        "[B] Sé muy bien que solo yo no [C#m7] puedo,",
+        "[G#m7] es por eso que una vez [A] más vengo a pe[B]dirte:",
+        "",
+        "Coro:",
+        "Dame [E] fe para pelear la ba[A]talla,",
+        "para mover las montañas, [F#m7] ven y dame tu po[B]der.",
+        "Dame [E] fe para abrazar tus pro[A]mesas,",
+        "para llegar a la meta y [F#m7] no dudar de ti otra [B] vez.",
+        "Para [A] ver que aun existen mila[B]gros, [A]",
+        "dame [B] fe. [E]",
+        "",
+        "Quiero [A] ver, quiero verte actuar.",
+        "Quiero [C#m] ver, quiero verte actuar.",
+        "Quiero [B] ver, quiero verte actuar en mí.",
+        "",
+        "[E] Ya no quiero dudar de tu po[B]der,",
+        "quiero [C#m7] ser el que cumpla tus sue[A]ños.",
+        "[E] Es por eso que no renuncia[B]ré,",
+        "segui[C#m7]ré con la vista en el [A] cielo.",
+        "",
+        "[B] Ojos necesitan ser a[C#m7]biertos,",
+        "[G#m7] vidas necesitan sani[A]dad.",
+        "[B] Sé muy bien que solo yo no [C#m7] puedo,",
+        "[G#m7] es por eso que una vez [A] más vengo a pe[B]dirte:",
+        "",
+        "[Coro]",
+        "",
+        "Quiero [A] ver, quiero verte actuar.",
+        "Quiero [C#m] ver, quiero verte actuar.",
+        "Quiero [B] ver, quiero verte actuar en mí. [x2]",
+        "",
+        "[E] Hay montañas que hoy voy a mo[B]ver",
+        "con la [C#m7] fe que no duda de [A] nada."
+      ]
+    }
+  }
+},
+{
+  "id": "dame_un_nuevo_corazon",
+  "titulo_original": "Dame un nuevo corazón",
+  "autor": "Brainerd Ramos",
+  "compositor": "Brainerd Ramos",
+  "year": "",
+  "tonalidad": "E",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Salmos 44:21",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Dame un nuevo corazón",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[E] Dame un nuevo cora[A]zón, Señor,",
+        "[B] un corazón para ado[E]rarte,",
+        "[C#m] un corazón para [F#m] servirte,",
+        "[B] dame un nuevo cora[E - E7]zón. [x2]",
+        "",
+        "[A] Que sea limpio como el cris[B]tal,",
+        "[G#m] dulce como la [C#m] miel,",
+        "[A] un corazón, Se[B]ñor, como el [E] tuyo. [E7]",
+        "",
+        "[A] Que sea limpio como el cris[B]tal,",
+        "[G#m] dulce como la [C#m] miel,",
+        "[A] un corazón, Se[B]ñor, como el [E] tuyo."
+      ]
+    }
+  }
+},
+{
+  "id": "de_gloria_en_gloria",
+  "titulo_original": "De gloria en gloria",
+  "autor": "",
+  "compositor": "",
+  "year": "",
+  "tonalidad": "D",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Juan 11:40",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "De gloria en gloria",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[D] De gloria en [A] gloria te [Bm] veo. [D7]",
+        "[G] Cuanto más te co[D]nozco",
+        "[E] quiero saber más de [A] ti.",
+        "",
+        "[D] Mi Dios, cual [A] buen alfa[Bm]rero [D7]",
+        "[G] quebrántame, trans[D]fórmame,",
+        "[Em] moldéame a tu i[A]magen, Se[D]ñor. [D7]",
+        "",
+        "[G] Quiero [A] ser más [F#m] como [Bm] tu,",
+        "[G] ver la [A] vida [F#m] como [Bm] tu,",
+        "[G] saturar[A]me de tu Es[F#m]píri[Bm]tu",
+        "[G] y reflejar al [A] mundo tu a[D]mor."
+      ]
+    }
+  }
+},
+{
+  "id": "demos_gracias_al_senor",
+  "titulo_original": "Demos gracias al Señor",
+  "autor": "Cesáreo Gabaráin",
+  "compositor": "Cesáreo Gabaráin",
+  "year": "",
+  "tonalidad": "A",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "1 Tesalonicenses 5:16-18",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Gratitud"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Demos gracias al Señor",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[A] Demos gracias al Señor, [D] demos [A] gracias,",
+        "demos [E7] gracias por su [A] amor.",
+        "[A] Demos gracias al Señor, [D] demos [A] gracias,",
+        "demos [E7] gracias por su [A] amor.",
+        "",
+        "Por la [D] mañana las aves [A] cantan",
+        "las [E7] alabanzas a Cristo, el Salva[A]dor.",
+        "Y [D] tú, mi amigo, ¿por qué no [A] cantas",
+        "las [E7] alabanzas a Cristo, el Salva[A]dor?",
+        "",
+        "[A] Demos gracias al Señor, [D] demos [A] gracias,",
+        "demos [E7] gracias por su [A] amor.",
+        "[A] Demos gracias al Señor, [D] demos [A] gracias,",
+        "demos [E7] gracias por su [A] amor."
+      ]
+    }
+  }
+},
+{
+  "id": "descansar",
+  "titulo_original": "Descansar",
+  "autor": "Felipe Tonasso",
+  "compositor": "Felipe Tonasso",
+  "year": "",
+  "tonalidad": "Em",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Mateo 11:28",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Descansar",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[Em] No quiero vivir pensando en el mañana, yo quiero ser fe[D]liz.",
+        "[Em] Días vienen y van, yo no temeré, puedo confiar en [D] ti.",
+        "[Bm] Si el futuro in[G]cierto es, [Bm] seguiré ade[G]lante con fe.",
+        "",
+        "Coro:",
+        "[A] Oh, Padre, en ti voy a descansar.",
+        "[Bm] Descan[A]sar",
+        "[Em] Y confiando en tu protec[G]ción",
+        "[Bm] Descan[A]sar",
+        "[Em] en tus manos yo me entrega[G]ré.",
+        "[Bm] Descan[A]sar",
+        "[Em] Sé que cuidarás de mí, Señor,",
+        "[Em] ensé[D]ñame a [G] descan[C]sar.",
+        "",
+        "[Em] Cada paso que dé, y esté donde esté, quiero entregar a [D] ti.",
+        "[Em] Cada decisión yo pon[Bm]dré en tus manos y espe[D]raré.",
+        "[Bm] Si Dios cuida las [G] aves, [Bm] sé que tengo mucho más va[G]lor.",
+        "[Em] Puedo esperar,",
+        "",
+        "[Coro]",
+        "",
+        "[C] En tus brazos en[G/B]cuentro paz [A/D] para descan[D]sar.",
+        "[C] Aunque muchos te[Em]mores yo tenga, descan[D/F#]saré, [G]",
+        "[C#m - B] y [F#m] confiando en tu protec[A]ción",
+        "[C#m - B] en [F#m] tus manos yo me entrega[A]ré.",
+        "[C#m - B] Sé que cui[F#m]darás de mí, Se[E]ñor, [D]",
+        "[F#m] ensé[E]ñame [A] a descan[D-A-E]sar."
+      ]
+    }
+  }
+},
+{
+  "id": "despues_del_rio",
+  "titulo_original": "Além do rio",
+  "autor": "Jader Dornelles Santos",
+  "compositor": "Jader Dornelles Santos",
+  "year": "",
+  "tonalidad": "G",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "1 Corintios 2:9",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Esperanza"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Después del río",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[G] He oído de una tierra her[C]mosa y so[G]ñada,",
+        "un lu[G]gar donde la ale[C]gría es to[G]tal.",
+        "Con mis [Em] ojos la diviso no muy [Cm] distante, [G] [G/B]",
+        "mis [Am] oídos ya escu[C]chando música es[D]tán.",
+        "[G] Cansadora es la vida a[C]quí, de este [G] lado,",
+        "y mis [G] brazos casi [C] ya no pueden re[G]mar.",
+        "[Em] Agotados y heridos por [Cm] tantos días, [G] [G/B]",
+        "nece[Am]sito encon[C]trar el puerto de a[D]mor.",
+        "",
+        "Coro:",
+        "[G] Después del [F] río existe un lu[C]gar para [G/B] mí, [Am]",
+        "después del [D] río existe [C] paz. [D] [G-D]",
+        "[G] Después del [F] río habrá feli[C]cidad [G/B] sin [A7] fin,",
+        "con mi [G/D] Jesús voy a mo[Am]rar. [D] [C-G]",
+        "",
+        "[G] He soñado con aque[C]llas bellas mo[G]radas,",
+        "que ojo hu[G]mano nunca [C] visto y nunca ve[G]rá,",
+        "de be[Em]lleza que no puede ser com[Cm]parada, [G] [G/B]",
+        "pues la [Am] gloria del Se[C]ñor se encuentra a[D]llí.",
+        "[G] Mucho más hermoso que el [C] sol al po[G]nerse,",
+        "o el re[G]flejo del ro[C]cío en una [G] flor,",
+        "se[Em]rá aquel encuentro pa[Cm]ra los redi[G]midos, [G/B]",
+        "pues va[Am]lió la pena a[C]quí luchar y ven[D]cer.",
+        "",
+        "[Coro]"
+      ]
+    }
+  }
+},
+{
+  "id": "digno_eres",
+  "titulo_original": "Digne es tu",
+  "autor": "Chris Christensen",
+  "compositor": "Chris Christensen",
+  "year": "",
+  "tonalidad": "A",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Apocalipsis 5:9",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Digno eres",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[A] Dios de gloria, [C#m] yo te adoro,",
+        "[D] mi [E] Rey de honra y majes[A]tad.",
+        "[A] Con mi alma yo ce[C#m]lebro",
+        "[D] tu [B] victoria y tu autori[E]dad.",
+        "",
+        "[F#m] Digno [E] eres tú, Se[D]ñor,",
+        "[F#m] digno [E] eres de [D] loor.",
+        "[F#m] Con los [E] ángeles pro[D]clamo [A]",
+        "[Bm] la gran[A]deza de tu a[G-E]mor.",
+        "",
+        "[F#m] Digno [E] eres tú, Se[D]ñor,",
+        "[F#m] digno [E] eres de [D] loor.",
+        "[F#m] Con la [E] tierra en[D]tera [A] canto",
+        "[Bm] la be[A]lleza de tu a[G-E-A]mor."
+      ]
+    }
+  }
+},
+{
+  "id": "digno_es_el_senor",
+  "titulo_original": "Worthy is the Lamb",
+  "autor": "Darlene Zschech",
+  "compositor": "Darlene Zschech",
+  "year": "",
+  "tonalidad": "G",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Salmos 18:3",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Digno es el Señor",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[G] Gracias por la cruz, oh [C] Dios,",
+        "[G] el precio que pa[C]gaste [D] por [G] mí",
+        "Llevando mi pe[Em]cado allí.",
+        "[D] Sublime [C] amor, tu [Am] gracia [G] me sal[D]vó.",
+        "",
+        "[G] Gracias por tu amor, oh [C] Dios,",
+        "[G] tus manos cla[C]vadas [D] por [G] mí.",
+        "Me haz la[Em]vado, oh Señor,",
+        "[D] conozco [C] hoy tu [Am] abrazo [G] y tu per[D]dón.",
+        "",
+        "[G] Digno es el Señor, [D] en [Am] su trono [G] es[C]tá.",
+        "[D] Hoy te coro[G]namos [C] Rey y [Am] reinas con po[D]der.",
+        "[G] Altísimo [D] Señor, [Am] Jesús, [G] Hijo de [C] Dios.",
+        "El a[D]mado del cielo en la [G] cruz mu[C]rió.",
+        "[D] Digno es el Señor, [Am - G - C]",
+        "[D] digno es el Señor. [Am - G - D - G]"
+      ]
+    }
+  }
+},
+{
+  "id": "dios_alzamos_hoy_tu_nombre",
+  "titulo_original": "Lord, I lift your name on high",
+  "autor": "Rick Founds",
+  "compositor": "Rick Founds",
+  "year": "",
+  "tonalidad": "G",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "1 Crónicas 29:13",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Alabanza"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Dios, alzamos hoy tu nombre",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[G] Dios, al[C]zamos hoy tu [D] nombre,",
+        "[G] te can[C]tamos ala[D]banzas,",
+        "[G] está tu a[C]mor en nuestras [D] vidas,",
+        "[G] y es[C]peramos tu ve[C/D - D]nida.",
+        "",
+        "[G] Nos mos[C]traste el ca[D]mino para [C] ir a [G] ti,",
+        "[C] y tu vida fue un e[D]jemplo para [C] así se[G]guir.",
+        "[C] Lo que hiciste en esa [D] cruz fue un e[Em]jemplo sin i[D]gual. [C]",
+        "Te ala[D]bamos hoy, Se[G]ñor."
+      ]
+    }
+  }
+},
+{
+  "id": "dios_bueno_es",
+  "titulo_original": "God is so good",
+  "autor": "Paul Makai",
+  "compositor": "Paul Makai",
+  "year": "",
+  "tonalidad": "D",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Nahum 1:7",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Coros"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Dios bueno es",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[D] Dios bueno es, [A] [A7] Dios bueno [D] es,",
+        "[D7] Dios bueno [G] es, [D] bueno [A] para [D] mí.",
+        "",
+        "[D] Cristo es real, [A] [A7] Cristo es [D] real,",
+        "[D7] Cristo es [G] real, [D] es [A] real para [D] mí.",
+        "",
+        "[D] Pronto vendrá, [A] [A7] pronto ven[D]drá,",
+        "[D7] pronto ven[G]drá, [D] Él ven[A]drá por [D] mí."
+      ]
+    }
+  }
+},
+{
+  "id": "dios_de_israel",
+  "titulo_original": "Deus de Israel",
+  "autor": "Ricardo Martins y Fernando Iglesias",
+  "compositor": "Ricardo Martins y Fernando Iglesias",
+  "year": "",
+  "tonalidad": "G",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Jueces 5: 3",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Alabanza"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Dios de Israel",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[G] Dios de Israel, [Bm] Cristo Jesús,",
+        "habita en [G] mí, Espíritu, [D] luz.",
+        "",
+        "[Bm] Grande es tu nombre, oh [G] Dios de Is[D]rael,",
+        "pues [Bm] tú creaste la [G] tierra y el [D] sol.",
+        "[A] Hoy tu grandeza invade mi [G] ser,",
+        "[D] ¡Aleluya! [A] ¡Aleluya! [Bm] ¡Aleluya! [G] ¡Aleluya! [D] [x4]",
+        "",
+        "[G] Dios de Israel, [Bm] Cristo Jesús,",
+        "habita en [G] mí, Espíritu, [D] luz."
+      ]
+    }
+  }
+},
+{
+  "id": "dios_del_cielo",
+  "titulo_original": "God of wonders",
+  "autor": "Marc Byrd",
+  "compositor": "Marc Byrd",
+  "year": "",
+  "tonalidad": "E",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Génesis 14:22",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Dios del cielo",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[C#m] Todo lo cre[A]aste:",
+        "[B] la [C#m] tierra, cielo y [A] mar.",
+        "[B] Los cielos son tu [C#m] tabernáculo, [A]",
+        "[B] ¡gloria al [C#m] Dios altísi[A]mo!",
+        "",
+        "Coro:",
+        "[E] Dios del cielo, maravilloso [B] Dios,",
+        "[F#m] tú eres [A] santo, santo.",
+        "[E] La creación muestra tu majes[B]tad.",
+        "[F#m] Tú eres [A] santo, santo.",
+        "[A] Dios de la creación, Dios de la creación.",
+        "",
+        "[C#m] Cuando ama[A]nezco",
+        "[B] he de [C#m] celebrar tu [A] luz.",
+        "[B] Si [C#m] tropiezo en tinie[A]blas,",
+        "[B] volve[C#m]ré a ver tu [A] luz.",
+        "",
+        "[Coro]",
+        "",
+        "[F#m] ¡Aleluya al [A] Dios de la cre[B]ación!",
+        "[F#m] ¡Aleluya al [A] Dios de la cre[B]ación!",
+        "[F#m] ¡Aleluya al [A] Dios de la cre[B]ación! [C#m - B]",
+        "",
+        "[Coro]"
+      ]
+    }
+  }
+},
+{
+  "id": "dios_es_nuestro_amparo_y_fortaleza",
+  "titulo_original": "",
+  "autor": "",
+  "compositor": "",
+  "year": "",
+  "tonalidad": "A",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Salmos 46:1",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Himno"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Dios es nuestro amparo y fortaleza",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[A] Dios es nuestro amparo y forta[C#m]leza,",
+        "[D] nuestro pronto au[E]xilio en las tribu[A]laciones,",
+        "[Bm] por tanto no te[E]merá mi co[A E F#m]razón",
+        "[Bm] aunque cielo y [E] tierra se re[A]muevan. [A7]",
+        "",
+        "Porque [D] Jehová de los ejércitos nos [G] guía,",
+        "[Em] nuestro refugio [A] es el Dios de Ja[D - A]cob.",
+        "",
+        "[Bm] Aunque tiemblen las montañas",
+        "[Em] y se turbe todo el mar,",
+        "[D] en ti confiará, [A] en ti confiará mi [G D] alma.",
+        "",
+        "[Bm] Aunque tiemblen las montañas",
+        "[Em] y se turbe todo el mar,",
+        "[D] en ti confiará, [A] en ti confiará mi [G D] alma."
+      ]
+    }
+  }
+},
+{
+  "id": "dios_esta_aqui",
+  "titulo_original": "Dios está aquí",
+  "autor": "Javier Garcías",
+  "compositor": "Javier Garcías",
+  "year": "",
+  "tonalidad": "C",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Deuteronomio 7:21",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Alabanza"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Dios está aquí",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[C] Dios está a[G]quí, [Am] ¡Aleluya! [C7]",
+        "[F] tan cierto como el [G] aire que res[C]piro, [C7]",
+        "[F] tan cierto como la [G] mañana se le[C - G/B - Am]vanta,",
+        "[Dm] tan cierto como que le [G] canto y me puede o[C]ír."
+      ]
+    }
+  }
+},
+{
+  "id": "dios_no_se_cansa_de_amar",
+  "titulo_original": "Deus não se cansa de amar",
+  "autor": "Lineu Soares y Valdecir Lima",
+  "compositor": "Lineu Soares y Valdecir Lima",
+  "year": "",
+  "tonalidad": "C",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Salmos 36:7",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración",
+    "Gracia"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Dios no se cansa de amar",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[C] Cuando andamos por la vida [Em] sin destino o di[F]rección, [G]",
+        "[C] cuando faltan los a[Em]migos, autoes[F]tima y emo[E]ción,",
+        "[Am] Dios nos llama por el [C/G] nombre, [F] puede ver nuestro can[C/E]sancio,",
+        "[Am] quiere entre[C/G]garnos [G7] paz, y quiere [C] darnos un abrazo.",
+        "",
+        "Coro:",
+        "[C/E] [F] Dios no se [G] cansa de a[C]mar,",
+        "[C/E] [F] [D/F#] Dios no se cansa de a[G]mar.",
+        "[F] Dios ampara a sus [G7] hijos y su [C] paz quiere dar",
+        "[F] para [Fm] que las heridas [C/G] pronto puedan sanar.",
+        "[Am] Y si estamos [C/G] cansados de [D/F#] caer y fallar",
+        "[Em/G] Dios nos toma [Dm] en sus brazos,",
+        "[G] no se cansa de amar.",
+        "[C/E] [F] [G] [C] Dios no se cansa de amar,",
+        "[C/E] [F] [D/F#] [G-F] Dios no se cansa de amar,",
+        "[C/E] [G] [C] Dios no se cansa de amar.",
+        "",
+        "[C] Dios nos compra con su [Em] sangre, Dios co[F]noce el do[G]lor.",
+        "[C] Si este mundo nos mal[Em]trata en sus [F] brazos hay a[E]mor.",
+        "[Am] Pues su gracia es in[C/G]finita, [F] suya es la salva[C/E]ción.",
+        "[Am] Si son grandes nuestras [C/G] faltas [F] es mayor su per[G/F]dón.",
+        "",
+        "[D] Cristo es nuestra espe[F#m]ranza, por no[G]sotros él mu[A]rió",
+        "[D] para siempre estar al [F#m] lado del que un [G] día se per[F#]dió.",
+        "[Bm] Él te ama [D/A] como [G] eres, sólo [D/F#] quiere tu bien.",
+        "[Bm] Si perdona los pe[D/A]cados del [G#m7-Em] mundo, te perdo[A]nará tam[D-Bm-A]bién.",
+        "",
+        "Coro Final (Modulación):",
+        "[D/F#] [G] [A] [D] Dios no se cansa de amar,",
+        "[D/F#] [G] [E/G#] [A] Dios no se cansa de amar.",
+        "[G] Dios ampara a sus [A7] hijos y su [D] paz quiere dar",
+        "[G] para [Gm] que las heridas [D/A] pronto puedan sanar.",
+        "[Bm] Y si estamos [D/A] cansados de [E/G#] caer y fallar",
+        "[F#m/A] Dios nos toma [Em] en sus brazos,",
+        "[A] no se cansa de amar.",
+        "[D/F#] [G] [A] [D] Dios no se cansa de amar,",
+        "[D/F#] [G] [E/G#] [A-G] Dios no se cansa de amar,",
+        "[D/F#] [A] [D] Dios no se cansa de amar."
+      ]
+    }
+  }
+},
+{
+  "id": "dios_que_tu_luz",
+  "titulo_original": "Shine on us",
+  "autor": "Michael W. y Debbie Smith",
+  "compositor": "Michael W. y Debbie Smith",
+  "year": "",
+  "tonalidad": "C",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "1 Juan 1:5",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Dios, que tu luz",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[C] Dios, [F] que tu [C] luz pueda [C/E] ilu[F]minar [G] todo nuestro [C] ser.",
+        "[C] Dios, [F] que tu [C] luz pueda [C/E] ilu[F]minar [G] todo nuestro [C] ser.",
+        "",
+        "[C7] En [F] ti [G] hay per[C]dón, en [F] ti [G] hay sal[F/C - C]vación.",
+        "[C/E] Para [F] brillar en la [E] oscuri[Am - F]dad, que tu [C] luz nos [G] llene [C] hoy.",
+        "",
+        "[C] Dios, [F] que tu [C] amor pueda [C/E] habi[F]tar en [G] mi cora[C]zón.",
+        "[C] Dios, [F] que tu [C] amor pueda [C/E] habi[F]tar en [G] mi cora[C]zón.",
+        "",
+        "[C7] En [F] ti [G] hay per[C]dón, en [F] ti [G] hay sal[F/C - C]vación.",
+        "[C/E] Para [F] brillar en la [E] oscuri[Am - F]dad, que tu [C] luz nos [G] llene [C] hoy.",
+        "",
+        "[D] Dios, [G] que tu [D] paz se [D/F#] derra[G]me hoy por [A] la eterni[D]dad.",
+        "[D] Dios, [G] que tu [D] paz se [D/F#] derra[G]me hoy por [A] la eterni[D]dad.",
+        "",
+        "[D7] En [G] ti [A] hay per[D]dón, en [G] ti [A] hay sal[G/D - D]vación.",
+        "[D/F#] Para [G] brillar en la [F#] oscuri[Bm - G]dad, que tu [D] luz nos [A] llene [D] hoy."
+      ]
+    }
+  }
+},
+
 
 {
   "_comment5": "LETRA E ---------------------------------------------------------------------------------------------------------------------------------------    LETRA E"
@@ -3089,8 +4076,946 @@
       }
     }
   },
-
-
+{
+  "id": "el_amor_de_cristo",
+  "titulo_original": "",
+  "autor": "",
+  "compositor": "",
+  "year": "",
+  "tonalidad": "D",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Efesios 3:18",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Infantil",
+    "Amor de Dios"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "El amor de Cristo",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[D] El amor de Cristo es dulce y grande,",
+        "[A] el amor de Cristo es dulce y grande,",
+        "[D] el amor de Cristo es dulce y grande,",
+        "[A] oh, oh, grande es su a[D]mor.",
+        "",
+        "[D] Alto, así de alto es el [A] amor de Cristo.",
+        "[A] Hondo, así de hondo es el [D] amor de Cristo.",
+        "[D] Pronto vendrá a buscarme,",
+        "[A] oh, oh, grande es su a[D]mor."
+      ]
+    }
+  }
+},
+{
+  "id": "el_corazon_de_la_adoracion",
+  "titulo_original": "Heart of worship",
+  "autor": "Matt Redman",
+  "compositor": "Matt Redman",
+  "year": "",
+  "tonalidad": "D",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Salmos 86:12",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "El corazón de la adoración",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[D] Cuando vengo a ti quiero ala[A]bar, [Em] adorarte a [A] ti.",
+        "[D] Quiero ofrecer un canto [A] digno a ti, que me [Em] aceptes Se[A]ñor.",
+        "[Em] Más que una [D/F#] simple can[A]ción, yo te traigo, [Em] Señor, todo [D] mi cora[A]zón.",
+        "[Em] Tú miras [D/F#] dentro de [A] mí no solo lo que se [Em] ve, tú mi[D]ras mi cora[A]zón.",
+        "",
+        "Coro:",
+        "[D] Y hoy vengo aquí a a[A/C#]dorarte en verdad,",
+        "pues el [Em] centro eres tú. [G] Se [A] trata de [D] ti, Señor.",
+        "[D] Perdona si olvi[A/C#]dé el sentido,",
+        "pues el [Em] centro eres tú. [G] Se [A] trata de [D] ti, Señor.",
+        "",
+        "[D] Rey de eterni[A]dad, no puedo ex[Em]presar algo digno a [A] ti.",
+        "[D] Aunque pobre [A] soy y todo [Em] debo a ti, hasta mi res[A]pirar.",
+        "[Em] Más que una [D/F#] simple can[A]ción, yo te traigo, [Em] Señor, todo [D] mi cora[A]zón.",
+        "[Em] Tú miras [D/F#] dentro de [A] mí no solo lo que se [Em] ve, tú mi[D]ras mi cora[A]zón.",
+        "",
+        "[Coro]"
+      ]
+    }
+  }
+},
+{
+  "id": "el_es_jehova_el_senor",
+  "titulo_original": "Él es Jehová el Señor",
+  "autor": "Danny Berrios",
+  "compositor": "Danny Berrios",
+  "year": "",
+  "tonalidad": "Dm",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Levítico 25:38",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Alabanza"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Él es Jehová el Señor",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[Dm] Él es Señor, Jehová, Dios poderoso.",
+        "[F] Él es Señor, Jehová, [A] Dios poderoso.",
+        "[Dm] Señor y Adonai, la Roca eterna.",
+        "El [Bb] gran Señor que [A7] te puede restau[Dm]rar.",
+        "",
+        "[Dm] Él es el gran Yo soy, el Dios de Abraham.",
+        "[F] Señor Jehová, Shalom, el [A] Dios de paz y amor.",
+        "El Dios de [Dm] Israel, Señor eterno.",
+        "El [Bb] gran Señor que [A7] te puede restau[Dm]rar.",
+        "",
+        "Canta [F] aleluya, canta [Dm] aleluya,",
+        "canta [F] aleluya, canta [A7] aleluya.",
+        "[Dm] Él es Señor, Jehová, Dios poderoso.",
+        "Es el [Bb] Señor que [A7] te puede restau[Dm]rar."
+      ]
+    }
+  }
+},
+{
+  "id": "el_mar_se_ira",
+  "titulo_original": "Oceans will part",
+  "autor": "Ben Fielding",
+  "compositor": "Ben Fielding",
+  "year": "",
+  "tonalidad": "A",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Romanos 14:11",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "El mar se irá",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[A] Si me falta pa[D]sión, toca [A] mi cora[D]zón,",
+        "[F#m] y mis [C#m] ojos ve[D]rán lo que tú [E] vas a hacer.",
+        "[A] Si algo no [D] puedo ver, [A] fortalece [D] mi fe,",
+        "[F#m] y mis [C#m] ojos ve[D]rán lo que tú [E] vas a hacer,",
+        "[F#m] y mis [C#m] ojos ve[D]rán lo que tú [E] vas a hacer.",
+        "",
+        "Coro:",
+        "El mar ser [A] irá.",
+        "[E] Tu verdad hoy el [D] mundo escu[E]chará. [A - E]",
+        "[A] Tu poder mos[E]trarás y [D] se ha[E]rá tu volun[A]tad.",
+        "",
+        "[A] La aflic[D]ción pasa[A]rá, mas tu [D] amor segui[A]rá,",
+        "[F#m] y mis [C#m] ojos ve[D]rán lo que tú [E] vas a hacer.",
+        "[A] Mi ala[D]banza da[A]ré, en ti [D] me goza[A]ré,",
+        "[F#m] y mis [C#m] ojos ve[D]rán lo que tú [E] vas a hacer,",
+        "[F#m] y mis [C#m] ojos ve[D]rán lo que tú [E] vas a hacer.",
+        "",
+        "[Coro]",
+        "",
+        "[F#m] y mis [C#m] ojos ve[D]rán lo que tú [E] vas a hacer,",
+        "[F#m] Cristo, [C#m] quiero mi[D]rar lo que tú [E] vas a hacer.",
+        "",
+        "[Coro]",
+        "",
+        "Y [D] se ha[E]rá tu volun[A]tad."
+      ]
+    }
+  }
+},
+{
+  "id": "el_mejor_lugar_del_mundo",
+  "titulo_original": "O melhor lugar do mundo",
+  "autor": "Valdecir Lima y Lineu Soares",
+  "compositor": "Valdecir Lima y Lineu Soares",
+  "year": "",
+  "tonalidad": "G",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Salmos 16:11",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "El mejor lugar del mundo",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[G] El mundo [D] aún tiene muchas be[Em]llezas",
+        "[C] que alegran la [D] vida y nos hacen so[G - C/G]ñar.",
+        "[G] Lugares sin [D] par de la natu[Em]raleza",
+        "[C] donde cual[G]quier persona qui[D]siera estar.",
+        "",
+        "[G] Pero de [D/F#] todos los lu[Em]gares, [D - C] el más her[D]moso y el mejor [G - Am - G/B]",
+        "[C] es [D] donde [Em] busco [C] en [Am] ora[D]ción a mi tierno Salva[G - D/F#]dor.",
+        "",
+        "Coro:",
+        "[Em] El mejor lugar del [C] mundo es a los [D] pies del Salva[G - D/F#]dor.",
+        "[Em] Sólo allí encon[C]tré espe[D]ranza y alivio a mi do[G]lor.",
+        "[Am] Sólo allí encon[D]tré re[G]fugio en la fuente del a[C]mor.",
+        "[D] El mejor lugar del [G/B] mundo es [C] donde [D] está mi Salva[G - G/B - C]dor.",
+        "",
+        "[G] Soñamos con [D] casas que sean her[Em]mosas,",
+        "[C] tal vez en la [D] playa o con vista hacia el [G - C/G] mar.",
+        "[G] Pero las [D] cosas no tienen sen[Em]tido",
+        "[C] si [G] Cristo no está en primer lu[D]gar.",
+        "",
+        "[G] Al sen[D/F#]tir la paz de [Em] Dios, [D - C] su poder y [D] amor profundo, [G - Am - G/B]",
+        "[C] me sen[D]tiré [Em] muy fe[C]liz, [Am] y donde es[D]té, [Em] aquel se[C]rá",
+        "el [D] mejor lugar del [G] mundo. [D/F#]",
+        "",
+        "[Coro]"
+      ]
+    }
+  }
+},
+{
+  "id": "el_poder_de_la_cruz",
+  "titulo_original": "The power of the cross",
+  "autor": "Stuart Townend",
+  "compositor": "Stuart Townend",
+  "year": "",
+  "tonalidad": "Bb",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Lucas 23:46",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Himno"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "El poder de la cruz",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[Eb/G] Oh, qué [F/A] triste [Bb] fue ese a[Cm]mane[Bb/D]cer;",
+        "[Eb] Cristo entre[Bb/D]gado [Cm7] para mo[F]rir.",
+        "[Eb/G] Siendo [F/A] justo y [Bb] fiel, conde[Cm]nado [Bb/D] fue,",
+        "[Eb] y en esa [Bb/D] cruz mu[F]rió.",
+        "",
+        "[Bb/D] El [Eb] po[F/A]der [Bb] de [Bb/D] la [Eb] cruz [F/A] me lim[Bb]pió del pecar.",
+        "[Bb/D] Mi [Eb] error [C/E] él [F] car[F7]gó, [Bb/D] soy [Eb] perdo[F]nado en la [Bb] cruz."
+      ]
+    }
+  }
+},
+{
+  "id": "el_salvador_es_mi_amigo",
+  "titulo_original": "",
+  "autor": "",
+  "compositor": "",
+  "year": "",
+  "tonalidad": "E",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Juan 15:15",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Infantil",
+    "Coros"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "El Salvador es mi amigo",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[E] El Salvador es mi amigo,",
+        "[B] su escudo sobre mí es amor.",
+        "[B7] El Salvador es mi amigo,",
+        "[E] su escudo sobre mí es amor.",
+        "[E7] El Salvador es mi amigo,",
+        "[A] su escudo sobre mí es amor.",
+        "Su [E] escudo [B] sobre mí es [E] amor.",
+        "",
+        "[E] Murió en la cruz para salvarme,",
+        "[B] su escudo sobre mí es amor.",
+        "[B7] Murió en la cruz para salvarme,",
+        "[E] su escudo sobre mí es amor.",
+        "[E7] Murió en la cruz para salvarme,",
+        "[A] su escudo sobre mí es amor.",
+        "Su [E] escudo [B] sobre mí es [E] amor.",
+        "",
+        "[E] Ascendió a los cielos a construir mansiones,",
+        "[B] su escudo sobre mí es amor.",
+        "[B7] Ascendió a los cielos a construir mansiones,",
+        "[E] su escudo sobre mí es amor.",
+        "[E7] Ascendió a los cielos a construir mansiones,",
+        "[A] su escudo sobre mí es amor.",
+        "Su [E] escudo [B] sobre mí es [E] amor.",
+        "",
+        "[E] Regresará para llevarme,",
+        "[B] su escudo sobre mí es amor.",
+        "[B7] Regresará para llevarme,",
+        "[E] su escudo sobre mí es amor.",
+        "[E7] Regresará para llevarme,",
+        "[A] su escudo sobre mí es amor.",
+        "Su [E] escudo [B] sobre mí es [E] amor.",
+        "",
+        "[E] Yo le amo, tú le amas,",
+        "[B] su escudo sobre mí es amor.",
+        "[B7] Yo le amo, tú le amas,",
+        "[E] su escudo sobre mí es amor.",
+        "[E7] Yo le amo, tú le amas,",
+        "[A] su escudo sobre mí es amor.",
+        "Su [E] escudo [B] sobre mí es [E] amor."
+      ]
+    }
+  }
+},
+{
+  "id": "en_mi_caminar",
+  "titulo_original": "En mi caminar",
+  "autor": "Gisel Barra",
+  "compositor": "Gisel Barra",
+  "year": "",
+  "tonalidad": "G",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Isaías 35:10",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "En mi caminar",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[G] Todos mis tesoros pueden [Bm] desa[G]parecer,",
+        "[G] lo que amo hoy tal vez ma[D]ñana ya no es[A]té.",
+        "[G] Pero a mi lado siempre [Bm] alguien estará,",
+        "[Em] mi vida cambiará, mis [A] planes guiará.",
+        "",
+        "[G] Cada día vuelvo a desper[Bm]tar por su [G] poder,",
+        "[G] y su voz me llama cuando [D] ve que cae[A]ré.",
+        "[G] Encomiendo a Cristo mi [Bm] camino porque sé",
+        "que [Em] si confío en él, [A] él hará.",
+        "",
+        "Coro:",
+        "[D] Mi Señor, siempre estás tan cer[A]ca de mi cora[Bm]zón.",
+        "tu [G] amor jamás me abandonará.",
+        "[D] Que tu luz me mantenga si[A]empre lejos del do[Bm - G]lor",
+        "en mi ca[G - Bm - A - D - A]minar.",
+        "",
+        "[G] Porque mis errores en el [Bm] mar se olvida[G]rán",
+        "[G] y como la nieve tu pu[D]reza me da[A]rás.",
+        "[G] Con cada segundo de mi [Bm] vida que se va",
+        "[Em] entrego todo a ti y [A] siento paz.",
+        "",
+        "[Coro]",
+        "",
+        "En mi ca[G - D]minar."
+      ]
+    }
+  }
+},
+{
+  "id": "en_momentos_asi",
+  "titulo_original": "",
+  "autor": "",
+  "compositor": "",
+  "year": "",
+  "tonalidad": "D",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "1 Crónicas 16:11",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "En momentos así",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[D] En mo[Bm]mentos a[Em]sí yo canto can[A]ción,",
+        "[Em] canción de a[A]mor a mi [D] Cris[A]to.",
+        "[D] En mo[Bm]mentos a[Em]sí yo busco al Se[A]ñor,",
+        "[Em] elevo mi [A] alma a [D] Dios.",
+        "",
+        "Hoy te a[G]do[A]ro, Se[D]ñor,",
+        "y te a[G]la[A]bo, mi [D - D7] Dios.",
+        "Te [G] amo, mi Je[A]sús, [Bm]",
+        "[G] te [D] amo, mi Se[A]ñor. [D]"
+      ]
+    }
+  }
+},
+{
+  "id": "en_tus_manos_me_entrego",
+  "titulo_original": "Nas mãos do oleiro",
+  "autor": "Daniel Lüdke, Marquinhos Maraial, Rawfy Welton y Kleber Augusto",
+  "compositor": "Daniel Lüdke, Marquinhos Maraial, Rawfy Welton y Kleber Augusto",
+  "year": "",
+  "tonalidad": "G",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Isaías 64:8",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "En Tus manos me entrego",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[Em - C] Sin ti, Señor, [G - D] polvo soy.",
+        "[Em - C] Ningún valor, [G] barro soy.",
+        "[Am] Yo no voy a [C] cuestionar",
+        "pues [G] tú me molde[D/F#]arás.",
+        "[Am] Eres Dios, [C] forma me da[D]rás.",
+        "",
+        "[G] Hoy en tus manos me en[Em]trego entero",
+        "y [C] tú me reno[D]varás.",
+        "[G] Hoy en tus manos soy [Em] restaurado",
+        "y [C] seré un vaso [D] nuevo.",
+        "[Repetir todo hasta aquí]",
+        "",
+        "[A] Hoy en tus manos me en[F#m]trego entero",
+        "y [D] tú me reno[E]varás.",
+        "[A] Hoy en tus manos soy [F#m] restaurado",
+        "y [D] seré un vaso [E - A] nuevo."
+      ]
+    }
+  }
+},
+{
+  "id": "ensename_a_servir",
+  "titulo_original": "Ensina-me a servir",
+  "autor": "Valdecir Lima y Silmar Correia",
+  "compositor": "Valdecir Lima y Silmar Correia",
+  "year": "",
+  "tonalidad": "D",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Marcos 9:35",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Servicio",
+    "Misionero"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Enséñame a servir",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[D] Vivimos hoy sin aten[A]ción",
+        "[Em] y las personas [C] piden compren[A]sión.",
+        "[D] Jesús murió y así mos[F#m]tró",
+        "[Em] que su amor nos [C] dio la salva[A]ción.",
+        "",
+        "[G] Padre, [A] tú puedes ense[D]ñarme",
+        "[Em] a mi [A] prójimo ayu[D]dar.",
+        "[G] Y a [A] cada ser hu[Bm]mano",
+        "[C] tu cruz reve[A]lar.",
+        "",
+        "Coro:",
+        "[D] Enséñame a servir, [A] querido y [G] buen pas[A]tor.",
+        "[D] Que el mundo vea en [A] mí tu son[G]risa y tu a[C]mor.",
+        "[G] Que mis ojos muestren [Bm] vida y luz al [C] que no ve,",
+        "[G] y mis labios lleven [Bm] esperanza y [C] paz también.",
+        "[A] Enséñame a servir, Je[D]sús.",
+        "",
+        "[D] Yo quiero en mí más compa[A]sión",
+        "[Em] para ayudar al [C] pobre en afli[A]cción.",
+        "[D] Yo quiero ser un [F#m] hijo fiel",
+        "[Em] y compar[C]tir con todos tu po[A]der.",
+        "",
+        "[G] Padre, [A] yo quiero ser va[D]liente",
+        "[Em] para [A] siempre estar de [D] pie.",
+        "[G] Y [A] en cada ser hu[Bm]mano",
+        "[C] despertar fuerza y [A] fe.",
+        "",
+        "[Coro]",
+        "",
+        "[Bm] Los ángeles po[F#m]drían en mi [D] lugar",
+        "[Em] servir al [A] mundo con su po[D]der.",
+        "[Bm] El privilegio es mío, [A] servir a [E] Dios",
+        "[G] con fuerza y va[A]lor.",
+        "",
+        "[Coro]",
+        "",
+        "[G] Enséñame a servir,",
+        "[D] enséñame a servir,",
+        "[G] enséñame a [A] servir, Je[D]sús. [x2]"
+      ]
+    }
+  }
+},
+{
+  "id": "enteramente_fiel",
+  "titulo_original": "Inteiramente fiel",
+  "autor": "Evaldo Vicente",
+  "compositor": "Evaldo Vicente",
+  "year": "",
+  "tonalidad": "G",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Apocalipsis 2:10",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Consagración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Enteramente fiel",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[G] No quiero pen[Bm]sar",
+        "[Am] ni recordar lo [C/D] que he dejado.",
+        "[G] Aquello que Dios co[Bm]menzó",
+        "[Am] irá a crecer, pues [C/D] tengo [B/D#] su cui[Em]dado.",
+        "[A/E] Y tanto me a[G/D]mó, que voy a entregar",
+        "[D] mi vida y mi cora[G]zón.",
+        "",
+        "Coro:",
+        "[G] Soy enteramente de [Bm] Cristo Jesús,",
+        "[C] y siempre viviré como [D] hijo del Rey.",
+        "[G] Estoy eternamente u[Bm]nido a Jesús,",
+        "[Dm] por siempre esta[C - A/C#]ré",
+        "[G/D] enteramente [D/F#] fiel yo quiero [G] ser.",
+        "",
+        "[G] Conozco un lu[Bm]gar",
+        "[Am] más allá de lo co[C/D]mún.",
+        "[G] La muerte no exis[Bm]tirá",
+        "[Am] ni habrá dolor por [C/D] causa [B/D#] de Je[Em]sús.",
+        "[A/E] Él tanto me a[G/D]mó, que voy a entregar",
+        "[D] mi vida y mi cora[G]zón.",
+        "",
+        "[Coro]"
+      ]
+    }
+  }
+},
+{
+  "id": "eres",
+  "titulo_original": "Eres",
+  "autor": "JLG",
+  "compositor": "JLG",
+  "year": "",
+  "tonalidad": "C",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Proverbios 18:10",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Eres",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[C] Oh, Señor, en ti he confi[F]ado,",
+        "pongo en tus manos mi Es[F]píri[C]tu.",
+        "[C] Oh, Señor, me has redi[F]mido",
+        "y en ti se ale[F]gra mi cora[C]zón.",
+        "",
+        "[C] Eres mi fuerza y mi morada,",
+        "[F] eres la voz de mi madrugada,",
+        "[Bb] eres mi roca, mi [F] torre fuerte,",
+        "[C] eres Señor.",
+        "",
+        "[C] Eres amor, Dios bueno y justo,",
+        "[F] eres mi canto y mi refugio,",
+        "[Bb] eres hermoso y [F] luz del mundo,",
+        "[C] eres Señor.",
+        "",
+        "[C] Oh, Señor, bendito siem[F]pre,",
+        "alfa y omega, princi[F]pio y fin. [C]",
+        "[C] Oh, Señor, mi ser te ado[F]ra,",
+        "y en tu pre[F]sencia quiero vi[C]vir.",
+        "",
+        "[C] Eres mi fuerza y mi morada,",
+        "[F] eres la voz de mi madrugada,",
+        "[Bb] eres mi roca, mi [F] torre fuerte,",
+        "[C] eres Señor.",
+        "",
+        "[C] Eres amor, Dios bueno y justo,",
+        "[F] eres mi canto y mi refugio,",
+        "[Bb] eres hermoso y [F] luz del mundo,",
+        "[C] eres Señor.",
+        "",
+        "[D] Eres mi fuerza y mi morada,",
+        "[G] eres la voz de mi madrugada,",
+        "[C] eres mi roca, mi [G] torre fuerte,",
+        "[D] eres Señor.",
+        "",
+        "[D] Eres amor, Dios bueno y justo,",
+        "[G] eres mi canto y mi refugio,",
+        "[C] eres hermoso y [G] luz del mundo,",
+        "[D] eres Señor. [x2]"
+      ]
+    }
+  }
+},
+{
+  "id": "eres_mi_refugio",
+  "titulo_original": "És o meu refúgio",
+  "autor": "Ricardo Martins y Fernando Iglesias",
+  "compositor": "Ricardo Martins y Fernando Iglesias",
+  "year": "",
+  "tonalidad": "D",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "2 Samuel 22:3",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Eres mi refugio",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[D] Eres mi refugio y mi [Bm] fortaleza,",
+        "[G] mi socorro eterno, eres mi a[D]brigo.",
+        "[D] Eres mi refugio y mi [Bm] fortaleza,",
+        "[G] mi socorro eterno, eres mi a[D]brigo.",
+        "",
+        "[Bm - G] Cuando se agite el [D - A] mar",
+        "[Bm - G] confiaré en ti, Se[A]ñor.",
+        "[Bm - G] Si se abriera la tierra en [D - A] dos",
+        "[F - G] confiaré en ti, mi [D] Dios."
+      ]
+    }
+  }
+},
+{
+  "id": "eres_mi_respirar",
+  "titulo_original": "Breathe",
+  "autor": "Michael W. Smith",
+  "compositor": "Michael W. Smith",
+  "year": "",
+  "tonalidad": "G",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Salmos 84:2",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Eres mi respirar",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[G] Eres mi respi[C]rar, [G] eres mi respi[C]rar.",
+        "[G] Dios, [D] tu pre[Em]sencia [C] vive [Em] en [D] mí.",
+        "[G] Eres mi [C] pan, Señor. [G] Eres mi [C] pan, Señor.",
+        "[G] Dios, [D] tus pa[Em]labras [C] son [Em] para [D] mí.",
+        "",
+        "Y yo [G - D - Em] te anhelo, Señor. [C - Em - D]",
+        "Es[G - D - Em]toy perdido sin ti, [C - Em - D]",
+        "per[G]dido sin ti."
+      ]
+    }
+  }
+},
+{
+  "id": "eres_mi_todo",
+  "titulo_original": "You are my all in all",
+  "autor": "Dennis Jernigan",
+  "compositor": "Dennis Jernigan",
+  "year": "",
+  "tonalidad": "D",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Apocalipsis 5:9",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Eres mi todo",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[D] Eres mi [A] fuerza y mi po[Bm]der,",
+        "el [F#m] gran tesoro que bus[G]qué,",
+        "eres mi [A] todo, [D - A] Dios.",
+        "[D] Perla de [A] precio sin i[Bm]gual,",
+        "nun[F#m]ca tu amor poder de[G]jar,",
+        "eres mi [A] todo, [D - A] Dios.",
+        "",
+        "Coro:",
+        "[D] Cris[A]to, [Bm] Salva[F#m]dor, [G] digno [A] de ado[D - A]rar.",
+        "[D] Cris[A]to, [Bm] Reden[F#m]tor, [G] digno [A] de ado[D]rar.",
+        "",
+        "[D] Diste tu [A] vida allá en la [Bm] cruz,",
+        "[F#m] resucitaste, mi Je[G]sús,",
+        "eres mi [A] todo, [D - A] Dios.",
+        "[D] En seque[A]dad o en tenta[Bm]ción",
+        "[F#m] tú me sostienes, mi Se[G]ñor,",
+        "eres mi [A] todo, [D - A] Dios.",
+        "",
+        "[Coro]"
+      ]
+    }
+  }
+},
+{
+  "id": "eres_tu",
+  "titulo_original": "Eres tú",
+  "autor": "Danilo Montero",
+  "compositor": "Danilo Montero",
+  "year": "",
+  "tonalidad": "C",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "1 Crónicas 29:13",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Alabanza"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Eres Tú",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[C] Eres tú la [G] única razón",
+        "de mi [Am] adoración, oh Je[F]sús.",
+        "[C] Eres tú la [G] esperanza que",
+        "anhe[Am]lé tener, oh Je[F]sús.",
+        "",
+        "[Dm] Confío en ti, me has ayu[G]dado,",
+        "[Bb] la salvación me has re[G]galado.",
+        "[C] Hoy hay gozo en mi cora[G]zón,",
+        "con mi [F] canto te ala[G - A]baré.",
+        "",
+        "Coro:",
+        "[D] ¡Te ala[A]baré!, [Bm] ¡Te glori[G - A]ficaré!,",
+        "[D] ¡Te ala[A]baré, mi buen Je[G]sús!",
+        "[Repetir todo hasta aquí]",
+        "",
+        "[C] En todo [F] tiempo te ala[C - G]baré,",
+        "[Am] en todo [F] tiempo te ado[G - A]raré.",
+        "",
+        "[Coro]"
+      ]
+    }
+  }
+},
+{
+  "id": "es_exaltado",
+  "titulo_original": "He is exalted",
+  "autor": "Twila Paris",
+  "compositor": "Twila Paris",
+  "year": "",
+  "tonalidad": "E",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Daniel 4:37",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Es exaltado",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[E] Es exaltado, en lo [C#m] alto exaltado",
+        "[A] es el Rey, le ala[B]baré.",
+        "[E] Es exaltado, por [C#m] siempre exaltado",
+        "[A] y yo [B] le a[C#]labaré.",
+        "",
+        "[F#m] Él es Se[B]ñor, por [E] siempre rei[C#m]nará,",
+        "[F#m] su creaci[B]ón en [E] Él se goza[C#]rá.",
+        "[F#m] Es exal[A]tado, por [D] siempre exal[B]tado",
+        "es el [E] Rey."
+      ]
+    }
+  }
+},
+{
+  "id": "espiritu_santo",
+  "titulo_original": "Espíritu Santo",
+  "autor": "Luigi Castro",
+  "compositor": "Luigi Castro",
+  "year": "",
+  "tonalidad": "C",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Juan 14: 16, 17",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Espíritu Santo",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[C] Espíritu Santo, anhelo tu pre[G]sencia,",
+        "[F] con [Fm] poder y gloria llena este lu[C]gar.",
+        "[C] Espíritu Santo, anhelo tu pre[G]sencia,",
+        "[F] con [Fm] poder y gloria llena este lu[C]gar.",
+        "",
+        "[F] Eres agua viva, fuente inago[C]table.",
+        "[F] Maestro y [Dm] Consolador, toma tú el con[G]trol.",
+        "[F] Eres agua viva, fuente inago[C]table.",
+        "[F] Maestro y [Dm] Consolador, toma tú el con[G]trol.",
+        "",
+        "[C] Espíritu Santo, anhelo tu pre[G]sencia,",
+        "[F] con [Fm] poder y gloria llena este lu[C]gar."
+      ]
+    }
+  }
+},
+{
+  "id": "este_es_mi_deseo",
+  "titulo_original": "I give you my heart",
+  "autor": "Reuben Morgan",
+  "compositor": "Reuben Morgan",
+  "year": "",
+  "tonalidad": "D",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Filipenses 1:6",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Éste es mi deseo",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[D] Éste es mi de[Bm]seo, [G] hon[D]rarte a [A] ti,",
+        "[Bm] con todo mi [D] ser, te adoro a [C - G - A] ti.",
+        "[D] Con todas mis [Bm] fuerzas te [G] ala[D]ba[A]ré,",
+        "[Bm] mi ado[D]ración eres [C - G - A] tú.",
+        "",
+        "[D] Hoy te rindo mi [A] ser, te doy mi co[Em]razón,",
+        "[G] yo [A] vivo para [D] ti.",
+        "En cada palpi[A]tar, mientras haya alien[Em]to en mí,",
+        "[G] Dios, [A] haz tu obra en [D] mí."
+      ]
+    }
+  }
+},
+{
+  "id": "estoy_en_paz",
+  "titulo_original": "Still",
+  "autor": "Reuben Morgan",
+  "compositor": "Reuben Morgan",
+  "year": "",
+  "tonalidad": "C",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Isaías 26:3",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración",
+    "Paz"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Estoy en paz",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[C] Cú[G/B]breme [Am] con tu a[F]mor, [D/F#] [G]",
+        "[C] con poder pro[F]tégeme, [Dm] Se[G]ñor.",
+        "[C] Guár[G/B]dame, [Am] Señor, en [F] ti, [D/F#] [G]",
+        "[C] quiero estar ro[F]deado [Dm] de tu a[G]mor.",
+        "",
+        "Coro:",
+        "[C/E] Cuando contra mí se e[F]leve el [F/G] mar [C]",
+        "[C/E] yo contigo [F] quiero [G] siempre es[Am]tar.",
+        "[C/E] Santo y pode[F]roso [F/G] eres [C] tú.",
+        "No te[F]meré, es[F/G]toy en [C] paz.",
+        "",
+        "[C] Mi [G/B] alma es[Am]tá segura en [F] ti. [D/F#] [G]",
+        "[C] Salvo es[F]toy, en [Dm] ti yo confi[G]aré.",
+        "",
+        "[Coro]",
+        "",
+        "[C/E] Sobre todo [F] tienes el [F/G] con[C]trol,",
+        "[C/E] aun el mar se [F] calla [G] ante tu [Am] voz.",
+        "[C/E] Padre, tú eres [F] Rey, con[F/G]fiado es[C]toy.",
+        "No te[F]meré, es[F/G]toy en [Am] paz.",
+        "No te[F]meré, es[F]toy en [C] paz."
+      ]
+    }
+  }
+},
 
 
 

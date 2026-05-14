@@ -206,6 +206,52 @@
 
 
 
+
+
+
+
+
+{
+  "id": "himno-497",
+  "titulo_original": "Manos",
+  "autor": "",
+  "compositor": "",
+  "year": "",
+  "tonalidad": "G",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "",
+  "tags": ["Cristiano", "Servicio"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Estas manos Dios me dio",
+      "audio_url": "",
+      "traductor": "",
+      "numero_himno": "497",
+      "letra": [
+        "[G] Estas manos Dios me [G7] dio",
+        "[C] para que puedan servir",
+        "[Am] a quien a mi lado es[D7]tá,",
+        "[G] y no sabe sonreír.",
+        "[G] Con mis manos quiero [G7] dar,",
+        "[C] paz, amor, felici[C7]dad...",
+        "[G] imi[C]tando [D] a Je[G]sús. [G7]",
+        "",
+        "Coro:",
+        "[C] Manos ocu[D]padas en la [G] causa del a[Em]mor,",
+        "[C] manos consa[D]gradas al [G] servicio del Se[G7]ñor,",
+        "[C] manos preocu[D]padas por a[G]sirse de Je[Em]sús",
+        "[C] manos que no [D] temen el en[G]cuentro [D7] con la [G] luz."
+      ]
+    }
+  }
+},
+
+
+
+
 {
   "id": "himno-578",
   "titulo_original": "Atardece",
