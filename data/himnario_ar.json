@@ -204,7 +204,43 @@
 
 
 
-
+{
+  "id": "himno-062",
+  "titulo_original": "Turn your eyes upon Jesus",
+  "autor": "Helen Howarth Lemmel",
+  "compositor": "Helen Howarth Lemmel",
+  "year": "",
+  "tonalidad": "D",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Hebreos 12:2",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Himno",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Fija tus ojos en Cristo",
+      "audio_url": "",
+      "traductor": "",
+      "numero_himno": "62",
+      "letra": [
+        "[D] Fija tus [A] ojos en [Bm] Cristo, [D7]",
+        "[G] tan lleno de [Em] gracia y [A] amor,",
+        "y lo [D] terrenal [D7] sin va[G]lor se[Gm]rá",
+        "a la [D] luz del glo[A]rioso Se[D]ñor.",
+        "",
+        "[D] Fijo mis [A] ojos en [Bm] Cristo, [D7]",
+        "[G] tan lleno de [Em] gracia y [A] amor,",
+        "y lo [D] terrenal [D7] sin va[G]lor se[Gm]rá",
+        "a la [D] luz del glo[A]rioso Se[D]ñor."
+      ]
+    }
+  }
+},
 
 
 

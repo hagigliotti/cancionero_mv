@@ -5260,6 +5260,94 @@
   }
 },
 {
+  "id": "fe_en_fuego",
+  "titulo_original": "Faith on fire",
+  "autor": "",
+  "compositor": "",
+  "year": "",
+  "tonalidad": "D",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "1 Pedro 1: 6, 7",
+  "tags": [
+    "Español",
+    "English",
+    "Cristiano",
+    "Alabanza"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Fe en fuego",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[D] Una brasa hay pro[G]funda en mí",
+        "sólo es una [Bm] llamita. [A]",
+        "[D] Sigue mi fe, fuerte y cre[G]ciendo,",
+        "y [D - A] no tardará un incendio en ar[D]der.",
+        "",
+        "Coro:",
+        "[A] Encen[D]der mi fe, mi an[G]helo [D] es:",
+        "[G] haz de [D] mí pura y santa [A] llama.",
+        "[A7] Todos po[D]drán ver que arde un [G] fuego en [D] mí",
+        "en[G]cen[D]dido por tu nombre y po[A]der.",
+        "Comienza a [G - D] arder, enciende mi [A] fe,",
+        "fe en [D] fuego. [G - D]",
+        "",
+        "Si [D] tomando una vela, en[G]ciendes otra",
+        "y [Bm] esa otra hace i[A]gual,",
+        "al [D] tu notarlo al mundo de[G]mostrarás:",
+        "ar[D]derá, bri[A]llará con la santa [D] llama.",
+        "",
+        "[Coro]",
+        "",
+        "[G] Nuestro mensaje al [D] mundo hay que dar",
+        "[G] que encienda a hombres, mu[A]jeres, niños, niñas,",
+        "",
+        "[Coro]"
+      ]
+    },
+    "en": {
+      "titulo": "Faith on fire",
+      "letra": [
+        "[Intro]",
+        "[D] Na na [G] na-na-na-na-na, [D] na na [G] na-na-na-na-na, [D] na na [G] na-na-na-na-[D] na",
+        "",
+        "[Verse 1]",
+        "[D] There's an ember deep [G/D] within me",
+        "but [D/F#] it's only a little [Asus4] [A] flame",
+        "But [D] my faith keeps growing [G/D] stronger",
+        "and [D] it [A] won't be long till it starts a [D] blaze [D] [G]",
+        "",
+        "[Chorus]",
+        "[A] Set my [D] faith on fire",
+        "[G] That's my one [D] desire.",
+        "[Bm] Make my [Bm/A] life a pure and [Asus4] [A] holy place",
+        "[A] So the [D] world can see",
+        "[G] there's a [D] fire in me",
+        "[Bm] Burn[Bm/A]ing by the [Asus4] power of [A] Jesus's name",
+        "[Em] Start a [D] blaze and [G] set my [Asus4] [A] faith,",
+        "[D] faith on [G] fire. [D]",
+        "",
+        "[Verse 2]",
+        "[D] If you take one candle, and [G/D] light another",
+        "[D/F#] And then that other [Asus4] [A] does the same.",
+        "[D] Before you know it the world will [G/D] show it",
+        "burn[D]ing [A] by the holy [D] flame.",
+        "",
+        "[Bridge]",
+        "[C] We've got a message we must [G] share it with the world",
+        "[D] Igniting every man and woman, [Asus4] [A] boy and girl",
+        "",
+        "[Outro]",
+        "[G] Faith on [D] fire.",
+        "[D] Na na [G] na-na-na-na-na... [D] na na [G] na-na-na-na-[D] na"
+      ]
+    }
+  }
+},
+{
   "id": "fiume_fiume",
   "titulo_original": "FIUME FIUME",
   "autor": "Desconocido",
@@ -5303,7 +5391,260 @@
     }
   }
 },
-
+{
+  "id": "fe_no_es_solo_decirlo",
+  "titulo_original": "",
+  "autor": "",
+  "compositor": "",
+  "year": "",
+  "tonalidad": "F",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Hebreos 11:1",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Fe no es sólo decirlo",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[F] Fe no es sólo decirlo,",
+        "[Bb] tampoco imagi[F]narlo.",
+        "[F] Fe es descansar con[Am]fiado",
+        "[Bb] en las manos de [F - C] Dios.",
+        "[Gm] Fe es acción resuelta",
+        "[Bb] confiando en sus pro[C]mesas.",
+        "[F] Fe es avanzar sin va[Dm]cilar,",
+        "[Bb] sin ver más ade[C]lante.",
+        "",
+        "[F] Porque la fe no es ciega,",
+        "[Bb] se basa en evi[F]dencia.",
+        "[F] Ellas se manifiestan [Am]",
+        "[Bb] por la ora[F - C]ción.",
+        "[Gm] Dios está siempre listo",
+        "[Bb] a guiar a sus hi[C]jos.",
+        "[F] Fe es avanzar sin va[Dm]cilar,",
+        "[Bb] sin ver más ade[C]lante, esto es [F] fe."
+      ]
+    }
+  }
+},
+{
+  "id": "fiel_en_toda_prueba",
+  "titulo_original": "Fiel em toda prova",
+  "autor": "Jader Santos",
+  "compositor": "Jader Santos",
+  "year": "",
+  "tonalidad": "F",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Mateo 24:13",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Alabanza",
+    "Fidelidad"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Fiel en toda prueba",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[F] Paro a pensar, son muchos de[Bb/F]safíos que vivir,",
+        "[Gm] paro para o[C]ír lo que la voz de [Bbm] Dios me va a de[F]cir.",
+        "[Am] Es tanta la pre[D]sión que [Gm] tengo que enfrentar, [Bbm]",
+        "pero [F/C] fortaleza [G] mi [Gm] padre me da[C]rá.",
+        "",
+        "Coro:",
+        "[F] Yo quiero ser fiel en toda prueba,",
+        "[G/D] fiel a cada instante en cada es[Dm7]fera,",
+        "[Gm7] fiel a su palabra que me enseña,",
+        "[Bb/C] fiel en cosas grandes y pe[C]queñas.",
+        "[F] Yo quiero ser fiel en toda prueba, [F/Eb]",
+        "[Bb/D] no por una simple obli[Bbm/Db]gación,",
+        "sino en res[F/C]puesta al amor tan [G/C] grande",
+        "que un [Gm] día i[C]nundó mi cora[F]zón.",
+        "",
+        "[F] Yo puedo triunfar, pues alguien ya ven[Bb/F]ció en mi lugar,",
+        "[Gm] puedo en Él con[C]fiar, su mano me da[Bbm]rá seguri[F]dad.",
+        "[Am] Si viene tenta[D]ción co[Gm]mienzo a cantar, [Bbm]",
+        "su e[F/C]terna forta[G]leza [Gm] me alcanzará[C].",
+        "",
+        "[Coro]",
+        "",
+        "[Bbm7] Dios pode[Eb]roso, [F/C] Padre glo[Dm/B]rioso,",
+        "[Gm] envía en [G] mi auxilio tu [G7] ángel más pode[C]roso.",
+        "",
+        "Yo quiero ser fiel en toda [F] prueba, [F/E]",
+        "[Bb/D] no por una simple obli[Bbm/Db]gación,",
+        "sino en res[F/C]puesta al amor tan [G/C] grande",
+        "[Gm] al amor tan [Am] grande, [D7] [Gm] al amor tan [F/A] grande",
+        "que un [Gm] día i[C]nundó mi cora[F]zón."
+      ]
+    }
+  }
+},
+{
+  "id": "fragil_embarcacion",
+  "titulo_original": "Frágil Embarcação",
+  "autor": "Adalter Ferreyra",
+  "compositor": "Adalter Ferreyra",
+  "year": "",
+  "tonalidad": "A",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Marcos 4:39",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Frágil embarcación",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[D] Si la vida exige hoy [A] más de lo que puedo [D] dar",
+        "[C#m] y mis luchas se trans[F#m]forman en ba[D]tallas",
+        "[C#m] y cuando ya no [F#m] tengo fuerzas y co[C#]mienzo a nau[F#m]fragar,",
+        "entonces [D] llamo a mi [A] Maestro pues yo [G - E] sé:",
+        "",
+        "Coro:",
+        "En mi embarca[A]ción está el Dios de la tor[D]menta,",
+        "el gran Se[F#m]ñor del viento, está el Señor del [E] mar.",
+        "Y [A] cuando ya no [F#m] tenga fuerzas, [C#] Él se levan[F#m]tará,",
+        "y [D] una y [E] otra vez el mar se cal[A]mará.",
+        "",
+        "[D] Cuántas veces inten[A]té guiar mi nave en sole[D]dad,",
+        "[C#m] y cada vez más [F#m] lejos las olas me lle[D]varon.",
+        "[C#m] En medio de una [F#m] cruel tormenta Cristo re[C#]prendió la tempes[F#m]tad",
+        "y [Bm] luego vino dulce [G - E] calma y paz.",
+        "",
+        "[Coro]"
+      ]
+    }
+  }
+},
+{
+  "id": "fuente_de_esperanza",
+  "titulo_original": "Fonte de esperança",
+  "autor": "Marcelo Meireles",
+  "compositor": "Marcelo Meireles",
+  "year": "",
+  "tonalidad": "D",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Hebreos 10:23",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Servicio",
+    "Adoración"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Fuente de esperanza",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[D] Hoy puedo ver que la [A] gente está se[F#]dienta,",
+        "[Bm] quieren saber dónde se en[Am7]cuentra el agua [D7] viva.",
+        "[G7] Oh, Señor, [F#7] siempre por tu [Bm] gracia [F#m] quiero [G#m7] ser",
+        "fuente de espe[A]ran[A7]za.",
+        "",
+        "Coro:",
+        "[D] Fuente de esperanza [A7] quiero ser,",
+        "[G] siempre derra[D/A]mando tu po[E/G#]der.",
+        "[G] Al sal[A/G]var del pecado [F#m7] y guiar al ser[B7]vicio,",
+        "[Em] fuente de espe[A]ranza quiero [D] ser.",
+        "",
+        "[D] Hoy puedo ver que la [A] gente tiene [F#] hambre,",
+        "[Bm] quieren saber dónde se en[Am7]cuentra el pan de [D7] vida.",
+        "[G7] Oh, Señor, [F#7] siempre por tu [Bm] gracia [F#m] quiero [G#m7] ser",
+        "fuente de espe[A]ran[A7]za.",
+        "",
+        "[Coro]"
+      ]
+    },
+    "pt": {
+      "titulo": "Fonte de esperança",
+      "audio_url": "",
+      "letra": [
+        "[D] Eu posso ver tanta [A] gente que tem [F#] sede",
+        "[Bm] Querem saber onde se en[Am7]contra a água [D7] viva",
+        "[G7] Oh, senhor, [F#7] pela tua [Bm] graça [F#m] [G#m7]",
+        "Quero ser fonte de espe[A]ran[A7]ça",
+        "",
+        "Coro:",
+        "[D] Fonte de esperança [A7] quero ser",
+        "[G] Sempre transbor[D/A]dando teu po[E/G#]der",
+        "[G] Pra sal[A/G]var do pecado [F#m7] [B7]",
+        "Pra guiar no ser[Em]viço [A]",
+        "Fonte de espe[D]rança quero ser"
+      ]
+    }
+  }
+},
+{
+  "id": "fuertes",
+  "titulo_original": "Fortes",
+  "autor": "Travis Ryan y Brandon Collins",
+  "compositor": "Travis Ryan y Brandon Collins",
+  "year": "",
+  "tonalidad": "F",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Josué 1:9",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Alabanza",
+    "Fortaleza"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Fuertes",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[F] No tendremos te[Bb]mor [Dm] de enfrentar el [Bb] mal.",
+        "[F] Si pasamos por [C] luchas, mi Dios es re[Bb]fugio contra el [C] mal.",
+        "[F] No queremos fa[Bb]llar [Dm] frente a la tenta[Bb]ción",
+        "[F] aunque vengan a[C]taques o perse[Bb]cuciones y afli[C]cción.",
+        "",
+        "Coro:",
+        "[F] Fuertes y [Dm] valientes se[Bb]remos, pues Dios aquí es[C]tá.",
+        "[F] Fuertes y [Dm] valientes se[Bb]remos porque estamos [C] siempre a su [F] lado.",
+        "",
+        "[F] En la oscuri[Bb]dad [Dm] su mano nos da[Bb]rá,",
+        "[F] ¿quién podrá de[C]rrotarnos si siempre es[Bb]tamos con Je[C]sús?",
+        "",
+        "[Coro]",
+        "",
+        "[Bb] En la oscuri[Dm]dad de nada hay que te[F]mer, su mano nos da[C]rá.",
+        "[Bb] Jamás nos ven[Dm]cerán, unidos al Se[F]ñor, victoria al fi[C]nal.",
+        "[Bb] Jamás serán ca[C]paces de apartarnos del [Bb] gran amor de nuestro [C] Padre amado. [C7]",
+        "",
+        "[F] Fuertes y [Dm] valientes se[Bb]remos, pues Dios aquí es[C]tá.",
+        "[F] Fuertes y [Dm] valientes se[Bb]remos si estamos a [C] cada instante, [Bb]",
+        "bien se[C]guros, siempre a su [F] lado.",
+        "",
+        "[Coro]"
+      ]
+    }
+  }
+},
 {
   "_comment7": "LETRA G ---------------------------------------------------------------------------------------------------------------------------------------    LETRA G"
 },
