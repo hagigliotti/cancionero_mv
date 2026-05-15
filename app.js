@@ -723,9 +723,19 @@ function renderList(letter) {
 
   // 🔤 FILTRO POR LETRA
   if (letter && letter !== "*" && letter !== "#") {
-    data = data.filter(c =>
-      normalize(c.idiomas?.[idiomaActual]?.titulo?.charAt(0)) === letter
-    );
+    data = data.filter(c => {
+      const titulo = normalize(c.idiomas?.[idiomaActual]?.titulo || "");
+      return normalize(titulo.charAt(0)) === letter;
+    });
+  }
+
+  // 🔢 FILTRO ESPECIAL "#": títulos con números en cualquier parte
+  if (letter === "#") {
+    data = data.filter(c => {
+      const titulo = c.idiomas?.[idiomaActual]?.titulo || "";
+
+      return /\d/.test(titulo); // <-- contiene al menos un número
+    });
   }
 
   // 🔢 ORDEN NUMÉRICO SOLO PARA #
