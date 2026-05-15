@@ -29,6 +29,7 @@ async function init() {
   renderAlphabet();
   loadTheme();
   updateThemeMenuText();
+  updateLogo();
 
   if (localStorage.getItem("projector") === "on") {
     document.body.classList.add("projector");
@@ -121,6 +122,31 @@ function sortByTitle(data) {
 // NUEVO helper clave
 function getNumeroHimno(c) {
   return c.idiomas?.[idiomaActual]?.numero_himno ?? "";
+}
+
+// ===================== LOGO DINAMICO =====================
+function updateLogo() {
+
+  const logo = document.getElementById("logoCancionero");
+
+  if (!logo) return;
+
+  // prioridad: modo proyector
+  if (document.body.classList.contains("projector")) {
+
+    logo.src = "imagenes/Cancionero_black.png";
+    return;
+  }
+
+  // tema claro
+  if (document.body.classList.contains("light-mode")) {
+
+    logo.src = "imagenes/Cancionero_blue.png";
+    return;
+  }
+
+  // tema oscuro azul
+  logo.src = "imagenes/Cancionero_white.png";
 }
 
 // ===================== BOTON LIMPIAR ======================
@@ -343,7 +369,7 @@ let fontSizeLevel = 0;
 
 // tamaños BASE
 const BASE_LYRICS_SIZE = 26;
-const BASE_CHORD_SIZE = 22;
+const BASE_CHORD_SIZE = 26;
 
 // cuánto aumenta/disminuye por click
 const STEP_SIZE = 2;
@@ -400,6 +426,8 @@ function toggleProjectorMode() {
     body.classList.add("projector");
     localStorage.setItem("projector", "on");
   }
+
+  updateLogo();
 }
 
 // ===== THEME ================================================================================
@@ -428,6 +456,7 @@ function toggleTheme() {
   }
 
   updateThemeMenuText();
+  updateLogo();
 }
 
 function loadTheme() {
