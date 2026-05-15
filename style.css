@@ -764,8 +764,14 @@ body.dark .modal-content {
   }
 }
 
-
-
+/*CANON*/
+.canon{
+  margin-left: 80px; /* se puede ajustar */
+  opacity: 0.8;
+}
+.lyric-line {
+  white-space: pre-wrap;
+}
 
 
 
