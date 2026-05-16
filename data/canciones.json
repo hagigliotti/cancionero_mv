@@ -1813,6 +1813,43 @@
   }
 },
 {
+  "id": "lavame_en_tu_sangre",
+  "titulo_original": "",
+  "autor": "",
+  "compositor": "",
+  "year": "",
+  "tonalidad": "G",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Apocalipsis 7:14",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Adoración",
+    "Purificación"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Lávame en Tu sangre",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[G] Lávame en tu [C] sangre, [G] oh Se[Em]ñor,",
+        "[Am] y más [D] blanco que la [G] nieve yo se[D]ré.",
+        "[G] Lávame en tu [C] sangre, [G] oh Se[Em]ñor,",
+        "[Am] y más [D] blanco que la [C] nieve [D] yo se[G]ré.",
+        "",
+        "Coro:",
+        "[C] Más blanco que la [G] nieve, [Em]",
+        "[Am] más [D] blanco que la [G] nieve se[G7]ré.",
+        "[C] Lávame en tu [G] sangre, [Em] oh Señor,",
+        "[Am] y más [D] blanco que la [C] nieve [D] yo se[G]ré."
+      ]
+    }
+  }
+},
+{
   "id": "cantare_de_tu_amor_por_siempre",
   "titulo_original": "I could sing of your love forever",
   "autor": "Martin Smith",
