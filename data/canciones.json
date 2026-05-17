@@ -5,7 +5,89 @@
 {
   "_comment1": "LETRA A ---------------------------------------------------------------------------------------------------------------------------------------    LETRA A"
 },
+{
+  "id": "amigos_de_esperanza",
+  "titulo_original": "Amigos de esperanza",
+  "autor": "",
+  "compositor": "",
+  "year": "2011",
+  "tonalidad": "",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "",
+  "tags": ["Camporí 'Amigos de Esperanza' ABo 2011"],
 
+  "idiomas": {
+    "es": {
+      "titulo": "Amigos de esperanza",
+      "audio_url": "",
+      "traductor": "",
+      "partitura": "",
+      "revisado": "",
+      "letra": [
+        "Verse 1",
+        "Hoy te quiero presentar",
+        "Un nombre singular",
+        "Amigo de verdad",
+        "En sus fuerzas hay poder",
+        "Lo debes conocer",
+        "Su fuerza es sin igual",
+        "",
+        "Pre-Chorus:",
+        "Vivo a su lado la experiencia de su paz",
+        "Y creyendo en sus promesas crezco cada día más",
+        "",
+        "Chorus:",
+        "Yo soy amigo, amigo de Jesús",
+        "De su palabra, de su amor y de su luz",
+        "Yo soy amigo, amigo de Jesús",
+        "De su esperanza, de su bendita cruz",
+        "Soy amigo de esperanza",
+        "Hoy te quiero presentar al buen Jesús",
+        "",
+        "Chorus 2:",
+        "Yo soy amigo, amigo de Jesús",
+        "De su palabra, de su amor y de su luz",
+        "Soy amigo de esperanza",
+        "Es por eso mi alabanza",
+        "Cada día quiero ser como Jesús",
+        "",
+        "Verse 2",
+        "Hoy te quiero preguntar",
+        "Lo quieres conocer",
+        "Tu vida va a cambiar",
+        "Ven y prueba su poder",
+        "Sus fuerzas te dará",
+        "Victorias ganarás",
+        "",
+        "Pre-Chorus:",
+        "Vive a su lado la experiencia de su paz",
+        "Y creyendo en sus promesas crezco cada día más",
+        "",
+        "Chorus:",
+        "Yo soy amigo, amigo de Jesús",
+        "De su palabra, de su amor y de su luz",
+        "Yo soy amigo, amigo de Jesús",
+        "De su esperanza, de su bendita cruz",
+        "Soy amigo de esperanza",
+        "Hoy te quiero presentar al buen Jesús",
+        "",
+        "Chorus 2:",
+        "Yo soy amigo, amigo de Jesús",
+        "De su palabra, de su amor y de su luz",
+        "Soy amigo de esperanza",
+        "Es por eso mi alabanza",
+        "Cada día quiero ser como Jesús",
+        "",
+        "Repite:",
+        "Soy amigo de esperanza",
+        "Es por eso mi alabanza",
+        "Cada día quiero ser como Jesús"
+      ]
+    }
+  }
+},
 {
   "id": "abba_nunca_falla",
   "titulo_original": "Abba (Nunca falla)",
@@ -24,6 +106,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
       "traductor": "-",
       "partitura": "",
+      "revisado": "",
       "letra": [
         "[G]Escucho tu [C]corazón,",
         "cada latido está llamando mi [C]nombre.",
@@ -68,6 +151,7 @@
       "titulo": "A ti, Señor",
       "audio_url": "https://open.spotify.com/intl-es/track/1pvS9HylBSoYdlteJhUZDd?si=7326e73e72004a44",
       "traductor": "Desconocido",
+      "revisado": "",
       "letra": [
         "[F]A ti, Señor, [C]alzaré mi [F]voz",
         "para [Bb]adorar[Gm]te, mi Salva[C]dor.[C7]",
@@ -472,7 +556,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/10fMN6ZyntPNkP46uBaqB1?si=a50bbc0362864e6a",
       "traductor": "-",
       "letra": [
-        "Alaba[D]ré, alabaré, ala[Bm]baré, alabaré,",
+        "Alaba[D]ré, alabaré, alaba[Bm]ré, alabaré,",
         "[G]alaba[A]ré a mi Se[D]ñor Je[G]sús.[D]",
         "[D]Y cantaré y cantaré, y can[Bm]taré, y cantaré,",
         "[G]y can[A]taré a mi Se[D]ñor Je[G]sús.[D]",
@@ -9890,12 +9974,49 @@
         "[G]aquellos por [Dm]quienes oré",
         "[C]y el mensaje de [G]Cristo llevé!",
         "",
-        "[Coro]"
+        "(Coro)"
       ]
     }
   }
 },
+{
+  "id": "prometo_fidelidad_a_la_biblia",
+  "titulo_original": "Prometo fidelidad a la Biblia",
+  "autor": "Hernando Gigliotti",
+  "compositor": "Claudio Graff",
+  "year": "2019",
+  "tonalidad": "Sol Mayor (G)",
+  "tempo_bpm": "",
+  "compas": "4/4",
+  "ritmo": "",
+  "referencia_biblica": "",
+  "tags": ["Campori MiBon 2019"],
 
+  "idiomas": {
+    "es": {
+      "titulo": "Prometo fidelidad a la Biblia",
+      "audio_url": "",
+      "traductor": "",
+      "partitura": "",
+      "revisado": "",
+      "letra": [
+        "Prometo fidelidad a la Biblia",
+        "A su mensaje de un Salvador",
+        "Crucificado, resucitado",
+        "Y pronto a venir",
+        "Dador de la vida y libertad a los que creen en Él",
+        "",
+        "Prometo fidelidad a la Biblia",
+        "A su mensaje de un Salvador",
+        "Crucificado, resucitado",
+        "Y pronto a venir",
+        "Dador de la vida y libertad a los que creen en Él",
+        "",
+        "(Repite todo x2)"
+      ]
+    }
+  }
+},
 {
   "_comment18": "LETRA Q ---------------------------------------------------------------------------------------------------------------------------------------    LETRA Q"
 },
