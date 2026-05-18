@@ -23,10 +23,6 @@ html {
   padding: 10px;
 }
 
-/* - - - */
-/* Evita desbordes horizontales en todos los dispositivos */
-
-
 /* Ajustes generales móviles */
 #contenido {
   padding: 10px;
@@ -59,6 +55,21 @@ html {
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+/* LINKS */
+.meta a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.meta a:visited {
+  color: #38bdf8;
+}
+
+.meta a:hover {
+  opacity: 0.85;
 }
 
 /* ==================================  MENU PRINCIPAl  ==================================================================== */
