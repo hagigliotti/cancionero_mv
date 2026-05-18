@@ -106,7 +106,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
       "traductor": "-",
       "partitura": "",
-      "revisado": "",
+      "revisado": "Si",
       "letra": [
         "[G]Escucho tu [C]corazón,",
         "cada latido está llamando mi [C]nombre.",
@@ -114,21 +114,21 @@
         "me siento tan amado por [G]ti.",
         "br","br",
         "Me encuentro en tu [C]corazón,",
-        "decidiste aceptarme por [G]siempre.",
+        "decidiste aceptarme por si[G]empre.",
         "Tu amor por mí es tan sorprend[C]ente,",
         "me siento tan mimado por [G]ti.",
         "br","br",
         "Y es tan [D/F#]bello saber que soy [Em]hijo",
         "y que [D/F#]tengo un lugar en tu [G]mesa.",
-        "No hay [D/F#]nada mejor que escuchar tu [Em]voz",
-        "diciendo: [D/F#]nuestra comunión es [G]eterna.",
+        "No hay [D/F#]nada mejor que escuc[Em]har tu voz",
+        "diciendo: [D/F#]nuestra comunión es et[G]erna.",
         "br","br",
         "Oh, oh, oh, [Am]oh, oh, oh, oh, [D/F#]oh,",
         "me amaste prim[G]ero, con amor verdadero.",
         "Oh, oh, oh, [Am]oh, oh, oh, oh, [D/F#]oh,",
-        "y mi respuesta es adorar, [G]mi respuesta es adorar.",
+        "y mi respuesta es ador[G]ar, mi respuesta es adorar.",
         "br","br",
-        "[Am]Abb[Em]a,[D/F#]tu [G]amor nunca falla, siempre me abrazas. (x4)"
+        "[Am]Abb[Em]a,[D/F#]tu am[G]or nunca falla, siempre me abrazas. (x4)"
       ]
     }
   }
@@ -12149,29 +12149,33 @@
   ],
   "idiomas": {
     "es": {
-      "titulo": "Si el cristiano",
+      "titulo": "Si el cristiano tiene certeza",
       "audio_url": "",
       "traductor": "",
       "letra": [
-        "[E]Si el cristiano tiene cer[B]teza, di amén.",
-        "[B7]Si el cristiano tiene cer[E]teza, di amén.",
+        "[E]Si el cristiano tiene cer[B]teza, di amén. Amén!",
+        "[B7]Si el cristiano tiene cer[E]teza, di amén. Amén!",
         "[F#m]Si el cristiano tiene cer[E]teza toda la vida es una [C#m]belleza.",
-        "[A]Si el [F#m]cristiano [B]tiene certeza, di amén.",
+        "[A]Si el [F#m]cristiano [B]tiene certeza, di amén. Amén!",
         "",
-        "[E]Si el cristiano tiene cer[B]teza, bate las palmas.",
-        "[B7]Si el cristiano tiene cer[E]teza, bate las palmas.",
+        "[E]Si el cristiano tiene cer[B]teza, bate las palmas. (clap-clap)",
+        "[B7]Si el cristiano tiene cer[E]teza, bate las palmas.(clap-clap)",
         "[A]Si el [F#m]cristiano [E]tiene cer[C#m]teza toda la vida es una belleza.",
-        "[F#m]Si el [B]cristiano [E]tiene certeza, bate las palmas.",
+        "[F#m]Si el [B]cristiano [E]tiene certeza, bate las palmas. (clap-clap)",
         "",
-        "[E]Si el cristiano tienecer[B]teza, bate los pies.",
-        "[B7]Si el cristiano tiene cer[E]teza, bate los pies.",
+        "[E]Si el cristiano tienecer[B]teza, bate los pies. (stomp-stomp)",
+        "[B7]Si el cristiano tiene cer[E]teza, bate los pies. (stomp-stomp)",
         "[A]Si el [F#m]cristiano [E]tiene cer[C#m]teza toda la vida es una belleza.",
-        "[F#m]Si el [B]cristiano [E]tiene certeza, bate los pies.",
+        "[F#m]Si el [B]cristiano [E]tiene certeza, bate los pies. (stomp-stomp)",
         "",
-        "[E]Si el cristiano tiene cer[B]teza, haz los tres.",
-        "[B7]Si el cristiano tiene cer[E]teza, haz los tres.",
+        "[E]Si el cristiano tiene cer[B]teza, haz los tres. Amén!, clap-clap, stomp-stomp",
+        "[B7]Si el cristiano tiene cer[E]teza, haz los tres. Amén!, clap-clap, stomp-stomp",
         "[A]Si el [F#m]cristiano [E]tiene cer[C#m]teza toda la vida es una belleza.",
-        "[F#m]Si el [B]cristiano [E]tiene certeza, haz los tres."
+        "[F#m]Si el [B]cristiano [E]tiene certeza, haz los tres. Amén!, clap-clap, stomp-stomp",
+        "",
+        "Variantes:",
+        " - Si el cristiano tiene certeza, haz al reves. stomp-stomp, clap-clap, Amén!",
+        " - Si el cristiano tiene certeza, hace los seis. Amén!, clap-clap, stomp-stomp, stomp-stomp, clap-clap, Amén!"
       ]
     }
   }
