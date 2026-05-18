@@ -887,27 +887,53 @@ function openSong(id) {
 
   const audioHtml = renderAudioLink(song, s);
 
+  const referencia = song.referencia_biblica || song.referencia || "";
+
+  const referenciaLink = referencia
+    ? `https://www.biblegateway.com/passage/?search=${encodeURIComponent(
+        referencia.replace(",", "-")
+      )}&version=RVR1960`
+    : "";
+    
   const meta = `
     <div class="meta">
 
       <div><b>Original:</b> ${song.titulo_original || ""}</div>
 
       <div>
-        <b>Autor:</b> ${song.autor || ""} |
-        <b>Compositor:</b> ${song.compositor || ""} |
-        <b>Año:</b> ${song.year || ""}
+        <b>Autor:</b> ${song.autor || "Desconocido"} |
+        <b>Compositor:</b> ${song.compositor || "Desconocido"} |
+        <b>Año:</b> ${song.year || "Desconocido"}
       </div>
 
       <div>
-        <b>Referencia bíblica:</b> ${song.referencia_biblica || song.referencia || ""}
+        <b>Referencia bíblica:</b>
+          ${
+            referencia
+              ? `<a href="${referenciaLink}" target="_blank">${referencia}</a>`
+              : "No"
+          }
       </div>
 
       <div>
-        <b>Tonalidad:</b> ${song.tonalidad || ""} |
-        <b>BPM:</b> ${song.tempo_bpm || ""} |
-        <b>Compás:</b> ${song.compas || ""} |
-        <b>Ritmo:</b> ${song.ritmo || ""} |
-        <b>Tags:</b> ${(song.tags || []).join(", ")}
+        <b>Tonalidad:</b> ${song.tonalidad || "Desconocido"} |
+        <b>BPM:</b> ${song.tempo_bpm || "Desconocido"} |
+        <b>Compás:</b> ${song.compas || "Desconocido"} |
+        <b>Ritmo:</b> ${song.ritmo || "Desconocido"} |
+        <b>Partitura:</b> ${
+          song.idiomas?.[idiomaActual]?.partitura
+            ? `<a href="${song.idiomas[idiomaActual].partitura}" target="_blank">Click aquí</a>`
+            : "No"
+        }
+      </div>
+
+      <div>
+        <b>Tags:</b> ${
+          song.tags?.length
+            ? song.tags.sort((a, b) => a.localeCompare(b)).join(", ")
+            : "Desconocido"
+        } |
+        <b>Revisado:</b> ${song.idiomas?.[idiomaActual]?.revisado || "No"}
       </div>
 
       ${audioHtml}
