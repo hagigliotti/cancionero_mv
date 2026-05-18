@@ -16,7 +16,7 @@
   "compas": "4/4",
   "ritmo": "",
   "referencia_biblica": "",
-  "tags": ["Camporí 'Amigos de Esperanza' ABo 2011"],
+  "tags": ["Camporí 'Amigos de Esperanza' ABo 2011", "Esperanza"],
 
   "idiomas": {
     "es": {
@@ -26,7 +26,7 @@
       "partitura": "",
       "revisado": "",
       "letra": [
-        "Verse 1",
+        "1",
         "Hoy te quiero presentar",
         "Un nombre singular",
         "Amigo de verdad",
@@ -53,7 +53,7 @@
         "Es por eso mi alabanza",
         "Cada día quiero ser como Jesús",
         "",
-        "Verse 2",
+        "2",
         "Hoy te quiero preguntar",
         "Lo quieres conocer",
         "Tu vida va a cambiar",
@@ -151,6 +151,7 @@
       "titulo": "A ti, Señor",
       "audio_url": "https://open.spotify.com/intl-es/track/1pvS9HylBSoYdlteJhUZDd?si=7326e73e72004a44",
       "traductor": "Desconocido",
+      "partitura": "",
       "revisado": "",
       "letra": [
         "[F]A ti, Señor, [C]alzaré mi [F]voz",
@@ -168,6 +169,8 @@
       "titulo": "I love you, Lord",
       "audio_url": "https://open.spotify.com/intl-es/track/3mIyisrMRbIpsInWOd3JTd?si=257ef60816d14364",
       "traductor": "-",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "I love You, Lord, and I lift my voice",
         "To worship You, O my soul rejoice!",
@@ -177,7 +180,10 @@
     },
     "pt": {
       "titulo": "Eu Te amo, ó Deus",
-      "traductor": "Desconocido",
+      "audio_url": "",
+      "traductor": "",
+      "partitura": "",
+      "revisado": "",
       "letra": [
         "Eu Te amo, ó Deus, e com a minha voz",
         "Te adorarei, ó meu Rei e Senhor.",
@@ -198,14 +204,16 @@
   "compas": "4/4",
   "ritmo": "worship",
   "referencia_biblica": "Lucas 14:33",
-  "tags": ["Adoración", "Hillsong", "Entrega", "Whorship"],
+  "tags": ["Adoración", "Entrega", "Whorship"],
 
   "idiomas": {
-      "es": {
-        "titulo": "A ti me rindo",
-        "audio_url": "https://open.spotify.com/intl-es/track/4CpXovlU8Md47zl5fNt6WR?si=8ff2fcdafe9f44ad",
-        "traductor": "Hillsong Worship",
-        "letra": [
+    "es": {
+      "titulo": "A ti me rindo",
+      "audio_url": "https://open.spotify.com/intl-es/track/4CpXovlU8Md47zl5fNt6WR?si=8ff2fcdafe9f44ad",
+      "traductor": "Hillsong Worship",
+      "partitura": "",
+      "revisado": "",        
+      "letra": [
         "[Am]Ante ti postrado [C]estoy, aquí.",
         "Te rindo mi [G]ser, te rindo mi [F]ser.",
         "Con tu [Am]amor atráeme, [C]Señor.",
@@ -232,7 +240,9 @@
     "en": {
     "titulo": "I Surrender",
     "audio_url": "https://open.spotify.com/intl-es/track/2Ilbv0FdK3FDydyjwLYbz9?si=1dd0c7eaaa3a4b65",
-    "traductor": "-",
+    "traductor": "",
+    "partitura": "",
+    "revisado": "",
     "letra": [
       "Here I am down on my knees again",
       "Surrendering all, surrendering all",
@@ -258,6 +268,8 @@
       "titulo": "Eis-me Aqui (Rendido Estou)",
       "audio_url": "",
       "traductor": "Aline Barros / Hillsong em Português",
+      "partitura": "",
+      "revisado": "",
       "letra": [
         "Eis-me aqui, prostrado outra vez",
         "Pra tudo entregar, pra tudo entregar",
@@ -281,7 +293,10 @@
     },
     "it": {
       "titulo": "Io mi arrendo",
-      "traductor": "Hillsong In Italiano",
+      "audio_url": "",
+      "traductor": "Hillsong in Italiano",
+      "partitura": "",
+      "revisado": "",
       "letra": [
         "Eccomi, prostrato ai piedi Tuoi",
         "Tutto Ti do, tutto Ti do",
@@ -311,13 +326,15 @@
   "compas": "4/4",
   "ritmo": "balada",
   "referencia_biblica": "Salmos 119:18",
-  "tags": ["Adoración", "Clásico", "Petición"],
+  "tags": ["Adoración", "Clásico", "Petición","Whorship"],
 
   "idiomas": {
     "es": {
       "titulo": "Abre mis ojos",
       "audio_url": "",
       "traductor": "Desconocido",
+      "partitura": "",
+      "revisado": "",
       "letra": [
         "[D]Abre mis [G]ojos, [A]Jesús quiero [D]verte,[Bm]",
         "conmigo te[Em]nerte, [A]decir que te [G]amo.[D]",
@@ -334,6 +351,8 @@
       "titulo": "Open Our Eyes, Lord",
       "audio_url": "https://open.spotify.com/intl-es/track/1Dj8ivrq5Q0mW5jehGTUop?si=d0c26c2eafba4f62",
       "traductor": "-",
+      "partitura": "",
+      "revisado": "",
       "letra": [
         "Open our eyes, Lord, we want to see Jesus,",
         "To reach out and touch Him, and say that we love Him.",
@@ -350,6 +369,8 @@
       "titulo": "Abre os Meus Olhos",
       "audio_url": "",
       "traductor": "Vincit",
+      "partitura": "",
+      "revisado": "",
       "letra": [
         "Abre os meus olhos, pois quero ver Cristo,",
         "Sentir Sua presença, dizer que O amo.",
@@ -361,6 +382,8 @@
       "titulo": "Apri i miei occhi",
       "audio_url": "",
       "traductor": "",
+      "partitura": "",
+      "revisado": "",
       "letra": [
         "Rit. [DO]Apri i miei [FA]occhi e [SOL]fammi ve[DO]dere,",
         "le meraviglie della grazia Tua,",
@@ -399,11 +422,13 @@
 
   "idiomas": {
     "es": {
-      "titulo": "Abre mis ojos, Señor",
+      "titulo": "Abre mis ojos, oh Cristo",
       "audio_url": "https://open.spotify.com/intl-es/track/5iI4CdQvwwrrrBAVi88e9e?si=bd476b755006419c",
       "traductor": "Desconocido",
+      "partitura": "",
+      "revisado": "",
       "letra": [
-        "[D]Abre mis ojos, Señor,",
+        "[D]Abre mis ojos, oh Cristo,",
         "[A]abre mis ojos, Señor,",
         "yo quiero [G]verte,",
         "yo quiero [D]verte. [x2]",
@@ -423,6 +448,8 @@
       "titulo": "Open the eyes of my heart",
       "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
       "traductor": "-",
+      "partitura": "",
+      "revisado": "",
       "letra": [
         "Open the eyes of my heart, Lord",
         "Open the eyes of my heart",
@@ -442,7 +469,10 @@
     },
     "pt": {
       "titulo": "Abre os olhos do meu coração",
+      "audio_url": "",
       "traductor": "David Quinlan",
+      "partitura": "",
+      "revisado": "",
       "letra": [
         "Abre os olhos do meu coração",
         "Abre os olhos do meu coração",
@@ -473,13 +503,15 @@
   "compas": "4/4",
   "ritmo": "himno / adoración",
   "referencia_biblica": "Salmos 22:1 / Apocalipsis 19:6",
-  "tags": ["Adoración", "Clásico", "Majestuoso"],
+  "tags": ["Adoración", "Whorship", "Majestuoso"],
 
   "idiomas": {
     "es": {
       "titulo": "Agnus dei",
       "audio_url": "https://open.spotify.com/intl-es/track/6TCTLO5PX5MJa5KN1Asibl?si=8be077456f7f4e66",
       "traductor": "Desconocido",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "[G]Ale[C]lu[G]ya, ale[C]lu[Em]ya! Te ala[D]bamos, Se[C]ñor, nuestro [G]Rey.",
         "[G]Ale[C]lu[G]ya, ale[C]lu[Em]ya! Te ala[D]bamos, Se[C]ñor, nuestro [G]Rey.",
@@ -495,6 +527,8 @@
       "titulo": "Agnus Dei",
       "audio_url": "https://open.spotify.com/intl-es/track/1N9SysNAP8j4wbAIHzlM9m?si=6697f706725e4098",
       "traductor": "-",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "Alleluia, alleluia! For the Lord God Almighty reigns.",
         "Alleluia, alleluia! For the Lord God Almighty reigns.",
@@ -510,6 +544,8 @@
       "titulo": "Agnus Dei",
       "audio_url": "https://open.spotify.com/intl-es/track/16hnXXqWrwbQGoNtvLx72r?si=c5712a753b5a449b",
       "traductor": "David Quinlan",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "Aleluia, aleluia! Pois o Senhor Deus Todo-Poderoso reina.",
         "Aleluia, aleluia! Pois o Senhor Deus Todo-Poderoso reina.",
@@ -523,7 +559,10 @@
     },
     "it": {
       "titulo": "Agnus Dei",
+      "audio_url": "",
       "traductor": "RNS",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "Alleluia, alleluia! Il Signore Dio l'Onnipotente regna.",
         "Alleluia, alleluia! Il Signore Dio l'Onnipotente regna.",
@@ -548,13 +587,15 @@
   "compas": "4/4",
   "ritmo": "coro alegre / marcha",
   "referencia_biblica": "Salmos 22:22 / Apocalipsis 7:9",
-  "tags": ["Júbilo", "Clásico", "Himno"],
+  "tags": ["Júbilo", "Alabanza"],
 
   "idiomas": {
     "es": {
       "titulo": "Alabaré",
       "audio_url": "https://open.spotify.com/intl-es/track/10fMN6ZyntPNkP46uBaqB1?si=a50bbc0362864e6a",
       "traductor": "-",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "Alaba[D]ré, alabaré, alaba[Bm]ré, alabaré,",
         "[G]alaba[A]ré a mi Se[D]ñor Je[G]sús.[D]",
@@ -580,13 +621,15 @@
   "compas": "4/4",
   "ritmo": "corito / alegre",
   "referencia_biblica": "Hechos 2:46, 47",
-  "tags": ["Comunión", "Bienvenida", "Hermandad"],
+  "tags": ["Comunión", "Bienvenida", "Hermandad", "Despedida"],
 
   "idiomas": {
     "es": {
       "titulo": "Al comenzar la semana",
       "audio_url": "https://open.spotify.com/intl-es/track/5MJ8DFLauPlvNTNGlbJZZx?si=dedd8715d6264a6a",
       "traductor": "-",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "[G]Al comenzar la semana, [C]¡qué ale[G]gría que me [D]da",
         "el estar con mis hermanos en [D]este [D7]lindo lu[G]gar!",
@@ -599,8 +642,8 @@
 {
   "id": "al_encuentro_de_jesus",
   "titulo_original": "Al encuentro de Jesús",
-  "autor": "Emilse Impoco y Pablo Cordoba",
-  "compositor": "Emilse Impoco y Pablo Cordoba",
+  "autor": "Desconocido",
+  "compositor": "Desconocido",
   "year": "2000",
   "tonalidad": "Mi Mayor (E)",
   "tempo_bpm": "80 bpm",
@@ -614,11 +657,15 @@
       "titulo": "Al encuentro de Jesús",
       "audio_url": "https://www.youtube.com/watch?v=UVuli_xt5bs&list=RDUVuli_xt5bs&start_radio=1",
       "traductor": "-",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "[E]Al encuentro de Jesús e[B]levo [A]mi [E]voz,",
         "a su gloria [E]rindo [B]ala[A]ban[E]za.",
         "[E]Su bondad exal[B]taré, [A]su gracia can[E]taré.",
-        "[E]Glorificaré su a[B]mor y [A]su gran po[E]der."
+        "[E]Glorificaré su a[B]mor y [A]su gran po[E]der.",
+        "",
+        "Nota: se puede cantar en canon hasta 4 voces."
       ]
     }
   }
@@ -641,6 +688,8 @@
       "titulo": "Al lado de Jesús",
       "audio_url": "https://open.spotify.com/intl-es/track/4HtVl7sQxvG8d1d5snMZEy?si=d4301577726d4e8d",
       "traductor": "-",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "[C]La vida es dura, lo sé [G]bien, los problemas nublan tu [Am]fe.",
         "Mas hay una [F]opción para estar [C]bien, escucha [F]lo que te di[C]ré:",
@@ -681,12 +730,14 @@
       "titulo": "Alegre voy cantando",
       "audio_url": "https://open.spotify.com/intl-es/track/2pNw22LMg6REMr9MAMvwej?si=f30689be90e54b41",
       "traductor": "-",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "[G]Alegre voy cantando en el [C]camino de la [Am]vida y la ver[D]dad. [G]- [Em]- [C]- [D]",
         "[G]A cada paso en[C]cuentro un mo[Am]tivo de a[D]mor y felici[G]dad.",
         "",
         "Coro:",
-        "Si [Em]alegre voy can[C]tando, [D]sí [G]alegre [Em]voy can[C]tando. [D]",
+        "Y [Em]alegre voy can[C]tando, [D]sí [G]alegre [Em]voy can[C]tando. [D]",
         "Con Je[G]sús, mi Salva[C]dor, [D]y así [G]yo vivi[C]ré",
         "por la eter[D]nidad, [G]sí, [C]por la [D]eterni[G]dad.",
         "",
@@ -698,6 +749,8 @@
       "titulo": "Alegre vou cantando",
       "audio_url": "",
       "traductor": "Desconocido",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "Alegre vou cantando no caminho da dita e da verdade.",
         "A cada passo encontro um motivo de amor e felicidade.",
@@ -731,6 +784,8 @@
       "titulo": "Alma misionera",
       "audio_url": "https://open.spotify.com/intl-es/track/6f7mT8i8Yg4ZwVAkTCq0D7?si=c4133db48e4444e7",
       "traductor": "-",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "[G]Señor, [D]toma mi vida [Em]nueva [C]antes de que la es[G]pera desgas[D]te años en mí.",
         "[G]Estoy [D]dispuesto a lo que [Em]quieras, [C]no importa dónde [G]sea, tú [C]lláma[D]me a ser[G]vir.[D]",
@@ -767,6 +822,8 @@
       "titulo": "Alto, escúchame",
       "audio_url": "https://open.spotify.com/intl-es/track/4bOQA47v0L3S4OSxOyoI5J?si=410beb6055b64bcf",
       "traductor": "-",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "[E]Alto, escúchame, no [A]sigas [B]caminando [E]más.",
         "[E]Hoy quiero decirte lo que [A]hizo [B]Dios en [E]mí.",
@@ -800,6 +857,8 @@
       "titulo": "Amor, amor",
       "audio_url": "https://open.spotify.com/intl-es/track/4lUyqsYCCMcmkqAnlOhjRb?si=6c0cc53fc6ae495e",
       "traductor": "-",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "[Dm]Amor, amor, [C]amor, [Dm]amor, [A]es el evangelio en una palabra.",
         "[Dm]Ama tu [C]prójimo [Dm]como a ti [A]mismo.",
@@ -830,6 +889,8 @@
       "titulo": "Amor sin condición",
       "audio_url": "https://open.spotify.com/intl-es/track/4grfKR7wfoHZeWjb9QjTTE?si=3cdc08de1ea94e6c",
       "traductor": "Abels Worship",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "[C#m]Aun antes de ha[B]blar, tu voz po[A]día oír,",
         "has [C#m]sido tan [B]bueno para [A]mí.",
@@ -877,6 +938,8 @@
       "titulo": "Amor tan grande",
       "audio_url": "",
       "traductor": "-",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "[C]Amor tan grande, pro[F]fundo y su[C]blime",
         "es el a[G]mor de mi Crea[C]dor.",
@@ -899,6 +962,8 @@
       "titulo": "Amor tão grande",
       "audio_url": "",
       "traductor": "Desconocido",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "Amor tão grande, profundo e sublime,",
         "É o amor do meu Criador.",
@@ -932,6 +997,8 @@
       "titulo": "Amigo, ¿amas a Cristo?",
       "audio_url": "",
       "traductor": "-",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "- Amigo, ¿amas a Cristo?",
         "- ¡Oh sí yo le amo!",
@@ -965,6 +1032,8 @@
       "titulo": "Apasionado por Jesús",
       "audio_url": "",
       "traductor": "-",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "[C]No es solo emo[Em]ción, [F]es una ver[G]dad.",
         "[C]En mi cora[Em]zón [F]hay una espe[G]ranza [E].",
@@ -998,13 +1067,15 @@
   "compas": "4/4",
   "ritmo": "worship / balada",
   "referencia_biblica": "Isaías 43:19",
-  "tags": ["Milagros", "Luz", "Fidelidad", "Adoración"],
+  "tags": ["Worship", "Fidelidad", "Adoración"],
 
   "idiomas": {
     "es": {
       "titulo": "Abres caminos / Waymaker",
       "audio_url": "https://open.spotify.com/intl-es/track/5rAZEl2NlSsc9ws7s1dykp?si=5ef19641d5614f7f",
       "traductor": "",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "[C]Aquí estás, te vemos mo[G]ver.",
         "Te ado[D]raré, te ado[Em]raré.",
@@ -1034,6 +1105,8 @@
       "titulo": "Waymaker",
       "audio_url": "https://open.spotify.com/intl-es/track/0hLsDRLsfvwExXMBeDS53k?si=f0e267a0ab5f45b7",
       "traductor": "-",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "You are here, moving in our midst, I worship You, I worship You.",
         "You are here, working in this place, I worship You, I worship You.",
@@ -1051,6 +1124,8 @@
       "titulo": "Aprirai una via",
       "audio_url": "https://open.spotify.com/intl-es/track/7t8fxi06k76NjobLDOMWn8?si=e0ce1eb52592494d",
       "traductor": "Desconocido",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "Tu sei qui, ti muovi tra di noi, adoro te, adoro te.",
         "Tu sei qui, operi tra noi, adoro te, adoro te.",
@@ -1082,10 +1157,12 @@
 
   "idiomas": {
     "es": {
-      "titulo": "A Jesus entrega todo",
+      "titulo": "A Jesus dale todo",
       "titulo2": "Arco iris / Has corrido",
       "audio_url": "https://open.spotify.com/intl-es/track/1GdcEMGXs8TKht3jGNwU2m?si=2564f95694b34dc7",
       "traductor": "-",
+      "partitura": "",
+      "revisado": "",
       "letra": [
         "[D]¿Has corrido [D7]tras un arco [G]iris",
         "[A]y ahora muy cansado es[D]tás?",
@@ -1108,6 +1185,8 @@
       "titulo": "Give Them All to Jesus",
       "audio_url": "https://open.spotify.com/intl-es/track/5vpRPI8gJJAewj8LHwDmQP?si=17171e6509e74b79",
       "traductor": "-",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "Are you tired of chasing pretty rainbows?",
         "Are you tired of spinning round and round?",
@@ -1152,6 +1231,8 @@
       "titulo": "Avancemos",
       "audio_url": "https://open.spotify.com/intl-es/track/2K57VJVpndg6QUOLqnoI8D?si=879f2b432ef04516",
       "traductor": "-",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "[D]Avancemos [G]en la [D]luz, [A]",
         "Con [D]fe y con [G]valor luchemos",
@@ -1175,21 +1256,20 @@
   "titulo_original": "Arroyo ancho",
   "autor": "Desconocido",
   "compositor": "Desconocido",
-  "year": "",
-  "tonalidad": "Em",
-  "tempo_bpm": "",
-  "compas": "",
+  "year": "Desconocido",
+  "tonalidad": "Mi menor (Em)",
+  "tempo_bpm": "95",
+  "compas": "4/4",
   "ritmo": "",
   "referencia_biblica": "",
-  "tags": [
-    "Español",
-    "Cristiano"
-  ],
+  "tags": ["Español", "Cristiano"],
   "idiomas": {
     "es": {
       "titulo": "Arroyo ancho",
       "audio_url": "",
       "traductor": "",
+      "partitura": "",
+      "revisado": "",      
       "letra": [
         "[Em]Arroyo [Am]ancho [D]no lo podremos cru[Em]zar,",
         "[Em]pero [Am]una piedra, [D]la distancia acorta[Em]rá.",
@@ -1210,7 +1290,85 @@
     }
   }
 },
-
+{
+  "id": "al_son_del_cocodrilo",
+  "titulo_original": "",
+  "autor": "Desconocido",
+  "compositor": "Desconocido",
+  "year": "Desconocido",
+  "tonalidad": "Re mayor (D)",
+  "tempo_bpm": "125",
+  "compas": "2/4 o 4/4",
+  "ritmo": "",
+  "referencia_biblica": "Génesis 1:20-25",
+  "tags": ["Cristiano", "Alabanza", "Infantil", "Corito", "Dinámica", "Creación", "Animales"],
+  "idiomas": {
+    "es": {
+      "titulo": "Al son del cocodrilo",
+      "audio_url": "",
+      "traductor": "",
+      "partitura": "",
+      "revisado": "",      
+      "letra": [
+        "[D]Al son del cocodrilo y el orangután,",
+        "[E]la pícara  serpiente, [A]el águila [E]real[A],",
+        "[Bm]el topo, el [G]conejo, y [Bm]también el ele[G]fante,",
+        "[D]BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
+        "[D]BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
+        "","",
+        "[D]Al son del --------- y el orangután,",
+        "[E]la pícara  serpiente, [A]el águila [E]real[A],",
+        "[Bm]el topo, el [G]conejo, [Bm]también el ele[G]fante,",
+        "[D]BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
+        "[D]BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
+        "","",
+        "[D]Al son del --------- y el ---------,",
+        "[E]la pícara  serpiente, [A]el águila [E]real[A],",
+        "[Bm]el topo, el [G]conejo, y [Bm]también el ele[G]fante,",
+        "[D]BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
+        "[D]BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
+        "",
+        "[D]Al son del --------- y el ---------,",
+        "[E]la pícara  ---------, [A]el águila [E]real[A],",
+        "[Bm]el topo, el [G]conejo, y [Bm]también el ele[G]fante,",
+        "[D]BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
+        "[D]BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
+        "",
+        "[D]Al son del --------- y el ---------,",
+        "[E]la pícara  ---------, [A]el ------ [E]real[A],",
+        "[Bm]el topo, el [G]conejo, y [Bm]también el ele[G]fante,",
+        "[D]BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
+        "[D]BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
+        "",
+        "[D]Al son del --------- y el ---------,",
+        "[E]la pícara  ---------, [A]el ------ [E]real[A],",
+        "[Bm]el ----, el [G]conejo, y [Bm]también el ele[G]fante,",
+        "[D]BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
+        "[D]BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
+        "",
+        "[D]Al son del --------- y el ---------,",
+        "[E]la pícara  ---------, [A]el ------ [E]real[A],",
+        "[Bm]el ----, el [G]------, y [Bm]también el ele[G]fante,",
+        "[D]BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
+        "[D]BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
+        "",
+        "[D]Al son del --------- y el ---------,",
+        "[E]la pícara  ---------, [A]el ------ [E]real[A],",
+        "[Bm]el ----, el [G]------, y [Bm]también el ---[G]-----,",
+        "[D]BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
+        "[D]BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
+        "",
+        "[D]Al son del cocodrilo y el orangután,",
+        "[E]la pícara  serpiente, [A]el águila [E]real[A],",
+        "[Bm]el topo, el [G]conejo y [Bm]también el ele[G]fante,",
+        "[D]BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
+        "[D]BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
+        "",
+        "NOTA: (se repite dejando en silencio el nombre del animal por la mímica)"
+      ]
+    }
+  }
+},
 {
   "_comment2": "LETRA B ---------------------------------------------------------------------------------------------------------------------------------------    LETRA B"
 },
@@ -1585,6 +1743,49 @@
         "[G7]brilla en el [C]sitio donde estés.",
         "Puedes con tu [C7]luz algún perdido resca[F]tar,",
         "[G]brilla en el [C]sitio donde estés."
+      ]
+    }
+  }
+},
+{
+  "id": "bienvenidos_a_adorar",
+  "titulo_original": "",
+  "autor": "Joel C. Barrios",
+  "compositor": "Joel C. Barrios",
+  "year": "",
+  "tonalidad": "F",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Alabanza",
+    "Adoración",
+    "Bienvenida",
+    "Sábado",
+    "Comunidad",
+    "Fraternidad"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Bienvenidos a adorar",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[F]Bienvenidos a [Bb]adorar, [C][C7]",
+        "[F]bienvenidos a la [Dm]ca[F7]sa de [D]Dios.",
+        "[Gm7]Quiero de[F/A]cirte [Bb]hoy, de [Bb]co[C]ra[Dm7]zón:",
+        "que seas [Gm7]bien[Bbm]ve[F]ni[Bb]do [Dm7][C].",
+        "",
+        "[F]Es el día del [Bb]Se[C]ñor, [C7]",
+        "[F]santo Sábado [Dm]de [F7]ado[D]ración.",
+        "[Gm7]El gozo [F/A]que hay a[Bb]quí se [C]puede sen[Dm7]tir,",
+        "porque [Gm7]somos [Bbm]sus hijos [F][Dm7][C][Bb].",
+        "",
+        "[Gm7]Quiero de[F/A]cirte [Bb]hoy, de [C]co[Dm7]razón:",
+        "que [Gm7]Cristo [Bbm]nos u[F]nió."
       ]
     }
   }
@@ -2535,19 +2736,19 @@
       "letra": [
         "            [Bm]",
         "Cuando el pueblo de Dios ora",
-        "[G]  [F#][G]  [F#]       [Bm]",
+        "[G] [F#][G] [F#]      [Bm]",
         "suceden cosas, suceden cosas maravillosas.",
         "            [Bm]",
         "Cuando el pueblo de Dios ora",
-        "[G]  [F#][G]  [F#]       [Bm]",
+        "[G] [F#][G] [F#]      [Bm]",
         "suceden cosas, suceden cosas maravillosas.",
-        "            [Em]       [Bm]",
+        "            [Em]      [Bm]",
         "Hay sanidad, hay salvación,",
-        "      [F#]             [Bm]",
+        "      [F#]            [Bm]",
         "y se siente la presencia del Señor.",
-        "            [Em]       [Bm]",
+        "            [Em]      [Bm]",
         "Hay sanidad, hay salvación,",
-        "      [F#]             [Bm]",
+        "      [F#]            [Bm]",
         "y se siente la presencia del Señor.",
         "            [Bm]",
         "Cuando el pueblo de Dios ora."
@@ -2576,12 +2777,12 @@
         "[A]Cuando miro los claros [C#m]cielos y [D]lo que es [Bm]obra de tus [E]dedos,",
         "[A]digo: ¿qué es el [F#m]hombre para [D]que te a[E]cuerdes de [A - E/G#]él?",
         "[F#m]Digo: ¿qué es el [D]hombre para [E]que te acuerdes de [A - E/G#]él?",
-        "        [F#m]   [C#m]   [D][Bm]   [E]",
+        "        [F#m]  [C#m]  [D][Bm]  [E]",
         "Todo lo pusiste debajo de sus pies,",
-        "        [F#m]   [C#m]   [D][Bm]   [E]",
+        "        [F#m]  [C#m]  [D][Bm]  [E]",
         "todo lo que pasa por la senda de la mar.",
         "[A]¡Oh! [F#m]Jehová, Se[D]ñor nuestro, ¡[E]cuán grande es tu [A - E/G#]nombre",
-        "        [F#m]   [D]         [E][A]",
+        "        [F#m]  [D]        [E][A]",
         "en toda la tierra y en mi corazón!"
       ]
     }
@@ -3040,9 +3241,186 @@
     }
   }
 },
+{
+  "id": "cristo_ama_ninos_como_yo",
+  "titulo_original": "",
+  "autor": "",
+  "compositor": "",
+  "year": "",
+  "tonalidad": "G",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Mateo 19:14",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Alabanza",
+    "Infantil",
+    "Corito",
+    "Amor de Dios",
+    "Confianza",
+    "Seguridad"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Cristo ama niños como yo (*)",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[Intro]",
+        "[G][D][A][G]",
+        "",
+        "[Verse 1]",
+        "[G]Cristo ama niños como [D]yo, [D]yo, [D]yo",
+        "[D]Cristo ama niños como [G]yo, [G][G]yo",
+        "Y [G]en sus brazos sí",
+        "[C]Amor encuentro yo",
+        "[D]Cristo ama niños como [G]yo, [G][G]yo",
+        "",
+        "[Interlude]",
+        "[G][D][A][G]",
+        "",
+        "[Verse 2]",
+        "[G]Cristo ama niños como [D]tú, [D]tú, [D]tú",
+        "[D]Cristo ama niños como [G]tú, [G][G]tú",
+        "[G]Quien confiando está",
+        "[C]Siempre en Jesús",
+        "[D]Cristo ama niños como [G]tú, [G][G]tú",
+        "",
+        "[Outro]",
+        "[G]Quien confiando está",
+        "[C]Siempre en Jesús",
+        "[D]Cristo ama niños como [G]tú, [G][G]tú"
+      ]
+    }
+  }
+},
+{
+  "id": "el_amor_de_dios_es_maravilloso",
+  "titulo_original": "",
+  "autor": "",
+  "compositor": "",
+  "year": "",
+  "tonalidad": "D",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Efesios 3:18-19",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Alabanza",
+    "Infantil",
+    "Corito",
+    "Amor de Dios",
+    "Inmensidad",
+    "Alegría"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "El amor de Dios es maravilloso",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[Coro]",
+        "[D]EL AMOR DE DIOS ES [A7]MARAVILLOSO.",
+        "[D]EL AMOR DE DIOS ES MARAVILLOSO.",
+        "[D]EL AMOR DE DIOS ES [G]MARAVILLOSO.",
+        "[A7]¡CUAN GRANDE ES EL AMOR DE [D]DIOS!",
+        "",
+        "[Estrofa]",
+        "[D]Tan alto que no puedo ir arriba de Él.",
+        "[A7]Tan bajo que no puedo ir debajo de Él. [D]",
+        "[D]Tan ancho que no puedo ir al lado de Él. [G]",
+        "[A7]¡Cuan grande es el amor de [D]Dios!"
+      ]
+    }
+  }
+},
+{
+  "id": "cristo_manda_que_subamos_mas_c",
+  "titulo_original": "",
+  "autor": "",
+  "compositor": "",
+  "year": "",
+  "tonalidad": "C",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "Alabanza / Corito",
+  "referencia_biblica": "",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Alabanza",
+    "Corito",
+    "Avivamiento",
+    "Gozo",
+    "Crecimiento Espiritual"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Cristo manda que subamos más",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[C]Cristo manda que subamos [G]más",
+        "Que subamos [C]más",
+        "[C]Mirando al mundo bajaremos [G]más",
+        "Bajaremos [C]más",
+        "",
+        "Porque [F]subiendo y ba[G]jando nunca llegare[C]mos",
+        "[C]Subamos subamos mirando a Cristo [F][G][C]",
+        "[F]Cada [G]dia [C]más, [F]cada [G]dia [C]más"
+      ]
+    }
+  }
+},
 
 {
   "_comment4": "LETRA D ---------------------------------------------------------------------------------------------------------------------------------------    LETRA D"
+},
+{
+  "id": "da una_sonrisa",
+  "titulo_original": "",
+  "autor": "",
+  "compositor": "",
+  "year": "",
+  "tonalidad": "D",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Alabanza",
+    "Corito",
+    "Animación",
+    "Gozo",
+    "Fraternidad",
+    "Comunidad"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Da una sonrisa",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[D]Da una sonrisa, una sonrisa cierta,",
+        "[A]una sonrisa a[D]bierta, llena de amor.",
+        "",
+        "[D]Da una sonrisa, una sonrisa cierta,",
+        "[A]una sonrisa a[D]bierta, llena de amor.",
+        "",
+        "[G]Quien tiene a Je[D]sús vivirá para gozar,",
+        "[A]está siempre con[D]tento aunque le vaya mal.",
+        "",
+        "[G]Tro[D]pieza aquí, se cae allá,",
+        "[A]se levanta de [D]nuevo y se pone a cantar."
+      ]
+    }
+  }
 },
 {
   "id": "diez_mil_razones",
@@ -4014,7 +4392,66 @@
     }
   }
 },
-
+{
+  "id": "dulce_oracion",
+  "titulo_original": "Sweet Hour of Prayer",
+  "autor": "William W. Walford",
+  "compositor": "William B. Bradbury",
+  "year": "",
+  "tonalidad": "C",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "1 Tesalonicenses 5:17",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Himno Clásico",
+    "Adoración",
+    "Oración",
+    "Consuelo",
+    "Paz",
+    "Devocional"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Dulce oración",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[C]Dulce oración, dulce [F]oración, de [C]toda",
+        "influencia mundanal",
+        "[G]Elevas tu mi corazón,",
+        "[C]al tierno padre [F]celestial",
+        "[G]¡Oh, cuantas [C]veces tuve en ti",
+        "[F]Auxilio en [C]ruda tentación",
+        "[G]Y cuantos bienes recibí",
+        "[C]Mediante [F]ti, dulce o[C]ración",
+        "[G][C]",
+        "",
+        "[C]Dulce oración, dulce [F]oración, al [C]trono",
+        "excelso de bondad",
+        "[G]Tú llevarás mi petición",
+        "[C]a Dios, que [F]escucha con pie[C]dad",
+        "[G]Por fe es[C]pero recibir",
+        "[F]La gran di[C]vina bendición",
+        "[G]Y siempre a mi señor servir",
+        "[C]por tu vir[F]tud, dulce o[C]ración",
+        "[G][C]",
+        "",
+        "[C]Dulce oración, dulce [F]oración",
+        "Qué aliento y [C]gozo al alma [G]das",
+        "[C]En esta tierra [F]de aflicción con[C]suelo",
+        "siempre me serás",
+        "[G]Hasta el [C]momento en que veré",
+        "[F]Francas las [C]puertas de Sion",
+        "[G]Entonces me despediré",
+        "[C]feliz, de [F]ti, dulce [C]o[G]ración",
+        "[C]"
+      ]
+    }
+  }
+},
 
 {
   "_comment5": "LETRA E ---------------------------------------------------------------------------------------------------------------------------------------    LETRA E"
@@ -4607,6 +5044,72 @@
         "[D]mi vida y mi cora[G]zón.",
         "",
         "[Coro]"
+      ]
+    }
+  }
+},
+{
+  "id": "entrega_total",
+  "titulo_original": "",
+  "autor": "",
+  "compositor": "",
+  "year": "",
+  "tonalidad": "A",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Romanos 12:1",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Himno",
+    "Adoración",
+    "Consagración",
+    "Entrega",
+    "Talentos",
+    "Servicio"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Entrega total",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[Verse 1]",
+        "[A]Oh Cristo yo quiero expresar",
+        "[D]Mi gran alegría sin par",
+        "[Bm]Por tanto amor que me entrega sin me[E]dida. [A]",
+        "[A]Mi ser quiero hoy consagrar",
+        "[D]Mi tiempo a ti dedicar y [Bm]con mis talentos",
+        "[E]Tu nombre glorifi[A]car",
+        "[F#m]Los tesoros que puedo lograr",
+        "[C#m]En tus manos deseo entre[D]gar",
+        "[Bm]Quiero hacer de mi vida un templo [E]",
+        "[A]Que puedas morar.",
+        "[F#m]Porque todo lo que tú me das",
+        "[C#m]Vengo a presentar en tu al[D]tar",
+        "[Bm]Pues quiero Señor que tu nombre [E]Pueda exaltar.",
+        "",
+        "[Coro]",
+        "[A]Oh mi Cristo acepta mi [D]entrega total",
+        "[E]En tus manos mi vida iré a consa[A]grar.",
+        "[A]A tu causa me entrego con todas mis [D]fuerzas",
+        "[A]Para alcanzar la [E]hermosa y eterna vic[A]toria.",
+        "",
+        "[Verse 2]",
+        "[A]Humilde instrumento seré",
+        "[D]Con mudo asombro oiré [Bm]la gran melodía",
+        "[E]Que tocas con tus [A]manos",
+        "[A]Que otros escuchen también",
+        "[D]Tu gran maestría Señor",
+        "[Bm]Y aunque instrumento imper[E]fecto",
+        "[A]Te pueda sonar.",
+        "[F#m]Y que todos consigan sentir",
+        "[C#m]La armonía de [D]tu existir [Bm]y que sin tu amor",
+        "[E]Solo ruido hay [A]para oír.",
+        "[F#m]Que la puerta de mi corazón",
+        "[C#m]Pueda abrirse con [D]una oración",
+        "[Bm]Te entrego mi vida Señor [E]con esta canción."
       ]
     }
   }
@@ -5227,7 +5730,52 @@
     }
   }
 },
-
+{
+  "id": "el_puede",
+  "titulo_original": "",
+  "autor": "",
+  "compositor": "",
+  "year": "",
+  "tonalidad": "G",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Lucas 1:37",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Alabanza",
+    "Corito",
+    "Poder Divino",
+    "Sanidad",
+    "Milagros",
+    "Victoria"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Él puede (*)",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[Intro]",
+        "[G][D7][G]",
+        "",
+        "[Coro]",
+        "[G]//Él puede, él puede, yo sé que él puede//",
+        "[D7]Yo sé que todo lo puede mi Jesús",
+        "[G]Yo sé que mi Jesús me hará vencedor.",
+        "",
+        "(Se repite el coro tantas veces como se desee, acelerando el ritmo)",
+        "",
+        "[Estrofa]",
+        "[G]Él sana los enfermos,",
+        "[D7]Reprende los demonios,",
+        "[G]Resucita a los muertos,",
+        "[D7]Yo sé que [G]él puede mi Jesús."
+      ]
+    }
+  }
+},
 
 {
   "_comment6": "LETRA F ---------------------------------------------------------------------------------------------------------------------------------------    LETRA F"
@@ -6822,6 +7370,45 @@
         "bus[Em]cando el ca[A]mino de la [D]luz.",
         "[G]Jesús, la mon[C]taña y [G]yo,",
         "ha[D]blando con [D7]mi Salva[G]dor."
+      ]
+    }
+  }
+},
+{
+  "id": "jesus_me_pastorea",
+  "titulo_original": "",
+  "autor": "",
+  "compositor": "",
+  "year": "",
+  "tonalidad": "D",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "Alabanza / Corito",
+  "referencia_biblica": "Salmo 23:1",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Alabanza",
+    "Corito",
+    "Confianza",
+    "Protección",
+    "Fidelidad"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "JESÚS ME PASTOREA",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[ReM]Jesús me pastorea",
+        "yo voy con [La7]El hasta el [ReM]fin.",
+        "Jesús me pastorea",
+        "yo voy con [La7]El hasta el [ReM]fin.",
+        "",
+        "Yo voy yo voy",
+        "yo voy con [La7]El hasta el [ReM]fin.",
+        "Yo voy yo voy",
+        "yo voy con [La7]El hasta el [ReM]fin."
       ]
     }
   }
@@ -8848,6 +9435,48 @@
         "[LA]Un fiume d'acqua viva si fa spazio nel deserto",
         "[RE]Tutto fiorisce [FA#-]adesso [MI]so che",
         "[RE]Nulla è come prima"
+      ]
+    }
+  }
+},
+{
+  "id": "no_hay_dios_tan_grande_como_tu",
+  "titulo_original": "",
+  "autor": "Marcos Witt",
+  "compositor": "Marcos Witt",
+  "year": "",
+  "tonalidad": "E",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "",
+  "referencia_biblica": "Zacarías 4:6",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Alabanza",
+    "Corito",
+    "Poder Divino",
+    "Sanidad",
+    "Salvación",
+    "Espíritu Santo"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "No hay Dios tan grande como tú",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[E]/No hay Dios tan grande como tú",
+        "[B7]No lo hay [E]no lo hay/ [E7]",
+        "[A]/No hay Dios que pueda hacer las",
+        "[E]obras [C#m]como las [F#m7]que haces [B7]tú/ [E]",
+        "",
+        "[E]No es con ejército ni con espada",
+        "[B7]más con tu santo espíritu [E][E7]",
+        "[A]Y esos Montes se moverán [E][C#m]",
+        "[F#m]Y esas almas se salvaran [E][E7]",
+        "[A]Y Los enfermos se sanaran [E][C#m]",
+        "[F#m]Con tu santo espíritu [B7][E]"
       ]
     }
   }
@@ -12122,6 +12751,101 @@
     }
   }
 },
+{
+  "id": "solo_el_poder_de_dios",
+  "titulo_original": "",
+  "autor": "Diego Ibárcena",
+  "compositor": "Diego Ibárcena",
+  "year": "",
+  "tonalidad": "B",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "Bossa Nova / Jazz",
+  "referencia_biblica": "2 Corintios 5:17",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Alabanza",
+    "Testimonio",
+    "Transformación",
+    "Poder Divino",
+    "Nueva Criatura"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Sólo el poder de Dios",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[INTRODUCCIÓN]",
+        "B6 Ab7 C#m7 F#13 Ebm7 Ab7-9 C#m7 C7-5",
+        "Bmaj9 Ab9 C#m7 F#7 Ebm7 Ab7 C#m7 F#13",
+        "",
+        "[Estrofa 1 - Tonalidad: Si Mayor]",
+        "- [Bmaj7]Sólo el [Emaj7]poder de [Ebm7]Dios [F#13]puede [B9/Eb]cambiar tu [B7-9]ser, [F#7][Em7-5/F]",
+        "[C#m]la prueba yo [Abm9]te doy; [F#7][F#][E7]Él me ha [F#7]cambiado [B7]a [F#13]mí. [C#6n°3]",
+        "¿[B6]No ves que soy [Emaj7]feliz [Abm7][F#13][F#7][B7]sirviendo al [C#m7-5/Eb]Señor? [Emaj7-9][E7-5]",
+        "[Emmaj9]Nueva cria[Abm9]tura [Bmaj7]soy; [Abm7][C#m7][F#7][B7]nue--[G13]va [D6n°3]soy.",
+        "",
+        "[Estrofa 2 - Tonalidad: Do Mayor (Modulación)]",
+        "- [Cmaj7]Sólo el [Fmaj7]poder de [Em7]Dios [G13]puede [G7]cambiar tu [C9/E]ser, [C7-9][G7][Fm7-5/F#]",
+        "[Dm]la prueba yo [Am9]te doy; [G7][G][F7]Él me ha [G7]cambiado [C7]a [G13]mí. [D6n°3]",
+        "¿[C6]No ves que soy [Fmaj7]feliz [Am7][G13][G7][C7]sirviendo al [Dm7-5/E]Señor? [Fm6/Ab][Fmaj7-9][F7-5]",
+        "[Fmmaj9]Nueva cria[Am9]tura [Cmaj7]soy; [Am7][Dm7][G7][Dm7]nue--va soy.",
+        "",
+        "[INTERMEDIO]",
+        "Dm7 G7 Em A7 A7/E Dm7 G7 Cmaj9 Gm/C",
+        "Fmaj7 E7n°5 Am9 D9 G7n°3 Abm",
+        "",
+        "[Estrofa 3 - Tonalidad: Do Mayor]",
+        "¿[C6]No ves que soy [Fmaj7]feliz [Am7][G13][G7][C7]sirviendo al [Dm7-5/E]Señor? [Fm6/Ab][Fmaj7-9][F7-5]",
+        "[Fmmaj9]Nueva cria[Am9]tura [Cmaj7]soy; [Am7][Dm7][G7][G/C]nue--va soy.",
+        "",
+        "[FINAL]",
+        "G/C Dn°3/C Gsus2/C Cmaj7"
+      ]
+    }
+  }
+},
+{
+  "id": "solo_el_poder_de_dios_sencillo",
+  "titulo_original": "",
+  "autor": "",
+  "compositor": "",
+  "year": "",
+  "tonalidad": "A",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "Alabanza / Corito",
+  "referencia_biblica": "2 Corintios 5:17",
+  "tags": [
+    "Español",
+    "Cristiano",
+    "Alabanza",
+    "Corito",
+    "Testimonio",
+    "Transformación",
+    "Poder Divino",
+    "Nueva Criatura"
+  ],
+  "idiomas": {
+    "es": {
+      "titulo": "Solo el poder de Dios",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[A]Solo el [E]poder [A]Dios,",
+        "puede cambiar tu [E]ser",
+        "la prueba yo te doy,",
+        "Él me ha cambiado a [A]mí;",
+        "no [A]ves que soy feliz",
+        "sirviendo [A]al Se[D]ñor.",
+        "¡Nueva criatura [A]soy!",
+        "[E]¡Nueva [A]soy!"
+      ]
+    }
+  }
+},
 
 {
   "_comment21": "LETRA T ---------------------------------------------------------------------------------------------------------------------------------------    LETRA T"
@@ -15165,20 +15889,20 @@
       "traductor": "",
       "letra": [
         "[D]Yo tengo algo que el mundo no me da,",
-        "[A]que el mundo [B]no me [D]puede quitar. [x2]",
+        "[A]que el mundo [B]no me [D]puede quitar (x - x). [x2]",
         "[G]Es Jesucristo [D]que me ha salvado,",
         "[A]me ha dado la vida, [D]me ha dado el amor.",
         "[G]Es Jesucristo [D]que me ha salvado,",
         "[A]me ha dado la vida, [D]me ha dado el amor.",
         "",
         "[D]Tú tienes algo que el mundo no te da,",
-        "[A]que el mundo [B]no te [D]puede quitar. [x2]",
+        "[A]que el mundo [B]no te [D]puede quitar (x - x). [x2]",
         "[G]Es Jesucristo [D]que te ha salvado,",
         "[A]te ha dado la vida, [D]te ha dado el amor.",
         "[G]Es Jesucristo [D]que te ha salvado,",
         "[A]te ha dado la vida, [D]te ha dado el amor.",
         "",
-        "[D]Tenemos algo que el mundo no nos da,",
+        "[D]Tenemos algo que el mundo no nos da, (x - x)",
         "[A]que el mundo [B]no nos [D]puede quitar. [x2]",
         "[G]Es Jesucristo [D]que nos ha salvado,",
         "[A]nos ha dado la vida, [D]nos ha dado el amor.",
