@@ -771,7 +771,7 @@ body.dark .modal-content {
 
   .chord {
     font-size: 0.65em !important; /* font-size: 0.65em !important; */ /* 1em     -> mismo tamaño que la letra */
-    top: -3em;                  /* Espacio entre letra y tablatura en celulares */
+    top: -2em;                  /* Espacio entre letra y tablatura en celulares */
   }
 }
 
