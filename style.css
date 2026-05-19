@@ -761,7 +761,7 @@ body.dark .modal-content {
 /* TAMANO DE LETRAS Y TABLATURAS EN CELULARES */
 @media (max-width: 460px) {
   .song-line {
-    font-size: 12px !important;
+    font-size: 14px !important;
     line-height: 1.5;
   }
 
