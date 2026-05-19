@@ -758,10 +758,10 @@ body.dark .modal-content {
   height: 10px; /* espacio entre estrofas */
 }
 
+/* TAMANO DE LETRAS Y TABLATURAS EN CELULARES */
 @media (max-width: 460px) {
-
   .song-line {
-    font-size: 10px !important;
+    font-size: 12px !important;
     line-height: 1.5;
   }
 
