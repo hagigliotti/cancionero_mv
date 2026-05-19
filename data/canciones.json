@@ -9,10 +9,10 @@
   "compositor": ["Bob Benson", "Phil Johnson"],
   "year": "1975",
   "tonalidad": "Re Mayor (D)",
-  "tempo_bpm": "80 bpm",
+  "tempo_bpm": "80",
   "compas": "4/4",
   "ritmo": ["Balada", "Adoración"],
-  "referencia_biblica": "Mateo 11:28",
+  "referencia_biblica": "San Mateo 11:28",
   "tags": ["Entrega", "Consuelo", "Confianza"],
 
   "idiomas": {
@@ -79,10 +79,10 @@
   "compositor": ["Matt Crocker"],
   "year": "2012",
   "tonalidad": "La Menor (Am)",
-  "tempo_bpm": "76 bpm",
+  "tempo_bpm": "76",
   "compas": "4/4",
   "ritmo": ["Whorship"],
-  "referencia_biblica": "Lucas 14:33",
+  "referencia_biblica": "San Lucas 14:33",
   "tags": ["Adoración", "Entrega", "Whorship"],
 
   "idiomas": {
@@ -200,7 +200,7 @@
   "compositor": ["Laurie Klein"],
   "year": "1978",
   "tonalidad": "Fa Mayor (F)",
-  "tempo_bpm": "70 bpm",
+  "tempo_bpm": "70",
   "compas": "4/4",
   "ritmo": ["Balada"],
   "referencia_biblica": "Salmos 116:1, 2",
@@ -208,13 +208,13 @@
 
   "idiomas": {
     "es": {
-      "titulo": "A ti, Señor",
+      "titulo": "A ti Señor",
       "audio_url": "https://open.spotify.com/intl-es/track/1pvS9HylBSoYdlteJhUZDd?si=7326e73e72004a44",
       "traductor": ["Desconocido"],
       "partitura": "",
       "revisado": "No",
       "letra": [
-        "[F]A ti, Señor, [C]alzaré mi [F]voz",
+        "[F]A ti Señor, [C]alzaré mi [F]voz",
         "para [Bb]adorar[Gm]te, mi Salva[C]dor.[C7]",
         "[F]Acepta hoy, mi [C]rey y Se[F]ñor,",
         "[F7]el humilde [Bb]don [Gm]de mi [Bb]amor [C]en ora[F]ción.",
@@ -259,7 +259,7 @@
   "compositor": ["Marcos Brunet"],
   "year": "2017",
   "tonalidad": "Sol Mayor (G)",
-  "tempo_bpm": "68 bpm",
+  "tempo_bpm": "68",
   "compas": "4/4",
   "ritmo": ["Worship"],
   "referencia_biblica": "San Juan 1:12",
@@ -303,7 +303,7 @@
   "compositor": ["Robert Cull"],
   "year": "1976",
   "tonalidad": "Re Mayor (D)",
-  "tempo_bpm": "66 bpm",
+  "tempo_bpm": "66",
   "compas": "4/4",
   "ritmo": ["Balada"],
   "referencia_biblica": "Salmos 119:18",
@@ -394,7 +394,7 @@
   "compositor": ["Paul Baloche"],
   "year": "1997",
   "tonalidad": "Re Mayor (D)",
-  "tempo_bpm": "110 bpm",
+  "tempo_bpm": "110",
   "compas": "4/4",
   "ritmo": ["Worship"],
   "referencia_biblica": "Apocalipsis 4:8",
@@ -478,7 +478,7 @@
   "compositor": ["Michael W. Smith"],
   "year": "1990",
   "tonalidad": "Sol Mayor (G)",
-  "tempo_bpm": "68 bpm",
+  "tempo_bpm": "68",
   "compas": "4/4",
   "ritmo":  ["Worship", "Adoración"],
   "referencia_biblica": "Salmos 22:1 / Apocalipsis 19:6",
@@ -561,7 +561,7 @@
   "compositor": ["Desconocido"],
   "year": "Desconocido",
   "tonalidad": "Sol Mayor (G)",
-  "tempo_bpm": "115 bpm",
+  "tempo_bpm": "115",
   "compas": "4/4",
   "ritmo": ["Alegre"],
   "referencia_biblica": "Hechos 2:46, 47",
@@ -589,7 +589,7 @@
   "compositor": ["Desconocido"],
   "year": "2000",
   "tonalidad": "Mi Mayor (E)",
-  "tempo_bpm": "80 bpm",
+  "tempo_bpm": "80",
   "compas": "4/4",
   "ritmo": ["Adoración", "Canon"],
   "referencia_biblica": "Amós 4:12",
@@ -619,7 +619,7 @@
   "compositor": "Primera Fe",
   "year": "Desconocido",
   "tonalidad": "Do Mayor (C)",
-  "tempo_bpm": "85 bpm",
+  "tempo_bpm": "85",
   "compas": "4/4",
   "ritmo": ["Balada"],
   "referencia_biblica": "1 Juan 2:6",
@@ -727,7 +727,7 @@
         "[D]BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
         "[D]BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
         "",
-        "NOTA: (se repite dejando en silencio el nombre del animal por la mímica)"
+        "NOTA: se repite dejando en silencio el nombre del animal por la mímica."
       ]
     }
   }
@@ -738,7 +738,7 @@
   "compositor": "Manuel José Alonso y José Pagán",
   "year": "1970",
   "tonalidad": "Re Mayor (D)",
-  "tempo_bpm": "120 bpm",
+  "tempo_bpm": "120",
   "compas": "4/4",
   "ritmo": ["Alegre", "Marcha"],
   "referencia_biblica": "Salmos 22:22 / Apocalipsis 7:9",
@@ -771,7 +771,7 @@
   "compositor": ["Desconocido"],
   "year": "Desconocido",
   "tonalidad": "Sol Mayor (G)",
-  "tempo_bpm": "115 bpm",
+  "tempo_bpm": "115",
   "compas": "4/4",
   "ritmo": ["Alegre"],
   "referencia_biblica": "Romanos 12:12",
@@ -824,7 +824,7 @@
   "compositor": "Enrique García Vélez",
   "year": "1979",
   "tonalidad": "Sol Mayor (G)",
-  "tempo_bpm": "84 bpm",
+  "tempo_bpm": "84",
   "compas": "4/4",
   "ritmo": ["Balada", "Himno"],
   "referencia_biblica": "Isaías 6:8",
@@ -861,7 +861,7 @@
   "compositor": ["Desconocido"],
   "year": "Desconocido",
   "tonalidad": "Mi Mayor (E)",
-  "tempo_bpm": "95 bpm",
+  "tempo_bpm": "95",
   "compas": "4/4",
   "ritmo": ["Balada", "Pop"],
   "referencia_biblica": "2 Corintios 5:17",
@@ -895,10 +895,10 @@
   "compositor": ["Desconocido"],
   "year": "Desconocido",
   "tonalidad": "Do Mayor (C)",
-  "tempo_bpm": "110 bpm",
+  "tempo_bpm": "110",
   "compas": "4/4",
   "ritmo": ["Alegre"],
-  "referencia_biblica": "Juan 21:15",
+  "referencia_biblica": "San Juan 21:15",
   "tags": ["Amistad", "Amor a Cristo", "Testimonio", "Canon"],
 
   "idiomas": {
@@ -1013,10 +1013,10 @@
   "compositor": ["Cory Asbury", "Caleb Culver", "Ran Jackson"],
   "year": "2017",
   "tonalidad": "Fa Sostenido Menor (F#m) / Do Sostenido Menor (C#m)",
-  "tempo_bpm": "83 bpm",
+  "tempo_bpm": "83",
   "compas": "6/8",
   "ritmo": ["Balada", "Worship"],
-  "referencia_biblica": "Juan 15:13",
+  "referencia_biblica": "San Juan 15:13",
   "tags": ["Amor de Dios", "Gracia", "Sacrificio", "Worship"],
 
   "idiomas": {
@@ -1061,10 +1061,10 @@
   "compositor": ["Desconocido"],
   "year": "Desconocido",
   "tonalidad": "Do Mayor (C)",
-  "tempo_bpm": "80 bpm",
+  "tempo_bpm": "80",
   "compas": "4/4",
   "ritmo": ["Adoración", "Balada"],
-  "referencia_biblica": "Juan 3:16",
+  "referencia_biblica": "San Juan 3:16",
   "tags": ["Amor de Dios", "Sacrificio", "Gracia"],
 
   "idiomas": {
@@ -1119,10 +1119,10 @@
   "compositor": ["Desconocido"],
   "year": "Desconocido",
   "tonalidad": "Re Menor (Dm)",
-  "tempo_bpm": "85 bpm",
+  "tempo_bpm": "85",
   "compas": "4/4",
   "ritmo": ["Canon"],
-  "referencia_biblica": "Mateo 19:19",
+  "referencia_biblica": "San Mateo 19:19",
   "tags": ["Amor", "Evangelio", "Prójimo", "Canon"],
 
   "idiomas": {
@@ -1150,7 +1150,7 @@
   "compositor": ["César Bentancourt"],
   "year": "Desconocido",
   "tonalidad": "Do Mayor (C)",
-  "tempo_bpm": "90 bpm",
+  "tempo_bpm": "90",
   "compas": "4/4",
   "ritmo": ["Adoración", "Balada"],
   "referencia_biblica": "San Lucas 24:32",
@@ -1191,7 +1191,7 @@
   "compositor": ["Sinach"],
   "year": "2015",
   "tonalidad": "Sol Mayor (G)",
-  "tempo_bpm": "68 bpm",
+  "tempo_bpm": "68",
   "compas": "4/4",
   "ritmo": ["Worship"],
   "referencia_biblica": "Isaías 43:19",
@@ -1282,6 +1282,7 @@
   "ritmo": ["Desconocido"],
   "referencia_biblica": "",
   "tags": ["Español", "Cristiano"],
+
   "idiomas": {
     "es": {
       "titulo": "Arroyo ancho",
@@ -1315,10 +1316,10 @@
   "compositor": ["Joel Barrios"],
   "year": "Desconocido",
   "tonalidad": "Re Mayor (D) / Mi Mayor (E)",
-  "tempo_bpm": "110 bpm",
+  "tempo_bpm": "110",
   "compas": "4/4",
   "ritmo": ["Alegre"],
-  "referencia_biblica": "Mateo 9:37",
+  "referencia_biblica": "San Mateo 9:37",
   "tags": ["Servicio", "Misión", "Unidad", "Evangelismo"],
 
   "idiomas": {
@@ -1348,15 +1349,53 @@
 },
 
 { "_comment2": "LETRA B ---------------------------------------------------------------------------------------------------------------------------------------    LETRA B" },
+{ "id": "bienvenidos_a_adorar",
+  "titulo_original": "",
+  "autor": ["Joel Barrios"],
+  "compositor": ["Joel Barrios"],
+  "year": "",
+  "tonalidad": "Fa Mayor (F)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Desconocido"],
+  "referencia_biblica": "",
+  "tags": ["Alabanza", "Adoración", "Bienvenida", "Sábado", "Comunidad", "Fraternidad", "Whorship"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Bienvenidos a adorar",
+      "audio_url": "",
+      "traductor": ["-"],
+      "letra": [
+        "[F]Bienvenidos a [Bb]adorar, [C][C7]",
+        "[F]bienvenidos a la [Dm]ca[F7]sa de [D]Dios.",
+        "[Gm7]Quiero de[F/A]cirte [Bb]hoy, de [Bb]co[C]ra[Dm7]zón:",
+        "que seas [Gm7]bien[Bbm]ve[F]ni[Bb]do [Dm7][C].",
+        "",
+        "[F]Es el día del [Bb]Se[C]ñor, [C7]",
+        "[F]santo Sábado [Dm]de [F7]ado[D]ración.",
+        "[Gm7]El gozo [F/A]que hay a[Bb]quí se [C]puede sen[Dm7]tir,",
+        "porque [Gm7]somos [Bbm]sus hijos [F][Dm7][C][Bb].",
+        "",
+        "[Gm7]Quiero de[F/A]cirte [Bb]hoy, de [C]co[Dm7]razón:",
+        "que [Gm7]Cristo [Bbm]nos u[F]nió."
+      ]
+    }
+  }
+},
 { "id": "blanqueado",
   "titulo_original": "Blanqueado por tu amor",
-  "autor": "Ariel Quispe",
-  "compositor": "Ariel Quispe",
+  "autor": ["Ariel Quispe"],
+  "compositor": ["Ariel Quispe"],
   "tonalidad": "Re Mayor (D)",
   "referencia_biblica": "Salmos 51:10",
+  "tags": [""],
+
   "idiomas": {
     "es": {
       "titulo": "Blanqueado",
+      "audio_url": "",
+      "traductor": ["-"],
       "letra": [
         "[D]Te presento, Señor, mi [G]débil [A]cora[D]zón.",
         "Tómalo en tus manos, Dios, [G]límpialo [A]con tu a[D]mor.",
@@ -1377,15 +1416,73 @@
     }
   }
 },
+{ "id": "brilla_en_el_sitio_donde_estes",
+  "titulo_original": "Brilla en el sitio donde estés",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "",
+  "tonalidad": "Do Mayor (C)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Desconocido"],
+  "referencia_biblica": "",
+  "tags": ["Luz", "Testimonio", "Himno"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Brilla en el sitio donde estés",
+      "audio_url": "",
+      "traductor": ["-"],
+      "letra": [
+        "[C]Nunca esperes el momento de una gran ac[G7]ción,",
+        "ni que pueda lejos ir tu [C]luz;",
+        "tus pequeños actos pueden ser de bendi[F]ción,",
+        "[G]brilla en el [C]sitio donde estés.",
+        "",
+        "Coro",
+        "[C]Brilla en el [G]sitio donde estés,",
+        "[G7]brilla en el [C]sitio donde estés.",
+        "Puedes con tu [C7]luz algún perdido resca[F]tar,",
+        "[G]brilla en el [C]sitio donde estés.",
+        "",
+        "[C]Puedes en tu cielo alguna nube disi[G7]par,",
+        "haz a un lado tu egoísmo [C]cruel.",
+        "Aunque solo un corazón pudieres conso[F]lar,",
+        "[G]brilla en el [C]sitio donde estés.",
+        "",
+        "Coro",
+        "[C]Brilla en el [G]sitio donde estés,",
+        "[G7]brilla en el [C]sitio donde estés.",
+        "Puedes con tu [C7]luz algún perdido resca[F]tar,",
+        "[G]brilla en el [C]sitio donde estés.",
+        "",
+        "[C]Puede tu talento alguna cosa descu[G7]brir",
+        "do tu luz podrá resplande[C]cer.",
+        "De tu mano el Pan de vida puede aquí ve[F]nir,",
+        "[G]brilla en el [C]sitio donde estés.",
+        "",
+        "Coro",
+        "[C]Brilla en el [G]sitio donde estés,",
+        "[G7]brilla en el [C]sitio donde estés.",
+        "Puedes con tu [C7]luz algún perdido resca[F]tar,",
+        "[G]brilla en el [C]sitio donde estés."
+      ]
+    }
+  }
+},
 { "id": "brilla_en_mi",
   "titulo_original": "Brilla en mí",
-  "autor": "Ariel Quispe y David Guerrero",
-  "compositor": "Ariel Quispe y David Guerrero",
+  "autor": ["Ariel Quispe", "David Guerrero"],
+  "compositor": ["Ariel Quispe", "David Guerrero"],
   "tonalidad": "Do Mayor (C)",
   "referencia_biblica": "Salmos 90:17",
+  "tags": [""],
+
   "idiomas": {
     "es": {
       "titulo": "Brilla en mí",
+      "audio_url": "",
+      "traductor": ["-"],
       "letra": [
         "[C]Este mundo oscuro es[F]tá, [Am]necesita de [G]luz.",
         "[C]Hay personas que no [F]tienen paz, [Am]necesitan de [G]Dios.",
@@ -1408,13 +1505,17 @@
 },
 { "id": "brilla_Jesús",
   "titulo_original": "Shine, Jesús, shine",
-  "autor": "Granham Kendrick",
-  "compositor": "Granham Kendrick",
+  "autor": ["Granham Kendrick"],     
+  "compositor": ["Granham Kendrick"], 
   "tonalidad": "Sol Mayor (G)",
-  "referencia_biblica": "Mateo 8:12",
+  "referencia_biblica": "San Mateo 8:12",
+  "tags": [""],
+
   "idiomas": {
     "es": {
       "titulo": "Brilla, Jesús",
+      "audio_url": "",
+      "traductor": ["-"],      
       "letra": [
         "[G]Padre, tu [C]gran amor [G]me ins[D]pira.",
         "[G]Padre, tu [C]gran amor [G]me a[D]nima.",
@@ -1437,6 +1538,8 @@
     },
     "en": {
       "titulo": "Shine, Jesús, shine",
+      "audio_url": "",
+      "traductor": ["-"],         
       "letra": [
         "Lord, the light of your love is shining",
         "In the midst of the darkness, shining",
@@ -1459,13 +1562,17 @@
 },
 { "id": "brillar_por_ti",
   "titulo_original": "Lord I want be just like you",
-  "autor": "Becker Joy D. y Dean Dan",
-  "compositor": "Becker Joy D. y Dean Dan",
+  "autor": ["Joy D. Becker", "Dan Dean"], 
+  "compositor": ["Joy D. Becker", "Dan Dean"],
   "tonalidad": "Si Mayor (B) / Do Mayor (C)",
-  "referencia_biblica": "Mateo 5:16",
+  "referencia_biblica": "San Mateo 5:16",
+  "tags": ["Luz"],
+
   "idiomas": {
     "es": {
       "titulo": "Brillar por ti",
+      "audio_url": "",
+      "traductor": ["-"],         
       "letra": [
         "[B]A veces no es fácil tener la verdad,",
         "[G#m]ser cristiano en medio de la oscuridad.",
@@ -1502,13 +1609,17 @@
 },
 { "id": "buscad_primero",
   "titulo_original": "Seek ye first",
-  "autor": "David Huff y Karen Lafferty",
-  "compositor": "David Huff y Karen Lafferty",
+  "autor": ["David Huff", "Karen Lafferty"],
+  "compositor": ["David Huff", "Karen Lafferty"],
   "tonalidad": "Re Mayor (D)",
-  "referencia_biblica": "Mateo 6:33",
+  "referencia_biblica": "San Mateo 6:33",
+  "tags": [""],
+
   "idiomas": {
     "es": {
       "titulo": "Buscad primero",
+      "audio_url": "",
+      "traductor": ["-"],         
       "letra": [
         "[D]Buscad pri[A/C#]mero el [Bm]reino de [F#m]Dios",
         "[G]y su per[D]fecta jus[A]ticia,",
@@ -1534,9 +1645,13 @@
   "compositor": ["Desconocido"],
   "tonalidad": "Re Mayor (D)",
   "referencia_biblica": "Jeremías 29:13",
+  "tags": [""],
+
   "idiomas": {
     "es": {
       "titulo": "Búscale hoy",
+      "audio_url": "",
+      "traductor": ["-"],         
       "letra": [
         "[D]Si en tu vida no tienes [Em]paz,",
         "[A]si no encuentras felici[D]dad,",
@@ -1553,13 +1668,16 @@
 },
 { "id": "buscas",
   "titulo_original": "Buscas",
-  "autor": "Daniel Orellana",
-  "compositor": "Daniel Orellana",
+  "autor": ["Daniel Orellana"],
+  "compositor": ["Daniel Orellana"],
   "tonalidad": "Do Mayor (C)",
-  "referencia_biblica": "Mateo 9:38",
+  "referencia_biblica": "San Mateo 9:38",
+
   "idiomas": {
     "es": {
       "titulo": "Buscas",
+      "audio_url": "",
+      "traductor": ["-"],   
       "letra": [
         "[C]Bus[G]cas [Am]corazones que no [F]teman ir [C]",
         "al [G]campo de ba[Am]ta[F]lla",
@@ -1589,15 +1707,16 @@
 },
 { "id": "blessed_be_your_name",
   "titulo_original": "Blessed Be Your Name",
-  "autor": "Matt Redman",
-  "compositor": "Matt Redman",
+  "autor": ["Matt Redman"],
+  "compositor": ["Matt Redman"],
   "year": "",
-  "tonalidad": "SOL",
+  "tonalidad": "Sol Mayor (G)",
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
   "referencia_biblica": "Job 1:21",
-  "tags": [],
+  "tags": ["Whorship"],
+
   "idiomas": {
     "en": {
       "titulo": "Blessed Be Your Name",
@@ -1653,105 +1772,6 @@
         "Blessed be Your name",
         "Blessed be the name of the Lord",
         "Blessed be Your glorious name X2"
-      ]
-    }
-  }
-},
-{ "id": "brilla_en_el_sitio_donde_estes",
-  "titulo_original": "Brilla en el sitio donde estés",
-  "autor": ["Desconocido"],
-  "compositor": ["Desconocido"],
-  "year": "",
-  "tonalidad": "C",
-  "tempo_bpm": "",
-  "compas": "",
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": "",
-  "tags": [
-    "Español",
-    "Cristiano",
-    "Himno"
-  ],
-  "idiomas": {
-    "es": {
-      "titulo": "Brilla en el sitio donde estés",
-      "audio_url": "",
-      "traductor": ["-"],
-      "letra": [
-        "[C]Nunca esperes el momento de una gran ac[G7]ción,",
-        "ni que pueda lejos ir tu [C]luz;",
-        "tus pequeños actos pueden ser de bendi[F]ción,",
-        "[G]brilla en el [C]sitio donde estés.",
-        "",
-        "Coro",
-        "[C]Brilla en el [G]sitio donde estés,",
-        "[G7]brilla en el [C]sitio donde estés.",
-        "Puedes con tu [C7]luz algún perdido resca[F]tar,",
-        "[G]brilla en el [C]sitio donde estés.",
-        "",
-        "[C]Puedes en tu cielo alguna nube disi[G7]par,",
-        "haz a un lado tu egoísmo [C]cruel.",
-        "Aunque solo un corazón pudieres conso[F]lar,",
-        "[G]brilla en el [C]sitio donde estés.",
-        "",
-        "Coro",
-        "[C]Brilla en el [G]sitio donde estés,",
-        "[G7]brilla en el [C]sitio donde estés.",
-        "Puedes con tu [C7]luz algún perdido resca[F]tar,",
-        "[G]brilla en el [C]sitio donde estés.",
-        "",
-        "[C]Puede tu talento alguna cosa descu[G7]brir",
-        "do tu luz podrá resplande[C]cer.",
-        "De tu mano el Pan de vida puede aquí ve[F]nir,",
-        "[G]brilla en el [C]sitio donde estés.",
-        "",
-        "Coro",
-        "[C]Brilla en el [G]sitio donde estés,",
-        "[G7]brilla en el [C]sitio donde estés.",
-        "Puedes con tu [C7]luz algún perdido resca[F]tar,",
-        "[G]brilla en el [C]sitio donde estés."
-      ]
-    }
-  }
-},
-{ "id": "bienvenidos_a_adorar",
-  "titulo_original": "",
-  "autor": "Joel Barrios",
-  "compositor": "Joel Barrios",
-  "year": "",
-  "tonalidad": "F",
-  "tempo_bpm": "",
-  "compas": "",
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": "",
-  "tags": [
-    "Español",
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Bienvenida",
-    "Sábado",
-    "Comunidad",
-    "Fraternidad"
-  ],
-  "idiomas": {
-    "es": {
-      "titulo": "Bienvenidos a adorar",
-      "audio_url": "",
-      "traductor": ["-"],
-      "letra": [
-        "[F]Bienvenidos a [Bb]adorar, [C][C7]",
-        "[F]bienvenidos a la [Dm]ca[F7]sa de [D]Dios.",
-        "[Gm7]Quiero de[F/A]cirte [Bb]hoy, de [Bb]co[C]ra[Dm7]zón:",
-        "que seas [Gm7]bien[Bbm]ve[F]ni[Bb]do [Dm7][C].",
-        "",
-        "[F]Es el día del [Bb]Se[C]ñor, [C7]",
-        "[F]santo Sábado [Dm]de [F7]ado[D]ración.",
-        "[Gm7]El gozo [F/A]que hay a[Bb]quí se [C]puede sen[Dm7]tir,",
-        "porque [Gm7]somos [Bbm]sus hijos [F][Dm7][C][Bb].",
-        "",
-        "[Gm7]Quiero de[F/A]cirte [Bb]hoy, de [C]co[Dm7]razón:",
-        "que [Gm7]Cristo [Bbm]nos u[F]nió."
       ]
     }
   }
@@ -1966,7 +1986,7 @@
   "autor": "Paul Field",
   "compositor": "Paul Field",
   "tonalidad": "Sol Mayor (G) / La Mayor (A)",
-  "referencia_biblica": "Mateo 10:32",
+  "referencia_biblica": "San Mateo 10:32",
   "idiomas": {
     "es": {
       "titulo": "Cantaré de tu amor",
@@ -2277,7 +2297,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Mateo 8:27",
+  "referencia_biblica": "San Mateo 8:27",
   "tags": ["canon"],
   "idiomas": {
     "es": {
@@ -2556,7 +2576,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Juan 14:27",
+  "referencia_biblica": "San Juan 14:27",
   "tags": [],
   "idiomas": {
     "es": {
@@ -2866,7 +2886,7 @@
   "compositor": ["Desconocido"],
   "year": "Desconocido",
   "tonalidad": "Sol Mayor (G)",
-  "tempo_bpm": "115 bpm",
+  "tempo_bpm": "115",
   "compas": "4/4",
   "ritmo": "corito / alegre",
   "referencia_biblica": "Hechos 2:46, 47",
@@ -3180,7 +3200,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Mateo 19:14",
+  "referencia_biblica": "San Mateo 19:14",
   "tags": [
     "Español",
     "Cristiano",
@@ -3352,7 +3372,7 @@
   "compositor": "Matt Redman, Jonas Myrin",
   "year": "2011",
   "tonalidad": "Sol mayor (G)",
-  "tempo_bpm": "70 bpm (aprox.)",
+  "tempo_bpm": "70 (aprox.)",
   "compas": "4/4",
   "ritmo": "Balada de adoración (Worship)",
   "audio": "https://open.spotify.com/track/16e4Q3plJrKkncoLKR1CQ1",
@@ -3502,7 +3522,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Lucas 2:14",
+  "referencia_biblica": "San Lucas 2:14",
   "tags": [
     "Español",
     "Cristiano",
@@ -3720,7 +3740,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Juan 11:40",
+  "referencia_biblica": "San Juan 11:40",
   "tags": [
     "Español",
     "Cristiano",
@@ -3796,7 +3816,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Mateo 11:28",
+  "referencia_biblica": "San Mateo 11:28",
   "tags": [
     "Español",
     "Cristiano",
@@ -4611,7 +4631,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Lucas 23:46",
+  "referencia_biblica": "San Lucas 23:46",
   "tags": [
     "Español",
     "Cristiano",
@@ -4643,7 +4663,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Juan 15:15",
+  "referencia_biblica": "San Juan 15:15",
   "tags": [
     "Español",
     "Cristiano",
@@ -4832,7 +4852,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Marcos 9:35",
+  "referencia_biblica": "San Marcos 9:35",
   "tags": [
     "Español",
     "Cristiano",
@@ -5278,7 +5298,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Juan 14: 16, 17",
+  "referencia_biblica": "San Juan 14: 16, 17",
   "tags": [
     "Español",
     "Cristiano",
@@ -5612,7 +5632,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Lucas 1:37",
+  "referencia_biblica": "San Lucas 1:37",
   "tags": [
     "Español",
     "Cristiano",
@@ -5877,7 +5897,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Mateo 24:13",
+  "referencia_biblica": "San Mateo 24:13",
   "tags": [
     "Español",
     "Cristiano",
@@ -5933,7 +5953,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Marcos 4:39",
+  "referencia_biblica": "San Marcos 4:39",
   "tags": [
     "Español",
     "Cristiano",
@@ -6617,7 +6637,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Lucas 9:62",
+  "referencia_biblica": "San Lucas 9:62",
   "tags": [
     "Español",
     "Cristiano",
@@ -6709,7 +6729,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Lucas 1:35",
+  "referencia_biblica": "San Lucas 1:35",
   "tags": [
     "Español",
     "Cristiano",
@@ -6931,7 +6951,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Juan 4:14",
+  "referencia_biblica": "San Juan 4:14",
   "tags": [
     "Español",
     "Cristiano",
@@ -6983,7 +7003,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Juan 10:10",
+  "referencia_biblica": "San Juan 10:10",
   "tags": [
     "Español",
     "Cristiano",
@@ -7179,7 +7199,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Lucas 6:12",
+  "referencia_biblica": "San Lucas 6:12",
   "tags": [
     "Campamento",
     "Scout",
@@ -7435,7 +7455,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Marcos 4:40",
+  "referencia_biblica": "San Marcos 4:40",
   "tags": [
     "Español",
     "Cristiano",
@@ -7813,7 +7833,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Mateo 16:24",
+  "referencia_biblica": "San Mateo 16:24",
   "tags": [
     "Español",
     "Cristiano",
@@ -7991,7 +8011,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Juan 14:3",
+  "referencia_biblica": "San Juan 14:3",
   "tags": [
     "Español",
     "Cristiano",
@@ -8584,7 +8604,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Mateo 17:20",
+  "referencia_biblica": "San Mateo 17:20",
   "tags": [
     "Español",
     "Cristiano",
@@ -8857,7 +8877,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Lucas 19:10",
+  "referencia_biblica": "San Lucas 19:10",
   "tags": [
     "Español",
     "Cristiano",
@@ -8893,7 +8913,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Juan 15:5",
+  "referencia_biblica": "San Juan 15:5",
   "tags": [
     "Español",
     "Cristiano",
@@ -9410,7 +9430,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Mateo 14:28-31",
+  "referencia_biblica": "San Mateo 14:28-31",
   "tags": [
     "Español",
     "Cristiano",
@@ -9463,7 +9483,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Juan 4:10",
+  "referencia_biblica": "San Juan 4:10",
   "tags": [
     "Español",
     "Cristiano",
@@ -9515,7 +9535,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Mateo 6:9, 10",
+  "referencia_biblica": "San Mateo 6:9, 10",
   "tags": [
     "Español",
     "Cristiano",
@@ -9556,7 +9576,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Lucas 11:2",
+  "referencia_biblica": "San Lucas 11:2",
   "tags": [
     "Español",
     "Cristiano",
@@ -9680,7 +9700,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Lucas 8:24",
+  "referencia_biblica": "San Lucas 8:24",
   "tags": [
     "Español",
     "Cristiano",
@@ -9756,7 +9776,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Juan 15:4",
+  "referencia_biblica": "San Juan 15:4",
   "tags": [
     "Español",
     "Cristiano",
@@ -9793,7 +9813,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Mateo 4:19",
+  "referencia_biblica": "San Mateo 4:19",
   "tags": [
     "Español",
     "Cristiano",
@@ -9879,7 +9899,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Mateo 8:26",
+  "referencia_biblica": "San Mateo 8:26",
   "tags": [
     "Español",
     "Cristiano",
@@ -10487,7 +10507,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Juan 17:3",
+  "referencia_biblica": "San Juan 17:3",
   "tags": [
     "Español",
     "Cristiano",
@@ -10762,7 +10782,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Juan 10:14",
+  "referencia_biblica": "San Juan 10:14",
   "tags": [
     "Español",
     "Cristiano",
@@ -10844,7 +10864,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Lucas 22:19",
+  "referencia_biblica": "San Lucas 22:19",
   "tags": [
     "Español",
     "Cristiano",
@@ -11374,7 +11394,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Juan 14:17",
+  "referencia_biblica": "San Juan 14:17",
   "tags": [
     "Español",
     "Cristiano",
@@ -11568,7 +11588,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Juan 21:6",
+  "referencia_biblica": "San Juan 21:6",
   "tags": [
     "Español",
     "Cristiano",
@@ -11727,7 +11747,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Marcos 6:7",
+  "referencia_biblica": "San Marcos 6:7",
   "tags": [
     "Español",
     "Cristiano",
@@ -12562,7 +12582,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Juan 6:37",
+  "referencia_biblica": "San Juan 6:37",
   "tags": [
     "Español",
     "Cristiano",
@@ -13884,7 +13904,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Juan 15:11",
+  "referencia_biblica": "San Juan 15:11",
   "tags": [
     "Español",
     "Cristiano",
@@ -14007,7 +14027,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Juan 3:16",
+  "referencia_biblica": "San Juan 3:16",
   "tags": [
     "Español",
     "Cristiano",
@@ -15000,7 +15020,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Mateo 28:19, 20",
+  "referencia_biblica": "San Mateo 28:19, 20",
   "tags": [
     "Español",
     "Cristiano",
@@ -15669,7 +15689,7 @@
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Marcos 16:15",
+  "referencia_biblica": "San Marcos 16:15",
   "tags": [
     "Español",
     "Cristiano",
