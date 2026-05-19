@@ -124,6 +124,67 @@ function getNumeroHimno(c) {
   return c.idiomas?.[idiomaActual]?.numero_himno ?? "";
 }
 
+// Para buscar ritmo como "" o []
+function normalizeRitmo(ritmo) {
+  if (!ritmo) return [];
+
+  if (Array.isArray(ritmo)) {
+    return ritmo;
+  }
+
+  return ritmo
+    .split("/")
+    .map(r => r.trim())
+    .filter(Boolean);
+}
+
+function formatRitmo(ritmo) {
+  const arr = normalizeRitmo(ritmo)
+    .map(r => (r || "").trim())
+    .filter(Boolean);
+
+  if (!arr.length) return "";
+
+  return arr
+    .sort((a, b) =>
+      a.localeCompare(b, "es", { sensitivity: "base" })
+    )
+    .join(", ");
+}
+
+function normalizeField(value) {
+  if (!value) return [];
+
+  if (Array.isArray(value)) {
+    return value;
+  }
+
+  return [value];
+}
+
+function normalizeTraductor(lang) {
+  const trad = lang?.traductor;
+
+  if (!trad) return [];
+
+  if (Array.isArray(trad)) {
+    return trad;
+  }
+
+  return [trad];
+}
+
+/* para coautor */
+function formatOptionalField(label, value) {
+  const arr = normalizeField(value)
+    .map(v => (v || "").trim())
+    .filter(Boolean);
+
+  if (!arr.length) return "";
+
+  return `<b>${label}:</b> ${arr.join(", ")} | `;
+}
+
 // ===================== LOGO DINAMICO =====================
 function updateLogo() {
 
@@ -499,7 +560,8 @@ function search(q) {
 
       const titulo = normalize(lang?.titulo || "");
       const letra = normalize((lang?.letra || []).join(" "));
-      const traductor = normalize(lang?.traductor || "");
+      const traductor = normalize(normalizeTraductor(lang).join(" "));
+      const traductorArray = normalizeField(lang?.traductor).map(normalize);
 
       return (
         titulo.includes(query) ||
@@ -509,15 +571,18 @@ function search(q) {
     });
 
     // 🔎 Buscar en campos globales
-    const autor = normalize(song.autor || "");
-    const compositor = normalize(song.compositor || "");
+    const autor = normalize(normalizeField(song.autor).join(" "));
+    const coautor = normalize(normalizeField(song.coautor).join(" "));
+    const compositor = normalize(normalizeField(song.compositor).join(" "));
     const compas = normalize(song.compas || "");
     const referencia = normalize(song.referencia_biblica || song.referencia || "");
     const tags = normalize((song.tags || []).join(" "));
-    const ritmo = normalize(song.ritmo || "");
+    const ritmo = normalize(normalizeRitmo(song.ritmo).join(" "));
+    const ritmoArray = normalizeRitmo(song.ritmo).map(normalize);
 
     const matchGlobal =
       autor.includes(query) ||
+      coautor.includes(query) ||
       compositor.includes(query) ||
       compas.includes(query) ||
       referencia.includes(query) ||
@@ -525,6 +590,11 @@ function search(q) {
       ritmo.includes(query);
 
     return matchIdiomas || matchGlobal;
+
+    const matchRitmo = ritmo.includes(query) ||
+      ritmoArray.some(r => r.includes(query));
+
+    return matchIdiomas || matchGlobal || matchRitmo;
   });
 
   const sorted = sortByTitle(results).filter(c =>
@@ -901,8 +971,9 @@ function openSong(id) {
       <div><b>Original:</b> ${song.titulo_original || ""}</div>
 
       <div>
-        <b>Autor:</b> ${song.autor || "Desconocido"} |
-        <b>Compositor:</b> ${song.compositor || "Desconocido"} |
+        ${formatOptionalField("Autor", song.autor || "Desconocido")}
+        ${formatOptionalField("Coautor", song.coautor)}
+        ${formatOptionalField("Compositor", song.compositor || "Desconocido")}
         <b>Año:</b> ${song.year || "Desconocido"}
       </div>
 
@@ -919,7 +990,7 @@ function openSong(id) {
         <b>Tonalidad:</b> ${song.tonalidad || "Desconocido"} |
         <b>BPM:</b> ${song.tempo_bpm || "Desconocido"} |
         <b>Compás:</b> ${song.compas || "Desconocido"} |
-        <b>Ritmo:</b> ${song.ritmo || "Desconocido"} |
+        <b>Ritmo:</b> ${formatRitmo(song.ritmo) || "Desconocido"} |
         <b>Partitura:</b> ${
           song.idiomas?.[idiomaActual]?.partitura
             ? `<a href="${song.idiomas[idiomaActual].partitura}" target="_blank">Click aquí</a>`
