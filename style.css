@@ -762,7 +762,7 @@ body.dark .modal-content {
 @media (max-width: 460px) {
   .song-line {
     font-size: 14px !important;   /* Tamano de letra */
-    line-height: 1.8; /* espacio entre letra y letra */
+    line-height: 1.8; /* espacio entre lineas: 1 muy pegado, 1.8 mas separado */
   }
 
   .lyrics {
@@ -771,7 +771,7 @@ body.dark .modal-content {
 
   .chord {
     font-size: 0.65em !important; /* font-size: 0.65em !important; */ /* 1em     -> mismo tamaño que la letra */
-    top: -1.8em;                  /* Espacio entre letra y tablatura en celulares */
+    top: -3em;                  /* Espacio entre letra y tablatura en celulares */
   }
 }
 
