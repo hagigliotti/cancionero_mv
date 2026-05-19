@@ -571,13 +571,13 @@ body.projector .song-line {
 
 /* LETRA */
 body.projector .lyrics {
-  font-size: 1em;
+  font-size: 3rem;
 }
 
 /* ACORDES (CLAVE) */
 body.projector .chord {
-  font-size: 0.6em;
-  top: -1.4em;
+  font-size: 3rem;
+  top: -1.9em; /* un poco más alto por ser grande */
 }
 
 /* CONTENEDOR DE ACORDE */
