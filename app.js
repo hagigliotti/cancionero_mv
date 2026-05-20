@@ -267,31 +267,6 @@ function detectLibroBySong(song) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ===================== MOBILE =====================
 function isMobileOrTablet() {
   return /Mobi|Android|iPhone|iPad|iPod|Tablet/i.test(navigator.userAgent);
@@ -301,6 +276,13 @@ function handleMenuVisibility() {
     document.getElementById("indice").classList.add("hidden");
   }
 }
+
+function setVH() {
+  document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+}
+
+setVH();
+window.addEventListener('resize', setVH);
 
 
 // ==================================================================================================================================
