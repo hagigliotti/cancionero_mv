@@ -42,7 +42,7 @@
 
           <div class="divider"></div>
 
-          <div class="menu-item"">
+          <div class="menu-item" style="display:flex; justify-content:space-between; align-items:center;">
             📖 Libro:
             <select id="menuLibro">
               <option value="cancionero"">Cancionero MV</option>
@@ -50,7 +50,7 @@
             </select>
           </div>
 
-          <div class="menu-item">
+          <div class="menu-item" style="display:flex; justify-content:space-between; align-items:center;">
             🌐 Idioma:
             <select id="menuIdioma" disabled>
               <option value="es">🇦🇷 Español</option>
@@ -67,8 +67,9 @@
           <div class="divider"></div>
 -->
 
-          <div class="menu-item font-controls">
-            🅰️ Tamaño:
+          <div class="menu-item font-controls" style="display:flex; justify-content:space-between; align-items:center;">
+            
+            🅰️ Tamaño:<br><br>
             <button type="button" onclick="cambiarFuente(-1)">A-</button>
             <button type="button" onclick="resetFuente()">A</button>
             <button type="button" onclick="cambiarFuente(1)">A+</button>
@@ -173,10 +174,9 @@
     <p><strong>Fuente del contenido:</strong></p>
     <ul>
       <li>Cancionero Hosanna 2023</li>
-      <li>Cancionero Iglesia de Olivos (Argentina)</li>
-      <li>Cancioneros varios</li>
-      <li>Innario GA Compagnon 2024</li>
-      <li>Internet</li>
+      <li>Cancionero JA Iglesia Adventista de Olivos (Argentina)</li>
+      <li>Cancioneros varios (internet)</li>
+      <li>Innario GA Compagnon 2024 (Italia)</li>
     </ul>
 
     <p style="font-size: 0.9em;">
@@ -192,7 +192,8 @@
       <li>Modo proyector (iglesia)</li>
       <li>Multi-idioma</li>
       <li>Visualización de acordes</li>
-      <li>Transportacion de acordes</li>
+      <li>Visualización de tonalidades, bpm, etc.</li>
+      <li>Lectura bíblica</li>
     </ul>
 
     <hr>

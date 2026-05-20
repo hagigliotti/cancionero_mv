@@ -299,6 +299,8 @@ function isMobileOrTablet() {
 function handleMenuVisibility() {
   if (isMobileOrTablet()) {
     document.getElementById("indice").classList.add("hidden");
+    const menu = document.getElementById("dropdownMenu");
+    menu.classList.toggle("active");
   }
 }
 
@@ -307,6 +309,14 @@ function handleMenuVisibility() {
 // ===== MENU =================================================================
 function toggleMenu() {
   document.getElementById("dropdownMenu").classList.toggle("active");
+  
+  if (isMobileOrTablet()) {
+    document.getElementById("indice").classList.add("hidden");
+
+    const menu = document.getElementById("dropdownMenu");
+    menu?.classList.remove("active"); // ✅ cerrar siempre
+  }
+
 }
 
 // cerrar al hacer click fuera
@@ -316,21 +326,25 @@ window.addEventListener("click", function (e) {
   const btn = document.getElementById("menuBtn");
 
   const modal = document.getElementById("infoModal");
-  const modalContent = modal?.querySelector(".modal-content");
 
-  // ===== MENU =====
-  if (menu && btn && !menu.contains(e.target) && !btn.contains(e.target)) {
-    closeMenu();
+  // 🚨 CERRAR MENÚ SI ESTÁ ABIERTO Y SE HACE CLICK FUERA
+  const isMenuOpen = menu?.classList.contains("active");
+
+  if (isMenuOpen && menu && btn) {
+    const clickedInsideMenu = menu.contains(e.target);
+    const clickedButton = btn.contains(e.target);
+
+    if (!clickedInsideMenu && !clickedButton) {
+      closeMenu();
+    }
   }
 
   // ===== MODAL INFO =====
   if (modal && modal.style.display === "block") {
-    // cerrar SOLO si clic fuera del contenido del modal
     if (e.target === modal) {
       modal.style.display = "none";
     }
   }
-
 });
 
 // abrir info desde menú (y cerrar menú)
