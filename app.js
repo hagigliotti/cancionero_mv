@@ -185,7 +185,7 @@ function formatOptionalField(label, value) {
   return `<b>${label}:</b> ${arr.join(", ")} | `;
 }
 
-// ===================== LOGO DINAMICO =====================
+// ===================== LOGO DINAMICO - BANNER =====================
 function updateLogo() {
 
   const logo = document.getElementById("logoCancionero");
@@ -202,12 +202,12 @@ function updateLogo() {
   // tema claro
   if (document.body.classList.contains("light-mode")) {
 
-    logo.src = "imagenes/Cancionero_blue.png";
+    logo.src = "imagenes/Banner_blue.png";
     return;
   }
 
   // tema oscuro azul
-  logo.src = "imagenes/Cancionero_white.png";
+  logo.src = "imagenes/Banner_white.png";
 }
 
 // ===================== BOTON LIMPIAR ======================

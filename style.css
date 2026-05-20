@@ -972,14 +972,15 @@ body.projector #alfabeto {
 
 /* BOTON LIMPIAR */
 .clear-btn {
-  min-width: 80px;
+  min-width: 36px;
   height: 36px;
   border-radius: 8px;
-  border: 1px solid #000; /* none */
+  border: 1px solid #000;
   cursor: pointer;
 
-  background: #38bdf8;    /* celeste fijo */
-  color: white;
+  background: #38bdf8;
+  color: #1e293b;
+
   font-weight: bold;
 
   margin-left: 8px;
