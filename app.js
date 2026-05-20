@@ -267,6 +267,31 @@ function detectLibroBySong(song) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ===================== MOBILE =====================
 function isMobileOrTablet() {
   return /Mobi|Android|iPhone|iPad|iPod|Tablet/i.test(navigator.userAgent);
@@ -277,32 +302,35 @@ function handleMenuVisibility() {
   }
 }
 
-function setVH() {
-  document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
-}
-
-setVH();
-window.addEventListener('resize', setVH);
-
 
 // ==================================================================================================================================
 // ===== MENU =================================================================
 function toggleMenu() {
-  const menu = document.getElementById("dropdownMenu");
-  menu.classList.toggle("active");
+  document.getElementById("dropdownMenu").classList.toggle("active");
 }
 
 // cerrar al hacer click fuera
 window.addEventListener("click", function (e) {
+
   const menu = document.getElementById("dropdownMenu");
   const btn = document.getElementById("menuBtn");
 
-  const clickedInsideMenu = menu.contains(e.target);
-  const clickedButton = btn.contains(e.target);
+  const modal = document.getElementById("infoModal");
+  const modalContent = modal?.querySelector(".modal-content");
 
-  if (!clickedInsideMenu && !clickedButton) {
-    menu.classList.remove("active");
+  // ===== MENU =====
+  if (menu && btn && !menu.contains(e.target) && !btn.contains(e.target)) {
+    closeMenu();
   }
+
+  // ===== MODAL INFO =====
+  if (modal && modal.style.display === "block") {
+    // cerrar SOLO si clic fuera del contenido del modal
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+
 });
 
 // abrir info desde menú (y cerrar menú)
