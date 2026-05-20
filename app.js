@@ -1021,7 +1021,8 @@ function openSong(id) {
         <b>Compás:</b> ${song.compas || "Desconocido"} |
         <b>Ritmo:</b> ${formatRitmo(song.ritmo) || "Desconocido"} |
         <b>Partitura:</b> ${
-          song.idiomas?.[idiomaActual]?.partitura
+          song.idiomas?.[idiomaActual]?.partitura &&
+          song.idiomas[idiomaActual].partitura !== "No"
             ? `<a href="${song.idiomas[idiomaActual].partitura}" target="_blank">Click aquí</a>`
             : "No"
         }
