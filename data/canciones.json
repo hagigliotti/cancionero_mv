@@ -21,9 +21,10 @@
       "titulo2": "Arco iris / Has corrido",
       "audio_url": "https://open.spotify.com/intl-es/track/1GdcEMGXs8TKht3jGNwU2m?si=2564f95694b34dc7",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",
       "letra": [
+        "1",
         "[D]¿Has corrido [D7]tras un arco [G]iris",
         "[A]y ahora muy cansado es[D]tás?",
         "[D]Toma todos [D7]esos sueños [G]rotos",
@@ -35,19 +36,27 @@
         "[D]A Jesús, a [F#m-G]Jesús, a Jesús dale [A]todo,",
         "[Em]la tristeza en [A]gozo cambia[D]rá.",
         "",
+        "2",
         "[D]Tan solo el [D7]sol Él nunca prome[G]tió,",
         "[A]Él sabe bien que habrá tor[D]mentas.",
         "[D]Él nos ofrece [D7]un nuevo cora[G]zón",
-        "[A]para cantar en medio del do[D-G-A]lor."
+        "[A]para cantar en medio del do[D-G-A]lor.",
+        "",
+        "Coro:",
+        "[D]A Jesús, a [F#m-G]Jesús, a Jesús dale [A]todo:",
+        "[Em]sueños rotos y un [A]débil cora[D-G-A]zón.",
+        "[D]A Jesús, a [F#m-G]Jesús, a Jesús dale [A]todo,",
+        "[Em]la tristeza en [A]gozo cambia[D]rá."
       ]
     },
     "en": {
       "titulo": "Give Them All to Jesús",
       "audio_url": "https://open.spotify.com/intl-es/track/5vpRPI8gJJAewj8LHwDmQP?si=17171e6509e74b79",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
+        "1",
         "Are you tired of chasing pretty rainbows?",
         "Are you tired of spinning round and round?",
         "Wrap up all the shattered dreams of your life",
@@ -59,6 +68,7 @@
         "Give them all, give them all, give them all to Jesús",
         "And he will turn your sorrow into joy",
         "",
+        "2",
         "He never said there'd only be sunshine",
         "He never said there'd be no rain",
         "He only promised a heart full of singing",
@@ -81,37 +91,49 @@
   "tonalidad": "La Menor (Am)",
   "tempo_bpm": "76",
   "compas": "4/4",
-  "ritmo": ["Whorship"],
+  "ritmo": ["Worship"],
   "referencia_biblica": "San Lucas 14:33",
-  "tags": ["Adoración", "Entrega", "Whorship"],
+  "tags": ["Adoración", "Entrega", "Worship"],
 
   "idiomas": {
     "es": {
       "titulo": "A ti me rindo",
       "audio_url": "https://open.spotify.com/intl-es/track/4CpXovlU8Md47zl5fNt6WR?si=8ff2fcdafe9f44ad",
       "traductor": ["Hillsong Worship"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",        
       "letra": [
+        "1",
         "[Am]Ante ti postrado [C]estoy, aquí.",
         "Te rindo mi [G]ser, te rindo mi [F]ser.",
         "Con tu [Am]amor atráeme, [C]Señor.",
         "Vengo a tus [G]pies, vengo a tus [F]pies.",
-        "A ti me [Am]rindo. [C]- [G]- [F]",
+        "A ti me [Am]rindo. [C]- [G]- [F]-",
         "",
+        "2",
         "[Am]Lléname de gracia, in[C]úndame.",
         "Sacia mi [G]sed, sacia mi [F]sed.",
         "Mi [Am]corazón levanta un [C]clamor:",
         "“Háblame, [G]Dios, háblame [F]Dios.”",
         "",
+        "Coro:",
+        "A ti me [Am]rindo, a ti me [C]rindo.",
+        "Te quiero co[Dm]nocer, más de ti co[F]nocer.",
         "A ti me [Am]rindo, a ti me [C]rindo.",
         "Te quiero co[Dm]nocer, más de ti co[F]nocer.",
         "",
+        "3",
         "Con tu a[F]liento, [C]Dios, sopla en mi in[G]terior.",
         "Cumple, Se[Dm]ñor, tu vo[Am]luntad en [G]mí.",
         "Con tu [F]gran po[C]der muévete en mi [G]ser.",
         "Cumple, Se[Dm]ñor, tu vo[Am]luntad en [G]mí.",
         "",
+        "(Repite dos veces estrofa 3)",
+        "",
+        "Cumple, Se[Dm]ñor, tu vo[Am]luntad en [G]mí.",
+        "",
+        "A ti me [Am]rindo, a ti me [C]rindo.",
+        "Te quiero co[Dm]nocer, más de ti co[F]nocer.",
         "A ti me [Am]rindo, a ti me [C]rindo.",
         "Te quiero co[Dm]nocer, más de ti co[F]nocer."
       ]
@@ -120,34 +142,42 @@
     "titulo": "I Surrender",
     "audio_url": "https://open.spotify.com/intl-es/track/2Ilbv0FdK3FDydyjwLYbz9?si=1dd0c7eaaa3a4b65",
     "traductor": ["-"],
-    "partitura": "",
+    "partitura": "No",
     "revisado": "No",
     "letra": [
+      "1",
       "Here I am down on my knees again",
       "Surrendering all, surrendering all",
       "Find me here, Lord as You draw me near",
       "Desperate for You, desperate for You",
       "I surrender",
       "",
+      "2",
       "Drench my soul as mercy and grace unfold",
       "I hunger and thirst, I hunger and thirst",
       "With arms stretched wide, I know You hear my cry",
       "Speak to me now, speak to me now",
       "",
+      "Chorus:",
+      "I surrender, I surrender",
+      "I want to know You more, I want to know You more",
       "I surrender, I surrender",
       "I want to know You more, I want to know You more",
       "",
+      "3",
       "Like a mighty rushing wind, Jesús breathe within",
       "Lord, have Your way, Lord, have Your way in me",
       "Like a mighty storm, stir within my soul",
-      "Lord, have Your way, Lord, have Your way in me"
+      "Lord, have Your way, Lord, have Your way in me",
+      "",
+      "(Repeat verse 3 twice)"
       ]
     },
     "pt": {
       "titulo": "Eis-me Aqui (Rendido Estou)",
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-it/track/5t9qLUojvUs3dLoJ65K16m",
       "traductor": ["Aline Barros", "Hillsong em Português"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",
       "letra": [
         "Eis-me aqui, prostrado outra vez",
@@ -171,10 +201,10 @@
       ]
     },
     "it": {
-      "titulo": "Io mi arrendo",
-      "audio_url": "",
+      "titulo": "Io mi arrendo (*)",
+      "audio_url": "https://open.spotify.com/intl-it/track/7dCIPGbgjse1CkEX1aEsEt",
       "traductor": ["Hillsong in Italiano"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",
       "letra": [
         "Eccomi, prostrato ai piedi Tuoi",
@@ -211,14 +241,16 @@
       "titulo": "A ti Señor",
       "audio_url": "https://open.spotify.com/intl-es/track/1pvS9HylBSoYdlteJhUZDd?si=7326e73e72004a44",
       "traductor": ["Desconocido"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",
       "letra": [
+        "1",
         "[F]A ti Señor, [C]alzaré mi [F]voz",
         "para [Bb]adorar[Gm]te, mi Salva[C]dor.[C7]",
         "[F]Acepta hoy, mi [C]rey y Se[F]ñor,",
         "[F7]el humilde [Bb]don [Gm]de mi [Bb]amor [C]en ora[F]ción.",
         "",
+        "2",
         "[F]Te amo oh Dios, [C]alzo a tí mi [F]voz",
         "mi [Bb]ser lo [Gm]anhela con devo[C]ción.[C7]",
         "[F]Que mi alma [C]con gratitud Se[F]ñor",
@@ -229,12 +261,26 @@
       "titulo": "I love you, Lord",
       "audio_url": "https://open.spotify.com/intl-es/track/3mIyisrMRbIpsInWOd3JTd?si=257ef60816d14364",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "I love You, Lord, and I lift my voice",
         "To worship You, O my soul rejoice!",
         "Take joy, my King, in what You hear,",
+        "May it be a sweet, sweet sound in Your ear.",
+        "",
+        "I love You, Lord, and I lift my voice",
+        "To worship You, O my soul rejoice!",
+        "Take joy, my King, in what You hear,",
+        "May it be a sweet, sweet sound in Your ear.",
+        "",
+        "I love You, Lord, and I lift my voice",
+        "To worship You, O my soul rejoice!",
+        "Take joy, my King, in what You hear,",
+        "May it be a sweet, sweet sound in Your ear.",
+        "",
+        "May it be a sweet, sweet sound",
+        "May it be a sweet, sweet sound",
         "May it be a sweet, sweet sound in Your ear."
       ]
     },
@@ -242,7 +288,7 @@
       "titulo": "Eu Te amo, ó Deus",
       "audio_url": "",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",
       "letra": [
         "Eu Te amo, ó Deus, e com a minha voz",
@@ -269,29 +315,34 @@
       "titulo": "Abba (Nunca falla)",
       "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "Si",
       "letra": [
+        "1",
         "[G]Escucho tu [C]corazón,",
         "cada latido está llamando mi [C]nombre.",
         "Soy atraído otra vez por tu [C]sangre,",
         "me siento tan amado por [G]ti.",
-        "br","br",
+        "",
+        "2",
         "Me encuentro en tu [C]corazón,",
         "decidiste aceptarme por si[G]empre.",
         "Tu amor por mí es tan sorprend[C]ente,",
         "me siento tan mimado por [G]ti.",
-        "br","br",
+        "",
+        "3",
         "Y es tan [D/F#]bello saber que soy [Em]hijo",
         "y que [D/F#]tengo un lugar en tu [G]mesa.",
         "No hay [D/F#]nada mejor que escuc[Em]har tu voz",
         "diciendo: [D/F#]nuestra comunión es et[G]erna.",
-        "br","br",
+        "",
+        "4",
         "Oh, oh, oh, [Am]oh, oh, oh, oh, [D/F#]oh,",
         "me amaste prim[G]ero, con amor verdadero.",
         "Oh, oh, oh, [Am]oh, oh, oh, oh, [D/F#]oh,",
         "y mi respuesta es ador[G]ar, mi respuesta es adorar.",
-        "br","br",
+        "",
+        "",
         "[Am]Abb[Em]a,[D/F#]tu am[G]or nunca falla, siempre me abrazas. (x4)"
       ]
     }
@@ -307,14 +358,14 @@
   "compas": "4/4",
   "ritmo": ["Balada"],
   "referencia_biblica": "Salmos 119:18",
-  "tags": ["Adoración", "Clásico", "Petición","Whorship"],
+  "tags": ["Adoración", "Clásico", "Petición","Worship"],
 
   "idiomas": {
     "es": {
       "titulo": "Abre mis ojos",
       "audio_url": "",
       "traductor": ["Desconocido"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",
       "letra": [
         "[D]Abre mis [G]ojos, [A]Jesús quiero [D]verte,[Bm]",
@@ -332,7 +383,7 @@
       "titulo": "Open Our Eyes, Lord",
       "audio_url": "https://open.spotify.com/intl-es/track/1Dj8ivrq5Q0mW5jehGTUop?si=d0c26c2eafba4f62",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",
       "letra": [
         "Open our eyes, Lord, we want to see Jesús,",
@@ -350,7 +401,7 @@
       "titulo": "Abre os Meus Olhos",
       "audio_url": "",
       "traductor": ["Vincit"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",
       "letra": [
         "Abre os meus olhos, pois quero ver Cristo,",
@@ -361,9 +412,9 @@
     },
     "it": {
       "titulo": "Apri i miei occhi",
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-it/track/64u61kvWsD3YcsE3ACu2AZ?si=b5fa6e14eec448e0",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",
       "letra": [
         "Rit. [DO]Apri i miei [FA]occhi e [SOL]fammi ve[DO]dere,",
@@ -398,14 +449,14 @@
   "compas": "4/4",
   "ritmo": ["Worship"],
   "referencia_biblica": "Apocalipsis 4:8",
-  "tags": ["Adoración", "Michael W. Smith", "Clásico"],
+  "tags": ["Adoración", "Worship", "Clásico"],
 
   "idiomas": {
     "es": {
       "titulo": "Abre mis ojos, oh Cristo",
-      "audio_url": "https://open.spotify.com/intl-es/track/5iI4CdQvwwrrrBAVi88e9e?si=bd476b755006419c",
+      "audio_url": "https://open.spotify.com/search/abre%20mis%20ojos%20jesus%20quiero%20verte",
       "traductor": ["Desconocido"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",
       "letra": [
         "[D]Abre mis ojos, oh Cristo,",
@@ -428,7 +479,7 @@
       "titulo": "Open the eyes of my heart",
       "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",
       "letra": [
         "Open the eyes of my heart, Lord",
@@ -451,7 +502,7 @@
       "titulo": "Abre os olhos do meu coração",
       "audio_url": "",
       "traductor": ["David Quinlan"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",
       "letra": [
         "Abre os olhos do meu coração",
@@ -482,14 +533,14 @@
   "compas": "4/4",
   "ritmo":  ["Worship", "Adoración"],
   "referencia_biblica": "Salmos 22:1 / Apocalipsis 19:6",
-  "tags": ["Adoración", "Whorship", "Majestuoso"],
+  "tags": ["Adoración", "Worship", "Majestuoso"],
 
   "idiomas": {
     "es": {
       "titulo": "Agnus dei",
       "audio_url": "https://open.spotify.com/intl-es/track/6TCTLO5PX5MJa5KN1Asibl?si=8be077456f7f4e66",
       "traductor": ["Desconocido"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "[G]Ale[C]lu[G]ya, ale[C]lu[Em]ya! Te ala[D]bamos, Se[C]ñor, nuestro [G]Rey.",
@@ -506,7 +557,7 @@
       "titulo": "Agnus Dei",
       "audio_url": "https://open.spotify.com/intl-es/track/1N9SysNAP8j4wbAIHzlM9m?si=6697f706725e4098",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "Alleluia, alleluia! For the Lord God Almighty reigns.",
@@ -523,7 +574,7 @@
       "titulo": "Agnus Dei",
       "audio_url": "https://open.spotify.com/intl-es/track/16hnXXqWrwbQGoNtvLx72r?si=c5712a753b5a449b",
       "traductor": ["David Quinlan"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "Aleluia, aleluia! Pois o Senhor Deus Todo-Poderoso reina.",
@@ -540,7 +591,7 @@
       "titulo": "Agnus Dei",
       "audio_url": "",
       "traductor": ["RNS"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "Alleluia, alleluia! Il Signore Dio l'Onnipotente regna.",
@@ -572,7 +623,7 @@
       "titulo": "Al comenzar la semana",
       "audio_url": "https://open.spotify.com/intl-es/track/5MJ8DFLauPlvNTNGlbJZZx?si=dedd8715d6264a6a",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "[G]Al comenzar la semana, [C]¡qué ale[G]gría que me [D]da",
@@ -600,7 +651,7 @@
       "titulo": "Al encuentro de Jesús",
       "audio_url": "https://www.youtube.com/watch?v=UVuli_xt5bs&list=RDUVuli_xt5bs&start_radio=1",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "[E]Al encuentro de Jesús e[B]levo [A]mi [E]voz,",
@@ -630,7 +681,7 @@
       "titulo": "Al lado de Jesús",
       "audio_url": "https://open.spotify.com/intl-es/track/4HtVl7sQxvG8d1d5snMZEy?si=d4301577726d4e8d",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "[C]La vida es dura, lo sé [G]bien, los problemas nublan tu [Am]fe.",
@@ -670,7 +721,7 @@
       "titulo": "Al son del cocodrilo",
       "audio_url": "",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "[D]Al son del cocodrilo y el orangután,",
@@ -749,7 +800,7 @@
       "titulo": "Alabaré",
       "audio_url": "https://open.spotify.com/intl-es/track/10fMN6ZyntPNkP46uBaqB1?si=a50bbc0362864e6a",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "Alaba[D]ré, alabaré, alaba[Bm]ré, alabaré,",
@@ -782,7 +833,7 @@
       "titulo": "Alegre voy cantando",
       "audio_url": "https://open.spotify.com/intl-es/track/2pNw22LMg6REMr9MAMvwej?si=f30689be90e54b41",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "[G]Alegre voy cantando en el [C]camino de la [Am]vida y la ver[D]dad. [G]- [Em]- [C]- [D]",
@@ -801,7 +852,7 @@
       "titulo": "Alegre vou cantando",
       "audio_url": "",
       "traductor": ["Desconocido"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "Alegre vou cantando no caminho da dita e da verdade.",
@@ -835,7 +886,7 @@
       "titulo": "Alma misionera",
       "audio_url": "https://open.spotify.com/intl-es/track/6f7mT8i8Yg4ZwVAkTCq0D7?si=c4133db48e4444e7",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "[G]Señor, [D]toma mi vida [Em]nueva [C]antes de que la es[G]pera desgas[D]te años en mí.",
@@ -872,7 +923,7 @@
       "titulo": "Alto, escúchame",
       "audio_url": "https://open.spotify.com/intl-es/track/4bOQA47v0L3S4OSxOyoI5J?si=410beb6055b64bcf",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "[E]Alto, escúchame, no [A]sigas [B]caminando [E]más.",
@@ -906,7 +957,7 @@
       "titulo": "Amigo, ¿amas a Cristo?",
       "audio_url": "",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "- Amigo, ¿amas a Cristo?",
@@ -942,7 +993,7 @@
       "titulo": "Amigos de esperanza",
       "audio_url": "",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",
       "letra": [
         "1",
@@ -1024,7 +1075,7 @@
       "titulo": "Amor sin condición",
       "audio_url": "https://open.spotify.com/intl-es/track/4grfKR7wfoHZeWjb9QjTTE?si=3cdc08de1ea94e6c",
       "traductor": ["Abels Worship"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "[C#m]Aun antes de ha[B]blar, tu voz po[A]día oír,",
@@ -1072,7 +1123,7 @@
       "titulo": "Amor tan grande",
       "audio_url": "",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "[C]Amor tan grande, pro[F]fundo y su[C]blime",
@@ -1096,7 +1147,7 @@
       "titulo": "Amor tão grande",
       "audio_url": "",
       "traductor": ["Desconocido"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "Amor tão grande, profundo e sublime,",
@@ -1130,7 +1181,7 @@
       "titulo": "Amor, amor",
       "audio_url": "https://open.spotify.com/intl-es/track/4lUyqsYCCMcmkqAnlOhjRb?si=6c0cc53fc6ae495e",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "[Dm]Amor, amor, [C]amor, [Dm]amor, [A]es el evangelio en una palabra.",
@@ -1161,7 +1212,7 @@
       "titulo": "Apasionado por Jesús",
       "audio_url": "",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "[C]No es solo emo[Em]ción, [F]es una ver[G]dad.",
@@ -1203,7 +1254,7 @@
       "otros_titulos": "Abres caminos",
       "audio_url": "https://open.spotify.com/intl-es/track/5rAZEl2NlSsc9ws7s1dykp?si=5ef19641d5614f7f",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "[C]Aquí estás, te vemos mo[G]ver.",
@@ -1234,7 +1285,7 @@
       "titulo": "Waymaker",
       "audio_url": "https://open.spotify.com/intl-es/track/0hLsDRLsfvwExXMBeDS53k?si=f0e267a0ab5f45b7",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "You are here, moving in our midst, I worship You, I worship You.",
@@ -1253,7 +1304,7 @@
       "titulo": "Aprirai una via",
       "audio_url": "https://open.spotify.com/intl-es/track/7t8fxi06k76NjobLDOMWn8?si=e0ce1eb52592494d",
       "traductor": ["Desconocido"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "Tu sei qui, ti muovi tra di noi, adoro te, adoro te.",
@@ -1288,7 +1339,7 @@
       "titulo": "Arroyo ancho",
       "audio_url": "",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "[Em]Arroyo [Am]ancho [D]no lo podremos cru[Em]zar,",
@@ -1327,7 +1378,7 @@
       "titulo": "Avancemos",
       "audio_url": "https://open.spotify.com/intl-es/track/2K57VJVpndg6QUOLqnoI8D?si=879f2b432ef04516",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",      
       "letra": [
         "[D]Avancemos [G]en la [D]luz, [A]",
@@ -1359,7 +1410,7 @@
   "compas": "",
   "ritmo": ["Desconocido"],
   "referencia_biblica": "",
-  "tags": ["Alabanza", "Adoración", "Bienvenida", "Sábado", "Comunidad", "Fraternidad", "Whorship"],
+  "tags": ["Alabanza", "Adoración", "Bienvenida", "Sábado", "Comunidad", "Fraternidad", "Worship"],
 
   "idiomas": {
     "es": {
@@ -1715,7 +1766,7 @@
   "compas": "",
   "ritmo": ["Desconocido"],
   "referencia_biblica": "Job 1:21",
-  "tags": ["Whorship"],
+  "tags": ["Worship"],
 
   "idiomas": {
     "en": {
@@ -4715,6 +4766,44 @@
         "[E7]Yo le amo, tú le amas,",
         "[A]su escudo sobre mí es amor.",
         "Su [E]escudo [B]sobre mí es [E]amor."
+      ]
+    }
+  }
+},
+{ "id": "en_mi_alma_suena_un_cantar",
+  "titulo_original": "He Keeps Me Singing",
+  "autor": "Luther B. Bridgers",
+  "compositor": "Luther B. Bridgers",
+  "year": "1910",
+  "tonalidad": "G",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "Himno / Alabanza",
+  "referencia_biblica": "Efesios 5:19",
+  "tags": ["Himno Clásico", "Adoración", "Paz", "Gozo", "Melodía Celestial" ],
+  "idiomas": {
+    "es": {
+      "titulo": "En mi alma suena un cantar",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[Estrofa 1]",
+        "En mi [G] alma suena un cantar,",
+        "un cantar de [A7] paz y [D7] amor;",
+        "reali[G]dad que Dios me da,",
+        "pues de [G] Cristo [D7] soy y de [G] El señor.",
+        "",
+        "[Coro]",
+        "[G] Cristo, Cristo, Cristo,",
+        "nombre [A7] sin i[D7]gual;",
+        "llenas [G] siempre mi alma",
+        "de un can[D7]tar ce[G]lestial.",
+        "",
+        "[Estrofa 2]",
+        "Por el [G] mundo caminando voy,",
+        "del cal[A7]vario en [D7] la luz;",
+        "testi[G]ficando siempre estoy,",
+        "de mi [G] amado y [D7] buen Je[G]sús."
       ]
     }
   }
@@ -10398,7 +10487,7 @@
       "titulo": "Prometo fidelidad a la Biblia",
       "audio_url": "",
       "traductor": ["-"],
-      "partitura": "",
+      "partitura": "No",
       "revisado": "No",
       "letra": [
         "Prometo fidelidad a la Biblia",
@@ -13820,6 +13909,57 @@
     }
   }
 },
+{ "id": "ven_a_la_cruz",
+  "titulo_original": "Ven a la cruz",
+  "autor": ["Desconocido"],
+  "compositor": "",
+  "year": "",
+  "tonalidad": "",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Desconocido"],
+  "referencia_biblica": "",
+  "tags": ["Alabanza", "Testimonio", "Llamado", "Invitacion"],
+  "idiomas": {
+    "es": {
+      "titulo": "Ven a la cruz",
+      "audio_url": "",
+      "traductor": ["-"],
+      "letra": [
+        "¿Tienes dudas en tu ser?",
+        "¿O temes no poder vencer?",
+        "Mira a Aquel,",
+        "que luchó y venció por ti.",
+        "",
+        "Si aceptas su amor,",
+        "su alegría, su perdón,",
+        "gozo habrá en tu corazón. ",
+        "Ven conmigo a la cruz.",
+        "",
+        "Coro:",
+        "Y verás a Jesús. ",
+        "Tendrás la paz de su luz.",
+        "Su muerte vida nos dio, por amor.",
+        "Él te llama, ven a la cruz",
+        "",
+        "No demores en venir",
+        "a sus pies y recibir",
+        "el perdón por el cual murió.",
+        "Ven conmigo a la cruz",
+        "",
+        "Coro:",
+        "Y verás a Jesús. ",
+        "Tendrás la paz de su luz.",
+        "Su muerte vida nos dio, por amor.",
+        "Él te llama, ven a la cruz"        
+      ]
+    }
+  }
+},
+
+
+
+
 { "id": "vengo_a_adorarte",
   "titulo_original": "Here I am to worship",
   "autor": "Tim Hughes",
@@ -15633,6 +15773,64 @@
     }
   }
 },
+{
+  "id": "yo_tengo_un_amigo_que_me_ama",
+  "titulo_original": "",
+  "autor": "Tradicional",
+  "compositor": "Tradicional",
+  "year": "",
+  "tonalidad": "F",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "Alabanza / Infantil",
+  "referencia_biblica": "Juan 15:13-15",
+  "tags": ["Alabanza", "Infantil", "Corito", "Amistad", "Amor de Jesús"],
+  "idiomas": {
+    "es": {
+      "titulo": "Yo tengo un amigo que me ama",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "[F] Yo tengo un amigo que me [Dm7] ama",
+        "[C] Me ama, [F] me ama,",
+        "[C] Yo [F] tengo un amigo que me [Dm7] ama",
+        "[C] Su nombre es Je[F]sús",
+        "",
+        "[Bb] Que me ama, que me [F] ama",
+        "[C] Que me ama, si, con tierno a[F]mor",
+        "[Bb] Que me ama, que me [F] ama,",
+        "[C] Su nombre es Je[F]sús."
+      ]
+    }
+  }
+},
+{
+  "id": "yo_tengo_un_amigo_que_se_llama_jesus",
+  "titulo_original": "",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "",
+  "tonalidad": "F",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Desconocido"],
+  "referencia_biblica": "",
+  "tags": ["Alabanza", "Infantil", "Corito", "Amistad", "Amor de Jesús"],
+  "idiomas": {
+    "es": {
+      "titulo": "Yo tengo un amigo que se llama Jesús",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "Yo tengo un amigo que se llama Jesús",
+        "El conoce mis penas, y las ilumnia con su luz.",
+        "El es mi esperanza, mi esperanza tan anhelada",
+        "Hoy te lo presento, pues tarde sera manana",
+        ""
+      ]
+    }
+  }
+},
 { "id": "yo_voy",
   "titulo_original": "Pés na terra, olhos no céu",
   "autor": "Jader Santos",
@@ -15655,7 +15853,7 @@
   ],
   "idiomas": {
     "es": {
-      "titulo": "Yo voy",
+      "titulo": "Yo voy (1)",
       "audio_url": "",
       "traductor": ["-"],
       "letra": [
@@ -15702,7 +15900,7 @@
   ],
   "idiomas": {
     "es": {
-      "titulo": "Yo voy",
+      "titulo": "Yo voy (2)",
       "audio_url": "",
       "traductor": ["-"],
       "letra": [
