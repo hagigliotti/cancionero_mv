@@ -342,14 +342,10 @@ a.menu-item {
 
 /* **********  INDICE (Lista de canciones debajo del alfabeto) ********** */ 
 #indice {
-  position: fixed;
-  top: 120px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow-y: auto;
-  background: inherit;
-  z-index: 1000;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 #indice.hidden {
