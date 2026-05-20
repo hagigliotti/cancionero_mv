@@ -4,18 +4,8 @@ body {
   font-family: system-ui;
   transition: background 0.3s ease, color 0.3s ease;
   font-size: 16px;
-  overflow-y: scroll;
 }
 
-html {
-  -webkit-text-size-adjust: 100%;
-}
-
-html, body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
 
 h1 {
   text-align: center;
@@ -34,13 +24,6 @@ h1 {
 #contenido {
   padding: 10px;
   font-size: 16px;
-}
-
-#contenido,
-#indice,
-.top-bar {
-  max-width: 100vw;
-  box-sizing: border-box;
 }
 
 .song-line {
@@ -342,14 +325,9 @@ a.menu-item {
 
 /* **********  INDICE (Lista de canciones debajo del alfabeto) ********** */ 
 #indice {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-#indice.hidden {
-  display: none;
+  width: 90%;         /* ocupa el 90% */
+  margin: 0 auto;     /* centrado perfecto */
+  padding: 0;
 }
 
 #indice li {
