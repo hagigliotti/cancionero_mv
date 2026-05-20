@@ -478,6 +478,13 @@ function resetFuente() {
 
 // ===== PROYECTOR ============================================================================
 function toggleProjectorMode() {
+
+  // 🚫 bloquear en celulares y tablets
+  if (isMobileOrTablet()) {
+    alert("📱 El modo proyector solo está disponible en Desktops.");
+    return;
+  }
+
   const body = document.body;
 
   if (body.classList.contains("projector")) {
