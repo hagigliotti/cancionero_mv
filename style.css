@@ -944,7 +944,6 @@ body.dark .modal-content {
 body.projector {
   background: black;
   color: white;
-
 }
 
 body.projector h1 {
@@ -999,8 +998,6 @@ body.projector .clear-btn {
   background: #38bdf8;
   color: #1e293b;
 }
-
-
 
 .alpha {
   min-width: 36px;

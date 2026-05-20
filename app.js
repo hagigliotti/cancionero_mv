@@ -428,6 +428,13 @@ const FLAG_NAMES = {
 
 let fontSizeLevel = 0;
 
+function getMaxFontLevel() {
+  if (window.innerWidth < 480) return 4;     // móvil
+  if (window.innerWidth < 768) return 6;     // tablet
+  if (window.innerWidth < 1024) return 8;    // laptop
+  return 10;                                  // desktop/wide
+}
+
 // tamaños BASE
 const BASE_LYRICS_SIZE = 26;
 const BASE_CHORD_SIZE = 26;
@@ -460,10 +467,11 @@ function applyFontSize() {
 
 function cambiarFuente(step) {
 
+  const max = getMaxFontLevel();
+
   fontSizeLevel += step;
 
-  // límites
-  if (fontSizeLevel > 10) fontSizeLevel = 10;
+  if (fontSizeLevel > max) fontSizeLevel = max;
   if (fontSizeLevel < -10) fontSizeLevel = -10;
 
   applyFontSize();
