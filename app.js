@@ -731,27 +731,41 @@ function renderAlphabet() {
   // siempre incluir *
   letras.unshift("*");
 
-  container.innerHTML =
-    letras.map(l => {
+  container.innerHTML = `
+    <div class="alpha-row">
 
-      const label = 
-        l === "*" ? "🔤" :
-        l === "#" ? "#️⃣" :
-        l;
+      ${letras.map(l => {
 
-      const title =
-        l === "*" ? "Lista de todas las canciones" :
-        l === "#" ? "Orden numérico" :
-        `Letra ${l}`;
+        const label =
+          l === "*" ? "🔤" :
+          l === "#" ? "#️⃣" :
+          l;
 
-      return `<button 
-        class="alpha ${l === letraActiva ? "active" : ""}"
-        onclick="selectLetter('${l}')"
-        title="${title}">
-        ${label}
-      </button>`;
-    }).join("") +
-    `<button class="clear-btn" onclick="clearAll()" title="Limpiar">🧹</button>`;
+        const title =
+          l === "*" ? "Lista de todas las canciones" :
+          l === "#" ? "Orden numérico" :
+          `Letra ${l}`;
+
+        return `
+          <button 
+            class="alpha ${l === letraActiva ? "active" : ""}"
+            onclick="selectLetter('${l}')"
+            title="${title}">
+            ${label}
+          </button>
+        `;
+      }).join("")}
+
+      <!-- BOTÓN LIMPIAR DENTRO DEL MISMO FLUJO -->
+      <button 
+        class="alpha clear-btn"
+        onclick="clearAll()" 
+        title="Limpiar">
+        🧹
+      </button>
+
+    </div>
+  `;
 }
 
 function selectLetter(l) {

@@ -221,7 +221,6 @@ a.menu-item {
 
 
 /* ===================== LETRA Y ACORDES ===================== */
-
 /* letra más grande */
 .lyrics {
   font-size: 26px;
@@ -298,12 +297,22 @@ a.menu-item {
 
 
 /* -------------------- MENU ALFABETO ------------------------------------------------------------ */
+.alpha-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  align-items: center;
+}
+
 #alfabeto {
   display: flex;
   flex-wrap: wrap;          /* permite múltiples filas */
-  justify-content: center;  /* centra los botones */
+  justify-content: flex-start; /*center;  centra los botones */
   gap: 6px;
   padding: 10px;
+  
 }
 
 .alpha {
@@ -971,19 +980,19 @@ body.projector #alfabeto {
 
 /* BOTON LIMPIAR */
 .clear-btn {
-  min-width: 36px;
+  width: 36px;
   height: 36px;
   border-radius: 8px;
   border: 1px solid #000;
   cursor: pointer;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background: #38bdf8;
   color: #1e293b;
-
   font-weight: bold;
-
-  margin-left: 8px;
-  transition: 0.2s;
 }
 
 .clear-btn:hover {
