@@ -306,31 +306,21 @@ function handleMenuVisibility() {
 // ==================================================================================================================================
 // ===== MENU =================================================================
 function toggleMenu() {
-  document.getElementById("dropdownMenu").classList.toggle("active");
+  const menu = document.getElementById("dropdownMenu");
+  menu.classList.toggle("active");
 }
 
 // cerrar al hacer click fuera
 window.addEventListener("click", function (e) {
-
   const menu = document.getElementById("dropdownMenu");
   const btn = document.getElementById("menuBtn");
 
-  const modal = document.getElementById("infoModal");
-  const modalContent = modal?.querySelector(".modal-content");
+  const clickedInsideMenu = menu.contains(e.target);
+  const clickedButton = btn.contains(e.target);
 
-  // ===== MENU =====
-  if (menu && btn && !menu.contains(e.target) && !btn.contains(e.target)) {
-    closeMenu();
+  if (!clickedInsideMenu && !clickedButton) {
+    menu.classList.remove("active");
   }
-
-  // ===== MODAL INFO =====
-  if (modal && modal.style.display === "block") {
-    // cerrar SOLO si clic fuera del contenido del modal
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
-  }
-
 });
 
 // abrir info desde menú (y cerrar menú)
