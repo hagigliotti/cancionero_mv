@@ -7077,6 +7077,38 @@
 },
 
 { "_comment8": "LETRA H ---------------------------------------------------------------------------------------------------------------------------------------    LETRA H" },
+{ "id": "himno_aventureros",
+  "titulo_original": "",
+  "autor": "Wanderson Paiva",
+  "compositor": "Wanderson Paiva",
+  "year": "1995 ",
+  "tonalidad": "",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": "Marcha",
+  "referencia_biblica": "Mateo 5:16",
+  "tags": ["Jóvenes", "Club"],
+  "idiomas": {
+    "es": {
+      "titulo": "Himno de los Aventureros",
+      "audio_url": "",
+      "traductor": "",
+      "letra": [
+        "Estrofa 1",
+        "Somos Aventureros alegres",
+        "Que confían en Cristo Jesús",
+        "Aprendemos que siempre debemos",
+        "Reflejar para el mundo su luz",
+        "",
+        "Estrofa 2",
+        "Descubrimos en todo belleza",
+        "Y el amor de un Dios Creador",
+        "Y amando a Cristo haremos",
+        "Maravillas mostrando su amor"
+      ]
+    }
+  }
+},
 { "id": "himno_conquistadores",
   "titulo_original": "Pathfinder Song",
   "autor": "Henry Berg",
@@ -7160,6 +7192,39 @@
         "Bientot des cieux revient le Sauveur",
         "Pour moi, pour vous."
       ]
+    }
+  }
+},
+{  "id": "himno_de_los_guias_mayores",
+  "titulo_original": "Master Guide Song",
+  "autor": [""],
+  "compositor": [""],
+  "year": "",
+  "tonalidad": "",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Himno", "Marcha"],
+  "referencia_biblica": ["2 Timoteo 4:8", "Daniel 12:3"],
+  "tags": ["Español", "Cristiano", "Himno", "Guías Mayores", "Club de Guías Mayores", "Jóvenes", "Salvación", "Servicio"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Himno de los Guías Mayores",
+      "audio_url": "",
+      "traductor": [""],
+      "partitura": "No",
+      "revisado": "No",        
+      "letra": [
+        "Avancemos sin temor Guías Mayores",
+        "Investidos con valor",
+        "Ayudando a los jóvenes que quieren",
+        "De Jesús en pos seguir",
+        "Anunciando el mensaje a los perdidos",
+        "Constreñido el corazón",
+        "Que en el cielo nos espera una corona",
+        "Con estrellas que Dios nos dará"
+      ],
+      "nota": "en otras partes de sudamerica existe otra estrofa no avalada por la DSA"
     }
   }
 },
