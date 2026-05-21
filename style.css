@@ -83,7 +83,7 @@ h1 {
   border: none;
   background: transparent;
   cursor: pointer;
-  Color: #1e293b; 
+  Color: #122033; 
 }
 
 /* modo oscuro */
@@ -115,7 +115,7 @@ h1 {
   width: 240px;
   display: none;
   z-index: 9999;
-  color: #1e293b;
+  color: #122033;
 }
 
 .dropdown-menu.active {
@@ -199,7 +199,7 @@ a.menu-item {
   height: 42px;
   border-radius: 50%;
   border: 1px solid #000;
-  background: #1e293b;
+  background: #122033;
   font-size: 20px;
   cursor: pointer;
   color: white;
@@ -207,7 +207,7 @@ a.menu-item {
 
 .light-mode #langBtn {
   background: white;
-  color: #1e293b;
+  color: #122033;
 }
 
 /* *** Favoritos */
@@ -336,7 +336,7 @@ a.menu-item {
   padding: 10px;
   margin: 10px 0;   /* solo vertical */
   
-  background: #1e293b;
+  background: #122033;
   border-radius: 20px;
   cursor: pointer;
 }
@@ -436,7 +436,7 @@ a.menu-item {
   -webkit-appearance: none;
   -moz-appearance: none;
 
-  background: #1e293b;
+  background: #122033;
   color: white;
 
   border: 1px solid #000;
@@ -529,29 +529,29 @@ a.menu-item {
 /* MODO OSCURO 🕶️ → botón blanco */
 .dark-mode  {
   background: #ffffff;  /*Fondo blanco*/
-  color: #1e293b;       /*Letras negras 000000*/
+  color: #122033;       /*Letras negras 000000*/
 }
 
 /* COLOR DE FONDO LISTA */
 .light-mode #indice li {
   background: #e2e8f0; 
-  color: #1e293b;
+  color: #122033;
 }
 
 .dark-mode #indice li {
-  background: #1e293b;
+  background: #122033;
   color: white;
 }
 
 /* BOTONES ALFABETO */
 .light-mode .alpha {
   background: #e2e8f0;
-  color: #1e293b;
+  color: #122033;
   font-weight: bold;
 }
 
 .dark-mode .alpha {
-  background: #1e293b;
+  background: #122033;
   color: white;
   font-weight: bold;
 }
@@ -627,7 +627,7 @@ body.projector #alfabeto {
   overflow-y: auto;
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
   background: white;
-  color: #1e293b;
+  color: #122033;
 }
 
 /* BOTÓN CERRAR */
@@ -813,7 +813,7 @@ body.dark .modal-content {
   -webkit-appearance: none;
   -moz-appearance: none;
 
-  background: #1e293b;
+  background: #122033;
   color: white;
 
   border: 1px solid #000;
@@ -834,7 +834,7 @@ body.dark .modal-content {
 }
 
 .light-mode #libro {
-  background: #1e293b;
+  background: #122033;
   color: white;
 }
 
@@ -988,7 +988,7 @@ body.projector #alfabeto {
   justify-content: center;
 
   background: #38bdf8;
-  color: #1e293b;
+  color: #122033;
   font-weight: bold;
 }
 
@@ -1002,7 +1002,7 @@ body.projector #alfabeto {
 .dark-mode .clear-btn,
 body.projector .clear-btn {
   background: #38bdf8;
-  color: #1e293b;
+  color: #122033;
 }
 
 .alpha {
