@@ -218,7 +218,7 @@ function updateLogo() {
   // tema claro
   if (document.body.classList.contains("light-mode")) {
 
-    logo.src = "imagenes/Banner_blue.png";
+    logo.src = "imagenes/Banner_blu.png";
     return;
   }
 

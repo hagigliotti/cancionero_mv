@@ -522,7 +522,7 @@ a.menu-item {
 /* **********  MODO CLARO/OSCURO  ********** */
 /* MODO CLARO 👓 → botón negro */
 .light-mode  {
-  background: #1e293b;  /*Fondo negro*/
+  background: #122033;  /*Fondo negro*/ /*#1e293b*/
   color: #ffffff;       /*Letras blancas*/
 }
 
