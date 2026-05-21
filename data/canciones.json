@@ -2998,9 +2998,9 @@
   "tonalidad": "Re Mayor (D)",
   "tempo_bpm": "",
   "compas": "",
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": "San Juan 14:27",
-  "tags": [],
+  "ritmo": ["Adoración"],
+  "referencia_biblica": ["San Juan 14:27", "Filipenses 4:7"],
+  "tags": ["Adoración", "Paz", "Gozo", "Comunión"],
 
   "idiomas": {
     "es": {
@@ -11660,7 +11660,10 @@
         "Aunque yo an[G]de [Em][BIS]",
         "[C]en valle de sombra y de muer[D]te,",
         "",
-        "[G]no temeré, no te[D]meré, [BIS]",
+        "[G]no temeré, no te[D]meré,",
+        "[C]no temeré mal al[D]guno.",
+        "",
+        "[G]no temeré, no te[D]meré,",
         "[C]no temeré mal al[D]guno.",
         "(La segunda vez luego del G como acorde final)"
       ]
