@@ -185,6 +185,22 @@ function formatOptionalField(label, value) {
   return `<b>${label}:</b> ${arr.join(", ")} | `;
 }
 
+/* PARA REFERENCIA BIBLICA*/
+function normalizeReferenciaBiblica(ref) {
+  if (!ref) return [];
+
+  // si ya es array
+  if (Array.isArray(ref)) {
+    return ref;
+  }
+
+  // si es string → separar por coma
+  return ref
+    .split(",")
+    .map(r => r.trim())
+    .filter(Boolean);
+}
+
 // ===================== LOGO DINAMICO - BANNER =====================
 function updateLogo() {
 
@@ -569,14 +585,20 @@ function search(q) {
   const data = [...canciones, ...himnos];
 
   const results = data.filter(song => {
-
-    // 🔎 Buscar en TODOS los idiomas
+    // ===== IDIOMAS =====
     const matchIdiomas = Object.values(song.idiomas || {}).some(lang => {
 
       const titulo = normalize(lang?.titulo || "");
-      const letra = normalize((lang?.letra || []).join(" "));
-      const traductor = normalize(normalizeTraductor(lang).join(" "));
-      const traductorArray = normalizeField(lang?.traductor).map(normalize);
+
+      const letra = normalize(
+        Array.isArray(lang?.letra)
+          ? lang.letra.join(" ")
+          : lang?.letra || ""
+      );
+
+      const traductor = normalize(
+        normalizeTraductor(lang).join(" ")
+      );
 
       return (
         titulo.includes(query) ||
@@ -585,31 +607,55 @@ function search(q) {
       );
     });
 
-    // 🔎 Buscar en campos globales
-    const autor = normalize(normalizeField(song.autor).join(" "));
-    const coautor = normalize(normalizeField(song.coautor).join(" "));
-    const compositor = normalize(normalizeField(song.compositor).join(" "));
-    const compas = normalize(song.compas || "");
-    const referencia = normalize(song.referencia_biblica || song.referencia || "");
-    const tags = normalize((song.tags || []).join(" "));
-    const ritmo = normalize(normalizeRitmo(song.ritmo).join(" "));
-    const ritmoArray = normalizeRitmo(song.ritmo).map(normalize);
+    // ===== CAMPOS GLOBALES =====
+    const autor = normalize(
+      normalizeField(song.autor).join(" ")
+    );
 
+    const coautor = normalize(
+      normalizeField(song.coautor).join(" ")
+    );
+
+    const compositor = normalize(
+      normalizeField(song.compositor).join(" ")
+    );
+
+    const tonalidad = normalize(song.tonalidad || "");
+
+    const bpm = normalize(String(song.tempo_bpm || ""));
+
+    const compas = normalize(song.compas || "");
+
+    const year = normalize(String(song.year || ""));
+
+    const referencia = normalize(
+      normalizeReferenciaBiblica(
+        song.referencia_biblica || song.referencia
+      ).join(" ")
+    );
+
+    const tags = normalize(
+      normalizeField(song.tags).join(" ")
+    );
+
+    const ritmo = normalize(
+      normalizeRitmo(song.ritmo).join(" ")
+    );
+
+    // ===== MATCH GLOBAL =====
     const matchGlobal =
       autor.includes(query) ||
       coautor.includes(query) ||
       compositor.includes(query) ||
+      tonalidad.includes(query) ||
+      bpm.includes(query) ||
       compas.includes(query) ||
+      year.includes(query) ||
       referencia.includes(query) ||
       tags.includes(query) ||
       ritmo.includes(query);
 
     return matchIdiomas || matchGlobal;
-
-    const matchRitmo = ritmo.includes(query) ||
-      ritmoArray.some(r => r.includes(query));
-
-    return matchIdiomas || matchGlobal || matchRitmo;
   });
 
   const sorted = sortByTitle(results).filter(c =>
@@ -986,13 +1032,9 @@ function openSong(id) {
 
   const audioHtml = renderAudioLink(song, s);
 
-  const referencia = song.referencia_biblica || song.referencia || "";
-
-  const referenciaLink = referencia
-    ? `https://www.biblegateway.com/passage/?search=${encodeURIComponent(
-        referencia.replace(",", "-")
-      )}&version=RVR1960`
-    : "";
+  const referencias = normalizeReferenciaBiblica(
+    song.referencia_biblica || song.referencia
+  );
     
   const meta = `
     <div class="meta">
@@ -1008,11 +1050,15 @@ function openSong(id) {
 
       <div>
         <b>Referencia bíblica:</b>
-          ${
-            referencia
-              ? `<a href="${referenciaLink}" target="_blank">${referencia}</a>`
-              : "No"
-          }
+        ${
+          referencias.length
+            ? referencias.map(ref => {
+                const link = `https://www.biblegateway.com/passage/?search=${encodeURIComponent(ref)}&version=RVR1960`;
+
+                return `<a href="${link}" target="_blank">${ref}</a>`;
+              }).join(", ")
+            : "No"
+        }
       </div>
 
       <div>
