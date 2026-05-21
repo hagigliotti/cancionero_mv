@@ -1,7 +1,7 @@
 [
 { "_commentA": "https://www.recursos-biblicos.com/2013/07/50-coritos-adventistas-muy-conocidos-parte-1.html" },
 
-{ "_comment1": "LETRA A ---------------------------------------------------------------------------------------------------------------------------------------    LETRA A" },
+[{ "_comment1": "LETRA A -  AAA -------------------------------------------------------------------------------------------------------------------------------------    LETRA A" },
 
 { "id": "a_jesus_dale_todo",
   "titulo_original": "Give Them All to Jesús",
@@ -1398,9 +1398,10 @@
       ]
     }
   }
-},
+}
+],
 
-{ "_comment2": "LETRA B ---------------------------------------------------------------------------------------------------------------------------------------    LETRA B" },
+[{ "_comment2": "LETRA B -  BBB --------------------------------------------------------------------------------------------------------------------------------------    LETRA B" },
 { "id": "bienvenidos_a_adorar",
   "titulo_original": "",
   "autor": ["Joel Barrios"],
@@ -1408,7 +1409,7 @@
   "year": "",
   "tonalidad": "Fa Mayor (F)",
   "tempo_bpm": "",
-  "compas": "",
+  "compas": "4/4",
   "ritmo": ["Desconocido"],
   "referencia_biblica": "",
   "tags": ["Alabanza", "Adoración", "Bienvenida", "Sábado", "Comunidad", "Fraternidad", "Worship"],
@@ -1849,11 +1850,12 @@
       ]
     }
   }
-},
+}
+],
 
-{ "_comment3": "LETRA C ---------------------------------------------------------------------------------------------------------------------------------------    LETRA C" },
-{ "id": "celebrad_a_cristo",
-  "titulo_original": "Celebrad a Cristo",
+[{ "_comment3": "LETRA C -  CCC --------------------------------------------------------------------------------------------------------------------------------------    LETRA C" },
+{ "id": "cada_dia_con_cristo",
+  "titulo_original": "Cada día con Cristo",
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": "",
@@ -1862,33 +1864,29 @@
   "compas": "",
   "ritmo": ["Desconocido"],
   "referencia_biblica": "",
-  "tags": ["worship", "Alabanza"],
+  "tags": ["Himno"],
 
   "idiomas": {
     "es": {
-      "titulo": "Celebrad a Cristo",
+      "titulo": "Cada día con Cristo",
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
       "revisado": "No",      
       "letra": [
-        "INTRO [E][Bm][A][B7](2 veces)",
+        "[E]Cada día con Cristo,",
+        "[E7]me llena de perfecta [B7]paz,",
+        "cada día con Cristo, le amo [E]más y más.",
         "",
-        "[E]¡Celebrad a [A]Cristo, [B7]celeb[E]rad! [E-A-B7-E]",
-        "[E]¡Celebrad a [A]Cristo, [B7]celeb[E]rad! [C-D-E]",
-        "",
-        "[B7]¡Resucitó, [C#m]resucitó! [B7]Y Él vive para [C#m]siempre.",
-        "[B7]¡Resucitó, [C#m]resucitó! [B] ¡Vamos a [B]celeb[A]rar! [B]",
-        "[E]¡Resucitó el Señor!",
-        "",
-        "(repite)"
-
+        "Él me salva y guarda",
+        "[E7]y sé que pronto volve[A]rá.",
+        "[Am]Y vivir con [E]Cris[Bm]to, [F#m]más dulce [B7]cada [E]día será/"
       ]
     }
   }
 },
-{ "id": "cristo_rompe_las_cadenas",
-  "titulo_original": "Cristo rompe las cadenas",
+{ "id": "cada_dia_con_dios",
+  "titulo_original": "Cada día con Dios",
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": "",
@@ -1897,29 +1895,43 @@
   "compas": "",
   "ritmo": ["Desconocido"],
   "referencia_biblica": "",
-  "tags": [""],
+  "tags": ["Alabanza"],
 
   "idiomas": {
     "es": {
-      "titulo": "Cristo rompe las cadenas",
+      "titulo": "Cada día con Dios",
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
       "revisado": "No",      
       "letra": [
-        "[G]Cristo rompe las cadenas",
-        "las cadenas del pecado",
-        "[C]Cristo rompe las [G]cadenas",
-        "[Am][D][G]y me libra a mí",
+        "[G]Que bendición es despertar",
+        "[C]si [D]Dios a mi lado es[G]tá.",
+        "[C]No hay nada como comen[A]zar",
+        "con el cada [D]día [D7].",
+        "[G]Lo más lindo es pen[G7]sar",
+        "en [C]Él en primer lugar,",
+        "[G]orar, su Palabra [C]leer",
+        "[D]y andar con [G]Él.",
         "",
-        "Como es posible, vivir sin ti Jesús",
-        "si el firmamento de la vida eres Tu",
-        "Tu me salvaste del pecado y de la muerte",
-        "Como es posible, vivir sin ti Jesús?"
+        "Que bendición es trabajar",
+        "si Dios a mi lado está.",
+        "No hay nada como continuar",
+        "con El cada día.",
+        "Lo más lindo es pensar",
+        "en Él en segundo lugar,",
+        "orar, su Palabra leer y andar con Él.",
+        "",
+        "Qué bendición es descansar",
+        "si Dios a mi lado está.",
+        "No hay nada como terminar con El cada día.",
+        "Lo más lindo es pensar",
+        "en Él en último lugar,",
+        "orar, su Palabra leer y confiar en Él."
       ]
     }
   }
-},
+}, 
 { "id": "cada_dia_de_manana",
   "titulo_original": "Cada día de mañana",
   "autor": ["Hugo Vergan"],
@@ -2027,6 +2039,91 @@
     }
   }
 },
+{ "id": "caminando_voy",
+  "titulo_original": "Caminando voy",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "",
+  "tonalidad": "Re Mayor (D)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Desconocido"],
+  "referencia_biblica": "",
+  "tags": [],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Caminando voy",
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": "No",      
+      "letra": [
+        "[D]Caminando voy, para Ca[A]náan",
+        "[A7]caminando voy, para Ca[D]náan",
+        "[D7]caminando voy, para Ca[G]náan...",
+        "Oh! Gloria a [D]Dios",
+        "[A7]caminando voy para Ca[D]náan.",
+        "",
+        "Si usted no va, no me impida a mí",
+        "si usted no va, no me impida a mí",
+        "si usted no va, no me impida a mí...",
+        "Oh! Gloria a Dios",
+        "caminando voy para Canáan.",
+        "",
+        "Al venir Jesús, yo me voy con Él",
+        "al venir Jesús, yo me voy con Él",
+        "al venir Jesús, yo me voy con Él...",
+        "Oh! Gloria a Dios",
+        "caminando voy para Canáan."
+      ]
+    }
+  }
+},
+{ "id": "caminando_caminando",
+  "titulo_original": "Caminando, caminando",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "",
+  "tonalidad": "La Mayor (A)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Desconocido"],
+  "referencia_biblica": "",
+  "tags": [],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Caminando, caminando",
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": "No",      
+      "letra": [
+        "[A]Gozándome yo voy al hogar ce[E]lestial",
+        "caminando, [A]caminando.",
+        "Pues no me importa más el placer terre[E]nal",
+        "caminando para [E7]aquel [A]hogar.",
+        "",
+        "Coro:",
+        "[A]Caminando, camin[D]ando,",
+        "[E]para aquel hogar donde [D]está Je[A]sús.",
+        "Caminando, caminan[D]do,",
+        "[E]de la mano del [E7]Señor Je[A]sús.",
+        "",
+        "Yo quiero pecadores conmigo llevar",
+        "caminando, caminando.",
+        "Que en Cristo puedan ellos salud encontrar",
+        "caminando para aquel hogar.",
+        "",
+        "Entonces con mi Cristo por siempre estaré",
+        "caminando, caminando.",
+        "Su nombre sacrosanto yo alabaré,",
+        "caminando para aquel hogar."
+      ]
+    }
+  }
+},
 { "id": "cantad_a_dios",
   "titulo_original": "Louvai a Deus",
   "autor": ["Flavio Regis", "Jamir"],  
@@ -2120,40 +2217,6 @@
         "[D]mi vida entera quiero ofre[A]cerla a ti, mi Creador.",
         "[A]Yo gracias te da[E]ré por lo que haces tú por [F#m]mí.",
         "[D]Mientras vivo yo es[E]té, cantaré de tu a[A]mor."
-      ]
-    }
-  }
-},
-{ "id": "lavame_en_tu_sangre",
-  "titulo_original": "",
-  "autor": ["Desconocido"],
-  "compositor": ["Desconocido"],
-  "year": "",
-  "tonalidad": "Sol Mayor (G)",
-  "tempo_bpm": "",
-  "compas": "",
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": "Apocalipsis 7:14",
-  "tags": ["Adoración", "Purificación"],
-
-  "idiomas": {
-    "es": {
-      "titulo": "Lávame en tu sangre",
-      "audio_url": "",
-      "traductor": ["-"],
-      "partitura": "No",
-      "revisado": "No",      
-      "letra": [
-        "[G]Lávame en tu [C]sangre, [G]oh Se[Em]ñor,",
-        "[Am]y más [D]blanco que la [G]nieve yo se[D]ré.",
-        "[G]Lávame en tu [C]sangre, [G]oh Se[Em]ñor,",
-        "[Am]y más [D]blanco que la [C]nieve [D]yo se[G]ré.",
-        "",
-        "Coro:",
-        "[C]Más blanco que la [G]nieve, [Em]",
-        "[Am]más [D]blanco que la [G]nieve se[G7]ré.",
-        "[C]Lávame en tu [G]sangre, [Em]oh Señor,",
-        "[Am]y más [D]blanco que la [C]nieve [D]yo se[G]ré."
       ]
     }
   }
@@ -2277,6 +2340,41 @@
         "Telling of His love in every time and place",
         "Wishing all the world to know the Savior's name",
         "And the glorious message that for all He came"
+      ]
+    }
+  }
+},
+{ "id": "celebrad_a_cristo",
+  "titulo_original": "Celebrad a Cristo",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "",
+  "tonalidad": "Mi Mayor (E)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Desconocido"],
+  "referencia_biblica": "",
+  "tags": ["worship", "Alabanza"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Celebrad a Cristo",
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": "No",      
+      "letra": [
+        "INTRO [E][Bm][A][B7](2 veces)",
+        "",
+        "[E]¡Celebrad a [A]Cristo, [B7]celeb[E]rad! [E-A-B7-E]",
+        "[E]¡Celebrad a [A]Cristo, [B7]celeb[E]rad! [C-D-E]",
+        "",
+        "[B7]¡Resucitó, [C#m]resucitó! [B7]Y Él vive para [C#m]siempre.",
+        "[B7]¡Resucitó, [C#m]resucitó! [B] ¡Vamos a [B]celeb[A]rar! [B]",
+        "[E]¡Resucitó el Señor!",
+        "",
+        "(repite)"
+
       ]
     }
   }
@@ -2521,6 +2619,37 @@
     }
   }
 },
+{ "id": "con_cristo_en_mi_alma",
+  "titulo_original": "",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "",
+  "tonalidad": "Mi Mayor (E)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Desconocido"],
+  "referencia_biblica": "Salmos 31:24",
+  "tags": [],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Con Cristo en mi alma",
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": "No",      
+      "letra": [
+        "[E]Con Cristo en mi alma sonrei[A]ré como el sol,",
+        "[B]sonreiré como el sol, [E]sonreiré como el sol.",
+        "[E]Con Cristo en mi alma [E7]sonrei[A]ré como el sol,",
+        "y [E]él [B]me guia[E]rá.",
+        "",
+        "[E]Nave, [B]navegando voy, [B7]nave, [E]navegando voy.",
+        "[E]Nave, [A]navegando voy, y [B]Él me guia[E]rá."
+      ]
+    }
+  }
+},
 { "id": "con_cristo_con_cristo",
   "titulo_original": "",
   "autor": ["Desconocido"],
@@ -2559,33 +2688,41 @@
     }
   }
 },
-{ "id": "con_cristo_en_mi_alma",
-  "titulo_original": "",
+{ "id": "con_jesus_soy_feliz",
+  "titulo_original": "Con Jesús soy feliz",
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": "",
-  "tonalidad": "Mi Mayor (E)",
+  "tonalidad": "La Mayor (A)",
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
-  "referencia_biblica": "Salmos 31:24",
-  "tags": [],
+  "referencia_biblica": "",
+  "tags": ["Infantil"],
 
   "idiomas": {
     "es": {
-      "titulo": "Con Cristo en mi alma",
+      "titulo": "Con Jesús soy feliz",
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
       "revisado": "No",      
       "letra": [
-        "[E]Con Cristo en mi alma sonrei[A]ré como el sol,",
-        "[B]sonreiré como el sol, [E]sonreiré como el sol.",
-        "[E]Con Cristo en mi alma [E7]sonrei[A]ré como el sol,",
-        "y [E]él [B]me guia[E]rá.",
+        "[A]Con Jesús soy feliz",
+        "[D]porque sé que [E]Él me ama.",
+        "[A]Con Jesús soy feliz",
+        "[B]porque toma mi [E]mano.",
         "",
-        "[E]Nave, [B]navegando voy, [B7]nave, [E]navegando voy.",
-        "[E]Nave, [A]navegando voy, y [B]Él me guia[E]rá."
+        "Coro:",
+        "[A]Y me guía el [D]Señor,",
+        "[E]y me libra del [A]mal,",
+        "[D]Él mis pasos con[E]duce",
+        "[E7]con po[A]der.",
+        "",
+        "Con Jesús soy feliz",
+        "Él conoce mis luchas.",
+        "Con Jesús soy feliz,",
+        "su presencia me anima."
       ]
     }
   }
@@ -2677,6 +2814,54 @@
     }
   }
 },
+{ "id": "cristo_ama_ninos_como_yo",
+  "titulo_original": "",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "",
+  "tonalidad": "Sol Mayor (G)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Desconocido"],
+  "referencia_biblica": "San Mateo 19:14",
+  "tags": ["Alabanza", "Infantil", "Amor de Dios", "Confianza", "Seguridad"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Cristo ama niños como yo (*)",
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": "No",      
+      "letra": [
+        "[Intro]",
+        "[G][D][A][G]",
+        "",
+        "[Verse 1]",
+        "[G]Cristo ama niños como [D]yo, [D]yo, [D]yo",
+        "[D]Cristo ama niños como [G]yo, [G][G]yo",
+        "Y [G]en sus brazos sí",
+        "[C]Amor encuentro yo",
+        "[D]Cristo ama niños como [G]yo, [G][G]yo",
+        "",
+        "[Interlude]",
+        "[G][D][A][G]",
+        "",
+        "[Verse 2]",
+        "[G]Cristo ama niños como [D]tú, [D]tú, [D]tú",
+        "[D]Cristo ama niños como [G]tú, [G][G]tú",
+        "[G]Quien confiando está",
+        "[C]Siempre en Jesús",
+        "[D]Cristo ama niños como [G]tú, [G][G]tú",
+        "",
+        "[Outro]",
+        "[G]Quien confiando está",
+        "[C]Siempre en Jesús",
+        "[D]Cristo ama niños como [G]tú, [G][G]tú"
+      ]
+    }
+  }
+},
 { "id": "cristo_joven",
   "titulo_original": "Ven, hermano",
   "autor": ["Desconocido"],
@@ -2714,6 +2899,71 @@
     }
   }
 },
+{ "id": "cristo_manda_que_subamos_mas",
+  "titulo_original": "",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "",
+  "tonalidad": "Do Mayor (C)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo":  ["Alabanza"],
+  "referencia_biblica": "",
+  "tags": ["Alabanza", "Avivamiento", "Gozo", "Crecimiento Espiritual"],
+  
+  "idiomas": {
+    "es": {
+      "titulo": "Cristo manda que subamos más",
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": "No",      
+      "letra": [
+        "[C]Cristo manda que subamos [G]más",
+        "Que subamos [C]más",
+        "[C]Mirando al mundo bajaremos [G]más",
+        "Bajaremos [C]más",
+        "",
+        "Porque [F]subiendo y ba[G]jando nunca llegare[C]mos",
+        "[C]Subamos subamos mirando a Cristo [F][G][C]",
+        "[F]Cada [G]dia [C]más, [F]cada [G]dia [C]más"
+      ]
+    }
+  }
+},
+{ "id": "cristo_rompe_las_cadenas",
+  "titulo_original": "Cristo rompe las cadenas",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "",
+  "tonalidad": "Sol Mayor (G)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Desconocido"],
+  "referencia_biblica": "",
+  "tags": [""],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Cristo rompe las cadenas",
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": "No",      
+      "letra": [
+        "[G]Cristo rompe las cadenas",
+        "las cadenas del pecado",
+        "[C]Cristo rompe las [G]cadenas",
+        "[Am][D][G]y me libra a mí",
+        "",
+        "Como es posible, vivir sin ti Jesús",
+        "si el firmamento de la vida eres Tu",
+        "Tu me salvaste del pecado y de la muerte",
+        "Como es posible, vivir sin ti Jesús?"
+      ]
+    }
+  }
+},
 { "id": "cristo_un_año_mas_te_dio",
   "titulo_original": "",
   "autor": ["Desconocido"],
@@ -2724,7 +2974,7 @@
   "compas": "",
   "ritmo": ["Desconocido"],
   "referencia_biblica": "Números 6:24-26",
-  "tags": ["cumpleanos"],
+  "tags": ["Cumpleanños"],
 
   "idiomas": {
     "es": {
@@ -2891,6 +3141,34 @@
         "[F#]y se siente la presencia del [Bm]Señor.",
         "[G]",
         "Coro"
+      ]
+    }
+  }
+},
+{ "id": "cuando_empieza_el_santo_sabado",
+  "titulo_original": "Al comenzar este sábado",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "Desconocido",
+  "tonalidad": "Sol Mayor (G)",
+  "tempo_bpm": "115",
+  "compas": "4/4",
+  "ritmo": ["Alegre"],
+  "referencia_biblica": "Hechos 2:46, 47",
+  "tags": ["Comunión", "Sábado", "Hermandad"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Cuando empieza el Santo Sábado",
+      "audio_url": "https://open.spotify.com/intl-es/track/5MJ8DFLauPlvNTNGlbJZZx?si=dedd8715d6264a6a",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": "No",      
+      "letra": [
+        "[G]Cuando empieza el santo Sábado, [C]¡qué ale[G]gría que me [D]da",
+        "el estar con mis hermanos en [D]este [D7]lindo lu[G]gar!",
+        "[G]Enlacemos nuestras manos [C]para [G]juntos ala[C]bar",
+        "el [Cm]nombre de Jesu[G]cristo, [Em]nuestro a[D]migo más le[G]al."
       ]
     }
   }
@@ -3068,319 +3346,10 @@
       ]
     }
   }
-},
-{ "id": "cuando_empieza_el_santo_sabado",
-  "titulo_original": "Al comenzar este sábado",
-  "autor": ["Desconocido"],
-  "compositor": ["Desconocido"],
-  "year": "Desconocido",
-  "tonalidad": "Sol Mayor (G)",
-  "tempo_bpm": "115",
-  "compas": "4/4",
-  "ritmo": ["Alegre"],
-  "referencia_biblica": "Hechos 2:46, 47",
-  "tags": ["Comunión", "Sábado", "Hermandad"],
+}
+],
 
-  "idiomas": {
-    "es": {
-      "titulo": "Cuando empieza el Santo Sábado",
-      "audio_url": "https://open.spotify.com/intl-es/track/5MJ8DFLauPlvNTNGlbJZZx?si=dedd8715d6264a6a",
-      "traductor": ["-"],
-      "partitura": "No",
-      "revisado": "No",      
-      "letra": [
-        "[G]Cuando empieza el santo Sábado, [C]¡qué ale[G]gría que me [D]da",
-        "el estar con mis hermanos en [D]este [D7]lindo lu[G]gar!",
-        "[G]Enlacemos nuestras manos [C]para [G]juntos ala[C]bar",
-        "el [Cm]nombre de Jesu[G]cristo, [Em]nuestro a[D]migo más le[G]al."
-      ]
-    }
-  }
-},
-{ "id": "caminando_voy",
-  "titulo_original": "Caminando voy",
-  "autor": ["Desconocido"],
-  "compositor": ["Desconocido"],
-  "year": "",
-  "tonalidad": "Re Mayor (D)",
-  "tempo_bpm": "",
-  "compas": "",
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": "",
-  "tags": [],
-
-  "idiomas": {
-    "es": {
-      "titulo": "Caminando voy",
-      "audio_url": "",
-      "traductor": ["-"],
-      "partitura": "No",
-      "revisado": "No",      
-      "letra": [
-        "[D]Caminando voy, para Ca[A]náan",
-        "[A7]caminando voy, para Ca[D]náan",
-        "[D7]caminando voy, para Ca[G]náan...",
-        "Oh! Gloria a [D]Dios",
-        "[A7]caminando voy para Ca[D]náan.",
-        "",
-        "Si usted no va, no me impida a mí",
-        "si usted no va, no me impida a mí",
-        "si usted no va, no me impida a mí...",
-        "Oh! Gloria a Dios",
-        "caminando voy para Canáan.",
-        "",
-        "Al venir Jesús, yo me voy con Él",
-        "al venir Jesús, yo me voy con Él",
-        "al venir Jesús, yo me voy con Él...",
-        "Oh! Gloria a Dios",
-        "caminando voy para Canáan."
-      ]
-    }
-  }
-},
-{ "id": "con_jesus_soy_feliz",
-  "titulo_original": "Con Jesús soy feliz",
-  "autor": ["Desconocido"],
-  "compositor": ["Desconocido"],
-  "year": "",
-  "tonalidad": "La Mayor (A)",
-  "tempo_bpm": "",
-  "compas": "",
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": "",
-  "tags": ["Infantil"],
-
-  "idiomas": {
-    "es": {
-      "titulo": "Con Jesús soy feliz",
-      "audio_url": "",
-      "traductor": ["-"],
-      "partitura": "No",
-      "revisado": "No",      
-      "letra": [
-        "[A]Con Jesús soy feliz",
-        "[D]porque sé que [E]Él me ama.",
-        "[A]Con Jesús soy feliz",
-        "[B]porque toma mi [E]mano.",
-        "",
-        "Coro:",
-        "[A]Y me guía el [D]Señor,",
-        "[E]y me libra del [A]mal,",
-        "[D]Él mis pasos con[E]duce",
-        "[E7]con po[A]der.",
-        "",
-        "Con Jesús soy feliz",
-        "Él conoce mis luchas.",
-        "Con Jesús soy feliz,",
-        "su presencia me anima."
-      ]
-    }
-  }
-},
-{ "id": "cada_dia_con_cristo",
-  "titulo_original": "Cada día con Cristo",
-  "autor": ["Desconocido"],
-  "compositor": ["Desconocido"],
-  "year": "",
-  "tonalidad": "Mi Mayor (E)",
-  "tempo_bpm": "",
-  "compas": "",
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": "",
-  "tags": ["Himno"],
-
-  "idiomas": {
-    "es": {
-      "titulo": "Cada día con Cristo",
-      "audio_url": "",
-      "traductor": ["-"],
-      "partitura": "No",
-      "revisado": "No",      
-      "letra": [
-        "[E]Cada día con Cristo,",
-        "[E7]me llena de perfecta [B7]paz,",
-        "cada día con Cristo, le amo [E]más y más.",
-        "",
-        "Él me salva y guarda",
-        "[E7]y sé que pronto volve[A]rá.",
-        "[Am]Y vivir con [E]Cris[Bm]to, [F#m]más dulce [B7]cada [E]día será/"
-      ]
-    }
-  }
-},
-{ "id": "cada_dia_con_dios",
-  "titulo_original": "Cada día con Dios",
-  "autor": ["Desconocido"],
-  "compositor": ["Desconocido"],
-  "year": "",
-  "tonalidad": "Sol Mayor (G)",
-  "tempo_bpm": "",
-  "compas": "",
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": "",
-  "tags": ["Alabanza"],
-
-  "idiomas": {
-    "es": {
-      "titulo": "Cada día con Dios",
-      "audio_url": "",
-      "traductor": ["-"],
-      "partitura": "No",
-      "revisado": "No",      
-      "letra": [
-        "[G]Que bendición es despertar",
-        "[C]si [D]Dios a mi lado es[G]tá.",
-        "[C]No hay nada como comen[A]zar",
-        "con el cada [D]día [D7].",
-        "[G]Lo más lindo es pen[G7]sar",
-        "en [C]Él en primer lugar,",
-        "[G]orar, su Palabra [C]leer",
-        "[D]y andar con [G]Él.",
-        "",
-        "Que bendición es trabajar",
-        "si Dios a mi lado está.",
-        "No hay nada como continuar",
-        "con El cada día.",
-        "Lo más lindo es pensar",
-        "en Él en segundo lugar,",
-        "orar, su Palabra leer y andar con Él.",
-        "",
-        "Qué bendición es descansar",
-        "si Dios a mi lado está.",
-        "No hay nada como terminar con El cada día.",
-        "Lo más lindo es pensar",
-        "en Él en último lugar,",
-        "orar, su Palabra leer y confiar en Él."
-      ]
-    }
-  }
-}, 
-{ "id": "caminando_caminando",
-  "titulo_original": "Caminando, caminando",
-  "autor": ["Desconocido"],
-  "compositor": ["Desconocido"],
-  "year": "",
-  "tonalidad": "La Mayor (A)",
-  "tempo_bpm": "",
-  "compas": "",
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": "",
-  "tags": [],
-
-  "idiomas": {
-    "es": {
-      "titulo": "Caminando, caminando",
-      "audio_url": "",
-      "traductor": ["-"],
-      "partitura": "No",
-      "revisado": "No",      
-      "letra": [
-        "[A]Gozándome yo voy al hogar ce[E]lestial",
-        "caminando, [A]caminando.",
-        "Pues no me importa más el placer terre[E]nal",
-        "caminando para [E7]aquel [A]hogar.",
-        "",
-        "Coro:",
-        "[A]Caminando, camin[D]ando,",
-        "[E]para aquel hogar donde [D]está Je[A]sús.",
-        "Caminando, caminan[D]do,",
-        "[E]de la mano del [E7]Señor Je[A]sús.",
-        "",
-        "Yo quiero pecadores conmigo llevar",
-        "caminando, caminando.",
-        "Que en Cristo puedan ellos salud encontrar",
-        "caminando para aquel hogar.",
-        "",
-        "Entonces con mi Cristo por siempre estaré",
-        "caminando, caminando.",
-        "Su nombre sacrosanto yo alabaré,",
-        "caminando para aquel hogar."
-      ]
-    }
-  }
-},
-{ "id": "cristo_ama_ninos_como_yo",
-  "titulo_original": "",
-  "autor": ["Desconocido"],
-  "compositor": ["Desconocido"],
-  "year": "",
-  "tonalidad": "Sol Mayor (G)",
-  "tempo_bpm": "",
-  "compas": "",
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": "San Mateo 19:14",
-  "tags": ["Alabanza", "Infantil", "Amor de Dios", "Confianza", "Seguridad"],
-
-  "idiomas": {
-    "es": {
-      "titulo": "Cristo ama niños como yo (*)",
-      "audio_url": "",
-      "traductor": ["-"],
-      "partitura": "No",
-      "revisado": "No",      
-      "letra": [
-        "[Intro]",
-        "[G][D][A][G]",
-        "",
-        "[Verse 1]",
-        "[G]Cristo ama niños como [D]yo, [D]yo, [D]yo",
-        "[D]Cristo ama niños como [G]yo, [G][G]yo",
-        "Y [G]en sus brazos sí",
-        "[C]Amor encuentro yo",
-        "[D]Cristo ama niños como [G]yo, [G][G]yo",
-        "",
-        "[Interlude]",
-        "[G][D][A][G]",
-        "",
-        "[Verse 2]",
-        "[G]Cristo ama niños como [D]tú, [D]tú, [D]tú",
-        "[D]Cristo ama niños como [G]tú, [G][G]tú",
-        "[G]Quien confiando está",
-        "[C]Siempre en Jesús",
-        "[D]Cristo ama niños como [G]tú, [G][G]tú",
-        "",
-        "[Outro]",
-        "[G]Quien confiando está",
-        "[C]Siempre en Jesús",
-        "[D]Cristo ama niños como [G]tú, [G][G]tú"
-      ]
-    }
-  }
-},
-{ "id": "cristo_manda_que_subamos_mas",
-  "titulo_original": "",
-  "autor": ["Desconocido"],
-  "compositor": ["Desconocido"],
-  "year": "",
-  "tonalidad": "Do Mayor (C)",
-  "tempo_bpm": "",
-  "compas": "",
-  "ritmo":  ["Alabanza"],
-  "referencia_biblica": "",
-  "tags": ["Alabanza", "Avivamiento", "Gozo", "Crecimiento Espiritual"],
-  
-  "idiomas": {
-    "es": {
-      "titulo": "Cristo manda que subamos más",
-      "audio_url": "",
-      "traductor": ["-"],
-      "partitura": "No",
-      "revisado": "No",      
-      "letra": [
-        "[C]Cristo manda que subamos [G]más",
-        "Que subamos [C]más",
-        "[C]Mirando al mundo bajaremos [G]más",
-        "Bajaremos [C]más",
-        "",
-        "Porque [F]subiendo y ba[G]jando nunca llegare[C]mos",
-        "[C]Subamos subamos mirando a Cristo [F][G][C]",
-        "[F]Cada [G]dia [C]más, [F]cada [G]dia [C]más"
-      ]
-    }
-  }
-},
-
-{ "_comment4": "LETRA D ---------------------------------------------------------------------------------------------------------------------------------------    LETRA D" },
+[{ "_comment4": "LETRA D -  DDD --------------------------------------------------------------------------------------------------------------------------------------    LETRA D" },
 { "id": "da una_sonrisa",
   "titulo_original": "",
   "autor": ["Desconocido"],
@@ -4402,10 +4371,10 @@
       ]
     }
   }
-},
+}
+],
 
-{ "_comment5": "LETRA E ---------------------------------------------------------------------------------------------------------------------------------------    LETRA E" },
-
+[{ "_comment5": "LETRA E -  EEE --------------------------------------------------------------------------------------------------------------------------------------    LETRA E" },
 { "id": "en_tus_manos_rotas_vi",
   "titulo_original": "En tus manos rotas vi",
   "autor": ["Desconocido"],
@@ -5828,9 +5797,10 @@
       ]
     }
   }
-},
+}
+],
 
-{ "_comment6": "LETRA F ---------------------------------------------------------------------------------------------------------------------------------------    LETRA F" },
+[{ "_comment6": "LETRA F -  FFF --------------------------------------------------------------------------------------------------------------------------------------    LETRA F" },
 { "id": "fe_en_fuego",
   "titulo_original": "Faith on fire",
   "autor": ["Desconocido"],
@@ -6256,8 +6226,10 @@
       ]
     }
   }
-},
-{ "_comment7": "LETRA G ---------------------------------------------------------------------------------------------------------------------------------------    LETRA G" },
+}
+],
+
+[{ "_comment7": "LETRA G -  GGG --------------------------------------------------------------------------------------------------------------------------------------    LETRA G" },
 { "id": "gente_come_noi",
   "titulo_original": "GENTE COME NOI",
   "autor": ["Desconocido"],
@@ -6603,9 +6575,10 @@
       ]
     }
   }
-},
+}
+],
 
-{ "_comment8": "LETRA H ---------------------------------------------------------------------------------------------------------------------------------------    LETRA H" },
+[{ "_comment8": "LETRA H -  HHH --------------------------------------------------------------------------------------------------------------------------------------    LETRA H" },
 { "id": "himno_conquistadores",
   "titulo_original": "Pathfinder Song",
   "autor": "Henry Berg",
@@ -6996,9 +6969,10 @@
       ]
     }
   }
-},
+}
+],
 
-{ "_comment9": "LETRA I ---------------------------------------------------------------------------------------------------------------------------------------    LETRA I" },
+[{ "_comment9": "LETRA I -  III --------------------------------------------------------------------------------------------------------------------------------------    LETRA I" },
 { "id": "io_e_te_completo",
   "titulo_original": "IO E TE",
   "autor": ["Desconocido"],
@@ -7139,9 +7113,10 @@
       ]
     }
   }
-},
+}
+],
 
-{ "_comment10": "LETRA J ---------------------------------------------------------------------------------------------------------------------------------------    LETRA J"  },
+[{ "_comment10": "LETRA J - JJJ --------------------------------------------------------------------------------------------------------------------------------------    LETRA J"  },
 { "id": "jesucristo_basta",
   "titulo_original": "Jesucristo basta",
   "autor": "Steven y Lluvia Richards",
@@ -7478,11 +7453,48 @@
       ]
     }
   }
+}
+],
+
+[{ "_comment11": "LETRA K - KKK --------------------------------------------------------------------------------------------------------------------------------------    LETRA K"  },
+{}
+],
+
+[{ "_comment12": "LETRA L - LLL --------------------------------------------------------------------------------------------------------------------------------------    LETRA L"  },
+{ "id": "lavame_en_tu_sangre",
+  "titulo_original": "",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "",
+  "tonalidad": "Sol Mayor (G)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Desconocido"],
+  "referencia_biblica": "Apocalipsis 7:14",
+  "tags": ["Adoración", "Purificación"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Lávame en tu sangre",
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": "No",      
+      "letra": [
+        "[G]Lávame en tu [C]sangre, [G]oh Se[Em]ñor,",
+        "[Am]y más [D]blanco que la [G]nieve yo se[D]ré.",
+        "[G]Lávame en tu [C]sangre, [G]oh Se[Em]ñor,",
+        "[Am]y más [D]blanco que la [C]nieve [D]yo se[G]ré.",
+        "",
+        "Coro:",
+        "[C]Más blanco que la [G]nieve, [Em]",
+        "[Am]más [D]blanco que la [G]nieve se[G7]ré.",
+        "[C]Lávame en tu [G]sangre, [Em]oh Señor,",
+        "[Am]y más [D]blanco que la [C]nieve [D]yo se[G]ré."
+      ]
+    }
+  }
 },
-
-{ "_comment11": "LETRA K ---------------------------------------------------------------------------------------------------------------------------------------    LETRA K"  },
-
-{ "_comment12": "LETRA L ---------------------------------------------------------------------------------------------------------------------------------------    LETRA L"  },
 { "id": "la_grazia_sua",
   "titulo_original": "LA GRAZIA SUA (MIGHTY TO SAVE)",
   "autor": ["Desconocido"],
@@ -8106,9 +8118,10 @@
       ]
     }
   }
-},
+}
+],
 
-{ "_comment13": "LETRA M ---------------------------------------------------------------------------------------------------------------------------------------    LETRA M"  },
+[{ "_comment13": "LETRA M - MMM --------------------------------------------------------------------------------------------------------------------------------------    LETRA M"  },
 { "id": "miren_que_linda_es_la_vida",
   "titulo_original": "",
   "autor": ["Desconocido"],
@@ -9099,9 +9112,10 @@
       ]
     }
   }
-},
+}
+],
 
-{ "_comment14": "LETRA N ---------------------------------------------------------------------------------------------------------------------------------------    LETRA N"  },
+[{ "_comment14": "LETRA N - NNN --------------------------------------------------------------------------------------------------------------------------------------    LETRA N"  },
 { "id": "no_me_siento_solo",
   "titulo_original": "",
   "autor": ["Desconocido"],
@@ -9580,11 +9594,14 @@
       ]
     }
   }
-},
+}
+],
 
-{ "_comment15": "LETRA Ñ ---------------------------------------------------------------------------------------------------------------------------------------    LETRA Ñ"  },
+[{ "_comment15": "LETRA Ñ - ÑÑÑ --------------------------------------------------------------------------------------------------------------------------------------    LETRA Ñ"  },
+{}
+],
 
-{ "_comment16": "LETRA O ---------------------------------------------------------------------------------------------------------------------------------------    LETRA O"  },
+[{ "_comment16": "LETRA O - OOO --------------------------------------------------------------------------------------------------------------------------------------    LETRA O"  },
 { "id": "oh_dios_crea_en_mi",
   "titulo_original": "",
   "autor": ["Desconocido"],
@@ -9833,9 +9850,10 @@
       ]
     }
   }
-},
+}
+],
 
-{ "_comment17": "LETRA P ---------------------------------------------------------------------------------------------------------------------------------------    LETRA P"  },
+[{ "_comment17": "LETRA P - PPP --------------------------------------------------------------------------------------------------------------------------------------    LETRA P"  },
 { "id": "padre_de_amor",
   "titulo_original": "",
   "autor": ["Desconocido"],
@@ -10765,8 +10783,10 @@
       ]
     }
   }
-},
-{ "_comment18": "LETRA Q ---------------------------------------------------------------------------------------------------------------------------------------    LETRA Q"  },
+}
+],
+
+[{ "_comment18": "LETRA Q - QQQ --------------------------------------------------------------------------------------------------------------------------------------    LETRA Q"  },
 { "id": "que_pena_pensar",
   "titulo_original": "",
   "autor": ["Desconocido"],
@@ -11220,9 +11240,10 @@
       ]
     }
   }
-},
+}
+],
 
-{ "_comment19": "LETRA R ---------------------------------------------------------------------------------------------------------------------------------------    LETRA R"  },
+[{ "_comment19": "LETRA R - RRR --------------------------------------------------------------------------------------------------------------------------------------    LETRA R"  },
 { "id": "recordare",
   "titulo_original": "Remembrance",
   "autor": "Chris Davenport y Benjamin Hastings",
@@ -11524,9 +11545,10 @@
       ]
     }
   }
-},
+}
+],
 
-{ "_comment20": "LETRA S ---------------------------------------------------------------------------------------------------------------------------------------    LETRA S"  },
+[{ "_comment20": "LETRA S - SSS --------------------------------------------------------------------------------------------------------------------------------------    LETRA S"  },
 { "id": "salmo_1",
   "titulo_original": "Salmo 1",
   "autor": "Pablo Canalis",
@@ -13006,9 +13028,10 @@
       ]
     }
   }
-},
+}
+],
 
-{ "_comment21": "LETRA T ---------------------------------------------------------------------------------------------------------------------------------------    LETRA T"  },
+[{ "_comment21": "LETRA T - TTT --------------------------------------------------------------------------------------------------------------------------------------    LETRA T"  },
 { "id": "tal_como_soy",
   "titulo_original": "Tal como soy",
   "autor": ["Desconocido"],
@@ -14081,9 +14104,10 @@
       ]
     }
   }
-},
+}
+],
 
-{ "_comment22": "LETRA U ---------------------------------------------------------------------------------------------------------------------------------------    LETRA U"  },
+[{ "_comment22": "LETRA U - UUU --------------------------------------------------------------------------------------------------------------------------------------    LETRA U"  },
 { "id": "un_millon",
   "titulo_original": "Un millón",
   "autor": "Andrés Spyker",
@@ -14244,9 +14268,10 @@
       ]
     }
   }
-},
+}
+],
 
-{ "_comment23": "LETRA V ---------------------------------------------------------------------------------------------------------------------------------------    LETRA V"  },
+[{ "_comment23": "LETRA V - VVV --------------------------------------------------------------------------------------------------------------------------------------    LETRA V"  },
 { "id": "vamos_a_adorar",
   "titulo_original": "",
   "autor": ["Desconocido"],
@@ -15418,8 +15443,10 @@
       ]
     }
   }
-},
-{ "_comment24": "LETRA W ---------------------------------------------------------------------------------------------------------------------------------------    LETRA W"  },
+}
+],
+
+[{ "_comment24": "LETRA W - WWW --------------------------------------------------------------------------------------------------------------------------------------    LETRA W"  },
 {
     "id": "worthy-of-it-all-cece-winans",
     "titulo_original": "Worthy Of It All",
@@ -15495,11 +15522,14 @@
         ]
       }
     }
-  },
+  }
+],
 
-{ "_comment25": "LETRA X ---------------------------------------------------------------------------------------------------------------------------------------    LETRA X"  },
+[{ "_comment25": "LETRA X - XXX --------------------------------------------------------------------------------------------------------------------------------------    LETRA X"  },
+{}
+],
 
-{ "_comment26": "LETRA Y ---------------------------------------------------------------------------------------------------------------------------------------    LETRA Y"  },
+[{ "_comment26": "LETRA Y - YYY --------------------------------------------------------------------------------------------------------------------------------------    LETRA Y"  },
 { "id": "yo_nunca_ire_hacia_atras",
   "titulo_original": "Yo nunca iré hacia atrás",
   "autor": ["Desconocido"],
@@ -16403,19 +16433,15 @@
       ]
     }
   }
-},
+}
+],
 
-{ "_comment27": "LETRA Z ---------------------------------------------------------------------------------------------------------------------------------------    LETRA Z"  },
+[{"_comment27": "LETRA Z -  ZZZ --------------------------------------------------------------------------------------------------------------------------------------    LETRA Z"},
+{}
+],
 
-{ "_comment28": "Numeros ---------------------------------------------------------------------------------------------------------------------------------------    Numeros"  }
+[{"_comment28": "NUMEROS ---------------------------------------------------------------------------------------------------------------------------------------    NUMEROS"},
+{}
+]
 
-
-
-
-  
-
-  
-
-  
-  
 ]
