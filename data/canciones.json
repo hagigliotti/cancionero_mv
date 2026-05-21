@@ -870,6 +870,41 @@
     }
   }
 },
+{ "id": "alla_en_el_monte_horeb",
+  "titulo_original": "",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "",
+  "tonalidad": "Sol Mayor (G)",
+  "tempo_bpm": "",
+  "compas": "2/4",
+  "ritmo": ["Alabanza", "Hebreo"],
+  "referencia_biblica": "Éxodo 3:1-5",
+  "tags": ["Alabanza", "Avivamiento", "Moisés", "Zarza Ardiendo"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Allá en el monte Horeb",
+      "audio_url": "",
+      "traductor": [""],
+      "partitura": "No",
+      "revisado": "No",        
+      "letra": [
+        "[G]Allá en el monte Horeb la zarza ar[D7]día,",
+        "Allá en el monte Horeb la zarza ar[G]día;",
+        "Moisés se preguntó por qué la zarza ar[D7]día",
+        "Y no se consumía, quería él sa[G]ber.",
+        "[G]Oyó una voz del cielo que le de[D7]cía,",
+        "Oyó una voz del cielo que le de[G]cía:",
+        "",
+        "[C]Quita, quita las sandalias de tus [G]pies",
+        "Porque el [D7]lugar que pisas santo [G]es.",
+        "[C]Quita, quita las sandalias de tus [G]pies",
+        "Porque el [D7]lugar que pisas santo [G]es."
+      ]
+    }
+  }
+},
 { "id": "alma_misionera",
   "titulo_original": "Alma misionera",
   "autor": ["Enrique García Vélez"],
@@ -937,6 +972,39 @@
         "Es sen[A]tirlo con [B]fe, en el cora[E]zón. [B/D#][C#m]",
         "Y [A]aunque todos te [B]digan que eso no es ver[E]dad [B/D#][C#m]",
         "yo [F#m]lo siento en mi [B]vida aún [E]más."
+      ]
+    }
+  }
+},
+{ "id": "amigo_tengo_que_me_ama",
+  "titulo_original": "Desconocido",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "",
+  "tonalidad": "Sol Mayor (G)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Alabanza", "Corito Infantil"],
+  "referencia_biblica": "Juan 15:14-15",
+  "tags": ["Español", "Cristiano", "Alabanza", "Corito", "Infantil", "Amistad", "Días de la semana"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Amigo tengo que me ama",
+      "audio_url": "",
+      "traductor": [""],
+      "partitura": "No",
+      "revisado": "No",        
+      "letra": [
+        "[G]Amigo tengo que me ama,",
+        "[D]me [G]ama, me ama.",
+        "[G]Amigo tengo que me ama,",
+        "[C]Su [D]nombre es Je[G]sús.",
+        "",
+        "[G]Me ama domingo y lunes también,",
+        "[C]Martes y [G]miércoles donde esté.",
+        "[G]Jueves y viernes y sábado también,",
+        "[D]Alabad su [G]nombre es mi buen Jesús."
       ]
     }
   }
@@ -1852,6 +1920,7 @@
 },
 
 { "_comment3": "LETRA C ---------------------------------------------------------------------------------------------------------------------------------------    LETRA C" },
+
 { "id": "cada_dia_con_cristo",
   "titulo_original": "Cada día con Cristo",
   "autor": ["Desconocido"],
@@ -2368,7 +2437,7 @@
         "[E]¡Celebrad a [A]Cristo, [B7]celeb[E]rad! [C-D-E]",
         "",
         "[B7]¡Resucitó, [C#m]resucitó! [B7]Y Él vive para [C#m]siempre.",
-        "[B7]¡Resucitó, [C#m]resucitó! [B] ¡Vamos a [B]celeb[A]rar! [B]",
+        "[B7]¡Resucitó, [C#m]resucitó! [B]¡Vamos a [B]celeb[A]rar! [B]",
         "[E]¡Resucitó el Señor!",
         "",
         "(repite)"
@@ -2897,6 +2966,75 @@
     }
   }
 },
+{ "id": "cristo_me_ama",
+  "titulo_original": "Jesus Loves Me",
+  "autor": ["Anna Bartlett Warner"],
+  "compositor": ["William Batchelder Bradbury"],
+  "year": "1862",
+  "tonalidad": "Do Mayor (C)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Alabanza", "Worship", "Suave"],
+  "referencia_biblica": "Efesios 5:2",
+  "tags": ["Alabanza", "Amor de Cristo"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Cristo me ama",
+      "audio_url": "",
+      "traductor": ["Huberto M. Fassett"],
+      "partitura": "No",
+      "revisado": "No",        
+      "letra": [
+        "[C]Cristo me [Am]ama, [Em]esto sé",
+        "[F]Su palabra [C]dice asi",
+        "[C]Los peque[Am]ños [Em]son de Él",
+        "[F]Él [C]es nuestro [G]amigo [C]fiel",
+        "",
+        "[C]¡Sí, Cristo me ama!",
+        "[F]¡Sí, Cristo me ama!",
+        "[C]¡Sí, Cristo me [G]ama!",
+        "[C]La Biblia dice así"
+      ]
+    }
+  }
+},
+{ "id": "cristo_me_ama_infantil",
+  "titulo_original": "Jesus Loves Me",
+  "autor": ["Anna Bartlett Warner"],
+  "compositor": ["William Batchelder Bradbury"],
+  "year": "1862",
+  "tonalidad": "Do Mayor (C)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Alabanza", "Infantil", "We will rock you"],
+  "referencia_biblica": "Efesios 5:2",
+  "tags": ["Español", "Cristiano", "Alabanza", "Infantil", "Corito", "Amor de Cristo"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Cristo me ama (infantil)",
+      "audio_url": "",
+      "traductor": ["Huberto M. Fassett"],
+      "partitura": "No",
+      "revisado": "No",        
+      "letra": [
+        "(clap - clap - thigh-slap)",
+        "(clap - clap - thigh-slap)",
+        "",
+        "[C]Cristo me [Am]ama, [Em]esto sé",
+        "[F]Su palabra [C]dice asi",
+        "[C]Los peque[Am]ños [Em]son de Él",
+        "[F]Él [C]es nuestro [G]amigo [C]fiel",
+        "",
+        "[C]¡Sí, Cristo me ama! (clap - clap)",
+        "[F]¡Sí, Cristo me ama! (clap - clap)",
+        "[C]¡Sí, Cristo me [G]ama!",
+        "[C]La Biblia dice así"
+      ]
+    }
+  }
+},
 { "id": "cristo_manda_que_subamos_mas",
   "titulo_original": "",
   "autor": ["Desconocido"],
@@ -3194,12 +3332,12 @@
         "[A]Cuando miro los claros [C#m]cielos y [D]lo que es [Bm]obra de tus [E]dedos,",
         "[A]digo: ¿qué es el [F#m]hombre para [D]que te a[E]cuerdes de [A - E/G#]él?",
         "[F#m]Digo: ¿qué es el [D]hombre para [E]que te acuerdes de [A - E/G#]él?",
-        "        [F#m]  [C#m]  [D][Bm]  [E]",
+        "        [F#m] [C#m] [D][Bm] [E]",
         "Todo lo pusiste debajo de sus pies,",
-        "        [F#m]  [C#m]  [D][Bm]  [E]",
+        "        [F#m] [C#m] [D][Bm] [E]",
         "todo lo que pasa por la senda de la mar.",
         "[A]¡Oh! [F#m]Jehová, Se[D]ñor nuestro, ¡[E]cuán grande es tu [A - E/G#]nombre",
-        "        [F#m]  [D]        [E][A]",
+        "        [F#m] [D]       [E][A]",
         "en toda la tierra y en mi corazón!"
       ]
     }
@@ -3341,6 +3479,42 @@
         "",
         "Puoi gridare al mondo intero",
         "Cristo tornerà X2"
+      ]
+    }
+  }
+},
+{ "id": "cuan_bueno_cuan_maravilloso_es",
+  "titulo_original": "Desconocido",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "",
+  "tonalidad": "",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Alabanza", "Corito de Comunión"],
+  "referencia_biblica": "Salmos 133:1",
+  "tags": ["Español", "Cristiano", "Alabanza", "Corito", "Comunión", "Fraternidad", "Felicidad"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Salmo 133: Cuan bueno cuan maravilloso es (*)",
+      "audio_url": "",
+      "traductor": [""],
+      "partitura": "No",
+      "revisado": "No",        
+      "letra": [
+        "Cuan bueno cuan maravilloso es que vivamos en",
+        "comunión cuan bueno cuan maravilloso es que",
+        "vivamos en comunión",
+        "",
+        "Acercate a tu hermano y estréchale alegre su mano,",
+        "sonríele con alegría y canta esta canción.",
+        "",
+        "Felicidad hay en mi alma, con mi Jesús yo tengo calma,",
+        "con él yo voy pues él me ama, felicidad es Dios.",
+        "",
+        "Señor, tu amor es mío y lo sé, pues el secreto es cristo",
+        "en mi corazón."
       ]
     }
   }
@@ -3781,6 +3955,55 @@
         "[G]ver la [A]vida [F#m]como [Bm]tu,",
         "[G]saturar[A]me de tu Es[F#m]píri[Bm]tu",
         "[G]y reflejar al [A]mundo tu a[D]mor."
+      ]
+    }
+  }
+},
+{ "id": "de_tal_manera",
+  "titulo_original": "",
+  "autor": ["Abel Zavala"],
+  "compositor": ["Abel Zavala"],
+  "year": "2001",
+  "tonalidad": "Do Mayor (C)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Balada", "Adoración"],
+  "referencia_biblica": "San Juan 3:16",
+  "tags": ["Español", "Cristiano", "Adoración", "Amor de Dios", "Entrega", "Sacrificio"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "De tal manera",
+      "audio_url": "",
+      "traductor": [""],
+      "partitura": "No",
+      "revisado": "No",        
+      "letra": [
+        "[C]De tal manera el [G]me amo",
+        "que su [F]vida no es[Am]cati[G]mo",
+        "[C]hasta el final el se [G]entrego",
+        "y a la [F]muerte fue por que el [G]me a[C]mo",
+        "",
+        "[C]De tal manera el [G]me amo",
+        "no hay [F]forma en que podre pa[Am]gar [G]",
+        "[C]el precio de su grande [G]amor",
+        "pero [F]toda mi vida quie[G]ro [C]dar",
+        "",
+        "CORO:",
+        "[C]Por su [Am]amor yo [G]vi[C]vire",
+        "de su [Am]amor yo [G]can[C]tare",
+        "con mi [Am]jesus [G]cami[F]nare",
+        "por que el [G]me amo a mi [F/G]",
+        "",
+        "por su [Am]amor yo [G]vi[C]vire",
+        "de su [Am]amor yo [G]can[C]tare",
+        "con mi [Am]jesus [G]cami[F]nare",
+        "por que el [G]murio por mi [F/G]",
+        "le segui[C]re",
+        "",
+        "Subida a D",
+        "",
+        "C G Am , C G A  Solo en el coro"
       ]
     }
   }
@@ -4319,7 +4542,7 @@
 { "id": "dulce_oracion",
   "titulo_original": "Sweet Hour of Prayer",
   "autor": ["William W. Walford"],
-  "compositor": ["WilliamB. Bradbury"],
+  "compositor": ["William Batchelder Bradbury"],
   "year": "",
   "tonalidad": "Do Mayor (C)",
   "tempo_bpm": "",
@@ -4844,22 +5067,22 @@
       "revisado": "No", 
       "letra": [
         "[Estrofa 1]",
-        "En mi [G] alma suena un cantar,",
-        "un cantar de [A7] paz y [D7] amor;",
+        "En mi [G]alma suena un cantar,",
+        "un cantar de [A7]paz y [D7]amor;",
         "reali[G]dad que Dios me da,",
-        "pues de [G] Cristo [D7] soy y de [G] El señor.",
+        "pues de [G]Cristo [D7]soy y de [G]El señor.",
         "",
         "Coro",
-        "[G] Cristo, Cristo, Cristo,",
-        "nombre [A7] sin i[D7]gual;",
-        "llenas [G] siempre mi alma",
+        "[G]Cristo, Cristo, Cristo,",
+        "nombre [A7]sin i[D7]gual;",
+        "llenas [G]siempre mi alma",
         "de un can[D7]tar ce[G]lestial.",
         "",
         "[Estrofa 2]",
-        "Por el [G] mundo caminando voy,",
-        "del cal[A7]vario en [D7] la luz;",
+        "Por el [G]mundo caminando voy,",
+        "del cal[A7]vario en [D7]la luz;",
         "testi[G]ficando siempre estoy,",
-        "de mi [G] amado y [D7] buen Je[G]sús."
+        "de mi [G]amado y [D7]buen Je[G]sús."
       ]
     }
   }
@@ -5454,6 +5677,85 @@
     }
   }
 },
+{ "id": "estamos_de_fiesta_con_jesus",
+  "titulo_original": "",
+  "autor": ["Padre Mario"],
+  "compositor": ["Padre Mario"],
+  "year": "",
+  "tonalidad": "Sol Mayor (G)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Alabanza", "Corito de Avivamiento"],
+  "referencia_biblica": "Apocalipsis 19:9",
+  "tags": ["Español", "Cristiano", "Alabanza", "Corito", "Fiesta", "Comunión", "Poderoso"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Estamos de fiesta con Jesús",
+      "audio_url": "",
+      "traductor": [""],
+      "partitura": "No",
+      "revisado": "No",        
+      "letra": [
+        "[G]Estamos de fiesta con Jesus",
+        "al cielo queremos [D]ir,",
+        "estamos reunidos en la mesa,",
+        "el es [D]Cristo quien va a ser[G]vir.",
+        "",
+        "[G]Poderoso es nuestro [D]Dios, po[D]deroso es nuestro [G]Dios.",
+        "[G]Poderoso es nuestro [D]Dios, po[D]deroso es nuestro [G]Dios.",
+        "",
+        "El [G]sana, El [C]salva, po[D]deroso es nuestro [G]Dios.",
+        "Bau[G]tiza, El [C]viene, po[D]deroso es nuestro [G]Dios.",
+        "",
+        "Poderoso es nuestro Dios...",
+        "",
+        "El [G]Padre, El [C]Hijo, po[D]deroso es nuestro [G]Dios.",
+        "Es[G]piritu [C]Santo, po[D]deroso es nuestro [G]Dios.",
+        "",
+        "Poderoso es nuestro Dios...",
+        "",
+        "(se asciende 1 tono)"
+      ]
+    }
+  }
+},
+{ "id": "estamos_tristes",
+  "titulo_original": "Desconocido",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "",
+  "tonalidad": "Do Mayor (C)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Alabanza", "Corito Infantil"],
+  "referencia_biblica": "Filipenses 4:4",
+  "tags": ["Español", "Cristiano", "Alabanza", "Corito", "Infantil", "Gozo", "Confianza"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Estamos tristes?",
+      "audio_url": "",
+      "traductor": [""],
+      "partitura": "No",
+      "revisado": "No",        
+      "letra": [
+        "(Intro: C - G - C)",
+        "",
+        "[C]¿Estamos tristes?",
+        "[G]¡No, no, [C]no!",
+        "[C]¿Estamos tristes?",
+        "[G]¡No, no, [C]no!",
+        "",
+        "[C]Pesares vienen, pesares van",
+        "En [C]Dios con[G]fíamos, [C]Él nos guiará",
+        "",
+        "[C]¿Estamos tristes?",
+        "[G]¡No, no, [C]no!"
+      ]
+    }
+  }
+},
 { "id": "este_es_mi_deseo",
   "titulo_original": "I give you my heart",
   "autor": ["Reuben Morgan"],
@@ -5777,7 +6079,7 @@
       "revisado": "No",      
       "letra": [
         "[Intro]",
-        "[G] - [D7] - [G]",
+        "[G]- [D7]- [G]",
         "",
         "Coro:",
         "[G]Él puede, él puede, yo sé que él puede",
@@ -6223,6 +6525,7 @@
     }
   }
 },
+
 { "_comment7": "LETRA G ---------------------------------------------------------------------------------------------------------------------------------------    LETRA G" },
 { "id": "gente_come_noi",
   "titulo_original": "GENTE COME NOI",
@@ -6778,6 +7081,40 @@
         "[F]en esta [G]noche que ahora [C]negra ves.",
         "[F]En el de[G]sierto un oasis [C - G - Am]te espera",
         "[Dm]aunque [D]sólo [G]arena [C]veas."
+      ]
+    }
+  }
+},
+{ "id": "hay_una_iglesia_en_el_bosque",
+  "titulo_original": "The Church in the Wildwood",
+  "autor": ["William S. Pitts"],
+  "compositor": ["William S. Pitts"],
+  "year": "1857",
+  "tonalidad": "Sol Mayor (G)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Himno"],
+  "referencia_biblica": "Salmos 122:1",
+  "tags": ["Iglesia", "Capilla de Dios"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Hay una iglesia en el bosque",
+      "audio_url": "",
+      "traductor": [""],
+      "partitura": "No",
+      "revisado": "No",        
+      "letra": [
+        "[G]Hay una iglesia en el bosque,",
+        "[D]do [C]siempre qui[G]siera estar,",
+        "[D]no hay lu[C]gar en el mundo más bello,",
+        "[D]que [D7]aquella ca[G]pilla de Dios.",
+        "",
+        "Oh, oh, [G]ven, [D]ven, [G]ven, ven,",
+        "[D]ven a la i[G]glesia del bosque,",
+        "[D]do [C]siempre quisiera estar,",
+        "[D]no hay lu[C]gar en el mundo más bello,",
+        "[D]que [D7]aquella ca[G]pilla de Dios."
       ]
     }
   }
@@ -7449,6 +7786,7 @@
 { "_comment11": "LETRA K ---------------------------------------------------------------------------------------------------------------------------------------    LETRA K"  },
 
 { "_comment12": "LETRA L ---------------------------------------------------------------------------------------------------------------------------------------    LETRA L"  },
+
 { "id": "lavame_en_tu_sangre",
   "titulo_original": "",
   "autor": ["Desconocido"],
@@ -9102,6 +9440,7 @@
 },
 
 { "_comment14": "LETRA N ---------------------------------------------------------------------------------------------------------------------------------------    LETRA N"  },
+
 { "id": "no_me_siento_solo",
   "titulo_original": "",
   "autor": ["Desconocido"],
@@ -9419,7 +9758,6 @@
     }
   }
 },
-
 { "id": "non_ci_lasceremo_mai",
   "titulo_original": "NON CI LASCEREMO MAI",
   "autor": ["Desconocido"],
@@ -9543,7 +9881,7 @@
   "autor": ["Marcos Witt"],
   "compositor": ["Marcos Witt"],
   "year": "",
-  "tonalidad": "Mi Mayor (E)",
+  "tonalidad": "Do Mayor (C)",
   "tempo_bpm": "",
   "compas": "",
   "ritmo": ["Desconocido"],
@@ -9566,17 +9904,19 @@
       "partitura": "No",
       "revisado": "No",      
       "letra": [
-        "[E]/No hay Dios tan grande como tú",
-        "[B7]No lo hay [E]no lo hay/ [E7]",
-        "[A]/No hay Dios que pueda hacer las",
-        "[E]obras [C#m]como las [F#m7]que haces [B7]tú/ [E]",
+        "[C]No hay Dios tan grande como Tú",
+        "[G]No lo hay, [C]no lo hay (BIS)",
         "",
-        "[E]No es con ejército ni con espada",
-        "[B7]más con tu santo espíritu [E][E7]",
-        "[A]Y esos Montes se moverán [E][C#m]",
-        "[F#m]Y esas almas se salvaran [E][E7]",
-        "[A]Y Los enfermos se sanaran [E][C#m]",
-        "[F#m]Con tu santo espíritu [B7][E]"
+        "[F]No hay Dios que pueda hacer las obras",
+        "[G]como las que haces [C]Tú (BIS)",
+        "",
+        "[C]No es con espada ni con e[F]jército",
+        "más [G]con tu Santo Es[C]píritu",
+        "",
+        "[F]Y esta iglesia se mo[C]verá",
+        "[G]Y esta iglesia se mo[C]verá",
+        "[F]Y esta iglesia se mo[C]verá",
+        "más [G]con tu Santo Es[C]píritu"
       ]
     }
   }
@@ -9836,6 +10176,7 @@
 },
 
 { "_comment17": "LETRA P ---------------------------------------------------------------------------------------------------------------------------------------    LETRA P"  },
+
 { "id": "padre_de_amor",
   "titulo_original": "",
   "autor": ["Desconocido"],
@@ -10056,7 +10397,6 @@
     }
   }
 },
-
 { "id": "paz",
   "titulo_original": "Paz",
   "autor": ["Desconocido"],
@@ -10456,7 +10796,6 @@
     }
   }
 },
-
 { "id": "parlare_con_te",
   "titulo_original": "PARLARE CON TE",
   "autor": ["Desconocido"],
@@ -10766,6 +11105,7 @@
     }
   }
 },
+
 { "_comment18": "LETRA Q ---------------------------------------------------------------------------------------------------------------------------------------    LETRA Q"  },
 { "id": "que_pena_pensar",
   "titulo_original": "",
@@ -11479,7 +11819,6 @@
     }
   }
 },
-
 { "id": "ritrovarti_in_cielo",
   "titulo_original": "RITROVARTI IN CIELO",
   "autor": ["Desconocido"],
@@ -12485,6 +12824,56 @@
     }
   }
 },
+{
+  "id": "si_el_espiritu_de_dios",
+  "titulo_original": "",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "",
+  "tonalidad": "Re Menor (Dm)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Alabanza", "Corito de Avivamiento", "Hebreo"],
+  "referencia_biblica": "2 Samuel 6:14",
+  "tags": ["Español", "Cristiano", "Alabanza", "Corito", "Avivamiento", "David", "Danza", "Gozo"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Si el Espíritu de Dios esta aquí",
+      "audio_url": "",
+      "traductor": [""],
+      "partitura": "No",
+      "revisado": "No",        
+      "letra": [
+        "Estrofa 1:",
+        "[Rem]Si el Espíritu de Dios esta aquí, [La7]",
+        "yo canto como [Rem]David.",
+        "[Rem]Si el Espíritu de Dios esta aquí, [La7]",
+        "yo canto como [Rem]David.",
+        "",
+        "Coro:",
+        "[Solm]Yo canto, yo [Rem]canto,",
+        "yo canto como [La7]David.",
+        "[Solm]Yo canto, yo [Rem]canto,",
+        "yo canto como [La7]David. [Rem]",
+        "",
+        "[Rem]Si el Espíritu de Dios se mueve en mi, [La7]",
+        "yo canto como [Rem]David.",
+        "[Rem]Si el Espíritu de Dios se mueve en mi, [La7]",
+        "yo canto como [Rem]David.",
+        "",
+         "Coro:",
+        "[Solm]Yo canto, yo [Rem]canto,",
+        "yo canto como [La7]David.",
+        "[Solm]Yo canto, yo [Rem]canto,",
+        "yo canto como [La7]David. [Rem]",
+        "",
+        "Nota: variaciones de Estrofas:",
+        "Puedes repetir el coro cambiando el verbo: Yo alabo / Yo adoro / Yo danzo / Yo oro, como David."
+      ]
+    }
+  }
+},
 { "id": "solo_en_ti",
   "titulo_original": "Só em ti",
   "autor": "Ricardo Martins",
@@ -12970,46 +13359,6 @@
     }
   }
 },
-{ "id": "solo_el_poder_de_dios_sencillo",
-  "titulo_original": "",
-  "autor": ["Desconocido"],
-  "compositor": ["Desconocido"],
-  "year": "",
-  "tonalidad": "La Mayor (A)",
-  "tempo_bpm": "",
-  "compas": "",
-  "ritmo": "Alabanza / Corito",
-  "referencia_biblica": "2 Corintios 5:17",
-  "tags": [
-    "Español",
-    "Cristiano",
-    "Alabanza",
-    "Corito",
-    "Testimonio",
-    "Transformación",
-    "Poder Divino",
-    "Nueva Criatura"
-  ],
-  "idiomas": {
-    "es": {
-      "titulo": "Solo el poder de Dios",
-      "audio_url": "",
-      "traductor": ["-"],
-      "partitura": "No",
-      "revisado": "No",      
-      "letra": [
-        "[A]Solo el [E]poder [A]Dios,",
-        "puede cambiar tu [E]ser",
-        "la prueba yo te doy,",
-        "Él me ha cambiado a [A]mí;",
-        "no [A]ves que soy feliz",
-        "sirviendo [A]al Se[D]ñor.",
-        "¡Nueva criatura [A]soy!",
-        "[E]¡Nueva [A]soy!"
-      ]
-    }
-  }
-},
 
 { "_comment21": "LETRA T ---------------------------------------------------------------------------------------------------------------------------------------    LETRA T"  },
 { "id": "tal_como_soy",
@@ -13208,7 +13557,7 @@
   "tonalidad": "Re Mayor (D)",
   "tempo_bpm": "",
   "compas": "",
-  "ritmo": ["Desconocido"],
+  "ritmo": ["Alabanza"],
   "referencia_biblica": "Salmos 63:8",
   "tags": [
     "Español",
@@ -14181,6 +14530,50 @@
     }
   }
 },
+{ "id": "una_mirada_de_fe",
+  "titulo_original": "",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "",
+  "tonalidad": "Re Mayor (D)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Alabanza", "Corito de Avivamiento"],
+  "referencia_biblica": "Isaías 45:22",
+  "tags": ["Alabanza", "Corito", "Avivamiento", "Fe", "Salvación", "Amor"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Una mirada de fe",
+      "audio_url": "",
+      "traductor": [""],
+      "partitura": "No",
+      "revisado": "No",        
+      "letra": [
+        "[D]Una mirada de fe,",
+        "Una mirada de fe,",
+        "Es la que [A]puede sal[A7]var al pe[D]cador",
+        "",
+        "[D]Una mirada de fe,",
+        "Una mirada de fe,",
+        "Es la que [A]puede sal[A7]var al pe[D]cador",
+        "",
+        "Y si tu [G]vienes a Cristo Jesús",
+        "[D]El te perdonara",
+        "Porque una mirada de [A]fe",
+        "Es la que [A7]puede sal[D]var al pe[cador",
+        "",
+        "[D]Una mirada de amor,",
+        "Una mirada de amor,",
+        "Es la que [A]puede sal[A7]var al pe[D]cado",
+        "",
+        "[D]Una mirada de amor,",
+        "Una mirada de amor,",
+        "Es la que [A]puede sal[A7]var al pe[D]cado"
+      ]
+    }
+  }
+},
 { "id": "una_via_che",
   "titulo_original": "UNA VIA CHE",
   "autor": ["Desconocido"],
@@ -14350,10 +14743,6 @@
     }
   }
 },
-
-
-
-
 { "id": "vengo_a_adorarte",
   "titulo_original": "Here I am to worship",
   "autor": "Tim Hughes",
@@ -14443,15 +14832,7 @@
   "compas": "",
   "ritmo": ["Desconocido"],
   "referencia_biblica": "San Juan 15:11",
-  "tags": [
-    "Español",
-    "Cristiano",
-    "Alabanza",
-    "Corito",
-    "Alegría",
-    "Testimonio",
-    "Evangelismo"
-  ],
+  "tags": ["Alabanza", "Alegría", "Testimonio", "Evangelismo"],
   "idiomas": {
     "es": {
       "titulo": "Vamos a henchir",
@@ -14460,10 +14841,24 @@
       "partitura": "No",
       "revisado": "No",      
       "letra": [
-        "[C]Vamos a henchir el mundo de alegría. [cite: 2, 3]",
-        "[C]Hay que reír y [G]nunca murmurar [cite: 4, 5]",
-        "[C]hasta hablar de [F]Cristo noche y día [cite: 6, 7, 8]",
-        "[C]y con Je[G]sús al [C]mundo entero transformar. [cite: 9, 10, 11, 12]"
+        "[C]Vamos a henchir el mundo de alegría.",
+        "[C]Hay que reír y [G]nunca murmurar.",
+        "[C]hasta hablar de [F]Cristo noche y día.",
+        "[C]y con Je[G]sús al [C]mundo entero transformar.",
+        "",
+        "(3 veces)",
+        "[C]Vamos a henchir, henchir, henchir el mundo de alegría.",
+        "[C]Hay que reír, reír, reír y [G]nunca murmurar.",
+        "[C]hasta hablar, hablar, hablar de [F]Cristo noche y día.",
+        "[C]y con Je[G]sús al [C]mundo entero transformar.",
+        "",
+        "(5 veces)",
+        "[C]Vamos a henchir, henchir, henchir, henchir, henchir el mundo de alegría.",
+        "[C]Hay que reír, reír, reír, reír, reír y [G]nunca murmurar.",
+        "[C]hasta hablar, hablar, hablar, hablar, hablar de [F]Cristo noche y día.",
+        "[C]y con Je[G]sús al [C]mundo entero transformar.",
+        "",
+        "Nota: Se pueden ir sumando cantidades, simpre impares y se hace la mimica de ir contando la cantidad de pablaras con la mano."
       ]
     }
   }
@@ -15503,6 +15898,7 @@
 { "_comment25": "LETRA X ---------------------------------------------------------------------------------------------------------------------------------------    LETRA X"  },
 
 { "_comment26": "LETRA Y ---------------------------------------------------------------------------------------------------------------------------------------    LETRA Y"  },
+
 { "id": "yo_nunca_ire_hacia_atras",
   "titulo_original": "Yo nunca iré hacia atrás",
   "autor": ["Desconocido"],
@@ -16253,15 +16649,15 @@
       "audio_url": "",
       "traductor": "",
       "letra": [
-        "[F] Yo tengo un amigo que me [Dm7] ama",
-        "[C] Me ama, [F] me ama,",
-        "[C] Yo [F] tengo un amigo que me [Dm7] ama",
-        "[C] Su nombre es Je[F]sús",
+        "[F]Yo tengo un amigo que me [Dm7]ama",
+        "[C]Me ama, [F]me ama,",
+        "[C]Yo [F]tengo un amigo que me [Dm7]ama",
+        "[C]Su nombre es Je[F]sús",
         "",
-        "[Bb] Que me ama, que me [F] ama",
-        "[C] Que me ama, si, con tierno a[F]mor",
-        "[Bb] Que me ama, que me [F] ama,",
-        "[C] Su nombre es Je[F]sús."
+        "[Bb]Que me ama, que me [F]ama",
+        "[C]Que me ama, si, con tierno a[F]mor",
+        "[Bb]Que me ama, que me [F]ama,",
+        "[C]Su nombre es Je[F]sús."
       ]
     }
   }
@@ -16403,6 +16799,54 @@
         "[Eb]Sólo [C]quiero decir: [x2][primera vez]",
         "[Eb]Sólo [C]quiero de[F]cir: yo voy!",
         "[Eb]Sólo [C]quiero de[F]cir: ¡yo voy! [segunda vez]"
+      ]
+    }
+  }
+},
+{ "id": "yo_tengo_gozo",
+  "titulo_original": "I've Got the Joy, Joy, Joy, Joy",
+  "autor": ["Manuel Bonilla"],
+  "compositor": ["George Willis Cooke"],
+  "year": "",
+  "tonalidad": "G",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Alabanza", "Corito Infantil"],
+  "referencia_biblica": "Filipenses 4:4",
+  "tags": ["Español", "Cristiano", "Alabanza", "Corito", "Infantil", "Gozo", "Paz", "Corazón"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Yo tengo gozo",
+      "audio_url": "",
+      "traductor": ["Manuel Bonilla"],
+      "partitura": "No",
+      "revisado": "No",        
+      "letra": [
+        "[G]Yo tengo gozo, gozo en mi corazón. (¿Dónde?)",
+        "[D]En mi corazón, (Pero ¿dónde?) [G]en mi corazón.",
+        "[G]Yo tengo gozo, gozo en mi corazón",
+        "[D]Gloria sea a nuestro [G]Dios",
+        "",
+        "[G]Yo tengo gozo, paz y alegria en mi corazón. (¿Dónde?)",
+        "[D]En mi corazón, (Pero ¿dónde?) [G]en mi corazón.",
+        "[G]Yo tengo gozo, paz y alegria en mi corazón",
+        "[D]Gloria sea a nuestro [G]Dios",
+        "",
+        "[G]Yo tengo a Cristo, a Cristo en mi corazón. (¿Dónde?)",
+        "[D]En mi corazón, (Pero ¿dónde?) [G]en mi corazón.",
+        "[G]Yo tengo a Cristo, a Cristo en mi corazón",
+        "[D]Gloria sea a nuestro [G]Dios",
+        "",
+        "[G]Yo tengo a Juan 3:16 en mi corazón. (¿Dónde?)",
+        "[D]En mi corazón, (Pero ¿dónde?) [G]en mi corazón.",
+        "[G]Yo tengo a Juan 3:16 en mi corazón",
+        "[D]Gloria sea a nuestro [G]Dios",
+        "",
+        "[G]Yo tengo el mensaje adventista en mi corazón. (¿Dónde?)",
+        "[D]En mi corazón, (Pero ¿dónde?) [G]en mi corazón.",
+        "[G]Yo tengo el mensaje adventista en mi corazón",
+        "[D]Gloria sea a nuestro [G]Dios"
       ]
     }
   }
