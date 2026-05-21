@@ -523,6 +523,43 @@
     }
   }
 },
+{ "id": "adentro_afuera_arriba_abajo",
+  "titulo_original": "I'm Inright, Outright, Upright, Downright Happy",
+  "autor": ["Desconocido"],
+  "compositor": [""],
+  "year": "",
+  "tonalidad": "D",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Alabanza", "Corito Infantil"],
+  "referencia_biblica": "Filipenses 4:4",
+  "tags": ["Español", "Cristiano", "Alabanza", "Corito", "Infantil", "Gozo", "Felicidad", "Corazón"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Adentro, afuera, arriba, abajo",
+      "audio_url": "https://www.youtube.com/watch?v=oPimn2alRvI&t=14s",
+      "traductor": [""],
+      "partitura": "No",
+      "revisado": "No",        
+      "letra": [
+        "Adentro, Afuera, Arriba, Abajo",
+        "",
+        "[D] Adentro, afuera, arriba, abajo,",
+        "siempre soy fe[A]liz",
+        "",
+        "Adentro, afuera, arriba, abajo,",
+        "siempre soy fe[D]liz",
+        "",
+        "Je[D7]sús vino por mí, y en[G]tró en mi corazón",
+        "",
+        "A[A]dentro, afuera, arriba, abajo,",
+        "siempre soy fe[D]liz"
+      ],
+      "nota": "Se va repitiendo todo aumentando la velocidad."
+    }
+  }
+},
 { "id": "agnus_dei",
   "titulo_original": "Agnus Dei",
   "autor": ["Michael W. Smith"],
@@ -1921,6 +1958,40 @@
 
 { "_comment3": "LETRA C ---------------------------------------------------------------------------------------------------------------------------------------    LETRA C" },
 
+{ "id": "cabeza_hombros_rodillas_y_pies",
+  "titulo_original": "Desconocido",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "",
+  "tonalidad": "D",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Infantil"],
+  "referencia_biblica": "",
+  "tags": [],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Cabeza, hombros, rodillas y pies",
+      "audio_url": "",
+      "traductor": [""],
+      "partitura": "No",
+      "revisado": "No",        
+      "letra": [
+        "Cabeza, hombros, rodillas y pies,",
+        "cabeza, hombros, rodillas y pies,",
+        "cabeza, hombros, rodillas y pies,",
+        "daremos una vueltita.",
+        "",
+        "Cabeza, hombros, rodillas y pies,",
+        "cabeza, hombros, rodillas y pies,",
+        "cabeza, hombros, rodillas y pies,",
+        "nos sentaremos quietitos"
+      ],
+      "nota": "puede ir cambiando la ultima frase"
+    }
+  }
+},
 { "id": "cada_dia_con_cristo",
   "titulo_original": "Cada día con Cristo",
   "autor": ["Desconocido"],
@@ -2877,6 +2948,63 @@
         "",
         "[D]Que se haga, Dios, tu volun[G]tad",
         "[Bm]en la tierra como en el [G]cielo."
+      ]
+    }
+  }
+},
+{ "id": "creceras",
+  "titulo_original": "",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "",
+  "tonalidad": "Sol Mayor (G)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Adoración", "Balada", "Hebreo"],
+  "referencia_biblica": ["Génesis 5:24", "Salmos 1:3"],
+  "tags": ["Alabanza", "Adoración", "Crecimiento", "Confianza", "Vida Eterna"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Crecerás",
+      "audio_url": "https://www.youtube.com/watch?v=IBpfpUr6kIA",
+      "traductor": [""],
+      "partitura": "No",
+      "revisado": "No",        
+      "letra": [
+        "Estrofa 1",
+        "La fortaleza del hombre es Jehová a la mañana.",
+        "Crecerá como un árbol, plantado junto a un Manantial.",
+        "La paz de una mujer es Jehová al Acostarse;",
+        "Crecerá como arrayan plantado junto a un Lago del sur.",
+        "",
+        "Coro 1",
+        "Hablaras con el Señor, conversaras y le pedirás,",
+        "derramaras tu tristeza tu alegría y soledad.",
+        "Caminaras a su lado y al conocerlo en Él confiaras.",
+        "",
+        "Coro 2",
+        "Crecerás junto al Señor, conocerás la Eternidad;",
+        "caminarás como Enoc, llegarás a su hogar,",
+        "todo allí es dicha y paz.",
+        "",
+        "Estrofa 2",
+        "La fortaleza del hombre es Jehová cuando trabaja;",
+        "pedirá su dirección ante cualquier dificultad.",
+        "Sabia será la mujer que en Jehová está su confianza,",
+        "buscará a Dios como guía y no andará en lo superficial.",
+        "",
+        "Coro 3",
+        "Oirás la voz de Dios cada mañana al despertar,",
+        "lo oirás en su palabra que en reverencia estudiaras,",
+        "lo buscaras cada día como Israel busca el maná.",
+        "",
+        "Coro 4",
+        "Crecerás junto al Señor, conocerás la Eternidad;",
+        "caminaras como Enoc.",
+        "La vida eterna comienza aquí,",
+        "seguiremos creciendo allá",
+        "creciendo allá, creciendo allá."
       ]
     }
   }
@@ -4539,6 +4667,47 @@
     }
   }
 },
+{ "id": "dios_tu_sabes_que_te_amo",
+  "titulo_original": "",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "",
+  "tonalidad": "La Mayor (A)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Adoración", "Balada"],
+  "referencia_biblica": "Juan 21:17",
+  "tags": ["Español", "Cristiano", "Adoración", "Amor a Dios", "Consuelo", "Confianza", "Libertad", "Oración"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Dios tú sabes que te amo",
+      "audio_url": "",
+      "traductor": [""],
+      "partitura": "No",
+      "revisado": "No",        
+      "letra": [
+        "Coro:",
+        "[La] Dios tu sabes [Mi] que te amo [Fa#m]",
+        "[Sim7] que tienes mi [Sibm] vida en tus [Sim7] manos",
+        "[Do#m7] En mi co[Fa#m]razón, te [Do#m7] doy mi ado[Re]ración,",
+        "[La] Dios tu sabes [Mi] que te amo [La] [Sim7] [Mi]",
+        "",
+        "Parte I",
+        "[La] Cuando nuestra carga es imposible de [Fa#m] llevar",
+        "[Re] Nadie como [Do#m#5] tu Señor, me puede [Re] consolar",
+        "[La] No hay nada imposible, que se escape a tu [Fa#m] poder,",
+        "[Re] Si me atan cadenas, se [Sim7] tienen que rom[Mi]per",
+        "",
+        "Repite Coro",
+        "Repite Parte I",
+        "",
+        "Repite Coro (2x)"
+      ],
+      "nota": "La mayoria de las veces se canta solo el coro"
+    }
+  }
+},
 { "id": "dulce_oracion",
   "titulo_original": "Sweet Hour of Prayer",
   "autor": ["William W. Walford"],
@@ -6178,6 +6347,39 @@
         "Ig[D]niting every man and woman, boy and [Asus4 A]girl",
         "",
         "[Chorus]"
+      ]
+    }
+  }
+},
+{ "id": "fe_mas_fe",
+  "titulo_original": "",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "",
+  "tonalidad": "Re Mayor (D), Sol Mayor (G), La Mayor (A) ",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Alabanza", "Corito de Avivamiento"],
+  "referencia_biblica": "Hebreos 11:6",
+  "tags": ["Español", "Cristiano", "Alabanza", "Corito", "Avivamiento", "Fe", "Amor"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Fe más fe",
+      "audio_url": "",
+      "traductor": [""],
+      "partitura": "No",
+      "revisado": "No",        
+      "letra": [
+        "Estrofa y Coro",
+        "",
+        "[D] Fe más fe, amor más amor,",
+        "[A] ¿Quién no tiene pida al Salvador?",
+        "[A] Fe más fe, amor más amor,",
+        "[D] ¿Quién no tiene pida al Salvador?",
+        "",
+        "[D] Pues sin fe, fe sin amor,",
+        "[G] No [A] puede a[D]gradar al Señor"
       ]
     }
   }
@@ -9924,6 +10126,8 @@
 
 { "_comment15": "LETRA Ñ ---------------------------------------------------------------------------------------------------------------------------------------    LETRA Ñ"  },
 
+
+
 { "_comment16": "LETRA O ---------------------------------------------------------------------------------------------------------------------------------------    LETRA O"  },
 { "id": "oh_dios_crea_en_mi",
   "titulo_original": "",
@@ -12824,8 +13028,7 @@
     }
   }
 },
-{
-  "id": "si_el_espiritu_de_dios",
+{ "id": "si_el_espiritu_de_dios",
   "titulo_original": "",
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
@@ -13130,7 +13333,6 @@
     }
   }
 },
-
 { "id": "sei_di_piu",
   "titulo_original": "SEI DI PIÙ",
   "autor": ["Desconocido"],
@@ -13359,6 +13561,45 @@
     }
   }
 },
+{  "id": "somos_soldaditos",
+  "titulo_original": "I May Not March in the Infantry",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": "",
+  "tonalidad": "La Mayor (A)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Alabanza", "Corito Infantil"],
+  "referencia_biblica": "2 Timoteo 2:3",
+  "tags": ["Español", "Cristiano", "Alabanza", "Corito", "Infantil", "Soldado de Jesús", "Fe"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Somos soldaditos",
+      "audio_url": "",
+      "traductor": [""],
+      "partitura": "No",
+      "revisado": "No",        
+      "letra": [
+        "[A] Somos soldaditos, [E] ciervos del se[A]ñor",
+        "[A] Vamos en defensa de [E] nuestro evan[A]gelio",
+        "Trompeta: TUTURURU TUTU - TUTURURU TUTU - TUTURURU TUTU - TUTU TUTU TU TU (A-E-A)",
+        "",
+        "[A] Aunque no soy de la infantería, [E] caballería, [A] artillería",
+        "[A] Aunque en avión no ande volando [E] pero soldado [A] yo soy",
+        "",
+        "[A] Soldado [D] soy de [A] Jesus, soldado [D] soy de [A] Jesus",
+        "Trompeta: TUTURURU TUTU - TUTURURU TUTU - TUTURURU TUTU - TUTU TUTU TU TU (A-E-A)",
+        "",
+        "[A] Aunque no soy de la infantería, [E] caballería, [A] artillería",
+        "[A] Aunque en avión no ande volando [E] pero soldado [A] soy",
+        "",
+        "[A] Soldado [D] soy de [A] Jesus, soldado [D] soy de [A] Jesus"
+      ]
+    }
+  }
+},
+
 
 { "_comment21": "LETRA T ---------------------------------------------------------------------------------------------------------------------------------------    LETRA T"  },
 { "id": "tal_como_soy",
@@ -14061,9 +14302,7 @@
     }
   }
 },
-
-{
-    "id": "tenho-paz-arautos",
+{   "id": "tenho-paz-arautos",
     "titulo_original": "Tenho Paz",
     "autor": "Pedro Valença",
     "compositor": "Pedro Valença",
@@ -15818,8 +16057,7 @@
   }
 },
 { "_comment24": "LETRA W ---------------------------------------------------------------------------------------------------------------------------------------    LETRA W"  },
-{
-    "id": "worthy-of-it-all-cece-winans",
+{   "id": "worthy-of-it-all-cece-winans",
     "titulo_original": "Worthy Of It All",
     "autor": "CeCe Winans",
     "compositor": "David Brymer / Ryan Hall",
@@ -15893,7 +16131,7 @@
         ]
       }
     }
-  },
+},
 
 { "_comment25": "LETRA X ---------------------------------------------------------------------------------------------------------------------------------------    LETRA X"  },
 
@@ -16631,8 +16869,7 @@
     }
   }
 },
-{
-  "id": "yo_tengo_un_amigo_que_me_ama",
+{ "id": "yo_tengo_un_amigo_que_me_ama",
   "titulo_original": "",
   "autor": "Tradicional",
   "compositor": "Tradicional",
@@ -16662,8 +16899,7 @@
     }
   }
 },
-{
-  "id": "yo_tengo_un_amigo_que_se_llama_jesus",
+{ "id": "yo_tengo_un_amigo_que_se_llama_jesus",
   "titulo_original": "",
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
@@ -16847,6 +17083,45 @@
         "[D]En mi corazón, (Pero ¿dónde?) [G]en mi corazón.",
         "[G]Yo tengo el mensaje adventista en mi corazón",
         "[D]Gloria sea a nuestro [G]Dios"
+      ]
+    }
+  }
+},
+{ "id": "yo_tengo_gozo_en_mi_alma",
+  "titulo_original": "",
+  "autor": ["Cesáreo Gabaráin"],
+  "compositor": ["Cesáreo Gabaráin"],
+  "year": "",
+  "tonalidad": "Mi Mayor (E)",
+  "tempo_bpm": "",
+  "compas": "",
+  "ritmo": ["Alabanza", "Corito de Avivamiento"],
+  "referencia_biblica": "Juan 7:38",
+  "tags": ["Español", "Cristiano", "Alabanza", "Corito", "Avivamiento", "Gozo", "Ríos de agua viva"],
+
+  "idiomas": {
+    "es": {
+      "titulo": "Yo tengo gozo en mi alma",
+      "audio_url": "",
+      "traductor": [""],
+      "partitura": "No",
+      "revisado": "No",        
+      "letra": [
+        "[E] Yo tengo gozo en mi alma, gozo en mi alma,",
+        "gozo en mi alma y en mi ser, [B7]",
+        "¡Aleluya, gloria a Dios!",
+        "Son como [E] ríos de agua viva,",
+        "ríos de agua viva,",
+        "ríos de agua viva [B7] en mi [E] ser.",
+        "",
+        "[E] 1. Vamos cantando con todo su poder, [B7]",
+        "vamos cantando con todo su poder, [E]",
+        "Dad gloria a [E7] Dios, gloria a Dios, dad gloria a [A] Él,",
+        "vamos can[E]tando con [B7]todo su po[E]der.",
+        "",
+        "2. Alza tus brazos y alaba a tu Señor,",
+        "Dad gloria a Dios, gloria a Dios, dad gloria a Él",
+        "alza tus brazos y alaba a tu Señor."
       ]
     }
   }
