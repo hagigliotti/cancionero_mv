@@ -195,7 +195,7 @@ function updateLogo() {
   // prioridad: modo proyector
   if (document.body.classList.contains("projector")) {
 
-    logo.src = "imagenes/Cancionero_black.png";
+    logo.src = "imagenes/Banner_black.png";
     return;
   }
 

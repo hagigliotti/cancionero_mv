@@ -306,7 +306,7 @@ a.menu-item {
 #alfabeto {
   display: flex;
   flex-wrap: wrap;          /* permite múltiples filas */
-  justify-content: flex-start; /*center;  centra los botones */
+  justify-content: center; /*center;  centra los botones */
   gap: 6px;
   padding: 10px;
   
@@ -596,11 +596,11 @@ body.projector .song-break {
   height: 18px;  /* menor separación */
 }
 
-/* NO ocultar alfabeto si lo quieres usar */
+/* NO ocultar alfabeto si lo quieres usar 
 body.projector #alfabeto {
     display: flex;
     justify-content: center;
-}
+}*/
 
 /* ====================  ACERCA DE....  ==================== */
 /* MODAL FONDO */
