@@ -7354,8 +7354,8 @@
 },
 { "id": "hablar_con_dios",
   "titulo_original": ["Falar com Deus"],
-  "autor": ["Lineu Soares"],
-  "compositor": ["Desconocido"],
+  "autor": ["Valdecir Lima"],
+  "compositor": ["Lineu Soares"],
   "year": ["Desconocido"],
   "tonalidad": ["La Mayor (A)"],
   "tempo_bpm": ["Desconocido"],
@@ -7369,7 +7369,7 @@
       "titulo": ["Hablar con Dios"],
       "audio_url": "",
       "traductor": ["-"],
-      "partitura": "No",
+      "partitura": "/data/partituras/hablar_con_dios.pdf",
       "revisado": "No",      
       "letra": [
         "[E]En la [A]oración en[D]cuentro [A]calma,",
@@ -8379,6 +8379,7 @@
       "partitura": "No",
       "revisado": "No",      
       "letra": [
+        "1",
         "[D]La alegría está en el co[D7]razón",
         "de a[G]quel que conoce a Je[D]sús.",
         "La [D]verdadera paz la tiene a[Bm]quel",
@@ -8390,11 +8391,13 @@
         "es el [D]amor que solo [G]tiene",
         "quien [A]conoce a Je[D]sús.",
         "",
+        "2",
         "[D]¡Ale[D7]luya, Ale[G]luya, [D]",
         "Ale[D]luya, [Bm]Alelu[E]ya! [A]",
         "",
         "Coro",
         "",
+        "3",
         "Puedo pisar las rocas y saltar las montañas",
         "Aleluya, Aleluya!",
         "Puedo pisar las rocas y saltar las montañas",
@@ -9283,18 +9286,13 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Éxodo 4:12"],
-  "tags": [
-    
-    "Cristiano",
-    "Testimonio",
-    "Alabanza"
-  ],
+  "tags": ["Testimonio", "Alabanza"],
   "idiomas": {
     "es": {
       "titulo": ["Mensajero"],
       "audio_url": "",
       "traductor": ["-"],
-      "partitura": "No",
+      "partitura": "data/partituras/mensajero.pdf",
       "revisado": "No",      
       "letra": [
         "[A]Hay días que ni sé decir, [A]",
