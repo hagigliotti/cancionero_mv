@@ -8358,22 +8358,19 @@
     }
   }
 },
-{ "id": "la_alegria",
-  "titulo_original": ["Desconocido"],
-  "autor": ["Desconocido"],
-  "compositor": ["Desconocido"],
+{ 
+  "id": "la_alegria",
+  "titulo_original": ["La alegría está en el corazón"],
+  "autor": ["William Rojas"],
+  "compositor": ["William Rojas"],
   "year": ["Desconocido"],
-  "tonalidad": ["Sol Mayor (G)"],
+  "tonalidad": ["Re Mayor (D)"],
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Salmos 16:11"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Gozo"
-  ],
+  "referencia_biblica": ["Filipenses 4:4"],
+  "tags": ["Gozo", "Alabanza", "Paz", "Felicidad", "Alegría"],
+
   "idiomas": {
     "es": {
       "titulo": ["La alegría"],
@@ -8382,19 +8379,28 @@
       "partitura": "No",
       "revisado": "No",      
       "letra": [
-        "[G]La alegría está en el [C]cora[G]zón",
-        "de quien conoce a [D]Jesús.",
-        "[G]La verdadera paz la [C]tiene a[G]quel",
-        "que ya conoce a [D]Je[G]sús.",
-        "[G7]El senti[C]miento más pre[G]cioso",
-        "que de Cristo es pro[D]pio",
-        "el que [G]sabe que [G7]Jesús es [C]el Señor [Cm]",
-        "y que [G]Él nos [D]da su a[G]mor.",
+        "[D]La alegría está en el co[D7]razón",
+        "de a[G]quel que conoce a Je[D]sús.",
+        "La [D]verdadera paz la tiene a[Bm]quel",
+        "que [E]ya conoce a Je[A]sús.",
         "",
-        "[G]Aleluya, [C]ale[G]luya,",
-        "aleluya, [D]aleluya.",
-        "[G]El que sabe que [G7]Jesús es [C]el Señor [Cm]",
-        "y que [G]Él nos [D]da su a[G]mor."
+        "Coro:",
+        "[D]Un sentimiento más pre[D7]cioso",
+        "que [G]viene del cora[Gm]zón,",
+        "es el [D]amor que solo [G]tiene",
+        "quien [A]conoce a Je[D]sús.",
+        "",
+        "[D]¡Ale[D7]luya, Ale[G]luya, [D]",
+        "Ale[D]luya, [Bm]Alelu[E]ya! [A]",
+        "",
+        "Coro",
+        "",
+        "Puedo pisar las rocas y saltar las montañas",
+        "Aleluya, Aleluya!",
+        "Puedo pisar las rocas y saltar las montañas",
+        "Aleluya, Aleluya!",
+        "",
+        "Coro"
       ],
       "nota": [""]
     }
