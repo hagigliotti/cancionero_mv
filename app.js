@@ -13,6 +13,8 @@ let idiomaActual = "es";
 let listaVisible = false;
 let letraActiva = null;
 
+let tablaturaVisible = true;
+
 // ===================== DATA ACTUAL =====================
 function getDataActual() {
   return libroActual === "himnario" ? himnos : canciones;
@@ -572,6 +574,30 @@ const FLAG_NAMES = {
   fr: "Francia",
   de: "Alemania"
 };
+
+// TABLATURA - Mostrar / ocultar
+function toggleTablatura() {
+  tablaturaVisible = !tablaturaVisible;
+
+  localStorage.setItem("tablatura", tablaturaVisible ? "on" : "off");
+
+  applyTablaturaState();
+}
+
+function applyTablaturaState() {
+  const chords = document.querySelectorAll(".chord-wrap");
+
+  const stateBtn = document.getElementById("tabState");
+
+  chords.forEach(el => {
+    el.style.display = tablaturaVisible ? "inline-block" : "none";
+  });
+
+  if (stateBtn) {
+    stateBtn.innerText = tablaturaVisible ? "Mostrar" : "Ocultar";
+    stateBtn.className = "tab-btn " + (tablaturaVisible ? "on" : "off");
+  }
+}
 
 // ===== CAMBIO DE TAMANO DE FUENTE (A+ A A-) ====================================================================
 // 0 = tamaño default
@@ -1250,6 +1276,8 @@ function openSong(id) {
     </div>
   ` : ""}
   `;
+
+  applyTablaturaState();
 
   // UX
   window.scrollTo({ top: 0, behavior: "smooth" });

@@ -1048,3 +1048,28 @@ body.projector .clear-btn {
 .person-link:hover {
   color: #2390be;
 }
+
+/*TABLATURA: MOSTRAR Y OCULTAR */
+.tab-btn {
+  margin-left: 8px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  transition: 0.2s;
+  display: inline-block;
+}
+
+.tab-btn.on {
+  background: #22c55e;
+  color: white;
+  border-color: #22c55e;
+}
+
+.tab-btn.off {
+  background: #ef4444;
+  color: white;
+  border-color: #ef4444;
+}
