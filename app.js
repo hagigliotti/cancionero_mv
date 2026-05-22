@@ -96,6 +96,14 @@ async function init() {
     document.getElementById("libro").value = e.target.value;
     document.getElementById("libro").dispatchEvent(new Event("change"));
   });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const saved = localStorage.getItem("tablatura");
+
+    tablaturaVisible = saved !== "off";
+
+    applyTablaturaState();
+  });
 }
 
 init();
@@ -586,7 +594,6 @@ function toggleTablatura() {
 
 function applyTablaturaState() {
   const chords = document.querySelectorAll(".chord-wrap");
-
   const stateBtn = document.getElementById("tabState");
 
   chords.forEach(el => {
@@ -595,7 +602,8 @@ function applyTablaturaState() {
 
   if (stateBtn) {
     stateBtn.innerText = tablaturaVisible ? "Mostrar" : "Ocultar";
-    stateBtn.className = "tab-btn " + (tablaturaVisible ? "on" : "off");
+    stateBtn.classList.remove("on", "off");
+    stateBtn.classList.add(tablaturaVisible ? "on" : "off");
   }
 }
 

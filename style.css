@@ -193,7 +193,11 @@ a.menu-item {
   padding: 10px 15px;
   /*font-weight: bold;*/
   /*opacity: 0.7;*/
-  cursor: default;
+  .menu-title {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
 }
 
 
@@ -1059,6 +1063,7 @@ body.projector .clear-btn {
   cursor: pointer;
   border: 1px solid #ccc;
   transition: 0.2s;
+  pointer-events: auto;
   display: inline-block;
 }
 
