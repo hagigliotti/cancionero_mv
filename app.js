@@ -21,10 +21,10 @@ function getDataActual() {
 // ===================== INIT =====================
 async function init() {
   const res1 = await fetch(DATA_URLS.cancionero);
-  canciones = await res1.json();
-
   const res2 = await fetch(DATA_URLS.himnario);
-  himnos = await res2.json();
+
+  canciones = (await res1.json()).map(normalizeSong);
+  himnos = (await res2.json()).map(normalizeSong);
 
   renderAlphabet();
   loadTheme();
@@ -48,8 +48,6 @@ async function init() {
       if (libroActual === "himnario") return;
 
       idiomaActual = e.target.value;
-
-      // sincronizar menú
       document.getElementById("menuIdioma").value = e.target.value;
 
       renderAlphabet();
@@ -57,35 +55,33 @@ async function init() {
     });
 
   document.getElementById("menuLibro")
-  .addEventListener("change", e => {
+    .addEventListener("change", e => {
 
-    libroActual = e.target.value;
+      libroActual = e.target.value;
 
-    // cerrar menú aquí
-    closeMenu();
+      closeMenu();
 
-    // reset estado UI
-    letraActiva = null;
-    listaVisible = false;
+      letraActiva = null;
+      listaVisible = false;
 
-    document.getElementById("contenido").innerHTML = "";
-    document.getElementById("indice").innerHTML = "";
+      document.getElementById("contenido").innerHTML = "";
+      document.getElementById("indice").innerHTML = "";
 
-    const idiomaSelect = document.getElementById("idioma");
+      const idiomaSelect = document.getElementById("idioma");
 
-    if (libroActual === "himnario") {
-      idiomaActual = "es";
-      idiomaSelect.value = "es";
-      idiomaSelect.disabled = true;
-    } else {
-      idiomaSelect.disabled = false;
-    }
+      if (libroActual === "himnario") {
+        idiomaActual = "es";
+        idiomaSelect.value = "es";
+        idiomaSelect.disabled = true;
+      } else {
+        idiomaSelect.disabled = false;
+      }
 
-    renderAlphabet();
-    closeList();
-    handleMenuVisibility();
-    updateAppTitle();
-});
+      renderAlphabet();
+      closeList();
+      handleMenuVisibility();
+      updateAppTitle();
+    });
 
   document.getElementById("menuIdioma").addEventListener("change", e => {
     idiomaActual = e.target.value;
@@ -113,8 +109,8 @@ function normalize(t) {
 
 function sortByTitle(data) {
   return data.sort((a, b) => {
-    const aT = a.idiomas?.[idiomaActual]?.titulo || "";
-    const bT = b.idiomas?.[idiomaActual]?.titulo || "";
+    const aT = normalizeText(a.idiomas?.[idiomaActual]?.titulo);
+    const bT = normalizeText(b.idiomas?.[idiomaActual]?.titulo);
     return normalize(aT).localeCompare(normalize(bT));
   });
 }
@@ -200,6 +196,146 @@ function normalizeReferenciaBiblica(ref) {
     .map(r => r.trim())
     .filter(Boolean);
 }
+
+/* TITULOS */
+// TITULO ORIGINAL
+function normalizeTituloOriginal(value) {
+  if (!value) return "";
+
+  if (Array.isArray(value)) {
+    return value.filter(Boolean).join(", ");
+  }
+
+  return value;
+}
+//TITULOS DE CANCION
+function normalizeText(value) {
+  if (!value) return "";
+
+  if (Array.isArray(value)) {
+    return value.filter(Boolean).join(", ");
+  }
+
+  return value;
+}
+function normalizeSong(song) {
+  if (!song?.idiomas) return song;
+
+  Object.keys(song.idiomas).forEach(lang => {
+    const t = song.idiomas?.[lang]?.titulo;
+    song.idiomas[lang].titulo = normalizeText(t);
+  });
+
+  song.titulo_original = normalizeText(song.titulo_original);
+
+  // 🆕 NORMALIZAR CAMPOS SIMPLES
+  song.year = normalizeSimple(song.year);
+  song.tonalidad = normalizeSimple(song.tonalidad);
+  song.tempo_bpm = normalizeSimple(song.tempo_bpm);
+  song.compas = normalizeSimple(song.compas);
+
+  return song;
+}
+// OTROS TITULOS
+
+// YEAR TONALIDAD BMP COMPAS
+function normalizeSimple(value) {
+  if (!value) return "";
+  if (Array.isArray(value)) {
+    return value.filter(Boolean).join(", ");
+  }
+  return value;
+}
+
+function normalizeMeta(song, field) {
+  return normalizeSimple(song?.[field]);
+}
+
+/* LISTA DE AUTORES COMPOSITORES Y TRADUCTORES */
+function renderPersonLinks(label, value) {
+
+  const arr = normalizeField(value)
+    .map(v => (v || "").trim())
+    .filter(Boolean);
+
+  if (!arr.length) return "";
+
+  const html = arr.map(person => {
+
+    // NO convertir en link si no hay info real
+    if (
+      person === "-" ||
+      normalize(person) === "DESCONOCIDO"
+    ) {
+      return person;
+    }
+
+    // link clickable
+    return `
+      <span 
+        class="person-link"
+        onclick="showPersonSongs('${person.replace(/'/g, "\\'")}')">
+        ${person}
+      </span>
+    `;
+  }).join(", ");
+
+  return `<b>${label}:</b> ${html} | `;
+}
+
+function showPersonSongs(person) {
+
+  const data = [...canciones, ...himnos];
+
+  const results = data.filter(song => {
+
+    // autor
+    const autor = normalizeField(song.autor);
+
+    // coautor
+    const coautor = normalizeField(song.coautor);
+
+    // compositor
+    const compositor = normalizeField(song.compositor);
+
+    // traductor (todos los idiomas)
+    const traductores = Object.values(song.idiomas || {})
+      .flatMap(lang => normalizeTraductor(lang));
+
+    const allPeople = [
+      ...autor,
+      ...coautor,
+      ...compositor,
+      ...traductores
+    ].map(normalize);
+
+    return allPeople.includes(normalize(person));
+  });
+
+  if (!results.length) {
+    alert(`No se encontraron canciones para ${person}`);
+    return;
+  }
+
+  const cancionesLista = results.map(song => {
+
+    const titulo =
+      song.idiomas?.[idiomaActual]?.titulo ||
+      song.titulo_original ||
+      song.id;
+
+    return `• ${titulo}`;
+  });
+
+  alert(
+`${person}
+
+Aparece en:
+
+${cancionesLista.join("\n")}`
+  );
+}
+
 
 // ===================== LOGO DINAMICO - BANNER =====================
 function updateLogo() {
@@ -588,7 +724,7 @@ function search(q) {
     // ===== IDIOMAS =====
     const matchIdiomas = Object.values(song.idiomas || {}).some(lang => {
 
-      const titulo = normalize(lang?.titulo || "");
+      const titulo = normalize(normalizeText(lang?.titulo));
 
       const letra = normalize(
         Array.isArray(lang?.letra)
@@ -663,7 +799,7 @@ function search(q) {
   );
 
   list.innerHTML = sorted.map(c => {
-    const titulo = c.idiomas?.[idiomaActual]?.titulo;
+    const titulo = normalizeText(c.idiomas?.[idiomaActual]?.titulo);
     const num = getNumeroHimno(c);
     const flags = getAvailableFlags(c);
 
@@ -1013,6 +1149,11 @@ function openSong(id) {
 
   const s = song?.idiomas?.[idiomaActual];
 
+  const nota = normalizeField(s.nota)
+    .map(n => (n || "").trim())
+    .filter(Boolean)
+    .join(", ");
+
   // ✅ cerrar lista y reset UI
   closeList();
   listaVisible = false;
@@ -1027,8 +1168,8 @@ function openSong(id) {
   const num = getNumeroHimno(song);
 
   const tituloFinal = num
-    ? `${num} - ${s.titulo || song.titulo_original}`
-    : (s.titulo || song.titulo_original);
+    ? `${num} - ${normalizeText(s.titulo || song.titulo_original)}`
+    : normalizeText(s.titulo || song.titulo_original);
 
   const audioHtml = renderAudioLink(song, s);
 
@@ -1039,13 +1180,17 @@ function openSong(id) {
   const meta = `
     <div class="meta">
 
-      <div><b>Original:</b> ${song.titulo_original || ""}</div>
+      <div><b>Original:</b> ${(Array.isArray(song.titulo_original) ? song.titulo_original.join(", ") : song.titulo_original) || ""}</div>
 
       <div>
-        ${formatOptionalField("Autor", song.autor || "Desconocido")}
-        ${formatOptionalField("Coautor", song.coautor)}
-        ${formatOptionalField("Compositor", song.compositor || "Desconocido")}
-        <b>Año:</b> ${song.year || "Desconocido"}
+        ${renderPersonLinks("Autor", song.autor || "Desconocido")}
+        ${renderPersonLinks("Coautor", song.coautor)}
+        ${renderPersonLinks("Compositor", song.compositor || "Desconocido")}
+        ${renderPersonLinks(
+          "Traductor",
+          song.idiomas?.[idiomaActual]?.traductor
+        )}
+        <b>Año:</b> ${normalizeSimple(song.year) || "Desconocido"}
       </div>
 
       <div>
@@ -1062,9 +1207,9 @@ function openSong(id) {
       </div>
 
       <div>
-        <b>Tonalidad:</b> ${song.tonalidad || "Desconocido"} |
-        <b>BPM:</b> ${song.tempo_bpm || "Desconocido"} |
-        <b>Compás:</b> ${song.compas || "Desconocido"} |
+        <b>Tonalidad:</b> ${normalizeMeta(song, "tonalidad") || "Desconocido"} |
+        <b>BPM:</b> ${normalizeMeta(song, "tempo_bpm") || "Desconocido"} |
+        <b>Compás:</b> ${normalizeMeta(song, "compas") || "Desconocido"} |
         <b>Ritmo:</b> ${formatRitmo(song.ritmo) || "Desconocido"} |
         <b>Partitura:</b> ${
           song.idiomas?.[idiomaActual]?.partitura &&
@@ -1098,6 +1243,12 @@ function openSong(id) {
     <div class="lyrics">
       ${renderLyrics(s.letra)}
     </div>
+    
+    ${nota ? `
+    <div class="nota">
+      <b>Nota:</b> <span>${nota}</span>
+    </div>
+  ` : ""}
   `;
 
   // UX

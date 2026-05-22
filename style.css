@@ -1011,3 +1011,16 @@ body.projector .clear-btn {
   border-radius: 8px;
   border: 1px solid #000;
 }
+
+
+
+/*Alert de autor, coautor, compositor, tradurctor */
+.person-link {
+  color: #7dd3fc;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.person-link:hover {
+  color: #38bdf8;
+}
