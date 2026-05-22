@@ -7369,7 +7369,7 @@
       "titulo": ["Hablar con Dios"],
       "audio_url": "",
       "traductor": ["-"],
-      "partitura": "/data/partituras/hablar_con_dios.pdf",
+      "partitura": "data/partituras/hablar_con_dios.pdf",
       "revisado": "No",      
       "letra": [
         "[E]En la [A]oración en[D]cuentro [A]calma,",
