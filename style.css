@@ -5,14 +5,29 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
-   overflow-x: hidden;
+  overflow-x: clip;
+  min-height: 100vh;
 }
 
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden;
+  min-height: 100%;
+  overflow-x: clip; /* mejor que hidden en móviles modernos */
+}
+
+* {
+  box-sizing: border-box;
+}
+.top-row,
+.top-inline,
+.buscador-container {
+  min-width: 0;
+}
+
+#contenido:empty {
+  min-height: 60vh;
 }
 
 h1 {
@@ -751,10 +766,6 @@ body.dark .modal-content {
 .chord-wrap {
   display: inline-block;
   position: relative;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 .chord {
