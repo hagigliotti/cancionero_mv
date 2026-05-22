@@ -1078,3 +1078,16 @@ body.projector .clear-btn {
   color: white;
   border-color: #ef4444;
 }
+
+#tabBtn {
+  margin-left: 8px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: none;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  touch-action: manipulation;
+}

@@ -15,15 +15,27 @@ let letraActiva = null;
 
 let tablaturaVisible = true;
 
+
 // ===================== DATA ACTUAL =====================
 function getDataActual() {
   return libroActual === "himnario" ? himnos : canciones;
+}
+function initTabButton() {
+  const btn = document.getElementById("tabBtn");
+  if (!btn) return;
+
+  btn.addEventListener("click", toggleTablatura);
 }
 
 // ===================== INIT =====================
 async function init() {
   const res1 = await fetch(DATA_URLS.cancionero);
   const res2 = await fetch(DATA_URLS.himnario);
+  const saved = localStorage.getItem("tablatura");
+  tablaturaVisible = saved !== "off";
+
+  initTabButton();
+  applyTablaturaState();
 
   canciones = (await res1.json()).map(normalizeSong);
   himnos = (await res2.json()).map(normalizeSong);
@@ -99,9 +111,9 @@ async function init() {
 
   document.addEventListener("DOMContentLoaded", () => {
     const saved = localStorage.getItem("tablatura");
-
     tablaturaVisible = saved !== "off";
 
+    initTabButton();
     applyTablaturaState();
   });
 }
@@ -594,16 +606,17 @@ function toggleTablatura() {
 
 function applyTablaturaState() {
   const chords = document.querySelectorAll(".chord-wrap");
-  const stateBtn = document.getElementById("tabState");
+  const btn = document.getElementById("tabBtn");
 
   chords.forEach(el => {
     el.style.display = tablaturaVisible ? "inline-block" : "none";
   });
 
-  if (stateBtn) {
-    stateBtn.innerText = tablaturaVisible ? "Mostrar" : "Ocultar";
-    stateBtn.classList.remove("on", "off");
-    stateBtn.classList.add(tablaturaVisible ? "on" : "off");
+  if (btn) {
+    btn.innerText = tablaturaVisible ? "Mostrar" : "Ocultar";
+
+    btn.classList.remove("on", "off");
+    btn.classList.add(tablaturaVisible ? "on" : "off");
   }
 }
 
