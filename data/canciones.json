@@ -357,101 +357,6 @@
     }
   }
 },
-{ "id": "abre_mis_ojos",
-  "titulo_original": ["Open Our Eyes, Lord"],
-  "autor": ["Robert Cull"],
-  "compositor": ["Robert Cull"],
-  "year": ["1976"],
-  "tonalidad": ["Re Mayor (D)"],
-  "tempo_bpm": ["66"],
-  "compas": ["4/4"],
-  "ritmo": ["Balada"],
-  "referencia_biblica": ["Salmos 119:18"],
-  "tags": ["Adoración", "Clásico", "Petición","Worship"],
-
-  "idiomas": {
-    "es": {
-      "titulo": ["Abre mis ojos"],
-      "audio_url": "",
-      "traductor": ["Desconocido"],
-      "partitura": "No",
-      "revisado": "No",
-      "letra": [
-        "[D]Abre mis [G]ojos, [A]Jesús quiero [D]verte,[Bm]",
-        "conmigo te[Em]nerte, [A]decir que te [G]amo.[D]",
-        "[D]Abre mi [G]oído, [A]hoy quiero escu[D]charte.[Bm]",
-        "¡Abre mis [Em]ojos [A]para contem[G]plarte![D]",
-        "",
-        "[D]Abre mis [G]ojos, [A]Jesús quiero [D]verte,[Bm]",
-        "conmigo te[Em]nerte, [A]decir que te [G]amo.[D]",
-        "[D]Abre mi [G]oído, [A]hoy quiero escu[D]charte.[Bm]",
-        "¡Abre mis [Em]ojos [A]para contem[G]plarte![D](x2)"
-      ],
-      "nota": [""]
-    },
-    "en": {
-      "titulo": ["Open Our Eyes, Lord"],
-      "audio_url": "https://open.spotify.com/intl-es/track/1Dj8ivrq5Q0mW5jehGTUop?si=d0c26c2eafba4f62",
-      "traductor": ["-"],
-      "partitura": "No",
-      "revisado": "No",
-      "letra": [
-        "Open our eyes, Lord, we want to see Jesús,",
-        "To reach out and touch Him, and say that we love Him.",
-        "Open our ears, Lord, and help us to listen,",
-        "Open our eyes, Lord, we want to see Jesús.",
-        "",
-        "Open our eyes, Lord, we want to see Jesús,",
-        "To reach out and touch Him, and say that we love Him.",
-        "Open our ears, Lord, and help us to listen,",
-        "Open our eyes, Lord, we want to see Jesús. (x2)"
-      ],
-      "nota": [""]
-    },
-    "pt": {
-      "titulo": ["Abre os Meus Olhos"],
-      "audio_url": "",
-      "traductor": ["Vincit"],
-      "partitura": "No",
-      "revisado": "No",
-      "letra": [
-        "Abre os meus olhos, pois quero ver Cristo,",
-        "Sentir Sua presença, dizer que O amo.",
-        "Abre os ouvidos, ajuda-me a ouvir-Te,",
-        "Abre os meus olhos, pois quero ver Cristo."
-      ],
-      "nota": [""]
-    },
-    "it": {
-      "titulo": ["Apri i miei occhi"],
-      "audio_url": "https://open.spotify.com/intl-it/track/64u61kvWsD3YcsE3ACu2AZ?si=b5fa6e14eec448e0",
-      "traductor": ["-"],
-      "partitura": "No",
-      "revisado": "No",
-      "letra": [
-        "Rit. [DO]Apri i miei [FA]occhi e [SOL]fammi ve[DO]dere,",
-        "le meraviglie della grazia Tua,",
-        "[LA-]per contem[MI-]plare [FA]il suo splen[DO]dore",
-        "[RE-]Mentre adoro [SOL]Te, [FA]mentre [SOL]adoro [DO]Te.",
-        "",
-        "[DO]Oh Signore noi [FA]veniam",
-        "Nel tuo grande e immenso amor",
-        "[LA-]Nei momenti più [MI-]difficili",
-        "[FA]Quando non sappiamo [SOL]cosa far",
-        "Noi veniam davanti a Te",
-        "Al trono della grazia Tua",
-        "E con gli occhi della fede noi",
-        "[SOL]la Tua gloria contempliam",
-        "",
-        "Rit. Apri i miei occhi e fammi vedere,",
-        "le meraviglie della grazia Tua,",
-        "per contemplare il suo splendore",
-        "Mentre adoro Te, mentre adoro Te."
-      ],
-      "nota": [""]
-    }
-  }
-},
 { "id": "abre_mis_ojos_senor",
   "titulo_original": ["Open the eyes of my heart"],
   "autor": ["Paul Baloche"],
@@ -786,56 +691,56 @@
         "[D]Al son del cocodrilo y el orangután,",
         "[E]la pícara  serpiente, [A]el águila [E]real[A],",
         "[Bm]el topo, el [G]conejo, y [Bm]también el ele[G]fante,",
-        "[D]BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
-        "[D]BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
+        "[D]¡BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
+        "[D]¡BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
         "","",
         "[D]Al son del --------- y el orangután,",
         "[E]la pícara  serpiente, [A]el águila [E]real[A],",
         "[Bm]el topo, el [G]conejo, [Bm]también el ele[G]fante,",
-        "[D]BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
-        "[D]BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
+        "[D]¡BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
+        "[D]¡BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
         "","",
         "[D]Al son del --------- y el ---------,",
         "[E]la pícara  serpiente, [A]el águila [E]real[A],",
         "[Bm]el topo, el [G]conejo, y [Bm]también el ele[G]fante,",
-        "[D]BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
-        "[D]BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
+        "[D]¡BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
+        "[D]¡BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
         "",
         "[D]Al son del --------- y el ---------,",
         "[E]la pícara  ---------, [A]el águila [E]real[A],",
         "[Bm]el topo, el [G]conejo, y [Bm]también el ele[G]fante,",
-        "[D]BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
-        "[D]BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
+        "[D]¡BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
+        "[D]¡BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
         "",
         "[D]Al son del --------- y el ---------,",
         "[E]la pícara  ---------, [A]el ------ [E]real[A],",
         "[Bm]el topo, el [G]conejo, y [Bm]también el ele[G]fante,",
-        "[D]BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
-        "[D]BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
+        "[D]¡BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
+        "[D]¡BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
         "",
         "[D]Al son del --------- y el ---------,",
         "[E]la pícara  ---------, [A]el ------ [E]real[A],",
         "[Bm]el ----, el [G]conejo, y [Bm]también el ele[G]fante,",
-        "[D]BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
-        "[D]BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
+        "[D]¡BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
+        "[D]¡BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
         "",
         "[D]Al son del --------- y el ---------,",
         "[E]la pícara  ---------, [A]el ------ [E]real[A],",
         "[Bm]el ----, el [G]------, y [Bm]también el ele[G]fante,",
-        "[D]BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
-        "[D]BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
+        "[D]¡BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
+        "[D]¡BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
         "",
         "[D]Al son del --------- y el ---------,",
         "[E]la pícara  ---------, [A]el ------ [E]real[A],",
         "[Bm]el ----, el [G]------, y [Bm]también el ---[G]-----,",
-        "[D]BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
-        "[D]BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
+        "[D]¡BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
+        "[D]¡BOROMBOMBOM! [A]son [D]todos del Se[G]ñor.",
         "",
         "[D]Al son del cocodrilo y el orangután,",
         "[E]la pícara  serpiente, [A]el águila [E]real[A],",
         "[Bm]el topo, el [G]conejo y [Bm]también el ele[G]fante,",
-        "[D]BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
-        "[D]BOROMBOMBOM! [A]son [D]todos del Se[G]ñor."
+        "[D]¡BOROMBOMBOM! [A]son [D]de la crea[A]ción,",
+        "[D]¡BOROMBOMBOM! [A]son [D]todos del Se[G]ñor."
       ],
       "nota": ["Se repite dejando en silencio el nombre del animal por la mímica."]
     }
@@ -1018,7 +923,7 @@
 
   "idiomas": {
     "es": {
-      "titulo": ["Alto, escúchame"],
+      "titulo": ["¡Alto, escúchame!"],
       "audio_url": "https://open.spotify.com/intl-es/track/4bOQA47v0L3S4OSxOyoI5J?si=410beb6055b64bcf",
       "traductor": ["-"],
       "partitura": "No",
@@ -2255,19 +2160,19 @@
         "[D]Caminando voy, para Ca[A]náan",
         "[A7]caminando voy, para Ca[D]náan",
         "[D7]caminando voy, para Ca[G]náan...",
-        "Oh! Gloria a [D]Dios",
+        "¡Oh, Gloria a [D]Dios!",
         "[A7]caminando voy para Ca[D]náan.",
         "",
         "Si usted no va, no me impida a mí",
         "si usted no va, no me impida a mí",
         "si usted no va, no me impida a mí...",
-        "Oh! Gloria a Dios",
+        "¡Oh, Gloria a Dios!",
         "caminando voy para Canáan.",
         "",
         "Al venir Jesús, yo me voy con Él",
         "al venir Jesús, yo me voy con Él",
         "al venir Jesús, yo me voy con Él...",
-        "Oh! Gloria a Dios",
+        "¡Oh, Gloria a Dios!",
         "caminando voy para Canáan."
       ],
       "nota": [""]
@@ -2567,7 +2472,7 @@
 
   "idiomas": {
     "es": {
-      "titulo": ["Celebrad a Cristo"],
+      "titulo": ["¡Celebrad a Cristo!"],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -3310,10 +3215,10 @@
         "[C]Cristo rompe las [G]cadenas",
         "[Am][D][G]y me libra a mí",
         "",
-        "Como es posible, vivir sin ti Jesús",
+        "¿Como es posible, vivir sin ti Jesús?",
         "si el firmamento de la vida eres Tu",
         "Tu me salvaste del pecado y de la muerte",
-        "Como es posible, vivir sin ti Jesús?"
+        "¿Como es posible, vivir sin ti Jesús?"
       ],
       "nota": [""]
     }
@@ -4198,56 +4103,6 @@
     }
   }
 },
-{ "id": "de_tal_manera",
-  "titulo_original": ["Desconocido"],
-  "autor": ["Abel Zavala"],
-  "compositor": ["Abel Zavala"],
-  "year": ["2001"],
-  "tonalidad": ["Do Mayor (C)"],
-  "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Balada", "Adoración"],
-  "referencia_biblica": ["San Juan 3:16"],
-  "tags": ["Cristiano", "Adoración", "Amor de Dios", "Entrega", "Sacrificio"],
-
-  "idiomas": {
-    "es": {
-      "titulo": ["De tal manera"],
-      "audio_url": "",
-      "traductor": [""],
-      "partitura": "No",
-      "revisado": "No",        
-      "letra": [
-        "[C]De tal manera el [G]me amo",
-        "que su [F]vida no es[Am]cati[G]mo",
-        "[C]hasta el final el se [G]entrego",
-        "y a la [F]muerte fue por que el [G]me a[C]mo",
-        "",
-        "[C]De tal manera el [G]me amo",
-        "no hay [F]forma en que podre pa[Am]gar [G]",
-        "[C]el precio de su grande [G]amor",
-        "pero [F]toda mi vida quie[G]ro [C]dar",
-        "",
-        "CORO:",
-        "[C]Por su [Am]amor yo [G]vi[C]vire",
-        "de su [Am]amor yo [G]can[C]tare",
-        "con mi [Am]jesus [G]cami[F]nare",
-        "por que el [G]me amo a mi [F/G]",
-        "",
-        "por su [Am]amor yo [G]vi[C]vire",
-        "de su [Am]amor yo [G]can[C]tare",
-        "con mi [Am]jesus [G]cami[F]nare",
-        "por que el [G]murio por mi [F/G]",
-        "le segui[C]re",
-        "",
-        "Subida a D",
-        "",
-        "C G Am , C G A  Solo en el coro"
-      ],
-      "nota": [""]
-    }
-  }
-},
 { "id": "demos_gracias_al_senor",
   "titulo_original": ["Demos gracias al Señor"],
   "autor": ["Cesáreo Gabaráin"],
@@ -5027,9 +4882,9 @@
           "No la puedes esconder, no te puedes callar",
           "Ante tal necesidad, enciende una luz en la obscuridad",
           "",
-          "Y como pues invocarán a aquel en quien no han creído?",
-          "Y como creerán en aquel de quien no han oído?",
-          "Y como oirán si nadie les predica?",
+          "¿Y como pues invocarán a aquel en quien no han creído?",
+          "¿Y como creerán en aquel de quien no han oído?",
+          "¿Y como oirán si nadie les predica?",
           "Hermosos son los pies, de los que anuncian la paz",
           "Las buenas nuevas de Jesús",
           "",
@@ -6056,7 +5911,7 @@
 
   "idiomas": {
     "es": {
-      "titulo": ["Estamos tristes?"],
+      "titulo": ["¿Estamos tristes?"],
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
@@ -8399,9 +8254,9 @@
         "",
         "3",
         "Puedo pisar las rocas y saltar las montañas",
-        "Aleluya, Aleluya!",
+        "¡Aleluya, Aleluya!",
         "Puedo pisar las rocas y saltar las montañas",
-        "Aleluya, Aleluya!",
+        "¡Aleluya, Aleluya!",
         "",
         "Coro"
       ],
@@ -11879,17 +11734,17 @@
       "partitura": "No",
       "revisado": "No",      
       "letra": [
-        "[D]¿Quién es el rey de la selva?",
-        "[D]¿Quién es el rey del [A]mar?",
-        "[A]¿Quién es el rey del uni[D]verso?",
+        "[D]¿Quién es el rey de la selva? ¡uh!, ¡uh!",
+        "[D]¿Quién es el rey del [A]mar? ¡barabaraba!",
+        "[A]¿Quién es el rey del uni[D]verso? ¡iuhhh!",
         "[A7]Yo te lo di[D]ré:",
         "",
-        "Jesús es el Rey de la selva.",
-        "[D]Jesús es el Rey del [A]mar.",
+        "Jesús es el Rey de la selva. ¡uh!, ¡uh!",
+        "[D]Jesús es el Rey del [A]mar. ¡barabaraba!",
         "[A]Jesús es el Rey del universo",
-        "[A7]y de mi vida tam[D]bién.",
+        "[A7]y de mi vida tam[D]bién. ¡iuhhh!",
         "",
-        "[G]Bara[A]baraba, [D]juh!, juh!"
+        "[G]Bara[A]baraba, [D]¡uh!, ¡uh!"
       ],
       "nota": [""]
     }
@@ -13130,10 +12985,10 @@
       "partitura": "No",
       "revisado": "No",      
       "letra": [
-        "[E]Si el cristiano tiene cer[B]teza, di amén. Amén!",
-        "[B7]Si el cristiano tiene cer[E]teza, di amén. Amén!",
+        "[E]Si el cristiano tiene cer[B]teza, di amén. ¡Amén!",
+        "[B7]Si el cristiano tiene cer[E]teza, di amén. ¡Amén!",
         "[F#m]Si el cristiano tiene cer[E]teza toda la vida es una [C#m]belleza.",
-        "[A]Si el [F#m]cristiano [B]tiene certeza, di amén. Amén!",
+        "[A]Si el [F#m]cristiano [B]tiene certeza, di amén. ¡Amén!",
         "",
         "[E]Si el cristiano tiene cer[B]teza, bate las palmas. (clap-clap)",
         "[B7]Si el cristiano tiene cer[E]teza, bate las palmas.(clap-clap)",
@@ -13145,14 +13000,14 @@
         "[A]Si el [F#m]cristiano [E]tiene cer[C#m]teza toda la vida es una belleza.",
         "[F#m]Si el [B]cristiano [E]tiene certeza, bate los pies. (stomp-stomp)",
         "",
-        "[E]Si el cristiano tiene cer[B]teza, haz los tres. Amén!, clap-clap, stomp-stomp",
-        "[B7]Si el cristiano tiene cer[E]teza, haz los tres. Amén!, clap-clap, stomp-stomp",
+        "[E]Si el cristiano tiene cer[B]teza, haz los tres. ¡Amén!, clap-clap, stomp-stomp",
+        "[B7]Si el cristiano tiene cer[E]teza, haz los tres. ¡Amén!, clap-clap, stomp-stomp",
         "[A]Si el [F#m]cristiano [E]tiene cer[C#m]teza toda la vida es una belleza.",
-        "[F#m]Si el [B]cristiano [E]tiene certeza, haz los tres. Amén!, clap-clap, stomp-stomp",
+        "[F#m]Si el [B]cristiano [E]tiene certeza, haz los tres. ¡Amén!, clap-clap, stomp-stomp",
         "",
         "Variantes:",
-        " - Si el cristiano tiene certeza, haz al reves. stomp-stomp, clap-clap, Amén!",
-        " - Si el cristiano tiene certeza, hace los seis. Amén!, clap-clap, stomp-stomp, stomp-stomp, clap-clap, Amén!"
+        " - Si el cristiano tiene certeza, haz al reves. stomp-stomp, clap-clap, ¡Amén!",
+        " - Si el cristiano tiene certeza, hace los seis. ¡Amén!, clap-clap, stomp-stomp, stomp-stomp, clap-clap, ¡Amén!"
       ],
       "nota": [""]
     }
@@ -13187,18 +13042,18 @@
       "revisado": "No",      
       "letra": [
         "[A]Si Jesús te satis[E]face",
-        "[A]da tres palmas,",
-        "[D]da tres palmas,",
-        "[A]otra vez.",
+        "[A]da tres palmas, (clap-clap-clap)",
+        "[D]da tres palmas, (clap-clap-clap)",
+        "[A]otra vez. (clap-clap-clap)",
         "[A]Si Jesús te satis[E]face",
-        "[A]da tres palmas.",
+        "[A]da tres palmas. (clap-clap-clap)",
         "",
         "[D]Amigo que estás",
         "[A]saluda al que está a tu lado,",
         "[D]y bríndale una sonrisa.",
         "",
         "[A]Si Jesús te satis[E]face",
-        "[A]da tres palmas."
+        "[A]da tres palmas. (clap-clap-clap)"
       ],
       "nota": [""]
     }
