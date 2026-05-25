@@ -1,13 +1,15 @@
 // ===================== DATA =====================
 const DATA_URLS = {
   cancionero: "data/canciones.json",
-  himnario: "data/himnario_ar.json"
+  himnario: "data/himnario_ar.json",
+  campamento: "data/campamento.json"
 };
 
 let libroActual = "cancionero";
 
 let canciones = [];
 let himnos = [];
+let campamento = [];
 
 let idiomaActual = "es";
 let listaVisible = false;
@@ -22,6 +24,10 @@ function getDataActual() {
   // HIMNARIO → solo himnos
   if (libroActual === "himnario") {
     return himnos;
+  }
+
+  if (libroActual === "campamento") {
+    return campamento;
   }
 
   // CANCIONERO →
@@ -46,6 +52,8 @@ function initTabButton() {
 async function init() {
   const res1 = await fetch(DATA_URLS.cancionero);
   const res2 = await fetch(DATA_URLS.himnario);
+  const res3 = await fetch(DATA_URLS.campamento);
+
   const saved = localStorage.getItem("tablatura");
   tablaturaVisible = saved !== "off";
 
@@ -54,6 +62,7 @@ async function init() {
 
   canciones = (await res1.json()).map(normalizeSong);
   himnos = (await res2.json()).map(normalizeSong);
+  campamento = (await res3.json()).map(normalizeSong);
 
   renderAlphabet();
   loadTheme();
@@ -106,27 +115,10 @@ async function init() {
         idiomaSelect.disabled = false;
       }
 
+      // 👇 IMPORTANTE: refrescar UI
       renderAlphabet();
-      closeList();
-      handleMenuVisibility();
       updateAppTitle();
-    });
-
-  document.getElementById("menuIdioma").addEventListener("change", e => {
-    idiomaActual = e.target.value;
-    document.getElementById("idioma").value = e.target.value;
-    renderAlphabet();
-    renderList(letraActiva);
-  });
-
-  document.getElementById("menuLibro").addEventListener("change", e => {
-    document.getElementById("libro").value = e.target.value;
-    document.getElementById("libro").dispatchEvent(new Event("change"));
-  });
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const saved = localStorage.getItem("tablatura");
-    tablaturaVisible = saved !== "off";
+      renderList(null);
 
     initTabButton();
     applyTablaturaState();
@@ -146,8 +138,8 @@ function normalize(t) {
 
 function sortByTitle(data) {
   return data.sort((a, b) => {
-    const aT = normalizeText(a.idiomas?.[idiomaActual]?.titulo);
-    const bT = normalizeText(b.idiomas?.[idiomaActual]?.titulo);
+    const aT = cleanTitleForSort(a.idiomas?.[idiomaActual]?.titulo);
+    const bT = cleanTitleForSort(b.idiomas?.[idiomaActual]?.titulo);
 
     const aNum = extractLeadingNumber(aT);
     const bNum = extractLeadingNumber(bT);
@@ -393,6 +385,13 @@ ${cancionesLista.join("\n")}`
   );
 }
 
+/* ORDEN ALFABETICO SIN SIGNOS */
+function cleanTitleForSort(value) {
+  const text = normalizeText(value);
+  return (text || "")
+    .replace(/^[¿¡!?\s"'“”‘’]+/, "") // elimina signos iniciales
+    .trim();
+}
 
 // ===================== LOGO DINAMICO - BANNER =====================
 function updateLogo() {
@@ -450,11 +449,21 @@ function clearAll() {
 
 // ===================== CAMBIAR EL NOMBRE DE LA PAGINA Y TITULO ======================
 function updateAppTitle() {
-  const isHimnario = libroActual === "himnario";
+  let titleText = "";
 
-  const titleText = isHimnario
-    ? "🎵 Himnario Adventista"
-    : "🎶 Cancionero MV";
+  switch (libroActual) {
+    case "himnario":
+      titleText = "🎵 Himnario Adventista";
+      break;
+
+    case "campamento":
+      titleText = "🏕️ Campamento";
+      break;
+
+    default:
+      titleText = "🎶 Cancionero MV";
+      break;
+  }
 
   // Cambia el H1
   const h1 = document.querySelector("h1");
@@ -468,6 +477,7 @@ function updateAppTitle() {
 
 function detectLibroBySong(song) {
   if (himnos.some(h => h.id === song.id)) return "himnario";
+  if (campamento.some(c => c.id === song.id)) return "campamento";
   return "cancionero";
 }
 
@@ -1227,7 +1237,8 @@ function renderChordLine(line) {
 
 // ===================== OPEN SONG =====================
 function openSong(id) {
-  const song = [...canciones, ...himnos].find(c => c.id === id);
+  const allSongs = [...canciones, ...himnos, ...campamento];
+  const song = allSongs.find(c => c.id === id);
 
   if (!song) {
     document.getElementById("contenido").innerHTML =
@@ -1237,6 +1248,7 @@ function openSong(id) {
 
   // 🔥 detectar libro real de la canción
   const detectedLibro = detectLibroBySong(song);
+
 
   // SOLO cambiar libro si estás en navegación de lista de himnario
   const shouldSwitch =
