@@ -18,8 +18,23 @@ let tablaturaVisible = true;
 
 // ===================== DATA ACTUAL =====================
 function getDataActual() {
-  return libroActual === "himnario" ? himnos : canciones;
+
+  // HIMNARIO → solo himnos
+  if (libroActual === "himnario") {
+    return himnos;
+  }
+
+  // CANCIONERO →
+  // canciones + himnos marcados como corito
+  const coritos = himnos.filter(h =>
+    normalize(h.corito) === "SI" ||
+    h.corito === true ||
+    h.corito === "Si"
+  );
+
+  return [...canciones, ...coritos];
 }
+
 function initTabButton() {
   const btn = document.getElementById("tabBtn");
   if (!btn) return;
@@ -133,8 +148,28 @@ function sortByTitle(data) {
   return data.sort((a, b) => {
     const aT = normalizeText(a.idiomas?.[idiomaActual]?.titulo);
     const bT = normalizeText(b.idiomas?.[idiomaActual]?.titulo);
-    return normalize(aT).localeCompare(normalize(bT));
+
+    const aNum = extractLeadingNumber(aT);
+    const bNum = extractLeadingNumber(bT);
+
+    // si ambos tienen número → orden numérico real
+    if (aNum !== null && bNum !== null) {
+      return aNum - bNum;
+    }
+
+    return normalize(aT).localeCompare(normalize(bT), undefined, {
+      numeric: true,
+      sensitivity: "base"
+    });
   });
+}
+
+//
+function extractLeadingNumber(text) {
+  if (!text) return null;
+
+  const match = text.match(/^\d+/);
+  return match ? parseInt(match[0], 10) : null;
 }
 
 // NUEVO helper clave
@@ -941,7 +976,10 @@ function renderAlphabet() {
     const titulo = c.idiomas?.[idiomaActual]?.titulo;
     if (!titulo) return;
 
-    const letra = normalize(titulo.charAt(0));
+    // eliminar signos iniciales
+    const tituloLimpio = titulo.replace(/^[¿¡!?\s"'“”‘’]+/, "");
+
+    const letra = normalize(tituloLimpio.charAt(0));
 
     if (/^\d/.test(letra)) {
       letrasDisponibles.add("#");
@@ -998,6 +1036,8 @@ function renderAlphabet() {
 }
 
 function selectLetter(l) {
+  console.log("CLICK LETRA:", l);
+
   if (letraActiva === l && listaVisible) {
     closeList();
     letraActiva = null;
@@ -1008,6 +1048,8 @@ function selectLetter(l) {
 
   letraActiva = l;
   listaVisible = true;
+
+  console.log("OPEN LIST + RENDER");
 
   openList();
   renderAlphabet();
@@ -1052,18 +1094,32 @@ function renderList(letter) {
   // 🔤 FILTRO POR LETRA
   if (letter && letter !== "*" && letter !== "#") {
     data = data.filter(c => {
-      const titulo = normalize(c.idiomas?.[idiomaActual]?.titulo || "");
+      const tituloOriginal = c.idiomas?.[idiomaActual]?.titulo || "";
+      const tituloLimpio = tituloOriginal.replace(/^[¿¡!?\s"'“”‘’]+/, "");
+      const titulo = normalize(tituloLimpio);
+
       return normalize(titulo.charAt(0)) === letter;
     });
   }
 
   // 🔢 FILTRO ESPECIAL "#": títulos con números en cualquier parte
   if (letter === "#") {
-    data = data.filter(c => {
-      const titulo = c.idiomas?.[idiomaActual]?.titulo || "";
 
-      return /\d/.test(titulo); // <-- contiene al menos un número
-    });
+    // SOLO para himnario
+    if (libroActual === "himnario") {
+
+      // mostrar únicamente canciones con numero_himno
+      data = data.filter(c => getNumeroHimno(c));
+
+    } else {
+
+      // comportamiento normal para cancionero
+      data = data.filter(c => {
+        const titulo = c.idiomas?.[idiomaActual]?.titulo || "";
+        return /\d/.test(titulo);
+      });
+
+    }
   }
 
   // 🔢 ORDEN NUMÉRICO SOLO PARA #
@@ -1084,11 +1140,18 @@ function renderList(letter) {
 
     let baseTitle = "";
 
-    if (libroActual === "himnario") {
-      baseTitle = `${num ? num + " - " : ""}${titulo}`;
-    } else {
-      baseTitle = titulo;
-    }
+   const isCorito =
+    normalize(c.corito) === "SI" ||
+    c.corito === true ||
+    c.corito === "Si";
+
+  const suffix = isCorito ? " (HA)" : "";
+
+  if (libroActual === "himnario") {
+    baseTitle = `${num ? num + " - " : ""}${titulo}${suffix}`;
+  } else {
+    baseTitle = `${titulo}${suffix}`;
+  }
 
     return `
       <li onclick="openSong('${c.id}')">
@@ -1175,21 +1238,19 @@ function openSong(id) {
   // 🔥 detectar libro real de la canción
   const detectedLibro = detectLibroBySong(song);
 
-  // 🔄 si cambia el libro, sincronizar todo
-  if (libroActual !== detectedLibro) {
-    libroActual = detectedLibro;
+  // SOLO cambiar libro si estás en navegación de lista de himnario
+  const shouldSwitch =
+    libroActual === "himnario" && detectedLibro === "himnario";
+
+  if (shouldSwitch) {
+    libroActual = "himnario";
 
     const idiomaSelect = document.getElementById("idioma");
 
-    if (libroActual === "himnario") {
-      idiomaActual = "es";
-      idiomaSelect.value = "es";
-      idiomaSelect.disabled = true;
-    } else {
-      idiomaSelect.disabled = false;
-    }
+    idiomaActual = "es";
+    idiomaSelect.value = "es";
+    idiomaSelect.disabled = true;
 
-    // UI global
     renderAlphabet();
     updateAppTitle();
   }
@@ -1212,11 +1273,23 @@ function openSong(id) {
     return;
   }
 
+  const isCorito =
+    normalize(song.corito) === "SI" ||
+    song.corito === true ||
+    song.corito === "Si";
+
+  const suffixHA =
+    (libroActual === "cancionero" && isCorito)
+      ? " (Himnario Adventista)"
+      : "";
+
   const num = getNumeroHimno(song);
 
-  const tituloFinal = num
+  const tituloBase = num
     ? `${num} - ${normalizeText(s.titulo || song.titulo_original)}`
     : normalizeText(s.titulo || song.titulo_original);
+
+  const tituloFinal = `${tituloBase}${suffixHA}`;
 
   const audioHtml = renderAudioLink(song, s);
 
