@@ -27,7 +27,7 @@ let metroSoundEnabled = true;
 let currentBeat = 0;
 let currentCompas = "4/4";
 
-let subdivision = 1; // 1 = normal, 2 = 8vos, 4 = 16vos
+//let subdivision = 1; // 1 = normal, 2 = 8vos, 4 = 16vos
 let swing = 0;       // 0 = recto, 100 = swing extremo
 let subStep = 0;
 
@@ -402,6 +402,17 @@ function cleanTitleForSort(value) {
   return (text || "")
     .replace(/^[^A-Z0-9ÁÉÍÓÚÜÑ]+/i, "")
     .trim();
+}
+
+// AFINADOR 
+function extractRootNote(note) {
+
+  if (!note) return "A";
+
+  const match =
+    note.match(/^([A-G][b#]?)/);
+
+  return match ? match[1] : "A";
 }
 
 // ===================== LOGO DINAMICO - BANNER =====================
@@ -1341,25 +1352,23 @@ function abrirMetronomoDesdeMenu() {
 function abrirMetronomo(song = null) {
 
   let bpm = 90;
-  let tonalidad = "-";
+  let tonalidad = "A";
   let compas = "4/4";
 
   if (song) {
     bpm = parseInt(normalizeMeta(song, "tempo_bpm")) || 90;
+    tonalidad = normalizeMeta(song, "tonalidad") || "A";
+    compas = normalizeMeta(song, "compas") || "4/4";
 
-    tonalidad =
-      normalizeMeta(song, "tonalidad") || "-";
+    const root = extractRootNote(tonalidad);
 
-    compas =
-      normalizeMeta(song, "compas") || "4/4";
+    document.getElementById("referenceNote").value = root;
   }
 
   currentCompas = compas;
 
   document.getElementById("metroBpm").value = bpm;
-  document.getElementById("metroKey").innerText = tonalidad;
   document.getElementById("metroCompas").innerText = compas;
-
   document.getElementById("metroModal").style.display = "block";
 }
 
@@ -1543,30 +1552,50 @@ function setSwing(value) {
 
 // ===================== AFINADOR =====================
 async function toggleMic() {
+
   if (micEnabled) {
     stopMic();
     return;
   }
 
   try {
-    audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
 
-    micStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    audioCtx =
+      audioCtx || new (window.AudioContext || window.webkitAudioContext)();
 
-    const source = audioCtx.createMediaStreamSource(micStream);
+    // MUY IMPORTANTE
+    if (audioCtx.state === "suspended") {
+      await audioCtx.resume();
+    }
+
+    micStream = await navigator.mediaDevices.getUserMedia({
+      audio: {
+        echoCancellation: false,
+        noiseSuppression: false,
+        autoGainControl: false
+      }
+    });
+
+    const source =
+      audioCtx.createMediaStreamSource(micStream);
 
     analyser = audioCtx.createAnalyser();
+
     analyser.fftSize = 2048;
 
     source.connect(analyser);
 
     micEnabled = true;
 
-    document.getElementById("micBtn").innerText = "🎤❌";
+    document.getElementById("micBtn").innerText =
+      "🎤❌";
 
     detectPitch();
 
   } catch (err) {
+
+    console.error(err);
+
     alert("Micrófono no disponible o bloqueado");
   }
 }
@@ -1580,6 +1609,10 @@ function stopMic() {
     micStream.getTracks().forEach(t => t.stop());
   }
 
+  if (rafId) {
+    cancelAnimationFrame(rafId);
+  }
+
   cancelAnimationFrame(rafId);
 }
 
@@ -1590,7 +1623,11 @@ function detectPitch() {
 
   const freq = autoCorrelate(buffer, audioCtx.sampleRate);
 
-  if (freq !== -1) {
+  if (
+    freq !== -1 &&
+    isFinite(freq) &&
+    !isNaN(freq)
+  ) {
     updateTunerUI(freq);
   }
 
@@ -1685,47 +1722,104 @@ function updateTunerUI(freq) {
   needle.style.background = Math.abs(cents) < 5 ? "green" : "red";
 }
 
-function playReferenceTone() {
-  const key = document.getElementById("metroKey").innerText;
+async function playReferenceTone() {
 
-  if (!key || key === "-") return;
+  audioCtx =
+    audioCtx || new (window.AudioContext || window.webkitAudioContext)();
 
-  const freq = noteToFreq(key);
+  // IMPORTANTE:
+  // algunos navegadores arrancan suspended
+  if (audioCtx.state === "suspended") {
+    await audioCtx.resume();
+  }
 
-  const ctx = new AudioContext();
-  const osc = ctx.createOscillator();
-  const gain = ctx.createGain();
+  const note =
+    document.getElementById("referenceNote").value;
+
+  const octave =
+    parseInt(
+      document.getElementById("referenceOctave").value
+    );
+
+  const freq = noteToFreq(note, octave);
+
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+
+  osc.type = "sine";
 
   osc.frequency.value = freq;
-  gain.gain.value = 0.2;
+
+  gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
 
   osc.connect(gain);
-  gain.connect(ctx.destination);
+  gain.connect(audioCtx.destination);
 
   osc.start();
-  osc.stop(ctx.currentTime + 1.5);
+
+  osc.stop(audioCtx.currentTime + 1.5);
 }
 
-function noteToFreq(note) {
-  const map = {
-    C: 261.63,
-    "C#": 277.18,
-    Db: 277.18,
-    D: 293.66,
-    "D#": 311.13,
-    Eb: 311.13,
-    E: 329.63,
-    F: 349.23,
-    "F#": 369.99,
-    Gb: 369.99,
-    G: 392.00,
-    "G#": 415.30,
-    Ab: 415.30,
-    A: 440,
-    "A#": 466.16,
-    Bb: 466.16,
-    B: 493.88
+function noteToFreq(note, octave = 4) {
+
+  const SEMITONES = {
+    C: -9,
+    "C#": -8,
+    Db: -8,
+
+    D: -7,
+    "D#": -6,
+    Eb: -6,
+
+    E: -5,
+
+    F: -4,
+    "F#": -3,
+    Gb: -3,
+
+    G: -2,
+    "G#": -1,
+    Ab: -1,
+
+    A: 0,
+    "A#": 1,
+    Bb: 1,
+
+    B: 2
   };
 
-  return map[note] || 440;
+  const semitoneDistance =
+    SEMITONES[note] + ((octave - 4) * 12);
+
+  return 440 * Math.pow(2, semitoneDistance / 12);
 }
+
+// Subdiviones de ritmo
+function startMetronomo() {
+  const bpm = parseInt(document.getElementById("metroBpm").value) || 90;
+
+  const baseInterval = 60000 / bpm;
+
+  metroRunning = true;
+  subStep = 0;
+  currentBeat = 0;
+
+  document.getElementById("metroPlayBtn").innerText = "⏹ Stop";
+
+  metroAudioCtx =
+    metroAudioCtx || new (window.AudioContext || window.webkitAudioContext)();
+
+  clearInterval(metroInterval);
+
+  metroInterval = setInterval(() => {
+    playBeat(baseInterval);
+  }, baseInterval / subdivisions[subdivision]);
+}
+
+const subdivisions = {
+  1: 1,     // negra
+  2: 2,     // corchea
+  3: 3,     // tresillo
+  4: 4,     // semicorchea
+  8: 8      // 1/32
+};
