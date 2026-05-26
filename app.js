@@ -17,6 +17,26 @@ let letraActiva = null;
 
 let tablaturaVisible = true;
 
+// ===================== METRONOMO =====================
+let metroInterval = null;
+let metroAudioCtx = null;
+
+let metroRunning = false;
+let metroSoundEnabled = true;
+
+let currentBeat = 0;
+let currentCompas = "4/4";
+
+let subdivision = 1; // 1 = normal, 2 = 8vos, 4 = 16vos
+let swing = 0;       // 0 = recto, 100 = swing extremo
+let subStep = 0;
+
+// ===================== AFINADOR =====================
+let micStream = null;
+let audioCtx = null;
+let analyser = null;
+let micEnabled = false;
+let rafId = null;
 
 // ===================== DATA ACTUAL =====================
 function getDataActual() {
@@ -30,8 +50,7 @@ function getDataActual() {
     return campamento;
   }
 
-  // CANCIONERO →
-  // canciones + himnos marcados como corito
+  // CANCIONERO → // canciones + himnos marcados como corito
   const coritos = himnos.filter(h =>
     normalize(h.corito) === "SI" ||
     h.corito === true ||
@@ -77,12 +96,9 @@ async function init() {
 
   document.getElementById("indice").classList.add("hidden");
 
-  document.getElementById("buscador")
-    .addEventListener("input", e => search(e.target.value));
+  document.getElementById("buscador").addEventListener("input", e => search(e.target.value));
 
-  document.getElementById("idioma")
-    .addEventListener("change", e => {
-
+  document.getElementById("idioma").addEventListener("change", e => {
       if (libroActual === "himnario") return;
 
       idiomaActual = e.target.value;
@@ -92,9 +108,7 @@ async function init() {
       renderList(letraActiva);
     });
 
-  document.getElementById("menuLibro")
-    .addEventListener("change", e => {
-
+  document.getElementById("menuLibro").addEventListener("change", e => {
       libroActual = e.target.value;
 
       closeMenu();
@@ -115,7 +129,7 @@ async function init() {
         idiomaSelect.disabled = false;
       }
 
-      // 👇 IMPORTANTE: refrescar UI
+      // IMPORTANTE: refrescar UI
       renderAlphabet();
       updateAppTitle();
       renderList(null);
@@ -127,13 +141,25 @@ async function init() {
 
 init();
 
-
-// ===================== HELPERS =====================
-function normalize(t) {
-  return (t || "")
+// ===================== HELPERS ====================================================================================
+// Excluye caracteres especiales, acentos, signos de puntuación, y convierte a mayúsculas para una comparación más "blanda"
+function normalize(text) {
+  return (text || "").toString()
+    // quitar acentos / diéresis
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
-    .toUpperCase();
+
+    // convertir a mayúsculas
+    .toUpperCase()
+
+    // reemplazar signos por espacio
+    .replace(/[¿?¡!.,;:()"'`´¨[\]{}<>\/\\|@#$%^&*=+~…_-]/g, " ")
+
+    // colapsar espacios múltiples
+    .replace(/\s+/g, " ")
+
+    // trim final
+    .trim();
 }
 
 function sortByTitle(data) {
@@ -246,8 +272,7 @@ function normalizeReferenciaBiblica(ref) {
     .filter(Boolean);
 }
 
-/* TITULOS */
-// TITULO ORIGINAL
+/* TITULOS */ // TITULO ORIGINAL
 function normalizeTituloOriginal(value) {
   if (!value) return "";
 
@@ -267,6 +292,7 @@ function normalizeText(value) {
 
   return value;
 }
+
 function normalizeSong(song) {
   if (!song?.idiomas) return song;
 
@@ -285,7 +311,6 @@ function normalizeSong(song) {
 
   return song;
 }
-// OTROS TITULOS
 
 // YEAR TONALIDAD BMP COMPAS
 function normalizeSimple(value) {
@@ -313,20 +338,13 @@ function renderPersonLinks(label, value) {
 
     // NO convertir en link si no hay info real
     if (
-      person === "-" ||
-      normalize(person) === "DESCONOCIDO"
+      person === "-" || normalize(person) === "DESCONOCIDO"
     ) {
       return person;
     }
 
     // link clickable
-    return `
-      <span 
-        class="person-link"
-        onclick="showPersonSongs('${person.replace(/'/g, "\\'")}')">
-        ${person}
-      </span>
-    `;
+    return `<span class="person-link"onclick="showPersonSongs('${person.replace(/'/g, "\\'")}')">${person}</span>`;
   }).join(", ");
 
   return `<b>${label}:</b> ${html} | `;
@@ -335,20 +353,12 @@ function renderPersonLinks(label, value) {
 function showPersonSongs(person) {
 
   const data = [...canciones, ...himnos];
-
   const results = data.filter(song => {
 
-    // autor
-    const autor = normalizeField(song.autor);
-
-    // coautor
-    const coautor = normalizeField(song.coautor);
-
-    // compositor
-    const compositor = normalizeField(song.compositor);
-
-    // traductor (todos los idiomas)
-    const traductores = Object.values(song.idiomas || {})
+    const autor = normalizeField(song.autor);               // autor
+    const coautor = normalizeField(song.coautor);           // coautor
+    const compositor = normalizeField(song.compositor);     // compositor
+    const traductores = Object.values(song.idiomas || {})   // traductor (todos los idiomas)
       .flatMap(lang => normalizeTraductor(lang));
 
     const allPeople = [
@@ -388,28 +398,26 @@ ${cancionesLista.join("\n")}`
 /* ORDEN ALFABETICO SIN SIGNOS */
 function cleanTitleForSort(value) {
   const text = normalizeText(value);
+
   return (text || "")
-    .replace(/^[¿¡!?\s"'“”‘’]+/, "") // elimina signos iniciales
+    .replace(/^[^A-Z0-9ÁÉÍÓÚÜÑ]+/i, "")
     .trim();
 }
 
 // ===================== LOGO DINAMICO - BANNER =====================
 function updateLogo() {
-
   const logo = document.getElementById("logoCancionero");
 
   if (!logo) return;
 
   // prioridad: modo proyector
   if (document.body.classList.contains("projector")) {
-
     logo.src = "imagenes/Banner_black.png";
     return;
   }
 
   // tema claro
   if (document.body.classList.contains("light-mode")) {
-
     logo.src = "imagenes/Banner_blu.png";
     return;
   }
@@ -481,48 +489,18 @@ function detectLibroBySong(song) {
   return "cancionero";
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ===================== MOBILE =====================
 function isMobileOrTablet() {
   return /Mobi|Android|iPhone|iPad|iPod|Tablet/i.test(navigator.userAgent);
 }
+
 function handleMenuVisibility() {
   if (isMobileOrTablet()) {
     document.getElementById("indice").classList.add("hidden");
   }
 }
 
-
-// ==================================================================================================================================
+// =================================================================================================================
 // ===== MENU =================================================================
 function toggleMenu() {
   document.getElementById("dropdownMenu").classList.toggle("active");
@@ -530,10 +508,8 @@ function toggleMenu() {
 
 // cerrar al hacer click fuera
 window.addEventListener("click", function (e) {
-
   const menu = document.getElementById("dropdownMenu");
   const btn = document.getElementById("menuBtn");
-
   const modal = document.getElementById("infoModal");
   const modalContent = modal?.querySelector(".modal-content");
 
@@ -549,7 +525,6 @@ window.addEventListener("click", function (e) {
       modal.style.display = "none";
     }
   }
-
 });
 
 // abrir info desde menú (y cerrar menú)
@@ -630,6 +605,7 @@ const FLAGS = {
   de: "🇩🇪",
   he: "🇮🇱"
 };
+
 const FLAG_NAMES = {
   es: "Argentina",
   en: "Estados Unidos",
@@ -666,20 +642,17 @@ function applyTablaturaState() {
 }
 
 // ===== CAMBIO DE TAMANO DE FUENTE (A+ A A-) ====================================================================
-// 0 = tamaño default
-// -5 = mínimo
-// +5 = máximo
-
+// 0 = tamaño default   // -5 = mínimo  // +5 = máximo
 let fontSizeLevel = 0;
 
 function getMaxFontLevel() {
   if (window.innerWidth < 480) return 4;     // móvil
   if (window.innerWidth < 768) return 6;     // tablet
   if (window.innerWidth < 1024) return 8;    // laptop
-  return 10;                                  // desktop/wide
+  return 10;                                 // desktop/wide
 }
 
-// tamaños BASE
+// tamaños BASE de la letra
 const BASE_LYRICS_SIZE = 26;
 const BASE_CHORD_SIZE = 26;
 
@@ -687,12 +660,8 @@ const BASE_CHORD_SIZE = 26;
 const STEP_SIZE = 2;
 
 function applyFontSize() {
-
-  const lyricsSize =
-    BASE_LYRICS_SIZE + (fontSizeLevel * STEP_SIZE);
-
-  const chordSize =
-    BASE_CHORD_SIZE + (fontSizeLevel * STEP_SIZE);
+  const lyricsSize = BASE_LYRICS_SIZE + (fontSizeLevel * STEP_SIZE);
+  const chordSize = BASE_CHORD_SIZE + (fontSizeLevel * STEP_SIZE);
 
   // letra canción
   document.querySelectorAll(".lyrics").forEach(el => {
@@ -710,7 +679,6 @@ function applyFontSize() {
 }
 
 function cambiarFuente(step) {
-
   const max = getMaxFontLevel();
 
   fontSizeLevel += step;
@@ -722,16 +690,13 @@ function cambiarFuente(step) {
 }
 
 function resetFuente() {
-
   fontSizeLevel = 0;
-
   applyFontSize();
 }
 
 // ===== PROYECTOR ============================================================================
 function toggleProjectorMode() {
-
-  // 🚫 bloquear en celulares y tablets
+  // bloquear en celulares y tablets
   if (isMobileOrTablet()) {
     alert("📱 El modo proyector solo está disponible en Desktops.");
     return;
@@ -791,9 +756,6 @@ function loadTheme() {
   updateThemeMenuText();
 }
 
-
-
-
 // ===== SEARCH - BUSQUEDA BLANDA =================================================================
 function search(q) {
   const query = normalize(q.trim());
@@ -817,7 +779,6 @@ function search(q) {
     const matchIdiomas = Object.values(song.idiomas || {}).some(lang => {
 
       const titulo = normalize(normalizeText(lang?.titulo));
-
       const letra = normalize(
         Array.isArray(lang?.letra)
           ? lang.letra.join(" ")
@@ -835,7 +796,7 @@ function search(q) {
       );
     });
 
-    // ===== CAMPOS GLOBALES =====
+    // ===== CAMPOS GLOBALES ========================================
     const autor = normalize(
       normalizeField(song.autor).join(" ")
     );
@@ -849,26 +810,12 @@ function search(q) {
     );
 
     const tonalidad = normalize(song.tonalidad || "");
-
     const bpm = normalize(String(song.tempo_bpm || ""));
-
     const compas = normalize(song.compas || "");
-
     const year = normalize(String(song.year || ""));
-
-    const referencia = normalize(
-      normalizeReferenciaBiblica(
-        song.referencia_biblica || song.referencia
-      ).join(" ")
-    );
-
-    const tags = normalize(
-      normalizeField(song.tags).join(" ")
-    );
-
-    const ritmo = normalize(
-      normalizeRitmo(song.ritmo).join(" ")
-    );
+    const referencia = normalize(normalizeReferenciaBiblica(song.referencia_biblica || song.referencia).join(" "));
+    const tags = normalize(normalizeField(song.tags).join(" "));
+    const ritmo = normalize(normalizeRitmo(song.ritmo).join(" "));
 
     // ===== MATCH GLOBAL =====
     const matchGlobal =
@@ -886,9 +833,7 @@ function search(q) {
     return matchIdiomas || matchGlobal;
   });
 
-  const sorted = sortByTitle(results).filter(c =>
-    c.idiomas?.[idiomaActual]?.titulo?.trim()
-  );
+  const sorted = sortByTitle(results).filter(c => c.idiomas?.[idiomaActual]?.titulo?.trim());
 
   list.innerHTML = sorted.map(c => {
     const titulo = normalizeText(c.idiomas?.[idiomaActual]?.titulo);
@@ -913,7 +858,7 @@ function search(q) {
 }
 
 function selectSong(id) {
-  closeList();        // 👈 cierra lista inmediatamente
+  closeList();        // cierra lista inmediatamente
   listaVisible = false;
 
   openSong(id);       // luego abre canción
@@ -966,7 +911,7 @@ idiomaSelect.addEventListener("change", () => {
 
   idiomaActual = idiomaSelect.value;
 
-  // 👇 ESTA ES LA LÍNEA CLAVE
+  // ESTA ES LA LÍNEA CLAVE
   document.getElementById("menuIdioma").value = idiomaSelect.value;
 
   renderAlphabet();
@@ -1000,7 +945,7 @@ function renderAlphabet() {
 
   let letras = Array.from(letrasDisponibles).sort();
 
-  // 🔥 siempre incluir #
+  // siempre incluir #
   if (libroActual === "himnario" && !letras.includes("#")) {
     letras.unshift("#");
   }
@@ -1034,13 +979,7 @@ function renderAlphabet() {
       }).join("")}
 
       <!-- BOTÓN LIMPIAR DENTRO DEL MISMO FLUJO -->
-      <button 
-        class="alpha clear-btn"
-        onclick="clearAll()" 
-        title="Limpiar">
-        🧹
-      </button>
-
+      <button class="alpha clear-btn" onclick="clearAll()" title="Limpiar">🧹</button>
     </div>
   `;
 }
@@ -1067,7 +1006,6 @@ function selectLetter(l) {
 
   document.getElementById("contenido").innerHTML = "";
 }
-
 
 // ==================================================================================================================================
 // ===================== OPEN / CLOSE LISTA DE CANCIONES =====================
@@ -1097,9 +1035,7 @@ function closeList() {
 function renderList(letter) {
   const list = document.getElementById("indice");
 
-  let data = getDataActual().filter(c =>
-    c.idiomas?.[idiomaActual]?.titulo?.trim()
-  );
+  let data = getDataActual().filter(c => c.idiomas?.[idiomaActual]?.titulo?.trim());
 
   // 🔤 FILTRO POR LETRA
   if (letter && letter !== "*" && letter !== "#") {
@@ -1114,21 +1050,16 @@ function renderList(letter) {
 
   // 🔢 FILTRO ESPECIAL "#": títulos con números en cualquier parte
   if (letter === "#") {
-
     // SOLO para himnario
     if (libroActual === "himnario") {
-
       // mostrar únicamente canciones con numero_himno
       data = data.filter(c => getNumeroHimno(c));
-
     } else {
-
       // comportamiento normal para cancionero
       data = data.filter(c => {
         const titulo = c.idiomas?.[idiomaActual]?.titulo || "";
         return /\d/.test(titulo);
       });
-
     }
   }
 
@@ -1145,7 +1076,6 @@ function renderList(letter) {
   list.innerHTML = data.map(c => {
     const titulo = c.idiomas?.[idiomaActual]?.titulo;
     const num = getNumeroHimno ? getNumeroHimno(c) : "";
-
     const flags = getAvailableFlags(c);
 
     let baseTitle = "";
@@ -1155,14 +1085,16 @@ function renderList(letter) {
     c.corito === true ||
     c.corito === "Si";
 
-  const suffix = isCorito ? " (HA)" : "";
+  const suffix =
+  (libroActual === "cancionero" && isCorito)
+    ? " (HA)"
+    : "";
 
-  if (libroActual === "himnario") {
-    baseTitle = `${num ? num + " - " : ""}${titulo}${suffix}`;
-  } else {
-    baseTitle = `${titulo}${suffix}`;
-  }
-
+if (libroActual === "himnario") {
+  baseTitle = `${num ? num + " - " : ""}${titulo}`;
+} else {
+  baseTitle = `${titulo}${suffix}`;
+}
     return `
       <li onclick="openSong('${c.id}')">
         <div style="display:flex; justify-content:space-between; gap:10px;">
@@ -1199,7 +1131,6 @@ function renderChordLine(line) {
 
   let output = "";
   let lastIndex = 0;
-
   let match;
 
   while ((match = regex.exec(line)) !== null) {
@@ -1246,13 +1177,8 @@ function openSong(id) {
     return;
   }
 
-  // 🔥 detectar libro real de la canción
-  const detectedLibro = detectLibroBySong(song);
-
-
-  // SOLO cambiar libro si estás en navegación de lista de himnario
-  const shouldSwitch =
-    libroActual === "himnario" && detectedLibro === "himnario";
+  const detectedLibro = detectLibroBySong(song);                                    // detectar libro real de la canción
+  const shouldSwitch = libroActual === "himnario" && detectedLibro === "himnario";  // SOLO cambiar libro si estás en navegación de lista de himnario
 
   if (shouldSwitch) {
     libroActual = "himnario";
@@ -1268,7 +1194,6 @@ function openSong(id) {
   }
 
   const s = song?.idiomas?.[idiomaActual];
-
   const nota = normalizeField(s.nota)
     .map(n => (n || "").trim())
     .filter(Boolean)
@@ -1280,8 +1205,7 @@ function openSong(id) {
   letraActiva = null;
 
   if (!s) {
-    document.getElementById("contenido").innerHTML =
-      "<p>⚠️ Canción no disponible en este idioma.</p>";
+    document.getElementById("contenido").innerHTML = "<p>⚠️ Canción no disponible en este idioma.</p>";
     return;
   }
 
@@ -1302,26 +1226,17 @@ function openSong(id) {
     : normalizeText(s.titulo || song.titulo_original);
 
   const tituloFinal = `${tituloBase}${suffixHA}`;
-
   const audioHtml = renderAudioLink(song, s);
-
-  const referencias = normalizeReferenciaBiblica(
-    song.referencia_biblica || song.referencia
-  );
-    
+  const referencias = normalizeReferenciaBiblica(song.referencia_biblica || song.referencia);
   const meta = `
     <div class="meta">
 
       <div><b>Original:</b> ${(Array.isArray(song.titulo_original) ? song.titulo_original.join(", ") : song.titulo_original) || ""}</div>
-
       <div>
         ${renderPersonLinks("Autor", song.autor || "Desconocido")}
         ${renderPersonLinks("Coautor", song.coautor)}
         ${renderPersonLinks("Compositor", song.compositor || "Desconocido")}
-        ${renderPersonLinks(
-          "Traductor",
-          song.idiomas?.[idiomaActual]?.traductor
-        )}
+        ${renderPersonLinks("Traductor", song.idiomas?.[idiomaActual]?.traductor)}
         <b>Año:</b> ${normalizeSimple(song.year) || "Desconocido"}
       </div>
 
@@ -1338,11 +1253,12 @@ function openSong(id) {
         }
       </div>
 
-      <div>
+      <div class="song-metro" onclick="abrirMetronomo(song)" style="cursor:pointer;">
         <b>Tonalidad:</b> ${normalizeMeta(song, "tonalidad") || "Desconocido"} |
         <b>BPM:</b> ${normalizeMeta(song, "tempo_bpm") || "Desconocido"} |
         <b>Compás:</b> ${normalizeMeta(song, "compas") || "Desconocido"} |
         <b>Ritmo:</b> ${formatRitmo(song.ritmo) || "Desconocido"} |
+
         <b>Partitura:</b> ${
           song.idiomas?.[idiomaActual]?.partitura &&
           song.idiomas[idiomaActual].partitura !== "No"
@@ -1365,7 +1281,6 @@ function openSong(id) {
       <div class="flags">
         <b>Idioma/s:</b> ${renderLanguageFlags(song)}
       </div>
-
     </div>
   `;
 
@@ -1384,7 +1299,6 @@ function openSong(id) {
   `;
 
   applyTablaturaState();
-
   // UX
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
@@ -1416,4 +1330,402 @@ function renderAudioLink(song, idiomaData) {
       </a>
     </div>
   `;
+}
+
+/* ===================== METRONOMO ===================== */
+function abrirMetronomoDesdeMenu() {
+  closeMenu();        // 👈 cierra el dropdown primero
+  abrirMetronomo();   // 👈 luego abre el modal
+}
+
+function abrirMetronomo(song = null) {
+
+  let bpm = 90;
+  let tonalidad = "-";
+  let compas = "4/4";
+
+  if (song) {
+    bpm = parseInt(normalizeMeta(song, "tempo_bpm")) || 90;
+
+    tonalidad =
+      normalizeMeta(song, "tonalidad") || "-";
+
+    compas =
+      normalizeMeta(song, "compas") || "4/4";
+  }
+
+  currentCompas = compas;
+
+  document.getElementById("metroBpm").value = bpm;
+  document.getElementById("metroKey").innerText = tonalidad;
+  document.getElementById("metroCompas").innerText = compas;
+
+  document.getElementById("metroModal").style.display = "block";
+}
+
+function cerrarMetronomo() {
+  document.getElementById("metroModal").style.display = "none";
+
+  stopMetronomo();
+}
+
+function toggleMetronomo() {
+
+  if (metroRunning) {
+    stopMetronomo();
+  } else {
+    startMetronomo();
+  }
+}
+
+function startMetronomo() {
+  const bpm = parseInt(document.getElementById("metroBpm").value) || 90;
+
+  const baseInterval = 60000 / bpm;
+
+  metroRunning = true;
+  subStep = 0;
+  currentBeat = 0;
+
+  document.getElementById("metroPlayBtn").innerText = "⏹ Stop";
+
+  metroAudioCtx =
+    metroAudioCtx || new (window.AudioContext || window.webkitAudioContext)();
+
+  clearInterval(metroInterval);
+
+  metroInterval = setInterval(() => {
+    playBeat(baseInterval);
+  }, baseInterval / subdivision);
+}
+
+function stopMetronomo() {
+
+  metroRunning = false;
+
+  clearInterval(metroInterval);
+
+  document.getElementById("metroPlayBtn").innerText =
+    "▶️ Play";
+}
+
+function playBeat(baseInterval) {
+
+  animateBeat();
+
+  const beats = parseInt(currentCompas.split("/")[0]) || 4;
+  const isStrongBeat = currentBeat === 0;
+
+  // 🎯 swing delay simple por subdivisión
+  let delayFactor = 1;
+
+  if (swing > 0) {
+    const isEvenSub = subStep % 2 === 0;
+
+    if (subdivision === 2) {
+      // corcheas swing
+      delayFactor = isEvenSub
+        ? (1 + swing / 100)
+        : (1 - swing / 100);
+    }
+
+    if (subdivision === 4) {
+      // semicorcheas swing leve
+      delayFactor = isEvenSub
+        ? (1 + swing / 150)
+        : (1 - swing / 150);
+    }
+  }
+
+  // sonido
+  if (metroSoundEnabled) {
+    const osc = metroAudioCtx.createOscillator();
+    const gain = metroAudioCtx.createGain();
+
+    osc.connect(gain);
+    gain.connect(metroAudioCtx.destination);
+
+    osc.frequency.value = isStrongBeat ? 1400 : 900;
+    gain.gain.value = isStrongBeat ? 1 : 0.5;
+
+    osc.start();
+    osc.stop(metroAudioCtx.currentTime + 0.05);
+  }
+
+  // avanzar subdivisión
+  subStep++;
+
+  if (subStep >= subdivision) {
+    subStep = 0;
+    advanceBeat(beats);
+  }
+}
+
+function advanceBeat(beats = 4) {
+
+  currentBeat++;
+
+  if (currentBeat >= beats) {
+    currentBeat = 0;
+  }
+}
+
+function animateBeat() {
+
+  const beat = document.getElementById("metroBeat");
+
+  beat.classList.add("active");
+
+  setTimeout(() => {
+    beat.classList.remove("active");
+  }, 80);
+}
+
+function toggleMetroSound() {
+
+  metroSoundEnabled = !metroSoundEnabled;
+
+  document.getElementById("metroSoundBtn").innerText =
+    metroSoundEnabled
+      ? "🔊 Sonido"
+      : "🔇 Mudo";
+}
+
+function changeBpm(delta) {
+
+  const input = document.getElementById("metroBpm");
+
+  let value = parseInt(input.value) || 90;
+
+  value += delta;
+
+  if (value < 20) value = 20;
+  if (value > 300) value = 300;
+
+  input.value = value;
+
+  // refrescar si está corriendo
+  if (metroRunning) {
+    stopMetronomo();
+    startMetronomo();
+  }
+}
+
+/* Compases */
+function changeCompas(value) {
+  currentCompas = value;
+
+  // reset del ciclo de beats para evitar desfase
+  currentBeat = 0;
+
+  document.getElementById("metroCompas").innerText = value;
+
+  // si está corriendo, reiniciar timing
+  if (metroRunning) {
+    stopMetronomo();
+    startMetronomo();
+  }
+}
+
+function setSubdivision(value) {
+  subdivision = value;
+  subStep = 0;
+
+  if (metroRunning) {
+    stopMetronomo();
+    startMetronomo();
+  }
+}
+
+function setSwing(value) {
+  swing = parseInt(value);
+}
+
+// ===================== AFINADOR =====================
+async function toggleMic() {
+  if (micEnabled) {
+    stopMic();
+    return;
+  }
+
+  try {
+    audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+
+    micStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+
+    const source = audioCtx.createMediaStreamSource(micStream);
+
+    analyser = audioCtx.createAnalyser();
+    analyser.fftSize = 2048;
+
+    source.connect(analyser);
+
+    micEnabled = true;
+
+    document.getElementById("micBtn").innerText = "🎤❌";
+
+    detectPitch();
+
+  } catch (err) {
+    alert("Micrófono no disponible o bloqueado");
+  }
+}
+
+function stopMic() {
+  micEnabled = false;
+
+  document.getElementById("micBtn").innerText = "🎤";
+
+  if (micStream) {
+    micStream.getTracks().forEach(t => t.stop());
+  }
+
+  cancelAnimationFrame(rafId);
+}
+
+function detectPitch() {
+  const buffer = new Float32Array(analyser.fftSize);
+
+  analyser.getFloatTimeDomainData(buffer);
+
+  const freq = autoCorrelate(buffer, audioCtx.sampleRate);
+
+  if (freq !== -1) {
+    updateTunerUI(freq);
+  }
+
+  rafId = requestAnimationFrame(detectPitch);
+}
+
+function autoCorrelate(buffer, sampleRate) {
+  let SIZE = buffer.length;
+  let rms = 0;
+
+  for (let i = 0; i < SIZE; i++) {
+    rms += buffer[i] * buffer[i];
+  }
+
+  rms = Math.sqrt(rms / SIZE);
+  if (rms < 0.01) return -1;
+
+  let r1 = 0, r2 = SIZE - 1;
+  const threshold = 0.2;
+
+  for (let i = 0; i < SIZE / 2; i++) {
+    if (Math.abs(buffer[i]) < threshold) { r1 = i; break; }
+  }
+
+  for (let i = 1; i < SIZE / 2; i++) {
+    if (Math.abs(buffer[SIZE - i]) < threshold) { r2 = SIZE - i; break; }
+  }
+
+  buffer = buffer.slice(r1, r2);
+  SIZE = buffer.length;
+
+  const c = new Array(SIZE).fill(0);
+
+  for (let lag = 0; lag < SIZE; lag++) {
+    for (let i = 0; i < SIZE - lag; i++) {
+      c[lag] += buffer[i] * buffer[i + lag];
+    }
+  }
+
+  let d = 0;
+  while (c[d] > c[d + 1]) d++;
+
+  let maxval = -1, maxpos = -1;
+
+  for (let i = d; i < SIZE; i++) {
+    if (c[i] > maxval) {
+      maxval = c[i];
+      maxpos = i;
+    }
+  }
+
+  let T0 = maxpos;
+
+  return sampleRate / T0;
+}
+
+const NOTE_STRINGS = [
+  "C", "C#", "D", "D#", "E", "F",
+  "F#", "G", "G#", "A", "A#", "B"
+];
+
+function freqToNote(freq) {
+  const A4 = 440;
+
+  const noteNum = 12 * (Math.log2(freq / A4)) + 69;
+
+  const rounded = Math.round(noteNum);
+
+  const cents = (noteNum - rounded) * 100;
+
+  const note = NOTE_STRINGS[(rounded % 12 + 12) % 12];
+
+  return { note, cents };
+}
+
+function updateTunerUI(freq) {
+  const { note, cents } = freqToNote(freq);
+
+  document.getElementById("tunerNote").innerText = note;
+
+  const needle = document.getElementById("tunerNeedle");
+
+  // mover aguja (-50 a +50 cents)
+  const clamped = Math.max(-50, Math.min(50, cents));
+
+  needle.style.left = `${50 + clamped}%`;
+
+  const centsEl = document.getElementById("tunerCents");
+  centsEl.innerText = `${cents.toFixed(1)} cents`;
+
+  // color
+  needle.style.background = Math.abs(cents) < 5 ? "green" : "red";
+}
+
+function playReferenceTone() {
+  const key = document.getElementById("metroKey").innerText;
+
+  if (!key || key === "-") return;
+
+  const freq = noteToFreq(key);
+
+  const ctx = new AudioContext();
+  const osc = ctx.createOscillator();
+  const gain = ctx.createGain();
+
+  osc.frequency.value = freq;
+  gain.gain.value = 0.2;
+
+  osc.connect(gain);
+  gain.connect(ctx.destination);
+
+  osc.start();
+  osc.stop(ctx.currentTime + 1.5);
+}
+
+function noteToFreq(note) {
+  const map = {
+    C: 261.63,
+    "C#": 277.18,
+    Db: 277.18,
+    D: 293.66,
+    "D#": 311.13,
+    Eb: 311.13,
+    E: 329.63,
+    F: 349.23,
+    "F#": 369.99,
+    Gb: 369.99,
+    G: 392.00,
+    "G#": 415.30,
+    Ab: 415.30,
+    A: 440,
+    "A#": 466.16,
+    Bb: 466.16,
+    B: 493.88
+  };
+
+  return map[note] || 440;
 }

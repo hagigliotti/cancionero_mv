@@ -91,11 +91,11 @@
             Tablatura:
             <button id="tabBtn" type="button">Mostrar</button>
           </div>
-<!--
-          <div class="menu-title">
+
+          <div class="menu-title" onclick="abrirMetronomoDesdeMenu()">
             📟 Metronomo
           </div>
--->
+
           <div class="divider"></div>
 
 <!--
@@ -233,6 +233,92 @@
         <i class="fa-brands fa-instagram"></i> @hagigliotti
       </a>
 
+    </div>
+
+  </div>
+</div>
+
+ ===================== METRONOMO ===================== -->
+<div id="metroModal" class="modal">
+  <div class="modal-content metro-content">
+
+    <span class="close" onclick="cerrarMetronomo()">&times;</span>
+
+    <h2>📟 Metrónomo</h2>
+
+    <div class="metro-info">
+      <div class="tuner-row">
+        <b>Tonalidad:</b>
+        <span id="metroKey">-</span>
+
+        <button id="micBtn" onclick="toggleMic()">
+          🎤
+        </button>
+
+        <button id="toneBtn" onclick="playReferenceTone()">
+          🔊
+        </button>
+      </div>
+
+      <div class="tuner-display">
+        <div id="tunerNote">-</div>
+
+        <div class="tuner-meter">
+          <div id="tunerNeedle"></div>
+        </div>
+
+        <div id="tunerCents">0 cents</div>
+      </div>
+      <div class="divider"></div>
+      <div class="compas-selector">
+        <b>Compás:</b>
+        <span id="metroCompas">4/4</span>
+
+        <button onclick="changeCompas('2/4')">2/4</button>
+        <button onclick="changeCompas('3/4')">3/4</button>
+        <button onclick="changeCompas('4/4')">4/4</button>
+      </div>
+
+      <div class="metro-subdivision">
+        <b>Subdivisión:</b>
+        <button onclick="setSubdivision(1)">♩</button>
+        <button onclick="setSubdivision(2)">♪♪ (8vos)</button>
+        <button onclick="setSubdivision(4)">♬ (16vos)</button>
+      </div>
+<!--
+      <div class="metro-swing">
+        <b>Swing:</b>
+        <input type="range" id="swingValue" min="0" max="100" value="0" oninput="setSwing(this.value)">
+      </div>
+-->
+    </div>
+    
+    <div class="metro-bpm-box">
+      <button onclick="changeBpm(-1)">−</button>
+
+      <input
+        type="number"
+        id="metroBpm"
+        value="90"
+        min="20"
+        max="300"
+      />
+
+      <button onclick="changeBpm(1)">+</button>
+    </div>
+
+    <div class="metro-label">BPM</div>
+
+    <div id="metroBeat" class="metro-beat"></div>
+
+    <div class="metro-controls">
+      <button id="metroPlayBtn" onclick="toggleMetronomo()">
+        ▶️ Play
+      </button>
+
+      <button id="metroSoundBtn" onclick="toggleMetroSound()">
+        🔊 Sonido
+      </button>
     </div>
 
   </div>
