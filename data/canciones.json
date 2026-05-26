@@ -593,7 +593,7 @@
         "[G]Enlacemos nuestras manos [C]para [G]juntos ala[C]bar",
         "el [Cm]nombre de Jesu[G]cristo, [Em]nuestro a[D]migo más le[G]al."
       ],
-      "nota": ["Misma cancion tomada del origina 'Cuando empieza el santo sabado'"]
+      "nota": ["Misma cancion tomada del origina 'Cuando empieza el santo sábado'"]
     }
   }
 },
@@ -1094,7 +1094,7 @@
         "Es por eso mi alabanza",
         "Cada día quiero ser como Jesús"
       ],
-      "nota": [""]
+      "nota": ["Club AΩ Palermo (CABA, Argentina)"]
     }
   }
 },
@@ -3424,13 +3424,13 @@
 
   "idiomas": {
     "es": {
-      "titulo": ["Cuando empieza el Santo Sábado"],
+      "titulo": ["Cuando empieza el santo sábado"],
       "audio_url": "https://open.spotify.com/intl-es/track/5MJ8DFLauPlvNTNGlbJZZx?si=dedd8715d6264a6a",
       "traductor": ["-"],
       "partitura": "No",
       "revisado": "No",      
       "letra": [
-        "[G]Cuando empieza el santo Sábado, [C]¡qué ale[G]gría que me [D]da",
+        "[G]Cuando empieza el santo sábado, [C]¡qué ale[G]gría que me [D]da",
         "el estar con mis hermanos en [D]este [D7]lindo lu[G]gar!",
         "[G]Enlacemos nuestras manos [C]para [G]juntos ala[C]bar",
         "el [Cm]nombre de Jesu[G]cristo, [Em]nuestro a[D]migo más le[G]al."
@@ -5346,7 +5346,7 @@
 
   "idiomas": {
     "es": {
-      "titulo": ["En Tus manos me entrego"],
+      "titulo": ["En tus manos me entrego"],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -6983,40 +6983,6 @@
     }
   }
 },
-{ "id": "grande_es_jehova",
-  "titulo_original": ["Great is the Lord"],
-  "autor": ["Michael W. Smith", "Deborah Smith"],
-  "compositor": ["Michael W. Smith", "Deborah Smith"],
-  "year": ["Desconocido"],
-  "tonalidad": ["La Mayor (A)"],
-  "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": ["1 Crónicas 16:25"],
-  "tags": ["Alabanza", "Adoración"],
-
-  "idiomas": {
-    "es": {
-      "titulo": ["Grande es Jehová"],
-      "audio_url": "",
-      "traductor": ["-"],
-      "partitura": "No",
-      "revisado": "No",      
-      "letra": [
-        "[A]Grande es Je[Bm]hová, pode[E]roso Se[A]ñor,",
-        "a su [Bm]nombre ren[E]dimos ho[D - A]nor.",
-        "[A]Grande es Je[Bm]hová, el su[E]premo Ha[A]cedor,",
-        "[Bm]bondadoso nos [E]da su a[D - A]mor.",
-        "",
-        "[G]Grande es Je[D]hová, y digno de [A]gloria,",
-        "[G]Dios sin i[E]gual, bendito Se[A]ñor.",
-        "[G]Grande es Je[B]hová, al[E]cemos la [C#]voz con santa un[F#m]ción.",
-        "[Bm - E]Grande es Je[F#m]hová, [Bm - E]grande es Je[A]hová."
-      ],
-      "nota": [""]
-    }
-  }
-},
 { "id": "glorifico_al_senor",
   "titulo_original": ["Desconocido"],
   "autor": ["Desconocido"],
@@ -7949,7 +7915,8 @@
   }
 },
 { "id": "Jesús_la_montana_y_yo",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Jesús, la montaña y yo"],
+  "campamento": "Si",
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -8007,7 +7974,7 @@
   ],
   "idiomas": {
     "es": {
-      "titulo": ["JESÚS ME PASTOREA"],
+      "titulo": ["Jesús me pastorea"],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -8714,50 +8681,40 @@
 },
 
 { "_comment13": "LETRA M ---------------------------------------------------------------------------------------------------------------------------------------    LETRA M"  },
-{ "id": "miren_que_linda_es_la_vida",
+{ "id": "mira_que_linda_es_la_vida",
   "titulo_original": ["Desconocido"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
   "tonalidad": ["La Mayor (A)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
+  "compas": ["3/4"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Fraternidad",
-    "Comunión",
-    "Amor",
-    "Compartir"
-  ],
+  "referencia_biblica": ["2 Corintios 5:14, 15", "Salmo 133:1"],
+  "tags": ["Alabanza", "Comunión", "Unidad", "Fraternidad", "Amor", "Compartir"],
+
   "idiomas": {
     "es": {
-      "titulo": ["Miren que linda es la vida"],
+      "titulo": ["Miren qué linda es la vida"],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": "Si",      
       "letra": [
-        "[A]Miren que linda es la vida",
-        "[D]cuando estamos juntos así,",
-        "[E]y tenemos [A]algo [E]que compartir.",
-        "[A]Dios nos une, nos reúne",
-        "[D]y nos hace a todos sentir",
-        "[E]que la [E7]vida a[A]sí es más fácil vivir.",
+        "[A]Miren qué linda es la vida cuando estamos j[D]untos a[Bm]sí,",
+        "[E]y tenemos algo [E7]que compar[A-E]tir.",
+        "[A]Dios nos une, nos reúne y nos hace a [Bm]todos sent[A7]ir ",
+        "[E]que la vida así es más [E7]fácil vi[A]vir.",
         "",
-        "Coro:",
-        "[A7]Todo es mas [D]lindo sabiendo amar;",
-        "[E]hoy lo po[A]demos [E]lograr.",
-        "[A7]Todo es mas [D]lindo si [A]sabemos dar",
-        "[E]todo es cues[E7]tión de em[A]pezar.",
+        "[A]Todo es más [A7]lindo sa[D]biendo a[Bm]mar,",
+        "[E]hoy lo po[E7]demos lo[A]grar.",
+        "[A]Todo es más [A7]lindo si [D]sabemos [B]dar,",
+        "[E]todo es cues[E7]tión de empez[A]ar.",
         "",
-        "[D]Oh, ven[E]gamos a ala[A]bar a Dios [F#]todos juntos, unidos,",
-        "[D]y [E]todo em[A]pieza a cambiar;",
-        "[E]oh, ven[A]gamos a ala[F#]bar a Dios y juntemos las manos",
-        "[D]porque nos [E]une su a[A]mor."
+        "[A7]¡Oh, veng[D]amos a alabar a Di[E]os, todos j[A]untos, un[F#]idos ",
+        "y t[Bm]odo empi[E]eza a cambi[A]ar!",
+        "[A7]¡Oh, veng[D]amos a alabar a Di[E]os, y junt[C#]emos las ma[F#]nos ",
+        "porq[Bm]ue nos [E]une su am[A]or!"
       ],
       "nota": [""]
     }
@@ -9590,7 +9547,7 @@
   ],
   "idiomas": {
     "es": {
-      "titulo": ["Mi Todo"],
+      "titulo": ["Mi todo"],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -9629,50 +9586,6 @@
         "",
         "Final:",
         "[A - B]Te amo, Se[E]ñor. [A - B]Te amo, Se[E]ñor."
-      ],
-      "nota": [""]
-    }
-  }
-},
-{ "id": "mira_que_linda_es_la_vida",
-  "titulo_original": ["Desconocido"],
-  "autor": ["Desconocido"],
-  "compositor": ["Desconocido"],
-  "year": ["Desconocido"],
-  "tonalidad": ["La Mayor (A)"],
-  "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": ["2 Corintios 5:14, 15"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Comunión",
-    "Unidad"
-  ],
-  "idiomas": {
-    "es": {
-      "titulo": ["Miren qué linda es la vida"],
-      "audio_url": "",
-      "traductor": ["-"],
-      "partitura": "No",
-      "revisado": "No",      
-      "letra": [
-        "[A]Miren qué linda es la [D]vida cuando es[Bm]tamos juntos así, [A]",
-        "y tenemos [E]algo que [E7]compar[A-E]tir.",
-        "[D]Dios nos une, nos re[Bm]úne y nos hace a todos sentir [A7]",
-        "que la vida a[E]sí es más [E7]fácil vi[A]vir.",
-        "",
-        "[A7]Todo es más [A]lindo sa[D]biendo a[Bm]mar,",
-        "[E]hoy lo po[E7]demos lo[A]grar.",
-        "[A]Todo es más [A7]lindo si [D]sabemos [B]dar,",
-        "[E]todo es cues[E7]tión de empe[A]zar.",
-        "",
-        "[D]¡Oh, ven[E]gamos a ala[A]bar a Dios, [F#]todos juntos, unidos [A7]",
-        "[D]y todo em[Bm]pieza a cam[E]biar! [A][C#]",
-        "[E]¡Oh, ven[F#]gamos a alabar a Dios, y juntemos las manos [Bm]",
-        "[E]porque nos [A]une su []amor!"
       ],
       "nota": [""]
     }
@@ -10258,48 +10171,6 @@
         "[D]y a[A]sí po[Bm]der ser feliz",
         "[G]y hacer por siempre",
         "[A]tu san[A7]ta volun[D]tad."
-      ],
-      "nota": [""]
-    }
-  }
-},
-{ "id": "oh_senor_al_orar",
-  "titulo_original": ["Desconocido"],
-  "autor": ["Desconocido"],
-  "compositor": ["Desconocido"],
-  "year": ["Desconocido"],
-  "tonalidad": ["Re Mayor (D)"],
-  "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Hebreos 4:16"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Oración",
-    "Consagración",
-    "Comunión",
-    "Transformación"
-  ],
-  "idiomas": {
-    "es": {
-      "titulo": ["Oh Señor al orar"],
-      "audio_url": "",
-      "traductor": ["-"],
-      "partitura": "No",
-      "revisado": "No",      
-      "letra": [
-        "[D]Oh Señor al [G]orar",
-        "[A]mis pro[A7]blemas quiero ol[D]vidar,",
-        "[F#7]a tu [Bm]trono de [G]gracia llegar",
-        "[A]y tu [A7]bendi[D]ción alcanzar.",
-        "",
-        "[G]Hoy mi [A]vida trans[D]forma Señor,",
-        "[Bm]que mi [E]mente en[A]tienda tu amor;",
-        "[D]y al pos[G]trarme humilde ante ti,",
-        "[A]oh Se[A7]ñor es[D]cucha mi oración."
       ],
       "nota": [""]
     }
@@ -11415,7 +11286,7 @@
         "",
         "(Repite todo x2)"
       ],
-      "nota": ["Campori MiBon 2019"]
+      "nota": ["Club Eλαiα (San Isidro, Argentina)", "Campori MiBon 2019"]
     }
   }
 },
@@ -15477,48 +15348,6 @@
     }
   }
 },
-{ "id": "ven_es_tiempo_de_adorarle",
-  "titulo_original": ["Come, now is the time to worship"],
-  "autor": ["Brian Doerksen"],
-  "compositor": ["Brian Doerksen"],
-  "year": ["Desconocido"],
-  "tonalidad": ["Do Mayor (C)"],
-  "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Apocalipsis 17:17"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Convocatoria",
-    "Entrega",
-    "Soberanía"
-  ],
-  "idiomas": {
-    "es": {
-      "titulo": ["Ven, es tiempo de adorarle"],
-      "audio_url": "",
-      "traductor": ["-"],
-      "partitura": "No",
-      "revisado": "No",      
-      "letra": [
-        "[C]Ven, es tiempo de a[F/C]dorar[C]le,",
-        "[Dm]ven, es [C]tiempo de [F]dar tu corazón. [C]",
-        "[C]Ven, tal como [F/C]estás y a[C]dora,",
-        "[Dm]ven, tal [C]como es[F]tás ante tu [C]Dios. Ven.",
-        "",
-        "Estrofa:",
-        "[F]Un día todos con[C]fesarán que eres Dios,",
-        "[F]y todos se arrodil[C]larán.",
-        "[F]El más grande te[Am]soro les guardarás",
-        "[F]a los que te e[G]ligen [C]hoy. Ven."
-      ],
-      "nota": [""]
-    }
-  }
-},
 { "id": "ven_espiritu_santo_rochael",
   "titulo_original": ["Vem, Espírito Santo"],
   "autor": ["Fernando Rochael"],
@@ -16846,7 +16675,7 @@
 
   "idiomas": {
     "es": {
-      "titulo": ["Yo También"],
+      "titulo": ["Yo también"],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -17035,7 +16864,7 @@
 
   "idiomas": {
     "es": {
-      "titulo": ["Yo Tengo esperanza"],
+      "titulo": ["Yo tengo esperanza"],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -17146,7 +16975,7 @@
   "tags": ["Cristiano", "Alabanza", "Adoración", "Esperanza", "Segunda Venida", "Confianza", "Consuelo"],
   "idiomas": {
     "es": {
-      "titulo": ["Yo voy (1)"],
+      "titulo": ["Yo voy (Pés na terra)"],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -17188,7 +17017,7 @@
 
   "idiomas": {
     "es": {
-      "titulo": ["Yo voy (2)"],
+      "titulo": ["Yo voy (Eu vou)"],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",

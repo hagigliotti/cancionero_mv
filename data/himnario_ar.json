@@ -1440,12 +1440,13 @@
     "autor": [""],
     "compositor": [""],
     "year": [""],
-    "tonalidad": [""],
+    "tonalidad": ["Re Mayor (D)"],
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Himno"],
-    "referencia_biblica": [""],
-    "tags": ["Adoración", "Oración"],
+    "referencia_biblica": ["Hebreos 4:16"],
+    "tags": ["Adoración", "Oración", "Consagración", "Comunión", "Transformación"],
+
     "idiomas": {
       "es": {
         "titulo": ["¡Oh, Señor! al orar"],
@@ -1457,14 +1458,15 @@
         "revisado": "No",        
         "letra": [
           "1",
-          "¡Oh, Señor! al orar,",
-          "mis problemas quiero entregar,",
-          "a tu Trono de gracia llegar",
-          "y tu bendición alcanzar.",
-          "Hoy mi vida transforma, Señor;",
-          "que mi mente entienda tu amor,",
-          "y al postrarme humilde ante ti,",
-          "¡oh, Señor, escucha mi oración!"
+          "[D]Oh Señor al [G]orar",
+          "[A]mis pro[A7]blemas quiero en[D]tregar,",
+          "[F#7]a tu [Bm]trono de [G]gracia llegar",
+          "[A]y tu [A7]bendi[D]ción alcanzar.",
+          "",
+          "[G]Hoy mi [A]vida trans[D]forma Señor,",
+          "[Bm]que mi [E]mente en[A]tienda tu amor;",
+          "[D]y al pos[G]trarme humilde ante ti,",
+          "[A]¡oh, Se[A7]ñor, es[D]cucha mi oración!"
         ],
         "nota": [""]
       }
@@ -3236,7 +3238,7 @@
   {
     "id": "himno-71",
     "titulo_original": ["Cada cosa hermosa"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": [""],
     "compositor": [""],
     "year": [""],
@@ -3293,7 +3295,7 @@
   {
     "id": "himno-72",
     "titulo_original": ["Fue un milagro"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": [""],
     "compositor": [""],
     "year": [""],
@@ -3445,45 +3447,45 @@
       }
     }
   },
-  {
-    "id": "himno-75",
-    "titulo_original": ["Grande es Jehová"],
+  { "id": "himno-75",
+    "titulo_original": ["Great is the Lord"],
     "corito": "Si",
-    "autor": [""],
-    "compositor": [""],
-    "year": [""],
-    "tonalidad": [""],
-    "tempo_bpm": [""],
-    "compas": [""],
-    "ritmo": [""],
-    "referencia_biblica": [""],
-    "tags": [""],
+    "autor": ["Michael W. Smith", "Deborah Smith"],
+    "compositor": ["Michael W. Smith", "Deborah Smith"],
+    "year": ["Desconocido"],
+    "tonalidad": ["La Mayor (A)"],
+    "tempo_bpm": ["Desconocido"],
+    "compas": ["Desconocido"],
+    "ritmo": ["Desconocido"],
+    "referencia_biblica": ["1 Crónicas 16:25"],
+    "tags": ["Alabanza", "Adoración"],
+
     "idiomas": {
       "es": {
         "titulo": ["Grande es Jehová"],
-        "titulo2": [""],
         "numero_himno": "75",
         "audio_url": "",
-        "traductor": [""],
+        "traductor": ["-"],
         "partitura": "No",
-        "revisado": "No",
+        "revisado": "No",      
         "letra": [
           "1",
-          "Grande es Jehová, poderoso Señor;",
-          "a su nombre rendimos honor.",
-          "Grande es Jehová, el supremo Hacedor;",
-          "bondadoso nos da su amor.",
-          "Grande es Jehová, y digno de gloria;",
-          "Dios sin igual, bendito Señor.",
-          "Grande es Jehová, alcemos la voz",
-          "con santa unción;",
-          "grande es Jehová, grande es Jehová.",
+          "[A]Grande es Je[Bm]hová, pode[E]roso Se[A]ñor,",
+          "a su [Bm]nombre ren[E]dimos ho[D - A]nor.",
+          "[A]Grande es Je[Bm]hová, el su[E]premo Ha[A]cedor,",
+          "[Bm]bondadoso nos [E]da su a[D - A]mor.",
+          "",
+          "[G]Grande es Je[D]hová, y digno de [A]gloria,",
+          "[G]Dios sin i[E]gual, bendito Se[A]ñor.",
+          "[G]Grande es Je[B]hová, al[E]cemos la [C#]voz con santa un[F#m]ción.",
+          "[Bm - E]Grande es Je[F#m]hová, [Bm - E]grande es Je[A]hová.",
           "",
           "2",
           "Grande es Jehová, poderoso Señor;",
           "a su nombre rendimos honor.",
           "Grande es Jehová, el supremo Hacedor;",
           "bondadoso nos da su amor.",
+          "",
           "Grande eres tú, y digno de gloria;",
           "te exaltaré, mi Dios y mi Rey.",
           "Grande eres tú, te alabaré con todo mi ser;",
@@ -3595,7 +3597,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Xmas"],
+    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
     "idiomas": {
       "es": {
         "titulo": ["¡Al mundo paz!"],
@@ -3646,7 +3648,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Xmas"],
+    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
     "idiomas": {
       "es": {
         "titulo": ["Se oye un canto en alta esfera"],
@@ -3709,7 +3711,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Xmas"],
+    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
     "idiomas": {
       "es": {
         "titulo": ["Venid, pastorcillos"],
@@ -3754,7 +3756,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Xmas"],
+    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
     "idiomas": {
       "es": {
         "titulo": ["Noche de paz"],
@@ -3804,7 +3806,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Xmas"],
+    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
     "idiomas": {
       "es": {
         "titulo": ["Ya repican las campanas"],
@@ -3840,7 +3842,7 @@
   {
     "id": "himno-83",
     "titulo_original": ["La primera Navidad"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": [""],
     "compositor": [""],
     "year": [""],
@@ -3849,7 +3851,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Xmas"],
+    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
     "idiomas": {
       "es": {
         "titulo": ["La primera Navidad"],
@@ -3895,8 +3897,8 @@
   },
   {
     "id": "himno-84",
-    "titulo_original": ["Ve, dilo en las montañas"],
-    "corito": "Sí",
+    "titulo_original": ["Go Tell It on the Mountain"],
+    "corito": "No",
     "autor": [""],
     "compositor": [""],
     "year": [""],
@@ -3905,7 +3907,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Xmas", "Gospel"],
+    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten", "Gospel"],
     "idiomas": {
       "es": {
         "titulo": ["Ve, dilo en las montañas"],
@@ -3941,6 +3943,76 @@
           "la redención gozar."
         ],
         "nota": [""]
+      },
+      "en": {
+        "titulo": ["Go Tell It on the Mountain"],
+        "titulo2": [""],
+        "numero_himno": "",
+        "audio_url": "",
+        "traductor": [""],
+        "partitura": "No",
+        "revisado": "No",
+        "letra": [
+          "Chorus:",
+          "Go tell it on the mountain",
+          "Over the hills and everywhere",
+          "Go tell it on the mountain",
+          "Jesus Christ is born",
+          "",
+          "1",
+          "While shepherds kept their watching",
+          "Over silent flocks by night",
+          "Behold throughout the heavens",
+          "They're shown a holy light",
+          "",
+          "2",
+          "The shepherds feared and trembled",
+          "When all above the earth",
+          "Rang out the angel chorus",
+          "That held a saviors birth",
+          "",
+          "Chorus:",
+          "Go tell it on the mountain",
+          "Over the hills and everywhere",
+          "Go tell it on the mountain",
+          "Jesus Christ is born",
+          "",
+          "3",
+          "Now in a lonely manger",
+          "The humble christ was born",
+          "And god sent our salvation",
+          "That blessed this christmas morn",
+          "",
+          "Chorus:",
+          "Go tell it on the mountain",
+          "Over the hills and everywhere",
+          "Go tell it on the mountain",
+          "That Jesus Christ is born",
+          "",
+          "Bridge:",
+          "Hallelujah hallelujah Jesus christ is born",
+          "Hallelujah hallelujah savior of the world",
+          "Hallelujah hallelujah Jesus christ is born",
+          "Hallelujah hallelujah savior of the world",
+          "Oh he's the savior of the world",
+          "",
+          "Chorus:",
+          "Go tell it on the mountain",
+          "Over the hills and everywhere",
+          "Go tell it on the mountain",
+          "That Jesus Christ is born",
+          "",
+          "Chorus:",
+          "Go tell it on the mountain",
+          "Over the hills and everywhere",
+          "Go tell it on the mountain",
+          "That Jesus Christ is born",
+          "",
+          "Outro:",
+          "Hallelujah hallelujah Jesus christ is born",
+          "So hallelujah hallelujah Jesus Christ is born"
+        ],
+        "nota": [""]
       }
     }
   },
@@ -3956,7 +4028,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Xmas"],
+    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
     "idiomas": {
       "es": {
         "titulo": ["Allá en el pesebre"],
@@ -4001,7 +4073,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Xmas"],
+    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
     "idiomas": {
       "es": {
         "titulo": ["A medianoche en Belén"],
@@ -4037,7 +4109,7 @@
   {
     "id": "himno-87",
     "titulo_original": ["Venid, fieles todos"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": [""],
     "compositor": [""],
     "year": [""],
@@ -4046,7 +4118,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Xmas"],
+    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
     "idiomas": {
       "es": {
         "titulo": ["Venid, fieles todos"],
@@ -4092,7 +4164,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Xmas"],
+    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
     "idiomas": {
       "es": {
         "titulo": ["Oh, aldehuela de Belén"],
@@ -4137,7 +4209,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Xmas"],
+    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
     "idiomas": {
       "es": {
         "titulo": ["Cristianos, alegraos hoy"],
@@ -4185,7 +4257,7 @@
   {
     "id": "himno-90",
     "titulo_original": ["Somos del oriente"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": [""],
     "compositor": [""],
     "year": [""],
@@ -4194,7 +4266,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Xmas"],
+    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
     "idiomas": {
       "es": {
         "titulo": ["Somos del oriente"],
@@ -4248,7 +4320,7 @@
   {
     "id": "himno-91",
     "titulo_original": ["¿Qué niño es este?"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": [""],
     "compositor": [""],
     "year": [""],
@@ -4257,7 +4329,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Xmas"],
+    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
     "idiomas": {
       "es": {
         "titulo": ["¿Qué niño es este?"],
@@ -4298,7 +4370,7 @@
   {
     "id": "himno-92",
     "titulo_original": ["Angeles cantando están"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": [""],
     "compositor": [""],
     "year": [""],
@@ -4307,7 +4379,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Xmas"],
+    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
     "idiomas": {
       "es": {
         "titulo": ["Angeles cantando están"],
@@ -4341,7 +4413,7 @@
   {
     "id": "himno-93",
     "titulo_original": ["Hubo Uno que quiso"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": [""],
     "compositor": [""],
     "year": [""],
@@ -4445,7 +4517,7 @@
   {
     "id": "himno-95",
     "titulo_original": ["Un día"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": [""],
     "compositor": [""],
     "year": [""],
@@ -4553,7 +4625,7 @@
   {
     "id": "himno-97",
     "titulo_original": ["En el monte Calvario"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": [""],
     "compositor": [""],
     "year": [""],
