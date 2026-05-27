@@ -1024,7 +1024,7 @@
   "tempo_bpm": ["76"],
   "compas": ["4/4"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": ["Camporí 'Amigos de Esperanza' ABo 2011", "Esperanza"],
 
   "idiomas": {
@@ -1379,7 +1379,7 @@
   "tempo_bpm": ["95"],
   "compas": ["4/4"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": ["Cristiano"],
 
   "idiomas": {
@@ -1459,7 +1459,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["4/4"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": ["Alabanza", "Adoración", "Bienvenida", "Sábado", "Comunidad", "Fraternidad", "Worship"],
 
   "idiomas": {
@@ -1532,7 +1532,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": ["Luz", "Testimonio", "Himno"],
 
   "idiomas": {
@@ -1922,7 +1922,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Infantil"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
 
   "idiomas": {
@@ -1956,7 +1956,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": ["Himno"],
 
   "idiomas": {
@@ -1988,7 +1988,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": ["Alabanza"],
 
   "idiomas": {
@@ -2146,7 +2146,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
 
   "idiomas": {
@@ -2188,7 +2188,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
 
   "idiomas": {
@@ -2467,7 +2467,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": ["worship", "Alabanza"],
 
   "idiomas": {
@@ -2821,7 +2821,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": ["Infantil"],
 
   "idiomas": {
@@ -3166,7 +3166,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo":  ["Alabanza"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": ["Alabanza", "Avivamiento", "Gozo", "Crecimiento Espiritual"],
   
   "idiomas": {
@@ -3199,7 +3199,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [""],
 
   "idiomas": {
@@ -3483,7 +3483,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
 
   "idiomas": {
@@ -3523,7 +3523,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
 
   "idiomas": {
@@ -3574,7 +3574,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
 
   "idiomas": {
@@ -3665,7 +3665,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": ["Alabanza", "Animación", "Gozo", "Fraternidad","Comunidad"],
 
   "idiomas": {
@@ -4754,7 +4754,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": ["Adoración"],
 
   "idiomas": {
@@ -4797,7 +4797,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
 
   "idiomas": {
@@ -6022,7 +6022,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
 
   "idiomas": {
@@ -6065,7 +6065,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
 
   "idiomas": {
@@ -6119,7 +6119,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
 
   "idiomas": {
@@ -6192,7 +6192,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
 
   "idiomas": {
@@ -6412,7 +6412,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
 
   "idiomas": {
@@ -6466,7 +6466,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
 
   "idiomas": {
@@ -6765,7 +6765,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
 
   "idiomas": {
@@ -6835,7 +6835,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
 
   "idiomas": {
@@ -7062,7 +7062,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": "Marcha",
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": ["Jóvenes", "Club", "Conquistadores"],
 
   "idiomas": {
@@ -7512,7 +7512,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
   "idiomas": {
     "it": {
@@ -7612,7 +7612,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
   "idiomas": {
     "it": {
@@ -8043,7 +8043,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
   "idiomas": {
     "it": {
@@ -8102,7 +8102,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
   "idiomas": {
     "it": {
@@ -8681,7 +8681,7 @@
 },
 
 { "_comment13": "LETRA M ---------------------------------------------------------------------------------------------------------------------------------------    LETRA M"  },
-{ "id": "mira_que_linda_es_la_vida",
+{ "id": "miren_que_linda_es_la_vida",
   "titulo_original": ["Desconocido"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
@@ -9964,7 +9964,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
   "idiomas": {
     "it": {
@@ -10015,7 +10015,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
   "idiomas": {
     "it": {
@@ -10576,7 +10576,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [
     
     "Cristiano",
@@ -10984,7 +10984,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
   "idiomas": {
     "it": {
@@ -11028,7 +11028,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
   "idiomas": {
     "it": {
@@ -11261,7 +11261,7 @@
   "tempo_bpm": ["76"],
   "compas": ["4/4"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": ["Fidelidad", "Biblia", "Salvacion"],
 
   "idiomas": {
@@ -11301,7 +11301,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [
     
     "Cristiano",
@@ -11342,7 +11342,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [
     
     "Cristiano",
@@ -12028,7 +12028,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
   "idiomas": {
     "it": {
@@ -12893,7 +12893,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [
     
     "Cristiano",
@@ -13365,7 +13365,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
   "idiomas": {
     "it": {
@@ -13407,7 +13407,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [],
   "idiomas": {
     "it": {
@@ -13473,7 +13473,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [
     "Men",
     "Womens"
@@ -14445,7 +14445,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [
     "Men",
     "Womens",
@@ -14537,7 +14537,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [
     "Uomini",
     "Donne",
@@ -14650,7 +14650,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [
     "Multilingue"
   ],
@@ -14785,7 +14785,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [
     
     "Cristiano",
@@ -14872,7 +14872,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [
     "Italiano",
     "Lode"
@@ -14994,7 +14994,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": ["Alabanza", "Testimonio", "Llamado", "Invitacion"],
   "idiomas": {
     "es": {
@@ -15564,7 +15564,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [
     "Italiano",
     "Adorazione"
@@ -15619,7 +15619,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [
     "Italiano",
     "Adorazione"
@@ -15677,7 +15677,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [
     "Italiano",
     "Lode"
@@ -15745,7 +15745,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [
     "Italiano",
     "Speranza"
@@ -15808,7 +15808,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [
     "Italiano",
     "Amicizia"
@@ -15857,7 +15857,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [
     "Italiano",
     "Vita",
@@ -15930,7 +15930,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [
     "Italiano",
     "Lode",
@@ -15988,7 +15988,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [
     
     "Cristiano",
@@ -16043,7 +16043,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": [
     "Cristiano",
     "Alabanza",
@@ -16175,7 +16175,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": ["Cristiano"],
 
   "idiomas": {
@@ -16944,7 +16944,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Desconocido"],
+  "referencia_biblica": [""],
   "tags": ["Alabanza", "Infantil", "Amistad", "Amor de Jesús"],
   "idiomas": {
     "es": {
