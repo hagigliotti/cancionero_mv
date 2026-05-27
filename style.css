@@ -48,8 +48,10 @@ h1 {
   width: 100%;
   max-width: 100%;
   margin: 0;
-  padding: 10px 15px;
+  padding: 0 15px; /* margen izquierdo y derecho */ /*10px 15px;*/
+  font-size: 18px; /*16*/
   box-sizing: border-box;
+  overflow-x: hidden; /* evita scroll horizontal */
   font-size: 16px;
 }
 
@@ -193,11 +195,9 @@ a.menu-item {
   padding: 10px 15px;
   /*font-weight: bold;*/
   /*opacity: 0.7;*/
-  .menu-title {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
-}
 }
 
 
@@ -372,14 +372,7 @@ a.menu-item {
   cursor: pointer;
 }
 
-#contenido {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden; /* evita scroll horizontal */
-  box-sizing: border-box;
-  padding: 0 15px; /* margen izquierdo y derecho */
-  font-size: 18px;
-}
+
 
 .meta {
   font-size: 12px;
@@ -701,7 +694,7 @@ body.dark .modal-content {
 
 
 /* ====================  MUSICA: CANCIONES E INFO PREVIA  ==================== */
-/* ========== icono apple music, spotify o youtube ==========
+/* ========== icono apple music, spotify o youtube ========== */
 .audio a {
   text-decoration: none;
   font-weight: 600;
@@ -1188,3 +1181,4 @@ body.projector .clear-btn {
   text-align: center;
   margin-top: 10px;
 }
+

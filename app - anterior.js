@@ -142,8 +142,214 @@ async function init() {
 init();
 
 // ===================== HELPERS ====================================================================================
+// Excluye caracteres especiales, acentos, signos de puntuación, y convierte a mayúsculas para una comparación más "blanda"
+function normalize(text) {
+  return (text || "").toString()
+    // quitar acentos / diéresis
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
 
-// depende de estado + UI
+    // convertir a mayúsculas
+    .toUpperCase()
+
+    // reemplazar signos por espacio
+    .replace(/[¿?¡!.,;:()"'`´¨[\]{}<>\/\\|@#$%^&*=+~…_-]/g, " ")
+
+    // colapsar espacios múltiples
+    .replace(/\s+/g, " ")
+
+    // trim final
+    .trim();
+}
+
+function sortByTitle(data) {
+  return data.sort((a, b) => {
+    const aT = cleanTitleForSort(a.idiomas?.[idiomaActual]?.titulo);
+    const bT = cleanTitleForSort(b.idiomas?.[idiomaActual]?.titulo);
+
+    const aNum = extractLeadingNumber(aT);
+    const bNum = extractLeadingNumber(bT);
+
+    // si ambos tienen número → orden numérico real
+    if (aNum !== null && bNum !== null) {
+      return aNum - bNum;
+    }
+
+    return normalize(aT).localeCompare(normalize(bT), undefined, {
+      numeric: true,
+      sensitivity: "base"
+    });
+  });
+}
+
+//
+function extractLeadingNumber(text) {
+  if (!text) return null;
+
+  const match = text.match(/^\d+/);
+  return match ? parseInt(match[0], 10) : null;
+}
+
+// NUEVO helper clave
+function getNumeroHimno(c) {
+  return c.idiomas?.[idiomaActual]?.numero_himno ?? "";
+}
+
+// Para buscar ritmo como "" o []
+function normalizeRitmo(ritmo) {
+  if (!ritmo) return [];
+
+  if (Array.isArray(ritmo)) {
+    return ritmo;
+  }
+
+  return ritmo
+    .split("/")
+    .map(r => r.trim())
+    .filter(Boolean);
+}
+
+function formatRitmo(ritmo) {
+  const arr = normalizeRitmo(ritmo)
+    .map(r => (r || "").trim())
+    .filter(Boolean);
+
+  if (!arr.length) return "";
+
+  return arr
+    .sort((a, b) =>
+      a.localeCompare(b, "es", { sensitivity: "base" })
+    )
+    .join(", ");
+}
+
+function normalizeField(value) {
+  if (!value) return [];
+
+  if (Array.isArray(value)) {
+    return value;
+  }
+
+  return [value];
+}
+
+function normalizeTraductor(lang) {
+  const trad = lang?.traductor;
+
+  if (!trad) return [];
+
+  if (Array.isArray(trad)) {
+    return trad;
+  }
+
+  return [trad];
+}
+
+/* para coautor */
+function formatOptionalField(label, value) {
+  const arr = normalizeField(value)
+    .map(v => (v || "").trim())
+    .filter(Boolean);
+
+  if (!arr.length) return "";
+
+  return `<b>${label}:</b> ${arr.join(", ")} | `;
+}
+
+/* PARA REFERENCIA BIBLICA*/
+function normalizeReferenciaBiblica(ref) {
+  if (!ref) return [];
+
+  // si ya es array
+  if (Array.isArray(ref)) {
+    return ref;
+  }
+
+  // si es string → separar por coma
+  return ref
+    .split(",")
+    .map(r => r.trim())
+    .filter(Boolean);
+}
+
+/* TITULOS */ // TITULO ORIGINAL
+function normalizeTituloOriginal(value) {
+  if (!value) return "";
+
+  if (Array.isArray(value)) {
+    return value.filter(Boolean).join(", ");
+  }
+
+  return value;
+}
+//TITULOS DE CANCION
+function normalizeText(value) {
+  if (!value) return "";
+
+  if (Array.isArray(value)) {
+    return value.filter(Boolean).join(", ");
+  }
+
+  return value;
+}
+
+function normalizeSong(song) {
+  if (!song?.idiomas) return song;
+
+  Object.keys(song.idiomas).forEach(lang => {
+    const t = song.idiomas?.[lang]?.titulo;
+    song.idiomas[lang].titulo = normalizeText(t);
+  });
+
+  song.titulo_original = normalizeText(song.titulo_original);
+
+  // 🆕 NORMALIZAR CAMPOS SIMPLES
+  song.year = normalizeSimple(song.year);
+  song.tonalidad = normalizeSimple(song.tonalidad);
+  song.tempo_bpm = normalizeSimple(song.tempo_bpm);
+  song.compas = normalizeSimple(song.compas);
+
+  return song;
+}
+
+// YEAR TONALIDAD BMP COMPAS
+function normalizeSimple(value) {
+  if (!value) return "";
+  if (Array.isArray(value)) {
+    return value.filter(Boolean).join(", ");
+  }
+  return value;
+}
+
+function normalizeMeta(song, field) {
+  return normalizeSimple(song?.[field]);
+}
+
+/* LISTA DE AUTORES COMPOSITORES Y TRADUCTORES */
+function renderPersonLinks(label, value) {
+
+  const arr = normalizeField(value)
+    .map(v => (v || "").trim())
+    .filter(Boolean);
+
+  if (!arr.length) return "";
+
+  const html = arr.map(person => {
+
+    // NO convertir en link si no hay info real
+    if (
+      person === "-" || normalize(person) === "DESCONOCIDO"
+    ) {
+      return person;
+    }
+
+    // link clickable
+    return `<span class="person-link"onclick="showPersonSongs('${person.replace(/'/g, "\\'")}')">${person}</span>`;
+  }).join(", ");
+
+  return `<b>${label}:</b> ${html} | `;
+}
+
 function showPersonSongs(person) {
 
   const data = [...canciones, ...himnos];
@@ -189,9 +395,47 @@ ${cancionesLista.join("\n")}`
   );
 }
 
+/* ORDEN ALFABETICO SIN SIGNOS */
+function cleanTitleForSort(value) {
+  const text = normalizeText(value);
 
+  return (text || "")
+    .replace(/^[^A-Z0-9ÁÉÍÓÚÜÑ]+/i, "")
+    .trim();
+}
 
+// AFINADOR 
+function extractRootNote(note) {
 
+  if (!note) return "A";
+
+  const match =
+    note.match(/^([A-G][b#]?)/);
+
+  return match ? match[1] : "A";
+}
+
+// ===================== LOGO DINAMICO - BANNER =====================
+function updateLogo() {
+  const logo = document.getElementById("logoCancionero");
+
+  if (!logo) return;
+
+  // prioridad: modo proyector
+  if (document.body.classList.contains("projector")) {
+    logo.src = "imagenes/Banner_black.png";
+    return;
+  }
+
+  // tema claro
+  if (document.body.classList.contains("light-mode")) {
+    logo.src = "imagenes/Banner_blu.png";
+    return;
+  }
+
+  // tema oscuro azul
+  logo.src = "imagenes/Banner_white.png";
+}
 
 // ===================== BOTON LIMPIAR ======================
 function clearAll() {
@@ -461,6 +705,67 @@ function resetFuente() {
   applyFontSize();
 }
 
+// ===== PROYECTOR ============================================================================
+function toggleProjectorMode() {
+  // bloquear en celulares y tablets
+  if (isMobileOrTablet()) {
+    alert("📱 El modo proyector solo está disponible en Desktops.");
+    return;
+  }
+
+  const body = document.body;
+
+  if (body.classList.contains("projector")) {
+    body.classList.remove("projector");
+    localStorage.setItem("projector", "off");
+  } else {
+    body.classList.add("projector");
+    localStorage.setItem("projector", "on");
+  }
+
+  updateLogo();
+}
+
+// ===== THEME ================================================================================
+function updateThemeMenuText() {
+  const item = document.getElementById("themeMenuItem");
+  if (!item) return;
+
+  const isLight = document.body.classList.contains("light-mode");
+
+  if (isLight) {
+    item.innerHTML = "👓 Tema claro";
+  } else {
+    item.innerHTML = "🕶️ Tema oscuro";
+  }
+}
+
+function toggleTheme() {
+  const body = document.body;
+
+  if (body.classList.contains("light-mode")) {
+    body.classList.replace("light-mode", "dark-mode");
+    localStorage.setItem("theme", "dark");
+  } else {
+    body.classList.replace("dark-mode", "light-mode");
+    localStorage.setItem("theme", "light");
+  }
+
+  updateThemeMenuText();
+  updateLogo();
+}
+
+function loadTheme() {
+  const saved = localStorage.getItem("theme");
+  const body = document.body;
+
+  if (saved === "light") {
+    body.classList.add("light-mode");
+  } else {
+    body.classList.add("dark-mode");
+  }
+  updateThemeMenuText();
+}
 
 // ===== SEARCH - BUSQUEDA BLANDA =================================================================
 function search(q) {
@@ -856,7 +1161,12 @@ function renderChordLine(line) {
     lastIndex = regex.lastIndex;
   }
 
-
+  function escapeHtml(str) {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
 
   // resto final
   const rest = line.slice(lastIndex).replace(regex, "");
@@ -1033,3 +1343,483 @@ function renderAudioLink(song, idiomaData) {
   `;
 }
 
+/* ===================== METRONOMO ===================== */
+function abrirMetronomoDesdeMenu() {
+  closeMenu();        // 👈 cierra el dropdown primero
+  abrirMetronomo();   // 👈 luego abre el modal
+}
+
+function abrirMetronomo(song = null) {
+
+  let bpm = 90;
+  let tonalidad = "A";
+  let compas = "4/4";
+
+  if (song) {
+    bpm = parseInt(normalizeMeta(song, "tempo_bpm")) || 90;
+    tonalidad = normalizeMeta(song, "tonalidad") || "A";
+    compas = normalizeMeta(song, "compas") || "4/4";
+
+    const root = extractRootNote(tonalidad);
+
+    document.getElementById("referenceNote").value = root;
+  }
+
+  currentCompas = compas;
+
+  document.getElementById("metroBpm").value = bpm;
+  document.getElementById("metroCompas").innerText = compas;
+  document.getElementById("metroModal").style.display = "block";
+}
+
+function cerrarMetronomo() {
+  document.getElementById("metroModal").style.display = "none";
+
+  stopMetronomo();
+}
+
+function toggleMetronomo() {
+
+  if (metroRunning) {
+    stopMetronomo();
+  } else {
+    startMetronomo();
+  }
+}
+
+function startMetronomo() {
+  const bpm = parseInt(document.getElementById("metroBpm").value) || 90;
+
+  const baseInterval = 60000 / bpm;
+
+  metroRunning = true;
+  subStep = 0;
+  currentBeat = 0;
+
+  document.getElementById("metroPlayBtn").innerText = "⏹ Stop";
+
+  metroAudioCtx =
+    metroAudioCtx || new (window.AudioContext || window.webkitAudioContext)();
+
+  clearInterval(metroInterval);
+
+  metroInterval = setInterval(() => {
+    playBeat(baseInterval);
+  }, baseInterval / subdivision);
+}
+
+function stopMetronomo() {
+
+  metroRunning = false;
+
+  clearInterval(metroInterval);
+
+  document.getElementById("metroPlayBtn").innerText =
+    "▶️ Play";
+}
+
+function playBeat(baseInterval) {
+
+  animateBeat();
+
+  const beats = parseInt(currentCompas.split("/")[0]) || 4;
+  const isStrongBeat = currentBeat === 0;
+
+  // 🎯 swing delay simple por subdivisión
+  let delayFactor = 1;
+
+  if (swing > 0) {
+    const isEvenSub = subStep % 2 === 0;
+
+    if (subdivision === 2) {
+      // corcheas swing
+      delayFactor = isEvenSub
+        ? (1 + swing / 100)
+        : (1 - swing / 100);
+    }
+
+    if (subdivision === 4) {
+      // semicorcheas swing leve
+      delayFactor = isEvenSub
+        ? (1 + swing / 150)
+        : (1 - swing / 150);
+    }
+  }
+
+  // sonido
+  if (metroSoundEnabled) {
+    const osc = metroAudioCtx.createOscillator();
+    const gain = metroAudioCtx.createGain();
+
+    osc.connect(gain);
+    gain.connect(metroAudioCtx.destination);
+
+    osc.frequency.value = isStrongBeat ? 1400 : 900;
+    gain.gain.value = isStrongBeat ? 1 : 0.5;
+
+    osc.start();
+    osc.stop(metroAudioCtx.currentTime + 0.05);
+  }
+
+  // avanzar subdivisión
+  subStep++;
+
+  if (subStep >= subdivision) {
+    subStep = 0;
+    advanceBeat(beats);
+  }
+}
+
+function advanceBeat(beats = 4) {
+
+  currentBeat++;
+
+  if (currentBeat >= beats) {
+    currentBeat = 0;
+  }
+}
+
+function animateBeat() {
+
+  const beat = document.getElementById("metroBeat");
+
+  beat.classList.add("active");
+
+  setTimeout(() => {
+    beat.classList.remove("active");
+  }, 80);
+}
+
+function toggleMetroSound() {
+
+  metroSoundEnabled = !metroSoundEnabled;
+
+  document.getElementById("metroSoundBtn").innerText =
+    metroSoundEnabled
+      ? "🔊 Sonido"
+      : "🔇 Mudo";
+}
+
+function changeBpm(delta) {
+
+  const input = document.getElementById("metroBpm");
+
+  let value = parseInt(input.value) || 90;
+
+  value += delta;
+
+  if (value < 20) value = 20;
+  if (value > 300) value = 300;
+
+  input.value = value;
+
+  // refrescar si está corriendo
+  if (metroRunning) {
+    stopMetronomo();
+    startMetronomo();
+  }
+}
+
+/* Compases */
+function changeCompas(value) {
+  currentCompas = value;
+
+  // reset del ciclo de beats para evitar desfase
+  currentBeat = 0;
+
+  document.getElementById("metroCompas").innerText = value;
+
+  // si está corriendo, reiniciar timing
+  if (metroRunning) {
+    stopMetronomo();
+    startMetronomo();
+  }
+}
+
+function setSubdivision(value) {
+  subdivision = value;
+  subStep = 0;
+
+  if (metroRunning) {
+    stopMetronomo();
+    startMetronomo();
+  }
+}
+
+function setSwing(value) {
+  swing = parseInt(value);
+}
+
+// ===================== AFINADOR =====================
+async function toggleMic() {
+
+  if (micEnabled) {
+    stopMic();
+    return;
+  }
+
+  try {
+
+    audioCtx =
+      audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+
+    // MUY IMPORTANTE
+    if (audioCtx.state === "suspended") {
+      await audioCtx.resume();
+    }
+
+    micStream = await navigator.mediaDevices.getUserMedia({
+      audio: {
+        echoCancellation: false,
+        noiseSuppression: false,
+        autoGainControl: false
+      }
+    });
+
+    const source =
+      audioCtx.createMediaStreamSource(micStream);
+
+    analyser = audioCtx.createAnalyser();
+
+    analyser.fftSize = 2048;
+
+    source.connect(analyser);
+
+    micEnabled = true;
+
+    document.getElementById("micBtn").innerText =
+      "🎤❌";
+
+    detectPitch();
+
+  } catch (err) {
+
+    console.error(err);
+
+    alert("Micrófono no disponible o bloqueado");
+  }
+}
+
+function stopMic() {
+  micEnabled = false;
+
+  document.getElementById("micBtn").innerText = "🎤";
+
+  if (micStream) {
+    micStream.getTracks().forEach(t => t.stop());
+  }
+
+  if (rafId) {
+    cancelAnimationFrame(rafId);
+  }
+
+  cancelAnimationFrame(rafId);
+}
+
+function detectPitch() {
+  const buffer = new Float32Array(analyser.fftSize);
+
+  analyser.getFloatTimeDomainData(buffer);
+
+  const freq = autoCorrelate(buffer, audioCtx.sampleRate);
+
+  if (
+    freq !== -1 &&
+    isFinite(freq) &&
+    !isNaN(freq)
+  ) {
+    updateTunerUI(freq);
+  }
+
+  rafId = requestAnimationFrame(detectPitch);
+}
+
+function autoCorrelate(buffer, sampleRate) {
+  let SIZE = buffer.length;
+  let rms = 0;
+
+  for (let i = 0; i < SIZE; i++) {
+    rms += buffer[i] * buffer[i];
+  }
+
+  rms = Math.sqrt(rms / SIZE);
+  if (rms < 0.01) return -1;
+
+  let r1 = 0, r2 = SIZE - 1;
+  const threshold = 0.2;
+
+  for (let i = 0; i < SIZE / 2; i++) {
+    if (Math.abs(buffer[i]) < threshold) { r1 = i; break; }
+  }
+
+  for (let i = 1; i < SIZE / 2; i++) {
+    if (Math.abs(buffer[SIZE - i]) < threshold) { r2 = SIZE - i; break; }
+  }
+
+  buffer = buffer.slice(r1, r2);
+  SIZE = buffer.length;
+
+  const c = new Array(SIZE).fill(0);
+
+  for (let lag = 0; lag < SIZE; lag++) {
+    for (let i = 0; i < SIZE - lag; i++) {
+      c[lag] += buffer[i] * buffer[i + lag];
+    }
+  }
+
+  let d = 0;
+  while (c[d] > c[d + 1]) d++;
+
+  let maxval = -1, maxpos = -1;
+
+  for (let i = d; i < SIZE; i++) {
+    if (c[i] > maxval) {
+      maxval = c[i];
+      maxpos = i;
+    }
+  }
+
+  let T0 = maxpos;
+
+  return sampleRate / T0;
+}
+
+const NOTE_STRINGS = [
+  "C", "C#", "D", "D#", "E", "F",
+  "F#", "G", "G#", "A", "A#", "B"
+];
+
+function freqToNote(freq) {
+  const A4 = 440;
+
+  const noteNum = 12 * (Math.log2(freq / A4)) + 69;
+
+  const rounded = Math.round(noteNum);
+
+  const cents = (noteNum - rounded) * 100;
+
+  const note = NOTE_STRINGS[(rounded % 12 + 12) % 12];
+
+  return { note, cents };
+}
+
+function updateTunerUI(freq) {
+  const { note, cents } = freqToNote(freq);
+
+  document.getElementById("tunerNote").innerText = note;
+
+  const needle = document.getElementById("tunerNeedle");
+
+  // mover aguja (-50 a +50 cents)
+  const clamped = Math.max(-50, Math.min(50, cents));
+
+  needle.style.left = `${50 + clamped}%`;
+
+  const centsEl = document.getElementById("tunerCents");
+  centsEl.innerText = `${cents.toFixed(1)} cents`;
+
+  // color
+  needle.style.background = Math.abs(cents) < 5 ? "green" : "red";
+}
+
+async function playReferenceTone() {
+
+  audioCtx =
+    audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+
+  // IMPORTANTE:
+  // algunos navegadores arrancan suspended
+  if (audioCtx.state === "suspended") {
+    await audioCtx.resume();
+  }
+
+  const note =
+    document.getElementById("referenceNote").value;
+
+  const octave =
+    parseInt(
+      document.getElementById("referenceOctave").value
+    );
+
+  const freq = noteToFreq(note, octave);
+
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+
+  osc.type = "sine";
+
+  osc.frequency.value = freq;
+
+  gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+
+  osc.connect(gain);
+  gain.connect(audioCtx.destination);
+
+  osc.start();
+
+  osc.stop(audioCtx.currentTime + 1.5);
+}
+
+function noteToFreq(note, octave = 4) {
+
+  const SEMITONES = {
+    C: -9,
+    "C#": -8,
+    Db: -8,
+
+    D: -7,
+    "D#": -6,
+    Eb: -6,
+
+    E: -5,
+
+    F: -4,
+    "F#": -3,
+    Gb: -3,
+
+    G: -2,
+    "G#": -1,
+    Ab: -1,
+
+    A: 0,
+    "A#": 1,
+    Bb: 1,
+
+    B: 2
+  };
+
+  const semitoneDistance =
+    SEMITONES[note] + ((octave - 4) * 12);
+
+  return 440 * Math.pow(2, semitoneDistance / 12);
+}
+
+// Subdiviones de ritmo
+function startMetronomo() {
+  const bpm = parseInt(document.getElementById("metroBpm").value) || 90;
+
+  const baseInterval = 60000 / bpm;
+
+  metroRunning = true;
+  subStep = 0;
+  currentBeat = 0;
+
+  document.getElementById("metroPlayBtn").innerText = "⏹ Stop";
+
+  metroAudioCtx =
+    metroAudioCtx || new (window.AudioContext || window.webkitAudioContext)();
+
+  clearInterval(metroInterval);
+
+  metroInterval = setInterval(() => {
+    playBeat(baseInterval);
+  }, baseInterval / subdivisions[subdivision]);
+}
+
+const subdivisions = {
+  1: 1,     // negra
+  2: 2,     // corchea
+  3: 3,     // tresillo
+  4: 4,     // semicorchea
+  8: 8      // 1/32
+};
