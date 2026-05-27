@@ -1087,8 +1087,12 @@ body.projector .clear-btn {
 
 /* ===================== METRONOMO ===================== */
 .metro-content {
-  max-width: 400px;
   text-align: center;
+  max-width: 450px;
+  width: 95%;
+  max-height: 95vh;   /* 👈 más alto */
+  height: auto;
+  overflow-y: auto;   /* scroll interno si hace falta */
 }
 
 .metro-info {
