@@ -299,8 +299,8 @@ let revisadoEstadoActual = "si";
 
 function abrirRevisadoModal(valor) {
 
-  revisadoModoActivo = true;
   modalContext = "revisado";
+  revisadoModoActivo = true;
 
   revisadoEstadoActual = valor.toLowerCase();
 
@@ -308,16 +308,23 @@ function abrirRevisadoModal(valor) {
   const lista = [];
 
   todas.forEach(song => {
+
     const rev = (song.idiomas?.[idiomaActual]?.revisado || "").toLowerCase();
-    if (rev === valor.toLowerCase()) {
+
+    // 🔥 filtro base revisado
+    const esRevisado = rev === valor.toLowerCase();
+
+    // 🔥 filtro extra SOLO para himnario_ar
+    const esHimnario = song.source === "himnario_ar" || song.idioma_source === "himnario_ar";
+
+    const corito = (song.corito || "").toLowerCase();
+
+    const esCoritoValido =
+      !esHimnario || corito === "si";
+
+    if (esRevisado && esCoritoValido) {
       lista.push(song);
     }
-  });
-
-  lista.sort((a, b) => {
-    const ta = a.idiomas?.[idiomaActual]?.titulo || "";
-    const tb = b.idiomas?.[idiomaActual]?.titulo || "";
-    return ta.localeCompare(tb);
   });
 
   const cont = document.getElementById("listModalLista");
@@ -354,6 +361,7 @@ function abrirRevisadoModal(valor) {
       ? "✔️ Canciones revisadas"
       : "❌ Canciones no revisadas";
 
+  // botón toggle SOLO en este modal
   if (btn) {
     btn.style.display = "inline-block";
 

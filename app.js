@@ -897,7 +897,20 @@ function openSong(id) {
   const meta = `
     <div class="meta">
 
-      <div><b>Original:</b> ${(Array.isArray(song.titulo_original) ? song.titulo_original.join(", ") : song.titulo_original) || ""}</div>
+      <div>
+        <b>Original:</b> ${
+          normalizeArrayField(song.titulo_original).join(", ")
+        }
+
+        ${
+          normalizeArrayField(song.titulo2).length
+            ? ` | <b>Duplicados:</b> ${normalizeArrayField(song.titulo2)
+                .map(t => `€ ${t}`)
+                .join(", ")}`
+            : ""
+        }
+      </div>
+      
       <div>
         ${renderPersonLinks("Autor", song.autor || "Desconocido")}
         ${renderPersonLinks("Coautor", song.coautor)}

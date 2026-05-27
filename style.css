@@ -1261,3 +1261,13 @@ body.projector .clear-btn {
 .modal-toggle-btn:hover {
   opacity: 0.85;
 }
+
+
+/*duplicados*/
+.dup-title {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-right: 4px;
+  display: inline-block;
+}
