@@ -173,7 +173,31 @@
 
 </div>
 
-<!-- ===================== MODAL INFO ===================== -->
+<!-- ===================== MODAL ========================== -->
+<!-- ===================== MODAL-es ============== -->
+
+
+<!-- ===================== MODAL REVISADO SI ============== -->
+<div id="listModal" class="modal">
+  <div class="modal-content revisado-content">
+
+    <span class="close" onclick="cerrarListModal()">&times;</span>
+
+    <!-- HEADER NUEVO -->
+    <div class="revisado-header">
+      <h2 id="listModalTitle">Listado</h2>
+
+      <button id="toggleRevisadoBtn" onclick="toggleRevisadoEstado()">
+        ❌ Ver no revisadas
+      </button>
+    </div>
+
+    <div id="listModalLista"></div>
+
+  </div>
+</div>
+
+<!-- ===================== MODAL ACERCA DE ================ -->
 <div id="infoModal" class="modal" role="dialog" aria-hidden="true">
   <div class="modal-content">
 
@@ -181,14 +205,21 @@
 
     <h2>📖 Cancionero MV (Digital)</h2>
 
-    <p><strong>Versión:</strong> 1.0</p>
+    <hr>
+
+    <p><strong>Versión:</strong> 2.0</p>
     <p><strong>Última actualización:</strong> 2026.05</p>
 
+    <hr>
+
+    <p><strong>Información importante:</strong></p>
     <p style="font-size: 0.9em;">
       Este material sin fines de lucro, es una recopilación con fines religiosos, comunitarios y educativos.
       Las canciones y sus correspondientes derechos pertenecen a sus respectivos autores y editoriales.
-      <li>Si te gustaría agregar un canto o simplemente comunicarme algun error por favor escribime.</li>
-      <li>Si algún titular desea la modificación o retirada de contenido, puede contactarse.</li>
+      <p style="font-size: 0.9em;">
+      🡺 Si te gustaría agregar un canto o simplemente comunicarme algun error por favor escribime.<br>
+      🡸 Si algún titular, autor y/o compositor desea la modificación o retirada de su contenido, puede contactarse.
+      </p>
     </p>
     
     <hr>
@@ -199,12 +230,13 @@
 
     <hr>
 
-    <p><strong>Fuente del contenido:</strong></p>
+    <p style="font-size: 0.9em;"><strong>Fuente del contenido:</strong></p>
     <ul>
-      <li>Cancionero Hosanna 2023</li>
-      <li>Cancionero JA Iglesia Adventista de Olivos (Argentina)</li>
-      <li>Cancioneros varios (internet)</li>
-      <li>Innario GA Compagnon 2024 (Italia)</li>
+      <li>Cancionero "V Encuentro GM".</li>
+      <li>Cancionero Hosanna 2023.</li>
+      <li>Cancionero JA Iglesia Adventista de Olivos (Argentina).</li>
+      <li>Cancioneros varios (internet).</li>
+      <li>Innario GA Compagnon 2024 (Italia).</li>
     </ul>
 
     <hr>
@@ -217,7 +249,6 @@
       <li>Visualización de acordes</li>
       <li>Visualización de tonalidades, bpm, etc.</li>
       <li>Lectura bíblica</li>
-      <li></li>
     </ul>
 
     <hr>
@@ -324,9 +355,9 @@
         <b>Subdivisión:</b>
         <button onclick="setSubdivision(1)" title="Negra (1 golpe por tiempo)">♩</button>
         <button onclick="setSubdivision(2)" title="Corcheas (2 subdivisiones por tiempo)">♪</button>
-        <button onclick="setSubdivision(3)" title="Tresillos (3 subdivisiones por tiempo)">𝅘𝅥𝅮</button>
+        <!--<button onclick="setSubdivision(3)" title="Tresillos (3 subdivisiones por tiempo)">𝅘𝅥𝅮</button>-->
         <button onclick="setSubdivision(4)" title="Semicorcheas (4 subdivisiones por tiempo)">♬</button>
-        <button onclick="setSubdivision(8)" title="Fusas 1/32 (8 subdivisiones por tiempo)">𝅘𝅥𝅯</button>
+        <!--<button onclick="setSubdivision(8)" title="Fusas 1/32 (8 subdivisiones por tiempo)">𝅘𝅥𝅯</button>-->
 
       </div>
       <!-- <div class="divider"></div> -->

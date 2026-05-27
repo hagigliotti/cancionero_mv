@@ -15,6 +15,8 @@ let idiomaActual = "es";
 let listaVisible = false;
 let letraActiva = null;
 
+let modalMode = { type: "", value: "" };
+
 let tablaturaVisible = true;
 
 // ===================== METRONOMO =====================
@@ -144,53 +146,16 @@ init();
 // ===================== HELPERS ====================================================================================
 
 // depende de estado + UI
-function showPersonSongs(person) {
 
-  const data = [...canciones, ...himnos];
-  const results = data.filter(song => {
-
-    const autor = normalizeField(song.autor);               // autor
-    const coautor = normalizeField(song.coautor);           // coautor
-    const compositor = normalizeField(song.compositor);     // compositor
-    const traductores = Object.values(song.idiomas || {})   // traductor (todos los idiomas)
-      .flatMap(lang => normalizeTraductor(lang));
-
-    const allPeople = [
-      ...autor,
-      ...coautor,
-      ...compositor,
-      ...traductores
-    ].map(normalize);
-
-    return allPeople.includes(normalize(person));
-  });
-
-  if (!results.length) {
-    alert(`No se encontraron canciones para ${person}`);
-    return;
-  }
-
-  const cancionesLista = results.map(song => {
-
-    const titulo =
-      song.idiomas?.[idiomaActual]?.titulo ||
-      song.titulo_original ||
-      song.id;
-
-    return `• ${titulo}`;
-  });
-
-  alert(
-`${person}
-
-Aparece en:
-
-${cancionesLista.join("\n")}`
-  );
+function showPersonSongs(valor, tipo) {
+  abrirListadoModal(tipo, valor);
 }
 
-
-
+/*
+function showPersonSongs(valor, tipo = "autor") {
+  abrirListadoModal(tipo, valor);
+}
+*/
 
 
 // ===================== BOTON LIMPIAR ======================
@@ -974,7 +939,19 @@ function openSong(id) {
             ? song.tags.sort((a, b) => a.localeCompare(b)).join(", ")
             : "Desconocido"
         } |
-        <b>Revisado:</b> ${song.idiomas?.[idiomaActual]?.revisado || "No"}
+        <b>Revisado:</b>
+          <span
+            onclick="abrirRevisadoModal('${
+              (song.idiomas?.[idiomaActual]?.revisado || "No")
+            }')"
+            style="cursor:pointer; color:#38bdf8;"
+          >
+            ${
+              (song.idiomas?.[idiomaActual]?.revisado || "").toLowerCase() === "si"
+                ? "Si"
+                : "No"
+            }
+          </span>
       </div>
 
       ${audioHtml}

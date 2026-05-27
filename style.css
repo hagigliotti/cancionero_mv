@@ -1186,3 +1186,78 @@ body.projector .clear-btn {
   margin-top: 10px;
 }
 
+/* Modal Revisado SI */
+.revisado-content {
+  max-width: 600px;
+  width: 95%;
+  max-height: 90vh;
+  overflow-y: auto;
+  text-align: left;
+}
+
+#revisadoLista {
+  margin-top: 15px;
+}
+
+.revisado-item {
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  background: rgba(0,0,0,0.08);
+}
+
+.revisado-item:hover {
+  opacity: 0.8;
+}
+
+.revisado-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#revisadoTitulo {
+  margin: 0;
+}
+
+#toggleRevisadoBtn {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  background: #122033;
+  color: white;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+#toggleRevisadoBtn:hover {
+  opacity: 0.85;
+}
+
+/* MODELES OTROS */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.modal-toggle-btn {
+  margin-left: auto;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: #38bdf8;
+  color: white;
+  font-size: 12px;
+}
+
+.modal-toggle-btn:hover {
+  opacity: 0.85;
+}

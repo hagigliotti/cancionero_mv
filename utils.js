@@ -1,4 +1,14 @@
+let revisadoModoActivo = false;
+let modalContext = "normal"; 
+
+
 // ===================== HELPERS =====================
+const tipoMap = {
+  Autor: "autor",
+  Coautor: "coautor",
+  Compositor: "compositor",
+  Traductor: "traductor"
+};
 
 // ===================== TEXT NORMALIZATION =====================
 /* A) Normalización de texto (CRÍTICO en tu app) */
@@ -19,6 +29,30 @@ function normalize(text) {
 
     // trim final
     .trim();
+}
+
+function openGenericListModal(title, list, type) {
+
+  const modal = document.getElementById("revisadoModal");
+  const cont = document.getElementById("revisadoLista");
+
+  document.querySelector(".revisado-content h2").innerText = title;
+
+  cont.innerHTML = "";
+
+  list.sort((a, b) =>
+    a.localeCompare(b, undefined, { sensitivity: "base" })
+  );
+
+  list.forEach(item => {
+    const div = document.createElement("div");
+    div.className = "revisado-item";
+    div.innerText = item;
+
+    cont.appendChild(div);
+  });
+
+  modal.style.display = "block";
 }
 
 // TITULOS DE CANCION
@@ -239,6 +273,8 @@ function renderPersonLinks(label, value) {
 
   if (!arr.length) return "";
 
+  const tipo = tipoMap[label] || "autor";
+
   const html = arr.map(person => {
 
     // NO convertir en link si no hay info real
@@ -249,22 +285,227 @@ function renderPersonLinks(label, value) {
     }
 
     // link clickable
-    return `<span class="person-link"onclick="showPersonSongs('${person.replace(/'/g, "\\'")}')">${person}</span>`;
+    return `<span class="person-link"
+      onclick="showPersonSongs('${person.replace(/'/g, "\\'")}', '${tipo}')">
+      ${person}
+    </span>`;
   }).join(", ");
 
   return `<b>${label}:</b> ${html} | `;
 }
 
+// ===================== MODAL: REVISADO SI =====================
+let revisadoEstadoActual = "si";
 
+function abrirRevisadoModal(valor) {
 
+  revisadoModoActivo = true;
+  modalContext = "revisado";
 
+  revisadoEstadoActual = valor.toLowerCase();
 
+  const todas = [...canciones, ...himnos, ...campamento];
+  const lista = [];
 
+  todas.forEach(song => {
+    const rev = (song.idiomas?.[idiomaActual]?.revisado || "").toLowerCase();
+    if (rev === valor.toLowerCase()) {
+      lista.push(song);
+    }
+  });
 
+  lista.sort((a, b) => {
+    const ta = a.idiomas?.[idiomaActual]?.titulo || "";
+    const tb = b.idiomas?.[idiomaActual]?.titulo || "";
+    return ta.localeCompare(tb);
+  });
 
+  const cont = document.getElementById("listModalLista");
+  const title = document.getElementById("listModalTitle");
+  const btn = document.getElementById("toggleRevisadoBtn");
 
+  cont.innerHTML = "";
 
+  if (!lista.length) {
+    cont.innerHTML = `<p>No hay canciones con Revisado: ${valor}</p>`;
+  } else {
+    lista.forEach(song => {
 
+      const titulo =
+        song.idiomas?.[idiomaActual]?.titulo ||
+        song.titulo_original ||
+        song.id;
+
+      const div = document.createElement("div");
+      div.className = "revisado-item";
+      div.innerHTML = `🎵 ${titulo}`;
+
+      div.onclick = () => {
+        cerrarRevisadoModal();
+        openSong(song.id);
+      };
+
+      cont.appendChild(div);
+    });
+  }
+
+  title.innerText =
+    valor.toLowerCase() === "si"
+      ? "✔️ Canciones revisadas"
+      : "❌ Canciones no revisadas";
+
+  if (btn) {
+    btn.style.display = "inline-block";
+
+    btn.innerText =
+      valor.toLowerCase() === "si"
+        ? "❌ Ver no revisadas"
+        : "✔️ Ver revisadas";
+
+    btn.onclick = () => toggleRevisadoEstado();
+  }
+
+  document.getElementById("listModal").style.display = "block";
+}
+
+function cerrarRevisadoModal() {
+  document.getElementById("listModal").style.display = "none";
+}
+
+function toggleRevisadoEstado() {
+  revisadoEstadoActual =
+    revisadoEstadoActual === "si" ? "no" : "si";
+
+  abrirRevisadoModal(revisadoEstadoActual);
+}
+
+// ===================== MODAL: OTROS =====================
+function abrirListadoModal(tipo, valor) {
+
+  modalMode.type = tipo;
+  modalMode.value = valor;
+  revisadoModoActivo = false;
+
+  const todas = [...canciones, ...himnos, ...campamento];
+  const lista = [];
+
+  todas.forEach(song => {
+
+    const s = song.idiomas?.[idiomaActual] || {};
+
+    let campo = "";
+
+    switch (tipo) {
+
+      case "autor":
+        campo = song.autor;
+        break;
+
+      case "coautor":
+        campo = song.coautor;
+        break;
+
+      case "compositor":
+        campo = song.compositor;
+        break;
+
+      case "traductor":
+        campo = s.traductor;
+        break;
+
+      case "tags":
+        campo = song.tags;
+        break;
+
+      case "ritmo":
+        campo = song.ritmo;
+        break;
+    }
+
+    const arr = normalizeField(campo).map(v => normalize(v));
+
+    if (arr.includes(normalize(valor))) {
+      lista.push(song);
+    }
+  });
+
+  // orden alfabético
+  lista.sort((a, b) =>
+    (a.idiomas?.[idiomaActual]?.titulo || "")
+      .localeCompare(b.idiomas?.[idiomaActual]?.titulo || "")
+  );
+
+  renderModalList(lista);
+}
+
+function renderModalList(lista) {
+
+  const cont = document.getElementById("listModalLista");
+  const title = document.getElementById("listModalTitle");
+  const btn = document.getElementById("toggleRevisadoBtn");
+
+  cont.innerHTML = "";
+
+  const typeLabels = {
+    autor: "Autor",
+    coautor: "Coautor",
+    compositor: "Compositor",
+    traductor: "Traductor",
+    tags: "Tags",
+    ritmo: "Ritmo"
+  };
+
+  const icons = {
+    autor: "👤",
+    coautor: "👥",
+    compositor: "🎼",
+    traductor: "🌎",
+    tags: "🏷️",
+    ritmo: "🥁"
+  };
+
+  const icon = icons[modalMode.type] || "👤";
+
+  title.innerText = `${icon} ${typeLabels[modalMode.type] || modalMode.type}: ${modalMode.value}`;
+
+  if (!lista.length) {
+    cont.innerHTML = "<p>No hay resultados.</p>";
+  }
+
+  if (btn) {
+    if (!revisadoModoActivo) {
+      btn.style.display = "none";
+    } else {
+      btn.style.display = "inline-block";
+    }
+  }
+
+  lista.forEach(song => {
+
+    const div = document.createElement("div");
+    div.className = "revisado-item";
+
+    const titulo =
+      song.idiomas?.[idiomaActual]?.titulo ||
+      song.titulo_original ||
+      song.id;
+
+    div.innerHTML = `🎵 ${titulo}`;
+
+    div.onclick = () => {
+      cerrarListModal();
+      openSong(song.id);
+    };
+
+    cont.appendChild(div);
+  });
+
+  document.getElementById("listModal").style.display = "block";
+}
+
+function cerrarListModal() {
+  document.getElementById("listModal").style.display = "none";
+}
 
 
 
