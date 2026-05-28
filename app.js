@@ -205,11 +205,7 @@ function updateAppTitle() {
       break;
   }
 
-  // Cambia el H1
-  const h1 = document.querySelector("h1");
-  if (h1) h1.innerText = titleText;
-
-  // Cambia el título del navegador
+  // SOLO título navegador
   document.title = titleText;
 }
 
@@ -449,23 +445,26 @@ function search(q) {
     // ===== IDIOMAS =====
     const matchIdiomas = Object.values(song.idiomas || {}).some(lang => {
 
-      const titulo = normalize(normalizeText(lang?.titulo));
-      const letra = normalize(
-        Array.isArray(lang?.letra)
-          ? lang.letra.join(" ")
-          : lang?.letra || ""
-      );
+    const titulos = getAllSongTitles(song);
 
-      const traductor = normalize(
-        normalizeTraductor(lang).join(" ")
-      );
+    const titulo = normalize(titulos.join(" "));
 
-      return (
-        titulo.includes(query) ||
-        letra.includes(query) ||
-        traductor.includes(query)
-      );
-    });
+    const letra = normalize(
+      Array.isArray(lang?.letra)
+        ? lang.letra.join(" ")
+        : lang?.letra || ""
+    );
+
+    const traductor = normalize(
+      normalizeTraductor(lang).join(" ")
+    );
+
+    return (
+      titulo.includes(query) ||
+      letra.includes(query) ||
+      traductor.includes(query)
+    );
+  });
 
     // ===== CAMPOS GLOBALES ========================================
     const autor = normalize(
@@ -487,6 +486,7 @@ function search(q) {
     const referencia = normalize(normalizeReferenciaBiblica(song.referencia_biblica || song.referencia).join(" "));
     const tags = normalize(normalizeField(song.tags).join(" "));
     const ritmo = normalize(normalizeRitmo(song.ritmo).join(" "));
+    const titulo2 = normalizeTitulo2(song);
 
     // ===== MATCH GLOBAL =====
     const matchGlobal =
@@ -499,7 +499,8 @@ function search(q) {
       year.includes(query) ||
       referencia.includes(query) ||
       tags.includes(query) ||
-      ritmo.includes(query);
+      ritmo.includes(query) ||
+      titulo2.includes(query);
 
     return matchIdiomas || matchGlobal;
   });
@@ -599,58 +600,46 @@ function renderAlphabet() {
   let letrasDisponibles = new Set();
 
   getDataActual().forEach(c => {
-    const titulo = c.idiomas?.[idiomaActual]?.titulo;
-    if (!titulo) return;
+    const titles = getAllSongTitles(c);
 
-    // eliminar signos iniciales
-    const tituloLimpio = titulo.replace(/^[¿¡!?\s"'“”‘’]+/, "");
+    titles.forEach(titulo => {
+      const tituloLimpio = titulo.replace(/^[¿¡!?\s"'“”‘’]+/, "");
+      const letra = normalize(tituloLimpio.charAt(0));
 
-    const letra = normalize(tituloLimpio.charAt(0));
-
-    if (/^\d/.test(letra)) {
-      letrasDisponibles.add("#");
-    } else {
-      letrasDisponibles.add(letra);
-    }
+      if (/^\d/.test(letra)) {
+        letrasDisponibles.add("#");
+      } else {
+        letrasDisponibles.add(letra);
+      }
+    });
   });
 
   let letras = Array.from(letrasDisponibles).sort();
 
-  // siempre incluir #
   if (libroActual === "himnario" && !letras.includes("#")) {
     letras.unshift("#");
   }
 
-  // siempre incluir *
   letras.unshift("*");
 
   container.innerHTML = `
     <div class="alpha-row">
-
       ${letras.map(l => {
-
         const label =
           l === "*" ? "🔤" :
           l === "#" ? "#️⃣" :
           l;
 
-        const title =
-          l === "*" ? "Lista de todas las canciones" :
-          l === "#" ? "Orden numérico" :
-          `Letra ${l}`;
-
         return `
           <button 
             class="alpha ${l === letraActiva ? "active" : ""}"
-            onclick="selectLetter('${l}')"
-            title="${title}">
+            onclick="selectLetter('${l}')">
             ${label}
           </button>
         `;
       }).join("")}
 
-      <!-- BOTÓN LIMPIAR DENTRO DEL MISMO FLUJO -->
-      <button class="alpha clear-btn" onclick="clearAll()" title="Limpiar">🧹</button>
+      <button class="alpha clear-btn" onclick="clearAll()">🧹</button>
     </div>
   `;
 }
@@ -708,67 +697,48 @@ function renderList(letter) {
 
   let data = getDataActual().filter(c => c.idiomas?.[idiomaActual]?.titulo?.trim());
 
-  // 🔤 FILTRO POR LETRA
-  if (letter && letter !== "*" && letter !== "#") {
-    data = data.filter(c => {
-      const tituloOriginal = c.idiomas?.[idiomaActual]?.titulo || "";
-      const tituloLimpio = tituloOriginal.replace(/^[¿¡!?\s"'“”‘’]+/, "");
-      const titulo = normalize(tituloLimpio);
+  let expanded = [];
 
+  data.forEach(song => {
+    const titles = getAllSongTitles(song);
+
+    titles.forEach(t => {
+      expanded.push({
+        song,
+        displayTitle: t
+      });
+    });
+  });
+
+  if (letter && letter !== "*" && letter !== "#") {
+    expanded = expanded.filter(item => {
+      const titulo = normalize(item.displayTitle.replace(/^[¿¡!?\s"'“”‘’]+/, ""));
       return normalize(titulo.charAt(0)) === letter;
     });
   }
 
-  // 🔢 FILTRO ESPECIAL "#": títulos con números en cualquier parte
   if (letter === "#") {
-    // SOLO para himnario
     if (libroActual === "himnario") {
-      // mostrar únicamente canciones con numero_himno
-      data = data.filter(c => getNumeroHimno(c));
+      expanded = expanded.filter(item => getNumeroHimno(item.song));
     } else {
-      // comportamiento normal para cancionero
-      data = data.filter(c => {
-        const titulo = c.idiomas?.[idiomaActual]?.titulo || "";
-        return /\d/.test(titulo);
-      });
+      expanded = expanded.filter(item => /\d/.test(item.displayTitle));
     }
   }
 
-  // 🔢 ORDEN NUMÉRICO SOLO PARA #
-  if (libroActual === "himnario" && letter === "#") {
-    data.sort((a, b) =>
-      (Number(getNumeroHimno(a)) || 0) -
-      (Number(getNumeroHimno(b)) || 0)
-    );
-  } else {
-    data = sortByTitle(data);
-  }
+  list.innerHTML = expanded.map(item => {
+    const song = item.song;
+    const titulo = item.displayTitle;
 
-  list.innerHTML = data.map(c => {
-    const titulo = c.idiomas?.[idiomaActual]?.titulo;
-    const num = getNumeroHimno ? getNumeroHimno(c) : "";
-    const flags = getAvailableFlags(c);
+    const num = getNumeroHimno(song);
+    const flags = getAvailableFlags(song);
 
-    let baseTitle = "";
+    let baseTitle = libroActual === "himnario"
+      ? `${num ? num + " - " : ""}${titulo}`
+      : titulo;
 
-   const isCorito =
-    normalize(c.corito) === "SI" ||
-    c.corito === true ||
-    c.corito === "Si";
-
-  const suffix =
-  (libroActual === "cancionero" && isCorito)
-    ? " (HA)"
-    : "";
-
-if (libroActual === "himnario") {
-  baseTitle = `${num ? num + " - " : ""}${titulo}`;
-} else {
-  baseTitle = `${titulo}${suffix}`;
-}
     return `
-      <li onclick="openSong('${c.id}')">
-        <div style="display:flex; justify-content:space-between; gap:10px;">
+      <li onclick="openSong('${song.id}')">
+        <div style="display:flex; justify-content:space-between;">
           <span>${baseTitle}</span>
           <span style="opacity:0.7; font-size:14px;">${flags}</span>
         </div>
@@ -832,10 +802,14 @@ function renderChordLine(line) {
   return `<div class="song-line">${output}</div>`;
 }
 
+
 // ===================== OPEN SONG =====================
 function openSong(id) {
   const allSongs = [...canciones, ...himnos, ...campamento];
-  const song = allSongs.find(c => c.id === id);
+  const song = allSongs.find(c =>
+    c.id === id ||
+    c.slug === id
+  );
 
   if (!song) {
     document.getElementById("contenido").innerHTML =
@@ -859,7 +833,28 @@ function openSong(id) {
     updateAppTitle();
   }
 
-  const s = song?.idiomas?.[idiomaActual];
+  let s = song?.idiomas?.[idiomaActual];
+
+  // si el idioma actual no existe en la canción
+  if (!s) {
+
+    // buscar primer idioma disponible
+    const langs = Object.keys(song.idiomas || {});
+
+    if (langs.length > 0) {
+      idiomaActual = langs[0];
+
+      // sincronizar selects
+      const idiomaSelect = document.getElementById("idioma");
+      const menuIdioma = document.getElementById("menuIdioma");
+
+      if (idiomaSelect) idiomaSelect.value = idiomaActual;
+      if (menuIdioma) menuIdioma.value = idiomaActual;
+
+      s = song.idiomas[idiomaActual];
+    }
+  }
+
   const nota = normalizeField(s.nota)
     .map(n => (n || "").trim())
     .filter(Boolean)
@@ -894,19 +889,16 @@ function openSong(id) {
   const tituloFinal = `${tituloBase}${suffixHA}`;
   const audioHtml = renderAudioLink(song, s);
   const referencias = normalizeReferenciaBiblica(song.referencia_biblica || song.referencia);
+  const titulo2 = normalizeArrayField(song.idiomas?.[idiomaActual]?.titulo2 || song.titulo2);
   const meta = `
     <div class="meta">
 
       <div>
-        <b>Original:</b> ${
-          normalizeArrayField(song.titulo_original).join(", ")
-        }
+        <b>Original:</b> ${normalizeField(song.titulo_original).join(", ")}
 
         ${
-          normalizeArrayField(song.titulo2).length
-            ? ` | <b>Duplicados:</b> ${normalizeArrayField(song.titulo2)
-                .map(t => `€ ${t}`)
-                .join(", ")}`
+          titulo2.length
+            ? ` | <b>Otros títulos:</b> ${titulo2.join(", ")}`
             : ""
         }
       </div>
@@ -954,10 +946,8 @@ function openSong(id) {
         } |
         <b>Revisado:</b>
           <span
-            onclick="abrirRevisadoModal('${
-              (song.idiomas?.[idiomaActual]?.revisado || "No")
-            }')"
-            style="cursor:pointer; color:#38bdf8;"
+            onclick="abrirRevisadoModal('...')"
+            style="cursor:pointer; color:#38bdf8; font-weight:bold;"
           >
             ${
               (song.idiomas?.[idiomaActual]?.revisado || "").toLowerCase() === "si"
