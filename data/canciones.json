@@ -1,7 +1,7 @@
 [
 { "_commentA": "https://www.recursos-biblicos.com/2013/07/50-coritos-adventistas-muy-conocidos-parte-1.html" },
 
-{ "_comment1": "LETRA A ---------------------------------------------------------------------------------------------------------------------------------------    LETRA A" },
+{ "_comment1": "LETRA A • -----------------------------------------------------------------------------------------------    LETRA A" },
 
 { "id": "a_jesus_dale_todo",
   "titulo_original": ["Give Them All to Jesús"],
@@ -18,7 +18,7 @@
   "idiomas": {
     "es": {
       "titulo": ["A Jesús dale todo"],
-      "titulo2": ["Arco iris", "Has corrido"],
+      "titulo2": ["Arco iris (aka)", "Has corrido (aka)"],
       "audio_url": "https://open.spotify.com/intl-es/track/1GdcEMGXs8TKht3jGNwU2m?si=2564f95694b34dc7",
       "traductor": ["-"],
       "partitura": "No",
@@ -52,6 +52,7 @@
     },
     "en": {
       "titulo": ["Give Them All to Jesús"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/5vpRPI8gJJAewj8LHwDmQP?si=17171e6509e74b79",
       "traductor": ["-"],
       "partitura": "No",
@@ -100,6 +101,7 @@
   "idiomas": {
     "es": {
       "titulo": ["A ti me rindo"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/4CpXovlU8Md47zl5fNt6WR?si=8ff2fcdafe9f44ad",
       "traductor": ["Hillsong Worship"],
       "partitura": "No",
@@ -179,6 +181,7 @@
     },
     "pt": {
       "titulo": ["Eis-me Aqui (Rendido Estou)"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-it/track/5t9qLUojvUs3dLoJ65K16m",
       "traductor": ["Aline Barros", "Hillsong em Português"],
       "partitura": "No",
@@ -207,6 +210,7 @@
     },
     "it": {
       "titulo": ["Io mi arrendo (*)"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-it/track/7dCIPGbgjse1CkEX1aEsEt",
       "traductor": ["Hillsong in Italiano"],
       "partitura": "No",
@@ -245,6 +249,7 @@
   "idiomas": {
     "es": {
       "titulo": ["A ti Señor"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/1pvS9HylBSoYdlteJhUZDd?si=7326e73e72004a44",
       "traductor": ["Desconocido"],
       "partitura": "No",
@@ -266,6 +271,7 @@
     },
     "en": {
       "titulo": ["I love you, Lord"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/3mIyisrMRbIpsInWOd3JTd?si=257ef60816d14364",
       "traductor": ["-"],
       "partitura": "No",
@@ -321,6 +327,7 @@
   "idiomas": {
     "es": { 
       "titulo": ["Abba (Nunca falla)"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
       "traductor": ["-"],
       "partitura": "No",
@@ -372,6 +379,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Abre mis ojos, oh Cristo"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/search/abre%20mis%20ojos%20jesus%20quiero%20verte",
       "traductor": ["Desconocido"],
       "partitura": "No",
@@ -396,6 +404,7 @@
     },
     "en": {
       "titulo": ["Open the eyes of my heart"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
       "traductor": ["-"],
       "partitura": "No",
@@ -420,6 +429,7 @@
     },
     "pt": {
       "titulo": ["Abre os olhos do meu coração"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["David Quinlan"],
       "partitura": "No",
@@ -459,6 +469,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Adentro, afuera, arriba, abajo"],
+      "titulo2": [""],
       "audio_url": "https://www.youtube.com/watch?v=oPimn2alRvI&t=14s",
       "traductor": [""],
       "partitura": "No",
@@ -496,6 +507,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Agnus dei"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/6TCTLO5PX5MJa5KN1Asibl?si=8be077456f7f4e66",
       "traductor": ["Desconocido"],
       "partitura": "No",
@@ -514,6 +526,7 @@
     },
     "en": {
       "titulo": ["Agnus Dei"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/1N9SysNAP8j4wbAIHzlM9m?si=6697f706725e4098",
       "traductor": ["-"],
       "partitura": "No",
@@ -532,6 +545,7 @@
     },
     "pt": {
       "titulo": ["Agnus Dei"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/16hnXXqWrwbQGoNtvLx72r?si=c5712a753b5a449b",
       "traductor": ["David Quinlan"],
       "partitura": "No",
@@ -550,6 +564,7 @@
     },
     "it": {
       "titulo": ["Agnus Dei"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["RNS"],
       "partitura": "No",
@@ -583,6 +598,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Al comenzar la semana"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/5MJ8DFLauPlvNTNGlbJZZx?si=dedd8715d6264a6a",
       "traductor": ["-"],
       "partitura": "No",
@@ -612,6 +628,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Al encuentro de Jesús"],
+      "titulo2": [""],
       "audio_url": "https://www.youtube.com/watch?v=UVuli_xt5bs&list=RDUVuli_xt5bs&start_radio=1",
       "traductor": ["-"],
       "partitura": "No",
@@ -641,6 +658,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Al lado de Jesús"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/4HtVl7sQxvG8d1d5snMZEy?si=d4301577726d4e8d",
       "traductor": ["-"],
       "partitura": "No",
@@ -683,6 +701,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Al son del cocodrilo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -761,6 +780,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Alabaré"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/10fMN6ZyntPNkP46uBaqB1?si=a50bbc0362864e6a",
       "traductor": ["-"],
       "partitura": "No",
@@ -795,6 +815,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Alegre voy cantando"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/2pNw22LMg6REMr9MAMvwej?si=f30689be90e54b41",
       "traductor": ["-"],
       "partitura": "No",
@@ -815,6 +836,7 @@
     },
     "pt": {
       "titulo": ["Alegre vou cantando"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["Desconocido"],
       "partitura": "No",
@@ -850,6 +872,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Allá en el monte Horeb"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
@@ -886,6 +909,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Alma misionera"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/6f7mT8i8Yg4ZwVAkTCq0D7?si=c4133db48e4444e7",
       "traductor": ["-"],
       "partitura": "No",
@@ -924,6 +948,7 @@
   "idiomas": {
     "es": {
       "titulo": ["¡Alto, escúchame!"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/4bOQA47v0L3S4OSxOyoI5J?si=410beb6055b64bcf",
       "traductor": ["-"],
       "partitura": "No",
@@ -959,6 +984,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Amigo tengo que me ama"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
@@ -993,6 +1019,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Amigo, ¿amas a Cristo?"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -1030,6 +1057,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Amigos de esperanza"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -1113,6 +1141,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Amor sin condición"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/4grfKR7wfoHZeWjb9QjTTE?si=3cdc08de1ea94e6c",
       "traductor": ["Abels Worship"],
       "partitura": "No",
@@ -1162,6 +1191,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Amor tan grande"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -1187,6 +1217,7 @@
     },
     "pt": {
       "titulo": ["Amor tão grande"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["Desconocido"],
       "partitura": "No",
@@ -1222,6 +1253,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Amor, amor"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/4lUyqsYCCMcmkqAnlOhjRb?si=6c0cc53fc6ae495e",
       "traductor": ["-"],
       "partitura": "No",
@@ -1254,6 +1286,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Apasionado por Jesús"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -1329,6 +1362,7 @@
     },
     "en": {
       "titulo": ["Waymaker"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/0hLsDRLsfvwExXMBeDS53k?si=f0e267a0ab5f45b7",
       "traductor": ["-"],
       "partitura": "No",
@@ -1349,6 +1383,7 @@
     },
     "it": {
       "titulo": ["Aprirai una via"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/7t8fxi06k76NjobLDOMWn8?si=e0ce1eb52592494d",
       "traductor": ["Desconocido"],
       "partitura": "No",
@@ -1385,6 +1420,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Arroyo ancho"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -1425,6 +1461,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Avancemos"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/2K57VJVpndg6QUOLqnoI8D?si=879f2b432ef04516",
       "traductor": ["-"],
       "partitura": "No",
@@ -1449,7 +1486,7 @@
   }
 },
 
-{ "_comment2": "LETRA B ---------------------------------------------------------------------------------------------------------------------------------------    LETRA B" },
+{ "_comment2": "LETRA B • -----------------------------------------------------------------------------------------------    LETRA B" },
 { "id": "bienvenidos_a_adorar",
   "titulo_original": ["Desconocido"],
   "autor": ["Joel Barrios"],
@@ -1465,6 +1502,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Bienvenidos a adorar"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -1498,6 +1536,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Blanqueado"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -1538,6 +1577,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Brilla en el sitio donde estés"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -1591,6 +1631,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Brilla en mí"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -1627,6 +1668,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Brilla, Jesús"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -1654,6 +1696,7 @@
     },
     "en": {
       "titulo": ["Shine, Jesús, shine"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -1690,6 +1733,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Brillar por ti"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -1740,6 +1784,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Buscad primero"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],  
       "partitura": "No",
@@ -1775,6 +1820,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Búscale hoy"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],   
       "partitura": "No",
@@ -1804,6 +1850,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Buscas"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],  
       "partitura": "No",
@@ -1851,6 +1898,7 @@
   "idiomas": {
     "en": {
       "titulo": ["Blessed Be Your Name"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -1911,7 +1959,7 @@
   }
 },
 
-{ "_comment3": "LETRA C ---------------------------------------------------------------------------------------------------------------------------------------    LETRA C" },
+{ "_comment3": "LETRA C • -----------------------------------------------------------------------------------------------    LETRA C" },
 
 { "id": "cabeza_hombros_rodillas_y_pies",
   "titulo_original": ["Desconocido"],
@@ -1928,6 +1976,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cabeza, hombros, rodillas y pies"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
@@ -1962,6 +2011,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cada día con Cristo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -1994,6 +2044,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cada día con Dios"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -2038,6 +2089,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cada día de mañana"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -2073,6 +2125,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cada nuevo día"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"], 
       "partitura": "No",
@@ -2116,6 +2169,7 @@
     },
     "pt": {
       "titulo": ["Cada novo dia"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -2152,6 +2206,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Caminando voy"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -2194,7 +2249,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Caminando, caminando"],
-      "titulo2": ["Gozándome yo voy"],
+      "titulo2": ["Gozándome yo voy (aka)"],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -2240,6 +2295,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cantad a Dios"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -2268,6 +2324,7 @@
     },
     "pt": {
       "titulo": ["Louvai a Deus"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"], 
       "partitura": "No",
@@ -2294,6 +2351,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cantaré de tu amor"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],         
       "partitura": "No",
@@ -2340,6 +2398,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cantaré de tu amor por siempre"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -2361,6 +2420,7 @@
     },
     "en": {
       "titulo": ["I could sing of your love forever"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"], 
       "partitura": "No",
@@ -2389,6 +2449,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Canto de alabanza"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -2419,6 +2480,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Canto de alegría"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"], 
       "partitura": "No",
@@ -2444,6 +2506,7 @@
     },
     "en": {
       "titulo": ["Joyfully we sing here of the Savior's grace"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -2473,6 +2536,7 @@
   "idiomas": {
     "es": {
       "titulo": ["¡Celebrad a Cristo!"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -2503,6 +2567,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Celebrar y cantar"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"], 
       "partitura": "No",
@@ -2535,6 +2600,7 @@
     },
     "pt": {
       "titulo": ["Celebrar e cantar"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"], 
       "partitura": "No",
@@ -2565,6 +2631,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cerca de Jesús"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"], 
       "partitura": "No",
@@ -2583,6 +2650,7 @@
     },
     "en": {
       "titulo": ["Draw me close to you"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],  
       "partitura": "No",
@@ -2612,6 +2680,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Como el ciervo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"], 
       "partitura": "No",
@@ -2637,6 +2706,7 @@
     },
     "en": {
       "titulo": ["As the deer"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"], 
       "partitura": "No",
@@ -2672,6 +2742,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Como las olas"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -2704,6 +2775,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cómo no cantar"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -2756,6 +2828,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Con Cristo en mi alma"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -2788,6 +2861,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Con Cristo, con Cristo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -2827,6 +2901,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Con Jesús soy feliz"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -2867,6 +2942,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Con sólo una chispa"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -2906,6 +2982,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Conmigo estás"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -2956,6 +3033,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Crecerás"],
+      "titulo2": [""],
       "audio_url": "https://www.youtube.com/watch?v=IBpfpUr6kIA",
       "traductor": [""],
       "partitura": "No",
@@ -3014,6 +3092,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cristo ama niños como yo (*)"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -3063,6 +3142,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cristo joven"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -3101,6 +3181,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cristo me ama"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["Huberto M. Fassett"],
       "partitura": "No",
@@ -3135,6 +3216,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cristo me ama (infantil)"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["Huberto M. Fassett"],
       "partitura": "No",
@@ -3172,6 +3254,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cristo manda que subamos más"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -3205,6 +3288,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cristo rompe las cadenas"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -3239,6 +3323,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cristo un año más te dio"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -3268,6 +3353,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cual la quietud de un arroyo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -3307,6 +3393,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cuán grande eres, Dios"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -3346,6 +3433,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cuando Cristo vino a mi corazón"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -3386,6 +3474,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cuando el pueblo de Dios ora"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -3425,6 +3514,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cuando empieza el santo sábado"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/5MJ8DFLauPlvNTNGlbJZZx?si=dedd8715d6264a6a",
       "traductor": ["-"],
       "partitura": "No",
@@ -3454,6 +3544,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cuando miro los claros cielos"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -3489,6 +3580,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Cuenta conmigo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -3529,6 +3621,7 @@
   "idiomas": {
     "it": {
       "titulo": ["Camminerò"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -3580,6 +3673,7 @@
   "idiomas": {
     "it": {
       "titulo": ["Cristo tornerà"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -3632,6 +3726,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Salmo 133: Cuan bueno cuan maravilloso es (*)"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
@@ -3655,7 +3750,7 @@
   }
 },
 
-{ "_comment4": "LETRA D ---------------------------------------------------------------------------------------------------------------------------------------    LETRA D" },
+{ "_comment4": "LETRA D • -----------------------------------------------------------------------------------------------    LETRA D" },
 { "id": "da una_sonrisa",
   "titulo_original": ["Desconocido"],
   "autor": ["Desconocido"],
@@ -3671,6 +3766,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Da una sonrisa"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -3708,6 +3804,7 @@
   "idiomas": {
     "es": {
       "titulo": ["10.000 razones (Bendice al Señor)"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/0B0XKO9t9WJjUP7qxwTC8c?si=42ba04e594f14030",
       "traductor": ["-"],
       "partitura": "No",
@@ -3760,6 +3857,7 @@
     },
     "en": {
       "titulo": ["10,000 Reasons (Bless the Lord)"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/0fxpHpK3aw2nFWII6yveDD?si=5d045794a14a4247",
       "traductor": ["-"],
       "partitura": "No",
@@ -3829,6 +3927,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Da una sonrisa"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -3864,6 +3963,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Dad gloria al Señor"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -3901,6 +4001,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Dad gracias"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -3937,6 +4038,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Dame a Cristo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -3979,6 +4081,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Dame fe"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4044,6 +4147,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Dame un nuevo corazón"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4081,6 +4185,7 @@
   "idiomas": {
     "es": {
       "titulo": ["De gloria en gloria"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4118,6 +4223,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Demos gracias al Señor"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4157,6 +4263,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Descansar"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4208,6 +4315,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Después del río"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4258,6 +4366,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Digno eres"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4297,6 +4406,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Digno es el Señor"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4338,6 +4448,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Dios, alzamos hoy tu nombre"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4372,6 +4483,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Dios bueno es"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4405,6 +4517,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Dios de Israel"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4439,6 +4552,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Dios del cielo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4488,6 +4602,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Dios es nuestro amparo y fortaleza"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4528,6 +4643,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Dios está aquí"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4557,6 +4673,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Dios no se cansa de amar"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4620,6 +4737,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Dios, que tu luz"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4662,6 +4780,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Dios tú sabes que te amo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
@@ -4703,6 +4822,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Dulce oración"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4743,7 +4863,7 @@
   }
 },
 
-{ "_comment5": "LETRA E ---------------------------------------------------------------------------------------------------------------------------------------    LETRA E" },
+{ "_comment5": "LETRA E • -----------------------------------------------------------------------------------------------    LETRA E" },
 
 { "id": "en_tus_manos_rotas_vi",
   "titulo_original": ["En tus manos rotas vi"],
@@ -4760,6 +4880,7 @@
   "idiomas": {
     "es": {
       "titulo": ["En tus manos rotas vi"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4803,6 +4924,7 @@
   "idiomas": {
     "es": {
       "titulo": ["El hombre que anduvo en Galilea"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4839,6 +4961,7 @@
   "idiomas": {
     "es": {
       "titulo": ["El amor de Dios es maravilloso"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4912,6 +5035,7 @@
   "idiomas": {
     "es": {
       "titulo": ["El amor de Cristo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4946,6 +5070,7 @@
   "idiomas": {
     "es": {
       "titulo": ["El corazón de la adoración"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -4988,6 +5113,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Él es Jehová el Señor"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -5027,6 +5153,7 @@
   "idiomas": {
     "es": {
       "titulo": ["El mar se irá"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -5077,6 +5204,7 @@
   "idiomas": {
     "es": {
       "titulo": ["El mejor lugar del mundo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -5126,6 +5254,7 @@
   "idiomas": {
     "es": {
       "titulo": ["El poder de la cruz"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -5158,6 +5287,7 @@
   "idiomas": {
     "es": {
       "titulo": ["El Salvador es mi amigo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -5222,6 +5352,7 @@
   "idiomas": {
     "es": {
       "titulo": ["En mi alma suena un cantar"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -5264,6 +5395,7 @@
   "idiomas": {
     "es": {
       "titulo": ["En mi caminar"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -5313,6 +5445,7 @@
   "idiomas": {
     "es": {
       "titulo": ["En momentos así"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -5347,6 +5480,7 @@
   "idiomas": {
     "es": {
       "titulo": ["En tus manos me entrego"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -5388,6 +5522,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Enséñame a servir"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -5452,6 +5587,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Enteramente fiel"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -5499,6 +5635,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Entrega total"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -5559,6 +5696,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Eres"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -5623,6 +5761,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Eres mi refugio"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -5642,6 +5781,7 @@
     },
     "pt": {
       "titulo": ["És o meu refúgio"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -5676,6 +5816,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Eres mi respirar"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -5709,6 +5850,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Eres mi todo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -5753,6 +5895,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Eres Tú"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -5797,6 +5940,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Es exaltado"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -5831,6 +5975,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Espíritu Santo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -5868,6 +6013,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Estamos de fiesta con Jesús"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
@@ -5912,6 +6058,7 @@
   "idiomas": {
     "es": {
       "titulo": ["¿Estamos tristes?"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
@@ -5948,6 +6095,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Éste es mi deseo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -5982,6 +6130,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Estoy en paz"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -6028,6 +6177,7 @@
   "idiomas": {
     "it": {
       "titulo": ["È bello stare qui"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -6071,6 +6221,7 @@
   "idiomas": {
     "it": {
       "titulo": ["E ci sei tu"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -6125,6 +6276,7 @@
   "idiomas": {
     "it": {
       "titulo": ["E da ora in poi"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -6198,6 +6350,7 @@
   "idiomas": {
     "it": {
       "titulo": ["Eccomi"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -6257,6 +6410,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Él puede (*)"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -6283,7 +6437,7 @@
   }
 },
 
-{ "_comment6": "LETRA F ---------------------------------------------------------------------------------------------------------------------------------------    LETRA F" },
+{ "_comment6": "LETRA F • -----------------------------------------------------------------------------------------------    LETRA F" },
 { "id": "fe_en_fuego",
   "titulo_original": ["Faith on fire"],
   "autor": ["Desconocido"],
@@ -6299,6 +6453,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Fe en fuego"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -6333,6 +6488,7 @@
     },
     "en": {
       "titulo": ["Faith on fire"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -6384,6 +6540,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Fe más fe"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
@@ -6418,6 +6575,7 @@
   "idiomas": {
     "it": {
       "titulo": ["Fino alla fine"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -6472,6 +6630,7 @@
   "idiomas": {
     "it": {
       "titulo": ["Fiume, fiume"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -6519,6 +6678,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Fe no es sólo decirlo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -6561,6 +6721,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Fiel en toda prueba"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -6616,6 +6777,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Frágil embarcación"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -6658,6 +6820,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Fuente de esperanza"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -6685,6 +6848,7 @@
     },
     "pt": {
       "titulo": ["Fonte de esperança"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -6721,6 +6885,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Fuertes"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -6755,7 +6920,7 @@
   }
 },
 
-{ "_comment7": "LETRA G ---------------------------------------------------------------------------------------------------------------------------------------    LETRA G" },
+{ "_comment7": "LETRA G • -----------------------------------------------------------------------------------------------    LETRA G" },
 { "id": "gente_come_noi",
   "titulo_original": ["GENTE COME NOI"],
   "autor": ["Desconocido"],
@@ -6771,6 +6936,7 @@
   "idiomas": {
     "it": {
       "titulo": ["GENTE COME NOI"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -6841,6 +7007,7 @@
   "idiomas": {
     "it": {
       "titulo": ["GLI UOMINI CHE SOGNANO"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -6893,6 +7060,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Fuente de esperanza"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -6918,6 +7086,7 @@
     },
     "pt": {
       "titulo": ["Fonte de esperança"],
+      "titulo2": [""],
       "audio_url": "",
       "letra": [
         "[D]Eu posso ver tanta [A]gente que tem [F#]sede",
@@ -6956,6 +7125,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Generación esperanza"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -6998,6 +7168,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Glorifico al Señor (*)"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -7018,7 +7189,7 @@
   }
 },
 
-{ "_comment8": "LETRA H ---------------------------------------------------------------------------------------------------------------------------------------    LETRA H" },
+{ "_comment8": "LETRA H • -----------------------------------------------------------------------------------------------    LETRA H" },
 { "id": "himno_aventureros",
   "titulo_original": ["Desconocido"],
   "autor": ["Wanderson Paiva"],
@@ -7034,6 +7205,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Himno de los Aventureros"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "letra": [
@@ -7068,6 +7240,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Himno de los Conquistadores"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["Isolina Waldvogel"],
       "letra": [
@@ -7084,6 +7257,7 @@
     },
     "en": {
       "titulo": ["Pathfinder Song"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -7102,6 +7276,7 @@
     },
     "pt": {
       "titulo": ["Hino dos Desbravadores"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -7122,6 +7297,7 @@
     },
     "fr": {
       "titulo": ["Nous sommes les Explorateurs"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -7155,6 +7331,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Himno de los Guías Mayores"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
@@ -7188,6 +7365,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Hablar con Dios"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "data/partituras/hablar_con_dios.pdf",
@@ -7220,6 +7398,7 @@
     },
     "it": {
       "titulo": ["NELLA PREGHIERA"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -7273,6 +7452,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Hay mil millones de estrellas"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -7312,6 +7492,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Hay una iglesia en el bosque"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
@@ -7347,6 +7528,7 @@
   "idiomas": {
     "es": {
       "titulo": ["He decidido seguir a Cristo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -7391,6 +7573,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Heme aquí"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -7437,6 +7620,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Hijo de Dios"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -7482,6 +7666,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Hoy aquí"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -7502,7 +7687,7 @@
   }
 },
 
-{ "_comment9": "LETRA I ---------------------------------------------------------------------------------------------------------------------------------------    LETRA I" },
+{ "_comment9": "LETRA I • -----------------------------------------------------------------------------------------------    LETRA I" },
 { "id": "io_e_te_completo",
   "titulo_original": ["IO E TE"],
   "autor": ["Desconocido"],
@@ -7517,6 +7702,7 @@
   "idiomas": {
     "it": {
       "titulo": ["IO E TE"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -7617,6 +7803,7 @@
   "idiomas": {
     "it": {
       "titulo": ["IO TI DONO IL MIO CUOR"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -7647,7 +7834,7 @@
   }
 },
 
-{ "_comment10": "LETRA J ---------------------------------------------------------------------------------------------------------------------------------------    LETRA J"  },
+{ "_comment10": "LETRA J • -----------------------------------------------------------------------------------------------    LETRA J"  },
 { "id": "jesucristo_basta",
   "titulo_original": ["Jesucristo basta"],
   "autor": ["Steven Richards", "Lluvia Richards"],
@@ -7667,6 +7854,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Jesucristo basta"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -7722,6 +7910,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Jesús es mi vida"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -7768,6 +7957,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Jesús es mi luz"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -7811,6 +8001,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Jesús mi guía es"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -7849,6 +8040,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Jesús te ama"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -7895,6 +8087,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Jesús, tú eres mi alegría"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -7934,6 +8127,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Jesús, la montaña y yo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -7975,6 +8169,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Jesús me pastorea"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -7995,9 +8190,9 @@
   }
 },
 
-{ "_comment11": "LETRA K ---------------------------------------------------------------------------------------------------------------------------------------    LETRA K"  },
+{ "_comment11": "LETRA K • -----------------------------------------------------------------------------------------------    LETRA K"  },
 
-{ "_comment12": "LETRA L ---------------------------------------------------------------------------------------------------------------------------------------    LETRA L"  },
+{ "_comment12": "LETRA L • -----------------------------------------------------------------------------------------------    LETRA L"  },
 
 { "id": "lavame_en_tu_sangre",
   "titulo_original": ["Desconocido"],
@@ -8014,6 +8209,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Lávame en tu sangre"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -8048,6 +8244,7 @@
   "idiomas": {
     "it": {
       "titulo": ["LA GRAZIA SUA (MIGHTY TO SAVE)"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -8107,6 +8304,7 @@
   "idiomas": {
     "it": {
       "titulo": ["LINFA E VITA"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -8196,6 +8394,7 @@
   "idiomas": {
     "es": {
       "titulo": ["La alegría"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -8250,6 +8449,7 @@
   "idiomas": {
     "es": {
       "titulo": ["La barca"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -8312,6 +8512,7 @@
   "idiomas": {
     "es": {
       "titulo": ["La bendición"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -8373,6 +8574,7 @@
   "idiomas": {
     "es": {
       "titulo": ["La mañana gloriosa"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -8419,6 +8621,7 @@
   "idiomas": {
     "es": {
       "titulo": ["La sangre de Cristo Jesús"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -8457,6 +8660,7 @@
   "idiomas": {
     "es": {
       "titulo": ["La única esperanza"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -8497,6 +8701,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Lado a lado"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -8543,6 +8748,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Levanto la cruz"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -8596,6 +8802,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Llegó la hora"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -8652,6 +8859,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Llévame a la cruz"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -8680,7 +8888,7 @@
   }
 },
 
-{ "_comment13": "LETRA M ---------------------------------------------------------------------------------------------------------------------------------------    LETRA M"  },
+{ "_comment13": "LETRA M • -----------------------------------------------------------------------------------------------    LETRA M"  },
 { "id": "miren_que_linda_es_la_vida",
   "titulo_original": ["Desconocido"],
   "autor": ["Desconocido"],
@@ -8696,6 +8904,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Miren qué linda es la vida"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -8739,6 +8948,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Majestuoso Dios"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -8782,6 +8992,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Maranata"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -8832,6 +9043,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Maranatha"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -8897,6 +9109,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Maravillas"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -8946,6 +9159,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Maravilloso Dios"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -8997,7 +9211,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["txt: Josué 6:30"],
+  "referencia_biblica": ["Josué 6:30"],
   "tags": [
     
     "Cristiano",
@@ -9007,6 +9221,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Marchando voy"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -9064,6 +9279,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Me siento bien"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -9102,6 +9318,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Mensajero"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "data/partituras/mensajero.pdf",
@@ -9147,6 +9364,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Mi Cristo me salva"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -9191,6 +9409,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Mi Dios es tan grande"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -9235,6 +9454,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Mi Dios puede salvar"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -9290,6 +9510,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Mi Dios, supremo Rey"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -9334,6 +9555,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Mi farol"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -9397,6 +9619,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Mi pastor"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -9451,6 +9674,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Mi reino"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -9495,6 +9719,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Mi roca"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -9548,6 +9773,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Mi todo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -9611,6 +9837,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Mirad cual amor"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -9629,7 +9856,7 @@
   }
 },
 
-{ "_comment14": "LETRA N ---------------------------------------------------------------------------------------------------------------------------------------    LETRA N"  },
+{ "_comment14": "LETRA N • -----------------------------------------------------------------------------------------------    LETRA N"  },
 
 { "id": "no_me_siento_solo",
   "titulo_original": ["Desconocido"],
@@ -9654,6 +9881,7 @@
   "idiomas": {
     "es": {
       "titulo": ["No me siento solo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -9700,6 +9928,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Nace en mí"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -9739,6 +9968,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Necesario"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -9792,6 +10022,7 @@
   "idiomas": {
     "es": {
       "titulo": ["No existe bien para mi"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -9835,6 +10066,7 @@
   "idiomas": {
     "es": {
       "titulo": ["No importa de donde tu vengas"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -9882,6 +10114,7 @@
   "idiomas": {
     "es": {
       "titulo": ["No me olvidé de ti"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -9929,6 +10162,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Nunca estés desanimado"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -9969,6 +10203,7 @@
   "idiomas": {
     "it": {
       "titulo": ["NON CI LASCEREMO MAI"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -10020,6 +10255,7 @@
   "idiomas": {
     "it": {
       "titulo": ["NULLA È COME PRIMA"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -10098,6 +10334,7 @@
   "idiomas": {
     "es": {
       "titulo": ["No hay Dios tan grande como tú"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -10122,11 +10359,11 @@
   }
 },
 
-{ "_comment15": "LETRA Ñ ---------------------------------------------------------------------------------------------------------------------------------------    LETRA Ñ"  },
+{ "_comment15": "LETRA Ñ • -----------------------------------------------------------------------------------------------    LETRA Ñ"  },
 
 
 
-{ "_comment16": "LETRA O ---------------------------------------------------------------------------------------------------------------------------------------    LETRA O"  },
+{ "_comment16": "LETRA O • -----------------------------------------------------------------------------------------------    LETRA O"  },
 { "id": "oh_dios_crea_en_mi",
   "titulo_original": ["Desconocido"],
   "autor": ["Desconocido"],
@@ -10150,6 +10387,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Oh Dios crea en mí"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -10196,6 +10434,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Oba oba"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -10251,6 +10490,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Océanos"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -10306,6 +10546,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Oh, amor de Dios"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -10340,7 +10581,7 @@
   }
 },
 
-{ "_comment17": "LETRA P ---------------------------------------------------------------------------------------------------------------------------------------    LETRA P"  },
+{ "_comment17": "LETRA P • -----------------------------------------------------------------------------------------------    LETRA P"  },
 
 { "id": "padre_de_amor",
   "titulo_original": ["Desconocido"],
@@ -10362,6 +10603,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Padre de amor"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -10406,6 +10648,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Padre nuestro"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -10449,6 +10692,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Padre, yo te adoro"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -10490,6 +10734,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Paso a paso"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -10540,6 +10785,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Paz en la tormenta"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -10585,6 +10831,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Paz"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -10620,6 +10867,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Permanece en mi"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -10661,6 +10909,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Pescador de hombres"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -10713,6 +10962,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Poema de salvación"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -10752,6 +11002,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Pon tus manos en las manos del Señor"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -10799,6 +11050,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Por encima de todo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -10844,6 +11096,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Por eso alabamos"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -10897,6 +11150,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Por eso le amo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -10943,6 +11197,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Por tu gracia y amor"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -10989,6 +11244,7 @@
   "idiomas": {
     "it": {
       "titulo": ["PARLARE CON TE"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -11033,6 +11289,7 @@
   "idiomas": {
     "it": {
       "titulo": ["PIÙ CHE VINCITORI"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -11116,6 +11373,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Príncipe de paz"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -11147,6 +11405,7 @@
     },
     "en": {
       "titulo": ["PRINCE OF PEACE"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -11224,6 +11483,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Promesa"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -11267,6 +11527,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Prometo fidelidad a la Biblia"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -11291,7 +11552,7 @@
   }
 },
 
-{ "_comment18": "LETRA Q ---------------------------------------------------------------------------------------------------------------------------------------    LETRA Q"  },
+{ "_comment18": "LETRA Q • -----------------------------------------------------------------------------------------------    LETRA Q"  },
 { "id": "que_pena_pensar",
   "titulo_original": ["Desconocido"],
   "autor": ["Desconocido"],
@@ -11314,6 +11575,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Que pena pensar"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -11356,6 +11618,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Quédate Señor"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -11398,6 +11661,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Que el mundo te conozca"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -11446,6 +11710,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Queremos ver"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -11492,6 +11757,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Queremos ver a Cristo regresar"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -11546,6 +11812,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Quien dices que soy"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -11600,6 +11867,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Quién es el rey de la selva"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -11642,6 +11910,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Quiero cantar una linda canción"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -11691,6 +11960,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Quiero conocer a Jesús"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -11741,6 +12011,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Quien es el Rey de reyes"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -11757,7 +12028,7 @@
   }
 },
 
-{ "_comment19": "LETRA R ---------------------------------------------------------------------------------------------------------------------------------------    LETRA R"  },
+{ "_comment19": "LETRA R • -----------------------------------------------------------------------------------------------    LETRA R"  },
 { "id": "recordare",
   "titulo_original": ["Remembrance"],
   "autor": ["Chris Davenport", "Benjamin Hastings"],
@@ -11780,6 +12051,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Recordaré"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -11845,6 +12117,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Rendid a Yahvé"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -11901,6 +12174,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Rescate de amor"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -11951,6 +12225,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Renuévame"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -11992,6 +12267,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Restaura"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -12033,6 +12309,7 @@
   "idiomas": {
     "it": {
       "titulo": ["RITROVARTI IN CIELO"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -12066,7 +12343,7 @@
   }
 },
 
-{ "_comment20": "LETRA S ---------------------------------------------------------------------------------------------------------------------------------------    LETRA S"  },
+{ "_comment20": "LETRA S • -----------------------------------------------------------------------------------------------    LETRA S"  },
 { "id": "salmo_1",
   "titulo_original": ["Salmo 1"],
   "autor": ["Pablo Canalis"],
@@ -12089,6 +12366,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Salmo 1: Que alegría"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -12144,6 +12422,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Salmo 8: Cuando miro los claros cielos"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -12191,6 +12470,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Salmo 23: Jehová es mi pastor"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -12223,6 +12503,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Salmo 121: Alzaré mis ojos"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/4ExA7ngx24fjobzbmxna3c?si=2c6a4b719f344941",
       "letra": [
         "[Am]Alzaré mis ojos [Dm]a los [Am]montes.",
@@ -12249,6 +12530,7 @@
     },
     "he": {
       "titulo": ["Hatikvah (הַתִּקְוָה)"],
+      "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/1mmiS92bNewNo1DfUai5am?si=90d2afaa0dd4459d",
       "traductor": "Naftali Herz Imber",
       "letra": [
@@ -12289,6 +12571,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Santo es el Señor"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -12344,6 +12627,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Santo Espíritu"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -12397,6 +12681,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Santo sólo es el Señor"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -12442,6 +12727,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Santuario en el tiempo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -12502,6 +12788,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Sé una luz"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -12550,6 +12837,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Sentado estaba en mi barca"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -12599,6 +12887,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Sencilla"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -12666,6 +12955,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Señor, aviva tu obra en mí"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -12718,6 +13008,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Señor, somos tu voz"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -12767,6 +13058,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Señor, tu gracia"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -12811,6 +13103,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Si comenzamos a orar"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -12851,6 +13144,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Si el cristiano tiene certeza"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -12907,6 +13201,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Si Jesús te satisface"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -12952,6 +13247,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Siempre de Jesús"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -12999,6 +13295,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Sólo en Jesús"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -13060,6 +13357,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Si el Espíritu de Dios esta aquí"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
@@ -13117,6 +13415,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Sólo en ti"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -13161,6 +13460,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Sólo tú"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -13216,6 +13516,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Somos la luz"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -13270,6 +13571,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Somos su voz"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -13313,6 +13615,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Soy de Jesús"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -13370,6 +13673,7 @@
   "idiomas": {
     "it": {
       "titulo": ["SEI DI PIÙ"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -13412,6 +13716,7 @@
   "idiomas": {
     "it": {
       "titulo": ["SOLTANTO TU"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -13481,6 +13786,7 @@
   "idiomas": {
     "en": {
       "titulo": ["SOURCE OF LIFE"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -13552,6 +13858,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Sólo el poder de Dios"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -13603,6 +13910,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Somos soldaditos"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
@@ -13629,7 +13937,7 @@
 },
 
 
-{ "_comment21": "LETRA T ---------------------------------------------------------------------------------------------------------------------------------------    LETRA T"  },
+{ "_comment21": "LETRA T • -----------------------------------------------------------------------------------------------    LETRA T"  },
 { "id": "tal_como_soy",
   "titulo_original": ["Tal como soy"],
   "autor": ["Desconocido"],
@@ -13652,6 +13960,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Tal como soy"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -13691,6 +14000,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Te exaltaré"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -13734,6 +14044,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Te seguiré"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -13792,6 +14103,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Tengo paz como un río"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -13844,6 +14156,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Tomado de la mano"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -13893,6 +14206,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Todo por Él"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -13958,6 +14272,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Todo poderoso"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -14006,6 +14321,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Tu amor me inundó"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -14061,6 +14377,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Tu amor por mí"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -14107,6 +14424,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Tu morada"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -14162,6 +14480,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Tú eres Dios"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -14212,6 +14531,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Tu poder"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -14261,6 +14581,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Tu santo nombre"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -14309,6 +14630,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Tuyo soy"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -14454,6 +14776,7 @@
   "idiomas": {
     "en": {
       "titulo": ["SOURCE OF LIFE"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -14546,6 +14869,7 @@
   "idiomas": {
     "en": {
       "titulo": ["THE ADVENTURE OF FAITH"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -14657,6 +14981,7 @@
   "idiomas": {
     "en": {
       "titulo": ["TURN TO THE LIGHT"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -14721,7 +15046,7 @@
   }
 },
 
-{ "_comment22": "LETRA U ---------------------------------------------------------------------------------------------------------------------------------------    LETRA U"  },
+{ "_comment22": "LETRA U • -----------------------------------------------------------------------------------------------    LETRA U"  },
 { "id": "un_millon",
   "titulo_original": ["Un millón"],
   "autor": ["Andrés Spyker"],
@@ -14744,6 +15069,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Un millón"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -14799,6 +15125,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Un palacio tengo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -14833,6 +15160,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Una mirada de fe"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
@@ -14880,6 +15208,7 @@
   "idiomas": {
     "it": {
       "titulo": ["UNA VIA CHE"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -14932,7 +15261,7 @@
   }
 },
 
-{ "_comment23": "LETRA V ---------------------------------------------------------------------------------------------------------------------------------------    LETRA V"  },
+{ "_comment23": "LETRA V • -----------------------------------------------------------------------------------------------    LETRA V"  },
 { "id": "vamos_a_adorar",
   "titulo_original": ["Desconocido"],
   "autor": ["Desconocido"],
@@ -14955,6 +15284,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Vamos a adorar"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -14999,6 +15329,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Ven a la cruz"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -15049,6 +15380,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Vengo a adorarte"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -15079,6 +15411,7 @@
     },
     "it": {
       "titulo": ["SONO QUI A LODARTI"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -15130,6 +15463,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Vamos a henchir"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -15179,6 +15513,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Vasijas rotas"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -15233,6 +15568,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Vaso de honra" ],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -15275,6 +15611,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Ver a la cruz"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -15328,6 +15665,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Ven, es tiempo de adorarle"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -15371,6 +15709,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Ven, Espíritu Santo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -15433,6 +15772,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Veré a Jesús"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -15483,6 +15823,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Vive en mí"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -15533,6 +15874,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Voy caminando"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -15572,6 +15914,7 @@
   "idiomas": {
     "it": {
       "titulo": ["VENGO A TE (STILL)"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -15627,6 +15970,7 @@
   "idiomas": {
     "it": {
       "titulo": ["VIVERE CON ME"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -15685,6 +16029,7 @@
   "idiomas": {
     "it": {
       "titulo": ["VITA TU MI DAI"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -15753,6 +16098,7 @@
   "idiomas": {
     "it": {
       "titulo": ["VOCE NEL VENTO"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -15816,6 +16162,7 @@
   "idiomas": {
     "it": {
       "titulo": ["VOGLIA DI STARE"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -15866,6 +16213,7 @@
   "idiomas": {
     "it": {
       "titulo": ["Voglio vivere"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -15939,6 +16287,7 @@
   "idiomas": {
     "it": {
       "titulo": ["Volerei"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -16001,6 +16350,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Si, lo veremos"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -16056,6 +16406,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Si tu triste estás"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -16085,7 +16436,7 @@
     }
   }
 },
-{ "_comment24": "LETRA W ---------------------------------------------------------------------------------------------------------------------------------------    LETRA W"  },
+{ "_comment24": "LETRA W • -----------------------------------------------------------------------------------------------    LETRA W"  },
 {   "id": "worthy-of-it-all-cece-winans",
     "titulo_original": ["Worthy Of It All"],
     "autor": ["CeCe Winans"],
@@ -16162,9 +16513,9 @@
     }
 },
 
-{ "_comment25": "LETRA X ---------------------------------------------------------------------------------------------------------------------------------------    LETRA X"  },
+{ "_comment25": "LETRA X • -----------------------------------------------------------------------------------------------    LETRA X"  },
 
-{ "_comment26": "LETRA Y ---------------------------------------------------------------------------------------------------------------------------------------    LETRA Y"  },
+{ "_comment26": "LETRA Y • -----------------------------------------------------------------------------------------------    LETRA Y"  },
 
 { "id": "yo_nunca_ire_hacia_atras",
   "titulo_original": ["Yo nunca iré hacia atrás"],
@@ -16181,6 +16532,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Yo nunca iré hacia atrás"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -16228,6 +16580,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Yo canto a Dios"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -16276,6 +16629,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Yo iré"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -16343,6 +16697,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Yo pensaba"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -16402,6 +16757,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Yo puedo todo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -16466,6 +16822,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Yo soy Caleb"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -16529,6 +16886,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Yo soy feliz"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -16584,6 +16942,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Yo soy el mensaje"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -16638,6 +16997,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Yo soy un C"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -16676,6 +17036,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Yo también"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -16764,6 +17125,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Yo te alabaré, Señor"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -16820,6 +17182,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Yo tengo algo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -16865,6 +17228,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Yo tengo esperanza"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -16918,6 +17282,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Yo tengo un amigo que me ama"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "letra": [
@@ -16949,6 +17314,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Yo tengo un amigo que se llama Jesús"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "letra": [
@@ -16976,6 +17342,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Yo voy (Pés na terra)"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -17018,6 +17385,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Yo voy (Eu vou)"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -17076,6 +17444,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Yo tengo gozo"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["Manuel Bonilla"],
       "partitura": "No",
@@ -17125,6 +17494,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Yo tengo gozo en mi alma"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
@@ -17151,9 +17521,9 @@
   }
 },
 
-{ "_comment27": "LETRA Z ---------------------------------------------------------------------------------------------------------------------------------------    LETRA Z"  },
+{ "_comment27": "LETRA Z • -----------------------------------------------------------------------------------------------    LETRA Z"  },
 
-{ "_comment28": "Numeros ---------------------------------------------------------------------------------------------------------------------------------------    Numeros"  }
+{ "_comment28": "Numeros • -----------------------------------------------------------------------------------------------    Numeros"  }
 
 
 
