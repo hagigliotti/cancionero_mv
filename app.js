@@ -871,7 +871,7 @@ function openSong(id) {
     <div class="meta">
 
       <div>
-        <b>Original:</b> ${normalizeField(song.titulo_original).join(", ")}
+        <b>Original:</b> <span style="font-style: italic;">"${normalizeField(song.titulo_original).join(", ")}"</span>
 
         ${
           titulo2.length
@@ -918,13 +918,19 @@ function openSong(id) {
       <div>
         <b>Tags:</b> ${
           song.tags?.length
-            ? song.tags.sort((a, b) => a.localeCompare(b)).join(", ")
+            ? song.tags
+                .sort((a, b) => a.localeCompare(b))
+                .map(tag => {
+                  const safe = encodeURIComponent(tag);
+                  return `<span class="tag-link" onclick="openTagModal(decodeURIComponent('${safe}'))">${tag}</span>`;
+                })
+                .join(", ")
             : "Desconocido"
         } |
         <b>Revisado:</b>
         <span
+          class="song-meta-revisado"
           onclick="openRevisadoList('${song.idiomas?.[idiomaActual]?.revisado || "No"}')"
-          style="cursor:pointer; color:#38bdf8;"
         >
           ${(song.idiomas?.[idiomaActual]?.revisado || "").toLowerCase() === "si" ? "Si" : "No"}
         </span>

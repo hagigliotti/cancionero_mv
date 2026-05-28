@@ -1046,6 +1046,8 @@ body.projector .clear-btn {
   color: #2390be;
 }
 
+
+
 /*TABLATURA: MOSTRAR Y OCULTAR */
 .tab-btn {
   margin-left: 8px;
@@ -1273,7 +1275,7 @@ body.projector .clear-btn {
 }
 
 
-/** =====================  REVISADOS  ===================== */
+/* =====================  REVISADOS  ===================== */
 #revisadoModalLista li {
   list-style: none;
   padding: 8px;
@@ -1283,4 +1285,25 @@ body.projector .clear-btn {
 
 #revisadoModalLista li:hover {
   background: rgba(255,255,255,0.05);
+}
+
+.song-meta-revisado {
+  font-weight: bold;
+  color: #38bdf8;
+  cursor: pointer;
+}
+.song-meta-revisado:hover {
+  text-decoration: underline;
+} 
+
+/* =====================  TAGS  ===================== */
+.tag-link {
+  font-weight: bold;
+  color: #38bdf8; /* mismo celeste que usas en otros links */
+  cursor: pointer;
+}
+
+.tag-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
 }

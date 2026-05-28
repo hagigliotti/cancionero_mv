@@ -2,6 +2,7 @@
 let revisadoModoActivo = false;
 let modalContext = "normal";
 let revisadoEstadoActual = "si";
+let tagModalValue = "";
 
 // ===================== HELPERS =====================
 
@@ -337,6 +338,13 @@ function openRevisadoList(valor) {
 let personModalTipo = "autor";
 let personModalValor = "";
 
+const personIcons = {
+  autor: "👤",
+  coautor: "👥",
+  compositor: "🎼",
+  traductor: "🌐"
+};
+
 function renderPersonModal() {
   const data = getDataActual();
 
@@ -354,7 +362,9 @@ function renderPersonModal() {
     return values.includes(normalize(personModalValor));
   });
 
-  const title = `${personModalTipo.charAt(0).toUpperCase()}${personModalTipo.slice(1)}: ${personModalValor}`;
+  const icon = personIcons[personModalTipo] || "👤";
+
+const title = `${icon} ${personModalTipo.charAt(0).toUpperCase()}${personModalTipo.slice(1)}: ${personModalValor}`;
 
   const btn = document.getElementById("toggleRevisadoBtn");
     if (btn) btn.style.display = "none";
@@ -372,4 +382,38 @@ function showPersonSongs(valor, tipo) {
   personModalTipo = tipo;
   personModalValor = valor;
   renderPersonModal();
+}
+
+// ===================== MODAL TAGS =====================
+function openTagModal(tag) {
+  tagModalValue = tag;
+  renderTagModal();
+}
+
+function renderTagModal() {
+  const data = getDataActual();
+
+  const filtered = data.filter(song =>
+    song.tags?.some(t => normalize(t) === normalize(tagModalValue))
+  );
+
+  const title = `Tag: ${tagModalValue}`;
+
+  document.getElementById("listModalTitle").innerText = title;
+
+  // ocultar botón de revisados
+  const btn = document.getElementById("toggleRevisadoBtn");
+  if (btn) btn.style.display = "none";
+
+  renderListModal({
+    title,
+    list: filtered
+  });
+
+  document.getElementById("listModal").style.display = "block";
+}
+
+function cerrarListModal() {
+  document.getElementById("listModal").style.display = "none";
+  tagModalValue = "";
 }
