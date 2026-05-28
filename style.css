@@ -1271,3 +1271,16 @@ body.projector .clear-btn {
   margin-right: 4px;
   display: inline-block;
 }
+
+
+/** =====================  REVISADOS  ===================== */
+#revisadoModalLista li {
+  list-style: none;
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #333;
+}
+
+#revisadoModalLista li:hover {
+  background: rgba(255,255,255,0.05);
+}
