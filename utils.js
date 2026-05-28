@@ -177,7 +177,7 @@ function renderPersonLinks(label, value) {
 
   if (!arr.length) return "";
 
-  const tipo = tipoMap[label] || "autor";
+  const tipo = tipoMap[label.toLowerCase()] || "autor";
 
   const html = arr.map(person => {
 
@@ -303,6 +303,8 @@ function renderRevisadoModal() {
 
   const btn = document.getElementById("toggleRevisadoBtn");
 
+  if (btn) btn.style.display = "inline-block";
+
   if (btn) {
     btn.innerText =
       revisadoEstadoActual === "si"
@@ -352,8 +354,10 @@ function renderPersonModal() {
     return values.includes(normalize(personModalValor));
   });
 
-  const title = `${personModalTipo}: ${personModalValor}`;
+  const title = `${personModalTipo.charAt(0).toUpperCase()}${personModalTipo.slice(1)}: ${personModalValor}`;
 
+  const btn = document.getElementById("toggleRevisadoBtn");
+    if (btn) btn.style.display = "none";
   document.getElementById("listModalTitle").innerText = title;
 
   renderListModal({
