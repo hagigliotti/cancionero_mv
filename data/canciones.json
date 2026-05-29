@@ -18,7 +18,7 @@
   "idiomas": {
     "es": {
       "titulo": ["A Jesús dale todo"],
-      "titulo2": ["Arco iris (a.k.a.)", "Has corrido (a.k.a.)"],
+      "titulo2": ["Arco iris (aka)", "Has corrido (aka)"],
       "audio_url": "https://open.spotify.com/intl-es/track/1GdcEMGXs8TKht3jGNwU2m?si=2564f95694b34dc7",
       "traductor": ["-"],
       "partitura": "No",
@@ -322,8 +322,8 @@
   "tempo_bpm": ["68"],
   "compas": ["4/4"],
   "ritmo": ["Worship"],
-  "referencia_biblica": ["San Juan 1:12"],
-  "tags": ["Adoración", "Worship"],
+  "referencia_biblica": ["1 Crónicas 28:6", "San Juan 1:12"],
+  "tags": ["Identidad", "Amor", "Adoración", "Gracia"],
   "idiomas": {
     "es": { 
       "titulo": ["Abba (Nunca falla)"],
@@ -2249,7 +2249,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Caminando, caminando"],
-      "titulo2": ["Gozándome yo voy (a.k.a.)"],
+      "titulo2": ["Gozándome yo voy (aka)"],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -8898,8 +8898,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["3/4"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["2 Corintios 5:14, 15", "Salmo 133:1"],
-  "tags": ["Alabanza", "Comunión", "Unidad", "Fraternidad", "Amor", "Compartir"],
+  "referencia_biblica": ["Salmos 133:1", "Levítico 19:18", "2 Corintios 5:14-15"],
+  "tags": ["Alabanza", "Adoración", "Dios", "Amor cristiano", "Fraternidad", "Unidad", "Comunidad"],
 
   "idiomas": {
     "es": {
