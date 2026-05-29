@@ -401,7 +401,7 @@ function applyTablaturaState() {
   });
 
   if (btn) {
-    btn.innerText = tablaturaVisible ? "Mostrar" : "Ocultar";
+    btn.innerText = tablaturaVisible ? "Ocultar" : "Mostrar";
 
     btn.classList.remove("on", "off");
     btn.classList.add(tablaturaVisible ? "on" : "off");
