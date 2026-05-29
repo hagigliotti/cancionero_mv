@@ -1,3 +1,13 @@
+let compasActual = "4/4";
+
+function setCompas(compas) {
+
+  compasActual = compas;
+
+  const span = document.getElementById("metroCompas");
+  if (span) span.innerText = compas;
+}
+
 // ===== METRONOMO ============================================================================
 const subdivisions = {
   1: 1,     // negra
@@ -31,7 +41,7 @@ function abrirMetronomo(song = null) {
   currentCompas = compas;
 
   document.getElementById("metroBpm").value = bpm;
-  document.getElementById("metroCompas").innerText = compas;
+  setCompas(compas || "4/4");
   document.getElementById("metroModal").style.display = "block";
 }
 
@@ -458,11 +468,88 @@ function noteToFreq(note, octave = 4) {
 
 
 
+// ===== SE ABRE EL MODAL DESDE TONALIDAD ============================================================================
+function abrirAfinadorDesdeCancion(tonalidad, bpm) {
+
+  // abrir modal
+  document.getElementById("metroModal").style.display = "block";
+
+  // ===== TONALIDAD =====
+  const nota = extractRootNote(tonalidad);
+
+  const noteSelect = document.getElementById("referenceNote");
+
+  if (noteSelect) {
+    noteSelect.value = nota;
+  }
+
+  // ===== BPM =====
+  const bpmInput = document.getElementById("metroBpm");
+
+  let bpmValue = parseInt(bpm);
+
+  // si no existe o no es válido → 90
+  if (!bpm || isNaN(bpmValue)) {
+    bpmValue = 90;
+  }
+
+  bpmInput.value = bpmValue;
+
+  // opcional
+  // playReferenceTone();
+}
+
+function abrirAfinadorDesdeElemento(el, tipo) {
+
+  const tonalidad = el.dataset.tonalidad;
+  const bpm = el.dataset.bpm;
+  const compas = el.dataset.compas;
+
+  document.getElementById("metroModal").style.display = "block";
+
+  // TONO
+  const noteSelect = document.getElementById("referenceNote");
+  const nota = extractRootNote(tonalidad);
+
+  if (noteSelect) noteSelect.value = nota;
+
+  // BPM
+  const bpmInput = document.getElementById("metroBpm");
+  const bpmValue = parseInt(bpm);
+  bpmInput.value = (!bpm || isNaN(bpmValue)) ? 90 : bpmValue;
+
+  // COMPÁS
+  setCompas(compas || "4/4");
+
+  // 🔊 AUTO PLAY SOLO TONALIDAD
+  requestAnimationFrame(() => {
+
+    if (tipo === "tonalidad") {
+      playReferenceTone();
+    }
+
+  });
+}
+
+function setCompasUI(compas) {
+  const span = document.getElementById("metroCompas");
+  if (span) span.innerText = compas;
+
+  // aquí podrías sincronizar lógica del metrónomo si quieres
+}
+setCompasUI(compas || "4/4");
 
 
+// RESALTAR
+function highlightElement(el) {
+  if (!el) return;
 
+  el.classList.add("highlight");
 
-
+  setTimeout(() => {
+    el.classList.remove("highlight");
+  }, 800);
+}
 
 
 

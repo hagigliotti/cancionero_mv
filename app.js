@@ -871,7 +871,7 @@ function openSong(id) {
     <div class="meta">
 
       <div>
-        <b>Original:</b> <span style="font-style: italic;">"${normalizeField(song.titulo_original).join(", ")}"</span>
+        <b>Original:</b> <strong><span style="font-style: italic;">"${normalizeField(song.titulo_original).join(", ")}"</span></strong>
 
         ${
           titulo2.length
@@ -902,9 +902,58 @@ function openSong(id) {
       </div>
 
       <div class="song-metro" onclick="abrirMetronomo(song)" style="cursor:pointer;">
-        <b>Tonalidad:</b> ${normalizeMeta(song, "tonalidad") || "Desconocido"} |
-        <b>BPM:</b> ${normalizeMeta(song, "tempo_bpm") || "Desconocido"} |
-        <b>Compás:</b> ${normalizeMeta(song, "compas") || "Desconocido"} |
+      
+        ${normalizeMeta(song, "tonalidad") && normalize(normalizeMeta(song, "tonalidad")) !== "DESCONOCIDO"
+          ? `
+            <b>Tonalidad:</b>
+            <span class="meta-link tonalidad-link"
+              data-tonalidad="${normalizeMeta(song, "tonalidad")}"
+              data-bpm="${normalizeMeta(song, "tempo_bpm") || ""}"
+              data-compas="${normalizeMeta(song, "compas") || ""}"
+              onclick="abrirAfinadorDesdeElemento(this)">
+              ${normalizeMeta(song, "tonalidad")}
+            </span> |
+          `
+          : `
+            <b>Tonalidad:</b>
+            <span class="meta-normal">Desconocido</span> |
+          `
+        }
+
+        ${normalizeMeta(song, "tempo_bpm") && normalize(normalizeMeta(song, "tempo_bpm")) !== "DESCONOCIDO"
+          ? `
+            <b>BPM:</b>
+            <span class="meta-link bpm-link"
+              data-tonalidad="${normalizeMeta(song, "tonalidad") || ""}"
+              data-bpm="${normalizeMeta(song, "tempo_bpm")}"
+              data-compas="${normalizeMeta(song, "compas") || ""}"
+              onclick="abrirAfinadorDesdeElemento(this, 'bpm')">
+              ${normalizeMeta(song, "tempo_bpm")}
+            </span> |
+          `
+          : `
+            <b>BPM:</b>
+            <span class="meta-normal">Desconocido</span> |
+          `
+        }
+
+        ${normalizeMeta(song, "compas") && normalize(normalizeMeta(song, "compas")) !== "DESCONOCIDO"
+          ? `
+            <b>Compás:</b>
+            <span class="meta-link compas-link"
+              data-tonalidad="${normalizeMeta(song, "tonalidad") || ""}"
+              data-bpm="${normalizeMeta(song, "tempo_bpm") || ""}"
+              data-compas="${normalizeMeta(song, "compas")}"
+              onclick="abrirAfinadorDesdeElemento(this, 'compas')">
+              ${normalizeMeta(song, "compas")}
+            </span> |
+          `
+          : `
+            <b>Compás:</b>
+            <span class="meta-normal">Desconocido</span> |
+          `
+        }
+
         <b>Ritmo:</b> ${formatRitmo(song.ritmo) || "Desconocido"} |
 
         <b>Partitura:</b> ${

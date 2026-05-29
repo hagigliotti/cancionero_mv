@@ -138,8 +138,19 @@ function formatRitmo(ritmo) {
 }
 
 function extractRootNote(note) {
+
   if (!note) return "A";
-  const match = note.match(/^([A-G][b#]?)/);
+
+  // buscar contenido entre paréntesis
+  const parenMatch = note.match(/\(([^)]+)\)/);
+
+  let cleanNote = parenMatch
+    ? parenMatch[1]
+    : note;
+
+  // extraer nota base
+  const match = cleanNote.match(/^([A-G][b#]?)/);
+
   return match ? match[1] : "A";
 }
 
@@ -417,3 +428,4 @@ function cerrarListModal() {
   document.getElementById("listModal").style.display = "none";
   tagModalValue = "";
 }
+
