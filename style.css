@@ -200,12 +200,9 @@ a.menu-item {
   touch-action: manipulation;
 }
 
-
 .menu-title:hover {   /* evitar efecto hover en los items del menu que no son clickeables */
   background: none;
 }
-
-
 
 /* *** Acerca de... */
   /* Encontrar la programación en >> Acerca de...*/
@@ -215,8 +212,6 @@ a.menu-item {
 
 /* *** Idiomas */
   /* Encontrar la programación en >> Idiomas*/
-
-
 
 
 /* ===== BOTON IDIOMA ===== */
@@ -372,8 +367,6 @@ a.menu-item {
   cursor: pointer;
 }
 
-
-
 .meta {
   font-size: 12px;
   opacity: 0.8;
@@ -415,7 +408,6 @@ a.menu-item {
 #toggleLista {
   display: none;
 }
-
 
 .fade-in {
   animation: fadeIn 0.2s ease-in;
@@ -484,7 +476,7 @@ a.menu-item {
 
 .dark-mode #idioma {
   background: #e2e8f0;
-  color: black;
+  color: rgb(201, 5, 5);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -1341,4 +1333,16 @@ body.projector .clear-btn {
 .meta-normal {
   color: #000;
   font-weight: normal;
+}
+
+
+/*Estrofas y coros*/
+.titulo-seccion{
+  font-size: 0.78em;
+  font-weight: bold;
+  opacity: 0.85;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }

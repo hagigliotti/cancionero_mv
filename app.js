@@ -744,9 +744,23 @@ function renderLyrics(text) {
   const lines = Array.isArray(text) ? text : text.split("\n");
 
   return lines.map(line => {
-    if (!line || line === "br") return `<div class="song-break"></div>`;
+
+    if (!line || line === "br") {
+      return `<div class="song-break"></div>`;
+    }
+
+    // 🔥 Detectar títulos especiales
+    const clean = line.trim();
+
+    const esNumero = /^\d+$/.test(clean);
+    const esCoro = /^coro:?$/i.test(clean);
+
+    if (esNumero || esCoro) {
+      return `<div class="titulo-seccion">${escapeHtml(line)}</div>`;
+    }
 
     return renderChordLine(line);
+
   }).join("");
 }
 
@@ -940,9 +954,9 @@ function openSong(id) {
             </span> |
           `
           : `
-            <b>BPM:</b>
-            <span class="meta-normal">Desconocido</span> |
-          `
+          <b>BPM:</b>
+          <span class="meta-unknown">Desconocido</span> |
+        `
         }
 
         ${normalizeMeta(song, "compas") && normalize(normalizeMeta(song, "compas")) !== "DESCONOCIDO"
@@ -957,9 +971,9 @@ function openSong(id) {
             </span> |
           `
           : `
-            <b>Compás:</b>
-            <span class="meta-normal">Desconocido</span> |
-          `
+          <b>Compás:</b>
+          <span class="meta-unknown">Desconocido</span> |
+        `
         }
 
         <b>Ritmo:</b> ${formatRitmo(song.ritmo) || "Desconocido"} |

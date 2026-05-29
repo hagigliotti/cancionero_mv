@@ -232,6 +232,8 @@ function normalizeSong(song) {
   return song;
 }
 
+// ===================== Estrofas y Coros =====================
+
 // ===================== TITULO 2 =====================
 function getAllSongTitles(song) {
   const base = song.idiomas?.[idiomaActual]?.titulo || "";
@@ -432,4 +434,6 @@ function cerrarListModal() {
   document.getElementById("listModal").style.display = "none";
   tagModalValue = "";
 }
+
+
 
