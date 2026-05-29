@@ -687,6 +687,14 @@ function renderList(letter) {
     });
   });
 
+  expanded.sort((a, b) => {
+    return normalize(a.displayTitle)
+      .localeCompare(normalize(b.displayTitle), undefined, {
+        sensitivity: "base",
+        numeric: true
+      });
+  });
+
   if (letter && letter !== "*" && letter !== "#") {
     expanded = expanded.filter(item => {
       const titulo = normalize(item.displayTitle.replace(/^[¿¡!?\s"'“”‘’]+/, ""));

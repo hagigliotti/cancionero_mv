@@ -13,6 +13,10 @@ const tipoMap = {
   traductor: "traductor"
 };
 
+function getSortTitle(song) {
+  return normalize(song.idiomas?.[idiomaActual]?.titulo || "");
+}
+
 // ===================== NORMALIZACIÓN =====================
 
 function normalize(text) {
