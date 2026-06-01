@@ -136,6 +136,20 @@ async function init() {
   himnos = (await res2.json()).map(normalizeSong);
   campamento = (await res3.json()).map(normalizeSong);
 
+  const savedLibro = localStorage.getItem("libro");
+  const savedIdioma = localStorage.getItem("idioma");
+  libroActual = localStorage.getItem("libro") || "cancionero";
+  idiomaActual = localStorage.getItem("idioma") || "es";
+  setIdioma(idiomaActual);
+  updateLangFlag();
+
+  //libroActual = savedLibro || "cancionero";
+  //idiomaActual = savedIdioma || "es";
+
+  document.getElementById("menuLibro").value = libroActual;
+  document.getElementById("idioma").value = idiomaActual;
+  document.getElementById("menuIdioma").value = idiomaActual;
+
   renderAlphabet();
   loadTheme();
   updateThemeMenuText();
@@ -154,7 +168,7 @@ async function init() {
   document.getElementById("idioma").addEventListener("change", e => {
       if (libroActual === "himnario") return;
 
-      idiomaActual = e.target.value;
+      setIdioma(e.target.value);
       document.getElementById("menuIdioma").value = e.target.value;
 
       renderAlphabet();
@@ -163,6 +177,7 @@ async function init() {
 
   document.getElementById("menuLibro").addEventListener("change", e => {
       libroActual = e.target.value;
+      localStorage.setItem("libro", libroActual);
 
       closeMenu();
 
@@ -175,9 +190,7 @@ async function init() {
       const idiomaSelect = document.getElementById("idioma");
 
       if (libroActual === "himnario") {
-        idiomaActual = "es";
-        idiomaSelect.value = "es";
-        idiomaSelect.disabled = true;
+        idiomaSelect.disabled = false;
       } else {
         idiomaSelect.disabled = false;
       }
@@ -342,6 +355,9 @@ function renderLanguageFlags(song) {
 
 function changeLanguage(lang, songId) {
   idiomaActual = lang;
+
+  localStorage.setItem("idioma", idiomaActual);
+
   document.getElementById("idioma").value = lang;
 
   renderAlphabet();
@@ -521,20 +537,39 @@ let pressTimer;
 
 // actualizar bandera inicial
 function updateLangFlag() {
-  const selected = idiomaSelect.value;
-  const flag = idiomaSelect.options[idiomaSelect.selectedIndex].text;
-  langBtn.innerText = flag;
+  langBtn.innerText = FLAGS[idiomaActual] || "🌐";
 }
 updateLangFlag();
 
 // CLICK → cambiar idioma rápido
 langBtn.addEventListener("click", () => {
-  let index = idiomaSelect.selectedIndex;
-  index = (index + 1) % idiomaSelect.options.length;
-  idiomaSelect.selectedIndex = index;
-  idiomaSelect.dispatchEvent(new Event("change"));
-  updateLangFlag();
+  const options = Array.from(idiomaSelect.options);
+
+  const currentIndex = options.findIndex(o => o.value === idiomaActual);
+
+  const nextIndex = (currentIndex + 1) % options.length;
+  const newLang = options[nextIndex].value;
+
+  setIdioma(newLang);
 });
+
+//CENTRALIZAMOS EL CAMBIO DE IDIOMA
+function setIdioma(lang) {
+  idiomaActual = lang;
+
+  localStorage.setItem("idioma", lang);
+
+  const idiomaSelect = document.getElementById("idioma");
+  const menuIdioma = document.getElementById("menuIdioma");
+
+  if (idiomaSelect) idiomaSelect.value = lang;
+  if (menuIdioma) menuIdioma.value = lang;
+
+  updateLangFlag();
+
+  renderAlphabet();
+  renderList(letraActiva);
+}
 
 // HOLD → abrir selector real
 langBtn.addEventListener("mousedown", () => {
@@ -559,6 +594,7 @@ idiomaSelect.addEventListener("change", () => {
   updateLangFlag();
 
   idiomaActual = idiomaSelect.value;
+  localStorage.setItem("idioma", idiomaActual);
 
   // ESTA ES LA LÍNEA CLAVE
   document.getElementById("menuIdioma").value = idiomaSelect.value;
@@ -840,9 +876,7 @@ function openSong(id) {
 
     const idiomaSelect = document.getElementById("idioma");
 
-    idiomaActual = "es";
-    idiomaSelect.value = "es";
-    idiomaSelect.disabled = true;
+    idiomaSelect.disabled = false;
 
     renderAlphabet();
     updateAppTitle();

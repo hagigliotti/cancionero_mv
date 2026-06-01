@@ -108,8 +108,8 @@ function cleanTitleForSort(value) {
 
 function sortByTitle(data) {
   return data.sort((a, b) => {
-    const aT = cleanTitleForSort(a.idiomas?.es?.titulo);
-    const bT = cleanTitleForSort(b.idiomas?.es?.titulo);
+    const aT = cleanTitleForSort(a.idiomas?.[idiomaActual]?.titulo);
+    const bT = cleanTitleForSort(b.idiomas?.[idiomaActual]?.titulo);
 
     const aNum = extractLeadingNumber(aT);
     const bNum = extractLeadingNumber(bT);
@@ -180,7 +180,7 @@ function normalizeTraductor(lang) {
 }
 
 function getNumeroHimno(c) {
-  return c.idiomas?.es?.numero_himno ?? "";
+  return c.idiomas?.[idiomaActual]?.numero_himno ?? "";
 }
 
 // ===================== PERSONAS =====================
