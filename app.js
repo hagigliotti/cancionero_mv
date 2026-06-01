@@ -704,9 +704,25 @@ function renderList(letter) {
 
   if (letter === "#") {
     if (libroActual === "himnario") {
-      expanded = expanded.filter(item => getNumeroHimno(item.song));
+
+      const unicos = new Map();
+
+      expanded.forEach(item => {
+        const num = getNumeroHimno(item.song);
+
+        if (num && !unicos.has(item.song.id)) {
+          unicos.set(item.song.id, item);
+        }
+      });
+
+      expanded = [...unicos.values()].sort((a, b) => {
+        return Number(getNumeroHimno(a.song)) - Number(getNumeroHimno(b.song));
+      });
+
     } else {
+
       expanded = expanded.filter(item => /\d/.test(item.displayTitle));
+
     }
   }
 
