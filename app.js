@@ -497,8 +497,15 @@ function search(q) {
   const data = [...canciones, ...himnos, ...campamento];
 
   const results = data.filter(song => {
-    const searchText = buildSearchText(song);
-    return searchText.includes(query);
+
+    const numeroHimno =
+      song.idiomas?.[idiomaActual]?.numero_himno || "";
+
+    const searchText =
+      buildSearchText(song) + " " + numeroHimno;
+
+    return normalize(searchText).includes(query);
+
   });
 
   const sorted = sortByTitle(results)
