@@ -1661,11 +1661,15 @@
 },
 { "id": "brilla_Jesús",
   "titulo_original": ["Shine, Jesús, shine"],
-  "autor": ["Granham Kendrick"],     
-  "compositor": ["Granham Kendrick"], 
+  "autor": ["Graham Kendrick"],
+  "compositor": ["Graham Kendrick"],
+  "year": ["1987"],
   "tonalidad": ["Sol Mayor (G)"],
-  "referencia_biblica": ["San Mateo 8:12"],
-  "tags": [""],
+  "tempo_bpm": ["108"],
+  "compas": ["4/4"],
+  "ritmo": ["Cántico Contemporáneo"],
+  "referencia_biblica": ["Malaquías 4:2; 2 Corintios 4:6; Salmo 139:23-24; 1 Juan 1:7, San Mateo 8:12"],
+  "tags": ["Alabanza", "Luz", "Petición", "Misericordia", "Purificación"],
 
   "idiomas": {
     "es": {
@@ -1692,9 +1696,12 @@
         "[G]traes a la [C]vida re[G]al be[D]lleza.",
         "[C]Tu amor [D]transfor[Bm]mó nuestra his[Em]toria,",
         "[C]hoy la [D]luz que [Bm]nos llena de [Em]gloria.",
-        "[F]Brilla en [D]mí, [F]brilla en [D]mí."
+        "[F]Brilla en [D]mí, [F]brilla en [D]mí.",
+        "",
+        "Coro",
+        ""
       ],
-      "nota": [""]
+      "nota": ["Esta es la letra que siempre se ha cantado desde el Congreso de Jovenes de 1995, lamentablemente se ha modificado para incluirla en el Himanrio Adventista."]
     },
     "en": {
       "titulo": ["Shine, Jesús, shine"],
