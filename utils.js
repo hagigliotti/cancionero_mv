@@ -13,9 +13,7 @@ const tipoMap = {
   traductor: "traductor"
 };
 
-function getSortTitle(song) {
-  return normalize(song.idiomas?.[idiomaActual]?.titulo || "");
-}
+
 
 // ===================== NORMALIZACIÓN =====================
 
@@ -29,22 +27,7 @@ function normalize(text) {
     .trim();
 }
 
-function normalizeText(value) {
-  if (!value) return "";
-  if (Array.isArray(value)) return value.filter(Boolean).join(", ");
-  return value;
-}
 
-function normalizeSimple(value) {
-  if (!value) return "";
-  if (Array.isArray(value)) return value.filter(Boolean).join(", ");
-  return value;
-}
-
-function normalizeField(value) {
-  if (!value) return [];
-  return Array.isArray(value) ? value : [value];
-}
 
 function normalizeArrayField(value) {
   if (!value) return [];
@@ -52,7 +35,31 @@ function normalizeArrayField(value) {
   return [value];
 }
 
-// ===================== busqeuda =====================
+// ===================== BUSQUEDA / SEARCH =====================
+function smartSort(a, b) {
+
+  const titleA = normalize(a.displayTitle || "");
+  const titleB = normalize(b.displayTitle || "");
+
+  const numA = extractNumber(titleA);
+  const numB = extractNumber(titleB);
+
+  // 1. si ambos tienen número → ordenar por número
+  if (numA !== null && numB !== null) {
+    return numA - numB;
+  }
+
+  // 2. si uno tiene número → va primero el que NO tiene
+  if (numA !== null) return -1;
+  if (numB !== null) return 1;
+
+  // 3. fallback alfabético
+  return titleA.localeCompare(titleB, undefined, { sensitivity: "base" });
+}
+
+
+
+
 function buildSearchText(song) {
   const textos = [];
 
@@ -173,15 +180,9 @@ function normalizeTituloOriginal(value) {
   return value;
 }
 
-function normalizeTraductor(lang) {
-  const trad = lang?.traductor;
-  if (!trad) return [];
-  return Array.isArray(trad) ? trad : [trad];
-}
 
-function getNumeroHimno(c) {
-  return c.idiomas?.[idiomaActual]?.numero_himno ?? "";
-}
+
+
 
 // ===================== PERSONAS =====================
 
@@ -212,38 +213,11 @@ function renderPersonLinks(label, value) {
   return `<b>${label}:</b> ${html} | `;
 }
 
-// ===================== NORMALIZAR SONG =====================
 
-function normalizeSong(song) {
-  if (!song?.idiomas) return song;
-
-  Object.keys(song.idiomas).forEach(lang => {
-    const t = song.idiomas?.[lang]?.titulo;
-    song.idiomas[lang].titulo = normalizeText(t);
-  });
-
-  song.titulo_original = normalizeText(song.titulo_original);
-
-  song.year = normalizeSimple(song.year);
-  song.tonalidad = normalizeSimple(song.tonalidad);
-  song.tempo_bpm = normalizeSimple(song.tempo_bpm);
-  song.compas = normalizeSimple(song.compas);
-
-  return song;
-}
 
 // ===================== Estrofas y Coros =====================
 
-// ===================== TITULO 2 =====================
-function getAllSongTitles(song) {
-  const base = song.idiomas?.[idiomaActual]?.titulo || "";
 
-  const extras = normalizeArrayField(song.idiomas?.[idiomaActual]?.titulo2 || []);
-  
-  return [base, ...extras]
-    .map(t => (t || "").trim())
-    .filter(Boolean);
-}
 
 // ===================== AKA =====================
 // a.k.a. (Del inglés "Also Known As", muy usado en música) $\rightarrow$ Significa "También conocida como".
@@ -266,40 +240,7 @@ function cerrarListModal() {
   document.getElementById("listModal").style.display = "none";
 }
 
-function getSongTitle(song) {
 
-  // 1. intentar idioma actual
-  const current = song?.idiomas?.[idiomaActual]?.titulo;
-
-  if (Array.isArray(current)) {
-    const valid = current.find(t => typeof t === "string" && t.trim());
-    if (valid) return valid.trim();
-  }
-
-  if (typeof current === "string" && current.trim()) {
-    return current.trim();
-  }
-
-  // 2. fallback: cualquier idioma disponible
-  const idiomas = song?.idiomas || {};
-
-  for (const lang of Object.keys(idiomas)) {
-
-    const titulo = idiomas[lang]?.titulo;
-
-    if (Array.isArray(titulo)) {
-      const valid = titulo.find(t => typeof t === "string" && t.trim());
-
-      if (valid) return valid.trim();
-    }
-
-    if (typeof titulo === "string" && titulo.trim()) {
-      return titulo.trim();
-    }
-  }
-
-  return "Sin título";
-}
 
 function toggleRevisadoEstado() {
   revisadoEstadoActual = (revisadoEstadoActual === "si") ? "no" : "si";
