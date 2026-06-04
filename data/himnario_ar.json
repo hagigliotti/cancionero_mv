@@ -5979,7 +5979,7 @@
   {
     "id": "himno-123",
     "titulo_original": ["Oh, How He Loves You and Me"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Kurt Kaiser"],
     "compositor": ["Kurt Kaiser"],
     "year": ["1975"],
@@ -7226,7 +7226,7 @@
   {
     "id": "himno-148",
     "titulo_original": ["Only Christ"],
-    "corito": "Sí",
+    "corito": "Si",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -22451,7 +22451,7 @@
   {
     "id": "himno-445",
     "titulo_original": ["Más de Jesús"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -22863,7 +22863,7 @@
   {
     "id": "himno-453",
     "titulo_original": ["Cómo ser cual Cristo"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -22914,7 +22914,7 @@
   {
     "id": "himno-454",
     "titulo_original": ["Yo quisiera andar con Cristo"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -23010,7 +23010,7 @@
   {
     "id": "himno-456",
     "titulo_original": ["Como la mujer de junto al pozo"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -23094,7 +23094,7 @@
   {
     "id": "himno-458",
     "titulo_original": ["Orad por mí"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -23145,7 +23145,7 @@
   {
     "id": "himno-459",
     "titulo_original": ["Háblame más de Cristo"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -23196,7 +23196,7 @@
   {
     "id": "himno-460",
     "titulo_original": ["Quiero estar cerca de Cristo"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -23247,7 +23247,7 @@
   {
     "id": "himno-461",
     "titulo_original": ["A tu lado anhelo estar"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -23297,8 +23297,8 @@
   },
   {
     "id": "himno-462",
-    "titulo_original": ["Dame a Cristo"],
-    "corito": "Sí",
+    "titulo_original": ["Give me Jesus"],
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -23385,7 +23385,7 @@
   {
     "id": "himno-464",
     "titulo_original": ["Ven inspíranos"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -23475,7 +23475,7 @@
   {
     "id": "himno-466",
     "titulo_original": ["Guíame, ¡oh Salvador!"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -23526,7 +23526,7 @@
   {
     "id": "himno-467",
     "titulo_original": ["¡Siempre el Salvador conmigo!"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -23583,7 +23583,7 @@
   {
     "id": "himno-468",
     "titulo_original": ["Paso a paso Dios me guía"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -23636,7 +23636,7 @@
   {
     "id": "himno-469",
     "titulo_original": ["Jesús me guía"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -23923,7 +23923,7 @@
   {
     "id": "himno-475",
     "titulo_original": ["El camino es escabroso"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -24029,7 +24029,7 @@
   {
     "id": "himno-477",
     "titulo_original": ["Los que aman al Señor"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -24183,7 +24183,7 @@
   {
     "id": "himno-480",
     "titulo_original": ["Digno eres, oh Señor"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -24234,7 +24234,7 @@
   {
     "id": "himno-481",
     "titulo_original": ["Voy al cielo"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -24283,7 +24283,7 @@
   {
     "id": "himno-482",
     "titulo_original": ["Quiero cantar"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -24328,7 +24328,7 @@
   {
     "id": "himno-483",
     "titulo_original": ["Cuando al cielo lleguemos"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -24424,7 +24424,7 @@
   {
     "id": "himno-485",
     "titulo_original": ["Unidos en verdad"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -24557,7 +24557,7 @@
   {
     "id": "himno-488",
     "titulo_original": ["Al andar con Jesús"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -24671,7 +24671,7 @@
   {
     "id": "himno-490",
     "titulo_original": ["Mejor que los sacrificios"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -24761,7 +24761,7 @@
   {
     "id": "himno-492",
     "titulo_original": ["¡Trabajad! ¡Trabajad!"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -24857,7 +24857,7 @@
   {
     "id": "himno-494",
     "titulo_original": ["Cerca un alma agobiada está"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -24965,7 +24965,7 @@
   {
     "id": "himno-496",
     "titulo_original": ["Sus manos somos"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -25010,7 +25010,7 @@
   {
     "id": "himno-497",
     "titulo_original": ["Manos"],
-    "corito": "Sí",
+    "corito": "Si",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -25023,7 +25023,7 @@
     "idiomas": {
       "es": {
         "titulo": ["Estas manos Dios me dio"],
-        "titulo2": ["Manos"],
+        "titulo2": ["Manos (aka)"],
         "numero_himno": "497",
         "audio_url": "",
         "traductor": [""],
@@ -25243,7 +25243,7 @@
   {
     "id": "himno-502",
     "titulo_original": ["Brilla en el sitio donde estés"],
-    "corito": "Sí",
+    "corito": "Si",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -25504,7 +25504,7 @@
   {
     "id": "himno-507",
     "titulo_original": ["Tentado, no cedas"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -25555,7 +25555,7 @@
   {
     "id": "himno-508",
     "titulo_original": ["Contendamos siempre por nuestra fe"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -25606,7 +25606,7 @@
   {
     "id": "himno-509",
     "titulo_original": ["¡Firmes! ¡Fuertes!"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -25657,7 +25657,7 @@
   {
     "id": "himno-510",
     "titulo_original": ["¿Quién está por Cristo?"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -25712,7 +25712,7 @@
   {
     "id": "himno-511",
     "titulo_original": ["Marcharé en la divina luz"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -25769,7 +25769,7 @@
   {
     "id": "himno-512",
     "titulo_original": ["Nunca estéis desanimados"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -25822,7 +25822,7 @@
   {
     "id": "himno-513",
     "titulo_original": ["Honra al hombre de valor"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -25983,7 +25983,7 @@
   {
     "id": "himno-516",
     "titulo_original": ["¡Firmes y adelante!"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -26089,7 +26089,7 @@
   {
     "id": "himno-518",
     "titulo_original": ["Jesús está buscando voluntarios hoy"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -26191,7 +26191,7 @@
   {
     "id": "himno-520",
     "titulo_original": ["¡Adelante! manda el Señor"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -26242,7 +26242,7 @@
   {
     "id": "himno-521",
     "titulo_original": ["Al Cristo ved"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -26251,7 +26251,7 @@
     "compas": ["Desconocido"],
     "ritmo": ["Himno"],
     "referencia_biblica": ["Desconocida"],
-    "tags": [],
+    "tags": ["Ofrenda"],
     "idiomas": {
       "es": {
         "titulo": ["Al Cristo ved"],
@@ -26293,7 +26293,7 @@
   {
     "id": "himno-522",
     "titulo_original": ["Suenen las palabras"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -26302,7 +26302,7 @@
     "compas": ["Desconocido"],
     "ritmo": ["Himno"],
     "referencia_biblica": ["Desconocida"],
-    "tags": [],
+    "tags": ["Ofrenda"],
     "idiomas": {
       "es": {
         "titulo": ["Suenen las palabras"],
@@ -26389,7 +26389,7 @@
   {
     "id": "himno-524",
     "titulo_original": ["Traían en silencio presentes al Señor"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -26398,7 +26398,7 @@
     "compas": ["Desconocido"],
     "ritmo": ["Himno"],
     "referencia_biblica": ["Desconocida"],
-    "tags": [],
+    "tags": ["Ofrenda"],
     "idiomas": {
       "es": {
         "titulo": ["Traían en silencio presentes al Señor"],
@@ -26729,7 +26729,7 @@
           "y nos colma de alegria.",
           "Somos un pequeño pueblo muy feliz."
         ],
-        "nota": [""]
+        "nota": ["Existe otra versión muy conocida cantada siempre como 'corito'"]
       }
     }
   },
@@ -26862,7 +26862,7 @@
   {
     "id": "himno-534",
     "titulo_original": ["En tu nombre comenzamos"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -27154,7 +27154,7 @@
   {
     "id": "himno-540",
     "titulo_original": ["Ya asoma el sol brillante"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -27304,7 +27304,7 @@
   {
     "id": "himno-543",
     "titulo_original": ["No te olvides nunca del día del Señor"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -27398,7 +27398,7 @@
   {
     "id": "himno-545",
     "titulo_original": ["Santo día"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -27449,7 +27449,7 @@
   {
     "id": "himno-546",
     "titulo_original": ["Santo sábado, bendito"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -27679,7 +27679,7 @@
   {
     "id": "himno-551",
     "titulo_original": ["Embajador soy de mi Rey"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -27730,7 +27730,7 @@
   {
     "id": "himno-552",
     "titulo_original": ["¡Oh!, cuánto necesita"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -27781,7 +27781,7 @@
   {
     "id": "himno-553",
     "titulo_original": ["¿Os pusisteis a arar?"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -27889,7 +27889,7 @@
   {
     "id": "himno-555",
     "titulo_original": ["Hoy gozoso medito"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -27977,7 +27977,7 @@
   {
     "id": "himno-557",
     "titulo_original": ["¿Qué estás haciendo por Cristo?"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -28028,7 +28028,7 @@
   {
     "id": "himno-558",
     "titulo_original": ["Ama a tus prójimos"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -28083,7 +28083,7 @@
   {
     "id": "himno-559",
     "titulo_original": ["No te dé temor"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -28140,7 +28140,7 @@
   {
     "id": "himno-560",
     "titulo_original": ["Cristo está buscando obreros"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -28197,7 +28197,7 @@
   {
     "id": "himno-561",
     "titulo_original": ["Oigo del Señor la voz llamando"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -28254,7 +28254,7 @@
   {
     "id": "himno-562",
     "titulo_original": ["Esparcid la luz de Cristo"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -28401,7 +28401,7 @@
   {
     "id": "himno-565",
     "titulo_original": ["¡Ve, ve oh Sion!"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -28456,7 +28456,7 @@
   {
     "id": "himno-566",
     "titulo_original": ["Centinelas del Maestro"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -28507,7 +28507,7 @@
   {
     "id": "himno-567",
     "titulo_original": ["Si en valles de peligros"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -28564,7 +28564,7 @@
   {
     "id": "himno-568",
     "titulo_original": ["Hay lugar en la amplia viña"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -28616,7 +28616,7 @@
   {
     "id": "himno-569",
     "titulo_original": ["Id y predicad el evangelio"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -28672,7 +28672,7 @@
   {
     "id": "himno-570",
     "titulo_original": ["Voluntario del Señor"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -28727,7 +28727,7 @@
   {
     "id": "himno-571",
     "titulo_original": ["La historia de Cristo contemos"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -28890,7 +28890,7 @@
   {
     "id": "himno-574",
     "titulo_original": ["Testimonio"],
-    "corito": "Si",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -28947,7 +28947,7 @@
   {
     "id": "himno-575",
     "titulo_original": ["Tocad trompeta ya"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -29058,7 +29058,7 @@
   {
     "id": "himno-577",
     "titulo_original": ["Yo quiero trabajar"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -29155,7 +29155,7 @@
   {
     "id": "himno-579",
     "titulo_original": ["La fuente veo"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -29449,7 +29449,7 @@
   {
     "id": "himno-585",
     "titulo_original": ["De rodillas partimos hoy el pan"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -29678,7 +29678,7 @@
   {
     "id": "himno-590",
     "titulo_original": ["Guía a ti, Señor"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -29729,7 +29729,7 @@
   {
     "id": "himno-591",
     "titulo_original": ["Todo es bello en el hogar"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -29830,7 +29830,7 @@
   {
     "id": "himno-593",
     "titulo_original": ["Hogar de mis recuerdos"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -29979,7 +29979,7 @@
   {
     "id": "himno-596",
     "titulo_original": ["Edificamos familias"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -30077,7 +30077,7 @@
   {
     "id": "himno-598",
     "titulo_original": ["Cristo, yo te seguiré"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -30126,7 +30126,7 @@
   {
     "id": "himno-599",
     "titulo_original": ["En este bello día"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -30183,7 +30183,7 @@
   {
     "id": "himno-600",
     "titulo_original": ["Cuando venga Jesucristo"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -30291,7 +30291,7 @@
   {
     "id": "himno-602",
     "titulo_original": ["Es el amor divino"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -30346,7 +30346,7 @@
   {
     "id": "himno-603",
     "titulo_original": ["Yo temprano busco a Cristo"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -30397,7 +30397,7 @@
   {
     "id": "himno-604",
     "titulo_original": ["Bellas las manitas son"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -30454,7 +30454,7 @@
   {
     "id": "himno-605",
     "titulo_original": ["Jesús tiene tiempo"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -30493,7 +30493,7 @@
   {
     "id": "himno-606",
     "titulo_original": ["Llama Jesús, el Buen Pastor"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -30544,7 +30544,7 @@
   {
     "id": "himno-607",
     "titulo_original": ["Nítido rayo por Cristo"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -30601,7 +30601,7 @@
   {
     "id": "himno-608",
     "titulo_original": ["Corazones siempre alegres"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -30811,7 +30811,7 @@
   {
     "id": "himno-612",
     "titulo_original": ["Jesús te necesita hoy"],
-    "corito": "Sí",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
