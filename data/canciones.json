@@ -1,5 +1,6 @@
 [
-{ "_commentA": "https://www.recursos-biblicos.com/2013/07/50-coritos-adventistas-muy-conocidos-parte-1.html" },
+{ "_commentA": "https://www.recursos-biblicos.com/2013/07/50-coritos-adventistas-muy-conocidos-parte-1.html",
+  "_commentB": "https://ministeriovarsa.com/himnos-en-guarani/" },
 
 { "_comment1": "LETRA A • -----------------------------------------------------------------------------------------------    LETRA A" },
 
@@ -795,6 +796,28 @@
         "y todos ala[A]baban al Señor.",
         "[A]Unos cantaban, otros oraban,",
         "y [A7]todos alababan al Señ[D]or."
+      ],
+      "nota": [""]
+    },
+    "gn": {
+      "titulo": ["Ta momba´e"],
+      "titulo2": [""],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": "No",      
+      "letra": [
+        "Ta momba´e, ta momba´e,",
+        "Ta momba´e, ta momba´e,",
+        "Jesúpe che tamomba´e.",
+        "Ta purahéi, ta purahéi",
+        "Ta purahéi, ta purahéi",
+        "Jesúpe che ta purahéi.",
+        "",
+        "Juan ohecha umi Tupãndi oiva",
+        "Ha entéro vy’apópe opurahéi,",
+        "Oi opurahéiva, oi oñembo’eva,",
+        "Ha entero Jesúpe omomba’e."
       ],
       "nota": [""]
     }
@@ -2898,6 +2921,48 @@
         "[A]desde cuando Jesu[B7]cristo está con[E]mi[E7]go."
       ],
       "nota": [""]
+    }
+  }
+},
+{ "id": "con_jesus_en_la_familia",
+  "titulo_original": ["With Jesus in the family"],
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": ["Desconocido"],
+  "tonalidad": ["La Mayor (A)"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Desconocido"],
+  "referencia_biblica": [""],
+  "tags": ["Infantil"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["Con Jesús en la familia"],
+      "titulo2": [""],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": "No",      
+      "letra": [
+        "Con Jesús en la familia ¡Qué hogar feliz!,",
+        "¡Qué hogar feliz!, ¡Qué hogar feliz!",
+        "Con Jesús en la familia ¡Qué hogar feliz!",
+        "¡Qué hogar feliz!",
+        "",
+        "Con mamá en la familia ¡Qué hogar feliz!,",
+        "¡Qué hogar feliz!, ¡Qué hogar feliz!",
+        "Con mamá en la familia ¡Qué hogar feliz!",
+        "¡Qué hogar feliz!",
+        "",
+        "Con papá en la familia ¡Qué hogar feliz!,",
+        "¡Qué hogar feliz!, ¡Qué hogar feliz!",
+        "Con papá en la familia ¡Qué hogar feliz!",
+        "¡Qué hogar feliz!",
+        "",
+        "..."
+      ],
+      "nota": ["Se puede ir agregando nombres de las personas que estan en el lugar"]
     }
   }
 },
