@@ -1,4 +1,5 @@
-// ===================== DATA =====================
+// ===============================================================================================    =====================
+// ===================== DATA ===============================================================
 const DATA_URLS = {
   cancionero: "data/canciones.json",
   himnario: "data/himnario_ar.json",
@@ -19,28 +20,37 @@ let modalMode = { type: "", value: "" };
 
 let tablaturaVisible = true;
 
-// ===================== METRONOMO =====================
-let metroInterval = null;
-let metroAudioCtx = null;
+// ===================== DATA ACTUAL =====================
+function getDataActual() {
 
-let metroRunning = false;
-let metroSoundEnabled = true;
+  // HIMNARIO → solo himnos
+  if (libroActual === "himnario") {
+    return himnos;
+  }
 
-let currentBeat = 0;
-let currentCompas = "4/4";
+  if (libroActual === "campamento") {
+    return campamento;
+  }
 
-//let subdivision = 1; // 1 = normal, 2 = 8vos, 4 = 16vos
-let swing = 0;       // 0 = recto, 100 = swing extremo
-let subStep = 0;
+  // CANCIONERO → // canciones + himnos marcados como corito
+  const coritos = himnos.filter(h =>
+    normalize(h.corito) === "SI" ||
+    h.corito === true ||
+    h.corito === "Si"
+  );
 
-// ===================== AFINADOR =====================
-let micStream = null;
-let audioCtx = null;
-let analyser = null;
-let micEnabled = false;
-let rafId = null;
+  return [...canciones, ...coritos];
+}
 
-// ===================== REVISADOS =====================
+function initTabButton() {
+  const btn = document.getElementById("tabBtn");
+  if (!btn) return;
+
+  btn.addEventListener("click", toggleTablatura);
+}
+
+/* ===================== MODAL's ============================================================ */
+// ===================== REVISADOS ==========================================================
 let revisadoFiltroActual = "si"; // "si" | "no"
 
 function renderListModal({ title, list }) {
@@ -91,36 +101,9 @@ function renderListModal({ title, list }) {
     });
 }
 
-// ===================== DATA ACTUAL =====================
-function getDataActual() {
 
-  // HIMNARIO → solo himnos
-  if (libroActual === "himnario") {
-    return himnos;
-  }
 
-  if (libroActual === "campamento") {
-    return campamento;
-  }
-
-  // CANCIONERO → // canciones + himnos marcados como corito
-  const coritos = himnos.filter(h =>
-    normalize(h.corito) === "SI" ||
-    h.corito === true ||
-    h.corito === "Si"
-  );
-
-  return [...canciones, ...coritos];
-}
-
-function initTabButton() {
-  const btn = document.getElementById("tabBtn");
-  if (!btn) return;
-
-  btn.addEventListener("click", toggleTablatura);
-}
-
-// ===================== INIT =====================
+// ===================== INIT ===============================================================   =====================
 async function init() {
   const res1 = await fetch(DATA_URLS.cancionero);
   const res2 = await fetch(DATA_URLS.himnario);
@@ -207,9 +190,9 @@ async function init() {
 
 init();
 
-// ===================== HELPERS ====================================================================================
 
 
+// ===================== ALFABETO ===========================================================
 // ===================== BOTON LIMPIAR ======================
 function clearAll() {
   // limpiar buscador
@@ -731,11 +714,10 @@ function renderList(letter) {
   });
 
   expanded.sort((a, b) => {
-    return normalize(a.displayTitle)
-      .localeCompare(normalize(b.displayTitle), undefined, {
-        sensitivity: "base",
-        numeric: true
-      });
+    const numA = Number(getNumeroHimno(a.song)) || 0;
+    const numB = Number(getNumeroHimno(b.song)) || 0;
+
+    return numA - numB;
   });
 
   if (letter && letter !== "*" && letter !== "#") {

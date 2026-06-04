@@ -27,7 +27,7 @@ html, body {
 }
 
 #contenido:empty {
-  min-height: 60vh;
+  min-height: 5vh;  /*espacio sobrante al final de las listas*/
 }
 
 h1 {

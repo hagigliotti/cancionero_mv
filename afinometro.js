@@ -1,14 +1,60 @@
-let compasActual = "4/4";
+// ===============================================================================================    =====================
+// ===================== METRONOMO ===============================================================
+let metroInterval = null;
+let metroAudioCtx = null;
+
+let metroRunning = false;
+let metroSoundEnabled = true;
+
+let currentBeat = 0;
+let currentCompas = "4/4";
+
+let swing = 0;       // 0 = recto, 100 = swing extremo
+let subStep = 0;
+
+//let compasActual = "4/4";
+let subdivision = 1;
+
+
+// ===================== AFINADOR ================================================================
+let micStream = null;
+let audioCtx = null;
+let analyser = null;
+let micEnabled = false;
+let rafId = null;
+
+ 
+
+
+// ===============================================================================================    =====================
+// ===================== METRONOMO ===============================================================   
 
 function setCompas(compas) {
-
-  compasActual = compas;
+  currentCompas = compas;
 
   const span = document.getElementById("metroCompas");
-  if (span) span.innerText = compas;
+  if (span) span.innerText = currentCompas;
+
+  // reset para evitar desfase
+  currentBeat = 0;
+  subStep = 0;
 }
 
-// ===== METRONOMO ============================================================================
+
+// funcion de acento
+function isStrongBeat(currentBeat, compas) {
+  const beats = parseInt(compas.split("/")[0]) || 4;
+
+  // siempre fuerte en el 1
+  if (currentBeat === 0) return true;
+
+  // opcional: acentos secundarios
+  if (beats === 6 && currentBeat === 3) return true; // 6/8 feeling
+  if (beats === 3 && currentBeat === 2) return false;
+
+  return false;
+}
+
 const subdivisions = {
   1: 1,     // negra
   2: 2,     // corchea
@@ -60,7 +106,7 @@ function toggleMetronomo() {
   }
 }
 
-function startMetronomo() {
+async function startMetronomo() {
   const bpm = parseInt(document.getElementById("metroBpm").value) || 90;
 
   const baseInterval = 60000 / bpm;
@@ -74,11 +120,15 @@ function startMetronomo() {
   metroAudioCtx =
     metroAudioCtx || new (window.AudioContext || window.webkitAudioContext)();
 
+  if (metroAudioCtx.state === "suspended") {
+    await metroAudioCtx.resume();
+  }
+
   clearInterval(metroInterval);
 
   metroInterval = setInterval(() => {
     playBeat(baseInterval);
-  }, baseInterval / subdivisions[subdivision]);
+  }, baseInterval / (subdivisions[subdivision] || 1));
 }
 
 function stopMetronomo() {
@@ -96,30 +146,8 @@ function playBeat(baseInterval) {
   animateBeat();
 
   const beats = parseInt(currentCompas.split("/")[0]) || 4;
-  const isStrongBeat = currentBeat === 0;
+  const strongBeat = isStrongBeat(currentBeat, currentCompas);
 
-  // 🎯 swing delay simple por subdivisión
-  let delayFactor = 1;
-
-  if (swing > 0) {
-    const isEvenSub = subStep % 2 === 0;
-
-    if (subdivision === 2) {
-      // corcheas swing
-      delayFactor = isEvenSub
-        ? (1 + swing / 100)
-        : (1 - swing / 100);
-    }
-
-    if (subdivision === 4) {
-      // semicorcheas swing leve
-      delayFactor = isEvenSub
-        ? (1 + swing / 150)
-        : (1 - swing / 150);
-    }
-  }
-
-  // sonido
   if (metroSoundEnabled) {
     const osc = metroAudioCtx.createOscillator();
     const gain = metroAudioCtx.createGain();
@@ -127,14 +155,13 @@ function playBeat(baseInterval) {
     osc.connect(gain);
     gain.connect(metroAudioCtx.destination);
 
-    osc.frequency.value = isStrongBeat ? 1400 : 900;
-    gain.gain.value = isStrongBeat ? 1 : 0.5;
+    osc.frequency.value = strongBeat ? 1400 : 900;
+    gain.gain.value = strongBeat ? 1 : 0.5;
 
     osc.start();
     osc.stop(metroAudioCtx.currentTime + 0.05);
   }
 
-  // avanzar subdivisión
   subStep++;
 
   if (subStep >= subdivision) {
@@ -144,7 +171,6 @@ function playBeat(baseInterval) {
 }
 
 function advanceBeat(beats = 4) {
-
   currentBeat++;
 
   if (currentBeat >= beats) {
@@ -210,7 +236,7 @@ function changeCompas(value) {
 }
 
 function setSubdivision(value) {
-  subdivision = value;
+  subdivision = parseInt(value) || 1;
   subStep = 0;
 
   if (metroRunning) {
@@ -223,10 +249,30 @@ function setSwing(value) {
   swing = parseInt(value);
 }
 
-// ===== AFINADOR ============================================================================
+
+
+
+
+// Mas real
+function getBeatAccent(currentBeat, compas) {
+  const beats = parseInt(compas.split("/")[0]) || 4;
+
+  if (currentBeat === 0) return "strong";
+  if (beats === 6 && currentBeat === 3) return "medium";
+
+  return "weak";
+}
+
+
+
+
+
+
+
+// ===============================================================================================    =====================
+// ===================== AFINADOR ================================================================
 const NOTE_STRINGS = [
-  "C", "C#", "D", "D#", "E", "F",
-  "F#", "G", "G#", "A", "A#", "B"
+  "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"
 ];
 
 async function toggleMic() {
@@ -236,7 +282,6 @@ async function toggleMic() {
   }
 
   try {
-
     audioCtx =
       audioCtx || new (window.AudioContext || window.webkitAudioContext)();
 
@@ -537,7 +582,7 @@ function setCompasUI(compas) {
 
   // aquí podrías sincronizar lógica del metrónomo si quieres
 }
-setCompasUI(compas || "4/4");
+setCompasUI("4/4");
 
 
 // RESALTAR
