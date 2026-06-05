@@ -69,6 +69,14 @@ h1 {
   font-size: 14px;
 }
 
+.song-note {
+  margin-top: 20px;
+  padding: 10px 15px;
+  border-left: 4px solid #4fc3f7;
+  background: rgba(79, 195, 247, 0.08);
+  font-style: italic;
+}
+
 /* ================================== LOGO DINAMICO ==================================================================== */
 .logo-title {
   text-align: center;
@@ -535,6 +543,31 @@ a.menu-item {
   border-bottom: 2px solid #38bdf8;
 }
 
+/*Tamano de bandera */
+.lang-flags-list {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.lang-flags-list .lang-flag {
+  font-size: 14px; /* mantiene consistencia */
+  transform: scale(0.8);
+  line-height: 1;
+}
+
+.flag-mini {
+  font-size: 5px !important;
+  line-height: 1;
+}
+
+.flags-list {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  gap: 2px 4px;
+  justify-content: end;
+}
+
 /* **********  MODO CLARO/OSCURO  ********** */
 /* MODO CLARO 👓 → botón negro */
 .light-mode  {
@@ -617,6 +650,18 @@ body.projector #alfabeto {
     display: flex;
     justify-content: center;
 }*/
+
+.hymn-ranges .alpha {
+  font-size: 10px;
+  padding: 3px 5px;
+  opacity: 1;
+  color: #38bdf8;
+}
+
+.alpha-row .alpha {
+  font-size: 12px;
+  padding: 4px 7px;
+}
 
 /* ====================  ACERCA DE....  ==================== */
 /* MODAL FONDO */
@@ -1005,6 +1050,9 @@ body.projector #alfabeto {
   background: #38bdf8;
   color: #122033;
   font-weight: bold;
+
+  font-size: 12px;
+  padding: 4px 6px;
 }
 
 .clear-btn:hover {

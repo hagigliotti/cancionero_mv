@@ -114,19 +114,60 @@ function cleanTitleForSort(value) {
 }
 
 function sortByTitle(data) {
-  return data.sort((a, b) => {
-    const aT = cleanTitleForSort(a.idiomas?.[idiomaActual]?.titulo);
-    const bT = cleanTitleForSort(b.idiomas?.[idiomaActual]?.titulo);
+  return [...data].sort((a, b) => {
 
-    const aNum = extractLeadingNumber(aT);
-    const bNum = extractLeadingNumber(bT);
+    const aTitulo2 = a.idiomas?.[idiomaActual]?.titulo2 || "";
+    const bTitulo2 = b.idiomas?.[idiomaActual]?.titulo2 || "";
 
-    if (aNum !== null && bNum !== null) return aNum - bNum;
+    const aTitulo1 = a.idiomas?.[idiomaActual]?.titulo || "";
+    const bTitulo1 = b.idiomas?.[idiomaActual]?.titulo || "";
 
-    return normalize(aT).localeCompare(normalize(bT), undefined, {
-      numeric: true,
-      sensitivity: "base"
+    // 🔥 clave de orden: titulo2 si existe, si no titulo1
+    const aKey = normalize(aTitulo2 || aTitulo1);
+    const bKey = normalize(bTitulo2 || bTitulo1);
+
+    return aKey.localeCompare(bKey, undefined, {
+      sensitivity: "base",
+      numeric: true
     });
+  });
+}
+
+function getNumericSongs(data) {
+  return data.filter(song => {
+    const title = song.idiomas?.[idiomaActual]?.titulo || "";
+    return /^\d/.test(title.trim());
+  });
+}
+
+function sortNumericSongs(data) {
+  return [...data].sort((a, b) => {
+
+    const aTitle = a.idiomas?.[idiomaActual]?.titulo || "";
+    const bTitle = b.idiomas?.[idiomaActual]?.titulo || "";
+
+    const aNum = parseInt((aTitle.match(/^\d+/) || [0])[0], 10);
+    const bNum = parseInt((bTitle.match(/^\d+/) || [0])[0], 10);
+
+    return aNum - bNum;
+  });
+}
+
+function renderABCList() {
+  const data = getDataActual();
+  renderListModal({
+    title: "🔤 Orden alfabético",
+    list: sortByTitle(data)
+  });
+}
+
+function renderHashList() {
+  const data = getDataActual();
+  const numeric = getNumericSongs(data);
+
+  renderListModal({
+    title: "🔢 Orden numérico",
+    list: sortNumericSongs(numeric)
   });
 }
 

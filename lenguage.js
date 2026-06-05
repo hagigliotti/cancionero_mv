@@ -1,5 +1,6 @@
-// ===================== APP.js ====================================================================================
-// ===================== FLAGS =====================
+// ===============================================================================================
+// ===================== FLAGS (MAPEO DE IDIOMAS) ===============================================
+// Emojis de bandera por código de idioma
 const FLAGS = {
   es: "🇦🇷",
   en: "🇺🇸",
@@ -8,40 +9,90 @@ const FLAGS = {
   fr: "🇫🇷",
   de: "🇩🇪",
   he: "🇮🇱",
-  gn: "🇵🇾" 
+  gn: "🇵🇾",
+  zu: "🇿🇦",
+  af: "🇿🇦",
+  sw: "🇹🇿",
+  is: "🇮🇸"
 };
 
+// Nombres legibles por idioma
 const FLAG_NAMES = {
   es: "Argentina",
   en: "Estados Unidos",
-  il: "Israel",
+  he: "Israel",
   it: "Italia",
   pt: "Brasil",
   fr: "Francia",
-  de: "Alemania",
-  gn: "Guaraní"
+  gn: "Guaraní",
+  af: "Afrikaans",
+  sw: "Kiswahili",
+  zu: "Zulu",
+  is: "Islandés"
 };
 
-// ===================== STATE =====================
+
+// ===============================================================================================
+// ===================== ESTADO GLOBAL DEL IDIOMA ===============================================
 let idiomaActual = "es";
 
-// ===================== INIT LANGUAGE =====================
+
+// ===============================================================================================
+// ===================== INICIALIZACIÓN DEL IDIOMA ===============================================
 function initLanguage(defaultLang = "es") {
+
+  // carga desde localStorage o usa idioma por defecto
   idiomaActual = localStorage.getItem("idioma") || defaultLang;
 
   const idiomaSelect = document.getElementById("idioma");
   const menuIdioma = document.getElementById("menuIdioma");
 
+  // sincroniza UI
   if (idiomaSelect) idiomaSelect.value = idiomaActual;
   if (menuIdioma) menuIdioma.value = idiomaActual;
 
   updateLangFlag();
 }
 
-// ===================== SET LANGUAGE =====================
-function setIdioma(lang) {
-  idiomaActual = lang;
 
+// ===============================================================================================
+// ===================== DISPONIBILIDAD DE IDIOMAS ==============================================
+
+// Devuelve qué idiomas existen realmente en los datos
+function getAvailableLanguages(data) {
+  const set = new Set();
+
+  data.forEach(song => {
+    if (!song.idiomas) return;
+
+    Object.keys(song.idiomas).forEach(lang => {
+      const titulo = song.idiomas[lang]?.titulo;
+      if (titulo && titulo.length > 0) {
+        set.add(lang);
+      }
+    });
+  });
+
+  return set;
+}
+
+
+// Si el idioma actual no existe en los datos → fallback automático
+function validateIdiomaActual() {
+  const data = getDataActual();
+  const available = getAvailableLanguages(data);
+
+  if (!available.has(idiomaActual)) {
+    idiomaActual = [...available][0];
+  }
+}
+
+
+// ===============================================================================================
+// ===================== CAMBIO DE IDIOMA =======================================================
+function setIdioma(lang) {
+
+  idiomaActual = lang;
   localStorage.setItem("idioma", lang);
 
   const idiomaSelect = document.getElementById("idioma");
@@ -52,11 +103,14 @@ function setIdioma(lang) {
 
   updateLangFlag();
 
+  // refrescar UI dependiente del idioma
   renderAlphabet();
   renderList(letraActiva);
 }
 
-// ===================== FLAG BUTTON =====================
+
+// ===============================================================================================
+// ===================== BOTÓN DE BANDERA =======================================================
 function updateLangFlag() {
   const langBtn = document.getElementById("langBtn");
   if (!langBtn) return;
@@ -64,17 +118,28 @@ function updateLangFlag() {
   langBtn.innerText = FLAGS[idiomaActual] || "🌐";
 }
 
-// ===================== LANGUAGE HELPERS =====================
+
+// ===============================================================================================
+// ===================== FLAGS POR CANCION ======================================================
+
+// Devuelve banderas disponibles (versión compacta para listas)
 function getAvailableFlags(song) {
   const idiomas = song.idiomas || {};
 
   return Object.keys(idiomas)
     .filter(lang => idiomas[lang])
     .sort((a, b) => (FLAG_NAMES[a] || a).localeCompare(FLAG_NAMES[b] || b))
-    .map(lang => FLAGS[lang] || "🌐")
+    .map(lang => `
+      <span onclick="changeLanguage('${lang}', '${song.id}')"
+            style="cursor:pointer">
+        ${FLAGS[lang] || "🌐"}
+      </span>
+    `)
     .join(" ");
 }
 
+
+// Devuelve banderas con estilo (UI más completa)
 function renderLanguageFlags(song) {
   const idiomas = song.idiomas || {};
 
@@ -89,7 +154,11 @@ function renderLanguageFlags(song) {
     `).join("");
 }
 
+
+// ===============================================================================================
+// ===================== CAMBIO DIRECTO DE IDIOMA POR CANCION ===================================
 function changeLanguage(lang, songId) {
+
   idiomaActual = lang;
   localStorage.setItem("idioma", idiomaActual);
 
@@ -100,14 +169,17 @@ function changeLanguage(lang, songId) {
   openSong(songId);
 }
 
-// ===================== LANGUAGE INIT EVENTS =====================
+
+// ===============================================================================================
+// ===================== UI DE BOTÓN DE IDIOMA ===================================================
 function initLanguageUI() {
+
   const langBtn = document.getElementById("langBtn");
   const idiomaSelect = document.getElementById("idioma");
 
   let pressTimer;
 
-  // click rápido
+  // CLICK: cambia idioma secuencialmente
   langBtn?.addEventListener("click", () => {
     const options = Array.from(idiomaSelect.options);
     const currentIndex = options.findIndex(o => o.value === idiomaActual);
@@ -115,7 +187,7 @@ function initLanguageUI() {
     setIdioma(options[nextIndex].value);
   });
 
-  // long press
+  // LONG PRESS: abre selector manual
   langBtn?.addEventListener("mousedown", () => {
     pressTimer = setTimeout(() => {
       idiomaSelect.style.pointerEvents = "auto";
@@ -128,6 +200,7 @@ function initLanguageUI() {
   langBtn?.addEventListener("mouseup", () => clearTimeout(pressTimer));
   langBtn?.addEventListener("mouseleave", () => clearTimeout(pressTimer));
 
+  // cambio desde select
   idiomaSelect?.addEventListener("change", () => {
     setIdioma(idiomaSelect.value);
 
@@ -137,30 +210,37 @@ function initLanguageUI() {
 }
 
 
+// ===============================================================================================
+// ===================== HELPERS DE CANCIONES ===================================================
 
-// ===================== UTILS.js ===============================================================
-// TODO LO RELACIONADO CON IDIOMAS DENOTRO DE SONG
+// Título según idioma actual
 function getSortTitle(song) {
   return normalize(song.idiomas?.[idiomaActual]?.titulo || "");
 }
 
+// Número de himno si existe
 function getNumeroHimno(c) {
   return c.idiomas?.[idiomaActual]?.numero_himno ?? "";
 }
 
-// ===================== TITULO 2 =====================
+
+// ===============================================================================================
+// ===================== TÍTULOS MULTIIDIOMA ====================================================
+
+// Devuelve todos los títulos posibles de una canción
 function getAllSongTitles(song) {
   const base = song.idiomas?.[idiomaActual]?.titulo || "";
-
   const extras = normalizeArrayField(song.idiomas?.[idiomaActual]?.titulo2 || []);
-  
+
   return [base, ...extras]
     .map(t => (t || "").trim())
     .filter(Boolean);
 }
 
+
+// Devuelve el mejor título disponible (fallback automático)
 function getSongTitle(song) {
-  // 1. intentar idioma actual
+
   const current = song?.idiomas?.[idiomaActual]?.titulo;
 
   if (Array.isArray(current)) {
@@ -172,7 +252,7 @@ function getSongTitle(song) {
     return current.trim();
   }
 
-  // 2. fallback: cualquier idioma disponible
+  // fallback a cualquier idioma
   const idiomas = song?.idiomas || {};
 
   for (const lang of Object.keys(idiomas)) {
@@ -181,7 +261,6 @@ function getSongTitle(song) {
 
     if (Array.isArray(titulo)) {
       const valid = titulo.find(t => typeof t === "string" && t.trim());
-
       if (valid) return valid.trim();
     }
 
@@ -193,7 +272,9 @@ function getSongTitle(song) {
   return "Sin título";
 }
 
-// NORMALIZACIÓN DE TEXTOS MULTILANGUAGE
+
+// ===============================================================================================
+// ===================== NORMALIZACIÓN GENERAL ==================================================
 function normalizeText(value) {
   if (!value) return "";
   if (Array.isArray(value)) return value.filter(Boolean).join(", ");
@@ -211,10 +292,11 @@ function normalizeField(value) {
   return Array.isArray(value) ? value : [value];
 }
 
-// PARTE DE NORMALIZACIÓN DE SONGS (idioma dependiente)
-// ===================== NORMALIZAR SONG =====================
 
+// ===============================================================================================
+// ===================== NORMALIZACIÓN DE CANCIONES =============================================
 function normalizeSong(song) {
+
   if (!song?.idiomas) return song;
 
   Object.keys(song.idiomas).forEach(lang => {
@@ -232,7 +314,9 @@ function normalizeSong(song) {
   return song;
 }
 
-// ===================== CAMPOS ESPECÍFICOS =====================
+
+// ===============================================================================================
+// ===================== CAMPOS ESPECÍFICOS =====================================================
 function normalizeTraductor(lang) {
   const trad = lang?.traductor;
   if (!trad) return [];
