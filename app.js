@@ -706,7 +706,7 @@ function renderAudioLink(song, idiomaData) {
   return `
     <div class="audio">
       <b>Audio:</b>
-      <a href="${url}" target="_blank" class="${label.toLowerCase().replace(" ", "")}">
+      <a href="${url}" target="_blank" class="${label.toLowerCase().replace(/\s/g, "")}">
         ${icon} ${label}
       </a>
     </div>

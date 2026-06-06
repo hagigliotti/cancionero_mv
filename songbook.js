@@ -117,6 +117,7 @@ function openSong(id) {
         ${renderPersonLinks("Compositor", song.compositor)}
         ${renderPersonLinks("Traductor", s.traductor)}
         <b>Año:</b> ${normalizeSimple(song.year)}
+        ${renderAudioLink(song, s)}
       </div>
 
       <div>
@@ -216,6 +217,9 @@ function openSong(id) {
       </div>
 
       <div class="flags">
+          ${renderAudioLink(song, s)} |
+
+      
         <b>Idiomas:</b> ${renderLanguageFlags(song)}
       </div>
 
@@ -236,27 +240,30 @@ function openSong(id) {
 
   // Render completo
   document.getElementById("contenido").innerHTML = `
-    <h2>${tituloFinal}</h2>
-    ${meta}
+  <h2>${tituloFinal}</h2>
 
-    <div class="lyrics">
-      ${renderLyrics(s.letra)}
-    </div>
+  ${meta}
 
-    ${
-      notaValida
-        ? `
-          <div class="song-note">
-            ${
-              Array.isArray(notaLimpia)
-                ? notaLimpia.map(n => `<p>${n}</p>`).join("")
-                : notaLimpia.split("\n").map(n => `<p>${n}</p>`).join("")
-            }
-          </div>
-        `
-        : ""
-    }
-  `;
+
+
+  <div class="lyrics">
+    ${renderLyrics(s.letra)}
+  </div>
+
+  ${
+    notaValida
+      ? `
+        <div class="song-note">
+          ${
+            Array.isArray(notaLimpia)
+              ? notaLimpia.map(n => `<p>${n}</p>`).join("")
+              : notaLimpia.split("\n").map(n => `<p>${n}</p>`).join("")
+          }
+        </div>
+      `
+      : ""
+  }
+`;
 
   applyTablaturaState();
   window.scrollTo({ top: 0, behavior: "smooth" });
