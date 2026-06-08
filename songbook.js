@@ -117,7 +117,7 @@ function openSong(id) {
         ${renderPersonLinks("Compositor", song.compositor)}
         ${renderPersonLinks("Traductor", s.traductor)}
         <b>Año:</b> ${normalizeSimple(song.year)}
-        ${renderAudioLink(song, s)}
+        
       </div>
 
       <div>
@@ -205,7 +205,7 @@ function openSong(id) {
                 `<span class="tag-link" onclick="openTagModal('${tag}')">${tag}</span>`
               ).join(", ")
             : "Desconocido"
-        } |
+        } | 
 
         <b>Revisado:</b>
         <span
@@ -215,11 +215,8 @@ function openSong(id) {
           ${(song.idiomas?.[idiomaActual]?.revisado || "").toLowerCase() === "si" ? "Si" : "No"}
         </span>
       </div>
-
+      ${renderAudioLink(song, s)}
       <div class="flags">
-          ${renderAudioLink(song, s)} |
-
-      
         <b>Idiomas:</b> ${renderLanguageFlags(song)}
       </div>
 
