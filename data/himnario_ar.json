@@ -1347,7 +1347,7 @@
   "compas": ["4/4"],
   "ritmo": ["Balada"],
   "referencia_biblica": ["Salmos 119:18"],
-  "tags": ["Adoración", "Clásico", "Petición","Worship"],
+  "tags": ["Adoración", "Oración", "Petición", "Worship"],
 
   "idiomas": {
     "es": {
@@ -1356,17 +1356,14 @@
       "audio_url": "",
       "traductor": ["Desconocido"],
       "partitura": "No",
-      "revisado": "No",
+      "revisado": "Si",
       "letra": [
-        "[D]Abre mis [G]ojos, [A]Jesús quiero [D]verte,[Bm]",
-        "conmigo te[Em]nerte, [A]decir que te [G]amo.[D]",
-        "[D]Abre mi [G]oído, [A]hoy quiero escu[D]charte.[Bm]",
-        "¡Abre mis [Em]ojos [A]para contem[G]plarte![D]",
         "",
         "[D]Abre mis [G]ojos, [A]Jesús quiero [D]verte,[Bm]",
         "conmigo te[Em]nerte, [A]decir que te [G]amo.[D]",
         "[D]Abre mi [G]oído, [A]hoy quiero escu[D]charte.[Bm]",
-        "¡Abre mis [Em]ojos [A]para contem[G]plarte![D](x2)"
+        "¡Abre mis [Em]ojos [A]para contem[G]plarte![D]",
+        ""
       ],
       "nota": [""]
     },
@@ -7415,33 +7412,79 @@
   },
   {
     "id": "himno-152",
-    "titulo_original": ["To Thee, Jesus"],
+    "titulo_original": ["I love you, Lord"],
     "corito": "Si",
-    "autor": ["Desconocido"],
-    "compositor": ["Desconocido"],
-    "year": ["Desconocido"],
-    "tonalidad": ["E"],
-    "tempo_bpm": ["76"],
+    "autor": ["Laurie Klein"],
+    "compositor": ["Laurie Klein"],
+    "year": ["1978"],
+    "tonalidad": ["Fa Mayor (F)"],
+    "tempo_bpm": ["70"],
     "compas": ["4/4"],
-    "ritmo": ["Corito"],
-    "referencia_biblica": ["Salmos 141:2; Apocalipsis 5:8"],
-    "tags": ["Adoración", "Oración", "Jesucristo", "Devoción"],
+    "ritmo": ["Balada"],
+    "referencia_biblica": ["Salmos 116:1, 2"],
+    "tags": ["Adoración", "Oración", "Gratitud", "Worship", "Devoción"],
+    
     "idiomas": {
       "es": {
         "titulo": ["A ti, Jesús"],
-        "titulo2": [""],
+        "titulo2": ["A ti, Señor (aka)"],
         "numero_himno": "152",
         "audio_url": "",
         "traductor": [""],
         "partitura": "No",
-        "revisado": "No",
+        "revisado": "Si",
         "letra": [
           "1",
-          "A ti, Jesús, alzaré mi voz,",
-          "para adorarte, mi Salvador.",
-          "Acepta hoy, mi Rey y Señor,",
-          "el humilde don de mi amor",
-          "en oración."
+          "[F]A ti Jesús (Señor), [C]alzaré mi [F]voz",
+          "para [Bb]adorar[Gm]te, mi Salva[C]dor.[C7]",
+          "[F]Acepta hoy, mi [C]rey y Se[F]ñor,",
+          "[F7]el humilde [Bb]don [Gm]de mi [Bb]amor [C]en ora[F]ción.",
+          "",
+          "2",
+          "[F]Te amo oh Dios, [C]alzo a tí mi [F]voz",
+          "mi [Bb]ser lo [Gm]anhela con devo[C]ción.[C7]",
+          "[F]Que mi alma [C]con gratitud Se[F]ñor",
+          "[F7]eleve a ti [Bb]una [Bb]dulce [C]can[F]ción.",
+          "",
+          "Final:",
+          "[F7]eleve a ti [Bb]una [Bb]dulce [C]can[F]ción."
+        ],
+        "nota": [ "En el Himanrio Advetista se canta una sola estrofa y se reemplazo Señor por Jesús.",
+                  "No se canta la segunda estrofa."
+        ]
+      },
+      "en": {
+        "titulo": ["I love you, Lord"],
+        "titulo2": [""],
+        "audio_url": "https://open.spotify.com/intl-es/track/3mIyisrMRbIpsInWOd3JTd?si=257ef60816d14364",
+        "traductor": ["-"],
+        "partitura": "No",
+        "revisado": "No",      
+        "letra": [
+          "1",
+          "I love You, Lord, and I lift my voice",
+          "To worship You, O my soul rejoice!",
+          "Take joy, my King, in what You hear,",
+          "May it be a sweet, sweet sound in Your ear.",
+          "",
+          "(Repeat verse 2 twice)",
+          "",
+          "May it be a sweet, sweet sound",
+          "May it be a sweet, sweet sound",
+          "May it be a sweet, sweet sound in Your ear."
+        ],
+        "nota": [""]
+      },
+      "pt": {
+        "titulo": ["Eu Te amo, ó Deus"],
+        "traductor": ["-"],
+        "partitura": "No",
+        "revisado": "No",
+        "letra": [
+          "Eu Te amo, ó Deus, e com a minha voz",
+          "Te adorarei, ó meu Rei e Senhor.",
+          "Alegra-Te, ó [C]meu Salva[F]dor,",
+          "Com o som do meu louvor e do meu amor."
         ],
         "nota": [""]
       }

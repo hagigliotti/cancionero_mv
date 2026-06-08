@@ -49,7 +49,7 @@
         "[D]A Jesús, a [F#m-G]Jesús, a Jesús dale [A]todo,",
         "[Em]la tristeza en [A]gozo cambia[D]rá."
       ],
-      "nota": ["El himno #236 del Himnario Adventista se llama 'A Jesús entrega a todo', el cambio se realizó por derechos de autor."]
+      "nota": ["El himno #236 del Himnario Adventista se llama \"A Jesús entrega a todo\", el cambio se realizó por derechos de autor."]
     },
     "en": {
       "titulo": ["Give Them All to Jesús"],
@@ -109,9 +109,9 @@
       "revisado": "No",        
       "letra": [
         "1",
-        "[Am]Ante ti postrado [C]estoy, aquí.",
+        "[Am]Ante ti postrado est[C]oy, aquí.",
         "Te rindo mi [G]ser, te rindo mi [F]ser.",
-        "Con tu [Am]amor atráeme, [C]Señor.",
+        "Con [Am]tu amor atráeme[C], Señor.",
         "Vengo a tus [G]pies, vengo a tus [F]pies.",
         "A ti me [Am]rindo. [C]- [G]- [F]-",
         "",
@@ -133,7 +133,7 @@
         "Con tu [F]gran po[C]der muévete en mi [G]ser.",
         "Cumple, Se[Dm]ñor, tu vo[Am]luntad en [G]mí.",
         "",
-        "(Repite dos veces estrofa 3)",
+        "Repite x3",
         "",
         "Cumple, Se[Dm]ñor, tu vo[Am]luntad en [G]mí.",
         "",
@@ -237,78 +237,6 @@
     }
   }
 },
-{ "id": "a_ti_señor",
-  "titulo_original": ["I love you, Lord"],
-  "autor": ["Laurie Klein"],
-  "compositor": ["Laurie Klein"],
-  "year": ["1978"],
-  "tonalidad": ["Fa Mayor (F)"],
-  "tempo_bpm": ["70"],
-  "compas": ["4/4"],
-  "ritmo": ["Balada"],
-  "referencia_biblica": ["Salmos 116:1, 2"],
-  "tags": ["Adoración", "Clásico", "Gratitud", "Worship"],
-
-  "idiomas": {
-    "es": {
-      "titulo": ["A ti Señor"],
-      "titulo2": [""],
-      "audio_url": "https://open.spotify.com/intl-es/track/1pvS9HylBSoYdlteJhUZDd?si=7326e73e72004a44",
-      "traductor": ["Desconocido"],
-      "partitura": "No",
-      "revisado": "No",
-      "letra": [
-        "1",
-        "[F]A ti Señor, [C]alzaré mi [F]voz",
-        "para [Bb]adorar[Gm]te, mi Salva[C]dor.[C7]",
-        "[F]Acepta hoy, mi [C]rey y Se[F]ñor,",
-        "[F7]el humilde [Bb]don [Gm]de mi [Bb]amor [C]en ora[F]ción.",
-        "",
-        "2",
-        "[F]Te amo oh Dios, [C]alzo a tí mi [F]voz",
-        "mi [Bb]ser lo [Gm]anhela con devo[C]ción.[C7]",
-        "[F]Que mi alma [C]con gratitud Se[F]ñor",
-        "[F7]eleve a ti [Bb]una [Bb]dulce [C]can[F]ción. (x2)"
-      ],
-      "nota": [""]
-    },
-    "en": {
-      "titulo": ["I love you, Lord"],
-      "titulo2": [""],
-      "audio_url": "https://open.spotify.com/intl-es/track/3mIyisrMRbIpsInWOd3JTd?si=257ef60816d14364",
-      "traductor": ["-"],
-      "partitura": "No",
-      "revisado": "No",      
-      "letra": [
-        "1",
-        "I love You, Lord, and I lift my voice",
-        "To worship You, O my soul rejoice!",
-        "Take joy, my King, in what You hear,",
-        "May it be a sweet, sweet sound in Your ear.",
-        "",
-        "(Repeat verse 2 twice)",
-        "",
-        "May it be a sweet, sweet sound",
-        "May it be a sweet, sweet sound",
-        "May it be a sweet, sweet sound in Your ear."
-      ],
-      "nota": [""]
-    },
-    "pt": {
-      "titulo": ["Eu Te amo, ó Deus"],
-      "traductor": ["-"],
-      "partitura": "No",
-      "revisado": "No",
-      "letra": [
-        "Eu Te amo, ó Deus, e com a minha voz",
-        "Te adorarei, ó meu Rei e Senhor.",
-        "Alegra-Te, ó [C]meu Salva[F]dor,",
-        "Com o som do meu louvor e do meu amor."
-      ],
-      "nota": [""]
-    }
-  }
-},
 { "id": "abba_nunca_falla",
   "titulo_original": ["Abba (Nunca falla)"],
   "autor": ["Marcos Brunet"],
@@ -379,25 +307,30 @@
       "audio_url": "https://open.spotify.com/search/abre%20mis%20ojos%20jesus%20quiero%20verte",
       "traductor": ["Desconocido"],
       "partitura": "No",
-      "revisado": "No",
+      "revisado": "Si",
       "letra": [
         "",
         "[D]Abre mis ojos, oh Cristo,",
         "[A]abre mis ojos, Señor,",
         "yo quiero [G]verte,",
-        "yo quiero [D]verte. [x2]",
+        "yo quiero [D]verte.",
         "",
-        "Quiero [A]ver tu majes[Bm]tad",
-        "[Em]brillando sobre toda la [A]tierra,",
-        "sentir tu [A7]gran poder y [Bm]amor,",
-        "yo quiero [G]estar en tu pre[A]sencia.",
+        "Repite",
+        "",
+        "Quiero ve[A]r tu majest[Bm]ad",
+        "brill[Em]ando sobre toda la ti[A]erra,",
+        "sent[A7]ir tu gran poder y am[Bm]or,",
+        "yo quiero est[G]ar en tu pre[A]sencia.",
         "",
         "[D]Santo, Santo, Santo,",
         "[A]Santo, Santo, Santo,",
         "[G]Santo, Santo, [A]Santo,",
-        "tú eres [D]Santo."
+        "tú eres [D]Santo.",
+        "",
+        "Repite",
+        ""
       ],
-      "nota": [""]
+      "nota": ["Repite la utilma estrofa varias veces. Cada vez mas suave."]
     },
     "en": {
       "titulo": ["Open the eyes of my heart"],
@@ -17978,14 +17911,5 @@
 { "_comment27": "LETRA Z • -----------------------------------------------------------------------------------------------    LETRA Z"  },
 
 { "_comment28": "Numeros • -----------------------------------------------------------------------------------------------    Numeros"  }
-
-
-
-
-  
-
-  
-
-  
   
 ]
