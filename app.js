@@ -632,10 +632,33 @@ function renderLyrics(text) {
     // 🔥 Detectar títulos especiales
     const clean = line.trim();
 
+    const esIntro = /^intro:?$/i.test(clean);
     const esNumero = /^\d+$/.test(clean);
     const esCoro = /^coro:?$/i.test(clean);
+    const esPuente = /^puente:?$/i.test(clean);
+    const esModula = /^modula:?$/i.test(clean);
+    const esFinal = /^final:?$/i.test(clean);
+    const esInterludio = /^interludio:?$/i.test(clean);
+    
+    const esMasc = /^voz masculina:?$/i.test(clean);
+    const esFem = /^voz femenina:?$/i.test(clean);
 
-    if (esNumero || esCoro) {
+    const enChorus = /^chorus:?$/i.test(clean);
+    const enBridge = /^bridge:?$/i.test(clean);
+    const enInterlude = /^interlude:?$/i.test(clean);
+
+    const ptRefrão = /^refrão:?$/i.test(clean);
+
+    const frChœur = /^chœur:?$/i.test(clean);
+
+    const itPonte = /^ponte:?$/i.test(clean);
+
+
+    if (esIntro || esNumero || esCoro || esModula || esFinal || esPuente || esInterludio || esMasc || esFem || 
+        enChorus || enBridge || enInterlude ||
+        ptRefrão || 
+        frChœur || 
+        itPonte) {
       return `<div class="titulo-seccion">${escapeHtml(line)}</div>`;
     }
 
