@@ -1254,7 +1254,7 @@ body.projector #menuBtn   { color: white; }
 
   .chord {
     font-size: 1em !important;
-    top: -3.2em; /*-3.6*/
+    top: -3.0em; /*-3.6*/ /*Esto es la distancia ente el text y la tablatura: mas grande - mas alto*/
   }
 
   .alpha {
