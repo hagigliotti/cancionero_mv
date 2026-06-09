@@ -1,452 +1,823 @@
-/* ==================================  BASE  ============================================================================= */
-body {
-  margin: 0;
-  font-family: system-ui;
-  transition: background 0.3s ease, color 0.3s ease;
-  font-size: 16px;
-  -webkit-text-size-adjust: 100%;
-  overflow-x: clip;
-  min-height: 100vh;
+/* ============================================================
+   CANCIONERO MV — NUEVO DISEÑO
+   Paleta: Navy #122033 · Sky #38bdf8 · Blanco #fff · Gris #e2e8f0
+   ============================================================ */
+
+/* ---------- TOKENS ---------- */
+:root {
+  --navy:      #122033;
+  --navy-mid:  #1e3a55;
+  --navy-soft: #2a4a6b;
+  --sky:       #38bdf8;
+  --sky-dark:  #0ea5e9;
+  --sky-glow:  rgba(56, 189, 248, 0.18);
+  --white:     #ffffff;
+  --gray-50:   #f8fafc;
+  --gray-100:  #e2e8f0;
+  --gray-200:  #cbd5e1; /*cbd5e1*/
+  --gray-500:  #64748b;
+  --green:     #22c55e;
+  --red:       #ef4444;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 999px;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,.12);
+  --shadow-md: 0 4px 20px rgba(0,0,0,.18);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,.25);
+  --trans:     all 0.22s ease;
 }
+
+/* ============================================================
+   BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
 
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   min-height: 100%;
-  overflow-x: clip; /* mejor que hidden en móviles modernos */
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
 }
 
-* {
-  box-sizing: border-box;
-}
-.top-row,
-.top-inline,
-.buscador-container {
-  min-width: 0;
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  transition: background 0.35s ease, color 0.35s ease;
+  line-height: 1.6;
 }
 
-#contenido:empty {
-  min-height: 5vh;  /*espacio sobrante al final de las listas*/
+h1 { text-align: center; padding: 10px; margin: 0; }
+
+/* app wrapper */
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 40px;
 }
 
-h1 {
+#contenido:empty { min-height: 5vh; }
+
+/* ============================================================
+   FOOTER 
+   ============================================================ */
+.app-footer {
   text-align: center;
-  padding: 10px;
+  font-size: 12px;
+  opacity: 0.5;
+  padding: 2px 10px 4px;
+  margin-top: 0;
+  padding-top: 0;
+  line-height: 1;
 }
 
-/* ===== TOP INLINE ===== */
+.app {
+  padding-bottom: 0px;
+}
+
+/* ============================================================
+   MODOS DE COLOR
+   NOTA: "light-mode" = fondo oscuro (night)
+         "dark-mode"  = fondo claro  (day)
+   ============================================================ */
+
+/* ----- MODO NOCTURNO (light-mode) ----- */
+.light-mode {
+  background: linear-gradient(160deg, #0d1e30 0%, #122033 60%, #1a2e45 100%);
+  color: #e8f4fd; 
+  min-height: 100vh;
+}
+
+/* ----- MODO DIURNO (dark-mode) ----- */
+.dark-mode {
+  background: linear-gradient(160deg, #f0f9ff 0%, #e8f4fd 60%, #f8fafc 100%);
+  color: #122033;
+  min-height: 100vh;
+}
+
+/* ============================================================
+   LOGO
+   ============================================================ */
+.logo-title {
+  text-align: center;
+  margin: 20px 0 10px;
+  padding: 0 16px;
+}
+
+.logo-title img {
+  max-width: 280px;
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  /*filter: drop-shadow(0 4px 16px rgba(56, 189, 248, 0.25));*/
+  transition: filter 0.3s ease;
+}
+/*
+.logo-title img:hover {
+  filter: drop-shadow(0 6px 24px rgba(56, 189, 248, 0.45));
+}
+*/
+/* ============================================================
+   TOP BAR
+   ============================================================ */
+.top-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  padding: 0 12px;
+}
+
+.top-row {
+  display: flex;
+  gap: 8px;
+  padding: 4px 0;
+}
+
 .top-inline {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px;
+  padding: 8px 0;
+  min-width: 0;
 }
 
-/* Ajustes generales móviles */
-#contenido {
+/* ============================================================
+   BUSCADOR
+   ============================================================ */
+.buscador-container { flex: 1; min-width: 0; }
+
+#buscador {
   width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0 15px; /* margen izquierdo y derecho */ /*10px 15px;*/
-  font-size: 18px; /*16*/
   box-sizing: border-box;
-  overflow-x: hidden; /* evita scroll horizontal */
-  font-size: 16px;
+  padding: 11px 18px;
+  border-radius: var(--radius-xl);
+  border: 2px solid transparent;
+  font-size: 15px;
+  outline: none;
+  transition: var(--trans);
+  background: rgba(255,255,255,0.10);
+  color: inherit;
+  backdrop-filter: blur(6px);
 }
 
-.song-line {
-  font-size: 14px;
+.light-mode #buscador {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(56,189,248,0.30);
+  color: #e8f4fd;
 }
 
-#alfabeto {
-  gap: 4px;
+.light-mode #buscador::placeholder { color: rgba(232,244,253,0.50); }
+
+.dark-mode #buscador {
+  background: #ffffff;
+  border-color: var(--gray-200);
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
 }
 
-.alpha {
-  min-width: 32px;
-  height: 32px;
-  font-size: 14px;
+.dark-mode #buscador::placeholder { color: var(--gray-500); }
+
+#buscador:focus {
+  border-color: var(--sky) !important;
+  box-shadow: 0 0 0 4px var(--sky-glow) !important;
 }
 
-.song-note {
-  margin-top: 20px;
-  padding: 10px 15px;
-  border-left: 4px solid #4fc3f7;
-  background: rgba(79, 195, 247, 0.08);
-  font-style: italic;
-}
-
-/* ================================== LOGO DINAMICO ==================================================================== */
-.logo-title {
-  text-align: center;
-  margin: 10px 0;
-}
-
-.logo-title img {
-  max-width: 320px;
-  width: 90%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* LINKS */
-.meta a {
-  color: #38bdf8;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.meta a:visited {
-  color: #38bdf8;
-}
-
-.meta a:hover {
-  opacity: 0.85;
-}
-
-/* ==================================  MENU PRINCIPAl  ==================================================================== */
-
-/* -------------------- BOTON MENU -------------------- */
-/* Seccion Menu en html */
-.menu-wrapper {
-  position: relative;
-}
+/* ============================================================
+   BOTÓN MENÚ (☰)
+   ============================================================ */
+.menu-wrapper { position: relative; }
 
 #menuBtn {
-  font-size: 18px;
-  padding: 6px 10px;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
   border: none;
-  background: transparent;
   cursor: pointer;
-  Color: #122033; 
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--trans);
+  flex-shrink: 0;
 }
 
-/* modo oscuro */
 .light-mode #menuBtn {
-  color: white;
+  background: rgba(255,255,255,0.10);
+  color: #e8f4fd;
 }
 
-/* modo proyector */
-.projector #menuBtn {
-  color: white;
+.dark-mode #menuBtn {
+  background: var(--white);
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
 }
 
 #menuBtn:hover {
-  opacity: 0.7;
+  transform: scale(1.08);
+  background: var(--sky) !important;
+  color: var(--white) !important;
 }
 
-/* MENU */
-.menu-wrapper {
-  position: relative;
-}
-
+/* ============================================================
+   DROPDOWN MENÚ
+   ============================================================ */
 .dropdown-menu {
   position: absolute;
-  top: 45px;
+  top: 50px;
   left: 0;
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-  width: 240px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  width: 260px;
   display: none;
   z-index: 9999;
-  color: #122033;
+  color: var(--navy);
+  overflow: hidden;
+  border: 1px solid var(--gray-100);
+  animation: menuDrop 0.18s ease;
 }
 
-.dropdown-menu.active {
-  display: block;
+@keyframes menuDrop {
+  from { opacity: 0; transform: translateY(-8px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
+
+.dropdown-menu.active { display: block; }
 
 .menu-item {
-  padding: 10px 15px;
+  padding: 11px 16px;
   cursor: pointer;
-  /*text-decoration: none; /* quita subrayado */
-  /*color: inherit;        /* mantiene el color del menú */
+  font-size: 14px;
+  transition: background 0.15s ease;
+  border-radius: 0;
 }
 
-.menu-item a,             /* quita subrayado solo a los items del menu */
+.menu-item a,
 a.menu-item {
   text-decoration: none;
   color: inherit;
 }
 
-.menu-item:hover {
-  background: rgba(0,0,0,0.05);
+.menu-item:hover { background: #f0f9ff; color: var(--sky-dark); }
+
+.menu-item.sub-item {
+  display: block;
+  width: 100%;
 }
 
-.divider {              /* linea divisoria */
-  height: 1px;
-  background: #ddd;
-  margin: 5px 0;
-}
-
-
-.sub-item {
-  padding-left: 40px;  /* tabulacion en el submenú*/
-  position: relative;
-}
-
-.sub-item::before {   /* linea en el borde del submenú */
-  content: "";
-  position: absolute;
-  left: 25px;         /* separacion del borde izquierdo */
-  top: 8px;
-  bottom: 8px;
-  width: 2px;
-  background: rgba(0,0,0,0.2);
-
+.menu-item.sub-item a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
 }
 
 .menu-title {
-  padding: 10px 15px;
-  /*font-weight: bold;*/
-  /*opacity: 0.7;*/
-  cursor: pointer;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.55;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: default;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
 
-.menu-title:hover {   /* evitar efecto hover en los items del menu que no son clickeables */
-  background: none;
+.menu-section-title {
+  opacity: 1;
+  font-weight: 600;
 }
 
-/* *** Acerca de... */
-  /* Encontrar la programación en >> Acerca de...*/
+.tab-item {
+  opacity: 1;
+  cursor: pointer;
+  font-weight: 600;
+}
 
+#tabToggle {
+  font-weight: 400 !important;
+}
 
-/* *** Libro: Cancionero MV o Himnarios */
+.menu-title:hover { background: none; }
 
-/* *** Idiomas */
-  /* Encontrar la programación en >> Idiomas*/
+.divider {
+  height: 1px;
+  background: var(--gray-100);
+  margin: 4px 0;
+}
 
-
-/* ===== BOTON IDIOMA ===== */
-.lang-wrapper {
+.sub-item {
+  padding-left: 32px;
   position: relative;
+  font-size: 14px;
 }
 
-/* BOTON REDONDO */
+.sub-item::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--gray-200);
+  border-radius: 2px;
+}
+
+/* selects dentro del menú */
+.dropdown-menu select {
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  padding: 5px 8px;
+  font-size: 13px;
+  color: var(--navy);
+  background: var(--gray-50);
+  cursor: pointer;
+  outline: none;
+}
+
+/* botones A+ A A- dentro del menú */
+.font-controls button {
+  padding: 4px 10px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--gray-200);
+  background: var(--gray-50);
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--trans);
+}
+
+.font-controls button:hover {
+  background: var(--sky);
+  color: #fff;
+  border-color: var(--sky);
+}
+
+/* ============================================================
+   BOTÓN IDIOMA (bandera redonda)
+   ============================================================ */
+.lang-wrapper { position: relative; flex-shrink: 0; }
+
 #langBtn {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  border: 1px solid #000;
-  background: #122033;
+  border: 2px solid transparent;
   font-size: 20px;
   cursor: pointer;
-  color: white;
+  transition: var(--trans);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .light-mode #langBtn {
-  background: white;
-  color: #122033;
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(56,189,248,0.30);
 }
 
-/* *** Favoritos */
-
-/* *** Tamano de letra: A+ A A- */
-/* Tamano: A- */
-
-
-
-/* ===================== LETRA Y ACORDES ===================== */
-/* letra más grande */
-.lyrics {
-  font-size: 26px;
-  line-height: 1.8;
+.dark-mode #langBtn {
+  background: var(--white);
+  border-color: var(--gray-200);
+  box-shadow: var(--shadow-sm);
 }
 
-/* acordes aún más visibles */
-.chord-wrap {
-  font-size: 22px;
+#langBtn:hover {
+  transform: scale(1.12);
+  border-color: var(--sky) !important;
 }
 
-.song-lyrics .lyrics {
-  font-size: 26px;
+/* select idioma oculto */
+#idioma {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
-.song-lyrics .chord-wrap {
-  font-size: 22px;
+#idioma.hidden {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
 
-.song-lyrics .chord {
-  font-weight: bold;
-}
-
-/* *** Proyector */
-/* *** Tema: Claro / Oscuro */
-/* *** Feedback */
-/* *** Donaciones */
-
-
-/* -------------------- INPUT BUSCADOR -------------------- */
-/* *** CONTENEDOR GENERAL */
-.top-bar {
+/* ============================================================
+   ALFABETO
+   ============================================================ */
+#alfabeto {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  padding: 12px 12px 6px;
 }
 
-/* *** FILA SUPERIOR */
-.top-row {
-  display: flex;
-  gap: 10px;
-  padding: 10px;
-}
-
-/* *** CONTENEDOR BUSCADOR */
-.buscador-container {
-  flex: 1;
-}
-
-/* *** INPUT BUSCADOR */
-#buscador {
-  flex: 1;
-  width: 100%;
-  box-sizing: border-box;
-
-  margin: 10px;
-  padding: 10px;
-
-  border-radius: 10px;
-  border: 1px solid #000;
-
-  font-size: 16px;
-}
-
-/* *** estado focus */
-#buscador:focus {
-  outline: none;
-  border: 2px solid #38bdf8;
-}
-
-/* -------------------- BOTON CAMBIAR DE IDIOMA CON BANDERAS ------------------------------------- */
-
-
-
-/* -------------------- MENU ALFABETO ------------------------------------------------------------ */
 .alpha-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 6px;
-  align-items: center;
-}
-
-#alfabeto {
-  display: flex;
-  flex-wrap: wrap;          /* permite múltiples filas */
-  justify-content: center; /*center;  centra los botones */
-  gap: 6px;
-  padding: 10px;
-  
+  gap: 5px;
 }
 
 .alpha {
-  min-width: 36px;
-  height: 36px;
+  min-width: 34px;
+  height: 34px;
   border-radius: 8px;
   border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--trans);
+  letter-spacing: 0.2px;
+}
+
+.light-mode .alpha {
+  background: rgba(255,255,255,0.10);
+  color: #e8f4fd;
+}
+
+.dark-mode .alpha {
+  background: var(--white);
+  color: var(--navy);
+  box-shadow: 0 1px 4px rgba(0,0,0,.10);
+}
+
+.alpha:hover {
+  background: var(--sky) !important;
+  color: var(--white) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(56,189,248,.35) !important;
 }
 
 .alpha.active {
-  background: #ff0000;
+  background: var(--sky) !important;
+  color: var(--white) !important;
+  box-shadow: 0 4px 14px rgba(56,189,248,.45) !important;
+  transform: translateY(-1px);
 }
 
-/* **********  INDICE (Lista de canciones debajo del alfabeto) ********** */ 
+.hymn-ranges .alpha {
+  font-size: 10px;
+  padding: 3px 5px;
+  color: var(--sky);
+}
+
+.alpha-row .alpha {
+  font-size: 12px;
+  padding: 4px 7px;
+}
+
+/* ============================================================
+   ÍNDICE (lista de canciones)
+   ============================================================ */
 #indice {
-  width: 90%;         /* ocupa el 90% */
-  margin: 0 auto;     /* centrado perfecto */
+  width: 92%;
+  margin: 10px auto;
   padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 #indice li {
-  list-style: none;
-
-  padding: 10px;
-  margin: 10px 0;   /* solo vertical */
-  
-  background: #122033;
-  border-radius: 20px;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
   cursor: pointer;
+  transition: var(--trans);
+  font-size: 15px;
+}
+
+.light-mode #indice li {
+  background: rgba(255,255,255,0.07);
+  color: #e8f4fd;
+  border: 1px solid rgba(56,189,248,0.12);
+}
+
+.dark-mode #indice li {
+  background: var(--white);
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-100);
+}
+
+#indice li:hover {
+  transform: translateX(4px);
+  border-color: var(--sky) !important;
+}
+
+.light-mode #indice li:hover {
+  background: rgba(56,189,248,0.12);
+}
+
+.dark-mode #indice li:hover {
+  background: #f0f9ff;
+  box-shadow: var(--shadow-md);
+}
+
+/* ============================================================
+   CONTENIDO (letra de canción)
+   ============================================================ */
+#contenido {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 16px;
+  font-size: 16px;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .meta {
-  font-size: 12px;
+  font-size: 13px;
+  opacity: 0.75;
+  margin-bottom: 12px;
+}
+
+.meta a {
+  color: var(--sky);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.meta a:visited { color: var(--sky); }
+.meta a:hover { opacity: 0.8; }
+
+/* ============================================================
+   LETRA Y ACORDES
+   ============================================================ */
+.song-line {
+  font-size: 1em;
+  line-height: 1.85;
+  margin-bottom: 4px;
+}
+
+.lyrics {
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
+.song-lyrics .lyrics { font-size: 1.4rem; }
+
+.chord-wrap {
+  display: inline-block;
+  position: relative;
+}
+
+.chord {
+  position: absolute;
+  top: -3.2em; /*-2.5em;*/
+  left: 0;
+  font-weight: 700;
+  font-size: 0.85em;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+
+.dark-mode .chord  { color: var(--sky-dark); }
+.light-mode .chord { color: var(--sky-dark); } /*{ color: #e7540f; }*/
+
+.song-break { height: 10px; }
+
+.song-note {
+  margin-top: 20px;
+  padding: 10px 15px;
+  border-left: 4px solid var(--sky);
+  background: rgba(56, 189, 248, 0.08);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+}
+
+/* Canon */
+.canon {
+  margin-left: 60px;
   opacity: 0.8;
-  margin-bottom: 10px;
 }
 
-.lyrics div {
-  font-family: monospace;
-  margin: 3px 0;
+.lyric-line { white-space: pre-wrap; }
+
+/* Títulos de estrofas/coros */
+.titulo-seccion {
+  font-size: 0.75em;
+  font-weight: 700;
+  opacity: 0.6;
+  margin-top: 16px;
+  margin-bottom: 4px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
 }
 
-/*BOTON DE OCULTAR CANCIONES*/
-.hidden {
-  display: none;
-}
-
+/* ============================================================
+   BOTONES GENERALES (toggleLista, etc.)
+   ============================================================ */
 #toggleLista,
 #fontSizeBtn,
 #projectorBtn {
-  margin: 10px;
-  padding: 8px 12px;
+  margin: 6px;
+  padding: 8px 16px;
   border: none;
-  border-radius: 100px;
-  background: #b6b6b657;
-  color: rgb(255, 255, 255);
-  font-size: 16px;
+  border-radius: var(--radius-xl);
+  font-size: 15px;
   cursor: pointer;
-  transition: 0.2s;
-  border: 1px solid #000;
+  transition: var(--trans);
+}
+
+.light-mode #toggleLista,
+.light-mode #fontSizeBtn,
+.light-mode #projectorBtn {
+  background: rgba(255,255,255,0.10);
+  color: #e8f4fd;
+  border: 1px solid rgba(56,189,248,0.25);
+}
+
+.dark-mode #toggleLista,
+.dark-mode #fontSizeBtn,
+.dark-mode #projectorBtn {
+  background: var(--white);
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
 }
 
 #toggleLista:hover,
 #fontSizeBtn:hover,
 #projectorBtn:hover {
-  opacity: 0.85;
+  background: var(--sky) !important;
+  color: var(--white) !important;
   transform: scale(1.05);
 }
 
-#toggleLista {
-  display: none;
+#toggleLista { display: none; }
+
+/* Botón limpiar */
+.clear-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--sky);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 13px;
+  transition: var(--trans);
+  flex-shrink: 0;
 }
 
-.fade-in {
-  animation: fadeIn 0.2s ease-in;
+.clear-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(56,189,248,.40);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.light-mode .clear-btn,
+.dark-mode .clear-btn,
+body.projector .clear-btn {
+  background: var(--sky);
+  color: var(--navy);
 }
 
-/* -------------------- MENU LISTA DE CANCIONES AL SELECCIONAR UNA LETRA ------------------------- */
+/* ============================================================
+   TAB BTN
+   ============================================================ */
+.tab-btn {
+  margin-left: 8px;
+  padding: 3px 12px;
+  border-radius: var(--radius-xl);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid var(--gray-200);
+  transition: var(--trans);
+  display: inline-block;
+}
 
+.tab-btn.on  { background: var(--green);  color: #fff; border-color: var(--green); }
+.tab-btn.off { background: var(--red);    color: #fff; border-color: var(--red); }
 
-/****/
+#tabBtn {
+  margin-left: 8px;
+  padding: 4px 14px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--gray-200);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  touch-action: manipulation;
+  background: var(--gray-50);
+  color: var(--navy);
+  transition: var(--trans);
+}
 
+/* ============================================================
+   LINKS DE META
+   ============================================================ */
+.person-link {
+  color: var(--sky);
+  cursor: pointer;
+  font-weight: 700;
+}
 
+.person-link:hover { color: var(--sky-dark); text-decoration: underline; }
 
+.tag-link {
+  font-weight: 700;
+  color: var(--sky);
+  cursor: pointer;
+}
 
+.tag-link:hover { opacity: 0.8; text-decoration: underline; }
 
+.tonalidad-link {
+  cursor: pointer;
+  color: var(--sky);
+  font-weight: 700;
+}
 
+.tonalidad-link:hover { text-decoration: underline; }
 
+.meta-link {
+  color: var(--sky);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
 
+.meta-link:hover { opacity: 0.8; }
 
-/* **********  IDIOMAS Y BANDERAS  ********** */
-/* =====  SELECT IDIOMA (base) ===== */
+.meta-normal {
+  color: inherit;
+  font-weight: normal;
+}
+
+/* Song meta revisado */
+.song-meta-revisado {
+  font-weight: 700;
+  color: var(--sky);
+  cursor: pointer;
+}
+
+.song-meta-revisado:hover { text-decoration: underline; }
+
+/* Highlight */
+.highlight {
+  transition: var(--trans);
+  box-shadow: 0 0 14px rgba(56,189,248,.50);
+  border-radius: 8px;
+  transform: scale(1.03);
+  background: rgba(56,189,248,.12);
+}
+
+/* ============================================================
+   AUDIO LINKS
+   ============================================================ */
+.audio a             { text-decoration: none; font-weight: 700; }
+.audio a.spotify     { color: #1DB954; }
+.audio a.apple       { color: #ff2d55; }
+.audio a.youtube     { color: #ff0000; }
+.audio a.applemusic  { color: #ff2d55; }
+.audio a:visited,
+.audio a:active,
+.audio a:hover       { opacity: 0.85; }
+
+/* ============================================================
+   SELECTOR LIBRO / IDIOMA (en menú)
+   ============================================================ */
+#libro {
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--navy);
+  color: white;
+  border: 1px solid rgba(56,189,248,0.30);
+  border-radius: 8px;
+  padding: 8px 28px 8px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='white' d='M5.5 7l4.5 5 4.5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 14px;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.dark-mode #libro {
+  background-color: var(--gray-100);
+  color: var(--navy);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%23122033' d='M5.5 7l4.5 5 4.5-5z'/%3E%3C/svg%3E");
+}
+
+/* Idioma select en header */
 #idioma {
   margin: 10px;
   padding: 8px;
@@ -455,62 +826,24 @@ a.menu-item {
   position: absolute;
   opacity: 0;
   pointer-events: none;
-
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-
-  background: #122033;
+  background: var(--navy);
   color: white;
-
-  border: 1px solid #000;
+  border: 1px solid rgba(56,189,248,0.30);
   font-size: 14px;
   cursor: pointer;
-
   padding: 8px 28px 8px 12px;
-
-  /* icono flecha */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='white' d='M5.5 7l4.5 5 4.5-5z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 8px center;
   background-size: 14px;
 }
 
-/* ===== MODOS DE COLOR ===== */
-.light-mode #idioma {
-  background: #b6b6b657;
-  color: white;
-}
-
-.dark-mode #idioma {
-  background: #e2e8f0;
-  color: rgb(201, 5, 5);
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 480px) {
-  #idioma {
-    width: 60px;
-    font-size: 13px;
-    padding: 6px 24px 6px 10px;
-  }
-}
-
-/* ===== SELECT OCULTO ===== */
-#idioma.hidden {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
-/* ===== BOTÓN MENÚ IDIOMA ===== */
-#menuIdioma:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-
-/* ===== BANDERAS PARA CAMBIAR EL IDIOMA ===== */
+/* ============================================================
+   FLAGS / BANDERAS
+   ============================================================ */
 .flags {
   margin-top: 8px;
   display: flex;
@@ -520,30 +853,23 @@ a.menu-item {
   font-weight: 500;
 }
 
-.flags b {
-  margin-right: 5px;
-  font-size: 0.8em; /* apenas más chico */
-}
+.flags b { margin-right: 5px; font-size: 0.8em; }
 
 .flag {
-  font-size: 20px; /* antes 22px */
+  font-size: 20px;
   margin-right: 8px;
   cursor: pointer;
-  opacity: 0.6;
-  transition: 0.2s;
+  opacity: 0.55;
+  transition: var(--trans);
 }
 
-.flag:hover {
-  opacity: 1;
-  transform: scale(1.2);
-}
+.flag:hover { opacity: 1; transform: scale(1.2); }
 
 .flag.active {
   opacity: 1;
-  border-bottom: 2px solid #38bdf8;
+  border-bottom: 2px solid var(--sky);
 }
 
-/*Tamano de bandera */
 .lang-flags-list {
   display: flex;
   gap: 2px;
@@ -551,13 +877,8 @@ a.menu-item {
 }
 
 .lang-flags-list .lang-flag {
-  font-size: 14px; /* mantiene consistencia */
+  font-size: 14px;
   transform: scale(0.8);
-  line-height: 1;
-}
-
-.flag-mini {
-  font-size: 5px !important;
   line-height: 1;
 }
 
@@ -568,103 +889,9 @@ a.menu-item {
   justify-content: end;
 }
 
-/* **********  MODO CLARO/OSCURO  ********** */
-/* MODO CLARO 👓 → botón negro */
-.light-mode  {
-  background: #122033;  /*Fondo negro*/ /*#1e293b*/
-  color: #ffffff;       /*Letras blancas*/
-}
-
-/* MODO OSCURO 🕶️ → botón blanco */
-.dark-mode  {
-  background: #ffffff;  /*Fondo blanco*/
-  color: #122033;       /*Letras negras 000000*/
-}
-
-/* COLOR DE FONDO LISTA */
-.light-mode #indice li {
-  background: #e2e8f0; 
-  color: #122033;
-}
-
-.dark-mode #indice li {
-  background: #122033;
-  color: white;
-}
-
-/* BOTONES ALFABETO */
-.light-mode .alpha {
-  background: #e2e8f0;
-  color: #122033;
-  font-weight: bold;
-}
-
-.dark-mode .alpha {
-  background: #122033;
-  color: white;
-  font-weight: bold;
-}
-
-/* ===== MODO PROYECTOR ===== */
-body.projector {
-  background: black;
-  color: white;
-}
-
-/* TÍTULO */
-body.projector h1 {
-  font-size: 2.5rem;
-  text-align: center;
-}
-
-/* CONTENIDO PRINCIPAL */
-body.projector .song-line {
-  font-size: 1em;
-  line-height: 1.15;
-  margin-bottom: 2px;
-}
-
-/* LETRA */
-body.projector .lyrics {
-  font-size: 3rem;
-}
-
-/* ACORDES (CLAVE) */
-body.projector .chord {
-  font-size: 3rem;
-  top: -1.9em; /* un poco más alto por ser grande */
-}
-
-/* CONTENEDOR DE ACORDE */
-body.projector .chord-wrap {
-  width: 0; /* importante para alineación */
-}
-
-/* ESPACIO ENTRE ESTROFAS */
-body.projector .song-break {
-  height: 18px;  /* menor separación */
-}
-
-/* NO ocultar alfabeto si lo quieres usar 
-body.projector #alfabeto {
-    display: flex;
-    justify-content: center;
-}*/
-
-.hymn-ranges .alpha {
-  font-size: 10px;
-  padding: 3px 5px;
-  opacity: 1;
-  color: #38bdf8;
-}
-
-.alpha-row .alpha {
-  font-size: 12px;
-  padding: 4px 7px;
-}
-
-/* ====================  ACERCA DE....  ==================== */
-/* MODAL FONDO */
+/* ============================================================
+   MODALES
+   ============================================================ */
 .modal {
   display: none;
   position: fixed;
@@ -673,562 +900,73 @@ body.projector #alfabeto {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(10, 20, 35, 0.72);
+  backdrop-filter: blur(4px);
 }
 
-/* CONTENIDO */
 .modal-content {
   background: #fff;
   margin: 5% auto;
-  padding: 25px;
-  width: 90%;
+  padding: 28px;
+  width: 92%;
   max-width: 500px;
-  border-radius: 12px;
-  max-height: 80vh;
+  border-radius: var(--radius-lg);
+  max-height: 82vh;
   overflow-y: auto;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
-  background: white;
-  color: #122033;
+  box-shadow: var(--shadow-lg);
+  color: var(--navy);
+  animation: modalIn 0.22s ease;
 }
 
-/* BOTÓN CERRAR */
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0)   scale(1); }
+}
+
 .close {
   float: right;
-  font-size: 28px;
+  font-size: 26px;
   cursor: pointer;
+  opacity: 0.45;
+  line-height: 1;
+  transition: var(--trans);
 }
 
-/* DARK MODE (opcional si ya lo usás) */
+.close:hover { opacity: 1; color: var(--red); }
+
 body.dark .modal-content {
-  background: #1e1e1e;
+  background: #1e293b;
   color: #fff;
 }
 
-/* CONTACTO REDES SOCIALES */
+/* Social links */
 .social-links {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .social-links a {
   text-decoration: none;
   color: inherit;
-  font-weight: 500;
+  font-weight: 600;
   display: flex;
   align-items: center;
-  gap: 8px;
-  transition: 0.2s;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: var(--gray-50);
+  transition: var(--trans);
 }
 
 .social-links a:hover {
-  opacity: 0.7;
+  background: #f0f9ff;
+  color: var(--sky-dark);
 }
 
-.icon {
-  font-size: 18px;
-}
+.icon { font-size: 18px; }
 
-
-/* ====================  MUSICA: CANCIONES E INFO PREVIA  ==================== */
-/* ========== icono apple music, spotify o youtube ========== */
-.audio a {
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* Spotify */
-.audio a.spotify {
-  color: #1DB954; /* verde Spotify estándar */
-}
-
-/* Apple Music */
-.audio a.apple {
-  color: #ff2d55; /* rosa/rojo Apple Music */
-}
-
-/* YouTube */
-.audio a.youtube {
-  color: #ff0000; /* rojo YouTube */
-}
-
-/* evitar cambios del navegador */
-.audio a:visited,
-.audio a:active {
-  color: inherit;
-}
-
-.audio a {
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.audio a.spotify {
-  color: #1DB954;
-}
-
-.audio a.youtube {
-  color: #ff0000;
-}
-
-.audio a.applemusic {
-  color: #ff2d55;
-}
-
-/* evitar override del navegador */
-.audio a:visited,
-.audio a:active,
-.audio a:hover {
-  opacity: 0.85;
-}
-
-
-/* ====================  MUSICA: CUADRATURA Y ACORDES  ==================== */
-/* ========== COLORES DE LA CUADRATURA ==========*/
-.song-line {
-  font-size: 1em;
-  line-height: 1.8;
-  /*font-size: 16px;*/
-  /*line-height: 2.2; /*altura de cuadratura*/
-  margin-bottom: 6px;
-}
-
-.lyrics {
-  font-size: 1.4rem;
-}
-
-.chord-wrap {
-  display: inline-block;
-  position: relative;
-}
-
-.chord {
-  position: absolute;
-  top: -2.5em;                            /*ESTO SUBE Y BAJA LA TABLATURA CON RESPECTO A LA LINEA DE TEXTO DE LA CANCION*/
-  left: 0;
-  font-weight: bold;
-  font-size: 0.85em;
-  white-space: nowrap;
-}
-
-/* colores */
-.dark-mode .chord {
-  color: red;
-}
-
-.light-mode .chord {
-  color: rgb(53, 255, 2);
-}
-
-.song-break {
-  height: 10px; /* espacio entre estrofas */
-}
-
-/* TAMANO DE LETRAS Y TABLATURAS EN CELULARES */
-@media (max-width: 460px) {
-  .song-line {
-    font-size: 14px !important;   /* Tamano de letra */
-    line-height: 1.8; /* espacio entre lineas: 1 muy pegado, 1.8 mas separado */
-  }
-
-  .lyrics {
-    font-size: inherit;
-  }
-
-  .chord {
-    font-size: 0.65em !important; /* font-size: 0.65em !important; */ /* 1em     -> mismo tamaño que la letra */
-    top: -2.2em;                  /* Espacio entre letra y tablatura en celulares */
-  }
-}
-
-/*CANON*/
-.canon{
-  margin-left: 80px; /* se puede ajustar */
-  opacity: 0.8;
-}
-.lyric-line {
-  white-space: pre-wrap;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ====================  selector cancionero o himnario  ==================== */
-#libro {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
-  background: #122033;
-  color: white;
-
-  border: 1px solid #000;
-  border-radius: 8px;
-
-  padding: 10px 28px 10px 12px;
-  font-size: 14px;
-
-  cursor: pointer;
-
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='white' d='M5.5 7l4.5 5 4.5-5z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 8px center;
-  background-size: 14px;
-
-  width: 100%;
-  margin-top: 9px;
-}
-
-.light-mode #libro {
-  background: #122033;
-  color: white;
-}
-
-.dark-mode #libro {
-  background: #e2e8f0;
-  color: black;
-}
-
-/* dispositivos varios*/
-/* =======================================================================
-   MÓVILES GRANDES (>= 480px)
-   ======================================================================= */
-@media (min-width: 480px) {
-
-  #contenido {
-    font-size: 17px;
-  }
-
-  .song-line {
-    font-size: 15px;
-  }
-
-  #alfabeto {
-    gap: 6px;
-  }
-
-  .alpha {
-    min-width: 34px;
-    height: 34px;
-    font-size: 15px;
-  }
-}
-
-/* =======================================================================
-   TABLETS (>= 768px)
-   ======================================================================= */
-@media (min-width: 768px) {
-
-  .top-inline {
-    gap: 15px;
-  }
-
-  #contenido {
-    font-size: 18px;
-    padding: 20px;
-  }
-
-  .song-line {
-    font-size: 16px;
-  }
-
-  #indice {
-    width: 80%;
-  }
-
-  #buscador {
-    font-size: 18px;
-  }
-
-  .alpha {
-    min-width: 38px;
-    height: 38px;
-    font-size: 16px;
-  }
-}
-
-/* =======================================================================
-   DESKTOP (>= 1024px)
-   ======================================================================= */
-@media (min-width: 1024px) {
-
-  #contenido {
-    font-size: 20px;
-    padding: 30px;
-  }
-
-  .song-line {
-    font-size: 18px;
-  }
-
-  #indice {
-    width: 70%;
-  }
-
-  #buscador {
-    font-size: 18px;
-  }
-
-  .alpha {
-    min-width: 40px;
-    height: 40px;
-  }
-}
-
-/* =======================================================================
-   PANTALLAS GRANDES (>= 1280px)
-   ======================================================================= */
-@media (min-width: 1280px) {
-
-  #indice {
-    width: 60%;
-  }
-
-  #contenido {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-}
-
-/* =======================================================================
-   PROYECTOR (SEPARADO DEL RESPONSIVE)
-   ======================================================================= */
-body.projector {
-  background: black;
-  color: white;
-}
-
-body.projector h1 {
-  font-size: 3rem;
-  text-align: center;
-}
-
-body.projector #contenido {
-  font-size: 2.8rem;
-  line-height: 1.15;
-}
-
-body.projector .song-line {
-  font-size: 3rem;
-  line-height: 1.6;
-}
-
-body.projector .song-break {
-  height: 40px;
-}
-
-body.projector #alfabeto {
-  justify-content: center;
-}
-
-/* BOTON LIMPIAR */
-.clear-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  border: 1px solid #000;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #38bdf8;
-  color: #122033;
-  font-weight: bold;
-
-  font-size: 12px;
-  padding: 4px 6px;
-}
-
-.clear-btn:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
-
-/* asegurar visibilidad en todos los modos */
-.light-mode .clear-btn,
-.dark-mode .clear-btn,
-body.projector .clear-btn {
-  background: #38bdf8;
-  color: #122033;
-}
-
-.alpha {
-  min-width: 36px;
-  height: 36px;   /* 👈 AQUÍ está el alto */
-  border-radius: 8px;
-  border: 1px solid #000;
-}
-
-/*Alert de autor, coautor, compositor, tradurctor */
-.person-link {
-  color: #38bdf8;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.person-link:hover {
-  color: #2390be;
-}
-
-
-
-/*TABLATURA: MOSTRAR Y OCULTAR */
-.tab-btn {
-  margin-left: 8px;
-  padding: 2px 10px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: bold;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  transition: 0.2s;
-  pointer-events: auto;
-  display: inline-block;
-}
-
-.tab-btn.on {
-  background: #22c55e;
-  color: white;
-  border-color: #22c55e;
-}
-
-.tab-btn.off {
-  background: #ef4444;
-  color: white;
-  border-color: #ef4444;
-}
-
-#tabBtn {
-  margin-left: 8px;
-  padding: 4px 12px;
-  border-radius: 999px;
-  border: none;
-  font-size: 12px;
-  font-weight: bold;
-  cursor: pointer;
-  -webkit-appearance: none;
-  appearance: none;
-  touch-action: manipulation;
-}
-
-/* ===================== METRONOMO ===================== */
-.metro-content {
-  text-align: center;
-  max-width: 450px;
-  width: 95%;
-  max-height: 95vh;   /* 👈 más alto */
-  height: auto;
-  overflow-y: auto;   /* scroll interno si hace falta */
-}
-
-.metro-info {
-  margin-bottom: 20px;
-  font-size: 18px;
-  line-height: 1.8;
-}
-
-.metro-bpm-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-}
-
-.metro-bpm-box button {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.metro-bpm-box input {
-  width: 120px;
-  text-align: center;
-  font-size: 42px;
-  font-weight: bold;
-  border: none;
-  background: transparent;
-  color: inherit;
-}
-
-.metro-label {
-  margin-top: 5px;
-  opacity: 0.7;
-}
-
-.metro-controls {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.metro-controls button {
-  padding: 10px 18px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.metro-beat {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin: 25px auto;
-  background: #666;
-  transition: transform 0.08s ease;
-}
-
-.metro-beat.active {
-  transform: scale(1.25);
-}
-
-/* AFINADOOR */
-.tuner-meter {
-  width: 200px;
-  height: 6px;
-  background: #333;
-  margin: 10px auto;
-  position: relative;
-  border-radius: 4px;
-}
-
-#tunerNeedle {
-  width: 4px;
-  height: 20px;
-  background: red;
-  position: absolute;
-  top: -7px;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: 0.1s;
-}
-
-.tuner-display {
-  text-align: center;
-  margin-top: 10px;
-}
-
-/* Modal Revisado SI */
+/* Modal revisado */
 .revisado-content {
   max-width: 600px;
   width: 95%;
@@ -1237,162 +975,331 @@ body.projector .clear-btn {
   text-align: left;
 }
 
-#revisadoLista {
-  margin-top: 15px;
-}
-
-.revisado-item {
-  padding: 10px;
-  margin: 6px 0;
-  border-radius: 10px;
-  cursor: pointer;
-  background: rgba(0,0,0,0.08);
-}
-
-.revisado-item:hover {
-  opacity: 0.8;
-}
-
 .revisado-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
-#revisadoTitulo {
-  margin: 0;
-}
+#revisadoTitulo { margin: 0; }
 
 #toggleRevisadoBtn {
-  padding: 6px 12px;
-  border-radius: 20px;
+  padding: 7px 14px;
+  border-radius: var(--radius-xl);
   border: none;
   cursor: pointer;
-  font-size: 14px;
-  background: #122033;
+  font-size: 13px;
+  background: var(--navy);
   color: white;
-  transition: 0.2s;
+  transition: var(--trans);
   white-space: nowrap;
 }
 
 #toggleRevisadoBtn:hover {
-  opacity: 0.85;
+  background: var(--sky);
+  color: var(--navy);
 }
 
-/* MODELES OTROS */
+.revisado-item {
+  padding: 10px 14px;
+  margin: 5px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  background: var(--gray-50);
+  transition: var(--trans);
+}
+
+.revisado-item:hover { background: #f0f9ff; opacity: 0.9; }
+
+/* Modal header genérico */
 .modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .modal-toggle-btn {
   margin-left: auto;
-  padding: 6px 12px;
-  border-radius: 999px;
+  padding: 6px 14px;
+  border-radius: var(--radius-xl);
   border: none;
   cursor: pointer;
-  background: #38bdf8;
+  background: var(--sky);
   color: white;
   font-size: 12px;
+  font-weight: 600;
+  transition: var(--trans);
 }
 
-.modal-toggle-btn:hover {
-  opacity: 0.85;
+.modal-toggle-btn:hover { opacity: 0.85; transform: scale(1.05); }
+
+/* Revisado lista */
+#revisadoModalLista li {
+  list-style: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--gray-100);
+  transition: var(--trans);
 }
 
+#revisadoModalLista li:hover { background: rgba(56,189,248,.07); }
 
-/*duplicados*/
+/* Duplicados */
 .dup-title {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 2px 6px;
+  background: rgba(56,189,248,0.12);
+  padding: 2px 8px;
   border-radius: 6px;
   margin-right: 4px;
   display: inline-block;
 }
 
+/* ============================================================
+   METRÓNOMO Y AFINADOR
+   ============================================================ */
+.metro-content {
+  text-align: center;
+  max-width: 460px;
+  width: 95%;
+  max-height: 95vh;
+  height: auto;
+  overflow-y: auto;
+}
 
-/* =====================  REVISADOS  ===================== */
-#revisadoModalLista li {
-  list-style: none;
-  padding: 8px;
+.metro-info {
+  margin-bottom: 20px;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.metro-bpm-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.metro-bpm-box button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  font-size: 26px;
   cursor: pointer;
-  border-bottom: 1px solid #333;
+  background: var(--sky);
+  color: var(--navy);
+  font-weight: 700;
+  transition: var(--trans);
 }
 
-#revisadoModalLista li:hover {
-  background: rgba(255,255,255,0.05);
+.metro-bpm-box button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 14px rgba(56,189,248,.45);
 }
 
-.song-meta-revisado {
-  font-weight: bold;
-  color: #38bdf8;
+.metro-bpm-box input {
+  width: 120px;
+  text-align: center;
+  font-size: 44px;
+  font-weight: 700;
+  border: none;
+  background: transparent;
+  color: inherit;
+}
+
+.metro-label { margin-top: 4px; opacity: 0.6; font-size: 14px; letter-spacing: 1px; }
+
+.metro-controls {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.metro-controls button {
+  padding: 10px 22px;
+  border: none;
+  border-radius: var(--radius-md);
   cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  background: var(--navy);
+  color: white;
+  transition: var(--trans);
 }
-.song-meta-revisado:hover {
-  text-decoration: underline;
-} 
 
-/* =====================  TAGS  ===================== */
-.tag-link {
-  font-weight: bold;
-  color: #38bdf8; /* mismo celeste que usas en otros links */
+.metro-controls button:hover {
+  background: var(--sky);
+  color: var(--navy);
+  transform: scale(1.04);
+}
+
+.metro-beat {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin: 24px auto;
+  background: var(--gray-200);
+  transition: transform 0.08s ease, background 0.08s ease;
+}
+
+.metro-beat.active {
+  transform: scale(1.28);
+  background: var(--sky);
+}
+
+/* Afinador */
+.tuner-meter {
+  width: 200px;
+  height: 6px;
+  background: var(--gray-200);
+  margin: 12px auto;
+  position: relative;
+  border-radius: 4px;
+}
+
+#tunerNeedle {
+  width: 4px;
+  height: 22px;
+  background: var(--sky);
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.1s;
+  border-radius: 2px;
+}
+
+.tuner-display { text-align: center; margin-top: 10px; }
+
+.reference-tone,
+.tuner-row,
+.compas-selector,
+.metro-subdivision {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.compas-selector button,
+.metro-subdivision button,
+.metro-info button {
+  padding: 5px 12px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  background: var(--gray-50);
+  color: var(--navy);
+  font-size: 14px;
   cursor: pointer;
+  transition: var(--trans);
 }
 
-.tag-link:hover {
-  opacity: 0.8;
-  text-decoration: underline;
+.compas-selector button:hover,
+.metro-subdivision button:hover,
+.metro-info button:hover {
+  background: var(--sky);
+  color: white;
+  border-color: var(--sky);
 }
 
-/* =====================  ABRE MODAL DESDE TONALIDAD  ===================== */
-.tonalidad-link {
-  cursor: pointer;
-  color: var(--accent-color);
-  font-weight: bold;
+/* ============================================================
+   MODO PROYECTOR
+   ============================================================ */
+body.projector {
+  background: #000;
+  color: #fff;
 }
 
-.tonalidad-link:hover {
-  text-decoration: underline;
+body.projector h1       { font-size: 2.8rem; text-align: center; }
+body.projector #contenido { font-size: 2.8rem; line-height: 1.15; }
+body.projector .song-line { font-size: 3rem; line-height: 1.6; }
+body.projector .lyrics    { font-size: 3rem; }
+body.projector .chord     { font-size: 3rem; top: -1.9em; }
+body.projector .chord-wrap{ width: 0; }
+body.projector .song-break{ height: 40px; }
+body.projector #alfabeto  { justify-content: center; }
+body.projector #menuBtn   { color: white; }
+
+/* ============================================================
+   ANIMACIONES
+   ============================================================ */
+.fade-in {
+  animation: fadeIn 0.22s ease-in;
 }
 
-.highlight {
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px #4da3ff; /* 👈 Brillo celeste */
-  border-radius: 8px;
-  transform: scale(1.05);
-  background: rgba(77, 163, 255, 0.15);
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.meta-link {
-  color: #38bdf8;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none; /* 👈 esto quita el estilo link */
+.hidden { display: none !important; }
+
+/* ============================================================
+   RESPONSIVE — MÓVIL PEQUEÑO (< 460px)
+   ============================================================ */
+@media (max-width: 460px) {
+  .song-line {
+    font-size: 14px !important;
+    line-height: 1.85;
+  }
+
+  .lyrics { font-size: inherit; }
+
+  .chord {
+    font-size: 0.65em !important;
+    top: -2.2em;
+  }
+
+  .alpha {
+    min-width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  #contenido { font-size: 15px; padding: 0 10px; }
 }
 
-.meta-link:hover {
-  opacity: 0.8;
+/* ============================================================
+   RESPONSIVE — MÓVIL GRANDE (>= 480px)
+   ============================================================ */
+@media (min-width: 480px) {
+  #contenido  { font-size: 17px; }
+  .song-line  { font-size: 15px; }
+  #alfabeto   { gap: 6px; }
+  .alpha      { min-width: 34px; height: 34px; font-size: 15px; }
 }
 
-.meta-normal {
-  color: #000;
-  font-weight: normal;
+/* ============================================================
+   RESPONSIVE — TABLET (>= 768px)
+   ============================================================ */
+@media (min-width: 768px) {
+  .top-inline { gap: 14px; }
+  #contenido  { font-size: 18px; padding: 20px; }
+  .song-line  { font-size: 16px; }
+  #indice     { width: 80%; }
+  #buscador   { font-size: 17px; }
+  .alpha      { min-width: 38px; height: 38px; font-size: 16px; }
 }
 
-
-/*Estrofas y coros*/
-.titulo-seccion{
-  font-size: 0.78em;
-  font-weight: bold;
-  opacity: 0.85;
-  margin-top: 14px;
-  margin-bottom: 6px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+/* ============================================================
+   RESPONSIVE — DESKTOP (>= 1024px)
+   ============================================================ */
+@media (min-width: 1024px) {
+  #contenido { font-size: 20px; padding: 30px; }
+  .song-line { font-size: 18px; }
+  #indice    { width: 70%; }
+  #buscador  { font-size: 18px; }
+  .alpha     { min-width: 40px; height: 40px; }
 }
 
-
+/* ============================================================
+   RESPONSIVE — PANTALLA GRANDE (>= 1280px)
+   ============================================================ */
+@media (min-width: 1280px) {
+  #indice    { width: 60%; }
+  #contenido { max-width: 1000px; margin: 0 auto; }
+}

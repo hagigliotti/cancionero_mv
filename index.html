@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XS6DM59CNT"></script>
@@ -48,9 +48,13 @@
 
         <div id="dropdownMenu" class="dropdown-menu">
 
-          <div class="menu-item" onclick="abrirInfoDesdeMenu()">ℹ Acerca de...</div>
+          <div class="menu-item" onclick="abrirInfoDesdeMenu()">ℹ️ Acerca de...</div>
 
           <div class="divider"></div>
+
+          <div class="menu-section-title">
+            📚 Libros e Idiomas:
+          </div>
 
           <div class="menu-item" style="display:flex; justify-content:space-between; align-items:center;">
             📖 Libro:
@@ -86,7 +90,7 @@
             <button type="button" onclick="cambiarFuente(1)">A+</button>
           </div>
           
-          <div class="menu-title" id="tabToggle">
+          <div class="menu-item tab-item" id="tabToggle">
             <span>🎸</span>
             Tablatura:
             <button id="tabBtn" type="button">Mostrar</button>
@@ -111,7 +115,7 @@
 
           <div class="divider"></div>
 -->
-          <div class="menu-title">
+          <div class="menu-section-title">
             🧩 Modos de visualización:
           </div>
 
@@ -125,14 +129,13 @@
 
           <div class="divider"></div>
 
-          <a class="menu-item" href="mailto:hagigliotti@gmail.com?subject=Feedback%20-%20Cancionero%20MV">📩 Feedback</a>
+          <div class="menu-section-title">
+            ♻️ Feedback:
+          </div>
 
-          <div class="divider"></div>
+          <a class="menu-item sub-item" href="mailto:hagigliotti@gmail.com?subject=Feedback%20-%20Cancionero%20MV">📩 Escribime</a>
 
-          <a class="menu-item" href="https://www.paypal.com/" target="_blank" rel="noopener noreferrer">
-            💖 Donaciones
-          </a>
-          <div class="divider"></div>
+          <a class="menu-item sub-item" href="https://www.paypal.com/" target="_blank" rel="noopener noreferrer">💖 Donaciones</a>
 
         </div>
       </div>
@@ -261,12 +264,12 @@
     <p><strong>Contacto:</strong></p>
     <div class="social-links">
 
-      <a href="https://www.youtube.com/@hagproducciones" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-youtube"></i> HAG Producciones
-      </a>
-
       <a href="https://www.instagram.com/hagigliotti" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-instagram"></i> @hagigliotti
+      </a>
+            
+      <a href="https://www.youtube.com/@hagproducciones" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-youtube"></i> HAG Producciones
       </a>
 
     </div>
@@ -414,6 +417,10 @@
 <script src="afinometro.js"></script>
 <script src="app.js"></script>
 <script src="songbook.js"></script>
+
+<footer class="app-footer">
+  © 2026 @hagigliotti — Cancionero MV
+</footer>
 
 </body>
 </html>
