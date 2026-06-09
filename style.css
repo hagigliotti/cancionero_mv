@@ -569,6 +569,7 @@ a.menu-item {
 .chord-wrap {
   display: inline-block;
   position: relative;
+  /*padding-top: 1.2em;*/
 }
 
 .chord {
@@ -1243,15 +1244,17 @@ body.projector #menuBtn   { color: white; }
    ============================================================ */
 @media (max-width: 460px) {
   .song-line {
-    font-size: 14px !important;
-    line-height: 1.85;
+    font-size: 16px !important;
+    line-height: 2.0;
   }
 
-  .lyrics { font-size: inherit; }
+  .lyrics { 
+    font-size: 1.6rem;
+  }
 
   .chord {
     font-size: 0.65em !important;
-    top: -2.2em;
+    top: -3.6em;
   }
 
   .alpha {
