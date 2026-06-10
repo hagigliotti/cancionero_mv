@@ -208,12 +208,18 @@ function openSong(id) {
         } | 
 
         <b>Revisado:</b>
-        <span
-          class="song-meta-revisado"
-          onclick="openRevisadoList('${song.idiomas?.[idiomaActual]?.revisado || "No"}')"
-        >
-          ${(song.idiomas?.[idiomaActual]?.revisado || "").toLowerCase() === "si" ? "Si" : "No"}
-        </span>
+          <span
+            class="song-meta-revisado"
+            data-revisado='${JSON.stringify(song.idiomas?.[idiomaActual]?.revisado)}'
+            onclick="openRevisadoList(JSON.parse(this.dataset.revisado))"
+          >
+            ${formatRevisadoEstado(song.idiomas?.[idiomaActual]?.revisado)}
+          </span>
+
+          <span class="revisado-personas">
+            ${renderRevisadoPersonas(song.idiomas?.[idiomaActual]?.revisado)}
+          </span>
+
       </div>
       ${renderAudioLink(song, s)}
       <div class="flags">

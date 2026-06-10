@@ -765,10 +765,14 @@ body.projector .clear-btn {
 .song-meta-revisado {
   font-weight: 700;
   color: var(--sky);
+  text-decoration: none !important;
   cursor: pointer;
 }
 
-.song-meta-revisado:hover { text-decoration: underline; }
+.song-meta-revisado:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
 
 /* Highlight */
 .highlight {

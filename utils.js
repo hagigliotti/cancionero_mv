@@ -95,9 +95,57 @@ function escapeHtml(str = "") {
 
 // ===================== REVISADO LABEL (🔥 FIX PEDIDO) =====================
 
-function formatRevisadoLabel(valor) {
-  return `Revisado: <b>${valor}</b>`;
+function formatRevisadoLabel(value) {
+  const [estado, personas] = normalizeRevisado(value);
+
+  const label = estado.toLowerCase() === "si" ? "Si" : "No";
+
+  const extra = personas.length
+    ? ` - ${personas.join(", ")}`
+    : "";
+
+  return `Revisado: <b>${label}${extra}</b>`;
 }
+
+// --- Normalizador nuevo
+function normalizeRevisado(value) {
+  try {
+    if (!value) return ["no", []];
+
+    if (Array.isArray(value)) {
+      const estado = (value[0] || "no").toLowerCase();
+      const personas = value.slice(1).filter(Boolean);
+      return [estado, personas];
+    }
+
+    return [value.toLowerCase(), []];
+
+  } catch (e) {
+    console.error("normalizeRevisado error:", value, e);
+    return ["no", []];
+  }
+}
+
+
+
+function getRevisadoEstado(value) {
+  if (!value) return "no";
+  if (Array.isArray(value)) return (value[0] || "no").toLowerCase();
+  return value.toLowerCase();
+}
+
+function formatRevisadoDisplay(value) {
+  const [estado, personas] = normalizeRevisado(value);
+
+  const label = estado === "si" ? "Si" : "No";
+
+  if (personas.length) {
+    return `${label} - ${personas.join(", ")}`;
+  }
+
+  return label;
+}
+
 
 // ===================== SORTING =====================
 
@@ -292,12 +340,12 @@ function renderRevisadoModal() {
   const data = getDataActual();
 
   const filtered = data.filter(song => {
-    const rev = (song.idiomas?.[idiomaActual]?.revisado || "").toLowerCase();
+    const [estado] = normalizeRevisado(song.idiomas?.[idiomaActual]?.revisado);
 
     if (revisadoEstadoActual === "si") {
-      return rev === "si";   // SOLO revisadas
+      return estado === "si";
     } else {
-      return rev !== "si";   // SOLO no revisadas
+      return estado !== "si";
     }
   });
 
@@ -328,8 +376,8 @@ function renderRevisadoModal() {
 }
 
 function openRevisadoList(valor) {
-  const estado = normalize(valor).includes("SI") ? "si" : "no";
-  revisadoEstadoActual = estado;
+  const [estado] = normalizeRevisado(valor);
+  revisadoEstadoActual = (estado === "si") ? "si" : "no";
   renderRevisadoModal();
 }
 

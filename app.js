@@ -100,6 +100,21 @@ function renderListModal({ title, list }) {
     });
 }
 
+// SOLO ESTADO CLICKABLE
+function formatRevisadoEstado(value) {
+  const [estado] = normalizeRevisado(value);
+  return estado === "si" ? "Si" : "No";
+}
+
+// PERSONAS (SIN CLICK EN EL MISMO SPAN)
+function renderRevisadoPersonas(value) {
+  const [, personas] = normalizeRevisado(value);
+
+  if (!personas.length) return "";
+
+  return ` - ${personas.join(", ")}`;
+}
+
 // ===================== INIT ===============================================================   =====================
 async function init() {
   const res1 = await fetch(DATA_URLS.cancionero);
