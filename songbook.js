@@ -55,11 +55,11 @@ function getIndexLetter(title) {
 
 // ===================== OPEN SONG =====================
 function openSong(id) {
-  const song = getDataActual().find(c => c.id === id || c.slug === id);
+  const song = [...canciones, ...himnos, ...campamento].find(c => c.id === id || c.slug === id);
 
   if (!song) {
     document.getElementById("contenido").innerHTML =
-      "<p>⚠️ Canción no disponible.</p>";
+      "<p>⚠️ Canción no disponible en este libro o idioma.</p>";
     return;
   }
 
