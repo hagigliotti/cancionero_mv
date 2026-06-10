@@ -57,7 +57,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/5vpRPI8gJJAewj8LHwDmQP?si=17171e6509e74b79",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "Are you tired of chasing pretty rainbows?",
@@ -106,7 +106,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/4CpXovlU8Md47zl5fNt6WR?si=8ff2fcdafe9f44ad",
       "traductor": ["Hillsong Worship"],
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "1",
         "[Am]Ante ti postrado est[C]oy, aquí.",
@@ -149,7 +149,7 @@
     "audio_url": "https://open.spotify.com/intl-es/track/2Ilbv0FdK3FDydyjwLYbz9?si=1dd0c7eaaa3a4b65",
     "traductor": ["-"],
     "partitura": "No",
-    "revisado": "No",
+    "revisado": ["No"],
     "letra": [
       "1",
       "Here I am down on my knees again",
@@ -186,7 +186,7 @@
       "audio_url": "https://open.spotify.com/intl-it/track/5t9qLUojvUs3dLoJ65K16m",
       "traductor": ["Aline Barros", "Hillsong em Português"],
       "partitura": "No",
-      "revisado": "No",
+      "revisado": ["No"],
       "letra": [
         "",
         "Eis-me aqui, prostrado outra vez",
@@ -216,7 +216,7 @@
       "audio_url": "https://open.spotify.com/intl-it/track/7dCIPGbgjse1CkEX1aEsEt",
       "traductor": ["Hillsong in Italiano"],
       "partitura": "No",
-      "revisado": "No",
+      "revisado": ["No"],
       "letra": [
         "",
         "Eccomi, prostrato ai piedi Tuoi",
@@ -338,13 +338,13 @@
       "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",
+      "revisado": ["No"],
       "letra": [
         "",
         "Open the eyes of my heart, Lord",
         "Open the eyes of my heart",
         "I want to see You",
-        "I want to see You [x2]",
+        "I want to see You (x2)",
         "",
         "To see You high and lifted up",
         "Shining in the light of Your glory",
@@ -364,13 +364,13 @@
       "audio_url": "",
       "traductor": ["David Quinlan"],
       "partitura": "No",
-      "revisado": "No",
+      "revisado": ["No"],
       "letra": [
         "",
         "Abre os olhos do meu coração",
         "Abre os olhos do meu coração",
         "Eu quero Te ver",
-        "Eu quero Te ver [x2]",
+        "Eu quero Te ver (x2)",
         "",
         "Quero contemplar Tua majestade",
         "E o brilho da Tua glória",
@@ -405,7 +405,7 @@
       "audio_url": "https://www.youtube.com/watch?v=oPimn2alRvI&t=14s",
       "traductor": [""],
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "",
         "[D]Adentro, afuera, arriba, abajo,",
@@ -442,7 +442,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/6TCTLO5PX5MJa5KN1Asibl?si=8be077456f7f4e66",
       "traductor": ["Desconocido"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "",
         "[G]Ale[C]lu[G]ya, ale[C]lu[Em]ya! Te ala[D]bamos, Se[C]ñor, nuestro [G]Rey.",
@@ -462,7 +462,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/1N9SysNAP8j4wbAIHzlM9m?si=6697f706725e4098",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "",
         "Alleluia, alleluia! For the Lord God Almighty reigns.",
@@ -482,7 +482,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/16hnXXqWrwbQGoNtvLx72r?si=c5712a753b5a449b",
       "traductor": ["David Quinlan"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "",
         "Aleluia, aleluia! Pois o Senhor Deus Todo-Poderoso reina.",
@@ -502,7 +502,7 @@
       "audio_url": "",
       "traductor": ["RNS"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "",
         "Alleluia, alleluia! Il Signore Dio l'Onnipotente regna.",
@@ -537,7 +537,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/5MJ8DFLauPlvNTNGlbJZZx?si=dedd8715d6264a6a",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "",
         "[G]Al comenzar la semana, [C]¡qué ale[G]gría que me [D]da",
@@ -568,7 +568,7 @@
       "audio_url": "https://www.youtube.com/watch?v=UVuli_xt5bs&list=RDUVuli_xt5bs&start_radio=1",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "",
         "[E]Al encuentro de Jesús e[B]levo [A]mi [E]voz,",
@@ -599,7 +599,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/4HtVl7sQxvG8d1d5snMZEy?si=d4301577726d4e8d",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "",
         "[C]La vida es dura, lo sé [G]bien, los problemas nublan tu [Am]fe.",
@@ -643,7 +643,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "",
         "[D]Al son del cocodrilo y el orangután,",
@@ -723,7 +723,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/10fMN6ZyntPNkP46uBaqB1?si=a50bbc0362864e6a",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "Alaba[D]ré, alabaré, alaba[Bm]ré, alabaré,",
@@ -745,7 +745,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "Ta momba´e, ta momba´e,",
@@ -784,7 +784,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/2pNw22LMg6REMr9MAMvwej?si=f30689be90e54b41",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[G]Alegre voy cantando en el [C]camino de la [Am]vida y la ver[D]dad. [G]- [Em]- [C]- [D]",
@@ -807,7 +807,7 @@
       "audio_url": "",
       "traductor": ["Desconocido"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "Alegre vou cantando no caminho da dita e da verdade.",
@@ -845,7 +845,7 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "",
         "[G]Allá en el monte Horeb la zarza ar[D7]día,",
@@ -883,7 +883,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/6f7mT8i8Yg4ZwVAkTCq0D7?si=c4133db48e4444e7",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "",
         "1",
@@ -936,7 +936,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/4bOQA47v0L3S4OSxOyoI5J?si=410beb6055b64bcf",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "",
         "[E]Alto, escúchame, no [A]sigas [B]caminando [E]más.",
@@ -973,7 +973,7 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "[G]Amigo tengo que me ama,",
         "[D]me [G]ama, me ama.",
@@ -1008,7 +1008,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "- Amigo, ¿amas a Cristo?",
         "- ¡Oh sí yo le amo!",
@@ -1046,7 +1046,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",
+      "revisado": ["No"],
       "letra": [
         "1",
         "Hoy te quiero presentar",
@@ -1130,7 +1130,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/4grfKR7wfoHZeWjb9QjTTE?si=3cdc08de1ea94e6c",
       "traductor": ["Abels Worship"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[C#m]Aun antes de ha[B]blar, tu voz po[A]día oír,",
@@ -1184,7 +1184,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[C]Amor tan grande, pro[F]fundo y su[C]blime",
@@ -1212,7 +1212,7 @@
       "audio_url": "",
       "traductor": ["Desconocido"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "Amor tão grande, profundo e sublime,",
@@ -1249,7 +1249,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/4lUyqsYCCMcmkqAnlOhjRb?si=6c0cc53fc6ae495e",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[Dm]Amor, amor, [C]amor, [Dm]amor, ",
@@ -1286,7 +1286,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[C]No es solo emo[Em]ción, [F]es una ver[G]dad.",
@@ -1331,18 +1331,18 @@
       "audio_url": "https://open.spotify.com/intl-es/track/5rAZEl2NlSsc9ws7s1dykp?si=5ef19641d5614f7f",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[C]Aquí estás, te vemos mo[G]ver.",
         "Te ado[D]raré, te ado[Em]raré.",
         "[C]Aquí estás, obrando en [G]mí.",
-        "Te ado[D]raré, te ado[Em]raré. [x2]",
+        "Te ado[D]raré, te ado[Em]raré. (x2)",
         "",
         "Coro:",
         "[C]Milagroso, abres camino,",
         "[G]cumples promesas, luz en tinieblas.",
-        "Mi [D]Dios, así eres [Em]tú. [x2]",
+        "Mi [D]Dios, así eres [Em]tú. (x2)",
         "",
         "2",
         "[C]Aquí estás, sanando mi co[G]razón.",
@@ -1351,7 +1351,7 @@
         "Te ado[D]raré, te ado[Em]raré.",
         "",
         "Así eres [C]tú, así eres [G]tú.",
-        "Así eres [D]tú, así eres [Em]tú. [x2]",
+        "Así eres [D]tú, así eres [Em]tú. (x2)",
         "",
         "[C]Aunque no pueda ver, estás obrando.",
         "[G]Aunque no pueda ver, estás obrando.",
@@ -1366,7 +1366,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/0hLsDRLsfvwExXMBeDS53k?si=f0e267a0ab5f45b7",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "You are here, moving in our midst, I worship You, I worship You.",
         "You are here, working in this place, I worship You, I worship You.",
@@ -1387,7 +1387,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/7t8fxi06k76NjobLDOMWn8?si=e0ce1eb52592494d",
       "traductor": ["Desconocido"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "Tu sei qui, ti muovi tra di noi, adoro te, adoro te.",
         "Tu sei qui, operi tra noi, adoro te, adoro te.",
@@ -1424,7 +1424,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "",
         "[Em]Arroyo [Am]ancho ",
@@ -1468,7 +1468,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/2K57VJVpndg6QUOLqnoI8D?si=879f2b432ef04516",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Avancemos [G]en la [D]luz, [A]",
         "Con [D]fe y con [G]valor luchemos, u[D]nidos",
@@ -1511,7 +1511,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[F]Bienvenidos a [Bb]adorar, [C][C7]",
@@ -1548,7 +1548,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "",
         "[D]Te presento, Señor, mi [G]débil [A]cora[D]zón.",
@@ -1592,7 +1592,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[C]Nunca esperes el momento de una gran ac[G7]ción,",
@@ -1641,7 +1641,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[C]Este mundo oscuro es[F]tá, [Am]necesita de [G]luz.",
@@ -1684,7 +1684,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",            
+      "revisado": ["No"],            
       "letra": [
         "1",
         "[G]Padre, tu [C]gran amor [G]me ins[D]pira.",
@@ -1717,7 +1717,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",              
+      "revisado": ["No"],              
       "letra": [
         "1",
         "Lord, the light of your love is shining",
@@ -1757,7 +1757,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",                
+      "revisado": ["No"],                
       "letra": [
         "1",
         "[B]A veces no es fácil tener la verdad,",
@@ -1810,7 +1810,7 @@
       "audio_url": "",
       "traductor": ["-"],  
       "partitura": "No",
-      "revisado": "No",              
+      "revisado": ["No"],              
       "letra": [
         "1",
         "[D]Buscad pri[A/C#]mero el [Bm]reino de [F#m]Dios",
@@ -1849,7 +1849,7 @@
       "audio_url": "",
       "traductor": ["-"],   
       "partitura": "No",
-      "revisado": "No",             
+      "revisado": ["No"],             
       "letra": [
         "1",
         "[D]Si en tu vida no tienes [Em]paz,",
@@ -1881,7 +1881,7 @@
       "audio_url": "",
       "traductor": ["-"],  
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "1",
         "[C]Bus[G]cas [Am]corazones que no [F]teman ir [C]",
@@ -1931,7 +1931,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[SOL]Blessed Be Your [RE]Name",
         "[MI-]In the land that is [DO]plentiful",
@@ -2009,7 +2009,7 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "1",
         "Cabeza, hombros, rodillas y pies,",
@@ -2052,7 +2052,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]Cada día con Cristo,",
         "[E7]me llena de perfecta [B7]paz,",
@@ -2084,7 +2084,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[G]Que bendición es despertar",
@@ -2177,7 +2177,7 @@
       "audio_url": "",
       "traductor": ["-"], 
       "partitura": "No",
-      "revisado": "No",           
+      "revisado": ["No"],           
       "letra": [
         "1",
         "[D]Bueno es despertar y [G]sentir el ca[A]lor,",
@@ -2223,7 +2223,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "Como é bom acordar e sentir o calor,",
         "Levantar e cantar ao Senhor com fervor.",
@@ -2260,7 +2260,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[D]Caminando voy, (para Ca[A]náan)",
@@ -2306,7 +2306,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[A]Gozándome yo voy al hogar ce[E]lestial",
@@ -2358,7 +2358,7 @@
       "audio_url": "",
       "traductor": ["Tradicional"],
       "partitura": "No",
-      "revisado": "No",
+      "revisado": ["No"],
       "letra": [
         "1",
         "Caminamos en la luz de Dios",
@@ -2380,7 +2380,7 @@
       "audio_url": "",
       "traductor": ["Thabo Mkhize"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "Siyahamba, ekukanyen' kwenkos',",
@@ -2402,7 +2402,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "We are marching in the light of God,",
@@ -2428,7 +2428,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "Caminhamos sob a luz de Deus,",
@@ -2452,7 +2452,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "Nous marchons dans la lumière de Dieu,",
@@ -2478,7 +2478,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "Ons marsjeer nou in die lig van God,",
@@ -2504,7 +2504,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "Við göngum í ljósi Guðs",
@@ -2528,7 +2528,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "Twatembea nuruni mwake,",
@@ -2564,7 +2564,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",               
+      "revisado": ["No"],               
       "letra": [
         "1",
         "[E]Valles, montañas, pla[D]nicies cantad,",
@@ -2597,7 +2597,7 @@
       "audio_url": "",
       "traductor": ["-"], 
       "partitura": "No",
-      "revisado": "No",               
+      "revisado": ["No"],               
       "letra": [
         "Vales, montanhas, planícies, louvai,",
         "Luas, estrelas, planetas, louvai,",
@@ -2624,7 +2624,7 @@
       "audio_url": "",
       "traductor": ["-"],         
       "partitura": "No",
-      "revisado": "No",       
+      "revisado": ["No"],       
       "letra": [
         "1",
         "[G]La naturaleza [D]toda [Em]habla del amor de [C]Dios,",
@@ -2672,7 +2672,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",             
+      "revisado": ["No"],             
       "letra": [
         "1",
         "[D]De las montañas hacia el mar,",
@@ -2696,7 +2696,7 @@
       "audio_url": "",
       "traductor": ["-"], 
       "partitura": "No",
-      "revisado": "No",            
+      "revisado": ["No"],            
       "letra": [
         "Over the mountains and the sea",
         "Your river runs with love for me",
@@ -2725,7 +2725,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",            
+      "revisado": ["No"],            
       "letra": [
         "Con un [A]canto de ala[E]banza te [F#m]hago son[C#m]reír, [D]",
         "Je[A]sús, [Bm]siempre cantaré de [E]ti.",
@@ -2756,7 +2756,7 @@
       "audio_url": "",
       "traductor": ["-"], 
       "partitura": "No",
-      "revisado": "No",                
+      "revisado": ["No"],                
       "letra": [
         "1",
         "[E]Canto de alegría porque tengo [F#m]amor,",
@@ -2786,7 +2786,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",              
+      "revisado": ["No"],              
       "letra": [
         "Joyfully we sing here of the Savior's grace",
         "Telling of His love in every time and place",
@@ -2816,7 +2816,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "Intro:", "[E] - [Bm] - [A] - [B7] (2 veces)",
         "",
@@ -2847,13 +2847,13 @@
       "audio_url": "",
       "traductor": ["-"], 
       "partitura": "No",
-      "revisado": "No",             
+      "revisado": ["No"],             
       "letra": [
         "1",
         "[C]En este momento [F]me ale[G]gra[C]ré",
         "[C]y ala[F]baré a mi Sal[G]va[C]dor.",
         "[C]Voy a exal[F]tar su e[G]terno a[Am]mor,",
-        "[Bb]a cele[F]brar y can[C]tar. [x2]",
+        "[Bb]a cele[F]brar y can[C]tar. (x2)",
         "",
         "Coro:",
         "[F]Cantar [G]su salva[C]ción,",
@@ -2882,7 +2882,7 @@
       "audio_url": "",
       "traductor": ["-"], 
       "partitura": "No",
-      "revisado": "No",             
+      "revisado": ["No"],             
       "letra": [
         "Neste momento me alegrarei",
         "E louvarei ao meu Salvador.",
@@ -2913,7 +2913,7 @@
       "audio_url": "",
       "traductor": ["-"], 
       "partitura": "No",
-      "revisado": "No",             
+      "revisado": ["No"],             
       "letra": [
         "[G]Cerca de Jesús [C]siempre [D]quiero es[G]tar,",
         "[Bm]pues lo que nece[C]sito [Em]siempre encuentro junto a [C]ti.",
@@ -2932,7 +2932,7 @@
       "audio_url": "",
       "traductor": ["-"],  
       "partitura": "No",
-      "revisado": "No",            
+      "revisado": ["No"],            
       "letra": [
         "Draw me close to You, never let me go",
         "I lay it all down again to hear You say that I'm Your friend",
@@ -2962,7 +2962,7 @@
       "audio_url": "",
       "traductor": ["-"], 
       "partitura": "No",
-      "revisado": "No",              
+      "revisado": ["No"],              
       "letra": [
         "1",
         "[C]Como el [G]ciervo [Am]clama [G]por las aguas,",
@@ -2992,7 +2992,7 @@
       "audio_url": "",
       "traductor": ["-"], 
       "partitura": "No",
-      "revisado": "No",                
+      "revisado": ["No"],                
       "letra": [
         "1",
         "As the deer panteth for the water",
@@ -3029,7 +3029,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Como las [Am]olas [D7]del enorme [G]mar",
         "[G]el amor de [Am]Cristo [D7]todo es para [G]mí.",
@@ -3071,7 +3071,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[D]Cuando [Gm]pienso en lo que [D]es mi vida [Gm]hoy",
@@ -3130,7 +3130,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]Con Cristo en mi alma sonrei[A]ré como el sol,",
         "[B]sonreiré como el sol, [E]sonreiré como el sol.",
@@ -3163,7 +3163,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[E]Con Cristo, con Cristo junto a las [F#m]flores",
@@ -3205,7 +3205,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "Con Jesús en la familia ¡Qué hogar feliz!,",
         "¡Qué hogar feliz!, ¡Qué hogar feliz!",
@@ -3247,7 +3247,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]Con Jesús soy feliz",
         "[D]porque sé que [E]Él me ama.",
@@ -3288,7 +3288,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[C]Con sólo una [G]chispa el [Am]fuego ya co[G]mienza,",
@@ -3331,7 +3331,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Sé que el día llegará, [G]junto a ti po[D]dré estar.",
         "[Bm]Cara a cara te ve[F#m]ré, rodeado en tu po[A]der.",
@@ -3354,7 +3354,7 @@
         "[G]Levantamos alabanza a ti Señor.",
         "",
         "[D]Por la eternidad [A]mi alma ofrecerá",
-        "[Em]toda gloria a ti Se[G]ñor. [x4]",
+        "[Em]toda gloria a ti Se[G]ñor. (x4)",
         "",
         "[D]Que se haga, Dios, tu volun[G]tad",
         "[Bm]en la tierra como en el [G]cielo."
@@ -3382,7 +3382,7 @@
       "audio_url": "https://www.youtube.com/watch?v=IBpfpUr6kIA",
       "traductor": [""],
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "1",
         "Voz masculina",
@@ -3445,7 +3445,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "Intro:", "[G] - [D] - [A] - [G]",
         "",
@@ -3490,7 +3490,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[C]Ven, hermano, y cántale a [Em]Cristo,",
@@ -3531,7 +3531,7 @@
       "audio_url": "",
       "traductor": ["Huberto M. Fassett"],
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "[C]Cristo me [Am]ama, [Em]esto sé",
         "[F]Su palabra [C]dice asi",
@@ -3566,7 +3566,7 @@
       "audio_url": "",
       "traductor": ["Huberto M. Fassett"],
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "(clap - clap - thigh-slap)",
         "(clap - clap - thigh-slap)",
@@ -3604,7 +3604,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Cristo manda que subamos [G]más",
         "Que subamos [C]más",
@@ -3638,7 +3638,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Cristo rompe las cadenas",
         "las cadenas del pecado",
@@ -3673,7 +3673,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]Cristo un año [B]más te dio, [B7]lo pasaste [E]bien.",
         "[E]Y te ofrece [B]con amor [B7]otro más tam[E]bién.",
@@ -3703,7 +3703,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[D]Cual la quietud de un [D7]arroyo",
@@ -3747,7 +3747,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[G]El esplendor de un Rey [Em]vestido en majestad,",
@@ -3789,7 +3789,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[C]Cuando Cristo [F]vino a mi co[C]razón",
@@ -3834,7 +3834,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "Intro:",
         "[Bm] - [G - F#] - - [G - F#] - - [F# - Bm]",
@@ -3875,7 +3875,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/5MJ8DFLauPlvNTNGlbJZZx?si=dedd8715d6264a6a",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Cuando empieza el santo sábado,",
         "[C]¡qué ale[G]gría que me [D]da",
@@ -3909,7 +3909,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]Cuando miro los claros [C#m]cielos y [D]lo que es [Bm]obra de tus [E]dedos,",
         "[A]digo: ¿qué es el [F#m]hombre para [D]que te a[E]cuerdes de [A - E/G#]él?",
@@ -3945,7 +3945,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]Me enseñó la arena que mi [F#m]huella dejaré,",
         "y [A]que no serán mis pies los que me [E - A]guíen.",
@@ -3986,7 +3986,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[DO]Mi hai chiamato dal [FA]nulla Signore,",
@@ -4040,7 +4040,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[DO]Viva è in me l'im[SOL]magine del [LA-]giorno in cui",
         "Tu ritornerai quaggiù, Signor Gesù;",
@@ -4093,7 +4093,7 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "Cuan bueno cuan maravilloso es que vivamos en",
         "comunión cuan bueno cuan maravilloso es que",
@@ -4133,7 +4133,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Da una sonrisa, una sonrisa cierta,",
         "[A]una sonrisa a[D]bierta, llena de amor.",
@@ -4171,7 +4171,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/0B0XKO9t9WJjUP7qxwTC8c?si=42ba04e594f14030",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "Coro:",
         "Que todo lo que soy alabe al Señor",
@@ -4222,7 +4222,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/0fxpHpK3aw2nFWII6yveDD?si=5d045794a14a4247",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "Rit. [FA]Bless the Lord [DO]oh my soul",
         "[SOL]Oh my [LA-]soul",
@@ -4266,7 +4266,7 @@
         "audio_url": "https://open.spotify.com/intl-es/track/27anRlrwjMYve3K0fGPJkH?si=36b39c383a4040e8",
         "traductor": ["-"],
         "partitura": "No",
-        "revisado": "No",      
+        "revisado": ["No"],      
         "letra": [
           ""
         ]
@@ -4292,7 +4292,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Da una son[A]risa, una sonrisa [D]cierta,",
         "una sonrisa [A]abierta, llena de a[D]mor.",
@@ -4328,7 +4328,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Dad [Dm]gloria al Se[C/E - G]ñor",
         "Dad gloria al Señor",
@@ -4366,7 +4366,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]Dad gracias de co[B]razón, dad gracias al [C#m]Santísimo, [G#m]",
         "[A]dad gracias por[E/G#]que ha dado a su [D]hijo Je[B]sús.",
@@ -4403,7 +4403,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]De mañana al desper[F#m]tar,",
         "[D]de mañana al desper[A]tar,",
@@ -4446,7 +4446,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]Hay montañas que tengo que mo[B]ver",
         "con la [C#m7]fe que no duda de [A]nada.",
@@ -4484,7 +4484,7 @@
         "",
         "Quiero [A]ver, quiero verte actuar.",
         "Quiero [C#m]ver, quiero verte actuar.",
-        "Quiero [B]ver, quiero verte actuar en mí. [x2]",
+        "Quiero [B]ver, quiero verte actuar en mí. (x2)",
         "",
         "[E]Hay montañas que hoy voy a mo[B]ver",
         "con la [C#m7]fe que no duda de [A]nada."
@@ -4512,12 +4512,12 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]Dame un nuevo cora[A]zón, Señor,",
         "[B]un corazón para ado[E]rarte,",
         "[C#m]un corazón para [F#m]servirte,",
-        "[B]dame un nuevo cora[E - E7]zón. [x2]",
+        "[B]dame un nuevo cora[E - E7]zón. (x2)",
         "",
         "[A]Que sea limpio como el cris[B]tal,",
         "[G#m]dulce como la [C#m]miel,",
@@ -4550,7 +4550,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]De gloria en [A]gloria te [Bm]veo. [D7]",
         "[G]Cuanto más te co[D]nozco",
@@ -4588,7 +4588,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]Demos gracias al Señor, [D]demos [A]gracias,",
         "demos [E7]gracias por su [A]amor.",
@@ -4628,7 +4628,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[Em]No quiero vivir pensando en el mañana, yo quiero ser fe[D]liz.",
         "[Em]Días vienen y van, yo no temeré, puedo confiar en [D]ti.",
@@ -4680,7 +4680,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]He oído de una tierra her[C]mosa y so[G]ñada,",
         "un lu[G]gar donde la ale[C]gría es to[G]tal.",
@@ -4731,7 +4731,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]Dios de gloria, [C#m]yo te adoro,",
         "[D]mi [E]Rey de honra y majes[A]tad.",
@@ -4771,7 +4771,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Gracias por la cruz, oh [C]Dios,",
         "[G]el precio que pa[C]gaste [D]por [G]mí",
@@ -4813,7 +4813,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Dios, al[C]zamos hoy tu [D]nombre,",
         "[G]te can[C]tamos ala[D]banzas,",
@@ -4848,7 +4848,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Dios bueno es, [A][A7]Dios bueno [D]es,",
         "[D7]Dios bueno [G]es, [D]bueno [A]para [D]mí.",
@@ -4882,7 +4882,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Dios de Israel, [Bm]Cristo Jesús,",
         "habita en [G]mí, Espíritu, [D]luz.",
@@ -4890,7 +4890,7 @@
         "[Bm]Grande es tu nombre, oh [G]Dios de Is[D]rael,",
         "pues [Bm]tú creaste la [G]tierra y el [D]sol.",
         "[A]Hoy tu grandeza invade mi [G]ser,",
-        "[D]¡Aleluya! [A]¡Aleluya! [Bm]¡Aleluya! [G]¡Aleluya! [D][x4]",
+        "[D]¡Aleluya! [A]¡Aleluya! [Bm]¡Aleluya! [G]¡Aleluya! [D](x4)",
         "",
         "[G]Dios de Israel, [Bm]Cristo Jesús,",
         "habita en [G]mí, Espíritu, [D]luz."
@@ -4917,7 +4917,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C#m]Todo lo cre[A]aste:",
         "[B]la [C#m]tierra, cielo y [A]mar.",
@@ -4967,7 +4967,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]Dios es nuestro amparo y forta[C#m]leza,",
         "[D]nuestro pronto au[E]xilio en las tribu[A]laciones,",
@@ -5008,7 +5008,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Dios está a[G]quí, [Am]¡Aleluya! [C7]",
         "[F]tan cierto como el [G]aire que res[C]piro, [C7]",
@@ -5038,7 +5038,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Cuando andamos por la vida [Em]sin destino o di[F]rección, [G]",
         "[C]cuando faltan los a[Em]migos, autoes[F]tima y emo[E]ción,",
@@ -5102,7 +5102,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Dios, [F]que tu [C]luz pueda [C/E]ilu[F]minar [G]todo nuestro [C]ser.",
         "[C]Dios, [F]que tu [C]luz pueda [C/E]ilu[F]minar [G]todo nuestro [C]ser.",
@@ -5145,7 +5145,7 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "Coro:",
         "[La] Dios tu sabes [Mi] que te amo [Fa#m]",
@@ -5187,7 +5187,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Dulce oración, dulce [F]oración, de [C]toda",
         "influencia mundanal",
@@ -5245,7 +5245,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]En tus manos [G]rotas vi, [Am]todo tu amor [Em]por mí,",
         "[F]comprendí en[Dm]tonces tu amis[G]tad.",
@@ -5289,7 +5289,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]El hombre que anduvo en Galilea",
         "se llamaba Jesús de Naza[G]ret,",
@@ -5326,7 +5326,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "Coro",
         "[D]EL AMOR DE DIOS ES [A7]MARAVILLOSO.",
@@ -5359,7 +5359,7 @@
         "audio": "https://open.spotify.com/intl-es/track/1UEwI2FyRaowh1kUWCzNLg?si=b1fb33d9c150481d",
         "traductor": ["-"],
         "partitura": "No",
-        "revisado": "No",
+        "revisado": ["No"],
         "letra": [
           "Enciende una luz y dejala brillar",
           "La luz de Jesús, que brille en todo lugar",
@@ -5400,7 +5400,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]El amor de Cristo es dulce y grande,",
         "[A]el amor de Cristo es dulce y grande,",
@@ -5435,7 +5435,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Cuando vengo a ti quiero ala[A]bar, [Em]adorarte a [A]ti.",
         "[D]Quiero ofrecer un canto [A]digno a ti, que me [Em]aceptes Se[A]ñor.",
@@ -5478,7 +5478,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[Dm]Él es Señor, Jehová, Dios poderoso.",
         "[F]Él es Señor, Jehová, [A]Dios poderoso.",
@@ -5518,7 +5518,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]Si me falta pa[D]sión, toca [A]mi cora[D]zón,",
         "[F#m]y mis [C#m]ojos ve[D]rán lo que tú [E]vas a hacer.",
@@ -5569,7 +5569,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]El mundo [D]aún tiene muchas be[Em]llezas",
         "[C]que alegran la [D]vida y nos hacen so[G - C/G]ñar.",
@@ -5619,7 +5619,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[Eb/G]Oh, qué [F/A]triste [Bb]fue ese a[Cm]mane[Bb/D]cer;",
         "[Eb]Cristo entre[Bb/D]gado [Cm7]para mo[F]rir.",
@@ -5652,7 +5652,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]El Salvador es mi amigo,",
         "[B]su escudo sobre mí es amor.",
@@ -5717,7 +5717,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No", 
+      "revisado": ["No"], 
       "letra": [
         "[Estrofa 1]",
         "En mi [G]alma suena un cantar,",
@@ -5760,7 +5760,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Todos mis tesoros pueden [Bm]desa[G]parecer,",
         "[G]lo que amo hoy tal vez ma[D]ñana ya no es[A]té.",
@@ -5810,7 +5810,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]En mo[Bm]mentos a[Em]sí yo canto can[A]ción,",
         "[Em]canción de a[A]mor a mi [D]Cris[A]to.",
@@ -5845,7 +5845,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[Em - C]Sin ti, Señor, [G - D]polvo soy.",
         "[Em - C]Ningún valor, [G]barro soy.",
@@ -5887,7 +5887,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Vivimos hoy sin aten[A]ción",
         "[Em]y las personas [C]piden compren[A]sión.",
@@ -5927,7 +5927,7 @@
         "",
         "[G]Enséñame a servir,",
         "[D]enséñame a servir,",
-        "[G]enséñame a [A]servir, Je[D]sús. [x2]"
+        "[G]enséñame a [A]servir, Je[D]sús. (x2)"
       ],
       "nota": [""]
     }
@@ -5952,7 +5952,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]No quiero pen[Bm]sar",
         "[Am]ni recordar lo [C/D]que he dejado.",
@@ -6000,7 +6000,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[Verse 1]",
         "[A]Oh Cristo yo quiero expresar",
@@ -6061,7 +6061,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Oh, Señor, en ti he confi[F]ado,",
         "pongo en tus manos mi Es[F]píri[C]tu.",
@@ -6101,7 +6101,7 @@
         "[D]Eres amor, Dios bueno y justo,",
         "[G]eres mi canto y mi refugio,",
         "[C]eres hermoso y [G]luz del mundo,",
-        "[D]eres Señor. [x2]"
+        "[D]eres Señor. (x2)"
       ],
       "nota": [""]
     }
@@ -6126,7 +6126,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Eres mi refugio y mi [Bm]fortaleza,",
         "[G]mi socorro eterno, eres mi a[D]brigo.",
@@ -6146,7 +6146,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "És o meu Refúgio",
         "Minha Fortaleza",
@@ -6181,7 +6181,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Eres mi respi[C]rar, [G]eres mi respi[C]rar.",
         "[G]Dios, [D]tu pre[Em]sencia [C]vive [Em]en [D]mí.",
@@ -6215,7 +6215,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Eres mi [A]fuerza y mi po[Bm]der,",
         "el [F#m]gran tesoro que bus[G]qué,",
@@ -6260,7 +6260,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Eres tú la [G]única razón",
         "de mi [Am]adoración, oh Je[F]sús.",
@@ -6305,7 +6305,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]Es exaltado, en lo [C#m]alto exaltado",
         "[A]es el Rey, le ala[B]baré.",
@@ -6340,7 +6340,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Espíritu Santo, anhelo tu pre[G]sencia,",
         "[F]con [Fm]poder y gloria llena este lu[C]gar.",
@@ -6378,7 +6378,7 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "[G]Estamos de fiesta con Jesus",
         "al cielo queremos [D]ir,",
@@ -6423,7 +6423,7 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "(Intro: C - G - C)",
         "",
@@ -6460,7 +6460,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Éste es mi de[Bm]seo, [G]hon[D]rarte a [A]ti,",
         "[Bm]con todo mi [D]ser, te adoro a [C - G - A]ti.",
@@ -6495,7 +6495,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Cú[G/B]breme [Am]con tu a[F]mor, [D/F#][G]",
         "[C]con poder pro[F]tégeme, [Dm]Se[G]ñor.",
@@ -6542,7 +6542,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[RE]E' bello stare qui [LA]uniti tutti insieme",
         "[SI-]Da un vincolo d'amore, [LA]noi siamo amici",
@@ -6586,7 +6586,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[DO]Ne ho viste tante di cose io,",
         "[SOL]dentro ai miei anni trascorsi [MI]ormai",
@@ -6641,7 +6641,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[MI]Lui sta bus[SI]sando al tuo [DO#-7]cuor",
         "Ti sta chiedendo di arrenderti",
@@ -6715,7 +6715,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[SOL]Eccomi Gesù vengo [DO]verso Te,",
         "A parlarti del mio cuore",
@@ -6775,7 +6775,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[Intro]",
         "[G]- [D7]- [G]",
@@ -6818,7 +6818,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[D]Una brasa hay profunda en [G]mí,",
@@ -6856,7 +6856,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]There's an ember deep with[G/D]in me",
         "but it's [D/F#]only a little [Asus4 A]flame",
@@ -6908,7 +6908,7 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "Estrofa y Coro",
         "",
@@ -6943,7 +6943,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[LA]So che [RE]presto Gesù tornerà [LA]",
         "[LA/DO#]Tutto il [RE]cielo an[LA]sioso aspettando Lo [MI]sta",
@@ -6998,7 +6998,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[DO]Fiume, fiume, [LA-]tu che vai e [DO]ci porti nella [LA-]terra che",
         "[DO]il Signore ha [LA-]dato a [MI-]noi, che [SOL]lottiamo per [SOL7]raggiungerla.",
@@ -7046,7 +7046,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[F]Fe no es sólo decirlo,",
         "[Bb]tampoco imagi[F]narlo.",
@@ -7089,7 +7089,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[F]Paro a pensar, son muchos de[Bb/F]safíos que vivir,",
@@ -7148,7 +7148,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Si la vida exige hoy [A]más de lo que puedo [D]dar",
         "[C#m]y mis luchas se trans[F#m]forman en ba[D]tallas",
@@ -7191,7 +7191,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Hoy puedo ver que la [A]gente está se[F#]dienta,",
         "[Bm]quieren saber dónde se en[Am7]cuentra el agua [D7]viva.",
@@ -7219,7 +7219,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Eu posso ver tanta [A]gente que tem [F#]sede",
         "[Bm]Querem saber onde se en[Am7]contra a água [D7]viva",
@@ -7256,7 +7256,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[F]No tendremos te[Bb]mor [Dm]de enfrentar el [Bb]mal.",
         "[F]Si pasamos por [C]luchas, mi Dios es re[Bb]fugio contra el [C]mal.",
@@ -7307,7 +7307,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[DO]Dio ho [SOL]bisogno di [LA-]parlarti",
         "Non mi interessa [FA]vivere una vita senza [DO]senso,",
@@ -7378,7 +7378,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[MI-]Amico mio, [LA-]ascoltami",
         "[RE]Sai che c'è una via [SOL]migliore",
@@ -7431,7 +7431,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Hoy puedo ver que la [A]gente está se[F#]dienta,",
         "[Bm]quieren saber dónde se en[Am7]cuentra el agua [D7]viva.",
@@ -7496,7 +7496,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Nuestros padres predicaban sobre el re[Bm7]greso de Jesús",
         "[Em]y esperaron [Em/D]tanto tiempo por el [C]brillo de su luz.",
@@ -7539,7 +7539,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[F]Glorifico al Se[Bb]ñor [C]porque Él es [F]bueno,",
         "[F]glorifico al Se[Bb]ñor [C]porque Él es [F]bueno.",
@@ -7628,7 +7628,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "We are the Pathfinders strong,",
         "The servants of God are we.",
@@ -7647,7 +7647,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "Nós somos os desbravadores",
         "Os servos do Rei dos Reis",
@@ -7668,7 +7668,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "Nous sommes les Explorateurs,",
         "Les serviteurs du Seigneur;",
@@ -7702,7 +7702,7 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "Avancemos sin temor Guías Mayores",
         "Investidos con valor",
@@ -7736,7 +7736,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "data/partituras/hablar_con_dios.pdf",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]En la [A]oración en[D]cuentro [A]calma,",
         "[E]en la o[A]ración en[D]cuentro [A]paz. [A7]",
@@ -7769,7 +7769,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[LA]Nella preghiera io trovo calma",
         "Nella preghiera io trovo [RE]amor, [LA]",
@@ -7823,7 +7823,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Hay mil mi[G]llones de es[C]trellas [C7]",
         "[F]en esta [G]noche que ahora [C]negra ves.",
@@ -7863,7 +7863,7 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "[G]Hay una iglesia en el bosque,",
         "[D]do [C]siempre qui[G]siera estar,",
@@ -7899,7 +7899,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]He decidido seguir a Cristo,",
         "[F]he decidido seguir a [C]Cristo,",
@@ -7944,7 +7944,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Hay un mundo que en ti[D/F#]nieblas [Em]está,",
         "[Em/D]que no conoce al Salva[C]dor.",
@@ -7991,7 +7991,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[F]Hijo de Dios, [Am]luz de la luz,",
         "[Bb]Dios entre noso[C]tros, oh Je[F]sús.",
@@ -8037,7 +8037,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Hoy aquí, mi [Bm]Jesús",
         "[Em]me tomó en sus [A]brazos,",
@@ -8073,7 +8073,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[DO]Oh Signore ti prego [SOL]rispondimi",
         "[RE]Quando domani ti [MI-]chiamerò",
@@ -8174,7 +8174,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[RE]Questo è ciò che [SI-7]voglio: [SOL]lodare [LA]Te",
         "[SI-7]con tutto il [RE]mio cuore Ti ado[DO]rerò. [SOL][LA]",
@@ -8225,7 +8225,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[Em]Nuestros corazones [C]insaci[G]ables son [Em][C][G]",
         "[Em]hasta que co[C]nocen [G]a su Salva[D]dor. [Em - C - G - D]",
@@ -8281,7 +8281,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]Cuando el cielo y sus es[C#m]trellas me hablan del [D]amor [Dm]de [A]Dios,",
         "[F#m]y las flores, al a[D]brirse, buscan el [B]calor del [E]sol,",
@@ -8328,7 +8328,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Jesús es mi luz, [C]no temeré, [G]",
         "Jesús es mi luz, [D]no temeré. [D7]",
@@ -8372,7 +8372,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[Am]Jesús mi [Dm7]guía es,",
         "[G]amigo y [C]protector.",
@@ -8411,7 +8411,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Gracias te doy por [A]darme espe[Bm]ranza [F#m]",
         "[G]que muy [Em]pronto volve[E - A]rás.",
@@ -8458,7 +8458,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Jesús, tú eres mi ale[C]gría,",
         "[G]Jesús, tú eres mi can[D]tar.",
@@ -8498,7 +8498,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Jesús, la mon[C]taña y [G]yo,",
         "un [Em]poco de [A]tiempo en o[D]ración.",
@@ -8540,7 +8540,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[ReM]Jesús me pastorea",
         "yo voy con [La7]El hasta el [ReM]fin.",
@@ -8580,7 +8580,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Lávame en tu [C]sangre, [G]oh Se[Em]ñor,",
         "[Am]y más [D]blanco que la [G]nieve yo se[D]ré.",
@@ -8615,7 +8615,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[DO]L’aiuto che mi [SOL]serve solo Lui può [MI-]darlo",
         "[RE]La grazia Sua [DO]su me",
@@ -8675,7 +8675,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "INTRO: [MI-][RE][DO][RE]X2",
         "",
@@ -8765,7 +8765,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[D]La alegría está en el co[D7]razón",
@@ -8820,7 +8820,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Aunque ande por el mar y tenga mucho que [A]temer,",
         "mi barca está segura aunque durmiendo adentro es[Bm]tés.",
@@ -8883,18 +8883,18 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Dios te guarde y [F]bendiga,",
         "[C]que extienda su amor y [G]te muestre favor. [Am]",
-        "[C]Dios te [F]mire con agrado y [C]te [G]dé [C]paz. [x2]",
+        "[C]Dios te [F]mire con agrado y [C]te [G]dé [C]paz. (x2)",
         "",
         "[Am]Amén, [F]amén, [C]amén. [G]",
         "[Am]Amén, [F]amén, [C]amén. [G]",
         "[Repetir todo hasta aquí]",
         "",
         "[Am]Que te cubra con su [F]gracia hasta mil generaciones,",
-        "[C]tu familia y tus hijos y [G]los hijos de tus hijos. [x4]",
+        "[C]tu familia y tus hijos y [G]los hijos de tus hijos. (x4)",
         "",
         "[Am]Su presencia te acompañe [F]donde quiera que tu vayas,",
         "[C]que te llene, te rodee, [G]va contigo, va contigo.",
@@ -8945,7 +8945,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Cuán gloriosa será la ma[C]ñana",
         "cuando [G]venga Jesús el Salva[D]dor, [D7]",
@@ -8992,7 +8992,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]La sangre de [C]Cristo Je[G]sús",
         "me [D]limpia de todo pe[G]cado.",
@@ -9031,7 +9031,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]La única espe[F]ranza de [C]mi vida",
         "es saber que [G]Tú estás [G7]junto a [C]mí.",
@@ -9072,7 +9072,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[F]Lado a lado [G]es[C]toy con mi [G/B]Salva[Am]dor,",
         "[F]mi ami[G]go es Je[C - C7]sús.",
@@ -9119,7 +9119,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Levanto la [F]cruz, [C]la cruz de Je[G]sús, [Am]",
         "pro[C]clamo su [F]nombre.",
@@ -9141,7 +9141,7 @@
         "Coro",
         "",
         "[C]Santo, [G]Santo, [Am]Santo [C]Dios. [F]",
-        "[C]Santo, [G]Santo, [Am]Santo [G]Dios. [F][x2]",
+        "[C]Santo, [G]Santo, [Am]Santo [G]Dios. [F](x2)",
         "",
         "[C]Levanto la [F]cruz, [C]la cruz de Je[G]sús, [Am]",
         "pro[C]clamo su [F]nombre."
@@ -9173,7 +9173,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Llegó la hora de [D]adorar,",
         "llegó la hora de [Em]cantar.",
@@ -9230,7 +9230,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[Bm]Salvador, [A]vengo a Ti, [G]mi alma [D]descan[A]sará.",
         "[Bm]Tu amor [A]me atrae [G]hacia Ti, [D]Señor. [A]",
@@ -9320,7 +9320,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]Oh Señor, majes[E]tuoso [D]es [E]tu nombre en la tierra.",
         "[A]Oh Señor, majes[E]tuoso [D]es [E]tu nombre en la tierra.",
@@ -9364,7 +9364,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[Bm]Señor, tú eres la luz, tú eres salvación, [G]",
         "[Bm]a ti me ren[D]di[A]ré.",
@@ -9415,7 +9415,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Cielos y mares [F]anuncian ¡Cristo [C]viene!",
         "Nuestra esfe[Am]ranza, al fin, se consuma[C]rá. [F]",
@@ -9447,11 +9447,11 @@
         "Coro",
         "",
         "[F]¡Pronto vendrá!, ¡pronto vendrá!",
-        "[C]¡Pronto Je[G]sús volverá! [x2]",
+        "[C]¡Pronto Je[G]sús volverá! (x2)",
         "[Am]¡Maranata! ¡Pronto vendrá!",
         "[F]¡Cristo viene ¡Pronto vendrá!",
         "[C]por su pueblo que [G]le esperó!",
-        "¡Pronto Jesús volverá! [x2]",
+        "¡Pronto Jesús volverá! (x2)",
         "[C]¡Amén!"
       ],
       "nota": [""]
@@ -9481,7 +9481,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "Mi corazón se alegra en el Se[A]ñor, [B][E]",
         "proclama[D]ré su grandeza.",
@@ -9498,7 +9498,7 @@
         "[Repetir todo hasta aquí]",
         "",
         "[E]Su nombre alaba[A]ré [B]y can[C#m]taré,",
-        "su [A]nombre alaba[E]ré y can[B]taré [x3].",
+        "su [A]nombre alaba[E]ré y can[B]taré (x3).",
         "Su [A]nombre alaba[E]ré y can[C#m]taré,",
         "su [A]nombre alaba[B]ré, can[A]taré:",
         "",
@@ -9531,7 +9531,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]De lo alto del cielo y profundo del mar, [G]",
         "creación que revela su majes[A]tad. [Bm][A]",
@@ -9593,7 +9593,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C#m]Contigo estoy, vas [A]marcando el paso y sé",
         "que al [E]cielo marcho [B]hoy.",
@@ -9651,7 +9651,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]Me siento bien, [B7]bien, [E]bien.",
         "Me siento [B]bien con mi Je[E]sús [B7][E]",
@@ -9690,7 +9690,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "data/partituras/mensajero.pdf",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]Hay días que ni sé decir, [A]",
         "[Bm]no tengo motiva[E]ción,",
@@ -9736,7 +9736,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]Mi Cristo me [E]salva, [F#m]no hay nin[G]gu[D]no i[E]gual. [D]",
         "[A]Cada vez [D]más quiero a[A]labar su [F#m]grande y po[E]deroso amor.",
@@ -9781,7 +9781,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]Mi Dios es tan grande, tan [C#m]fuerte, poderoso,",
         "no hay [F#m]nada que [B]Él no pueda ha[E]cer.",
@@ -9826,7 +9826,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]Todos necesitan [E]amor que nunca falla,",
         "tu [C#m]gracia y compasión. [B]",
@@ -9850,7 +9850,7 @@
         "",
         "Puente:",
         "[E]En la tierra tu luz [B]brillará.",
-        "[A]Cantamos por la gloria [E]de tu majes[B]tad. [x2]",
+        "[A]Cantamos por la gloria [E]de tu majes[B]tad. (x2)",
         "",
         "Coro"
       ],
@@ -9882,7 +9882,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[Em]Poderoso, poderoso, poderoso, ¡poderoso es mi Dios! [Em-D-Em]",
         "[Em]Él abrió el Mar Rojo por librar a Israel,",
@@ -9927,7 +9927,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]En mis luchas con[F]migo estás",
         "[F]y cuando [C]caigo no [G]me dejarás.",
@@ -9959,7 +9959,7 @@
         "",
         "Puente:",
         "[C]Te pedimos: i[Am]lumina, [G]",
-        "[F]guíanos [C]en es[G]te mar. [Am][x4]",
+        "[F]guíanos [C]en es[G]te mar. [Am](x4)",
         "",
         "Coro"
       ],
@@ -9991,7 +9991,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[F]Contigo ando muy se[C]guro, el [G]mal a[Am]lejas con a[F]mor. [C][G]",
         "[F]Soy una oveja y pro[C]curo los [E]cuidados [Am]del Pas[D]tor. [F/G][C]",
@@ -10015,7 +10015,7 @@
         "Coro",
         "",
         "[C]Mi Pastor me lleva a [F]lugares [C]altos, [G]agua [Am]limpia be[F]beré. [G]",
-        "[F]Y en pastos [C]verdes des[E]cansaré, [Am]la jor[F]nada se[C]guiré [G][x2]",
+        "[F]Y en pastos [C]verdes des[E]cansaré, [Am]la jor[F]nada se[C]guiré [G](x2)",
         "[F7-C-Am-G]con Él,",
         "[F7-C-Am-G]con Él."
       ],
@@ -10046,7 +10046,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Mi reino es [G]como un grano [Am]de mostaza,",
         "[F]que los hombres [Dm]en la tierra sembra[G-G7]rán,",
@@ -10091,7 +10091,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Mi esperanza está en Jesús, [F][G]",
         "en su justicia y en la cruz. [Am]",
@@ -10145,7 +10145,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A - B - E]Estaba per[A/E]dido, Je[E]sús me encontró,",
         "[B]yo era un es[C#m]clavo y [F#]me libe[B]ró.",
@@ -10209,7 +10209,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Mirad cuál amor nos ha [F]dado el Padre [C]",
         "[C]al hacernos [G]hijos de Dios.",
@@ -10253,7 +10253,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]No me siento solo, solo,",
         "[C]solo, solo, [G]solo,",
@@ -10300,7 +10300,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]Dios, yo te [E]pido en ora[F#m]ción:",
         "[D-E]nace en mí, dame [A]salvación.",
@@ -10340,7 +10340,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[D]Necesario [A]como el aire,",
@@ -10397,7 +10397,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]No existe bien para [Em]mí que esté fuera de ti, [C]",
         "[D]gracias, Dios mío, me siento feliz.",
@@ -10441,7 +10441,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]No importa de dónde tú [G]vengas, [D]",
         "[D]si detrás del Calvario tú [A-A7]estás.",
@@ -10489,7 +10489,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]Si las sombras de esta [C#m]vida de[D]bilitan [Dm]hoy tu [A]fe,",
         "y en tu [C#]mente surgen [F#m]dudas de que [Bm]venga otra [D-E]vez,",
@@ -10537,7 +10537,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Nunca estés desani[G]mado,",
         "[F]nunca [G]vayas hacia a[C]trás.",
@@ -10578,7 +10578,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[DO]E se [SOL]domani non tornerai",
         "[SIB]Si spegnerà il mio cuore ed io mi spegnerò con [FA]lui.",
@@ -10630,7 +10630,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[LA]Un fiume d'acqua viva si fa spazio nel deserto",
         "[RE]Tutto fiorisce, [MI]nulla è come prima",
@@ -10709,7 +10709,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]No hay Dios tan grande como Tú",
         "[G]No lo hay, [C]no lo hay (BIS)",
@@ -10762,7 +10762,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Oh Dios [Bm]crea en mí",
         "[G]un cora[A]zón para ti",
@@ -10809,7 +10809,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E-C#m]Ahhh...",
         "Oba, oba, oba, oba oba,",
@@ -10865,7 +10865,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Tu voz me llama a las [A]aguas [D]",
         "[G]donde mis pies pueden fallar. [A]",
@@ -10889,7 +10889,7 @@
         "[Em]a donde tú me llames.",
         "[G]Tú me llevas más allá de lo soñado,",
         "[D]donde puedo estar confiado",
-        "[Em]al estar en tu presencia. [x2]",
+        "[Em]al estar en tu presencia. (x2)",
         "",
         "Coro"
       ],
@@ -10921,7 +10921,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[F#m]¡Oh amor de [D]Dios!, tu inmen[A]sidad",
         "[F#m]el hombre [E]no podrá con[A]tar,",
@@ -10978,7 +10978,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Padre de amor que [Em]en el cielo estás,",
         "[Fm]tu nombre [Bb]san[F]to [C/B]es. [Am]",
@@ -11023,7 +11023,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Padre nuestro del [C - G]cielo,",
         "[C]tu nombre [D]santo es.",
@@ -11031,13 +11031,13 @@
         "[C]y tu volun[D]tad también.",
         "",
         "[C]Aquí como en el [Am - Em]cielo,",
-        "[D]que el cielo [Em]venga. [x4]",
+        "[D]que el cielo [Em]venga. (x4)",
         "",
         "[Repetir todo hasta aquí]",
         "",
         "[C]Tuyo es el reino,",
         "[Am]tuyo el poder,",
-        "[Bm]tuya es la gloria por siempre, amén. [x4]"
+        "[Bm]tuya es la gloria por siempre, amén. (x4)"
       ],
       "nota": [""]
     }
@@ -11067,7 +11067,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Padre, yo te [Em]adoro, [A - D]",
         "[Em]toda mi vida te [A - D]entrego",
@@ -11109,7 +11109,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Oh Dios, eres mi [A]Dios,",
         "[G]por siempre te ala[Em-G]baré. [D]",
@@ -11160,7 +11160,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Cuando lloras por las [G]veces que intentaste, [D]",
         "[Bm]y tratas de olvidar las [A]lágrimas que lloraste,",
@@ -11206,7 +11206,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[Dm]Paz no es la ausencia",
         "[G]de problemas hoy,",
@@ -11242,7 +11242,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Ven, oh Señor, en [F/D]mí habi[C]tar,",
         "[Am]pues quiero [C]ser templo [G]fiel. [F]",
@@ -11284,7 +11284,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C-G]Tú has venido a la [Am]ori[C7]lla,",
         "[F]no has bus[Dm]cado ni a [G]sabios ni a ricos,",
@@ -11337,7 +11337,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Cristo mo[G]riste en una [F]cruz, [C]",
         "[F]resuci[C]taste con po[G]der. [C]",
@@ -11377,7 +11377,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Pon tus manos en las manos del Señor de Galilea, [Dm - F]",
         "[F]pon tus [G]manos en las [C]manos del Señor que calma el mar.",
@@ -11425,7 +11425,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Por encima del [D]poder, [G]",
         "[C]por encima del [D]trono y del [G]rey,",
@@ -11471,7 +11471,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C-G]Vino a vivir [F]vida perfecta,",
         "[C-G]vino a hacer la [F]vida nuestra luz,",
@@ -11525,7 +11525,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]El que me amó [G]vino una [A]vez",
         "[F#m]a nuestro mundo a [Bm]padecer,",
@@ -11572,7 +11572,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Vengo a ti, Jesús, [Bm - Em]",
         "quiero renovar mi ser,",
@@ -11619,7 +11619,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[LA]Quando penso a te, [MI]quando sei con me",
         "Io sento un tocco sulle mani ed un amore senza pari",
@@ -11664,7 +11664,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "Intro: [DO][FA][DO][FA][DO][FA][DO][SOL][DO]",
         "",
@@ -11748,7 +11748,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "Tú eres [D]Santo, (Tú eres Santo,)",
         "[G]poderoso, (poderoso,)",
@@ -11780,7 +11780,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[RE]You are holy (you are holy)",
         "[SOL]You are mighty (you are mighty)",
@@ -11858,7 +11858,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Cristo Jesús me con[Dm]fió",
         "[G]la tarea de predi[C]car, [G-C]",
@@ -11902,7 +11902,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",
+      "revisado": ["No"],
       "letra": [
         "Prometo fidelidad a la Biblia",
         "A su mensaje de un Salvador",
@@ -11950,7 +11950,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Que pena pen[D7]sar",
         "que mu[G]chísimos hombres",
@@ -11993,7 +11993,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Quédate Señor, quédate Señor",
         "[D]quédate Señor en cada [G]corazón,",
@@ -12036,7 +12036,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]¿Quién soy yo [B]cuando hay [C#m]ángeles de luz",
         "que quisieran [B]predi[A]car de tu [F#m]amor y ver[B]dad?",
@@ -12085,7 +12085,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Un nuevo tiempo co[C]mienza a na[G]cer,",
         "[Em]tiempo de cre[D]cer y de [G]nada te[C]mer. [D - G]",
@@ -12132,12 +12132,12 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]Queremos ver a [B]Cristo re[C#m]gresar",
         "[A]lleno de gloria y [E]majestad,",
         "[B]que todos co[C#m]nozcan al Señor,",
-        "[A]Él es el camino al cielo. [x2]",
+        "[A]Él es el camino al cielo. (x2)",
         "",
         "Coro:",
         "[B]Queremos ver, queremos ver,",
@@ -12187,7 +12187,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]¿Quién soy yo para que el gran [Bm - A]rey, me acep[D]te así?",
         "[D]Me encontró en mi perdi[Bm - A]ción, su [G]amor por mí,",
@@ -12242,7 +12242,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]¿Quién es el rey de la selva? ¡uh!, ¡uh!",
         "[D]¿Quién es el rey del [A]mar? ¡barabaraba!",
@@ -12285,7 +12285,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Quiero cantar una [Am]linda canción",
         "[F]de un hombre que [G]me transformó.",
@@ -12335,27 +12335,27 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]Mi orgullo me sa[B]có del jardín, [C#m]",
         "[B]su humildad puso el jardín en mí. [A]",
         "Y si vendiera todo lo que tengo [B]",
         "[C#m - E]a cambio de su amor yo fallaría.",
         "[A]Porque su amor no se compra [B]ni se merece.",
-        "[C#m]Su amor es un regalo, [B]de gracia se recibe. [x2]",
+        "[C#m]Su amor es un regalo, [B]de gracia se recibe. (x2)",
         "",
         "Coro:",
         "[A]Quiero cono[B]cer a Jesús,",
-        "[C#m]quiero cono[G#m]cer a Jesús. [x2]",
+        "[C#m]quiero cono[G#m]cer a Jesús. (x2)",
         "",
         "[Repetir todo hasta aquí]",
         "",
         "[A]Y ser hallado en Él.",
-        "[A - C#m - G#m]Jeshuah. [x4]",
+        "[A - C#m - G#m]Jeshuah. (x4)",
         "",
         "[A]Mi amado es [C#m]el más bello [E]",
         "[G#m]entre millares y millares.",
-        "[A - C#m - G#m]Jeshuah. [x4]"
+        "[A - C#m - G#m]Jeshuah. (x4)"
       ],
       "nota": [""]
     }
@@ -12386,7 +12386,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]Que lo digan todos: [B]¿quién es el rey de [E]reyes?",
         "[E]Que lo digan todos: [B]¿quién es el rey de [E]reyes?",
@@ -12426,7 +12426,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]El pan de vida fue que[F#m]brado por a[A]mor. [C#m - B]",
         "[A]Tu muerte en la cruz com[E]pró mi salva[F#m]ción. [A - C#m - B - E]",
@@ -12450,7 +12450,7 @@
         "[E]Siempre has sido [B]bueno, Dios.",
         "[C#m]Siempre has sido [A]bueno, Dios.",
         "[E]¿Qué sería [B]yo sin ti,",
-        "[C#m]sin tu a[B]mor, sin tu per[A]dón? [x3]",
+        "[C#m]sin tu a[B]mor, sin tu per[A]dón? (x3)",
         "",
         "[A]Tan alto como el cielo es[B]tá,",
         "y tan profundo como el mar, [C#m]",
@@ -12492,7 +12492,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "Rendid a Yahvé, santos del Señor, [G]",
         "gloria y poder al que hace la creación. [C]",
@@ -12549,7 +12549,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D7]Creador del uni[Bm]verso eres tú, mi Rey, mi [A-Em7]Dios de amor.",
         "[Bm]Caímos en las [D7]garras del mal, [A-Em7]todo se llenó de oscuridad.",
@@ -12558,7 +12558,7 @@
         "",
         "Coro:",
         "[D]Porque tu amor [A/C#]nunca se rinde, [G/B]tu luz llena la [D]os[Em7]curi[G]dad. [D/A - G/A]",
-        "[G/A-A]La tormenta a[Em7]traviesas, tu voz la de[G]tiene, me res[D]catas del mal. [x2]",
+        "[G/A-A]La tormenta a[Em7]traviesas, tu voz la de[G]tiene, me res[D]catas del mal. (x2)",
         "",
         "[Repetir todo hasta aquí]",
         "",
@@ -12600,7 +12600,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Renuévame, Se[Dm]ñor Je[G]sús, [C]",
         "[F]ya no [Dm]quiero ser i[G]gual.",
@@ -12642,7 +12642,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Restaura mi [Em]ser, res[Bm]taura mi vi[A]vir, [G]",
         "[D]restaura mi desilu[A]sión, res[Em]taura mi que[G]brantado cora[A]zón.",
@@ -12684,7 +12684,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[RE]È stato bello [SOL]stare insieme a [RE]te",
         "[SOL]La per poter parlare di [LA4]Gesù, [LA]",
@@ -12741,7 +12741,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Qué alegría encon[Am]trarás si [G/B]no buscas el pe[C]cado",
         "[Am]ni oyes los con[D]sejos de maldad,",
@@ -12797,7 +12797,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Cuando miro los [Bm]claros cielos [cite: 84, 85, 86]",
         "[C]y lo que es [Am]obra de tus [D]dedos, ",
@@ -12845,7 +12845,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Jehová es mi pas[D]tor [BIS]",
         "[C]nada me fal[D]tará.",
@@ -12946,7 +12946,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]Alza tus manos a [A]Dios, nuestra [B]fuerza es el [E]gozo de [A]Él. [B]",
         "[E]Nos postramos en a[A]doración, ¡cuán [B]grande y majestuoso es [E]Él!",
@@ -12966,7 +12966,7 @@
         "Coro",
         "",
         "[E]El Señor en [B]todos lados está,",
-        "[D]nuestro Dios glo[A]rioso siempre será. [x2]",
+        "[D]nuestro Dios glo[A]rioso siempre será. (x2)",
         "",
         "[F#-A]Cantémosle a [F#-A]Él, juntos hoy a Él:",
         "",
@@ -13002,7 +13002,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Santo Espíritu, [F]llena mi vida,",
         "[C]pues por [Am]Cristo yo [G]quiero brillar.",
@@ -13056,7 +13056,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[F]San[C]to sólo [G/B]es el Se[Am]ñor,",
         "[F]digno [C]de todo lo[G]or.",
@@ -13102,7 +13102,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Entro en tu templo, [D/F#]santuario en el tiempo.",
         "[G]Quiero ado[Am]rar como tú deseas,",
@@ -13131,7 +13131,7 @@
         "[Em]quiero ser[D]vir como tú me pides.",
         "[D/F#]Todos bienvenidos, aquí somos todos hijos",
         "[C]creados por el mismo Dios,",
-        "[Em]amados por su [D-C]mismo Hijo. [x2]"
+        "[Em]amados por su [D-C]mismo Hijo. (x2)"
       ],
       "nota": [""]
     }
@@ -13163,7 +13163,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Brilla cual luz en la [Bm]oscuri[G]dad, sé una [A]luz.",
         "[D]El mundo busca [G]salva[A]ción, sé una luz",
@@ -13212,7 +13212,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Sentado estaba en mi barca mi[A]rando el inmenso [D]mar, [D7-G][D]",
         "cansado ya de ti[D]rar la red, [Bm]sin un [E]pez sacar, [G-A]",
@@ -13262,7 +13262,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Dame una fe sencilla",
         "[F#m]como risa de niños cuando juegan,",
@@ -13330,7 +13330,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Quiero, mi Se[Em]ñor, darte mi cora[F]zón. [G]",
         "[F]Quiero alabarte a [G]ti, sólo vivir por ti.",
@@ -13383,7 +13383,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[F]Una voz nos [C]llama y de[G]bemos atender,",
         "[C]es la voz de [Dm]Cristo que nos [G]dice qué hacer.",
@@ -13433,10 +13433,10 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]Señor, tu gracia [B]me da solaz",
-        "[C#m]y tu pre[A]sencia me da [E]la paz. [x2]",
+        "[C#m]y tu pre[A]sencia me da [E]la paz. (x2)",
         "[C#m]Tu gran fuerza [A]me sostiene, es mi refugio en la tormenta,",
         "[E]por eso te [B]alabo, tú [A]eres mi Dios.",
         "",
@@ -13478,7 +13478,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Si comenzamos a orar, (Si comenzamos a orar),",
         "[G]temblará este templo. (temblará este templo).",
@@ -13519,7 +13519,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]Si el cristiano tiene cer[B]teza, di amén. ¡Amén!",
         "[B7]Si el cristiano tiene cer[E]teza, di amén. ¡Amén!",
@@ -13576,7 +13576,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]Si Jesús te satis[E]face",
         "[A]da tres palmas, (clap-clap-clap)",
@@ -13622,7 +13622,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]Yo quiero ser [E/G#]siempre de Je[A]sús, [D][A]",
         "[C#m]alumbraré al [D]mundo con su [E]luz.",
@@ -13638,7 +13638,7 @@
         "[D]Siempre de Je[E]sús, [A - E/G#]",
         "[F#m]siempre con [D#dim]mi Je[E]sús.",
         "[A]En todo [A/G]tiempo y en [D/F# - A/C#]cualquier lu[Bm]gar,",
-        "[A]con mi Je[E]sús yo siempre quiero es[A]tar. [x2]"
+        "[A]con mi Je[E]sús yo siempre quiero es[A]tar. (x2)"
       ],
       "nota": [""]
     }
@@ -13670,7 +13670,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[F]Sólo en Je[C]sús esta mi fe,",
         "[F]mi espe[C]ranza y [F]mi canción.",
@@ -13732,7 +13732,7 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "Estrofa 1:",
         "[Rem]Si el Espíritu de Dios esta aquí, [La7]",
@@ -13790,7 +13790,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G/B][A/C#][Dm][G][C-G/B][Am][G]",
         "[Dm]Porque tu amor es mejor que la vida,",
@@ -13835,7 +13835,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[Em-C][G][D][Em-C]",
         "[Em-C]Solo tú mi corazón llenaste con tu amor.",
@@ -13843,7 +13843,7 @@
         "[G]agrade[D]cido estoy [Em-C-G-D]por tu perdón.",
         "",
         "[Em]¿Cómo po[G]dré agrade[D]certe, Dios, por tu amor,",
-        "[Am]por lo que [Em]hiciste [D]en la cruz? [x2]",
+        "[Am]por lo que [Em]hiciste [D]en la cruz? (x2)",
         "",
         "[C]Tú amor [G]sobrepasa [D]entendi[Am]miento y [C]razón,",
         "[G]tu cruz [Em-D-C]nos [G]trajo [D]redención.",
@@ -13852,14 +13852,14 @@
         "",
         "[Repetir todo hasta aquí]",
         "",
-        "[C]Nada puede [Em]igualar tu [D]amor, ¡oh! [x4]",
+        "[C]Nada puede [Em]igualar tu [D]amor, ¡oh! (x4)",
         "",
         "[C]Tú amor [G]sobrepasa [D]entendi[Am]miento y [C]razón,",
         "[G]tu cruz [D]nos [Em-D-C]trajo redención.",
         "[G]Nada nos [D]puede se[Am]parar de tu [C]amor,",
         "[C]tuyo [D-C]soy, [D-G]tuyo soy.",
         "",
-        "[G]La, la, la, [D]la, la, la, [Em]la, la, la, [C]la, la, la, [G]la, la, la, [D]la. [x2]"
+        "[G]La, la, la, [D]la, la, la, [Em]la, la, la, [C]la, la, la, [G]la, la, la, [D]la. (x2)"
       ],
       "nota": [""]
     }
@@ -13891,7 +13891,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[Bb-F]Hay secretos que guar[Dm]dar [C]y temores que enfr[Bb-F]entar. [Dm-C]",
         "[Bb]Nuestra identidad no [F]es la oscuridad, [Bb]somos [F]hijos [Dm]de la [C]luz.",
@@ -13946,7 +13946,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D-A]Somos su voz, da[Bm]remos su men[Em]saje; [E][A]",
         "[D]somos sus [A]pies, i[Bm]re[Em]mos por do[E]quier. [A]",
@@ -13990,7 +13990,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Dos caminos que elegir, [A]dos señores que [G]seguir. [D-A-G]",
         "[G]¿Cuál es la [A]mejor op[D]ción? Sólo [D]hay una decisión.",
@@ -14048,7 +14048,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[SOL]Su ogni [DO]potenza, [RE]sopra ogni [SOL]re,",
         "Più di ogni cosa creata intorno a me.",
@@ -14091,7 +14091,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "Non so se mai io capi[LA]rò",
         "[MI]Quello che [FA#-]dice e quel che fa,",
@@ -14161,7 +14161,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "INTRO: [SI-][LA][SOL]X2",
         "",
@@ -14233,7 +14233,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[INTRODUCCIÓN]",
         "B6 Ab7 C#m7 F#13 Ebm7 Ab7-9 C#m7 C7-5",
@@ -14285,7 +14285,7 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "[A] Somos soldaditos, [E] ciervos del se[A]ñor",
         "[A] Vamos en defensa de [E] nuestro evan[A]gelio",
@@ -14335,7 +14335,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Tal como soy Señor, [Em]sin nada que ofrecer más que mi canción.",
         "[G]No tengo más que [C]darte pues [Am]todo es [D7]tuyo Señor.",
@@ -14375,7 +14375,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[Bm]Te exaltaré, mi [Em]Dios mi [Bm]Rey,",
         "[Em]y bende[Bm]ciré tu [F#]nom[Bm]bre",
@@ -14419,7 +14419,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D-G][D]",
         "[D]Voy a contarte lo que no ves,",
@@ -14478,7 +14478,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Tengo paz como un [D7]río,",
         "[G]tengo paz como un [D]río,",
@@ -14531,7 +14531,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "Coro:",
         "[D-D7]Tomados de la mano con Él yo voy",
@@ -14581,7 +14581,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[Am]Los cielos [F]claman las [C]obras del eterno,",
         "[Am]galaxias [F]cantan de [C]su inmensidad.",
@@ -14594,7 +14594,7 @@
         "[G]resuena [F]en nuestro cora[C]zón.",
         "",
         "[C][F]A Él sea honra, gloria y loor,",
-        "[Am]que el reino del Se[G]ñor sea nuestro corazón por siempre. [x3]",
+        "[Am]que el reino del Se[G]ñor sea nuestro corazón por siempre. (x3)",
         "",
         "Coro:",
         "[F]Delante de Él nos rendimos,",
@@ -14610,7 +14610,7 @@
         "Coro",
         "",
         "[F]A El sea honra, gloria y loor,",
-        "[Am]que el reino del Se[G]ñor sea nuestro corazón por siempre. [x3]",
+        "[Am]que el reino del Se[G]ñor sea nuestro corazón por siempre. (x3)",
         "",
         "Coro",
         "",
@@ -14647,7 +14647,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[F#m]La única ra[D]zón de mi adoración",
         "[A]eres tú, mi Se[E]ñor.",
@@ -14696,7 +14696,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[F#m]Ante ti hoy me encuentro, y postrado me presento,",
         "[A]tu esplendor [D]me con[A]quis[E]tó.",
@@ -14752,7 +14752,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Tu amor por [Em]mí",
         "[Am]es más dulce [Em]que la miel,",
@@ -14799,7 +14799,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Quédate a[D/C#]quí, Señor,",
         "[D/C]yo sé que es [G/B]tarde, aun así yo insisto.",
@@ -14820,7 +14820,7 @@
         "",
         "Puente:",
         "[D/F#]Tu mo[G]rada y tu [A]casa serán siempre mi altar.",
-        "[Em]Tu mo[D/F#]rada y tu [G]casa, donde [A]puedas siempre estar. [x2]",
+        "[Em]Tu mo[D/F#]rada y tu [G]casa, donde [A]puedas siempre estar. (x2)",
         "",
         "Cierre:",
         "[D][D/F#-G][D][Em-D/F#-G-C]Que yo sea tu morada, que yo sea tu morada."
@@ -14855,7 +14855,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "Desde el fondo del mar, desde el fondo del mar,",
         "[G]del más alto lugar, del más alto lugar,",
@@ -14906,7 +14906,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Queremos hoy pedir, Señor,",
         "[D-C]tu poder, tu po[G]der.",
@@ -14956,7 +14956,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[Dm]Todo ser que vive alabe [F]el nombre del Señor.",
         "[Bb]Toda criatura se de[F]rrama a sus pies.",
@@ -15005,7 +15005,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]Va naciendo un nuevo tiempo, una nueva generación,",
         "[A]para llevar tu gloria a [D]todo el mundo.",
@@ -15151,7 +15151,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "INTRO: [SI-][LA][SOL]X2",
         "",
@@ -15244,7 +15244,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[SIB]He left everything behind and he went",
         "[FA]Walking the path of the wind",
@@ -15356,7 +15356,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[MI]God is light",
         "[SI]There’s no darkness in him",
@@ -15444,7 +15444,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "Alguien dijo: «nada hay nuevo bajo el sol,",
         "[Gm]todo es vani[Bb]dad, nada [F]más que espe[C]rar».",
@@ -15500,7 +15500,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]Un palacio tengo allá",
         "mas lindo que el sol,",
@@ -15535,7 +15535,7 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "[D]Una mirada de fe,",
         "Una mirada de fe,",
@@ -15583,7 +15583,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[FA]Oh Signor mio [DO]Dio",
         "[RE-]Ho bisogno di Te",
@@ -15659,7 +15659,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Vamos a ado[A]rar al Se[Em]ñor,",
         "[D]vamos a exal[G]tar su amor,",
@@ -15704,7 +15704,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "¿Tienes dudas en tu ser?",
         "¿O temes no poder vencer?",
@@ -15755,7 +15755,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[D]Tú, con tu [A]luz, a tinie[Em]blas ba[G]jaste,",
@@ -15790,7 +15790,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[MI]Luce del [SI]mondo nel [FA#-7]buio del [LA]cuore",
@@ -15850,7 +15850,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Vamos a henchir el mundo de alegría.",
         "[C]Hay que reír y [G]nunca murmurar.",
@@ -15900,7 +15900,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[Em]Mi alma estaba [G]rota y herida",
         "[Em]pero tu gracia [G]la restauró.",
@@ -15955,7 +15955,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Yo quiero [G]ser un [Am]vaso de [Em]honra",
         "[C]moldeado [F]por el [D]Se[G]ñor,",
@@ -15998,7 +15998,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]Tienes [A]dudas en tu [E]ser,",
         "[C#m]o temes [B]no poder ven[A]cer,",
@@ -16052,7 +16052,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Ven, es tiempo de a[F/C]dorar[C]le,",
         "[Dm]ven, es [C]tiempo de [F]dar tu corazón. [C]",
@@ -16096,7 +16096,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[Ab]Ven, Espíritu [Db]Santo, [Ab]cámbiame [Ab7]con tu po[Db]der. [Ab7]",
         "[Ab]Quiero tener la vic[Ab7]toria, quiero [Db]ser puro [Ab]otra [Ab7]vez. [Db]",
@@ -16159,7 +16159,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]Aguardo [G#m-B]Aguardo el día en que veré",
         "[C#m]una pe[C#m]queña [A]luz bri[E]llar,",
@@ -16210,7 +16210,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Padre, vengo a [C/G]ti para pe[G]dir:",
         "[C/G]limpia hoy mi [Bm/E]corazón con [D]tu gracia.",
@@ -16261,7 +16261,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Voy caminando [G]siempre con[Am]tento",
         "[Em]rumbo al [F]cielo [Dm]con Je[G]sús.",
@@ -16301,7 +16301,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[LA][MI][FA#-][RE][SI-][MI4][MI]",
         "Vengo a te, proteggimi",
@@ -16357,7 +16357,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[SOL]Immagina per un istante il [SI-]mondo senza sole",
         "[SOL]Senza quella luce e quel [LA]calore",
@@ -16416,7 +16416,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[DO]Mi risveglio con un [RE]motivo: camminare con [MI-]Te",
         "E decido di star alla Tua presenza.",
@@ -16485,7 +16485,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[SOL]Occhi che [MI-]vedono [DO]ombre e sogni [RE]che",
         "Cadono si infrangono nelle tenebre",
@@ -16549,7 +16549,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[DO]Niente può [SOL]dividermi [LA-]da te",
         "[FA]c’è qualcosa che ci [SOL]avvicina,",
@@ -16600,7 +16600,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[FA#-]Ed ogni volta che mi [DO#-]guardo dentro,",
         "[LA]ho un motivo [MI]in più",
@@ -16674,7 +16674,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "[RE]Volerei fino al [SI-]cielo",
@@ -16744,7 +16744,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[C]Si, lo veremos",
         "[F]cuando venga en [C]gloria,",
@@ -16800,7 +16800,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Si tu triste estás",
         "[A7]y no tienes paz",
@@ -16926,7 +16926,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Cuando recuerdo que nació en [G]Belén",
         "[A7]Yo nunca me iré hacia [D]atrás [A7]",
@@ -16974,7 +16974,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Yo canto del [A]gran amor de [Bm]Cristo,",
         "[D]alabo al [G]Rey y Salvador.",
@@ -17023,7 +17023,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Nos diste una mi[C]sión para cum[D]plir, Señor:",
         "[C]llevar tu men[D]saje, anunciar que [G]eres [D/F#]el Salvador.",
@@ -17091,7 +17091,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]Yo pensaba que el hombre era grande por su [B]poder,",
         "grande por su [E]saber, grande por su valor.",
@@ -17151,7 +17151,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "Coro:",
         "[F]Yo puedo [C]todo, [G]todo lo [Am]puedo",
@@ -17176,7 +17176,7 @@
         "[Dm]Por eso quiero alabar",
         "[G]a Cristo [C]que me fortalece.",
         "[Dm]Por siempre voy a confiar",
-        "[G]en Cristo [C]que me fortalece. [x2]",
+        "[G]en Cristo [C]que me fortalece. (x2)",
         "",
         "Modulación (Re Mayor):",
         "[D - A]Yo puedo, [Bm]todo lo puedo",
@@ -17216,7 +17216,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[Am]Nace un nuevo [C]día, yo elijo vi[C]vir",
         "[Am]para tu [F]reino, para tu [C]reino.",
@@ -17241,7 +17241,7 @@
         "",
         "Puente / Salida:",
         "[F]Por todo lo que hiciste, tu gran amor por mí,",
-        "[Am]mi vida hoy en[F]trego ante [G]ti. [x2]",
+        "[Am]mi vida hoy en[F]trego ante [G]ti. (x2)",
         "",
         "Coro final (en Re Mayor):",
         "[D-A]Yo soy Ca[Bm-G]leb, [D-A]yo soy Ca[Bm-G]leb.",
@@ -17280,10 +17280,10 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Yo soy feliz porque Jesús es muy bueno conmigo,",
-        "[C]yo soy feliz porque [D]él es mi amigo. [x2]",
+        "[C]yo soy feliz porque [D]él es mi amigo. (x2)",
         "",
         "[G]Puedo estar tran[Em]quilo si todo aquí va mal,",
         "[G]nunca voy a du[C]dar, se[D]guro estaré.",
@@ -17295,7 +17295,7 @@
         "[G]la, la, la, la, la, [G]la, la, la, la, la, [Em]la, la, la, [A]la la, [D]¡hey!",
         "",
         "[Em]Yo soy feliz porque Jesús es muy bueno conmigo,",
-        "[G]yo soy feliz porque [C]él es mi [D]amigo. [x2]",
+        "[G]yo soy feliz porque [C]él es mi [D]amigo. (x2)",
         "",
         "[Em]Quiero contar historias que hablen de Jesús",
         "[C]y conocerlo a[D]sí cada día más.",
@@ -17336,7 +17336,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "Coro:",
         "[F]Yo soy un [F/A]mensaje, soy carta abierta,",
@@ -17391,7 +17391,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[G]Yo soy un C, ",
         "yo soy un C-R-I,",
@@ -17430,7 +17430,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]En el principio, Dios creador,",
         "[E]antes del tiempo eras tú.",
@@ -17519,7 +17519,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Yo te alabaré, Señor,",
         "con [D]todo el [G]cora[A]zón cantaré y te adoraré.",
@@ -17541,7 +17541,7 @@
         "[B]A ti [C#m]toda [A]gloria y [B]honor sea [E]para siempre.",
         "",
         "Salida:",
-        "[A]Yo te ala[B]baré, Señor, [x3]",
+        "[A]Yo te ala[B]baré, Señor, (x3)",
         "[A]yo te ala[B]ba[E]ré, Señor."
       ],
       "nota": [""]
@@ -17576,24 +17576,24 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[D]Yo tengo algo que el mundo no me da,",
-        "[A]que el mundo [B]no me [D]puede quitar (x - x). [x2]",
+        "[A]que el mundo [B]no me [D]puede quitar (x - x). (x2)",
         "[G]Es Jesucristo [D]que me ha salvado,",
         "[A]me ha dado la vida, [D]me ha dado el amor.",
         "[G]Es Jesucristo [D]que me ha salvado,",
         "[A]me ha dado la vida, [D]me ha dado el amor.",
         "",
         "[D]Tú tienes algo que el mundo no te da,",
-        "[A]que el mundo [B]no te [D]puede quitar (x - x). [x2]",
+        "[A]que el mundo [B]no te [D]puede quitar (x - x). (x2)",
         "[G]Es Jesucristo [D]que te ha salvado,",
         "[A]te ha dado la vida, [D]te ha dado el amor.",
         "[G]Es Jesucristo [D]que te ha salvado,",
         "[A]te ha dado la vida, [D]te ha dado el amor.",
         "",
         "[D]Tenemos algo que el mundo no nos da, (x - x)",
-        "[A]que el mundo [B]no nos [D]puede quitar. [x2]",
+        "[A]que el mundo [B]no nos [D]puede quitar. (x2)",
         "[G]Es Jesucristo [D]que nos ha salvado,",
         "[A]nos ha dado la vida, [D]nos ha dado el amor.",
         "[G]Es Jesucristo [D]que nos ha salvado,",
@@ -17622,7 +17622,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]Yo tengo [D]esperanza en [A]Dios, mi Se[E]ñor.",
         "[D]Si a veces no [A]tienes motivos para continuar,",
@@ -17736,7 +17736,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[A]Todos tenemos [E]otro hogar, [D]un nuevo E[E]dén para morar.",
         "[A]Nos queda[D]remos por a[B]quí sólo un [E]poco más.",
@@ -17779,7 +17779,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "[E]No quiero ser aquel que oye sólo por oír.",
         "[A]En tu palabra [E]dices que tu amor está en mí.",
@@ -17803,7 +17803,7 @@
         "[A]No pienso más en mí, te quiero obedecer.",
         "[C#m]¡Tu santo Espíritu en mí me llena de poder!",
         "[A]No tardes [F#m]más, pues tu gloria, Señor,",
-        "[F]yo quiero [B]ver. [x2][primera vez]",
+        "[F]yo quiero [B]ver. (x2)[primera vez]",
         "[D - A/C# - B - C]yo quiero ver. [segunda vez]",
         "",
         "Modulación (Fa Mayor):",
@@ -17811,7 +17811,7 @@
         "[Dm]¡Yo voy, pues tu amor no es secreto!",
         "[Gm]¡Yo voy [F/A]pues este es tu deseo!",
         "[Bb]¡Descienda hoy tu reino!",
-        "[Eb]Sólo [C]quiero decir: [x2][primera vez]",
+        "[Eb]Sólo [C]quiero decir: (x2)[primera vez]",
         "[Eb]Sólo [C]quiero de[F]cir: yo voy!",
         "[Eb]Sólo [C]quiero de[F]cir: ¡yo voy! [segunda vez]"
       ],
@@ -17838,7 +17838,7 @@
       "audio_url": "",
       "traductor": ["Manuel Bonilla"],
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "[G]Yo tengo gozo, gozo en mi corazón. (¿Dónde?)",
         "[D]En mi corazón, (Pero ¿dónde?) [G]en mi corazón.",
@@ -17888,7 +17888,7 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": "No",        
+      "revisado": ["No"],        
       "letra": [
         "[E] Yo tengo gozo en mi alma, gozo en mi alma,",
         "gozo en mi alma y en mi ser, [B7]",
