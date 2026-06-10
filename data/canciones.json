@@ -23,7 +23,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/1GdcEMGXs8TKht3jGNwU2m?si=2564f95694b34dc7",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "No",
+      "revisado": ["No"],
       "letra": [
         "1",
         "[D]¿Has corrido [D7]tras un arco[G]íris",
@@ -255,7 +255,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "Si",
+      "revisado": ["Si", "Hernando"],
       "letra": [
         "1",
         "[G]Escucho tu [C]corazón,",
@@ -307,7 +307,7 @@
       "audio_url": "https://open.spotify.com/search/abre%20mis%20ojos%20jesus%20quiero%20verte",
       "traductor": ["Desconocido"],
       "partitura": "No",
-      "revisado": "Si",
+      "revisado": ["Si", "Hernando"],
       "letra": [
         "",
         "[D]Abre mis ojos, oh Cristo,",
@@ -2139,7 +2139,7 @@
       "audio_url": "https://www.youtube.com/watch?v=EqA7X0CAEeA&list=RDEqA7X0CAEeA&start_radio=1",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "Si",      
+      "revisado": ["Si", "Hernando"],      
       "letra": [
         "1",
         "[E]Cada día de ma[F#]ñana,",
@@ -9275,7 +9275,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": "Si",      
+      "revisado": ["Si", "Hernando"],      
       "letra": [
         "[A]Miren qué linda es la vida cuando estamos j[D]untos a[Bm]sí,",
         "[E]y tenemos algo [E7]que compar[A-E]tir.",
