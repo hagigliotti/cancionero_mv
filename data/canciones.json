@@ -17691,16 +17691,17 @@
   }
 },
 { "id": "yo_tengo_un_amigo_que_se_llama_jesus",
-  "titulo_original": ["Desconocido"],
-  "autor": ["Desconocido"],
-  "compositor": ["Desconocido"],
-  "year": ["Desconocido"],
+  "titulo_original": ["Yo tengo un amigo que se llama Jesús"],
+  "autor": ["Alberto Oroño"],
+  "compositor": ["Alberto Oroño"],
+  "coautor": ["Rolando Gigliotti"],
+  "year": ["1973"],
   "tonalidad": ["Fa Mayor (F)"],
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
+  "ritmo": ["4/4"],
   "referencia_biblica": [""],
-  "tags": ["Alabanza", "Infantil", "Amistad", "Amor de Jesús"],
+  "tags": ["Alabanza", "Amistad", "Amor de Jesús"],
   "idiomas": {
     "es": {
       "titulo": ["Yo tengo un amigo que se llama Jesús"],
@@ -17708,10 +17709,10 @@
       "audio_url": "",
       "traductor": ["-"],
       "letra": [
-        "Yo tengo un amigo que se llama Jesús",
-        "El conoce mis penas, y las ilumnia con su luz.",
-        "El es mi esperanza, mi esperanza tan anhelada",
-        "Hoy te lo presento, pues tarde sera manana",
+        "Yo [C]tengo un a[Am]migo que se [F]llama Je[C]sús",
+        "El co[F]noce mis [C]penas, y las [G]ilumnia con su luz.",
+        "[F]El es mi espe[Fm]ranza, mi espe[C]ranza tan anhe[Am]lada",
+        "[F]Hoy te lo pre[C]sento, pues [G]tarde sera ma[F]ña[C]na",
         ""
       ],
       "nota": [""]
