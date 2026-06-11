@@ -585,7 +585,7 @@ a.menu-item {
 .dark-mode .chord  { color: var(--sky-dark); }
 .light-mode .chord { color: var(--sky-dark); } /*{ color: #e7540f; }*/
 
-.song-break { height: 10px; }
+.song-break { height: 1.5em; } /*10px;*/
 
 .song-note {
   margin-top: 20px;
