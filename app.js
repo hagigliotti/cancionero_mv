@@ -657,7 +657,7 @@ function renderLyrics(text) {
     const esRepite = /^repite:?$/i.test(clean);
     const esRepitex2 = /^repite x2:?$/i.test(clean);
     const esRepitex3 = /^repite x3:?$/i.test(clean);
-    const esInstrucción = /^instrucción x3:?$/i.test(clean);
+    const esInstruccion = /^instrucción x3:?$/i.test(clean);
 
     const esMasc = /^voz masculina:?$/i.test(clean);
     const esFem = /^voz femenina:?$/i.test(clean);
@@ -674,7 +674,7 @@ function renderLyrics(text) {
 
 
     if (esIntro || esNumero || esCoro || esModula || esFinal || esPuente || esInterludio || esRepite || esRepitex2 || esRepitex3 || 
-          esMasc || esFem || esFem || esInstrucción ||
+          esMasc || esFem || esFem || esInstruccion ||
         enChorus || enBridge || enInterlude ||
         ptRefrão || 
         frChœur || 
