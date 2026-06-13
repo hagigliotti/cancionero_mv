@@ -1120,7 +1120,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Alabanza", "Corito Infantil"],
   "referencia_biblica": ["Juan 15:14-15"],
-  "tags": ["Cristiano", "Alabanza", "Infantil", "Amistad", "Días de la semana"],
+  "tags": ["Cristiano", "Alabanza", "Infantil", "Amistad", "Días de la semana", "Fidelidad"],
 
   "idiomas": {
     "es": {
@@ -1129,17 +1129,17 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": ["No"],        
+      "revisado": ["Si", "Rolando"],        
       "letra": [
-        "[G]Amigo tengo que me ama,",
-        "[D]me [G]ama, me ama.",
-        "[G]Amigo tengo que me ama,",
-        "[C]Su [D]nombre es Je[G]sús.",
+        "A[G]migo tengo que me ama,",
+        "me [D]ama, me [G]ama.",
+        "Amigo tengo que me ama,",
+        "Su [C]nombre [D]es Je[G]sús.",
         "",
         "[G]Me ama domingo y lunes también,",
-        "[C]Martes y [G]miércoles donde esté.",
+        "[C]Martes y [G]miércoles [D]donde esté.",
         "[G]Jueves y viernes y sábado también,",
-        "[D]Alabad su [G]nombre es mi buen Jesús."
+        "[C]Alabad su [G]nombre es mi [D]buen [G]Jesús."
       ],
       "nota": [""]
     }
@@ -1150,12 +1150,12 @@
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
-  "tonalidad": ["Do Mayor (C)"],
+  "tonalidad": ["Mi Mayor (E)"],
   "tempo_bpm": ["110"],
   "compas": ["4/4"],
   "ritmo": ["Alegre"],
   "referencia_biblica": ["San Juan 21:15"],
-  "tags": ["Amistad", "Amor a Cristo", "Testimonio", "Canon"],
+  "tags": ["Amistad", "Amor", "Testimonio", "Canon", "Gratitud", "Alabanza"],
 
   "idiomas": {
     "es": {
@@ -1164,21 +1164,22 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
-        "- Amigo, ¿amas a Cristo?",
+        "1",
+        "- Amigo, [E]¿amas a Cristo?",
         "- ¡Oh sí yo le amo!",
-        "- seguro le amas?",
-        "-¡seguro le amo!",
-        "- ¿ porque que tu le amas?",
-        "- eh aqui el motivo: Primero El me amó a mi",
+        "- se[B7]guro le amas?",
+        "-¡seguro le [E]amo!",
+        "- ¿por[E]qué que tu le amas?",
+        "- eh aqui el motivo: Pri[B7]mero Él me amó a [E]mí [B7] - [E]", 
         "",
         "Coro:",
-        "Es por eso que debemos amarle",
-        "¡Oh cuanto amo a Cristo!, ¡Oh cuanto amo a Cristo!",
-        "Cuanto amo a Cristo, primero El me amó a mi"
+        "[E]Es por eso que debemos amarle",
+        "[E]¡Oh cuanto amo a Cristo!, [B7]¡Oh cuanto amo a Cristo!",
+        "[E]oh Cuanto amo a Cristo, pri[B7]mero El me amó a [E]mi. [B7] - [E]"
       ],
-      "nota": [""]
+      "nota": ["Se suele cantar en \"canon\", un grupo pregunta y otro responde."]
     }
   }
 },
