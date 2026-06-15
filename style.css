@@ -1211,6 +1211,23 @@ body.dark .modal-content {
   border-color: var(--sky);
 }
 
+.tuner-targets {
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:10px;
+  justify-content:center;
+}
+
+.tuner-targets button {
+  min-width:42px;
+}
+
+.tuner-targets button.active {
+  background:#2196f3;
+  color:white;
+}
+
 /* ============================================================
    MODO PROYECTOR
    ============================================================ */

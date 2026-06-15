@@ -23,6 +23,9 @@ let analyser = null;
 let micEnabled = false;
 let rafId = null;
 
+let targetNote = null;
+let tunerLocked = false;
+
  
 
 
@@ -275,6 +278,17 @@ const NOTE_STRINGS = [
   "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"
 ];
 
+// ===== TABLA DE FRECUENCIAS ===========================
+const targetFreqs = {
+  C: 261.63,
+  D: 293.66,
+  E: 329.63,
+  F: 349.23,
+  G: 392.00,
+  A: 440.00,
+  B: 493.88
+};
+
 async function toggleMic() {
   if (micEnabled) {
     stopMic();
@@ -421,22 +435,87 @@ function freqToNote(freq) {
 }
 
 function updateTunerUI(freq) {
+
   const { note, cents } = freqToNote(freq);
 
   document.getElementById("tunerNote").innerText = note;
 
-  const needle = document.getElementById("tunerNeedle");
+  const needle =
+    document.getElementById("tunerNeedle");
 
-  // mover aguja (-50 a +50 cents)
-  const clamped = Math.max(-50, Math.min(50, cents));
+  // ==========================================
+  // MODO NORMAL (sin nota objetivo)
+  // ==========================================
+  if (!targetNote) {
 
-  needle.style.left = `${50 + clamped}%`;
+    const clamped =
+      Math.max(-50, Math.min(50, cents));
 
-  const centsEl = document.getElementById("tunerCents");
-  centsEl.innerText = `${cents.toFixed(1)} cents`;
+    needle.style.left =
+      `${50 + clamped}%`;
 
-  // color
-  needle.style.background = Math.abs(cents) < 5 ? "green" : "red";
+    needle.style.background =
+      Math.abs(cents) < 5
+        ? "green"
+        : "red";
+
+    return;
+  }
+
+  // ==========================================
+  // MODO NOTA OBJETIVO
+  // ==========================================
+
+  if (note !== targetNote) {
+
+    needle.style.background = "red";
+
+    // mover izquierda o derecha
+    const targetFreq = targetFreqs[targetNote];
+
+    const diff = freq - targetFreq;
+
+    const pos =
+      Math.max(
+        -50,
+        Math.min(
+          50,
+          diff / targetFreq * 500
+        )
+      );
+
+    needle.style.left =
+      `${50 + pos}%`;
+
+    tunerLocked = false;
+
+    return;
+  }
+
+  // misma nota → usar cents
+  const clamped =
+    Math.max(-50, Math.min(50, cents));
+
+  needle.style.left =
+    `${50 + clamped}%`;
+
+  if (Math.abs(cents) <= 3) {
+
+    needle.style.background = "lime";
+
+    if (!tunerLocked) {
+
+      playSuccessTone();
+
+      tunerLocked = true;
+    }
+
+  } else {
+
+    needle.style.background = "red";
+
+    tunerLocked = false;
+  }
 }
 
 async function playReferenceTone() {
@@ -510,6 +589,61 @@ function noteToFreq(note, octave = 4) {
 
   return 440 * Math.pow(2, semitoneDistance / 12);
 }
+
+// ===== Función para seleccionar nota ============================================================================
+function selectTargetNote(note) {
+
+  targetNote = note;
+  tunerLocked = false;
+
+  document.querySelectorAll(".tuner-targets button")
+    .forEach(btn => btn.classList.remove("active"));
+
+  [...document.querySelectorAll(".tuner-targets button")]
+    .find(btn => btn.innerText === note)
+    ?.classList.add("active");
+
+  if (!micEnabled) {
+    toggleMic();
+  }
+}
+
+
+// ===== SONIDO DE AJUESTE DE AFINACION ===================
+function playSuccessTone() {
+
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+
+  osc.frequency.value = 1200;
+
+  osc.connect(gain);
+  gain.connect(audioContext.destination);
+
+  gain.gain.setValueAtTime(0.1, audioContext.currentTime);
+  gain.gain.exponentialRampToValueAtTime(
+    0.001,
+    audioContext.currentTime + 0.15
+  );
+
+  osc.start();
+  osc.stop(audioContext.currentTime + 0.15);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -595,7 +729,6 @@ function highlightElement(el) {
     el.classList.remove("highlight");
   }, 800);
 }
-
 
 
 
