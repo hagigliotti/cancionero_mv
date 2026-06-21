@@ -659,7 +659,7 @@
   "compas": ["4/4"],
   "ritmo": ["Alegre"],
   "referencia_biblica": ["Hechos 2:46, 47"],
-  "tags": ["Comunión", "Bienvenida", "Hermandad", "Despedida"],
+  "tags": ["Comunión", "Bienvenida", "Hermandad", "Despedida", "Comunidad"],
 
   "idiomas": {
     "es": {
@@ -668,14 +668,14 @@
       "audio_url": "https://open.spotify.com/intl-es/track/5MJ8DFLauPlvNTNGlbJZZx?si=dedd8715d6264a6a",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
-        "",
-        "[G]Al comenzar la semana, [C]¡qué ale[G]gría que me [D]da",
-        "el estar con mis hermanos en [D]este [D7]lindo lu[G]gar!",
-        "[G]Enlacemos nuestras manos [C]para [G]juntos ala[C]bar",
-        "el [Cm]nombre de Jesu[G]cristo, [Em]nuestro a[D]migo más le[G]al."
-      ],
+          "",
+          "[G]Al comenzar la semana, ¡qué alegría que me [D]dá",
+          "el estar con mis hermanos en [D]este [D7]lindo lu[G]gar!",
+          "[G]Enlacemos nuestras manos para juntos ala[C]bar",
+          "el nombre de Jesu[G]cristo, [Em]nuestro a[D]migo más le[G]al."
+        ],
       "nota": ["Misma cancion tomada del origina 'Cuando empieza el santo sábado'"]
     }
   }
@@ -2426,8 +2426,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": [""],
-  "tags": [],
+  "referencia_biblica": ["Hebreos 11:16"],
+  "tags": ["Alabanza", "Avivamiento", "Gozo", "Evangelismo", "Vida nueva"],
 
   "idiomas": {
     "es": {
@@ -2436,19 +2436,18 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
-        "1",
         "[A]Gozándome yo voy al hogar ce[E]lestial",
-        "caminando, [A]caminando.",
+        "caminando, cami[A]nando.",
         "Pues no me importa más el placer terre[E]nal",
         "caminando para [E7]aquel [A]hogar.",
         "",
         "Coro:",
         "[A]Caminando, camin[D]ando,",
-        "[E]para aquel hogar donde [D]está Je[A]sús.",
-        "Caminando, caminan[D]do,",
-        "[E]de la mano del [E7]Señor Je[A]sús.",
+        "para [E]aquel hogar donde [D]está Je[A]sús.",
+        "Caminando, cami[D]nando,",
+        "de la [E]mano del [E7]Señor Je[A]sús.",
         "",
         "2",
         "Yo quiero pecadores conmigo llevar",
@@ -3254,7 +3253,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 31:24"],
-  "tags": [],
+  "tags": ["infantil", "tradicional", "himno", "gozo", "confianza"],
 
   "idiomas": {
     "es": {
@@ -3263,15 +3262,15 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
-        "[E]Con Cristo en mi alma sonrei[A]ré como el sol,",
-        "[B]sonreiré como el sol, [E]sonreiré como el sol.",
-        "[E]Con Cristo en mi alma [E7]sonrei[A]ré como el sol,",
-        "y [E]él [B]me guia[E]rá.",
+        "Con [E]Cristo en mi alma sonrei[A]ré como el sol,",
+        "[B7]sonreiré como el sol, [E]sonreiré como el sol.",
+        "Con [E]Cristo en mi alma sonrei[A]ré como el sol,",
+        "y [E]él [B7]me guia[E]rá.",
         "",
-        "[E]Nave, [B]navegando voy, [B7]nave, [E]navegando voy.",
-        "[E]Nave, [A]navegando voy, y [B]Él me guia[E]rá."
+        "[E]Nave, [B7]navegando voy, [B7]nave, [E]navegando voy.",
+        "[E]Nave, [A]navegando voy, y [E]Él me [B7]guia[E]rá."
       ],
       "nota": ["No pueden faltar las mímicas: sonrisa, sol, camino, remar, olas."]
     }
@@ -3651,8 +3650,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Alabanza", "Worship", "Suave"],
-  "referencia_biblica": ["Efesios 5:2"],
-  "tags": ["Alabanza", "Amor de Cristo"],
+  "referencia_biblica": ["Efesios 5:2", "Mateo 19:14"],
+  "tags": ["Cristiano", "Alabanza", "Infantil", "Amor", "Confianza"],
 
   "idiomas": {
     "es": {
@@ -3661,17 +3660,17 @@
       "audio_url": "",
       "traductor": ["Huberto M. Fassett"],
       "partitura": "No",
-      "revisado": ["No"],        
+      "revisado": ["Si", "Rolando"],        
       "letra": [
-        "[C]Cristo me [Am]ama, [Em]esto sé",
+        "[C]Cristo me ama, [Am]esto [Em]sé",
         "[F]Su palabra [C]dice asi",
-        "[C]Los peque[Am]ños [Em]son de Él",
-        "[F]Él [C]es nuestro [G]amigo [C]fiel",
+        "[C]Los pequeños [Am]son de [Em]Él",
+        "[F]Él es [C]nuestro [G]amigo [C]fiel",
         "",
-        "[C]¡Sí, Cristo me ama!",
-        "[F]¡Sí, Cristo me ama!",
-        "[C]¡Sí, Cristo me [G]ama!",
-        "[C]La Biblia dice así"
+        "[C]¡Sí, Cristo [Am]me ama!",
+        "[C]¡Sí, Cristo [G]me ama!",
+        "[C]¡Sí, Cristo me [F]ama!",
+        "La [C]Biblia [G]dice a[C]sí"
       ],
       "nota": [""]
     }
@@ -3686,8 +3685,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Alabanza", "Infantil", "We will rock you"],
-  "referencia_biblica": ["Efesios 5:2"],
-  "tags": ["Cristiano", "Alabanza", "Infantil", "Amor de Cristo"],
+  "referencia_biblica": ["Efesios 5:2", "Mateo 19:14"],
+  "tags": ["Cristiano", "Alabanza", "Infantil", "Amor", "Confianza"],
 
   "idiomas": {
     "es": {
@@ -3696,20 +3695,21 @@
       "audio_url": "",
       "traductor": ["Huberto M. Fassett"],
       "partitura": "No",
-      "revisado": ["No"],        
+      "revisado": ["Si", "Rolando"],         
       "letra": [
         "(clap - clap - thigh-slap)",
         "(clap - clap - thigh-slap)",
         "",
-        "[C]Cristo me [Am]ama, [Em]esto sé",
+        "[C]Cristo me ama, [Am]esto [Em]sé",
         "[F]Su palabra [C]dice asi",
-        "[C]Los peque[Am]ños [Em]son de Él",
-        "[F]Él [C]es nuestro [G]amigo [C]fiel",
+        "[C]Los pequeños [Am]son de [Em]Él",
+        "[F]Él es [C]nuestro [G]amigo [C]fiel",
         "",
-        "[C]¡Sí, Cristo me ama! (clap - clap)",
-        "[F]¡Sí, Cristo me ama! (clap - clap)",
-        "[C]¡Sí, Cristo me [G]ama!",
-        "[C]La Biblia dice así"
+        "",
+        "[C]¡Sí, Cristo [Am]me ama! (clap - clap)",
+        "[C]¡Sí, Cristo [G]me ama! (clap - clap)",
+        "[C]¡Sí, Cristo me [F]ama!",
+        "La [C]Biblia [G]dice a[C]sí"
       ],
       "nota": [""]
     }
@@ -3754,12 +3754,12 @@
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
-  "tonalidad": ["Sol Mayor (G)"],
+  "tonalidad": ["Mi Mayor (E)"],
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": [""],
-  "tags": [""],
+  "referencia_biblica": ["Juan 8:36"],
+  "tags": ["avivamiento", "tradicional", "alabanza", "libertad", "gozo"],
 
   "idiomas": {
     "es": {
@@ -3768,17 +3768,17 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
-        "[G]Cristo rompe las cadenas",
-        "las cadenas del pecado",
-        "[C]Cristo rompe las [G]cadenas",
-        "[Am][D][G]y me libra a mí",
+        "Cristo [E]rompe las ca[A]denas",
+        "Cristo [B7]rompe las ca[E]denas",
+        "Cristo rompe las ca[A]denas",
+        "Y me [B7]da su liber[E]tad.",
         "",
-        "¿Como es posible, vivir sin ti Jesús?",
-        "si el firmamento de la vida eres Tu",
-        "Tu me salvaste del pecado y de la muerte",
-        "¿Como es posible, vivir sin ti Jesús?"
+        "¿Como es po[A]sible, vivir sin ti Je[B7]sús?",
+        "si el fundamento de la vida eres [E]Tú",
+        "Tú me salvaste del pecado y de la [A]muerte",
+        "¿Cómo es po[E]sible, [B7]vivir sin ti Je[E]sús?"
       ],
       "nota": [""]
     }
@@ -3793,8 +3793,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Números 6:24-26"],
-  "tags": ["Cumpleanños"],
+  "referencia_biblica": ["Números 6:24-26", "Salmos 90:12"],
+  "tags": ["Cumpleaños", "celebracion", "tradicional", "gratitud", "bendicion", "Aniversario"],
 
   "idiomas": {
     "es": {
@@ -3803,12 +3803,12 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si, Rolando"],      
       "letra": [
-        "[E]Cristo un año [B]más te dio, [B7]lo pasaste [E]bien.",
-        "[E]Y te ofrece [B]con amor [B7]otro más tam[E]bién.",
-        "[E]Un feliz cumple[B]años [E]Cris[C#m]to te [F#]da. [B]",
-        "[B7]Todos te de[E]seamos [B]la felici[E]dad."
+        "[E]Cristo un año [B7]más te dio, lo pasaste [E]bien.",
+        "[E]Y te ofrece [B7]con amor otro más tam[E]bién.",
+        "[E]Un feliz cum[B7]ple[E]años Cristo te da[B7]rá.",
+        "[B7]Todos te de[E]seamos [B7]la felici[E]dad."
       ],
       "nota": [""]
     }
@@ -4283,13 +4283,13 @@
 },
 { "id": "diez_mil_razones",
   "titulo_original": ["10,000 Reasons (Bless the Lord)"],
-  "autor": ["Matt Redman", "Jonas Myrin"],
+  "autor": ["Matt Redman", "Matt Redman"],
   "compositor": ["Matt Redman", "Jonas Myrin"],
   "year": ["2011"],
   "tonalidad": ["Sol Mayor (G)"],
   "tempo_bpm": ["70"],
   "compas": ["4/4"],
-  "ritmo": "Balada de adoración (Worship)",
+  "ritmo": "Worship",
   "audio": "https://open.spotify.com/track/16e4Q3plJrKkncoLKR1CQ1",
   "referencia": "Salmos 103:1",
   "tags": ["adoración", "alabanza", "worship", "cristiana", "iglesia", "congregacional"],
@@ -4301,36 +4301,36 @@
       "audio_url": "https://open.spotify.com/intl-es/track/0B0XKO9t9WJjUP7qxwTC8c?si=42ba04e594f14030",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
         "Coro:",
-        "Que todo lo que soy alabe al Señor",
-        "Con todo mi corazón",
-        "De Tu grande amor, cantaré",
-        "Tu nombre alabaré",
+        "Que [C]todo lo que [G]soy a[D]labe al Se[Em]ñor",
+        "Con [C]todo mi [G]cora[D]zón",
+        "De Tu [C]grande [Em]amor, [C]can[D]ta[Em]ré",
+        "Tu [C]nombre ala[D]ba[G]ré",
         "",
         "1",
-        "Sale el Sol, es un nuevo amanecer",
-        "Cantaré a ti otra vez",
-        "Sea lo que venga, confiaré en ti",
-        "Alabaré en el anochecer",
+        "[C]Sale el [G]Sol, es un nu[D]evo amane[Em]cer",
+        "[C]Canta[G]ré a ti [D]otra [Em]vez",
+        "[C]Sea lo que [G]venga, [D]confiaré en [Em]ti",
+        "Alaba[C]ré en el a[D]noche[G]cer",
         "",
         "Coro",
         "",
         "2",
-        "Tu amor no tiene fin",
-        "Y Tú eres para siempre",
-        "Y bondadoso es Tu corazón",
-        "Por todo lo que has hecho, yo sigo cantando",
-        "Diez mil razones para alabar",
+        "Tu [C]amor no tiene [G]fin",
+        "Y Tú [D]eres para [Em]siempre",
+        "Y bonda[C]doso es Tu [D]cora[Em]zón",
+        "Por [C]todo lo que has [G]hecho, [D]yo sigo can[Em]tando",
+        "Diez mil ra[C]zones para [D]ala[G]bar",
         "",
         "Coro",
         "",
         "3",
-        "Y en ese día, cuando ya no tenga fuerza",
-        "Y se acerque Tu gloria",
-        "Mi alma cantará de tu amor sin final",
-        "Diez mil años y para siempre más",
+        "Y en ese [C]día, cuando [D] ya no tenga [Em]fuerza",
+        "Y se a[C]cerque Tu [D]glori[Em]a",
+        "Mi [C]alma canta[G]rá de tu a[D]mor sin fi[Em]nal",
+        "Diez mil [C]años y para [D]siempre [G]más",
         "",
         "Bless the lord!",
         "",
@@ -17222,7 +17222,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Yo nunca iré hacia atrás"],
-      "titulo2": [""],
+      "titulo2": ["Cuando recuerdo (aka)"],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -17271,7 +17271,7 @@
     "es": {
       "titulo": ["Yo canto a Dios"],
       "titulo2": [""],
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/727wYQUim4Yq2KvqdrFd51?si=9afd634ce9e24d41",
       "traductor": ["-"],
       "partitura": "No",
       "revisado": ["No"],      
@@ -17513,7 +17513,7 @@
     "es": {
       "titulo": ["Yo soy Caleb"],
       "titulo2": [""],
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/5hSdUmZfuA57C3Nhs11oqm?si=3e466b1463f54982",
       "traductor": ["-"],
       "partitura": "No",
       "revisado": ["No"],      
@@ -17633,7 +17633,7 @@
     "es": {
       "titulo": ["Yo soy el mensaje"],
       "titulo2": [""],
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/6hC2URW3c2y3QgillBHXD3?si=94de192b6bba45c1",
       "traductor": ["-"],
       "partitura": "No",
       "revisado": ["No"],      
@@ -17674,7 +17674,6 @@
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Hechos 11:26"],
   "tags": [
-    
     "Cristiano",
     "Alabanza",
     "Corito",
@@ -17725,9 +17724,9 @@
 
   "idiomas": {
     "es": {
-      "titulo": ["Yo también"],
+      "titulo": ["Yo también (Un billón de veces)"],
       "titulo2": [""],
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/3dJJivXsv4OT6tjrKWGQBb?si=8f31c8832e38425c",
       "traductor": ["-"],
       "partitura": "No",
       "revisado": ["No"],      
@@ -17816,7 +17815,7 @@
     "es": {
       "titulo": ["Yo te alabaré, Señor"],
       "titulo2": [""],
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/4obNitOZKS90gj7CI7cONT?si=492a2e3caa2a4e0d",
       "traductor": ["-"],
       "partitura": "No",
       "revisado": ["No"],      
@@ -17873,26 +17872,26 @@
     "es": {
       "titulo": ["Yo tengo algo"],
       "titulo2": [""],
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/1EJONorSGr8amMcTAJeje8?si=4bff0a347f6e4fef",
       "traductor": ["-"],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
         "[D]Yo tengo algo que el mundo no me da,",
-        "[A]que el mundo [B]no me [D]puede quitar (x - x). (x2)",
+        "[A]que el mundo [B]no me [D]puede quitar (clap - clap). (x2)",
         "[G]Es Jesucristo [D]que me ha salvado,",
         "[A]me ha dado la vida, [D]me ha dado el amor.",
         "[G]Es Jesucristo [D]que me ha salvado,",
         "[A]me ha dado la vida, [D]me ha dado el amor.",
         "",
         "[D]Tú tienes algo que el mundo no te da,",
-        "[A]que el mundo [B]no te [D]puede quitar (x - x). (x2)",
+        "[A]que el mundo [B]no te [D]puede quitar (clap - clap). (x2)",
         "[G]Es Jesucristo [D]que te ha salvado,",
         "[A]te ha dado la vida, [D]te ha dado el amor.",
         "[G]Es Jesucristo [D]que te ha salvado,",
         "[A]te ha dado la vida, [D]te ha dado el amor.",
         "",
-        "[D]Tenemos algo que el mundo no nos da, (x - x)",
+        "[D]Tenemos algo que el mundo no nos da, (clap - clap)",
         "[A]que el mundo [B]no nos [D]puede quitar. (x2)",
         "[G]Es Jesucristo [D]que nos ha salvado,",
         "[A]nos ha dado la vida, [D]nos ha dado el amor.",
@@ -17919,7 +17918,7 @@
     "es": {
       "titulo": ["Yo tengo esperanza"],
       "titulo2": [""],
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/5J2aPgImC3eEw3URhBlcZG?si=58d6f5cbd2774280",
       "traductor": ["-"],
       "partitura": "No",
       "revisado": ["No"],      
@@ -17939,7 +17938,7 @@
         "[E7]yo quiero a[F#m]prender siempre a sonreír.",
         "[D]Yo tengo es[E]peranza en [A]Dios, mi Señor.",
         "",
-        "Modulación (Si Mayor):",
+        "Modulación (A Mayor):",
         "[B]Yo quiero ala[E]bar con mi voz y por [B]siempre cantar,",
         "[B]Yo tengo [E]esperanza en [B]Dios, mi Señor.",
         "de día y de [B]noche, no [E]importa el lugar,",
@@ -18036,12 +18035,12 @@
     "es": {
       "titulo": ["Yo voy (Pés na terra)"],
       "titulo2": [""],
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/4tj4JGIkDKGPtdNVOV1xcx?si=f197d5a854d74de3",
       "traductor": ["-"],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
-        "[A]Todos tenemos [E]otro hogar, [D]un nuevo E[E]dén para morar.",
+        "[A]Todos queremos [E]otro hogar, [D]un nuevo E[E]dén para morar.",
         "[A]Nos queda[D]remos por a[B]quí sólo un [E]poco más.",
         "[D/B]Esta pro[A]mesa quiero al[D]canzar, [C#]no quiero espe[F#m]rar.",
         "[D]Pero mientras es[A]pero sigo con[B]fiando, su poder me [E]va a salvar.",
@@ -18138,7 +18137,7 @@
     "es": {
       "titulo": ["Yo tengo gozo"],
       "titulo2": [""],
-      "audio_url": "",
+      "audio_url": "https://open.spotify.com/intl-es/track/0KdJLuAQaGUx8RoeUZ20ix?si=3750c64fc6114855",
       "traductor": ["Manuel Bonilla"],
       "partitura": "No",
       "revisado": ["No"],        
@@ -18193,6 +18192,7 @@
       "partitura": "No",
       "revisado": ["No"],        
       "letra": [
+        "",
         "[E] Yo tengo gozo en mi alma, gozo en mi alma,",
         "gozo en mi alma y en mi ser, [B7]",
         "¡Aleluya, gloria a Dios!",
@@ -18200,12 +18200,14 @@
         "ríos de agua viva,",
         "ríos de agua viva [B7] en mi [E] ser.",
         "",
-        "[E] 1. Vamos cantando con todo su poder, [B7]",
+        "1",
+        "[E]Vamos cantando con todo su poder, [B7]",
         "vamos cantando con todo su poder, [E]",
         "Dad gloria a [E7] Dios, gloria a Dios, dad gloria a [A] Él,",
         "vamos can[E]tando con [B7]todo su po[E]der.",
         "",
-        "2. Alza tus brazos y alaba a tu Señor,",
+        "2",
+        "Alza tus brazos y alaba a tu Señor,",
         "Dad gloria a Dios, gloria a Dios, dad gloria a Él",
         "alza tus brazos y alaba a tu Señor."
       ],
