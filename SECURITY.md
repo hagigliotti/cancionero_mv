@@ -29,6 +29,7 @@ Antes de crear un nuevo Issue, verifica si el problema ya ha sido reportado por 
 
 Cancionero MV es un proyecto comunitario y sin fines de lucro orientado a facilitar el acceso a letras, acordes e información musical en distintos idiomas. Agradecemos cualquier colaboración que contribuya a mejorar la estabilidad, seguridad y experiencia de uso de la aplicación.
 
+#
 
 # Code of Conduct
 
