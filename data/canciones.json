@@ -2196,8 +2196,8 @@
 },
 { "id": "cada_dia_con_dios",
   "titulo_original": ["Cada día con Dios"],
-  "autor": ["Bettina Echezarraga"],
-  "compositor": ["Bettina Echezarraga"],
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
   "year": ["Desconocido"],
   "tonalidad": ["Sol Mayor (G)"],
   "tempo_bpm": ["Desconocido"],
@@ -4237,6 +4237,57 @@
         "",
         "Señor, tu amor es mío y lo sé, pues el secreto es cristo",
         "en mi corazón."
+      ],
+      "nota": [""]
+    }
+  }
+},
+{
+  "id": "como_una_pequena_semilla",
+  "titulo_original": ["Como una pequeña semilla"],
+  "autor": ["Bettina Echezarraga"],
+  "compositor": ["Bettina Echezarraga"],
+  "year": ["Desconocido"],
+  "tonalidad": ["Desconocido"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["Desconocido"],
+  "ritmo": ["Desconocido"],
+  "referencia_biblica": ["Efesios 4:13-15", "1 Corintios 13:11", "Lucas 8:15", "Malaquías 4:2"],
+  "tags": ["Crecimiento Espiritual", "Adoración", "Vida Cristiana", "Semilla"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["Como una pequeña semilla"],
+      "titulo2": ["Creciendo (aka)"],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": ["No"],      
+      "letra": [
+        "1",
+        "Como una pequeña semilla,",
+        "nació su amor en mi corazón,",
+        "pero el tiempo pasó y un milagro ocurrió.",
+        "Cuando me acerqué al Señor",
+        "y pude conocerlo mejor",
+        "descubrí que esa semilla germinó.",
+        "",
+        "Coro",
+        "Yo estoy creciendo en el Señor",
+        "y quiero crecer más para Él.",
+        "Quiero madurar, dejar atrás",
+        "las cosas de la niñez",
+        "hasta alcanzar la plenitud de Él.",
+        "",
+        "2",
+        "Si permito que el sol de justicia",
+        "me dé su luz y tibio calor",
+        "y el viento quizá descienda en gran chaparrón,",
+        "El Espíritu del Señor",
+        "hará un milagro de amor",
+        "y entonces la semilla crecerá.",
+        "",
+        "Coro"
       ],
       "nota": [""]
     }
@@ -9571,7 +9622,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["Si", "Hernando"],      
+      "revisado": ["No", "Hernando"],      
       "letra": [
         "[A]Miren qué linda es la vida cuando estamos j[D]untos a[Bm]sí,",
         "[E]y tenemos algo [E7]que compar[A-E]tir.",
