@@ -1,5 +1,3 @@
-# cancionero
-
 # ⚠ Copyright, Authors and Permissions
 
 ## 🇪🇸 Español
