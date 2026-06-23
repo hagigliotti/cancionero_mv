@@ -3803,7 +3803,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["Si, Rolando"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
         "[E]Cristo un año [B7]más te dio, lo pasaste [E]bien.",
         "[E]Y te ofrece [B7]con amor otro más tam[E]bién.",
@@ -3955,7 +3955,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["2 Crónicas 7:14", "Hechos 4:31"],
-  "tags": ["Alabanza", "Oración", "Poder de Dios", "Avivamiento", "Sanidad"],
+  "tags": ["Alabanza", "Oración", "Poder", "Avivamiento", "Sanidad"],
 
   "idiomas": {
     "es": {
@@ -3964,23 +3964,24 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
         "Intro:",
         "[Bm] - [G - F#] - - [G - F#] - - [F# - Bm]",
         "",
+        "1:",
+        "Cuando el [Bm]pueblo de Dios ora [G]suceden [F#]cosas,",
+        "[G]suceden [F#]cosas maravi[Bm]llosas.",
+        "Cuando el [Bm]pueblo de Dios ora [G]suceden [F#]cosas,",
+        "[G]suceden [F#]cosas maravi[Bm]llosas.",
+        "",
         "Coro:",
-        "[Bm]Cuando el pueblo de Dios ora [G]suceden [F#]cosas,",
-        "[G]suceden [F#]cosas [F#]maravi[Bm]llosas. [B7]",
+        "Hay sani[Em]dad, hay salva[Bm]ción",
+        "Y se [F#]siente la presencia del [Bm]Señor.",
+        "Hay sani[Em]dad, hay salva[Bm]ción",
+        "Y se [F#]siente la presencia del [Bm]Señor.",
         "",
-        "1",
-        "[Em]Hay sanidad, [Bm]hay salvación",
-        "[F#]y se siente la presencia del [Bm]Señor. [F#] - [Bm] - [B7]",
-        "[Em]Hay sanidad, [Bm]hay salvación",
-        "[F#]y se siente la presencia del [Bm]Señor.",
-        "[G]",
-        "",
-        "Coro"
+        "Repite todo"
       ],
       "nota": [""]
     }
@@ -4005,18 +4006,18 @@
       "audio_url": "https://open.spotify.com/intl-es/track/5MJ8DFLauPlvNTNGlbJZZx?si=dedd8715d6264a6a",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
         "[G]Cuando empieza el santo sábado,",
-        "[C]¡qué ale[G]gría que me [D]da",
+        "¡qué alegría que me [D]da",
         "el estar con mis hermanos",
-        "en [D]este [D7]lindo lu[G]gar!",
+        "en [D]este lindo lu[G]gar!",
         "[G]Enlacemos nuestras manos,",
-        "[C]para [G]juntos ala[C]bar",
-        "el [Cm]nombre de Jesu[G]cristo,",
+        "para juntos ala[C]bar",
+        "el nombre de Jesu[G]cristo,",
         "[Em]nuestro a[D]migo más le[G]al."
       ],
-      "nota": ["Tambien se canta para comenzar la semana."]
+      "nota": ["También se canta para comenzar la semana: \"Al comenzar la semana\"."]
     }
   }
 },
@@ -4029,8 +4030,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Salmos 8:1"],
-  "tags": [],
+  "referencia_biblica": ["Salmos 8:1-9"],
+  "tags": ["Creación", "Adoración", "Salmo"],
 
   "idiomas": {
     "es": {
@@ -4039,18 +4040,27 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
-        "[A]Cuando miro los claros [C#m]cielos y [D]lo que es [Bm]obra de tus [E]dedos,",
-        "[A]digo: ¿qué es el [F#m]hombre para [D]que te a[E]cuerdes de [A - E/G#]él?",
-        "[F#m]Digo: ¿qué es el [D]hombre para [E]que te acuerdes de [A - E/G#]él?",
-        "        [F#m] [C#m] [D][Bm] [E]",
-        "Todo lo pusiste debajo de sus pies,",
-        "        [F#m] [C#m] [D][Bm] [E]",
-        "todo lo que pasa por la senda de la mar.",
-        "[A]¡Oh! [F#m]Jehová, Se[D]ñor nuestro, ¡[E]cuán grande es tu [A - E/G#]nombre",
-        "        [F#m] [D]       [E][A]",
-        "en toda la tierra y en mi corazón!"
+        "1",
+        "[A]Cuando miro los claros [C#m]cielos",
+        "y lo [D]que es obra de tus [Bm]de[E]dos,",
+        "[A]digo: ¿qué es el [F#m]hombre",
+        "para [D]que te a[E]cuerdes de [A]él?",
+        "[F#m]digo: ¿qué es el [D]hombre",
+        "para [E]que te acuerdes de [A]él?",
+        "",
+        "Coro:",
+        "[F#m]todo lo [C#m]pusiste",
+        "de[D]bajo de sus [Bm]pi[E]es,",
+        "[F#m]todo lo que [C#m]pasa",
+        "por [D]senda de la [Bm]mar. [E]",
+        "",
+        "Final",
+        "[A]¡Oh! Jeho[F#m]vá, Señor [D]nuestro",
+        "¡[E]cuán grande es tu [A]nombre",
+        "[F#m]en toda la [D]tierra",
+        "y en mi [E]cora[A]zón."
       ],
       "nota": [""]
     }
@@ -5019,28 +5029,33 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Nahum 1:7"],
-  "tags": [],
+  "referencia_biblica": ["Nahum 1:7", "Salmos 145:9"],
+  "tags": ["Bondad", "Gratitud", "Segunda venida"],
 
   "idiomas": {
     "es": {
       "titulo": ["Dios bueno es"],
-      "titulo2": [""],
+      "titulo2": ["Dios es tan bueno (aka)"],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
-        "[D]Dios bueno es, [A][A7]Dios bueno [D]es,",
-        "[D7]Dios bueno [G]es, [D]bueno [A]para [D]mí.",
+        "1",
+        "[D]Dios bueno [A]es, Dios bueno [D]es,",
+        "[D7]Dios bueno [G]es, bueno [D]es [A]para [D]mí.",
         "",
-        "[D]Cristo es real, [A][A7]Cristo es [D]real,",
-        "[D7]Cristo es [G]real, [D]es [A]real para [D]mí.",
+        "2",
+        "[D]Cristo es [A]real, Cristo es [D]real,",
+        "[D7]Cristo es [G]real, es [D]real [A]para [D]mí.",
         "",
-        "[D]Pronto vendrá, [A][A7]pronto ven[D]drá,",
-        "[D7]pronto ven[G]drá, [D]Él ven[A]drá por [D]mí."
+        "3",
+        "[D]Él volve[A]rá, Él volve[D]rá,",
+        "[D7]Él volve[G]rá, volve[D]rá [A]por [D]mí."
       ],
-      "nota": [""]
+      "nota": ["Estrofa 1: algunos cambian \"Dios bueno es\" por \"Dios es tan bueno\"",
+      "Estrofa 3: algunos cambian \"Él volverá\" por \"Pronto vendrá\".",
+      "Para incluir el canto en el himnario adventista nuevo la letra en el himno 54 fue modificada."]
     }
   }
 },
@@ -5189,11 +5204,11 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
-        "[C]Dios está a[G]quí, [Am]¡Aleluya! [C7]",
-        "[F]tan cierto como el [G]aire que res[C]piro, [C7]",
-        "[F]tan cierto como la [G]mañana se le[C - G/B - Am]vanta,",
+        "[C]Dios es[G]tá a[Am]quí, ¡Aleluya! [C7]",
+        "[F]tan cierto como el aire [G]que res[C]piro, [C7]",
+        "[F]tan cierto como la [G]mañana se le[C]va[G]an[Am]ta,",
         "[Dm]tan cierto como que le [G]canto y me puede o[C]ír."
       ],
       "nota": [""]
