@@ -888,21 +888,21 @@
       "letra": [
         "1",
         "Alaba[E]ré, alabaré, alabaré, alabaré, ",
-        "a[B7]labaré a mi Se[E]ñor. Je[B7]/sús.[E]",
+        "a[B7]labaré a mi Se[E]ñor. Je[B7]sús.[E]",
         "Y canta[E]ré, y cantaré y cantaré y cantaré ",
-        "y canta[B7]ré a mi Se[E]ñor. Je[B7]/sús.[E]",
+        "y canta[B7]ré a mi Se[E]ñor. Je[B7]sús.[E]",
         "",
         "2",
         "[E]Juan vio el número de los redimidos",
         "Y todos alababan al Se[B7]ñor.",
         "Unos cantaban y otros oraban",
-        "y todos alababan al Se[E]ñor. Je[B7]/sús.[E]",
+        "y todos alababan al Se[E]ñor. Je[B7]sús.[E]",
         "",
         "Repite",
         "Alaba[E]ré, alabaré, alabaré, alabaré, ",
-        "a[B7]labaré a mi Se[E]ñor. Je[B7]/sús.[E]",
+        "a[B7]labaré a mi Se[E]ñor. Je[B7]sús.[E]",
         "Y canta[E]ré, y cantaré y cantaré y cantaré ",
-        "y canta[B7]ré a mi Se[E]ñor. Je[B7]/sús.[E]",
+        "y canta[B7]ré a mi Se[E]ñor. Je[B7]sús.[E]",
         ""
       ],
       "nota": [""]
@@ -4009,7 +4009,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["2 Corintios 5:17"],
-  "tags": ["Testimonio", "Transformacion", "Evangelismo", "Clasico"],
+  "tags": ["Testimonio", "Transformacion", "Evangelismo", "Clásico"],
   "idiomas": {
     "es": {
       "titulo": ["Cuando Cristo vino a mi corazón"],
@@ -5612,8 +5612,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Efesios 3:18-19"],
-  "tags": ["Alabanza", "Infantil", "Amor de Dios", "Inmensidad", "Alegría"],
+  "referencia_biblica": ["Efesios 3:18-19", "Salmos 103:11"],
+  "tags": ["Alabanza", "Infantil", "Amor de Dios", "Inmensidad", "Alegría", "Clásico"],
 
   "idiomas": {
     "es": {
@@ -5622,19 +5622,21 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
-        "Coro",
-        "[D]EL AMOR DE DIOS ES [A7]MARAVILLOSO.",
-        "[D]EL AMOR DE DIOS ES MARAVILLOSO.",
-        "[D]EL AMOR DE DIOS ES [G]MARAVILLOSO.",
-        "[A7]¡CUAN GRANDE ES EL AMOR DE [D]DIOS!",
+        "1",
+        "El [D]amor de Dios es maravi[A7]lloso.",
+        "El amor de Dios es maravi[D]lloso.",
+        "El [D]amor de Dios es maravi[A7]lloso.",
+        "¡Cuán [A7]grande es el amor de [D]Dios!",
         "",
-        "[Estrofa]",
-        "[D]Tan alto que no puedo ir arriba de Él.",
-        "[A7]Tan bajo que no puedo ir debajo de Él. [D]",
-        "[D]Tan ancho que no puedo ir al lado de Él. [G]",
-        "[A7]¡Cuan grande es el amor de [D]Dios!"
+        "2",
+        "Tan [D]alto que no puedo ir arriba de [A7]Él.",
+        "Tan [A7]bajo que no puedo ir debajo de [D]Él.",
+        "Tan [D]ancho que no puedo ir al [G]lado de Él.",
+        "¡Cuán [A7]grande es el amor de [D]Dios!",
+        "",
+        "Repite"
       ],
       "nota": [""]
     }
@@ -5756,16 +5758,16 @@
   }
 },
 { "id": "el_es_jehova_el_senor",
-  "titulo_original": ["Él es Jehová el Señor"],
-  "autor": ["Danny Berrios"],
-  "compositor": ["Danny Berrios"],
-  "year": ["Desconocido"],
+  "titulo_original": ["He Is Jehovah"],
+  "autor": ["Betty Luker"],
+  "compositor": ["Betty Luker"],
+  "year": ["1970"],
   "tonalidad": ["Re menor (Dm)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
+  "compas": ["4/4"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Levítico 25:38"],
-  "tags": ["Alabanza"],
+  "referencia_biblica": ["Levítico 25:38", "Génesis 22:14", "Jueces 6:24", "Jeremías 8:22"],
+  "tags": ["Alabanza", "Poder", "Alabanza", "Liberación", "Clásico"],
   
   "idiomas": {
     "es": {
@@ -5774,24 +5776,48 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
-        "[Dm]Él es Señor, Jehová, Dios poderoso.",
-        "[F]Él es Señor, Jehová, [A]Dios poderoso.",
-        "[Dm]Señor y Adonai, la Roca eterna.",
-        "El [Bb]gran Señor que [A7]te puede restau[Dm]rar.",
+        "1",
+        "Él es Jeho[Dm]vá, el Señor, Dios de la creación.",
+        "Él es Jeho[F]vá, el Señor Dios pode[A]roso.",
+        "Señor de [Dm]Gilead, la Roca eterna.",
+        "Él es Se[Bb]ñor, que nos [A7]puede restau[Dm]rar.",
         "",
-        "[Dm]Él es el gran Yo soy, el Dios de Abraham.",
-        "[F]Señor Jehová, Shalom, el [A]Dios de paz y amor.",
+        "2",
+        "Él es el [Dm]Gran Yo Soy, el Dios de Abraham.",
+        "Señor Jeho[F]vá Shalom, el Dios de [A]paz y amor.",
         "El Dios de [Dm]Israel, Señor eterno.",
-        "El [Bb]gran Señor que [A7]te puede restau[Dm]rar.",
+        "Y es [Bb]gran Señor que nos [A7]puede restau[Dm]rar.",
         "",
-        "Canta [F]aleluya, canta [Dm]aleluya,",
-        "canta [F]aleluya, canta [A7]aleluya.",
-        "[Dm]Él es Señor, Jehová, Dios poderoso.",
-        "Es el [Bb]Señor que [A7]te puede restau[Dm]rar."
+        "Coro:",
+        "Canta ale[F]luya, canta ale[Dm]luya,",
+        "Canta ale[F]luya, canta [A7]aleluya;",
+        "Él es [Dm]Señor Jehová, Dios poderoso",
+        "Y es gran [Bb]Señor que nos [A7]puede restau[Dm]rar.",
+        "",
+        "3",
+        "Él es Gran [Dm]Protector, Señor Jehová Jireh",
+        "Glorioso [F]Salvador, nuestro Me[A]sías,",
+        "El Hijo que murió por darnos salvación;",
+        "Él es [Bb]Señor que nos [A7]puede restau[Dm]rar.",
+        "",
+        "Coro:",
+        "Canta ale[F]luya, canta ale[Dm]luya,",
+        "Canta ale[F]luya, canta [A7]aleluya;",
+        "Él es [Dm]Señor Jehová, Dios poderoso",
+        "Y es gran [Bb]Señor que nos [A7]puede restau[Dm]rar.",
+        "",
+        "Coro:",
+        "Canta ale[F]luya, canta ale[Dm]luya,",
+        "Canta ale[F]luya, canta [A7]aleluya;",
+        "Él es [Dm]Señor Jehová, Dios poderoso",
+        "Y es gran [Bb]Señor que nos [A7]puede restau[Dm]rar.",
+        "",
+        "Final:",
+        "Él es [Bb]Señor que nos [A7]puede restau[Dm]rar."
       ],
-      "nota": [""]
+      "nota": ["Esta versión reafirma los conceptos doctrinales de la IASD como \"Creador\", la palabra \"sanador\" no esta mal si se refiere al \"pecado\" pero no a \"sanador del cuerpo\" como creen otras denominaciones."]
     }
   }
 },
@@ -8748,13 +8774,9 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["San Juan 10:10"],
-  "tags": [
-    
-    "Cristiano",
-    "Adoración",
-    "Vida eterna"
-  ],
+  "referencia_biblica": ["Salmos 19:1", "Mateo 6:28-30", "Juan 14:6"],
+  "tags": ["Creación", "Confianza", "Amor de Dios", "Guía", "Consuelo", "Adoración", "Vida eterna"],
+  
   "idiomas": {
     "es": {
       "titulo": ["Jesús es mi vida"],
