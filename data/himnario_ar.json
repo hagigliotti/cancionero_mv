@@ -14152,17 +14152,17 @@
   },
   {
     "id": "himno-281",
-    "titulo_original": ["I Have Decided to Follow Jesus"],
-    "corito": "No",
-    "autor": ["Desconocido"],
-    "compositor": ["Melodía folclórica de la India"],
-    "year": ["Desconocido"],
-    "tonalidad": ["C"],
-    "tempo_bpm": ["92"],
+    "titulo_original": ["मैंने मसीह का अनुसरण करने का निश्चय किया है (Maine Masīh kā anusaraṇ karne kā niścay kiyā hai)"],
+    "autor": ["Sadhu Sundar Singh"],
+    "compositor": ["Sadhu Sundar Singh"],
+    "year": ["1905-1920"],
+    "tonalidad": ["Do Mayor (C)"],
+    "tempo_bpm": ["Desconocido"],
     "compas": ["4/4"],
-    "ritmo": ["Himno"],
-    "referencia_biblica": ["Lucas 9:23; Lucas 9:62; Gálatas 6:14; Filipenses 3:13"],
-    "tags": ["Decisión", "Seguimiento", "Consagración", "Fidelidad"],
+    "ritmo": ["Melodía popular de la India"],
+    "referencia_biblica": ["San Lucas 9:62", "Gálatas 2:20", "Lucas 9:62", "Gálatas 6:14", "Filipenses 3:13"],
+    "tags": ["Consagración", "Himno", "Decisión", "Compromiso", "Testimonio", "Clásico", "Fidelidad"],
+
     "idiomas": {
       "es": {
         "titulo": ["He decidido seguir a Cristo"],
@@ -14191,7 +14191,7 @@
           "la cruz delante y el mundo atrás.",
           "No vuelvo atrás, no vuelvo atrás."
         ],
-        "nota": [""]
+        "nota": ["La letra se ha modificado para que esta cancion forme parte del Himnario Adventista, la original esta en el \"Cancionero MV\""]
       }
     }
   },

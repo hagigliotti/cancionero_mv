@@ -12,9 +12,9 @@
   "tonalidad": ["Re Mayor (D)"],
   "tempo_bpm": ["80"],
   "compas": ["4/4"],
-  "ritmo": ["Balada", "Adoración"],
+  "ritmo": ["Adoración"],
   "referencia_biblica": ["San Mateo 11:28"],
-  "tags": ["Entrega", "Consuelo", "Confianza"],
+  "tags": ["Clásico", "Entrega", "Consuelo", "Confianza"],
 
   "idiomas": {
     "es": {
@@ -73,15 +73,27 @@
         "",
         "2",
         "He never said there'd only be sunshine",
+        "(He never said there'd only be sunshine)",
         "He never said there'd be no rain",
+        "(There's be no rain)",
         "He only promised a heart full of singing",
+        "(Promised a heart full of singing)",
         "About the very thing that once brought pain",
         "",
         "Chorus:",
         "Give them all, give them all, give them all to Jesús",
         "Shattered dreams, wounded hearts, broken toys,",
         "Give them all, give them all, give them all to Jesús",
-        "And he will turn your sorrow into joy"
+        "And he will turn your sorrow into joy",
+        "",
+        "Chorus:",
+        "Give them all, give them all, give them all to Jesús",
+        "Shattered dreams, wounded hearts, broken toys,",
+        "Give them all, give them all, give them all to Jesús",
+        "And he will turn your sorrow into joy",
+        "",
+        "Final:",
+        "Ooh, He will turn Your sorrow into joy"
       ],
       "nota": [""]
     }
@@ -301,7 +313,7 @@
   "compas": ["4/4"],
   "ritmo": ["Infantil", "Animación"],
   "referencia_biblica": ["Génesis 15:5", "Gálatas 3:7"],
-  "tags": ["Niños", "Juego", "Movimiento", "Fe"],
+  "tags": ["Clásico", "Niños", "Juego", "Movimiento", "Fe"],
 
   "idiomas": {
     "es": {
@@ -382,7 +394,7 @@
   "compas": ["4/4"],
   "ritmo": ["Worship"],
   "referencia_biblica": ["Apocalipsis 4:8"],
-  "tags": ["Adoración", "Worship", "Clásico"],
+  "tags": ["Clásico", "Adoración", "Worship", "Clásico"],
 
   "idiomas": {
     "es": {
@@ -481,7 +493,7 @@
   "compas": ["2/4"],
   "ritmo": ["Alabanza", "Corito Infantil"],
   "referencia_biblica": ["Filipenses 4:4"],
-  "tags": ["Cristiano", "Alabanza", "Infantil", "Gozo", "Felicidad", "Corazón"],
+  "tags": ["Clásico", "Alabanza", "Infantil", "Gozo", "Felicidad", "Corazón"],
 
   "idiomas": {
     "es": {
@@ -659,7 +671,7 @@
   "compas": ["4/4"],
   "ritmo": ["Alegre"],
   "referencia_biblica": ["Hechos 2:46, 47"],
-  "tags": ["Comunión", "Bienvenida", "Hermandad", "Despedida", "Comunidad"],
+  "tags": ["Clásico", "Comunión", "Bienvenida", "Hermandad", "Despedida", "Comunidad"],
 
   "idiomas": {
     "es": {
@@ -690,7 +702,7 @@
   "compas": ["4/4"],
   "ritmo": ["Adoración", "Canon"],
   "referencia_biblica": ["Amós 4:12"],
-  "tags": ["Canon", "Alabanza", "Encuentro"],
+  "tags": ["Clásico", "Canon", "Alabanza", "Encuentro"],
 
   "idiomas": {
     "es": {
@@ -702,12 +714,12 @@
       "revisado": ["No"],      
       "letra": [
         "",
-        "[E]Al encuentro de Jesús e[B]levo [A]mi [E]voz,",
+        "[E]Al encuentro de Jesús e[B]levo [A]mi [E]voz, *",
         "a su gloria [E]rindo [B]ala[A]ban[E]za.",
         "[E]Su bondad exal[B]taré, [A]su gracia can[E]taré.",
         "[E]Glorificaré su a[B]mor y [A]su gran po[E]der."
       ],
-      "nota": ["Se puede cantar en canon hasta 4 voces: cada voz realiza su ingreso cuando la voz anterior comienza la segunda frase: 'a su gloria...'"]
+      "nota": ["Se puede cantar en canon hasta 4 voces: cada voz realiza su ingreso cuando la voz anterior comienza la segunda frase (*): 'a su gloria...'"]
     }
   }
 },
@@ -783,7 +795,7 @@
   "compas": ["2/4", "4/4"],
   "ritmo": ["Alegre"],
   "referencia_biblica": ["Génesis 1:20-25"],
-  "tags": ["Cristiano", "Alabanza", "Infantil", "Dinámica", "Creación", "Animales"],
+  "tags": ["Clásico", "Cristiano", "Alabanza", "Infantil", "Dinámica", "Creación", "Animales"],
 
   "idiomas": {
     "es": {
@@ -863,7 +875,7 @@
   "compas": ["4/4"],
   "ritmo": ["Alegre", "Marcha"],
   "referencia_biblica": ["Apocalipsis 7:9-10", "Salmos 22:22"],
-  "tags": ["Júbilo", "Alabanza", "Comunidad"],
+  "tags": ["Clásico", "Júbilo", "Alabanza", "Comunidad", "Alegría"],
 
   "idiomas": {
     "es": {
@@ -931,7 +943,7 @@
   "compas": ["4/4"],
   "ritmo": ["Alegre"],
   "referencia_biblica": ["Romanos 12:12"],
-  "tags": ["Júbilo", "Gratitud", "Segunda Venida"],
+  "tags": ["Clásico", "Júbilo", "Gratitud", "Segunda Venida"],
 
   "idiomas": {
     "es": {
@@ -992,7 +1004,7 @@
   "compas": ["2/4"],
   "ritmo": ["Alabanza", "Hebreo"],
   "referencia_biblica": ["Éxodo 3:1-5"],
-  "tags": ["Alabanza", "Avivamiento", "Moisés", "Zarza Ardiendo"],
+  "tags": ["Clásico", "Alabanza", "Avivamiento", "Moisés", "Zarza Ardiendo"],
 
   "idiomas": {
     "es": {
@@ -1030,7 +1042,7 @@
   "compas": ["4/4"],
   "ritmo": ["Balada", "Himno"],
   "referencia_biblica": ["Isaías 6:8"],
-  "tags": ["Misión", "Servicio", "Entrega"],
+  "tags": ["Clásico", "Misión", "Servicio", "Entrega"],
 
   "idiomas": {
     "es": {
@@ -1081,9 +1093,9 @@
   "tonalidad": ["Mi Mayor (E)"],
   "tempo_bpm": ["95"],
   "compas": ["4/4"],
-  "ritmo": ["Balada", "Pop"],
+  "ritmo": ["Alegre", "Pop"],
   "referencia_biblica": ["2 Corintios 5:17"],
-  "tags": ["Testimonio", "Evangelismo", "Conversión"],
+  "tags": ["Clásico", "Testimonio", "Evangelismo", "Conversión"],
 
   "idiomas": {
     "es": {
@@ -1120,7 +1132,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Alabanza", "Corito Infantil"],
   "referencia_biblica": ["Juan 15:14-15"],
-  "tags": ["Cristiano", "Alabanza", "Infantil", "Amistad", "Días de la semana", "Fidelidad"],
+  "tags": ["Clásico", "Alabanza", "Infantil", "Amistad", "Días de la semana", "Fidelidad"],
 
   "idiomas": {
     "es": {
@@ -1155,7 +1167,7 @@
   "compas": ["4/4"],
   "ritmo": ["Alegre"],
   "referencia_biblica": ["San Juan 21:15"],
-  "tags": ["Amistad", "Amor", "Testimonio", "Canon", "Gratitud", "Alabanza"],
+  "tags": ["Clásico", "Amistad", "Amor", "Testimonio", "Canon", "Gratitud", "Alabanza"],
 
   "idiomas": {
     "es": {
@@ -1276,7 +1288,7 @@
   "tonalidad": ["Fa# menor (F#m)", "Do# menor (C#m)"],
   "tempo_bpm": ["83"],
   "compas": ["6/8"],
-  "ritmo": ["Balada", "Worship"],
+  "ritmo": ["Worship"],
   "referencia_biblica": ["San Juan 15:13"],
   "tags": ["Amor de Dios", "Gracia", "Sacrificio", "Worship"],
 
@@ -1330,7 +1342,7 @@
   "tonalidad": ["Do Mayor (C)"],
   "tempo_bpm": ["80"],
   "compas": ["4/4"],
-  "ritmo": ["Adoración", "Balada"],
+  "ritmo": ["Adoración"],
   "referencia_biblica": ["San Juan 3:16"],
   "tags": ["Amor de Dios", "Sacrificio", "Gracia"],
 
@@ -1397,7 +1409,7 @@
   "compas": ["4/4"],
   "ritmo": ["Canon"],
   "referencia_biblica": ["San Mateo 19:19"],
-  "tags": ["Amor", "Evangelio", "Prójimo", "Canon"],
+  "tags": ["Clásico", "Amor", "Evangelio", "Prójimo", "Canon"],
 
   "idiomas": {
     "es": {
@@ -1409,7 +1421,7 @@
       "revisado": ["Si", "Rolando"],      
       "letra": [
         "1",
-        "A[Dm]mor, [C]amor, [Dm]amor, [Am]amor, ",
+        "A[Dm]mor, [C]amor, [Dm]amor, [Am]amor, *",
         "[Dm]es el evan[C]gelio en [Dm]una pa[Am]labra.",
         "[Dm]Ama tu [C]prójimo [Dm]como a ti [Am]mismo.",
         "[Dm]Dios [C]es a[Dm]mor, - [Dm]Dios [C]es  a[Dm]mor",
@@ -1420,7 +1432,8 @@
         "[Dm]Haz que mi [C]vida [Dm]sea un e[Am]jemplo",
         "[Dm]Haz[C]lo [Dm]Señor, [Dm]haz[C]lo Se[C]ñor. [Dm]- [A]- [D]"
       ],
-      "nota": ["Algunos cambian la 3ra frase de la 2da estrofa por: ",
+      "nota": ["Se canta en canon, el segundo grupo comienza cuando se comienza a cantar la segunda frase *",
+      "Algunos cambian la 3ra frase de la 2da estrofa por: ",
       "\"Hazlo, Señor, tan solo en un instante\"."]
     }
   }
@@ -1433,7 +1446,7 @@
   "tonalidad": ["Do Mayor (C)"],
   "tempo_bpm": ["90"],
   "compas": ["4/4"],
-  "ritmo": ["Adoración", "Balada"],
+  "ritmo": ["Adoración"],
   "referencia_biblica": ["San Lucas 24:32"],
   "tags": ["Pasión", "Entrega", "Evangelismo"],
 
@@ -1591,8 +1604,8 @@
   "tempo_bpm": ["95"],
   "compas": ["4/4"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": [""],
-  "tags": ["Cristiano"],
+  "referencia_biblica": ["Efesios 2:20", "1 Pedro 2:6", "Salmos 18:2"],
+  "tags": ["Clásico", "Alabanza", "Fe", "Jesús", "Piedra Angular"],
 
   "idiomas": {
     "es": {
@@ -1636,7 +1649,7 @@
   "compas": ["4/4"],
   "ritmo": ["Alegre"],
   "referencia_biblica": ["San Mateo 9:37"],
-  "tags": ["Servicio", "Misión", "Unidad", "Evangelismo"],
+  "tags": ["Clásico", "Servicio", "Misión", "Unidad", "Evangelismo"],
 
   "idiomas": {
     "es": {
@@ -1801,9 +1814,9 @@
   "tonalidad": ["Sol Mayor (G)"],
   "tempo_bpm": ["108"],
   "compas": ["4/4"],
-  "ritmo": ["Cántico Contemporáneo"],
+  "ritmo": ["Himno"],
   "referencia_biblica": ["Malaquías 4:2; 2 Corintios 4:6; Salmo 139:23-24; 1 Juan 1:7, San Mateo 8:12"],
-  "tags": ["Alabanza", "Luz", "Petición", "Misericordia", "Purificación"],
+  "tags": ["Clásico", "Alabanza", "Luz", "Petición", "Misericordia", "Purificación"],
 
   "idiomas": {
     "es": {
@@ -1930,7 +1943,7 @@
   "compositor": ["David Huff", "Karen Lafferty"],
   "tonalidad": ["Re Mayor (D)"],
   "referencia_biblica": ["San Mateo 6:33", "San Mateo 7:7", "San Mateo 4:4"],
-  "tags": ["Meditación", "Confianza", "Adoración", "Providencia", "Reflexión"],
+  "tags": ["Clásico", "Meditación", "Confianza", "Adoración", "Providencia", "Reflexión"],
 
   "idiomas": {
     "es": {
@@ -1969,7 +1982,7 @@
   "compositor": ["Desconocido"],
   "tonalidad": ["Re Mayor (D)"],
   "referencia_biblica": ["Jeremías 29:13"],
-  "tags": [""],
+  "tags": ["Clásico", "Oración", "Paz", "Invitación"],
 
   "idiomas": {
     "es": {
@@ -2049,7 +2062,7 @@
   "tonalidad": ["Sol Mayor (G)"],
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
+  "ritmo": ["Worship"],
   "referencia_biblica": ["Job 1:21"],
   "tags": ["Worship"],
 
@@ -2129,7 +2142,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Infantil"],
   "referencia_biblica": [""],
-  "tags": [],
+  "tags": ["Clásico", "Infantil"],
 
   "idiomas": {
     "es": {
@@ -2172,7 +2185,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": [""],
-  "tags": ["Himno"],
+  "tags": ["Himno", "Clásico", "Salvacion", "Segunda Venida"],
 
   "idiomas": {
     "es": {
@@ -2201,10 +2214,10 @@
   "year": ["Desconocido"],
   "tonalidad": ["Sol Mayor (G)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
+  "compas": ["4/4"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": [""],
-  "tags": ["Alabanza"],
+  "referencia_biblica": ["Salmos 5:3", "Salmos 119:147", "Eclesiastés 9:10"],
+  "tags": ["Alabanza", "Vida Cristiana", "Comunión", "Devocional", "Clásico"],
 
   "idiomas": {
     "es": {
@@ -2259,7 +2272,7 @@
   "compas": ["4/4"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmo 5:3", "Salmo 63:1", "Proverbios 3:27-28", "Levítico 19:18"],
-  "tags": ["Alabanza", "Amor", "Generosidad", "Felicidad", "Optimismo", "Fraternidad", "Inclusión"],
+  "tags": ["Clásico", "Alabanza", "Amor", "Generosidad", "Felicidad", "Optimismo", "Fraternidad", "Inclusión"],
 
   "idiomas": {
     "es": {
@@ -2379,8 +2392,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": [""],
-  "tags": [],
+  "referencia_biblica": ["Éxodo 13:21", "Hebreos 11:16"],
+  "tags": ["Alabanza", "Alegre", "Peregrinaje", "Clásico"],
 
   "idiomas": {
     "es": {
@@ -2427,7 +2440,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Hebreos 11:16"],
-  "tags": ["Alabanza", "Avivamiento", "Gozo", "Evangelismo", "Vida nueva"],
+  "tags": ["Alabanza", "Avivamiento", "Gozo", "Evangelismo", "Vida nueva", "Clásico"],
 
   "idiomas": {
     "es": {
@@ -2682,9 +2695,14 @@
 { "id": "cantad_a_dios",
   "titulo_original": ["Louvai a Deus"],
   "autor": ["Flavio Regis", "Jamir"],  
-  "compositor": ["Flavio Regis", "Jamir"],  
+  "compositor": ["Flavio Regis", "Jamir"],
+  "year": [""],  
   "tonalidad": ["Mi Mayor (E)", "Mi menor (Em)"],
-  "referencia_biblica": ["Salmos 150:4-6"],
+  "tempo_bpm": [""],
+  "compas": ["4/4"],
+  "ritmo": [""],
+  "referencia_biblica": ["Salmos 150:4-6", "Salmos 148:1-12", "Salmos 96:11-12"],
+  "tags": ["Alabanza", "Creación", "Adoración", "Instrumentos"],
 
   "idiomas": {
     "es": {
@@ -2743,8 +2761,13 @@
   "titulo_original": ["Testify to love"],
   "autor": ["Paul Field"],  
   "compositor": ["Paul Field"],  
+  "year": [""],
   "tonalidad": ["Sol Mayor (G)", "La Mayor (A)"],
-  "referencia_biblica": ["San Mateo 10:32"],
+  "tempo_bpm": [""],
+  "compas": ["4/4"],
+  "ritmo": [""],
+  "referencia_biblica": ["San Mateo 10:32", "Salmos 19:1-2", "Salmos 104:24", "Salmos 145:10"],
+  "tags": ["Alabanza", "Creación", "Gratitud", "Amor de Dios"],
 
   "idiomas": {
     "es": {
@@ -2792,7 +2815,12 @@
   "autor": ["Martin Smith"],   
   "compositor": ["Martin Smith"],
   "tonalidad": ["Re Mayor (D)"],
-  "referencia_biblica": ["Salmos 75:9"],
+  "referencia_biblica": ["Salmos 75:9", "Salmos 89:1", "Salmos 107:1"],
+  "year": ["1994"],  
+  "tempo_bpm": [""],
+  "compas": ["4/4"],
+  "ritmo": ["Worship"],
+  "tags": ["Adoración", "Amor de Dios", "Misericordia"],
 
   "idiomas": {
     "es": {
@@ -2845,7 +2873,12 @@
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "tonalidad": ["La Mayor (A)"],
-  "referencia_biblica": ["Romanos 9:9, 10"],
+  "referencia_biblica": ["Romanos 9:9-10", "Salmos 92:1-2", "Salmos 5:3", "Isaías 40:31"],
+  "year": [""],  
+  "tempo_bpm": [""],
+  "compas": ["4/4"],
+  "ritmo": [""],
+  "tags": ["Alabanza", "Gozo", "Confianza", "Fortaleza"],
 
   "idiomas": {
     "es": {
@@ -2875,8 +2908,13 @@
   "titulo_original": ["Joyfully we sing here of the Savior's grace"],
   "autor": ["Enrique S. Turrall"],
   "compositor": ["Enrique S. Turrall"],
-  "tonalidad": ["Mi Mayor (E)"],
-  "referencia_biblica": ["Salmos 32:11"],
+  "tonalidad": ["Sol Mayor (G)"],
+  "referencia_biblica": ["Salmos 32:11", "Salmos 96:1-2", "Deuteronomio 31:6"],
+  "year": [""],  
+  "tempo_bpm": [""],
+  "compas": ["4/4"],
+  "ritmo": ["Alegre"],
+  "tags": ["Alabanza", "Gozo", "Alegre", "Evangelismo", "Clásico"],
 
   "idiomas": {
     "es": {
@@ -2928,20 +2966,20 @@
   }
 },
 { "id": "celebrad_a_cristo",
-  "titulo_original": ["Celebrad a Cristo"],
-  "autor": ["Desconocido"],
-  "compositor": ["Desconocido"],
-  "year": ["Desconocido"],
+  "titulo_original": ["Celebrate Jesus, Celebrate"],
+  "autor": ["Gary Oliver"],
+  "compositor": ["Gary Oliver"],
+  "year": ["1988"],
   "tonalidad": ["Mi Mayor (E)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
+  "compas": ["4/4"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": [""],
-  "tags": ["worship", "Alabanza"],
+  "referencia_biblica": ["Lucas 24:5-6", "1 Corintios 15:20"],
+  "tags": ["Worship", "Alabanza", "Resurrección", "Gozo", "Clásico"],
 
   "idiomas": {
     "es": {
-      "titulo": ["¡Celebrad a Cristo!"],
+      "titulo": ["¡Celebrad a Cristo, celebrad!"],
       "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
@@ -2968,7 +3006,12 @@
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "tonalidad": ["Do Mayor (C)", "Re Mayor (D)"],
-  "referencia_biblica": ["Salmos 118:24"],
+  "referencia_biblica": ["Salmos 118:24", "Romanos 5:1", "1 Tesalonicenses 4:16-17", "Salmos 13:5"],
+  "year": [""],  
+  "tempo_bpm": [""],
+  "compas": ["4/4"],
+  "ritmo": [""],
+  "tags": ["Alabanza", "Salvación", "Justificación", "Segunda Venida", "Gozo"],
 
   "idiomas": {
     "es": {
@@ -3031,10 +3074,15 @@
 },
 { "id": "cerca_de_Jesús",
   "titulo_original": ["Draw me close to you"],
-  "autor": ["Michael W. Smith"], 
-  "compositor": ["Michael W. Smith"],
+  "autor": ["Kelly Carpenter"], 
+  "compositor": ["Kelly Carpenter"],
   "tonalidad": ["Sol Mayor (G)"],
-  "referencia_biblica": ["Salmos 145:18"],
+  "referencia_biblica": ["Salmos 145:18", "Salmos 73:28", "Santiago 4:8", "San Juan 15:4"],
+  "year": ["1994"],  
+  "tempo_bpm": [""],
+  "compas": ["4/4"],
+  "ritmo": ["Worship"],
+  "tags": ["Adoración", "Comunión", "Intimidad", "Entrega"],
 
   "idiomas": {
     "es": {
@@ -3054,7 +3102,7 @@
         "[G][D]Quiero entre[C]gar [G]mi [D]vida y [C]mi a[D]mor.",
         "[G][D]Yo quiero es[C]tar [Am]cerca de [D]ti, Je[G]sús."
       ],
-      "nota": [""]
+      "nota": ["Popularizado internacionalmente por Michael W. Smith en su álbum 'Worship' (2001)"]
     },
     "en": {
       "titulo": ["Draw me close to you"],
@@ -3084,6 +3132,11 @@
   "compositor": ["Marty Nystrom"],
   "tonalidad": ["Do Mayor (C)"],
   "referencia_biblica": ["Salmos 42:1"],
+  "year": ["1984"],  
+  "tempo_bpm": [""],
+  "compas": ["4/4"],
+  "ritmo": [""],
+  "tags": ["Adoración", "Intimidad", "Anhelo", "Clásico"],
 
   "idiomas": {
     "es": {
@@ -3151,7 +3204,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Mateo 8:27"],
-  "tags": ["Canon"],
+  "tags": ["Canon", "Amor", "Clásico"],
 
   "idiomas": {
     "es": {
@@ -3193,8 +3246,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Efesios 5:19, 20"],
-  "tags": [],
+  "referencia_biblica": ["Efesios 5:19-20", "Salmos 126:3", "Lucas 1:37", "Filipenses 1:6"],
+  "tags": ["Gratitud", "Testimonio", "Gozo", "Confianza"],
 
   "idiomas": {
     "es": {
@@ -3252,8 +3305,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Salmos 31:24"],
-  "tags": ["infantil", "tradicional", "himno", "gozo", "confianza"],
+  "referencia_biblica": ["Salmos 31:24", "Salmos 34:5", "San Mateo 8:23-27", "Salmos 107:29-30"],
+  "tags": ["Infantil", "Gozo", "Confianza", "Dirección", "Clásico"],
 
   "idiomas": {
     "es": {
@@ -3285,8 +3338,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Zacarías 2:11"],
-  "tags": [],
+  "referencia_biblica": ["Zacarías 2:11", "Salmos 23:2-3", "Eclesiastés 9:7-9"],
+  "tags": ["Gozo", "Alabanza", "Vida Cristiana", "Creación", "Clásico"],
 
   "idiomas": {
     "es": {
@@ -3327,8 +3380,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["4/4"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": [""],
-  "tags": ["Infantil"],
+  "referencia_biblica": ["Josué 24:15", "Hechos 16:31"],
+  "tags": ["Infantil", "Familia", "Hogar", "Gozo", "Clásico"],
 
   "idiomas": {
     "es": {
@@ -3369,8 +3422,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": [""],
-  "tags": ["Infantil"],
+  "referencia_biblica": ["Salmos 23:3", "Salmos 37:23", "1 Juan 4:19"],
+  "tags": ["Infantil", "Gozo", "Confianza", "Dirección", "Amor de Dios"],
 
   "idiomas": {
     "es": {
@@ -3402,16 +3455,16 @@
   }
 },
 { "id": "con_solo_una_chispa",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Pass It On"],
   "autor": ["Kurt Kaiser"],
   "compositor": ["Kurt Kaiser"],
-  "year": ["Desconocido"],
+  "year": ["1969"],
   "tonalidad": ["Do Mayor (C)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Jeremías 23:29"],
-  "tags": [],
+  "compas": ["4/4"],
+  "ritmo": ["Folk"],
+  "referencia_biblica": ["Jeremías 23:29", "Santiago 3:5", "San Mateo 5:14-16", "1 Juan 4:11"],
+  "tags": ["Amor de Dios", "Testimonio", "Comunión", "Campamento", "Clásico"],
 
   "idiomas": {
     "es": {
@@ -3453,8 +3506,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Apocalipsis 21:4"],
-  "tags": [],
+  "referencia_biblica": ["Apocalipsis 21:4", "Apocalipsis 22:5", "1 Corintios 13:12"],
+  "tags": ["Adoración", "Esperanza", "Eternidad", "Cielo", "Consuelo"],
 
   "idiomas": {
     "es": {
@@ -3503,9 +3556,9 @@
   "tonalidad": ["Sol Mayor (G)"],
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
-  "ritmo": ["Adoración", "Balada", "Hebreo"],
-  "referencia_biblica": ["Génesis 5:24", "Salmos 1:3"],
-  "tags": ["Alabanza", "Adoración", "Crecimiento", "Confianza", "Vida Eterna"],
+  "ritmo": ["Adoración", "Hebreo"],
+  "referencia_biblica": ["Génesis 5:24", "Salmos 1:3", "Éxodo 16:21", "Proverbios 14:1"],
+  "tags": ["Alabanza", "Adoración", "Crecimiento", "Confianza", "Vida Eterna", "Comunión", "Familia", "Devoción", "Crecimiento", "Vida Cristiana"],
 
   "idiomas": {
     "es": {
@@ -3559,7 +3612,7 @@
   }
 },
 { "id": "cristo_ama_ninos_como_yo",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Jesus Loves the Little Children"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -3567,8 +3620,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["San Mateo 19:14"],
-  "tags": ["Alabanza", "Infantil", "Amor de Dios", "Confianza", "Seguridad"],
+  "referencia_biblica": ["San Mateo 19:14", "Marcos 10:14"],
+  "tags": ["Alabanza", "Infantil", "Amor de Dios", "Confianza", "Seguridad", "Alegre"],
 
   "idiomas": {
     "es": {
@@ -3609,13 +3662,13 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Apocalipsis 5:9"],
-  "tags": [],
+  "referencia_biblica": ["Apocalipsis 5:9", "Gálatas 2:20", "Salmos 95:1"],
+  "tags": ["Alabanza", "Juventud", "Entrega", "Cruz", "Invitación", "Clásico"],
 
   "idiomas": {
     "es": {
       "titulo": ["Cristo joven"],
-      "titulo2": [""],
+      "titulo2": ["Ver, hermano (aka)"],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -3650,8 +3703,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Alabanza", "Worship", "Suave"],
-  "referencia_biblica": ["Efesios 5:2", "Mateo 19:14"],
-  "tags": ["Cristiano", "Alabanza", "Infantil", "Amor", "Confianza"],
+  "referencia_biblica": ["Efesios 5:2", "San Mateo 19:14", "San Mateo 19:14", "San Marcos 10:14", "San Juan 15:15"],
+  "tags": ["Alabanza", "Crecimiento", "Ánimo", "Avivamiento", "Clásico", "Amor", "Confianza"],
 
   "idiomas": {
     "es": {
@@ -3672,7 +3725,7 @@
         "[C]¡Sí, Cristo me [F]ama!",
         "La [C]Biblia [G]dice a[C]sí"
       ],
-      "nota": [""]
+      "nota": ["Uno de los himnos cristianos más traducidos y cantados en todo el mundo, escrito originalmente en los Estados Unidos en el siglo XIX"]
     }
   }
 },
@@ -3685,8 +3738,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Alabanza", "Infantil", "We will rock you"],
-  "referencia_biblica": ["Efesios 5:2", "Mateo 19:14"],
-  "tags": ["Cristiano", "Alabanza", "Infantil", "Amor", "Confianza"],
+  "referencia_biblica": ["Efesios 5:2", "San Mateo 19:14", "San Mateo 19:14", "San Marcos 10:14", "San Juan 15:15"],
+  "tags": ["Alabanza", "Crecimiento", "Ánimo", "Avivamiento", "Clásico", "Amor", "Confianza"],
 
   "idiomas": {
     "es": {
@@ -3711,7 +3764,7 @@
         "[C]¡Sí, Cristo me [F]ama!",
         "La [C]Biblia [G]dice a[C]sí"
       ],
-      "nota": [""]
+      "nota": ["Uno de los himnos cristianos más traducidos y cantados en todo el mundo, escrito originalmente en los Estados Unidos en el siglo XIX"]
     }
   }
 },
@@ -3724,8 +3777,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo":  ["Alabanza"],
-  "referencia_biblica": [""],
-  "tags": ["Alabanza", "Avivamiento", "Gozo", "Crecimiento Espiritual"],
+  "referencia_biblica": ["Filipenses 3:13-14", "Colosenses 3:1-2"],
+  "tags": ["Alabanza", "Avivamiento", "Gozo", "Crecimiento Espiritual", "Ánimo"],
   
   "idiomas": {
     "es": {
@@ -3745,7 +3798,7 @@
         "[C]Subamos subamos mirando a Cristo [F][G][C]",
         "[F]Cada [G]dia [C]más, [F]cada [G]dia [C]más"
       ],
-      "nota": [""]
+      "nota": ["Corito tradicional de avivamiento que suele cantarse aumentando el tempo gradualmente en cada repetición."]
     }
   }
 },
@@ -3756,10 +3809,10 @@
   "year": ["Desconocido"],
   "tonalidad": ["Mi Mayor (E)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
+  "compas": ["4/4"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Juan 8:36"],
-  "tags": ["avivamiento", "tradicional", "alabanza", "libertad", "gozo"],
+  "referencia_biblica": ["Salmos 116:16", "San Juan 8:36", "Hechos 16:26"],
+  "tags": ["Libertad", "Gozo", "Avivamiento", "Liberación", "Victoria", "Alabanza", "Clásico"],
 
   "idiomas": {
     "es": {
@@ -3793,8 +3846,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Números 6:24-26", "Salmos 90:12"],
-  "tags": ["Cumpleaños", "celebracion", "tradicional", "gratitud", "bendicion", "Aniversario"],
+  "referencia_biblica": ["Números 6:24-26", "Salmos 90:12", "Proverbios 9:11"],
+  "tags": ["Cumpleaños", "Celebracion", "Clásico", "Aniversario"],
 
   "idiomas": {
     "es": {
@@ -3823,8 +3876,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["4/4"],
   "ritmo": ["Adoración"],
-  "referencia_biblica": ["San Juan 14:27", "Filipenses 4:7"],
-  "tags": ["Adoración", "Paz", "Gozo", "Comunión", "Devocional"],
+  "referencia_biblica": ["Filipenses 4:7", "San Juan 14:27", "Salmos 23:2"],
+  "tags": ["Adoración", "Paz", "Gozo", "Comunión", "Devocional", "Intimidad", "Clásico"],
 
   "idiomas": {
     "es": {
@@ -3860,15 +3913,15 @@
 },
 { "id": "cuan_grande_eres_dios",
   "titulo_original": ["How great is our God"],
-  "autor": ["Chris Tomlin"],
-  "compositor": ["Chris Tomlin"],
-  "year": ["Desconocido"],
+  "autor": ["Chris Tomlin", "Jesse Reeves", "Ed Cash"],
+  "compositor": ["Chris Tomlin", "Jesse Reeves", "Ed Cash"],
+  "year": ["2004"],
   "tonalidad": ["Sol Mayor (G)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Salmos 95:3"],
-  "tags": [],
+  "compas": ["4/4"],
+  "ritmo": ["Worship"],
+  "referencia_biblica": ["Salmos 95:3", "Salmos 104:1", "Apocalipsis 22:13", "Apocalipsis 5:5-6"],
+  "tags": ["Adoración", "Grandeza", "Majesatad", "Trinidad"],
 
   "idiomas": {
     "es": {
@@ -3898,6 +3951,51 @@
         "Su sangre nos lim[C]pió de toda rebe[D]lión."
       ],
       "nota": [""]
+    },
+    "en": {
+      "titulo": ["How Great Is Our God"],
+      "titulo2": [""],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": ["No"],      
+      "letra": [
+        "1",
+        "The splendor of a King, clothed in majesty,",
+        "Let all the earth rejoice, all the earth rejoice.",
+        "He wraps Himself in light, and darkness tries to hide,",
+        "And trembles at His voice, trembles at His voice.",
+        "",
+        "Chorus:",
+        "How great is our God, sing with me,",
+        "How great is our God, and all will see,",
+        "How great, how great is our God.",
+        "",
+        "2",
+        "Age to age He stands, and time is in His hands,",
+        "Beginning and the end, beginning and the end.",
+        "The Godhead, Three in One: Father, Spirit, Son,",
+        "The Lion and the Lamb, the Lion and the Lamb.",
+        "",
+        "Chorus:",
+        "How great is our God, sing with me,",
+        "How great is our God, and all will see,",
+        "How great, how great is our God.",
+        "",
+        "Bridge:",
+        "Name above all names, Worthy of all praise,",
+        "My heart will sing: How great is our God.",
+        "",
+        "Bridge:",
+        "Name above all names, Worthy of all praise,",
+        "My heart will sing: How great is our God.",
+        "",
+        "Chorus:",
+        "How great is our God, sing with me,",
+        "How great is our God, and all will see,",
+        "How great, how great is our God."
+      ],
+      "nota": [""]
     }
   }
 },
@@ -3911,7 +4009,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["2 Corintios 5:17"],
-  "tags": ["testimonio", "transformacion", "evangelismo"],
+  "tags": ["Testimonio", "Transformacion", "Evangelismo", "Clasico"],
   "idiomas": {
     "es": {
       "titulo": ["Cuando Cristo vino a mi corazón"],
@@ -3945,6 +4043,7 @@
     }
   }
 },
+
 { "id": "cuando_el_pueblo_de_dios_ora",
   "titulo_original": ["Desconocido"],
   "autor": ["Forgiven"],
@@ -3954,8 +4053,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["2 Crónicas 7:14", "Hechos 4:31"],
-  "tags": ["Alabanza", "Oración", "Poder", "Avivamiento", "Sanidad"],
+  "referencia_biblica": ["Hechos 4:31", "Santiago 5:16", "2 Crónicas 7:14"],
+  "tags": ["Alabanza", "Oración", "Poder", "Avivamiento", "Sanidad", "Clásico"],
 
   "idiomas": {
     "es": {
@@ -3997,7 +4096,7 @@
   "compas": ["4/4"],
   "ritmo": ["Alegre"],
   "referencia_biblica": ["Hechos 2:46, 47"],
-  "tags": ["Comunión", "Sábado", "Hermandad"],
+  "tags": ["Comunión", "Sábado", "Hermandad", "Alabanza", "Bienvenida", "Fraternidad"],
 
   "idiomas": {
     "es": {
@@ -4031,7 +4130,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 8:1-9"],
-  "tags": ["Creación", "Adoración", "Salmo"],
+  "tags": ["Adoración", "Creación", "Grandeza de Dios", "Salmo", "Clásico"],
 
   "idiomas": {
     "es": {
@@ -4075,8 +4174,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": [""],
-  "tags": [],
+  "referencia_biblica": ["Isaías 6:8", "Salmos 119:105"],
+  "tags": ["Misión", "Servicio", "Juventud", "Compromiso", "Voluntariado"],
 
   "idiomas": {
     "es": {
@@ -4116,8 +4215,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": [""],
-  "tags": [],
+  "referencia_biblica": ["Isaia 40:31", "Salmi 23:4", "Matteo 28:20"],
+  "tags": ["Scout", "Cammino", "Fiducia", "Giovani", "Classico"],
 
   "idiomas": {
     "it": {
@@ -4168,10 +4267,10 @@
   "year": ["Desconocido"],
   "tonalidad": ["Do Mayor (C)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
+  "compas": ["4/4"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": [""],
-  "tags": [],
+  "referencia_biblica": ["Apocalisse 21:4", "Apocalisse 4:3", "Ebrei 13:5"],
+  "tags": ["Ritorno di Cristo", "Speranza", "Fiducia", "Nuova Gerusalemme", "Adorazione"],
 
   "idiomas": {
     "it": {
@@ -4223,12 +4322,12 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Alabanza", "Corito de Comunión"],
-  "referencia_biblica": ["Salmos 133:1"],
-  "tags": ["Cristiano", "Alabanza", "Comunión", "Fraternidad", "Felicidad"],
+  "referencia_biblica": ["Salmos 133:1", "Filipenses 4:7", "Colosenses 1:27"],
+  "tags": ["Gozo", "Alabanza", "Clásico", "Comunión", "Fraternidad", "Felicidad"],
 
   "idiomas": {
     "es": {
-      "titulo": ["Salmo 133: Cuan bueno cuan maravilloso es (*)"],
+      "titulo": ["Salmo 133: Cuan bueno cuan maravilloso es (revisar letra)"],
       "titulo2": [""],
       "audio_url": "",
       "traductor": [""],
@@ -4262,7 +4361,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Efesios 4:13-15", "1 Corintios 13:11", "Lucas 8:15", "Malaquías 4:2"],
+  "referencia_biblica": ["Efesios 4:13-15", "1 Corintios 13:11", "San Lucas 8:15", "Malaquías 4:2"],
   "tags": ["Crecimiento Espiritual", "Adoración", "Vida Cristiana", "Semilla"],
 
   "idiomas": {
@@ -5330,7 +5429,7 @@
   "tonalidad": ["La Mayor (A)"],
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
-  "ritmo": ["Adoración", "Balada"],
+  "ritmo": ["Adoración"],
   "referencia_biblica": ["Juan 21:17"],
   "tags": ["Cristiano", "Adoración", "Amor a Dios", "Consuelo", "Confianza", "Libertad", "Oración"],
 
@@ -8093,16 +8192,16 @@
   }
 },
 { "id": "he_decidido_seguir_a_cristo",
-  "titulo_original": ["I have decided to follow Jesús"],
-  "autor": ["Atribuido a Sadhu Sundar Singh"],
+  "titulo_original": ["मैंने मसीह का अनुसरण करने का निश्चय किया है (Maine Masīh kā anusaraṇ karne kā niścay kiyā hai)"],
+  "autor": ["Sadhu Sundar Singh"],
   "compositor": ["Sadhu Sundar Singh"],
-  "year": ["Desconocido"],
+  "year": ["1905-1920"],
   "tonalidad": ["Do Mayor (C)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": ["San Lucas 9:62"],
-  "tags": ["Consagración"],
+  "compas": ["4/4"],
+  "ritmo": ["Melodía popular de la India"],
+  "referencia_biblica": ["San Lucas 9:62", "Gálatas 2:20", "Lucas 9:62", "Gálatas 6:14", "Filipenses 3:13"],
+  "tags": ["Consagración", "Himno", "Decisión", "Compromiso", "Testimonio", "Clásico", "Fidelidad"],
 
   "idiomas": {
     "es": {
@@ -8113,27 +8212,31 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
-        "[C]He decidido seguir a Cristo,",
-        "[F]he decidido seguir a [C]Cristo,",
+        "1",
+        "He deci[C]dido seguir a Cristo,",
+        "he deci[F]dido seguir a [C]Cristo,",
         "he decidido seguir a Cristo,",
-        "no vuelvo [G]atrás, no vuelvo a[C]trás.",
+        "no vuelvo [F]atrás, no [G]vuelvo a[C]trás.",
         "",
-        "[C]El Rey de gloria me ha transformado,",
-        "[F]el Rey de gloria me ha transfor[C]mado,",
+        "2",
+        "El Rey de [C]gloria me ha transformado,",
+        "el Rey de [F]gloria me ha transfor[C]mado,",
         "el Rey de gloria me ha transformado,",
-        "no vuelvo [G]atrás, no vuelvo a[C]trás.",
+        "no vuelvo [F]atrás, no [G]vuelvo a[C]trás.",
         "",
-        "[C]La vida vieja ya he dejado,",
-        "[F]la vida vieja ya he de[C]jado,",
+        "3",
+        "La vida [C]vieja ya he dejado,",
+        "la vida [F]vieja ya he de[C]jado,",
         "la vida vieja ya he dejado,",
-        "no vuelvo [G]atrás, no vuelvo a[C]trás.",
+        "no vuelvo [F]atrás, no [G]vuelvo a[C]trás.",
         "",
-        "[C]Si otros vuelven, yo sigo a Cristo,",
-        "[F]si otros vuelven, yo sigo a [C]Cristo,",
+        "4",
+        "Si otros [C]vuelven, yo sigo a Cristo,",
+        "si otros [F]vuelven, yo sigo a [C]Cristo,",
         "si otros vuelven, yo sigo a Cristo,",
-        "no vuelvo [G]atrás, no vuelvo a[C]trás."
+        "no vuelvo [F]atrás, no [G]vuelvo a[C]trás."
       ],
-      "nota": ["Melodía popular de la India"]
+      "nota": ["La letra se ha modificado para que esta cancion forme parte del Himnario Adventista"]
     }
   }
 },
@@ -9434,15 +9537,11 @@
   "year": ["Desconocido"],
   "tonalidad": ["Do Mayor (C)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
+  "compas": ["4/4"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Salmos 16:8"],
-  "tags": [
-    
-    "Cristiano",
-    "Comunión",
-    "Amistad"
-  ],
+  "referencia_biblica": ["Juan 8:12", "Salmos 23:4"],
+  "tags": ["Alabanza", "Comunión", "Testimonio", "Clásico", "Amistad"],
+
   "idiomas": {
     "es": {
       "titulo": ["Lado a lado"],
@@ -9450,25 +9549,31 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
-        "[F]Lado a lado [G]es[C]toy con mi [G/B]Salva[Am]dor,",
-        "[F]mi ami[G]go es Je[C - C7]sús.",
-        "[F]Vivo por su a[G]mor, con [C]Él yo [G/B]soy fe[Am]liz",
-        "[Dm]y de su [G]mano siempre [C - C7]voy.",
+        "1",
+        "[F]Lado a lado es[G]toy [C]con mi Salva[Am]dor,",
+        "[F]mi ami[G]go es Je[C]sús. [C7]",
+        "[F]Vivo por su a[G]mor, con [C]Él yo soy fe[Am]liz",
+        "[Dm]y de su [G]mano siempre [C]voy.",
         "",
         "Coro:",
-        "[F]Venid con[G]migo, [C]juntemos [G/B]las [Am]manos",
-        "[F]aquí [G]donde está Je[C - C7]sús.",
-        "[F]Venid, can[G]temos en el [C]mundo [G/B]os[Am]curo,",
-        "[Dm]que [G]Cristo es nuestra [C]luz.",
+        "[F]Venid con[G]migo, [C]juntemos las [Am]manos",
+        "[F]aquí donde [G]está Je[C]sús. [C7]",
+        "[F]Venid, can[G]temos [C]en el mundo os[Am]curo,",
+        "[Dm]que Cristo [G]es nuestra [C]luz.",
         "",
-        "[F]Solo te sen[G]tís, en [C]nadie con[G/B]fí[Am]as,",
-        "[F]todo es [G]odio alre[C - C7]dedor.",
-        "[F]Pero en Je[G]sús encon[C]trarás [G/B]a[Am]mor,",
-        "[Dm]Él te [G]dará felici[C - C7]dad.",
+        "2",
+        "[F]Solo te sen[G]tís, [C]en nadie confí[Am]as,",
+        "[F]todo es odio alre[G]dedor. [C7]",
+        "[F]Pero en Je[G]sús en[C]contrarás a[Am]mor,",
+        "[Dm]Él te [G]dará felici[C]dad.",
         "",
-        "Coro"
+        "Coro:",
+        "[F]Venid con[G]migo, [C]juntemos las [Am]manos",
+        "[F]aquí donde [G]está Je[C]sús. [C7]",
+        "[F]Venid, can[G]temos [C]en el mundo os[Am]curo,",
+        "[Dm]que Cristo [G]es nuestra [C]luz."
       ],
       "nota": [""]
     }
@@ -10410,13 +10515,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["San Mateo 17:20"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Reino de Dios"
-  ],
+  "referencia_biblica": ["San Mateo 13:31-33", "San Mateo 17:20", "San Lucas 13:18-21"],
+  "tags": ["Alabanza", "Evangelismo", "Parábolas", "Clásico", "Crecimiento", "Semilla", "Mostaza", "Reino de Dios", "Levadura"],
   "idiomas": {
     "es": {
       "titulo": ["Mi reino"],
@@ -10424,7 +10524,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
         "[C]Mi reino es [G]como un grano [Am]de mostaza,",
         "[F]que los hombres [Dm]en la tierra sembra[G-G7]rán,",
@@ -11069,17 +11169,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Zacarías 4:6"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Corito",
-    "Poder Divino",
-    "Sanidad",
-    "Salvación",
-    "Espíritu Santo"
-  ],
+  "referencia_biblica": ["Zacarías 4:6", "Éxodo 15:11", "Zacarías 4:6"],
+  "tags": ["Alabanza", "Poder", "Espíritu Santo", "Clásico", "Poder Divino", "Sanidad", "Salvación"],
   "idiomas": {
     "es": {
       "titulo": ["No hay Dios tan grande como tú"],
@@ -11087,21 +11178,29 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
-        "[C]No hay Dios tan grande como Tú",
-        "[G]No lo hay, [C]no lo hay (BIS)",
+        "1",
+        "No hay [C]Dios tan grande como Tú",
+        "No lo [G]hay, no lo [C]hay",
+        "No hay [C]Dios tan grande como Tú",
+        "No lo [G]hay, no lo [C]hay",
         "",
-        "[F]No hay Dios que pueda hacer las obras",
-        "[G]como las que haces [C]Tú (BIS)",
+        "2",
+        "No hay [F]Dios que pueda hacer las [C]obras",
+        "como [G]las que haces [C]Tú",
+        "No hay [F]Dios que pueda hacer las [C]obras",
+        "como [G]las que haces [C]Tú",
         "",
-        "[C]No es con espada ni con e[F]jército",
-        "más [G]con tu Santo Es[C]píritu",
+        "Puente:",
+        "No es con [C]espada ni con ejército",
+        "más con tu [G]Santo Espíri[C]tu",
         "",
-        "[F]Y esta iglesia se mo[C]verá",
-        "[G]Y esta iglesia se mo[C]verá",
-        "[F]Y esta iglesia se mo[C]verá",
-        "más [G]con tu Santo Es[C]píritu"
+        "Final:",
+        "Y esta [F]iglesia se move[C]rá",
+        "Y esta [G]iglesia se move[C]rá",
+        "Y esta [F]iglesia se move[C]rá",
+        "con tu [G]Santo Espíri[C]tu"
       ],
       "nota": [""]
     }
@@ -15439,6 +15538,7 @@
         "numero_himno": "",
         "letra": [
           "INTRO: [E]- [B]- [C#m]- [A]",
+          "",
           "No creas que en mis [E]días siempre brilla el sol",
           "Pues nubes apar[B]ecen y sin avisar",
           "Y cuando está osc[C#M]uro",
@@ -15446,12 +15546,12 @@
           "No pienses que mis [A]flores nunca morirán",
           "A veces he p[B]edido y me han dicho no",
           "A veces yo e[C#m]spero, a veces yo me [A]canso",
-          "br,br",
+          "",
           "Mas nada[B]me impedirá sonreír y alegre est[A]ar", 
           "Yo puedo en Él confiar",
           "[E]A cada paso mi Dios conmigo est[B]á",
-          "br,br",
-          "<small><b>Coro</b></small>",
+          "",
+          "Coro:",
           "[B]Y tengo paz, en Cristo tengo [A]paz",
           "[E]Yo paso la tormenta",
           "Seguro y escon[B]dido en el Señor",
@@ -15459,11 +15559,12 @@
           "Que en medio del desi[E]erto",
           "Renace la esperan[B]za por doquier",
           "Tengo [E]paz",
+          "",
           "El [A]universo riges con po[E]der",
           "Que me podría arrebat[B]ar, la paz",
           "Las [A]tempestades no me alcan[E]zarán",
           "Si estoy contigo tengo [B]paz",
-          "br,br",
+          "",
           "[B]Y tengo paz, en Cristo tengo [A]paz",
           "[E]Yo paso la tormenta",
           "Seguro y escon[B]dido en el Señor",
