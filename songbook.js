@@ -201,11 +201,18 @@ function openSong(id) {
         <b>Tags:</b>
         ${
           song.tags?.length
-            ? song.tags.map(tag =>
-                `<span class="tag-link" onclick="openTagModal('${tag}')">${tag}</span>`
-              ).join(", ")
+            ? [...song.tags]
+                .map(tag => tag?.toString().trim())
+                .map(tag => tag.charAt(0).toUpperCase() + tag.slice(1).toLowerCase())
+                .sort((a, b) =>
+                  a.localeCompare(b, "es", { sensitivity: "base" })
+                )
+                .map(tag =>
+                  `<span class="tag-link" onclick="openTagModal('${tag}')">${tag}</span>`
+                )
+                .join(", ")
             : "Desconocido"
-        } | 
+        } |
 
         <b>Revisado:</b>
           <span

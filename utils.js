@@ -228,12 +228,25 @@ function normalizeRitmo(ritmo) {
     : ritmo.split("/").map(r => r.trim()).filter(Boolean);
 }
 
+function normalizeText(text = "") {
+  text = text.toString().trim();
+
+  if (!text) return "";
+
+  return text.charAt(0).toUpperCase() +
+         text.slice(1).toLowerCase();
+}
+
 function formatRitmo(ritmo) {
   const arr = normalizeRitmo(ritmo);
+
   if (!arr.length) return "";
 
   return arr
-    .sort((a, b) => a.localeCompare(b, "es", { sensitivity: "base" }))
+    .map(normalizeText)
+    .sort((a, b) =>
+      a.localeCompare(b, "es", { sensitivity: "base" })
+    )
     .join(", ");
 }
 
