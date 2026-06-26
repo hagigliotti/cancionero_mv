@@ -14,7 +14,7 @@
   "compas": ["4/4"],
   "ritmo": ["Adoración"],
   "referencia_biblica": ["San Mateo 11:28"],
-  "tags": ["Clásico", "Entrega", "Consuelo", "Confianza"],
+  "tags": ["worship", "Adoración", "Clásico", "Entrega", "Consuelo", "Confianza"],
 
   "idiomas": {
     "es": {
@@ -5817,7 +5817,7 @@
         "Final:",
         "Él es [Bb]Señor que nos [A7]puede restau[Dm]rar."
       ],
-      "nota": ["Esta versión reafirma los conceptos doctrinales de la IASD como \"Creador\", la palabra \"sanador\" no esta mal si se refiere al \"pecado\" pero no a \"sanador del cuerpo\" como creen otras denominaciones."]
+      "nota": ["Esta versión reafirma los conceptos doctrinales de la IASD como \"Creador\", la palabra \"Sanador\" utilizada en otra versión, no esta mal si se refiere al \"pecado\" pero no a \"sanador del cuerpo\" solamente y nuestro restaurador no solo del cuerpo sino del ser completo en santidad.."]
     }
   }
 },
@@ -7915,16 +7915,16 @@
   }
 },
 { "id": "himno_conquistadores",
-  "titulo_original": ["Pathfinder Song"],
-  "autor": ["Henry Berg"],
-  "compositor": ["Henry Berg"],
+  "titulo_original": ["The Pathfinder Song"],
+  "autor": ["Henry T. Bergh"],
+  "compositor": ["Henry T. Bergh"],
   "year": ["1949"],
-  "tonalidad": ["Desconocido"],
+  "tonalidad": ["Mi Mayor (E)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": "Marcha",
-  "referencia_biblica": [""],
-  "tags": ["Jóvenes", "Club", "Conquistadores"],
+  "compas": ["4/4"],
+  "ritmo": ["Marcha"],
+  "referencia_biblica": ["1 Timoteo 4:12", "San Mateo 24:14", "2 Timoteo 2:3"],
+  "tags": ["Jóvenes", "Club", "Conquistadores", "Misión"],
 
   "idiomas": {
     "es": {
@@ -7932,20 +7932,22 @@
       "titulo2": [""],
       "audio_url": "",
       "traductor": ["Isolina Waldvogel"],
+      "partitura": "No",
+      "revisado": ["Si", "Rolando"],
       "letra": [
-        "Conquistadores somos,",
-        "los siervos del buen Señor,",
-        "adelante vamos ya luchando",
-        "bien con gran valor.",
+        "Con[E]quistadores somos,",
+        "los siervos del buen Se[A]ñor,",
+        "adelante vamos [B7]ya luchando",
+        "bien con gran va[E]lor.",
         "Salgamos a proclamar,",
-        "las nuevas de salvación,",
-        "Jesús va llevarnos pronto",
-        "a su real mansión."
+        "las nuevas de salva[A]ción,",
+        "Jesús va llevarnos [E]pronto",
+        "a [A]su [B7]real man[E]sión."
       ],
-      "nota": [""]
+      "nota": ["El himno oficial del \"Club de Conquistadores\" a nivel mundial, cantado en posición de firmes durante las ceremonias y reuniones del club."]
     },
     "en": {
-      "titulo": ["Pathfinder Song"],
+      "titulo": ["The Pathfinder Song"],
       "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
@@ -8894,8 +8896,8 @@
   "tonalidad": ["Re Mayor (D)"],
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": ["1 Corintios 15:57"],
+  "ritmo": ["4/4"],
+  "referencia_biblica": ["1 Corintios 15:57", "Romanos 5:8", "Tito 2:13", "Apocalipsis 22:20"],
   "tags": [
     
     "Cristiano",
@@ -8909,25 +8911,31 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
-        "[D]Gracias te doy por [A]darme espe[Bm]ranza [F#m]",
-        "[G]que muy [Em]pronto volve[E - A]rás.",
-        "[D]Gracias te doy por [A]tu sacri[Bm]ficio [F#m]",
-        "[G]que [A]me dio la salva[D - D7]ción.",
+        "1",
+        "[D]Gracias te [A]doy por [Bm]darme espe[F#m]ranza",
+        "[G]que [Em]muy pronto volve[A]rás.",
+        "[D]Gracias te [A]doy por [Bm]tu sacri[F#m]ficio",
+        "[G]que me [A]dio la salva[D]ción. [D7]",
         "",
         "Coro:",
-        "[G]Je[A]sús te ama, [F#m]Jesús",
-        "[Bm]en la [Em]cruz [A]lo demos[Am - D7]tró.",
-        "[G]Je[A]sús hoy [F#m]te in[Bm]vita:",
+        "[G]Jesús [A]te ama, Je[F#m]sús",
+        "[Bm]en la [Em]cruz [A]lo demos[D7]tró.",
+        "Je[G]sús [A]hoy te in[F#m]vi[Bm]ta:",
         "[Em]dame [A]tu cora[D]zón.",
         "",
-        "[D]Gracias te doy por [A]darte ala[Bm]banza [F#m]",
-        "[G]y [Em]feliz poder can[E - A]tar.",
-        "[D]Gracias te doy por [A]la vida e[Bm]terna [F#m]",
-        "[G]que en [A]breve he de go[D - D7]zar.",
+        "2",
+        "[D]Gracias te [A]doy por [Bm]darte ala[F#m]banza",
+        "[G]y [Em]feliz poder can[A]tar.",
+        "[D]Gracias te [A]doy por [Bm]la vida e[F#m]terna",
+        "[G]que en [A]breve he de go[D]zar. [D7]",
         "",
-        "Coro"
+        "Coro:",
+        "[G]Jesús [A]te ama, Je[F#m]sús",
+        "[Bm]en la [Em]cruz [A]lo demos[D7]tró.",
+        "Je[G]sús [A]hoy te in[F#m]vi[Bm]ta:",
+        "[Em]dame [A]tu cora[D]zón."
       ],
       "nota": [""]
     }
