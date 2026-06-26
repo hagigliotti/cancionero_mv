@@ -48,6 +48,23 @@ function initTabButton() {
   btn.addEventListener("click", toggleTablatura);
 }
 
+// FUNCIONES GLOBALES
+
+function abrirMetronomo() {
+  const modal = document.getElementById("metroModal");
+  if (modal) modal.style.display = "block";
+}
+
+function abrirMetronomoDesdeMenu() {
+  const modal = document.getElementById("metroModal");
+  if (modal) modal.style.display = "block";
+}
+
+function cerrarMetronomo() {
+  const modal = document.getElementById("metroModal");
+  if (modal) modal.style.display = "none";
+}
+
 /* ===================== MODAL's ============================================================ */
 // ===================== REVISADOS ==========================================================
 let revisadoFiltroActual = "si"; // "si" | "no"
@@ -756,3 +773,193 @@ function renderAudioLink(song, idiomaData) {
   `;
 }
 
+// ===================== METRÓNOMO / AFINADOR =====================
+
+// abrir desde menú
+function abrirMetronomoDesdeMenu() {
+  abrirMetronomoYAfinador(null);
+}
+
+// abrir desde canción (tonalidad, bpm, compás)
+function abrirAfinadorDesdeElemento(el, tipo = "general") {
+  const data = {
+    tonalidad: el.dataset.tonalidad || "",
+    bpm: el.dataset.bpm || "",
+    compas: el.dataset.compas || ""
+  };
+
+  abrirMetronomoYAfinador(data);
+}
+
+// función central
+function abrirMetronomoYAfinador(data) {
+  // 🔥 Si no tienes modal todavía, esto evita que “no pase nada”
+  let modal = document.getElementById("modalMetronomo");
+
+  if (!modal) {
+    console.warn("No existe modalMetronomo en el HTML");
+    return;
+  }
+
+  modal.style.display = "block";
+
+  // si tienes inputs dentro del modal
+  if (data) {
+    const ton = document.getElementById("inputTonalidad");
+    const bpm = document.getElementById("inputBpm");
+    const comp = document.getElementById("inputCompas");
+
+    if (ton) ton.value = data.tonalidad;
+    if (bpm) bpm.value = data.bpm;
+    if (comp) comp.value = data.compas;
+  }
+}
+
+
+
+function abrirMetronomo() {
+  const modal = document.getElementById("metroModal");
+  if (modal) modal.style.display = "block";
+}
+
+function cerrarMetronomo() {
+  const modal = document.getElementById("metroModal");
+  if (modal) modal.style.display = "none";
+}
+
+// para cerrar con la X
+window.cerrarMetronomo = cerrarMetronomo;
+window.abrirMetronomo = abrirMetronomo;
+
+
+function abrirAfinadorDesdeElemento(el, tipo = "tonalidad") {
+  const modal = document.getElementById("metroModal");
+
+  const tonalidad = el.dataset.tonalidad;
+  const bpm = el.dataset.bpm;
+  const compas = el.dataset.compas;
+
+  // abrir modal
+  modal.style.display = "block";
+
+  // ================= TONALIDAD =================
+  if (tonalidad && tipo === "tonalidad") {
+    const noteSelect = document.getElementById("referenceNote");
+
+    // separar "Re Mayor (D)" → tomar D
+    const match = tonalidad.match(/\(([^)]+)\)/);
+    const note = match ? match[1] : tonalidad;
+
+    if (noteSelect) {
+      noteSelect.value = note;
+    }
+  }
+
+  // ================= BPM =================
+  if (bpm && tipo === "bpm") {
+    const bpmInput = document.getElementById("metroBpm");
+    if (bpmInput) {
+      bpmInput.value = bpm;
+    }
+  }
+
+  // ================= COMPÁS =================
+  if (compas && tipo === "compas") {
+    setCompas(compas);
+  }
+}
+
+
+// autor
+function openPersonModal(nombre, tipo) {
+  const data = getDataActual();
+
+  const normalized = normalize(nombre);
+
+  const filtradas = data.filter(song => {
+    const campos = normalizeArrayField(song[tipo]);
+
+    return campos.some(p => normalize(p).includes(normalized));
+  });
+
+  renderListModal({
+    title: `🎭 ${nombre}`,
+    list: filtradas
+  });
+
+  document.getElementById("listModal").style.display = "block";
+}
+
+
+
+function renderMetaCompacto(song, s) {
+
+  const original = song.titulo_original || "Sin título";
+
+  const otrosTitulos =
+    s.titulo2?.length
+      ? s.titulo2.join(", ")
+      : "-";
+
+  const autores = normalizeArrayField(song.autor).join(", ") || "-";
+  const compositores = normalizeArrayField(song.compositor).join(", ") || "-";
+  const traductores = normalizeArrayField(s.traductor).join(", ") || "-";
+
+  const tonalidad = normalizeMeta(song, "tonalidad") || "Desconocido";
+  const bpm = normalizeMeta(song, "tempo_bpm") || "Desconocido";
+  const compas = normalizeMeta(song, "compas") || "Desconocido";
+  const ritmo = formatRitmo(song.ritmo) || "Desconocido";
+
+  const partitura =
+    s.partitura && s.partitura !== "No"
+      ? "Sí"
+      : "No";
+
+  const biblia =
+    normalizeReferenciaBiblica(song.referencia_biblica).length
+      ? normalizeReferenciaBiblica(song.referencia_biblica).join(", ")
+      : "-";
+
+  const tags =
+    song.tags?.length
+      ? song.tags.join(", ")
+      : "-";
+
+  const revisado =
+    formatRevisadoDisplay(s.revisado || song.revisado) || "-";
+
+  return `
+    <div class="meta-compacto">
+
+      <div>
+        Original: "${original}" |
+        Otros títulos: ${otrosTitulos} |
+        Año: ${song.year || "-"}
+      </div>
+
+      <div>
+        Autor: ${autores} |
+        Compositor: ${compositores} |
+        Traductor: ${traductores}
+      </div>
+
+      <div>
+        Tonalidad: ${tonalidad} |
+        BPM: ${bpm} |
+        Compás: ${compas} |
+        Ritmo: ${ritmo} |
+        Partitura: ${partitura}
+      </div>
+
+      <div>
+        Referencia bíblica: ${biblia}
+      </div>
+
+      <div>
+        Tags: ${tags} |
+        Revisado: ${revisado}
+      </div>
+
+    </div>
+  `;
+}

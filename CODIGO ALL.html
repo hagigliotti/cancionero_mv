@@ -1,0 +1,3484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>🎶 Cancionero MV - hag</title>
+
+  <!-- ICONOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css?v=2">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XS6DM59CNT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XS6DM59CNT');
+  </script>
+
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- <h1<h1>🎶 Cancionero MV</h1> -->
+  <h1 class="logo-title">
+    <img id="logoCancionero"
+        src="imagenes/Cancionero_blue.png"
+        alt="Cancionero MV">
+  </h1>
+
+  <!-- ===================== TOP BAR =====================  -->
+  <div class="top-bar">
+
+    <div class="top-inline">
+
+      <!-- ☰ MENU -->
+      <div class="menu-wrapper">
+        <button type="button" id="menuBtn" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div id="dropdownMenu" class="dropdown-menu">
+
+          <div class="menu-item" onclick="abrirInfoDesdeMenu()">ℹ️ Acerca de...</div>
+
+          <div class="divider"></div>
+
+          <div class="menu-section-title">
+            📚 Libros e Idiomas:
+          </div>
+
+          <div class="menu-item" style="display:flex; justify-content:space-between; align-items:center;">
+            📖 Libro:
+            <select id="menuLibro">
+              <option value="cancionero">Cancionero MV</option>
+              <option value="himnario">Himnario Adventista</option>
+              <option value="campamento">Campamento</option>
+            </select>
+          </div>
+
+          <div class="menu-item" style="display:flex; justify-content:space-between; align-items:center;">
+            🌐 Idioma:
+            <select id="menuIdioma" disabled>
+              <option value="es">🇦🇷 Español</option>
+              <option value="en">🇺🇸 English</option>
+              <option value="it">🇮🇹 Italiano</option>
+              <option value="pt">🇧🇷 Português</option>
+            </select>
+          </div>
+
+          <div class="divider"></div>
+<!--
+          <div class="menu-item" onclick="closeMenu()">⭐ Favoritos</div>
+
+          <div class="divider"></div>
+-->
+
+          <div class="menu-item font-controls" style="display:flex; justify-content:space-between; align-items:center;">
+            
+            🅰️ Tamaño:<br><br>
+            <button type="button" onclick="cambiarFuente(-1)">A-</button>
+            <button type="button" onclick="resetFuente()">A</button>
+            <button type="button" onclick="cambiarFuente(1)">A+</button>
+          </div>
+          
+          <div class="menu-item tab-item" id="tabToggle">
+            <span>🎸</span>
+            Tablatura:
+            <button id="tabBtn" type="button">Mostrar</button>
+          </div>
+
+          <div class="menu-item" onclick="abrirMetronomo()">
+            📟 Metrónomo y Afinador
+          </div>
+
+          <div class="divider"></div>
+
+<!--
+          <div class="menu-title">
+            🎼 Transposición:
+          </div>
+
+          <div class="menu-item sub-item">
+            <button onclick="transposeDown()">⬇️ -1</button>
+            <button onclick="resetTranspose()">⏺️ 0</button>
+            <button onclick="transposeUp()">⬆️ +1</button>
+          </div>
+
+          <div class="divider"></div>
+-->
+          <div class="menu-section-title">
+            🧩 Modos de visualización:
+          </div>
+
+          <div id="themeMenuItem" class="menu-item sub-item" onclick="toggleTheme(); closeMenu()">
+            🕶️ Tema oscuro
+          </div>
+          
+          <div class="menu-item sub-item" onclick="toggleProjectorMode(); closeMenu()">
+            📽️ Proyector
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="menu-section-title">
+            ♻️ Feedback:
+          </div>
+
+          <a class="menu-item sub-item" href="mailto:hagigliotti@gmail.com?subject=Feedback%20-%20Cancionero%20MV">📩 Escribime</a>
+
+          <a class="menu-item sub-item" href="https://www.paypal.com/" target="_blank" rel="noopener noreferrer">💖 Donaciones</a>
+
+        </div>
+      </div>
+
+      <!-- 🔎 BUSCADOR 👓🕶️-->
+      <input id="buscador" type="text" placeholder="🔎 Buscar titulo, letra, compositor, tiempo, ritmo, tags, etc." />
+
+      <!-- 🌐 IDIOMA (botón rápido) -->
+      <div class="lang-wrapper">
+        <button type="button" id="langBtn">🇦🇷</button>
+
+        <select id="idioma">
+          <option value="es" selected>🇦🇷</option>
+          <option value="en">English</option>
+          <option value="it">Italiano</option>
+          <option value="pt">Português</option>
+          <!-- <option value="fr">Français</option> -->
+          <!-- <option value="de">Deutsch</option> -->
+          <!-- <option value="he">עברית</option> -->
+          <option value="gn">Guaraní</option>
+          <!-- <option value="zu">isiZulu</option> -->
+        </select>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===================== CONTROLES ===================== -->
+  <div class="top-row">
+    <button type="button" id="toggleLista" onclick="toggleLista()">📁</button> 
+  </div>
+
+  <!-- ===================== ALFABETO ===================== -->
+  <div id="alfabeto"></div>
+
+  <!-- ===================== ÍNDICE ===================== -->
+  <ul id="indice" class="hidden"></ul>
+
+  <hr>
+
+  <!-- ===================== CONTENIDO ===================== -->
+  <div id="contenido"></div>
+
+</div>
+
+<!-- ===================== MODAL ========================== -->
+<!-- ===================== MODAL PERSONAS AUTORES ============== -->
+
+
+<!-- ===================== MODAL REVISADO SI ============== -->
+<div id="listModal" class="modal">
+  <div class="modal-content revisado-content">
+
+    <span class="close" onclick="cerrarListModal()">&times;</span>
+
+    <!-- HEADER NUEVO -->
+    <div class="revisado-header">
+      <h2 id="listModalTitle">Listado</h2>
+
+      <button id="toggleRevisadoBtn" onclick="toggleRevisadoEstado()">
+        ❌ Ver no revisadas
+      </button>
+    </div>
+
+    <div id="listModalLista"></div>
+
+  </div>
+</div>
+
+<!-- ===================== MODAL ACERCA DE ================ -->
+<div id="infoModal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="modalTitle">
+  <div class="modal-content">
+
+    <span class="close" onclick="cerrarInfo()" aria-label="Cerrar">&times;</span>
+
+    <h2 id="modalTitle">📖 Cancionero MV (Digital)</h2>
+
+    <hr>
+
+    <div class="modal-version-info">
+      <p><strong>Versión:</strong> 2.0</p>
+      <p><strong>Última actualización:</strong> 2026.06</p>
+    </div>
+
+    <hr>
+
+    <section class="info-importante">
+      <p><strong>Información importante sobre Copyright, Autores y Permisos:</strong></p>
+      <div style="font-size: 0.9em; text-align: justify; line-height: 1.5; color: #333;">
+        
+        <p>El <strong>“Cancionero MV”</strong> fue desarrollado por Hernando Gigliotti y editado en colaboración con Elisa Vilaltella y Rolando Gigliotti.</p>
+        
+        <p>Este material sin fines de lucro es una recopilación con fines religiosos, comunitarios y educativos. Las canciones y sus correspondientes derechos pertenecen a sus respectivos autores y editoriales.</p>
+        
+        <p>El código fuente, la estructura de la base de datos, arreglos y contenidos desarrollados específicamente para este proyecto son propiedad intelectual de sus autores y están protegidos por las leyes de derecho de autor.</p>
+
+        <div style="background-color: #fff9e6; padding: 10px; border-radius: 5px; margin: 10px 0; border: 1px solid #ffeeba;">
+          <p style="margin: 0;">🡺 Si te gustaría agregar un canto o comunicarme algún error, por favor escribime.</p>
+          <p style="margin: 0;">🡸 Si algún titular desea la modificación o retirada de su contenido, puede contactarse para proceder de inmediato.</p>
+        </div>
+      </div>
+    </section>
+    
+    <hr>
+
+    <section class="licencia-contenedor">
+      <p><strong>Licencia y Términos Legales:</strong></p>
+      <div style="font-size: 0.8em; text-align: justify; color: #666; background: #f4f4f4; padding: 12px; border-radius: 4px; border: 1px solid #ddd; max-height: 150px; overflow-y: auto; font-family: sans-serif;">
+        <p><strong>Copyright (c) 2026 Hernando Gigliotti — TODOS LOS DERECHOS RESERVADOS</strong></p>
+        <p>Este repositorio (código, tablaturas, acordes, metadatos e imágenes) está protegido por leyes internacionales de derecho de autor. Queda prohibida la copia, modificación, distribución o uso comercial sin permiso previo por escrito.</p>
+        <p>La presencia en GitHub no otorga derechos de uso a terceros. Ciertos materiales se incluyen bajo permisos exclusivos no transferibles. Las bifurcaciones (forks) o réplicas no autorizadas están expresamente prohibidas.</p>
+        <p><em>Para consultas o autorizaciones, contacte al titular de los derechos.</em></p>
+      </div>
+    </section>
+
+    <hr>
+
+    <section class="creditos">
+      <p><strong>Creator, Lead Software Engineer (Full-Stack):</strong> Hernando Gigliotti</p>
+      <p><strong>Developer Back-end / Colaboración:</strong> Elisa Vilaltella</p>
+      <p><strong>Digital Music Encoding:</strong> Rolando Gigliotti, Hernando Gigliotti</p>
+    </section>
+
+    <hr>
+
+    <section class="fuentes"></section>
+    <p style="font-size: 0.9em;"><strong>Fuente del contenido (Preservación):</strong></p>
+    <ul>
+      <li>Cancionero "V Encuentro GM".</li>
+      <li>Cancionero Hosanna 2023.</li>
+      <li>Cancionero JA Iglesia Adventista de Olivos (Argentina).</li>
+      <li>Cancioneros varios (internet).</li>
+      <li>Innario GA Compagnon 2024 (Italia).</li>
+    </ul>
+
+    <hr>
+
+    <section class="funcionalidades"></section>
+    <p style="font-size: 0.9em;"><strong>Funcionalidades:</strong></p>
+    <ul>
+      <li>Búsqueda de canciones, compositores, etc.</li>
+      <li>Modo proyector (iglesia)</li>
+      <li>Multi-idioma</li>
+      <li>Visualización de acordes</li>
+      <li>Visualización de tonalidades, bpm, etc.</li>
+      <li>Lectura bíblica</li>
+    </ul>
+
+    <hr>
+    
+    <section class="contacto"></section>
+    <p style="font-size: 0.9em;"><strong>Contacto:</strong></p>
+    <div class="social-links" style="line-height: 1.2;">
+      <a href="https://www.instagram.com/hagigliotti" target="_blank" rel="noopener noreferrer" style="display: block; margin-bottom: 4px;">
+        <i class="fa-brands fa-instagram"></i> @hagigliotti
+      </a>
+      <a href="https://www.youtube.com/@hagproducciones" target="_blank" rel="noopener noreferrer" style="display: block; margin-bottom: 4px;">
+        <i class="fa-brands fa-youtube"></i> HAG Producciones
+      </a>
+      <a href="https://github.com/hagigliotti/cancionero_mv/issues" target="_blank" rel="noopener noreferrer" style="display: block; margin-bottom: 0;">
+        <i class="fa-brands fa-github"></i> Reportar Error o Sugerencia (Requiere iniciar sesión)
+      </a>
+    </div>
+
+
+
+
+
+<!-- ===================== METRONOMO y AFINADOR ===================== -->
+<div id="metroModal" class="modal">
+  <div class="modal-content metro-content">
+
+    <span class="close" onclick="cerrarMetronomo()">&times;</span>
+
+    <h2>📟 Metrónomo y Afinador</h2>
+
+    <!-- ===================== TONO / AFINADOR ===================== -->
+    <div class="metro-info">
+      <div class="divider"></div>
+      <!-- ===== SELECTOR DE NOTA DE REFERENCIA ===== -->
+      <div class="reference-tone">
+
+        <b>Nota:</b>
+        <select id="referenceNote">
+          <option value="C">C - Do</option>
+          <option value="C#">C# - Do#</option>
+          <option value="Db">Db - Reb</option>
+          <option value="D">D - Re</option>
+          <option value="D#">D# - Re#</option>
+          <option value="Eb">Eb - Mib</option>
+          <option value="E">E - Mi</option>
+          <option value="F">F - Fa</option>
+          <option value="F#">F# - Fa#</option>
+          <option value="Gb">Gb - Solb</option>
+          <option value="G">G - Sol</option>
+          <option value="G#">G# - Sol#</option>
+          <option value="Ab">Ab - Lab</option>
+          <option value="A">A - La</option>
+          <option value="A#">A# - La#</option>
+          <option value="Bb">Bb - Sib</option>
+          <option value="B">B - Si</option>
+        </select>
+
+        <select id="referenceOctave">
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4" selected>4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+
+        <button onclick="playReferenceTone()">🔊 Play</button>
+
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="tuner-row">
+        <b>Afinación:</b>
+        <button id="micBtn" onclick="toggleMic()">🎤</button>
+        <!--<button id="toneBtn" onclick="playReferenceTone()">🔊</button>-->
+      </div>
+
+      <!-- ===== AFINADOR ===== -->
+      <div class="tuner-targets">
+        <button onclick="selectTargetNote('C')">C</button>
+        <button onclick="selectTargetNote('D')">D</button>
+        <button onclick="selectTargetNote('E')">E</button>
+        <button onclick="selectTargetNote('F')">F</button>
+        <button onclick="selectTargetNote('G')">G</button>
+        <button onclick="selectTargetNote('A')">A</button>
+        <button onclick="selectTargetNote('B')">B</button>
+      </div>
+
+      <div class="tuner-display">
+        <div id="tunerNote">-</div>
+        <div class="tuner-meter">
+          <div id="tunerNeedle"></div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- ===== COMPÁS ===== -->
+      <div class="compas-selector">
+
+        <b>Compás:</b>
+        <span id="metroCompas">4/4</span>
+
+        <button onclick="setCompas('2/4')">2/4</button>
+        <button onclick="setCompas('3/4')">3/4</button>
+        <button onclick="setCompas('4/4')">4/4</button>
+
+      </div>
+
+      <!-- ===== SUBDIVISIÓN ===== -->
+      <div class="metro-subdivision">
+
+        <b>Subdivisión:</b>
+        <button onclick="setSubdivision(1)" title="Negra (1 golpe por tiempo)">♩</button>
+        <button onclick="setSubdivision(2)" title="Corcheas (2 subdivisiones por tiempo)">♪</button>
+        <!--<button onclick="setSubdivision(3)" title="Tresillos (3 subdivisiones por tiempo)">𝅘𝅥𝅮</button>-->
+        <button onclick="setSubdivision(4)" title="Semicorcheas (4 subdivisiones por tiempo)">♬</button>
+        <!--<button onclick="setSubdivision(8)" title="Fusas 1/32 (8 subdivisiones por tiempo)">𝅘𝅥𝅯</button>-->
+
+      </div>
+      <!-- <div class="divider"></div> -->
+    </div>
+
+    <!-- ===================== METRÓNOMO ===================== -->
+    <div class="metro-bpm-box">
+
+      <button onclick="changeBpm(-1)">−</button>
+
+      <input
+        type="number"
+        id="metroBpm"
+        value="90"
+        min="20"
+        max="300"
+      />
+
+      <button onclick="changeBpm(1)">+</button>
+
+    </div>
+
+    <div class="metro-label">BPM</div>
+
+    <div id="metroBeat" class="metro-beat"></div>
+
+    <!-- ===================== CONTROLES ===================== -->
+    <!--<div class="divider"></div> -->
+    <div class="metro-controls">
+
+      <button id="metroPlayBtn" onclick="toggleMetronomo()">
+        ▶️ Play
+      </button>
+
+      <button id="metroSoundBtn" onclick="toggleMetroSound()">
+        🔊 Sonido
+      </button>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- JS -->
+<script src="modals.js"></script>
+<script src="lenguage.js"></script>
+<script src="utils.js"></script>
+<script src="theme.js"></script>
+<script src="afinometro.js"></script>
+<script src="app.js"></script>
+<script src="songbook.js"></script>
+
+<footer class="app-footer">
+  © 2026 @hagigliotti — Cancionero MV
+</footer>
+
+</body>
+</html>
+
+// ===============================================================================================    =====================
+// ===================== DATA ===============================================================
+const DATA_URLS = {
+  cancionero: "data/canciones.json",
+  himnario: "data/himnario_ar.json",
+  campamento: "data/campamento.json"
+};
+
+let libroActual = "cancionero";
+
+let canciones = [];
+let himnos = [];
+let campamento = [];
+
+let listaVisible = false;
+let letraActiva = null;
+
+let modalMode = { type: "", value: "" };
+
+let tablaturaVisible = true;
+
+// ===================== DATA ACTUAL =====================
+function getDataActual() {
+
+  // HIMNARIO → solo himnos
+  if (libroActual === "himnario") {
+    return himnos;
+  }
+
+  if (libroActual === "campamento") {
+    return campamento;
+  }
+
+  // CANCIONERO → // canciones + himnos marcados como corito
+  const coritos = himnos.filter(h =>
+    normalize(h.corito) === "SI" ||
+    h.corito === true ||
+    h.corito === "Si"
+  );
+
+  return [...canciones, ...coritos];
+}
+
+function initTabButton() {
+  const btn = document.getElementById("tabBtn");
+  if (!btn) return;
+
+  btn.addEventListener("click", toggleTablatura);
+}
+
+/* ===================== MODAL's ============================================================ */
+// ===================== REVISADOS ==========================================================
+let revisadoFiltroActual = "si"; // "si" | "no"
+
+function renderListModal({ title, list }) {
+  const cont = document.getElementById("listModalLista");
+  const titleEl = document.getElementById("listModalTitle");
+
+  titleEl.innerText = title;
+  cont.innerHTML = "";
+
+  if (!list.length) {
+    cont.innerHTML = "<p>No hay resultados.</p>";
+    return;
+  }
+
+  // 🔥 eliminar duplicados por ID
+  const unique = new Map();
+  list.forEach(song => unique.set(song.id, song));
+  const cleanList = [...unique.values()];
+
+  cleanList
+    .sort((a, b) =>
+      (a.idiomas?.[idiomaActual]?.titulo || "").localeCompare(
+        b.idiomas?.[idiomaActual]?.titulo || "",
+        undefined,
+        { sensitivity: "base" }
+      )
+    )
+    .forEach(song => {
+
+      const titulo = getSongTitle(song);
+
+      // 🔥 filtro real
+      if (!titulo || titulo === "Sin título") return;
+
+      const div = document.createElement("div");
+      div.className = "revisado-item";
+
+      const num = getNumeroHimno(song);
+
+      div.innerHTML = `🎵 ${num ? num + " - " : ""}${titulo}`;
+
+      div.onclick = () => {
+        document.getElementById("listModal").style.display = "none";
+        openSong(song.id);
+      };
+
+      cont.appendChild(div);
+    });
+}
+
+// SOLO ESTADO CLICKABLE
+function formatRevisadoEstado(value) {
+  const [estado] = normalizeRevisado(value);
+  return estado === "si" ? "Si" : "No";
+}
+
+// PERSONAS (SIN CLICK EN EL MISMO SPAN)
+function renderRevisadoPersonas(value) {
+  const [, personas] = normalizeRevisado(value);
+
+  if (!personas.length) return "";
+
+  return ` - ${personas.join(", ")}`;
+}
+
+// ===================== INIT ===============================================================   =====================
+async function init() {
+  const res1 = await fetch(DATA_URLS.cancionero);
+  const res2 = await fetch(DATA_URLS.himnario);
+  const res3 = await fetch(DATA_URLS.campamento);
+
+  const saved = localStorage.getItem("tablatura");
+  tablaturaVisible = saved !== "off";
+
+  initTabButton();
+  applyTablaturaState();
+
+  canciones = (await res1.json()).map(normalizeSong);
+  himnos = (await res2.json()).map(normalizeSong);
+  campamento = (await res3.json()).map(normalizeSong);
+
+  const savedLibro = localStorage.getItem("libro");
+  const savedIdioma = localStorage.getItem("idioma");
+  libroActual = localStorage.getItem("libro") || "cancionero";
+  idiomaActual = localStorage.getItem("idioma") || "es";
+  setIdioma(idiomaActual);
+  updateLangFlag();
+
+  //libroActual = savedLibro || "cancionero";
+  //idiomaActual = savedIdioma || "es";
+
+  document.getElementById("menuLibro").value = libroActual;
+  document.getElementById("idioma").value = idiomaActual;
+  document.getElementById("menuIdioma").value = idiomaActual;
+
+  renderAlphabet();
+  loadTheme();
+  updateThemeMenuText();
+  updateLogo();
+
+  if (localStorage.getItem("projector") === "on") {
+    document.body.classList.add("projector");
+  }
+
+  handleMenuVisibility();
+
+  document.getElementById("indice").classList.add("hidden");
+
+  document.getElementById("buscador").addEventListener("input", e => search(e.target.value));
+
+  document.getElementById("idioma").addEventListener("change", e => {
+      if (libroActual === "himnario") return;
+
+      setIdioma(e.target.value);
+      document.getElementById("menuIdioma").value = e.target.value;
+
+      renderAlphabet();
+      renderList(letraActiva);
+    });
+
+  document.getElementById("menuLibro").addEventListener("change", e => {
+      libroActual = e.target.value;
+      localStorage.setItem("libro", libroActual);
+
+      closeMenu();
+
+      letraActiva = null;
+      listaVisible = false;
+
+      document.getElementById("contenido").innerHTML = "";
+      document.getElementById("indice").innerHTML = "";
+
+      const idiomaSelect = document.getElementById("idioma");
+
+      if (libroActual === "himnario") {
+        idiomaSelect.disabled = false;
+      } else {
+        idiomaSelect.disabled = false;
+      }
+
+      // IMPORTANTE: refrescar UI
+      renderAlphabet();
+      updateAppTitle();
+      renderList(null);
+
+    initTabButton();
+    applyTablaturaState();
+  });
+}
+
+init();
+
+
+
+// ===================== ALFABETO ===========================================================
+// ===================== BOTON LIMPIAR ======================
+function clearAll() {
+  // limpiar buscador
+  const buscador = document.getElementById("buscador");
+  if (buscador) buscador.value = "";
+
+  // limpiar contenido
+  document.getElementById("contenido").innerHTML = "";
+
+  // cerrar lista
+  closeList();
+  listaVisible = false;
+
+  // reset letra activa
+  letraActiva = null;
+
+  // refrescar alfabeto
+  renderAlphabet();
+
+  // limpiar índice visual
+  document.getElementById("indice").innerHTML = "";
+
+  // cerrar dropdown menu si está abierto
+  document.getElementById("dropdownMenu")?.classList.remove("active");
+
+  // volver arriba
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+// ===================== CAMBIAR EL NOMBRE DE LA PAGINA Y TITULO ======================
+function updateAppTitle() {
+  let titleText = "";
+
+  switch (libroActual) {
+    case "himnario":
+      titleText = "🎵 Himnario Adventista";
+      break;
+
+    case "campamento":
+      titleText = "🏕️ Campamento";
+      break;
+
+    default:
+      titleText = "🎶 Cancionero MV";
+      break;
+  }
+
+  // SOLO título navegador
+  document.title = titleText;
+}
+
+// ===================== DETECCION AUTOMATICA DE LIBRO (CANCIONERO O HIMANRIO) ======================
+
+function detectLibroBySong(song) {
+  if (himnos.some(h => h.id === song.id)) return "himnario";
+  if (campamento.some(c => c.id === song.id)) return "campamento";
+  return "cancionero";
+}
+
+// ===================== MOBILE =====================
+function isMobileOrTablet() {
+  return /Mobi|Android|iPhone|iPad|iPod|Tablet/i.test(navigator.userAgent);
+}
+
+function handleMenuVisibility() {
+  if (isMobileOrTablet()) {
+    document.getElementById("indice").classList.add("hidden");
+  }
+}
+
+// =================================================================================================================
+// ===== MENU =================================================================
+function toggleMenu() {
+  document.getElementById("dropdownMenu").classList.toggle("active");
+}
+
+// cerrar al hacer click fuera
+window.addEventListener("click", function (e) {
+  const menu = document.getElementById("dropdownMenu");
+  const btn = document.getElementById("menuBtn");
+  const modal = document.getElementById("infoModal");
+  const modalContent = modal?.querySelector(".modal-content");
+
+  // ===== MENU =====
+  if (menu && btn && !menu.contains(e.target) && !btn.contains(e.target)) {
+    closeMenu();
+  }
+
+  // ===== MODAL INFO =====
+  if (modal && modal.style.display === "block") {
+    // cerrar SOLO si clic fuera del contenido del modal
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+});
+
+// abrir info desde menú (y cerrar menú)
+function abrirInfoDesdeMenu() {
+  document.getElementById("dropdownMenu").classList.remove("active");
+  info();
+}
+
+function closeMenu() {
+  document.getElementById("dropdownMenu")?.classList.remove("active");
+}
+
+// ===== BOTON ACERCA DE.... =================================================================
+function info() {
+  document.getElementById("infoModal").style.display = "block";
+}
+
+function cerrarInfo() {
+  document.getElementById("infoModal").style.display = "none";
+}
+
+// Cerrar haciendo click fuera del cuadro
+window.onclick = function(event) {
+  const modal = document.getElementById("infoModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
+
+
+
+
+
+
+
+// TABLATURA - Mostrar / ocultar
+function toggleTablatura() {
+  tablaturaVisible = !tablaturaVisible;
+
+  localStorage.setItem("tablatura", tablaturaVisible ? "on" : "off");
+
+  applyTablaturaState();
+}
+
+function applyTablaturaState() {
+  const chords = document.querySelectorAll(".chord-wrap");
+  const btn = document.getElementById("tabBtn");
+
+  chords.forEach(el => {
+    el.style.display = tablaturaVisible ? "inline-block" : "none";
+  });
+
+  if (btn) {
+    btn.innerText = tablaturaVisible ? "Ocultar" : "Mostrar";
+
+    btn.classList.remove("on", "off");
+    btn.classList.add(tablaturaVisible ? "on" : "off");
+  }
+}
+
+// ===== CAMBIO DE TAMANO DE FUENTE (A+ A A-) ====================================================================
+// 0 = tamaño default   // -5 = mínimo  // +5 = máximo
+let fontSizeLevel = 0;
+
+function getMaxFontLevel() {
+  if (window.innerWidth < 480) return 4;     // móvil
+  if (window.innerWidth < 768) return 6;     // tablet
+  if (window.innerWidth < 1024) return 8;    // laptop
+  return 10;                                 // desktop/wide
+}
+
+// tamaños BASE de la letra
+const BASE_LYRICS_SIZE = 26;
+const BASE_CHORD_SIZE = 26;
+
+// cuánto aumenta/disminuye por click
+const STEP_SIZE = 2;
+
+function applyFontSize() {
+  const lyricsSize = BASE_LYRICS_SIZE + (fontSizeLevel * STEP_SIZE);
+  const chordSize = BASE_CHORD_SIZE + (fontSizeLevel * STEP_SIZE);
+
+  // letra canción
+  document.querySelectorAll(".lyrics").forEach(el => {
+    el.style.fontSize = `${lyricsSize}px`;
+  });
+
+  // tablatura/acordes
+  document.querySelectorAll(".chord-wrap").forEach(el => {
+    el.style.fontSize = `${chordSize}px`;
+  });
+
+  document.querySelectorAll(".chord").forEach(el => {
+    el.style.fontWeight = "bold";
+  });
+}
+
+function cambiarFuente(step) {
+  const max = getMaxFontLevel();
+
+  fontSizeLevel += step;
+
+  if (fontSizeLevel > max) fontSizeLevel = max;
+  if (fontSizeLevel < -10) fontSizeLevel = -10;
+
+  applyFontSize();
+}
+
+function resetFuente() {
+  fontSizeLevel = 0;
+  applyFontSize();
+}
+
+
+// ===== SEARCH - BUSQUEDA BLANDA =================================================================
+function search(q) {
+  const query = normalize(q.trim());
+  const list = document.getElementById("indice");
+
+  if (!query.length) {
+    list.innerHTML = "";
+    listaVisible = false;
+    return;
+  }
+
+  if (!listaVisible) {
+    openList();
+    listaVisible = true;
+  }
+
+  const data = [...canciones, ...himnos, ...campamento];
+
+  const results = data.filter(song => {
+
+    const numeroHimno =
+      song.idiomas?.[idiomaActual]?.numero_himno || "";
+
+    const searchText =
+      buildSearchText(song) + " " + numeroHimno;
+
+    return normalize(searchText).includes(query);
+
+  });
+
+  const sorted = sortByTitle(results)
+    .filter(c => c.idiomas?.[idiomaActual]?.titulo?.trim());
+
+  list.innerHTML = sorted.map(c => {
+    const titulo = normalizeText(c.idiomas?.[idiomaActual]?.titulo);
+    const num = getNumeroHimno(c);
+    const flags = getAvailableFlags(c);
+
+    const baseTitle = num ? `${num} - ${titulo}` : titulo;
+
+    return `
+      <li onclick="selectSong('${c.id}')">
+        <div style="display:flex; justify-content:space-between; gap:10px;">
+          <span>${baseTitle}</span>
+          <span style="opacity:0.7; font-size:14px;">${flags}</span>
+        </div>
+      </li>
+    `;
+  }).join("");
+}
+
+function selectSong(id) {
+  closeList();        // cierra lista inmediatamente
+  listaVisible = false;
+
+  openSong(id);       // luego abre canción
+}
+
+// ===== BOTON IDIOMA INTELIGENTE =================================================================
+const langBtn = document.getElementById("langBtn");
+const idiomaSelect = document.getElementById("idioma");
+
+let pressTimer;
+
+
+updateLangFlag();
+
+// CLICK → cambiar idioma rápido
+langBtn.addEventListener("click", () => {
+  const options = Array.from(idiomaSelect.options);
+
+  const currentIndex = options.findIndex(o => o.value === idiomaActual);
+
+  const nextIndex = (currentIndex + 1) % options.length;
+  const newLang = options[nextIndex].value;
+
+  setIdioma(newLang);
+});
+
+
+
+// HOLD → abrir selector real
+langBtn.addEventListener("mousedown", () => {
+  pressTimer = setTimeout(() => {
+    idiomaSelect.style.pointerEvents = "auto";
+    idiomaSelect.style.opacity = "1";
+    idiomaSelect.focus();
+    idiomaSelect.click();
+  }, 500);
+});
+
+langBtn.addEventListener("mouseup", () => {
+  clearTimeout(pressTimer);
+});
+
+langBtn.addEventListener("mouseleave", () => {
+  clearTimeout(pressTimer);
+});
+
+// cuando cambia idioma
+idiomaSelect.addEventListener("change", () => {
+  updateLangFlag();
+
+  idiomaActual = idiomaSelect.value;
+  localStorage.setItem("idioma", idiomaActual);
+
+  // ESTA ES LA LÍNEA CLAVE
+  document.getElementById("menuIdioma").value = idiomaSelect.value;
+
+  renderAlphabet();
+  renderList(letraActiva);
+
+  idiomaSelect.style.opacity = "0";
+  idiomaSelect.style.pointerEvents = "none";
+});
+
+
+
+// ==================================================================================================================================
+// ===================== OPEN / CLOSE LISTA DE CANCIONES =====================
+function openList() {
+  const list = document.getElementById("indice");
+
+  list.classList.remove("hidden");
+  list.classList.add("fade-in");
+
+  document.getElementById("toggleLista").innerText = "📂";
+
+  listaVisible = true;
+}
+
+function closeList() {
+  const list = document.getElementById("indice");
+
+  list.classList.add("hidden");
+  list.classList.remove("fade-in");
+
+  document.getElementById("toggleLista").innerText = "📁";
+
+  listaVisible = false;
+}
+
+// ===================== LISTA =====================
+function getSortedData() {
+  return [...getDataActual()].sort((a, b) => {
+    const A = getSongSortKey(a);
+    const B = getSongSortKey(b);
+
+    if (A.type !== B.type) {
+      return A.type === "number" ? -1 : 1;
+    }
+
+    return A.num - B.num;
+  });
+}
+
+function getSongSortKey(song) {
+  const title = song.idiomas?.[idiomaActual]?.titulo || "";
+
+  const t = normalize(title);
+
+  // 10.000 / 10000
+  const big = t.match(/^(\d{1,3}(?:\.\d{3})+|\d+)/);
+  if (big) {
+    return {
+      type: "number",
+      num: parseInt(big[1].replace(/\./g, ""), 10)
+    };
+  }
+
+  // Salmo 1 / etc
+  const salmo = t.match(/(\d+)/);
+  if (salmo) {
+    return {
+      type: "number",
+      num: parseInt(salmo[1], 10)
+    };
+  }
+
+  return { type: "text", num: 999999 };
+}
+
+
+
+function extractNumber(text) {
+  const match = text.match(/\d+/g);
+  if (!match) return null;
+
+  // toma el primer número encontrado
+  return parseInt(match[0], 10);
+}
+
+function extractOrderValue(text) {
+  if (!text) return { type: "text", num: Infinity, raw: "" };
+
+  const t = normalize(text).trim();
+
+  // 🔥 CASO 1: número tipo 10.000 o 10000
+  const bigNumber = t.match(/^(\d{1,3}(?:\.\d{3})+|\d+)/);
+  if (bigNumber) {
+    const num = parseInt(bigNumber[1].replace(/\./g, ""), 10);
+    return { type: "number", num, raw: t };
+  }
+
+  // 🔥 CASO 2: Salmo 1 / Himno 23 etc (solo si empieza con palabra + número)
+  const wordNumber = t.match(/^[a-záéíóúñ]+\s+(\d+)/i);
+  if (wordNumber) {
+    return { type: "number", num: parseInt(wordNumber[1], 10), raw: t };
+  }
+
+  return { type: "text", num: Infinity, raw: t };
+}
+
+// ===================== eliminar cancion de LISTA si no hay cancion =====================
+function tieneIdioma(c) {
+  return c.idiomas?.[idiomaActual]?.titulo;
+}
+
+// ===================== LETRA =====================
+function renderLyrics(text) {
+  if (!text) return "";
+
+  const lines = Array.isArray(text) ? text : text.split("\n");
+
+  return lines.map(line => {
+
+    if (!line || line === "br") {
+      return `<div class="song-break"></div>`;
+    }
+
+    // 🔥 Detectar títulos especiales
+    const clean = line.trim();
+
+    const esIntro = /^intro:?$/i.test(clean);
+    const esNumero = /^\d+$/.test(clean);
+    const esCoro = /^coro:?$/i.test(clean);
+    const esPuente = /^puente:?$/i.test(clean);
+    const esModula = /^modula:?$/i.test(clean);
+    const esFinal = /^final:?$/i.test(clean);
+    const esInterludio = /^interludio:?$/i.test(clean);
+    const esRepite = /^repite:?$/i.test(clean);
+    const esRepitex2 = /^repite x2:?$/i.test(clean);
+    const esRepitex3 = /^repite x3:?$/i.test(clean);
+    const esInstruccion = /^instrucción x3:?$/i.test(clean);
+
+    const esMasc = /^voz masculina:?$/i.test(clean);
+    const esFem = /^voz femenina:?$/i.test(clean);
+
+    const enChorus = /^chorus:?$/i.test(clean);
+    const enBridge = /^bridge:?$/i.test(clean);
+    const enInterlude = /^interlude:?$/i.test(clean);
+
+    const ptRefrão = /^refrão:?$/i.test(clean);
+
+    const frChœur = /^chœur:?$/i.test(clean);
+
+    const itPonte = /^ponte:?$/i.test(clean);
+
+
+    if (esIntro || esNumero || esCoro || esModula || esFinal || esPuente || esInterludio || esRepite || esRepitex2 || esRepitex3 || 
+          esMasc || esFem || esFem || esInstruccion ||
+        enChorus || enBridge || enInterlude ||
+        ptRefrão || 
+        frChœur || 
+        itPonte) {
+      return `<div class="titulo-seccion">${escapeHtml(line)}</div>`;
+    }
+
+    return renderChordLine(line);
+
+  }).join("");
+}
+
+function renderChordLine(line) {
+  if (!line) return "";
+
+  const regex = /\[([^\]]+)\]/g;
+
+  let output = "";
+  let lastIndex = 0;
+  let match;
+
+  while ((match = regex.exec(line)) !== null) {
+    const chord = match[1];
+    const index = match.index;
+
+    // texto antes del acorde
+    const text = line.slice(lastIndex, index);
+
+    if (text) {
+      output += `<span class="lyrics">${escapeHtml(text)}</span>`;
+    }
+
+    // acorde asociado a la siguiente palabra
+    output += `<span class="chord-wrap"><span class="chord">${chord}</span></span>`;
+
+    lastIndex = regex.lastIndex;
+  }
+
+
+
+  // resto final
+  const rest = line.slice(lastIndex).replace(regex, "");
+  if (rest) {
+    output += `<span class="lyrics">${escapeHtml(rest)}</span>`;
+  }
+
+  return `<div class="song-line">${output}</div>`;
+}
+
+
+
+
+// ===================== AUDIO =====================
+function renderAudioLink(song, idiomaData) {
+  const url = idiomaData?.audio_url || song.audio || "";
+  if (!url) return "";
+
+  let icon = "🎵";
+  let label = "Escuchar";
+
+  if (url.includes("spotify")) {
+    icon = "🟢";
+    label = "Spotify";
+  } else if (url.includes("youtube") || url.includes("youtu.be")) {
+    icon = "🔴";
+    label = "YouTube";
+  } else if (url.includes("apple")) {
+    icon = "🍎";
+    label = "Apple Music";
+  }
+
+  return `
+    <div class="audio">
+      <b>Audio:</b>
+      <a href="${url}" target="_blank" class="${label.toLowerCase().replace(/\s/g, "")}">
+        ${icon} ${label}
+      </a>
+    </div>
+  `;
+}
+
+// ===================== METRÓNOMO / AFINADOR =====================
+
+// abrir desde menú
+function abrirMetronomoDesdeMenu() {
+  abrirMetronomoYAfinador(null);
+}
+
+// abrir desde canción (tonalidad, bpm, compás)
+function abrirAfinadorDesdeElemento(el, tipo = "general") {
+  const data = {
+    tonalidad: el.dataset.tonalidad || "",
+    bpm: el.dataset.bpm || "",
+    compas: el.dataset.compas || ""
+  };
+
+  abrirMetronomoYAfinador(data);
+}
+
+// función central
+function abrirMetronomoYAfinador(data) {
+  // 🔥 Si no tienes modal todavía, esto evita que “no pase nada”
+  let modal = document.getElementById("modalMetronomo");
+
+  if (!modal) {
+    console.warn("No existe modalMetronomo en el HTML");
+    return;
+  }
+
+  modal.style.display = "block";
+
+  // si tienes inputs dentro del modal
+  if (data) {
+    const ton = document.getElementById("inputTonalidad");
+    const bpm = document.getElementById("inputBpm");
+    const comp = document.getElementById("inputCompas");
+
+    if (ton) ton.value = data.tonalidad;
+    if (bpm) bpm.value = data.bpm;
+    if (comp) comp.value = data.compas;
+  }
+}
+
+
+
+function abrirMetronomo() {
+  const modal = document.getElementById("metroModal");
+  if (modal) modal.style.display = "block";
+}
+
+function cerrarMetronomo() {
+  const modal = document.getElementById("metroModal");
+  if (modal) modal.style.display = "none";
+}
+
+// para cerrar con la X
+window.cerrarMetronomo = cerrarMetronomo;
+window.abrirMetronomo = abrirMetronomo;
+
+// ===============================================================================================
+// ===================== APP.js ====================================================================================
+// ===================== SONGS MODULE =====================
+// ===============================================================================================
+
+// Funciones Helpers
+function hasHymnNumbersInCurrentLanguage() {
+  return himnos.some(song => {
+    const num = parseInt(
+      song.idiomas?.[idiomaActual]?.numero_himno,
+      10
+    );
+
+    return !isNaN(num) && num > 0;
+  });
+}
+
+function naturalSort(a, b) {
+  const ax = a.match(/(\D+)|(\d+)/g);
+  const bx = b.match(/(\D+)|(\d+)/g);
+
+  const len = Math.min(ax.length, bx.length);
+
+  for (let i = 0; i < len; i++) {
+    const aPart = ax[i];
+    const bPart = bx[i];
+
+    const aNum = Number(aPart);
+    const bNum = Number(bPart);
+
+    if (!isNaN(aNum) && !isNaN(bNum)) {
+      if (aNum !== bNum) return aNum - bNum;
+    } else {
+      if (aPart !== bPart) {
+        return aPart.localeCompare(bPart, undefined, { sensitivity: "base" });
+      }
+    }
+  }
+
+  return ax.length - bx.length;
+}
+
+function cleanTitleForIndex(title) {
+  return normalize(title)
+    .trim()
+    .replace(/^[¿¡!?"'“”‘’()\[\]\s]+/, "");
+}
+
+function getIndexLetter(title) {
+  const clean = cleanTitleForIndex(title);
+  const first = clean.charAt(0).toUpperCase();
+
+  return first.match(/[A-ZÁÉÍÓÚÑ0-9]/i) ? first : "#";
+}
+
+// ===================== OPEN SONG =====================
+function openSong(id) {
+  const song = [...canciones, ...himnos, ...campamento].find(c => c.id === id || c.slug === id);
+
+  if (!song) {
+    document.getElementById("contenido").innerHTML =
+      "<p>⚠️ Canción no disponible en este libro o idioma.</p>";
+    return;
+  }
+
+  const detectedLibro = detectLibroBySong(song);
+
+  if (libroActual === "himnario" && detectedLibro === "himnario") {
+    libroActual = "himnario";
+    renderAlphabet();
+    updateAppTitle();
+  }
+
+  let s = song?.idiomas?.[idiomaActual];
+
+  if (!s) {
+    const langs = Object.keys(song.idiomas || {});
+    if (langs.length > 0) {
+      idiomaActual = langs[0];
+      s = song.idiomas[idiomaActual];
+    }
+  }
+
+  if (!s) {
+    document.getElementById("contenido").innerHTML =
+      "<p>⚠️ Canción no disponible en este idioma.</p>";
+    return;
+  }
+
+  closeList();
+  listaVisible = false;
+  letraActiva = null;
+
+  const num = getNumeroHimno(song);
+
+  const tituloBase = s.titulo || song.titulo_original || "Sin título";
+  const tituloFinal = num ? `${num} - ${tituloBase}` : tituloBase;
+
+  // ===================== META ENRIQUECIDO =====================
+  const meta = `
+    <div class="meta">
+
+      <div>
+        <b>Original:</b>
+        <i>"${normalizeSimple(song.titulo_original)}"</i>
+
+        ${
+          song.idiomas?.[idiomaActual]?.titulo2?.length
+            ? ` | <b>Otros títulos:</b> ${song.idiomas[idiomaActual].titulo2.join(", ")}`
+            : ""
+        }
+      </div>
+
+      <div>
+        ${renderPersonLinks("Autor", song.autor)}
+        ${renderPersonLinks("Coautor", song.coautor)}
+        ${renderPersonLinks("Compositor", song.compositor)}
+        ${renderPersonLinks("Traductor", s.traductor)}
+        <b>Año:</b> ${normalizeSimple(song.year)}
+        
+      </div>
+
+      <div>
+        <b>Referencia bíblica:</b>
+        ${
+          normalizeReferenciaBiblica(song.referencia_biblica).length
+            ? normalizeReferenciaBiblica(song.referencia_biblica)
+                .map(ref => {
+                  const link = `https://www.biblegateway.com/passage/?search=${encodeURIComponent(ref)}&version=RVR1960`;
+                  return `<a href="${link}" target="_blank">${ref}</a>`;
+                })
+                .join(", ")
+            : "No"
+        }
+      </div>
+
+      <div class="song-metro" onclick="abrirMetronomoDesdeMenu()" style="cursor:pointer;">
+      
+        ${normalizeMeta(song, "tonalidad") && normalize(normalizeMeta(song, "tonalidad")) !== "DESCONOCIDO"
+          ? `
+            <b>Tonalidad:</b>
+            <span class="meta-link tonalidad-link"
+              data-tonalidad="${normalizeMeta(song, "tonalidad")}"
+              data-bpm="${normalizeMeta(song, "tempo_bpm") || ""}"
+              data-compas="${normalizeMeta(song, "compas") || ""}"
+              onclick="abrirAfinadorDesdeElemento(this)">
+              ${normalizeMeta(song, "tonalidad")}
+            </span> |
+          `
+          : `
+            <b>Tonalidad:</b>
+            <span class="meta-normal">Desconocido</span> |
+          `
+        }
+
+        ${normalizeMeta(song, "tempo_bpm") && normalize(normalizeMeta(song, "tempo_bpm")) !== "DESCONOCIDO"
+          ? `
+            <b>BPM:</b>
+            <span class="meta-link bpm-link"
+              data-tonalidad="${normalizeMeta(song, "tonalidad") || ""}"
+              data-bpm="${normalizeMeta(song, "tempo_bpm")}"
+              data-compas="${normalizeMeta(song, "compas") || ""}"
+              onclick="abrirAfinadorDesdeElemento(this, 'bpm')">
+              ${normalizeMeta(song, "tempo_bpm")}
+            </span> |
+          `
+          : `
+          <b>BPM:</b>
+          <span class="meta-unknown">Desconocido</span> |
+        `
+        }
+
+        ${normalizeMeta(song, "compas") && normalize(normalizeMeta(song, "compas")) !== "DESCONOCIDO"
+          ? `
+            <b>Compás:</b>
+            <span class="meta-link compas-link"
+              data-tonalidad="${normalizeMeta(song, "tonalidad") || ""}"
+              data-bpm="${normalizeMeta(song, "tempo_bpm") || ""}"
+              data-compas="${normalizeMeta(song, "compas")}"
+              onclick="abrirAfinadorDesdeElemento(this, 'compas')">
+              ${normalizeMeta(song, "compas")}
+            </span> |
+          `
+          : `
+          <b>Compás:</b>
+          <span class="meta-unknown">Desconocido</span> |
+        `
+        }
+
+        <b>Ritmo:</b> ${formatRitmo(song.ritmo) || "Desconocido"} |
+
+        <b>Partitura:</b> ${
+          song.idiomas?.[idiomaActual]?.partitura &&
+          song.idiomas[idiomaActual].partitura !== "No"
+            ? `<a href="${song.idiomas[idiomaActual].partitura}" target="_blank">Click aquí</a>`
+            : "No"
+        }
+      </div>
+
+      <div>
+        <b>Tags:</b>
+        ${
+          song.tags?.length
+            ? [...song.tags]
+                .map(tag => tag?.toString().trim())
+                .map(tag => tag.charAt(0).toUpperCase() + tag.slice(1).toLowerCase())
+                .sort((a, b) =>
+                  a.localeCompare(b, "es", { sensitivity: "base" })
+                )
+                .map(tag =>
+                  `<span class="tag-link" onclick="openTagModal('${tag}')">${tag}</span>`
+                )
+                .join(", ")
+            : "Desconocido"
+        } |
+
+        <b>Revisado:</b>
+          <span
+            class="song-meta-revisado"
+            data-revisado='${JSON.stringify(song.idiomas?.[idiomaActual]?.revisado)}'
+            onclick="openRevisadoList(JSON.parse(this.dataset.revisado))"
+          >
+            ${formatRevisadoEstado(song.idiomas?.[idiomaActual]?.revisado)}
+          </span>
+
+          <span class="revisado-personas">
+            ${renderRevisadoPersonas(song.idiomas?.[idiomaActual]?.revisado)}
+          </span>
+
+      </div>
+      ${renderAudioLink(song, s)}
+      <div class="flags">
+        <b>Idiomas:</b> ${renderLanguageFlags(song)}
+      </div>
+
+    </div>
+  `;
+
+  const nota = song.idiomas?.[idiomaActual]?.nota;
+
+  // Normalizar y limpiar notas
+  const notaLimpia = Array.isArray(nota)
+    ? nota.map(n => (n || "").trim()).filter(n => n !== "")
+    : (typeof nota === "string" ? nota.trim() : "");
+
+  // Validación real (evita [""] o vacíos)
+  const notaValida = Array.isArray(notaLimpia)
+    ? notaLimpia.length > 0
+    : notaLimpia !== "";
+
+  // Render completo
+  document.getElementById("contenido").innerHTML = `
+  <h2>${tituloFinal}</h2>
+
+  ${meta}
+
+
+
+  <div class="lyrics">
+    ${renderLyrics(s.letra)}
+  </div>
+
+  ${
+    notaValida
+      ? `
+        <div class="song-note">
+          ${
+            Array.isArray(notaLimpia)
+              ? notaLimpia.map(n => `<p>${n}</p>`).join("")
+              : notaLimpia.split("\n").map(n => `<p>${n}</p>`).join("")
+          }
+        </div>
+      `
+      : ""
+  }
+`;
+
+  applyTablaturaState();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+
+// ===================== ALPHABET =====================
+// -------- VERSIÓN 1 --------
+function renderAlphabet() {
+  const container = document.getElementById("alfabeto");
+
+  const allSongs = getDataActual();
+
+  let letrasDisponibles = new Set();
+
+  allSongs.forEach(c => {
+    const titulo = c.idiomas?.[idiomaActual]?.titulo;
+    if (!titulo) return;
+
+    const clean = titulo.replace(/^[¿¡!?\s"'“”‘’]+/, "");
+    const first = normalize(clean.charAt(0));
+
+    if (!first) return;
+
+    if (/^\d/.test(first)) letrasDisponibles.add("#");
+    else letrasDisponibles.add(first);
+  });
+
+  let letras = Array.from(letrasDisponibles).sort();
+
+  if (!letras.includes("#")) letras.unshift("#");
+  letras.unshift("*");
+
+  container.innerHTML = `
+    <div class="alpha-row">
+      ${letras.map(l => `
+        <button class="alpha" onclick="selectLetter('${l}')">
+          ${l === "*" ? "🔤" : l === "#" ? "#️⃣" : l}
+        </button>
+      `).join("")}
+
+      <button class="alpha clear-btn" onclick="clearAll()">🧹</button>
+    </div>
+  `;
+}
+
+
+// ===================== LETTER SELECT =====================
+function selectLetter(letter) {
+
+  // 🔥 SI HAGO CLICK EN LA MISMA LETRA → CERRAR LISTA
+  if (letraActiva === letter && listaVisible) {
+    closeList();
+    letraActiva = null;
+    return;
+  }
+
+  // 🔥 NUEVA LETRA → abrir lista
+  letraActiva = letter;
+  listaVisible = true;
+
+  openList();
+  renderList(letter);
+}
+
+
+// ===================== LIST =====================
+function renderList(letter) {
+  const list = document.getElementById("indice");
+
+  let data = getSortedData();
+  let expanded = [];
+
+  // 🔥 EXPANSIÓN CORRECTA (uno por título)
+  data.forEach(song => {
+    const titles = getAllSongTitles(song);
+
+    titles.forEach(t => {
+      expanded.push({
+        song,
+        displayTitle: buildDisplayTitle(song, t),
+        rawTitle: t // 👈 importante para filtrar correctamente
+      });
+    });
+  });
+
+  // ===================== FILTRO =====================
+  if (letter && letter !== "*") {
+
+    expanded = expanded.filter(item => {
+
+      const clean = cleanTitleForIndex(item.rawTitle);
+
+      if (letter === "#") {
+        return /^\d/.test(clean);
+      }
+
+      return getIndexLetter(clean) === letter;
+    });
+
+  }
+
+  // ===================== ORDEN =====================
+  expanded.sort((a, b) =>
+    naturalSort(
+      cleanTitleForIndex(a.displayTitle),
+      cleanTitleForIndex(b.displayTitle)
+    )
+  );
+
+  // ===================== RENDER =====================
+  list.innerHTML = expanded.map(item => `
+    <li onclick="openSong('${item.song.id}')">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <span>${item.displayTitle}</span>
+        <span style="opacity:0.7; font-size:14px;">
+          ${renderLanguageFlags(item.song)}
+        </span>
+      </div>
+    </li>
+  `).join("");
+}
+
+function buildDisplayTitle(song, title) {
+
+  const langData = song?.idiomas?.[idiomaActual];
+
+  if (libroActual === "himnario") {
+
+    const num = parseInt(langData?.numero_himno, 10);
+
+    if (!isNaN(num) && num > 0) {
+      return `${num} - ${title}`;
+    }
+  }
+
+  return title;
+}
+
+// Obtener numeros existentes
+function getHymnNumbersForCurrentLanguage() {
+  return himnos
+    .map(song => parseInt(song.idiomas?.[idiomaActual]?.numero_himno, 10))
+    .filter(n => !isNaN(n) && n > 0);
+}
+
+// generar rangos automáticamente
+function buildHymnRanges() {
+
+  const nums = getHymnNumbersForCurrentLanguage();
+
+  if (!nums.length) return []; // ❌ no hay rangos
+
+  const min = Math.min(...nums);
+  const max = Math.max(...nums);
+
+  const ranges = [];
+
+  for (let i = Math.floor(min / 50) * 50; i <= max; i += 50) {
+    ranges.push([i + 1, i + 50]);
+  }
+
+  return ranges;
+}
+
+//Función nueva: detectar si hay numeración en el idioma
+function getHymnNumbersByLanguage(lang) {
+  return himnos
+    .map(h => parseInt(h.idiomas?.[lang]?.numero_himno, 10))
+    .filter(n => !isNaN(n))
+    .sort((a, b) => a - b);
+}
+
+// Generar rangos dinámicos
+function buildHymnRanges(lang) {
+  const numbers = getHymnNumbersByLanguage(lang);
+
+  if (!numbers.length) return [];
+
+  const min = numbers[0];
+  const max = numbers[numbers.length - 1];
+
+  const step = 50;
+  const ranges = [];
+
+  for (let start = Math.floor(min / step) * step + 1; start <= max; start += step) {
+    const end = start + step - 1;
+
+    const hasData = numbers.some(n => n >= start && n <= end);
+
+    if (hasData) {
+      ranges.push([start, end]);
+    }
+  }
+
+  return ranges;
+}
+
+// ===================== expandir títulos correctamente =====================
+function expandSongTitles(song) {
+  const lang = song.idiomas?.[idiomaActual] || {};
+
+  const main = lang.titulo || [];
+  const aliases = lang.titulo2 || [];
+
+  const all = [
+    ...normalizeField(main),
+    ...normalizeField(aliases)
+  ];
+
+  return all
+    .map(t => (t || "").trim())
+    .filter(Boolean)
+    .map(title => ({
+      song,
+      title
+    }));
+}
+
+// ===================== SORT =====================
+function getSortedData() {
+  const data = [...getDataActual()];
+
+  // HIMNARIO: orden por número real
+  if (libroActual === "himnario") {
+    return data.sort((a, b) => {
+      const A = parseInt(a.idiomas?.[idiomaActual]?.numero_himno || 0, 10);
+      const B = parseInt(b.idiomas?.[idiomaActual]?.numero_himno || 0, 10);
+      return A - B;
+    });
+  }
+
+  // OTROS: orden alfabético normal
+  return data.sort((a, b) => {
+    const A = getSongSortKey(a).num;
+    const B = getSongSortKey(b).num;
+    return A - B;
+  });
+}
+
+function getSongSortKey(song) {
+  const title = song.idiomas?.[idiomaActual]?.titulo || "";
+  const match = title.match(/^(\d+)/);
+
+  if (match) {
+    return { type: "number", num: parseInt(match[1], 10) };
+  }
+
+  return { type: "text", num: 999999 };
+}
+
+
+// ===============================================================================================
+// ===================== ALPHABET =====================
+// -------- VERSIÓN 2 (HIMNARIO + RANGOS) --------
+function renderAlphabet() {
+  const container = document.getElementById("alfabeto");
+
+  const allSongs = getDataActual();
+
+  let letrasDisponibles = new Set();
+
+  allSongs.forEach(c => {
+    const titulo = c.idiomas?.[idiomaActual]?.titulo;
+    if (!titulo) return;
+
+    const clean = titulo.replace(/^[¿¡!?\s"'“”‘’]+/, "");
+    const first = normalize(clean.charAt(0));
+
+    if (!first) return;
+
+    if (/^\d/.test(first)) letrasDisponibles.add("#");
+    else letrasDisponibles.add(first);
+  });
+
+  let letras = Array.from(letrasDisponibles).sort();
+
+  if (!letras.includes("#")) letras.unshift("#");
+  letras.unshift("*");
+
+  // ===================== 🔥 AQUÍ LA CLAVE =====================
+  let rangosHtml = "";
+
+  if (libroActual === "himnario") {
+
+    const rangos = buildHymnRanges(idiomaActual);
+
+    if (rangos.length > 0) {
+      rangosHtml = `
+        <div class="alpha-row hymn-ranges">
+          ${rangos.map(r => `
+            <button class="alpha"
+              onclick="selectRange(${r[0]}, ${r[1]})">
+              ${r[0]}-${r[1]}
+            </button>
+          `).join("")}
+        </div>
+      `;
+    }
+  }
+
+  container.innerHTML = `
+    <div class="alpha-row">
+
+      ${letras.map(l => `
+        <button class="alpha" onclick="selectLetter('${l}')">
+          ${l === "*" ? "🔤" : l === "#" ? "#️⃣" : l}
+        </button>
+      `).join("")}
+
+      ${rangosHtml}
+
+      <button class="alpha clear-btn" onclick="clearAll()">🧹</button>
+
+    </div>
+  `;
+}
+
+
+// ===================== RANGE SELECT =====================
+function selectRange(start, end) {
+  openList();
+  renderHymnRange(start, end);
+
+  letraActiva = null;
+  listaVisible = true;
+
+  document.getElementById("contenido").innerHTML = "";
+}
+
+
+// ===================== HYMN RANGE RENDER =====================
+function renderHymnRange(start, end) {
+
+  const list = document.getElementById("indice");
+
+  const himnosRango = himnos
+    .map(song => {
+      const num = parseInt(
+        song.idiomas?.[idiomaActual]?.numero_himno,
+        10
+      );
+
+      return { song, num };
+    })
+
+    // 🔥 FILTRO POR RANGO REAL
+    .filter(item => item.num >= start && item.num <= end)
+
+    // 🔥 ORDEN REAL POR NÚMERO
+    .sort((a, b) => a.num - b.num);
+
+  list.innerHTML = himnosRango.map(item => {
+
+    const s = item.song.idiomas?.[idiomaActual] || {};
+    const num = parseInt(s.numero_himno, 10);
+    const titulo = s.titulo || item.song.titulo_original || "Sin título";
+
+    const label = !isNaN(num)
+      ? `${num} - ${titulo}`
+      : `${titulo}`;
+
+    return `
+      <li onclick="openSong('${item.song.id}')">
+        <div style="display:flex; justify-content:space-between;">
+          <span>${label}</span>
+          <span class="lang-flags-list">
+            ${renderLanguageFlags(item.song)}
+          </span>
+        </div>
+      </li>
+    `;
+  }).join("");
+}
+
+// ===================== ALPHABET DATA =====================
+function getAlphabetData() {
+  if (libroActual === "himnario") return himnos;
+  if (libroActual === "campamento") return campamento;
+
+  return canciones; // sin coritos para evitar contaminación
+}
+
+
+
+// ===================== STATE GLOBAL =====================
+let revisadoModoActivo = false;
+let modalContext = "normal";
+let revisadoEstadoActual = "si";
+let tagModalValue = "";
+
+// ===================== HELPERS =====================
+
+const tipoMap = {
+  autor: "autor",
+  coautor: "coautor",
+  compositor: "compositor",
+  traductor: "traductor"
+};
+
+
+
+// ===================== NORMALIZACIÓN =====================
+
+function normalize(text) {
+  return (text || "").toString()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toUpperCase()
+    .replace(/[¿?¡!.,;:()"'`´¨[\]{}<>\/\\|@#$%^&*=+~…_-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+
+
+function normalizeArrayField(value) {
+  if (!value) return [];
+  if (Array.isArray(value)) return value;
+  return [value];
+}
+
+// ===================== BUSQUEDA / SEARCH =====================
+function smartSort(a, b) {
+
+  const titleA = normalize(a.displayTitle || "");
+  const titleB = normalize(b.displayTitle || "");
+
+  const numA = extractNumber(titleA);
+  const numB = extractNumber(titleB);
+
+  // 1. si ambos tienen número → ordenar por número
+  if (numA !== null && numB !== null) {
+    return numA - numB;
+  }
+
+  // 2. si uno tiene número → va primero el que NO tiene
+  if (numA !== null) return -1;
+  if (numB !== null) return 1;
+
+  // 3. fallback alfabético
+  return titleA.localeCompare(titleB, undefined, { sensitivity: "base" });
+}
+
+
+
+
+function buildSearchText(song) {
+  const textos = [];
+
+  // ===== TÍTULOS =====
+  const idiomas = song.idiomas || {};
+
+  Object.values(idiomas).forEach(lang => {
+    if (lang?.titulo) textos.push(lang.titulo);
+    if (lang?.titulo2) textos.push(lang.titulo2);
+    if (lang?.letra) textos.push(lang.letra);
+  });
+
+  // ===== TÍTULO ORIGINAL =====
+  textos.push(song.titulo_original);
+
+  // ===== CAMPOS PERSONALES =====
+  textos.push(song.autor);
+  textos.push(song.coautor);
+  textos.push(song.compositor);
+  textos.push(song.traductor);
+
+  return normalize(textos.flat().join(" "));
+}
+
+// ===== TAGS =====
+if (song.tags) {
+  textos.push(
+    song.tags.map(t => normalize(t)).join(" ")
+  );
+}
+
+// ===================== SEGURIDAD =====================
+
+function escapeHtml(str = "") {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+// ===================== REVISADO LABEL (🔥 FIX PEDIDO) =====================
+
+function formatRevisadoLabel(value) {
+  const [estado, personas] = normalizeRevisado(value);
+
+  const label = estado.toLowerCase() === "si" ? "Si" : "No";
+
+  const extra = personas.length
+    ? ` - ${personas.join(", ")}`
+    : "";
+
+  return `Revisado: <b>${label}${extra}</b>`;
+}
+
+// --- Normalizador nuevo
+function normalizeRevisado(value) {
+  try {
+    if (!value) return ["no", []];
+
+    if (Array.isArray(value)) {
+      const estado = (value[0] || "no").toLowerCase();
+      const personas = value.slice(1).filter(Boolean);
+      return [estado, personas];
+    }
+
+    return [value.toLowerCase(), []];
+
+  } catch (e) {
+    console.error("normalizeRevisado error:", value, e);
+    return ["no", []];
+  }
+}
+
+
+
+function getRevisadoEstado(value) {
+  if (!value) return "no";
+  if (Array.isArray(value)) return (value[0] || "no").toLowerCase();
+  return value.toLowerCase();
+}
+
+function formatRevisadoDisplay(value) {
+  const [estado, personas] = normalizeRevisado(value);
+
+  const label = estado === "si" ? "Si" : "No";
+
+  if (personas.length) {
+    return `${label} - ${personas.join(", ")}`;
+  }
+
+  return label;
+}
+
+
+// ===================== SORTING =====================
+
+function extractLeadingNumber(text) {
+  if (!text) return null;
+  const match = text.match(/^\d+/);
+  return match ? parseInt(match[0], 10) : null;
+}
+
+function cleanTitleForSort(value) {
+  return (normalizeText(value) || "")
+    .replace(/^[^A-Z0-9ÁÉÍÓÚÜÑ]+/i, "")
+    .trim();
+}
+
+function sortByTitle(data) {
+  return [...data].sort((a, b) => {
+
+    const aTitulo2 = a.idiomas?.[idiomaActual]?.titulo2 || "";
+    const bTitulo2 = b.idiomas?.[idiomaActual]?.titulo2 || "";
+
+    const aTitulo1 = a.idiomas?.[idiomaActual]?.titulo || "";
+    const bTitulo1 = b.idiomas?.[idiomaActual]?.titulo || "";
+
+    // 🔥 clave de orden: titulo2 si existe, si no titulo1
+    const aKey = normalize(aTitulo2 || aTitulo1);
+    const bKey = normalize(bTitulo2 || bTitulo1);
+
+    return aKey.localeCompare(bKey, undefined, {
+      sensitivity: "base",
+      numeric: true
+    });
+  });
+}
+
+function getNumericSongs(data) {
+  return data.filter(song => {
+    const title = song.idiomas?.[idiomaActual]?.titulo || "";
+    return /^\d/.test(title.trim());
+  });
+}
+
+function sortNumericSongs(data) {
+  return [...data].sort((a, b) => {
+
+    const aTitle = a.idiomas?.[idiomaActual]?.titulo || "";
+    const bTitle = b.idiomas?.[idiomaActual]?.titulo || "";
+
+    const aNum = parseInt((aTitle.match(/^\d+/) || [0])[0], 10);
+    const bNum = parseInt((bTitle.match(/^\d+/) || [0])[0], 10);
+
+    return aNum - bNum;
+  });
+}
+
+function renderABCList() {
+  const data = getDataActual();
+  renderListModal({
+    title: "🔤 Orden alfabético",
+    list: sortByTitle(data)
+  });
+}
+
+function renderHashList() {
+  const data = getDataActual();
+  const numeric = getNumericSongs(data);
+
+  renderListModal({
+    title: "🔢 Orden numérico",
+    list: sortNumericSongs(numeric)
+  });
+}
+
+// ===================== MUSICA =====================
+
+function normalizeRitmo(ritmo) {
+  if (!ritmo) return [];
+  return Array.isArray(ritmo)
+    ? ritmo
+    : ritmo.split("/").map(r => r.trim()).filter(Boolean);
+}
+
+function normalizeText(text = "") {
+  return text?.toString().trim() || "";
+}
+
+function formatRitmo(ritmo) {
+  const arr = normalizeRitmo(ritmo);
+
+  if (!arr.length) return "";
+
+  return arr
+    .map(normalizeText)
+    .sort((a, b) =>
+      a.localeCompare(b, "es", { sensitivity: "base" })
+    )
+    .join(", ");
+}
+
+function extractRootNote(note) {
+
+  if (!note) return "A";
+
+  // buscar contenido entre paréntesis
+  const parenMatch = note.match(/\(([^)]+)\)/);
+
+  let cleanNote = parenMatch
+    ? parenMatch[1]
+    : note;
+
+  // extraer nota base
+  const match = cleanNote.match(/^([A-G][b#]?)/);
+
+  return match ? match[1] : "A";
+}
+
+// ===================== CAMPOS ESPECÍFICOS =====================
+
+function normalizeReferenciaBiblica(ref) {
+  if (!ref) return [];
+  return Array.isArray(ref)
+    ? ref
+    : ref.split(",").map(r => r.trim()).filter(Boolean);
+}
+
+function normalizeTituloOriginal(value) {
+  if (!value) return "";
+  if (Array.isArray(value)) return value.filter(Boolean).join(", ");
+  return value;
+}
+
+
+
+
+
+// ===================== PERSONAS =====================
+
+function renderPersonLinks(label, value) {
+
+  const arr = normalizeField(value)
+    .map(v => (v || "").trim())
+    .filter(Boolean);
+
+  if (!arr.length) return "";
+
+  const tipo = tipoMap[label.toLowerCase()] || "autor";
+
+  const html = arr.map(person => {
+
+    if (person === "-" || normalize(person) === "DESCONOCIDO") {
+      return person;
+    }
+
+    const safePerson = encodeURIComponent(person);
+
+    return `<span class="person-link"
+      onclick="showPersonSongs(decodeURIComponent('${safePerson}'), '${tipo}')">
+      ${person}
+    </span>`;
+  }).join(", ");
+
+  return `<b>${label}:</b> ${html} | `;
+}
+
+
+
+// ===================== Estrofas y Coros =====================
+
+
+
+// ===================== AKA =====================
+// a.k.a. (Del inglés "Also Known As", muy usado en música) $\rightarrow$ Significa "También conocida como".
+function formatTitulo2(text) {
+  if (!text) return "";
+
+  return text.replace(
+    /\(aka\)/gi,
+    `<span class="aka" title="Also Known As">(aka)</span>`
+  );
+}
+
+// ===================== MODAL HELPERS =====================
+function normalizeMeta(song, field) {
+  return normalizeSimple(song?.[field]);
+}
+
+// ===================== MODAL REVISADO =====================
+function cerrarListModal() {
+  document.getElementById("listModal").style.display = "none";
+}
+
+
+
+function toggleRevisadoEstado() {
+  revisadoEstadoActual = (revisadoEstadoActual === "si") ? "no" : "si";
+  renderRevisadoModal();
+}
+
+function renderRevisadoModal() {
+  const data = getDataActual();
+
+  const filtered = data.filter(song => {
+    const [estado] = normalizeRevisado(song.idiomas?.[idiomaActual]?.revisado);
+
+    if (revisadoEstadoActual === "si") {
+      return estado === "si";
+    } else {
+      return estado !== "si";
+    }
+  });
+
+  const btn = document.getElementById("toggleRevisadoBtn");
+
+  if (btn) btn.style.display = "inline-block";
+
+  if (btn) {
+    btn.innerText =
+      revisadoEstadoActual === "si"
+        ? "❌ Ver no revisadas"
+        : "✔️ Ver revisadas";
+  }
+
+  const title =
+    revisadoEstadoActual === "si"
+      ? "✔️ Canciones revisadas"
+      : "❌ Canciones no revisadas";
+
+  document.getElementById("listModalTitle").innerText = title;
+
+  renderListModal({
+    title,
+    list: filtered
+  });
+
+  document.getElementById("listModal").style.display = "block";
+}
+
+function openRevisadoList(valor) {
+  const [estado] = normalizeRevisado(valor);
+  revisadoEstadoActual = (estado === "si") ? "si" : "no";
+  renderRevisadoModal();
+}
+
+// ===================== MODAL PERSONAS =====================
+let personModalTipo = "autor";
+let personModalValor = "";
+
+const personIcons = {
+  autor: "👤",
+  coautor: "👥",
+  compositor: "🎼",
+  traductor: "🌐"
+};
+
+function renderPersonModal() {
+  const data = getDataActual();
+
+  const filtered = data.filter(song => {
+    const values = normalizeField(song[personModalTipo])
+      .map(v => normalize(v));
+
+    const traductor = normalizeField(song.idiomas?.[idiomaActual]?.traductor)
+      .map(v => normalize(v));
+
+    if (personModalTipo === "traductor") {
+      return traductor.includes(normalize(personModalValor));
+    }
+
+    return values.includes(normalize(personModalValor));
+  });
+
+  const icon = personIcons[personModalTipo] || "👤";
+
+const title = `${icon} ${personModalTipo.charAt(0).toUpperCase()}${personModalTipo.slice(1)}: ${personModalValor}`;
+
+  const btn = document.getElementById("toggleRevisadoBtn");
+    if (btn) btn.style.display = "none";
+  document.getElementById("listModalTitle").innerText = title;
+
+  renderListModal({
+    title,
+    list: filtered
+  });
+
+  document.getElementById("listModal").style.display = "block";
+}
+
+function showPersonSongs(valor, tipo) {
+  personModalTipo = tipo;
+  personModalValor = valor;
+  renderPersonModal();
+}
+
+// ===================== MODAL TAGS =====================
+function openTagModal(tag) {
+  tagModalValue = tag;
+  renderTagModal();
+}
+
+function renderTagModal() {
+  const data = getDataActual();
+
+  const filtered = data.filter(song =>
+    song.tags?.some(t => normalize(t) === normalize(tagModalValue))
+  );
+
+  const title = `Tag: ${tagModalValue}`;
+
+  document.getElementById("listModalTitle").innerText = title;
+
+  // ocultar botón de revisados
+  const btn = document.getElementById("toggleRevisadoBtn");
+  if (btn) btn.style.display = "none";
+
+  renderListModal({
+    title,
+    list: filtered
+  });
+
+  document.getElementById("listModal").style.display = "block";
+}
+
+function cerrarListModal() {
+  document.getElementById("listModal").style.display = "none";
+  tagModalValue = "";
+}
+
+
+// ===============================================================================================    =====================
+// ===================== METRONOMO ===============================================================
+let metroInterval = null;
+let metroAudioCtx = null;
+
+let metroRunning = false;
+let metroSoundEnabled = true;
+
+let currentBeat = 0;
+let currentCompas = "4/4";
+
+let swing = 0;       // 0 = recto, 100 = swing extremo
+let subStep = 0;
+
+//let compasActual = "4/4";
+let subdivision = 1;
+
+
+// ===================== AFINADOR ================================================================
+let micStream = null;
+let audioCtx = null;
+let analyser = null;
+let micEnabled = false;
+let rafId = null;
+
+let targetNote = null;
+let tunerLocked = false;
+
+ 
+
+
+// ===============================================================================================    =====================
+// ===================== METRONOMO ===============================================================   
+
+function setCompas(compas) {
+  currentCompas = compas;
+
+  const span = document.getElementById("metroCompas");
+  if (span) span.innerText = currentCompas;
+
+  // reset para evitar desfase
+  currentBeat = 0;
+  subStep = 0;
+}
+
+
+// funcion de acento
+function isStrongBeat(currentBeat, compas) {
+  const beats = parseInt(compas.split("/")[0]) || 4;
+
+  // siempre fuerte en el 1
+  if (currentBeat === 0) return true;
+
+  // opcional: acentos secundarios
+  if (beats === 6 && currentBeat === 3) return true; // 6/8 feeling
+  if (beats === 3 && currentBeat === 2) return false;
+
+  return false;
+}
+
+const subdivisions = {
+  1: 1,     // negra
+  2: 2,     // corchea
+  3: 3,     // tresillo
+  4: 4,     // semicorchea
+  8: 8      // 1/32
+};
+
+function abrirMetronomoDesdeMenu() {
+  closeMenu();        // 👈 cierra el dropdown primero
+  abrirMetronomo();   // 👈 luego abre el modal
+}
+
+function abrirMetronomo(song = null) {
+
+  let bpm = 90;
+  let tonalidad = "A";
+  let compas = "4/4";
+
+  if (song) {
+    bpm = parseInt(normalizeMeta(song, "tempo_bpm")) || 90;
+    tonalidad = normalizeMeta(song, "tonalidad") || "A";
+    compas = normalizeMeta(song, "compas") || "4/4";
+
+    const root = extractRootNote(tonalidad);
+
+    document.getElementById("referenceNote").value = root;
+  }
+
+  currentCompas = compas;
+
+  document.getElementById("metroBpm").value = bpm;
+  setCompas(compas || "4/4");
+  document.getElementById("metroModal").style.display = "block";
+}
+
+function cerrarMetronomo() {
+  document.getElementById("metroModal").style.display = "none";
+
+  stopMetronomo();
+}
+
+function toggleMetronomo() {
+
+  if (metroRunning) {
+    stopMetronomo();
+  } else {
+    startMetronomo();
+  }
+}
+
+async function startMetronomo() {
+  const bpm = parseInt(document.getElementById("metroBpm").value) || 90;
+
+  const baseInterval = 60000 / bpm;
+
+  metroRunning = true;
+  subStep = 0;
+  currentBeat = 0;
+
+  document.getElementById("metroPlayBtn").innerText = "⏹ Stop";
+
+  metroAudioCtx =
+    metroAudioCtx || new (window.AudioContext || window.webkitAudioContext)();
+
+  if (metroAudioCtx.state === "suspended") {
+    await metroAudioCtx.resume();
+  }
+
+  clearInterval(metroInterval);
+
+  metroInterval = setInterval(() => {
+    playBeat(baseInterval);
+  }, baseInterval / (subdivisions[subdivision] || 1));
+}
+
+function stopMetronomo() {
+
+  metroRunning = false;
+
+  clearInterval(metroInterval);
+
+  document.getElementById("metroPlayBtn").innerText =
+    "▶️ Play";
+}
+
+function playBeat(baseInterval) {
+
+  animateBeat();
+
+  const beats = parseInt(currentCompas.split("/")[0]) || 4;
+  const strongBeat = isStrongBeat(currentBeat, currentCompas);
+
+  if (metroSoundEnabled) {
+    const osc = metroAudioCtx.createOscillator();
+    const gain = metroAudioCtx.createGain();
+
+    osc.connect(gain);
+    gain.connect(metroAudioCtx.destination);
+
+    osc.frequency.value = strongBeat ? 1400 : 900;
+    gain.gain.value = strongBeat ? 1 : 0.5;
+
+    osc.start();
+    osc.stop(metroAudioCtx.currentTime + 0.05);
+  }
+
+  subStep++;
+
+  if (subStep >= subdivision) {
+    subStep = 0;
+    advanceBeat(beats);
+  }
+}
+
+function advanceBeat(beats = 4) {
+  currentBeat++;
+
+  if (currentBeat >= beats) {
+    currentBeat = 0;
+  }
+}
+
+function animateBeat() {
+
+  const beat = document.getElementById("metroBeat");
+
+  beat.classList.add("active");
+
+  setTimeout(() => {
+    beat.classList.remove("active");
+  }, 80);
+}
+
+function toggleMetroSound() {
+
+  metroSoundEnabled = !metroSoundEnabled;
+
+  document.getElementById("metroSoundBtn").innerText =
+    metroSoundEnabled
+      ? "🔊 Sonido"
+      : "🔇 Mudo";
+}
+
+function changeBpm(delta) {
+
+  const input = document.getElementById("metroBpm");
+
+  let value = parseInt(input.value) || 90;
+
+  value += delta;
+
+  if (value < 20) value = 20;
+  if (value > 300) value = 300;
+
+  input.value = value;
+
+  // refrescar si está corriendo
+  if (metroRunning) {
+    stopMetronomo();
+    startMetronomo();
+  }
+}
+
+/* Compases */
+function changeCompas(value) {
+  currentCompas = value;
+
+  // reset del ciclo de beats para evitar desfase
+  currentBeat = 0;
+
+  document.getElementById("metroCompas").innerText = value;
+
+  // si está corriendo, reiniciar timing
+  if (metroRunning) {
+    stopMetronomo();
+    startMetronomo();
+  }
+}
+
+function setSubdivision(value) {
+  subdivision = parseInt(value) || 1;
+  subStep = 0;
+
+  if (metroRunning) {
+    stopMetronomo();
+    startMetronomo();
+  }
+}
+
+function setSwing(value) {
+  swing = parseInt(value);
+}
+
+
+
+
+
+// Mas real
+function getBeatAccent(currentBeat, compas) {
+  const beats = parseInt(compas.split("/")[0]) || 4;
+
+  if (currentBeat === 0) return "strong";
+  if (beats === 6 && currentBeat === 3) return "medium";
+
+  return "weak";
+}
+
+
+
+
+
+
+
+// ===============================================================================================    =====================
+// ===================== AFINADOR ================================================================
+const NOTE_STRINGS = [
+  "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"
+];
+
+// ===== TABLA DE FRECUENCIAS ===========================
+const targetFreqs = {
+  C: 261.63,
+  D: 293.66,
+  E: 329.63,
+  F: 349.23,
+  G: 392.00,
+  A: 440.00,
+  B: 493.88
+};
+
+async function toggleMic() {
+  if (micEnabled) {
+    stopMic();
+    return;
+  }
+
+  try {
+    audioCtx =
+      audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+
+    // MUY IMPORTANTE
+    if (audioCtx.state === "suspended") {
+      await audioCtx.resume();
+    }
+
+    micStream = await navigator.mediaDevices.getUserMedia({
+      audio: {
+        echoCancellation: false,
+        noiseSuppression: false,
+        autoGainControl: false
+      }
+    });
+
+    const source =
+      audioCtx.createMediaStreamSource(micStream);
+
+    analyser = audioCtx.createAnalyser();
+
+    analyser.fftSize = 2048;
+
+    source.connect(analyser);
+
+    micEnabled = true;
+
+    document.getElementById("micBtn").innerText =
+      "🎤❌";
+
+    detectPitch();
+
+  } catch (err) {
+
+    console.error(err);
+
+    alert("Micrófono no disponible o bloqueado");
+  }
+}
+
+function stopMic() {
+  micEnabled = false;
+
+  document.getElementById("micBtn").innerText = "🎤";
+
+  if (micStream) {
+    micStream.getTracks().forEach(t => t.stop());
+  }
+
+  if (rafId) {
+    cancelAnimationFrame(rafId);
+  }
+
+  cancelAnimationFrame(rafId);
+}
+
+function detectPitch() {
+  const buffer = new Float32Array(analyser.fftSize);
+
+  analyser.getFloatTimeDomainData(buffer);
+
+  const freq = autoCorrelate(buffer, audioCtx.sampleRate);
+
+  if (
+    freq !== -1 &&
+    isFinite(freq) &&
+    !isNaN(freq)
+  ) {
+    updateTunerUI(freq);
+  }
+
+  rafId = requestAnimationFrame(detectPitch);
+}
+
+function autoCorrelate(buffer, sampleRate) {
+  let SIZE = buffer.length;
+  let rms = 0;
+
+  for (let i = 0; i < SIZE; i++) {
+    rms += buffer[i] * buffer[i];
+  }
+
+  rms = Math.sqrt(rms / SIZE);
+  if (rms < 0.01) return -1;
+
+  let r1 = 0, r2 = SIZE - 1;
+  const threshold = 0.2;
+
+  for (let i = 0; i < SIZE / 2; i++) {
+    if (Math.abs(buffer[i]) < threshold) { r1 = i; break; }
+  }
+
+  for (let i = 1; i < SIZE / 2; i++) {
+    if (Math.abs(buffer[SIZE - i]) < threshold) { r2 = SIZE - i; break; }
+  }
+
+  buffer = buffer.slice(r1, r2);
+  SIZE = buffer.length;
+
+  const c = new Array(SIZE).fill(0);
+
+  for (let lag = 0; lag < SIZE; lag++) {
+    for (let i = 0; i < SIZE - lag; i++) {
+      c[lag] += buffer[i] * buffer[i + lag];
+    }
+  }
+
+  let d = 0;
+  while (c[d] > c[d + 1]) d++;
+
+  let maxval = -1, maxpos = -1;
+
+  for (let i = d; i < SIZE; i++) {
+    if (c[i] > maxval) {
+      maxval = c[i];
+      maxpos = i;
+    }
+  }
+
+  let T0 = maxpos;
+
+  return sampleRate / T0;
+}
+
+function freqToNote(freq) {
+  const A4 = 440;
+
+  const noteNum = 12 * (Math.log2(freq / A4)) + 69;
+
+  const rounded = Math.round(noteNum);
+
+  const cents = (noteNum - rounded) * 100;
+
+  const note = NOTE_STRINGS[(rounded % 12 + 12) % 12];
+
+  return { note, cents };
+}
+
+function updateTunerUI(freq) {
+
+  const { note, cents } = freqToNote(freq);
+
+  document.getElementById("tunerNote").innerText = note;
+
+  const needle =
+    document.getElementById("tunerNeedle");
+
+  // ==========================================
+  // MODO NORMAL (sin nota objetivo)
+  // ==========================================
+  if (!targetNote) {
+
+    const clamped =
+      Math.max(-50, Math.min(50, cents));
+
+    needle.style.left =
+      `${50 + clamped}%`;
+
+    needle.style.background =
+      Math.abs(cents) < 5
+        ? "green"
+        : "red";
+
+    return;
+  }
+
+  // ==========================================
+  // MODO NOTA OBJETIVO
+  // ==========================================
+
+  if (note !== targetNote) {
+
+    needle.style.background = "red";
+
+    // mover izquierda o derecha
+    const targetFreq = targetFreqs[targetNote];
+
+    const diff = freq - targetFreq;
+
+    const pos =
+      Math.max(
+        -50,
+        Math.min(
+          50,
+          diff / targetFreq * 500
+        )
+      );
+
+    needle.style.left =
+      `${50 + pos}%`;
+
+    tunerLocked = false;
+
+    return;
+  }
+
+  // misma nota → usar cents
+  const clamped =
+    Math.max(-50, Math.min(50, cents));
+
+  needle.style.left =
+    `${50 + clamped}%`;
+
+  if (Math.abs(cents) <= 3) {
+
+    needle.style.background = "lime";
+
+    if (!tunerLocked) {
+
+      playSuccessTone();
+
+      tunerLocked = true;
+    }
+
+  } else {
+
+    needle.style.background = "red";
+
+    tunerLocked = false;
+  }
+}
+
+async function playReferenceTone() {
+
+  audioCtx =
+    audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+
+  // IMPORTANTE:
+  // algunos navegadores arrancan suspended
+  if (audioCtx.state === "suspended") {
+    await audioCtx.resume();
+  }
+
+  const note =
+    document.getElementById("referenceNote").value;
+
+  const octave =
+    parseInt(
+      document.getElementById("referenceOctave").value
+    );
+
+  const freq = noteToFreq(note, octave);
+
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+
+  osc.type = "sine";
+
+  osc.frequency.value = freq;
+
+  gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+
+  osc.connect(gain);
+  gain.connect(audioCtx.destination);
+
+  osc.start();
+
+  osc.stop(audioCtx.currentTime + 1.5);
+}
+
+function noteToFreq(note, octave = 4) {
+
+  const SEMITONES = {
+    C: -9,
+    "C#": -8,
+    Db: -8,
+
+    D: -7,
+    "D#": -6,
+    Eb: -6,
+
+    E: -5,
+
+    F: -4,
+    "F#": -3,
+    Gb: -3,
+
+    G: -2,
+    "G#": -1,
+    Ab: -1,
+
+    A: 0,
+    "A#": 1,
+    Bb: 1,
+
+    B: 2
+  };
+
+  const semitoneDistance =
+    SEMITONES[note] + ((octave - 4) * 12);
+
+  return 440 * Math.pow(2, semitoneDistance / 12);
+}
+
+// ===== Función para seleccionar nota ============================================================================
+function selectTargetNote(note) {
+
+  targetNote = note;
+  tunerLocked = false;
+
+  document.querySelectorAll(".tuner-targets button")
+    .forEach(btn => btn.classList.remove("active"));
+
+  [...document.querySelectorAll(".tuner-targets button")]
+    .find(btn => btn.innerText === note)
+    ?.classList.add("active");
+
+  if (!micEnabled) {
+    toggleMic();
+  }
+}
+
+
+// ===== SONIDO DE AJUESTE DE AFINACION ===================
+function playSuccessTone() {
+
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+
+  osc.frequency.value = 1200;
+
+  osc.connect(gain);
+  gain.connect(audioContext.destination);
+
+  gain.gain.setValueAtTime(0.1, audioContext.currentTime);
+  gain.gain.exponentialRampToValueAtTime(
+    0.001,
+    audioContext.currentTime + 0.15
+  );
+
+  osc.start();
+  osc.stop(audioContext.currentTime + 0.15);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ===== SE ABRE EL MODAL DESDE TONALIDAD ============================================================================
+function abrirAfinadorDesdeCancion(tonalidad, bpm) {
+
+  // abrir modal
+  document.getElementById("metroModal").style.display = "block";
+
+  // ===== TONALIDAD =====
+  const nota = extractRootNote(tonalidad);
+
+  const noteSelect = document.getElementById("referenceNote");
+
+  if (noteSelect) {
+    noteSelect.value = nota;
+  }
+
+  // ===== BPM =====
+  const bpmInput = document.getElementById("metroBpm");
+
+  let bpmValue = parseInt(bpm);
+
+  // si no existe o no es válido → 90
+  if (!bpm || isNaN(bpmValue)) {
+    bpmValue = 90;
+  }
+
+  bpmInput.value = bpmValue;
+
+  // opcional
+  // playReferenceTone();
+}
+
+function abrirAfinadorDesdeElemento(el, tipo) {
+
+  const tonalidad = el.dataset.tonalidad;
+  const bpm = el.dataset.bpm;
+  const compas = el.dataset.compas;
+
+  document.getElementById("metroModal").style.display = "block";
+
+  // TONO
+  const noteSelect = document.getElementById("referenceNote");
+  const nota = extractRootNote(tonalidad);
+
+  if (noteSelect) noteSelect.value = nota;
+
+  // BPM
+  const bpmInput = document.getElementById("metroBpm");
+  const bpmValue = parseInt(bpm);
+  bpmInput.value = (!bpm || isNaN(bpmValue)) ? 90 : bpmValue;
+
+  // COMPÁS
+  setCompas(compas || "4/4");
+
+  // 🔊 AUTO PLAY SOLO TONALIDAD
+  requestAnimationFrame(() => {
+
+    if (tipo === "tonalidad") {
+      playReferenceTone();
+    }
+
+  });
+}
+
+function setCompasUI(compas) {
+  const span = document.getElementById("metroCompas");
+  if (span) span.innerText = compas;
+
+  // aquí podrías sincronizar lógica del metrónomo si quieres
+}
+setCompasUI("4/4");
+
+
+// RESALTAR
+function highlightElement(el) {
+  if (!el) return;
+
+  el.classList.add("highlight");
+
+  setTimeout(() => {
+    el.classList.remove("highlight");
+  }, 800);
+}
+
+
+
+// ===============================================================================================
+// ===================== FLAGS (MAPEO DE IDIOMAS) ===============================================
+// Emojis de bandera por código de idioma
+const FLAGS = {
+  es: "🇦🇷",
+  en: "🇺🇸",
+  it: "🇮🇹",
+  pt: "🇧🇷",
+  fr: "🇫🇷",
+  de: "🇩🇪",
+  he: "🇮🇱",
+  gn: "🇵🇾",
+  zu: "🇿🇦",
+  af: "🇿🇦",
+  sw: "🇹🇿",
+  is: "🇮🇸"
+};
+
+// Nombres legibles por idioma
+const FLAG_NAMES = {
+  es: "Argentina",
+  en: "Estados Unidos",
+  he: "Israel",
+  it: "Italia",
+  pt: "Brasil",
+  fr: "Francia",
+  gn: "Guaraní",
+  af: "Afrikaans",
+  sw: "Kiswahili",
+  zu: "Zulu",
+  is: "Islandés"
+};
+
+
+// ===============================================================================================
+// ===================== ESTADO GLOBAL DEL IDIOMA ===============================================
+let idiomaActual = "es";
+
+
+// ===============================================================================================
+// ===================== INICIALIZACIÓN DEL IDIOMA ===============================================
+function initLanguage(defaultLang = "es") {
+
+  // carga desde localStorage o usa idioma por defecto
+  idiomaActual = localStorage.getItem("idioma") || defaultLang;
+
+  const idiomaSelect = document.getElementById("idioma");
+  const menuIdioma = document.getElementById("menuIdioma");
+
+  // sincroniza UI
+  if (idiomaSelect) idiomaSelect.value = idiomaActual;
+  if (menuIdioma) menuIdioma.value = idiomaActual;
+
+  updateLangFlag();
+}
+
+
+// ===============================================================================================
+// ===================== DISPONIBILIDAD DE IDIOMAS ==============================================
+
+// Devuelve qué idiomas existen realmente en los datos
+function getAvailableLanguages(data) {
+  const set = new Set();
+
+  data.forEach(song => {
+    if (!song.idiomas) return;
+
+    Object.keys(song.idiomas).forEach(lang => {
+      const titulo = song.idiomas[lang]?.titulo;
+      if (titulo && titulo.length > 0) {
+        set.add(lang);
+      }
+    });
+  });
+
+  return set;
+}
+
+
+// Si el idioma actual no existe en los datos → fallback automático
+function validateIdiomaActual() {
+  const data = getDataActual();
+  const available = getAvailableLanguages(data);
+
+  if (!available.has(idiomaActual)) {
+    idiomaActual = [...available][0];
+  }
+}
+
+
+// ===============================================================================================
+// ===================== CAMBIO DE IDIOMA =======================================================
+function setIdioma(lang) {
+
+  idiomaActual = lang;
+  localStorage.setItem("idioma", lang);
+
+  const idiomaSelect = document.getElementById("idioma");
+  const menuIdioma = document.getElementById("menuIdioma");
+
+  if (idiomaSelect) idiomaSelect.value = lang;
+  if (menuIdioma) menuIdioma.value = lang;
+
+  updateLangFlag();
+
+  // refrescar UI dependiente del idioma
+  renderAlphabet();
+  renderList(letraActiva);
+}
+
+
+// ===============================================================================================
+// ===================== BOTÓN DE BANDERA =======================================================
+function updateLangFlag() {
+  const langBtn = document.getElementById("langBtn");
+  if (!langBtn) return;
+
+  langBtn.innerText = FLAGS[idiomaActual] || "🌐";
+}
+
+
+// ===============================================================================================
+// ===================== FLAGS POR CANCION ======================================================
+
+// Devuelve banderas disponibles (versión compacta para listas)
+function getAvailableFlags(song) {
+  const idiomas = song.idiomas || {};
+
+  return Object.keys(idiomas)
+    .filter(lang => idiomas[lang])
+    .sort((a, b) => (FLAG_NAMES[a] || a).localeCompare(FLAG_NAMES[b] || b))
+    .map(lang => `
+      <span onclick="changeLanguage('${lang}', '${song.id}')"
+            style="cursor:pointer">
+        ${FLAGS[lang] || "🌐"}
+      </span>
+    `)
+    .join(" ");
+}
+
+
+// Devuelve banderas con estilo (UI más completa)
+function renderLanguageFlags(song) {
+  const idiomas = song.idiomas || {};
+
+  return Object.keys(idiomas)
+    .filter(lang => idiomas[lang]?.titulo)
+    .sort((a, b) => (FLAG_NAMES[a] || a).localeCompare(FLAG_NAMES[b] || b))
+    .map(lang => `
+      <span class="flag ${lang === idiomaActual ? "active" : ""}"
+            onclick="changeLanguage('${lang}', '${song.id}')">
+        ${FLAGS[lang] || "🌐"}
+      </span>
+    `).join("");
+}
+
+
+// ===============================================================================================
+// ===================== CAMBIO DIRECTO DE IDIOMA POR CANCION ===================================
+function changeLanguage(lang, songId) {
+
+  idiomaActual = lang;
+  localStorage.setItem("idioma", idiomaActual);
+
+  const idiomaSelect = document.getElementById("idioma");
+  if (idiomaSelect) idiomaSelect.value = lang;
+
+  renderAlphabet();
+  openSong(songId);
+}
+
+
+// ===============================================================================================
+// ===================== UI DE BOTÓN DE IDIOMA ===================================================
+function initLanguageUI() {
+
+  const langBtn = document.getElementById("langBtn");
+  const idiomaSelect = document.getElementById("idioma");
+
+  let pressTimer;
+
+  // CLICK: cambia idioma secuencialmente
+  langBtn?.addEventListener("click", () => {
+    const options = Array.from(idiomaSelect.options);
+    const currentIndex = options.findIndex(o => o.value === idiomaActual);
+    const nextIndex = (currentIndex + 1) % options.length;
+    setIdioma(options[nextIndex].value);
+  });
+
+  // LONG PRESS: abre selector manual
+  langBtn?.addEventListener("mousedown", () => {
+    pressTimer = setTimeout(() => {
+      idiomaSelect.style.pointerEvents = "auto";
+      idiomaSelect.style.opacity = "1";
+      idiomaSelect.focus();
+      idiomaSelect.click();
+    }, 500);
+  });
+
+  langBtn?.addEventListener("mouseup", () => clearTimeout(pressTimer));
+  langBtn?.addEventListener("mouseleave", () => clearTimeout(pressTimer));
+
+  // cambio desde select
+  idiomaSelect?.addEventListener("change", () => {
+    setIdioma(idiomaSelect.value);
+
+    idiomaSelect.style.opacity = "0";
+    idiomaSelect.style.pointerEvents = "none";
+  });
+}
+
+
+// ===============================================================================================
+// ===================== HELPERS DE CANCIONES ===================================================
+
+// Título según idioma actual
+function getSortTitle(song) {
+  return normalize(song.idiomas?.[idiomaActual]?.titulo || "");
+}
+
+// Número de himno si existe
+function getNumeroHimno(c) {
+  return c.idiomas?.[idiomaActual]?.numero_himno ?? "";
+}
+
+
+// ===============================================================================================
+// ===================== TÍTULOS MULTIIDIOMA ====================================================
+
+// Devuelve todos los títulos posibles de una canción
+function getAllSongTitles(song) {
+  const base = song.idiomas?.[idiomaActual]?.titulo || "";
+  const extras = normalizeArrayField(song.idiomas?.[idiomaActual]?.titulo2 || []);
+
+  return [base, ...extras]
+    .map(t => (t || "").trim())
+    .filter(Boolean);
+}
+
+
+// Devuelve el mejor título disponible (fallback automático)
+function getSongTitle(song) {
+
+  const current = song?.idiomas?.[idiomaActual]?.titulo;
+
+  if (Array.isArray(current)) {
+    const valid = current.find(t => typeof t === "string" && t.trim());
+    if (valid) return valid.trim();
+  }
+
+  if (typeof current === "string" && current.trim()) {
+    return current.trim();
+  }
+
+  // fallback a cualquier idioma
+  const idiomas = song?.idiomas || {};
+
+  for (const lang of Object.keys(idiomas)) {
+
+    const titulo = idiomas[lang]?.titulo;
+
+    if (Array.isArray(titulo)) {
+      const valid = titulo.find(t => typeof t === "string" && t.trim());
+      if (valid) return valid.trim();
+    }
+
+    if (typeof titulo === "string" && titulo.trim()) {
+      return titulo.trim();
+    }
+  }
+
+  return "Sin título";
+}
+
+
+// ===============================================================================================
+// ===================== NORMALIZACIÓN GENERAL ==================================================
+function normalizeText(value) {
+  if (!value) return "";
+  if (Array.isArray(value)) return value.filter(Boolean).join(", ");
+  return value;
+}
+
+function normalizeSimple(value) {
+  if (!value) return "";
+  if (Array.isArray(value)) return value.filter(Boolean).join(", ");
+  return value;
+}
+
+function normalizeField(value) {
+  if (!value) return [];
+  return Array.isArray(value) ? value : [value];
+}
+
+
+// ===============================================================================================
+// ===================== NORMALIZACIÓN DE CANCIONES =============================================
+function normalizeSong(song) {
+
+  if (!song?.idiomas) return song;
+
+  Object.keys(song.idiomas).forEach(lang => {
+    const t = song.idiomas?.[lang]?.titulo;
+    song.idiomas[lang].titulo = normalizeText(t);
+  });
+
+  song.titulo_original = normalizeText(song.titulo_original);
+
+  song.year = normalizeSimple(song.year);
+  song.tonalidad = normalizeSimple(song.tonalidad);
+  song.tempo_bpm = normalizeSimple(song.tempo_bpm);
+  song.compas = normalizeSimple(song.compas);
+
+  return song;
+}
+
+
+// ===============================================================================================
+// ===================== CAMPOS ESPECÍFICOS =====================================================
+function normalizeTraductor(lang) {
+  const trad = lang?.traductor;
+  if (!trad) return [];
+  return Array.isArray(trad) ? trad : [trad];
+}
+
+
+
+
+

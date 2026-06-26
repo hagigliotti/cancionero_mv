@@ -84,6 +84,13 @@ function buildSearchText(song) {
   return normalize(textos.flat().join(" "));
 }
 
+// ===== TAGS =====
+if (song.tags) {
+  textos.push(
+    song.tags.map(t => normalize(t)).join(" ")
+  );
+}
+
 // ===================== SEGURIDAD =====================
 
 function escapeHtml(str = "") {
@@ -229,12 +236,7 @@ function normalizeRitmo(ritmo) {
 }
 
 function normalizeText(text = "") {
-  text = text.toString().trim();
-
-  if (!text) return "";
-
-  return text.charAt(0).toUpperCase() +
-         text.slice(1).toLowerCase();
+  return text?.toString().trim() || "";
 }
 
 function formatRitmo(ritmo) {
@@ -289,30 +291,22 @@ function normalizeTituloOriginal(value) {
 // ===================== PERSONAS =====================
 
 function renderPersonLinks(label, value) {
-
-  const arr = normalizeField(value)
-    .map(v => (v || "").trim())
-    .filter(Boolean);
+  const arr = normalizeArrayField(value);
 
   if (!arr.length) return "";
 
-  const tipo = tipoMap[label.toLowerCase()] || "autor";
-
-  const html = arr.map(person => {
-
-    if (person === "-" || normalize(person) === "DESCONOCIDO") {
-      return person;
-    }
-
-    const safePerson = encodeURIComponent(person);
-
-    return `<span class="person-link"
-      onclick="showPersonSongs(decodeURIComponent('${safePerson}'), '${tipo}')">
-      ${person}
-    </span>`;
-  }).join(", ");
-
-  return `<b>${label}:</b> ${html} | `;
+  return `
+    <div>
+      <b>${label}:</b>
+      ${arr.map(p => `
+        <span class="person-link"
+          onclick="openPersonModal('${p}', '${label.toLowerCase()}')"
+          style="cursor:pointer; color:#38bdf8;">
+          ${p}
+        </span>
+      `).join(", ")}
+    </div>
+  `;
 }
 
 

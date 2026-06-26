@@ -134,7 +134,7 @@ function openSong(id) {
         }
       </div>
 
-      <div class="song-metro" onclick="abrirMetronomo(song)" style="cursor:pointer;">
+      <div class="song-metro" onclick="abrirMetronomoDesdeMenu()" style="cursor:pointer;">
       
         ${normalizeMeta(song, "tonalidad") && normalize(normalizeMeta(song, "tonalidad")) !== "DESCONOCIDO"
           ? `
@@ -143,7 +143,7 @@ function openSong(id) {
               data-tonalidad="${normalizeMeta(song, "tonalidad")}"
               data-bpm="${normalizeMeta(song, "tempo_bpm") || ""}"
               data-compas="${normalizeMeta(song, "compas") || ""}"
-              onclick="abrirAfinadorDesdeElemento(this)">
+              onclick="abrirAfinadorDesdeElemento(this, 'tonalidad')">
               ${normalizeMeta(song, "tonalidad")}
             </span> |
           `
