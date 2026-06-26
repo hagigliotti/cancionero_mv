@@ -55,7 +55,7 @@ function getIndexLetter(title) {
 
 // ===================== OPEN SONG =====================
 function openSong(id) {
-  const song = [...canciones, ...himnos, ...campamento, ...seleccionArgentina].find(c => c.id === id || c.slug === id);
+  const song = [...canciones, ...himnos, ...campamento].find(c => c.id === id || c.slug === id);
 
   if (!song) {
     document.getElementById("contenido").innerHTML =
@@ -201,18 +201,11 @@ function openSong(id) {
         <b>Tags:</b>
         ${
           song.tags?.length
-            ? [...song.tags]
-                .map(tag => tag?.toString().trim())
-                .map(tag => tag.charAt(0).toUpperCase() + tag.slice(1).toLowerCase())
-                .sort((a, b) =>
-                  a.localeCompare(b, "es", { sensitivity: "base" })
-                )
-                .map(tag =>
-                  `<span class="tag-link" onclick="openTagModal('${tag}')">${tag}</span>`
-                )
-                .join(", ")
+            ? song.tags.map(tag =>
+                `<span class="tag-link" onclick="openTagModal('${tag}')">${tag}</span>`
+              ).join(", ")
             : "Desconocido"
-        } |
+        } | 
 
         <b>Revisado:</b>
           <span
