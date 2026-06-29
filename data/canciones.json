@@ -21,7 +21,7 @@
       "titulo": ["A Jesús dale todo"],
       "titulo2": ["Arcoíris (aka)", "Has corrido (aka)"],
       "audio_url": "https://open.spotify.com/intl-es/track/1GdcEMGXs8TKht3jGNwU2m?si=2564f95694b34dc7",
-      "traductor": ["-"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["No"],
       "letra": [
@@ -49,13 +49,13 @@
         "[D]A Jesús, a [F#m-G]Jesús, a Jesús dale [A]todo,",
         "[Em]la tristeza en [A]gozo cambia[D]rá."
       ],
-      "nota": ["El himno #236 del Himnario Adventista se llama \"A Jesús entrega a todo\", el cambio se realizó por derechos de autor."]
+      "nota": ["El himno #236 del Himnario Adventista se llama \"A Jesús entrega a todo\"."]
     },
     "en": {
       "titulo": ["Give Them All to Jesús"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/5vpRPI8gJJAewj8LHwDmQP?si=17171e6509e74b79",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -161,7 +161,7 @@
     "en": {
     "titulo": ["I Surrender"],
     "audio_url": "https://open.spotify.com/intl-es/track/2Ilbv0FdK3FDydyjwLYbz9?si=1dd0c7eaaa3a4b65",
-    "traductor": ["-"],
+    "traductor": [""],
     "partitura": "No",
     "revisado": ["No"],
     "letra": [
@@ -267,7 +267,7 @@
       "titulo": ["Abba (Nunca falla)"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Hernando"],
       "letra": [
@@ -305,8 +305,8 @@
 {
   "id": "abraham_tenia_muchos_hijos",
   "titulo_original": ["Father Abraham"],
-  "autor": ["Tradicional"],
-  "compositor": ["Tradicional"],
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
   "year": ["Desconocido"],
   "tonalidad": ["Do Mayor (C)"],
   "tempo_bpm": ["115"],
@@ -320,7 +320,7 @@
       "titulo": ["Abraham tenía muchos hijos"],
       "titulo2": ["El Padre Abraham (aka)"],
       "audio_url": "",
-      "traductor": ["Tradicional"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": "No",
       "letra": [
@@ -433,7 +433,7 @@
       "titulo": ["Open the eyes of my heart"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/0oq2XenhSDaPZUEseNZnK9?si=2b9a15898c754a41",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],
       "letra": [
@@ -500,7 +500,7 @@
       "titulo": ["Adentro, afuera, arriba, abajo"],
       "titulo2": [""],
       "audio_url": "https://www.youtube.com/watch?v=oPimn2alRvI&t=14s",
-      "traductor": [""],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],        
       "letra": [
@@ -577,7 +577,7 @@
       "titulo": ["Agnus Dei"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/1N9SysNAP8j4wbAIHzlM9m?si=6697f706725e4098",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -678,7 +678,7 @@
       "titulo": ["Al comenzar la semana"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/5MJ8DFLauPlvNTNGlbJZZx?si=dedd8715d6264a6a",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -709,7 +709,7 @@
       "titulo": ["Al encuentro de Jesús"],
       "titulo2": [""],
       "audio_url": "https://www.youtube.com/watch?v=UVuli_xt5bs&list=RDUVuli_xt5bs&start_radio=1",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -740,7 +740,7 @@
       "titulo": ["Al lado de Jesús"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/4HtVl7sQxvG8d1d5snMZEy?si=d4301577726d4e8d",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -802,7 +802,7 @@
       "titulo": ["Al son del cocodrilo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -882,7 +882,7 @@
       "titulo": ["Alabaré"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/10fMN6ZyntPNkP46uBaqB1?si=a50bbc0362864e6a",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -911,7 +911,7 @@
       "titulo": ["Ta momba´e"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -950,7 +950,7 @@
       "titulo": ["Alegre voy cantando"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/2pNw22LMg6REMr9MAMvwej?si=f30689be90e54b41",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -1049,7 +1049,7 @@
       "titulo": ["Alma misionera"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/6f7mT8i8Yg4ZwVAkTCq0D7?si=c4133db48e4444e7",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -1102,7 +1102,7 @@
       "titulo": ["¡Alto, escúchame!"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/4bOQA47v0L3S4OSxOyoI5J?si=410beb6055b64bcf",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -1174,7 +1174,7 @@
       "titulo": ["Amigo, ¿amas a Cristo?"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -1213,7 +1213,7 @@
       "titulo": ["Amigos de esperanza"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],
       "letra": [
@@ -1351,7 +1351,7 @@
       "titulo": ["Amor tan grande"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -1416,7 +1416,7 @@
       "titulo": ["Amor, amor"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/4lUyqsYCCMcmkqAnlOhjRb?si=6c0cc53fc6ae495e",
-      "traductor": ["-"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -1455,7 +1455,7 @@
       "titulo": ["Apasionado por Jesús"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -1500,7 +1500,7 @@
       "titulo": ["Aquí estás (Way maker)"],
       "otros_titulos": "Abres caminos",
       "audio_url": "https://open.spotify.com/intl-es/track/5rAZEl2NlSsc9ws7s1dykp?si=5ef19641d5614f7f",
-      "traductor": ["-"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -1535,7 +1535,7 @@
       "titulo": ["Waymaker"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/0hLsDRLsfvwExXMBeDS53k?si=f0e267a0ab5f45b7",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -1612,7 +1612,7 @@
       "titulo": ["Arroyo ancho"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -1656,7 +1656,7 @@
       "titulo": ["Avancemos"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/2K57VJVpndg6QUOLqnoI8D?si=879f2b432ef04516",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -1699,7 +1699,7 @@
       "titulo": ["Bienvenidos a adorar"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -1736,7 +1736,7 @@
       "titulo": ["Blanqueado"],
       "titulo2": [""],
       "audio_url": "https://www.youtube.com/watch?v=yV-g2z0GUvY&list=RDyV-g2z0GUvY&start_radio=1",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -1780,7 +1780,7 @@
       "titulo": ["Brilla en mí"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -1823,7 +1823,7 @@
       "titulo": ["Brilla, Jesús"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],            
       "letra": [
@@ -1856,7 +1856,7 @@
       "titulo": ["Shine, Jesús, shine"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],              
       "letra": [
@@ -1896,7 +1896,7 @@
       "titulo": ["Brillar por ti"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["No"],                
       "letra": [
@@ -1950,7 +1950,7 @@
       "titulo": ["Buscad primero"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],  
+      "traductor": ["Desconocido"],  
       "partitura": "No",
       "revisado": ["Si", "Rolando"],              
       "letra": [
@@ -1989,7 +1989,7 @@
       "titulo": ["Búscale hoy"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],   
+      "traductor": [""],   
       "partitura": "No",
       "revisado": ["No"],             
       "letra": [
@@ -2021,7 +2021,7 @@
       "titulo": ["Buscas"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],  
+      "traductor": [""],  
       "partitura": "No",
       "revisado": ["No"],        
       "letra": [
@@ -2071,7 +2071,7 @@
       "titulo": ["Blessed Be Your Name"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -2140,7 +2140,7 @@
   "tonalidad": ["Re Mayor (D)"],
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
-  "ritmo": ["Infantil"],
+  "ritmo": ["Alegre"],
   "referencia_biblica": [""],
   "tags": ["Clásico", "Infantil"],
 
@@ -2192,7 +2192,7 @@
       "titulo": ["Cada día con Cristo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -2224,7 +2224,7 @@
       "titulo": ["Cada día con Dios"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -2250,7 +2250,7 @@
         "3",
         "Qué bendición es descansar",
         "si Dios a mi lado está.",
-        "No hay nada como terminar con El cada día.",
+        "No hay nada como terminar con Él cada día.",
         "Lo más lindo es pensar",
         "en Él en último lugar,",
         "orar, su Palabra leer y confiar en Él.",
@@ -2279,7 +2279,7 @@
       "titulo": ["Cada día de mañana"],
       "titulo2": [""],
       "audio_url": "https://www.youtube.com/watch?v=EqA7X0CAEeA&list=RDEqA7X0CAEeA&start_radio=1",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Hernando"],      
       "letra": [
@@ -2317,7 +2317,7 @@
       "titulo": ["Cada nuevo día"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"], 
+      "traductor": ["Desconocido"], 
       "partitura": "No",
       "revisado": ["No"],           
       "letra": [
@@ -2363,7 +2363,7 @@
       "titulo": ["Cada novo dia"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],        
       "letra": [
@@ -2400,7 +2400,7 @@
       "titulo": ["Caminando voy"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
 
@@ -2447,7 +2447,7 @@
       "titulo": ["Caminando, caminando"],
       "titulo2": ["Gozándome yo voy (aka)"],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -2498,7 +2498,7 @@
       "titulo": ["Caminamos en la luz de Dios (Siyahamba)"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["Tradicional"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["No"],
       "letra": [
@@ -2536,13 +2536,13 @@
         "Siyahamba, siyahamba, oh,",
         "Siyahamba ekukanyen' kwenkos'."
       ],
-      "nota": [" La letra original fue en afrikáans, con el título \"Ons marsjeer nou in die lig van God\", y posteriormente Thabo Mkhize la tradujo a zulú."]
+      "nota": ["La letra original fue en afrikáans, con el título \"Ons marsjeer nou in die lig van God\", y posteriormente Thabo Mkhize la tradujo a zulú."]
     },
     "en": {
       "titulo": ["We are marching in the light of God"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -2568,7 +2568,7 @@
       "titulo": ["Caminhamos sob a luz de Deus"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -2592,7 +2592,7 @@
       "titulo": ["Nous marchons dans la lumière de Dieu"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -2618,7 +2618,7 @@
       "titulo": ["Ons marsjeer nou in die lig van God (Afrikáans)"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -2644,7 +2644,7 @@
       "titulo": ["Við göngum í ljósi Guðs"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -2668,7 +2668,7 @@
       "titulo": ["Twatembea nuruni mwake (Suajili)"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -2709,7 +2709,7 @@
       "titulo": ["Cantad a Dios"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["No"],               
       "letra": [
@@ -2742,7 +2742,7 @@
       "titulo": ["Louvai a Deus"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"], 
+      "traductor": [""], 
       "partitura": "No",
       "revisado": ["No"],               
       "letra": [
@@ -2774,7 +2774,7 @@
       "titulo": ["Cantaré de tu amor"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],         
+      "traductor": ["Desconocido"],         
       "partitura": "No",
       "revisado": ["No"],       
       "letra": [
@@ -2827,7 +2827,7 @@
       "titulo": ["Cantaré de tu amor por siempre"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],             
       "letra": [
@@ -2851,7 +2851,7 @@
       "titulo": ["I could sing of your love forever"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"], 
+      "traductor": [""], 
       "partitura": "No",
       "revisado": ["No"],            
       "letra": [
@@ -2885,7 +2885,7 @@
       "titulo": ["Canto de alabanza"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],            
       "letra": [
@@ -2921,7 +2921,7 @@
       "titulo": ["Canto de alegría"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"], 
+      "traductor": ["Desconocido"], 
       "partitura": "No",
       "revisado": ["Si", "Rolando"],                
       "letra": [
@@ -2952,7 +2952,7 @@
       "titulo": ["Joyfully we sing here of the Savior's grace"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],              
       "letra": [
@@ -2982,7 +2982,7 @@
       "titulo": ["¡Celebrad a Cristo, celebrad!"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -3018,7 +3018,7 @@
       "titulo": ["Celebrar y cantar"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"], 
+      "traductor": ["Desconocido"], 
       "partitura": "No",
       "revisado": ["No"],             
       "letra": [
@@ -3053,7 +3053,7 @@
       "titulo": ["Celebrar e cantar"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"], 
+      "traductor": [""], 
       "partitura": "No",
       "revisado": ["No"],             
       "letra": [
@@ -3089,7 +3089,7 @@
       "titulo": ["Cerca de Jesús"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"], 
+      "traductor": ["Desconocido"], 
       "partitura": "No",
       "revisado": ["No"],             
       "letra": [
@@ -3108,7 +3108,7 @@
       "titulo": ["Draw me close to you"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],  
+      "traductor": [""],  
       "partitura": "No",
       "revisado": ["No"],            
       "letra": [
@@ -3143,7 +3143,7 @@
       "titulo": ["Como el ciervo (revisar letra)"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"], 
+      "traductor": ["Desconocido"], 
       "partitura": "No",
       "revisado": ["Si", "Rolando"],              
       "letra": [
@@ -3174,7 +3174,7 @@
       "titulo": ["As the deer"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"], 
+      "traductor": [""], 
       "partitura": "No",
       "revisado": ["No"],                
       "letra": [
@@ -3211,7 +3211,7 @@
       "titulo": ["Como las olas"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
 
@@ -3254,7 +3254,7 @@
       "titulo": ["Cómo no cantar"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -3313,7 +3313,7 @@
       "titulo": ["Con Cristo en mi alma"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -3346,7 +3346,7 @@
       "titulo": ["Con Cristo, con Cristo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -3388,7 +3388,7 @@
       "titulo": ["Con Jesús en la familia"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -3430,7 +3430,7 @@
       "titulo": ["Con Jesús soy feliz"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -3471,7 +3471,7 @@
       "titulo": ["Con sólo una chispa"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -3514,7 +3514,7 @@
       "titulo": ["Conmigo estás"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -3628,7 +3628,7 @@
       "titulo": ["Cristo ama niños como yo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -3667,10 +3667,10 @@
 
   "idiomas": {
     "es": {
-      "titulo": ["Cristo joven"],
-      "titulo2": ["Ver, hermano (aka)"],
+      "titulo": ["Ven, hermano"],
+      "titulo2": ["Cristo joven (aka)"],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -3785,7 +3785,7 @@
       "titulo": ["Cristo manda que subamos más"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -3819,7 +3819,7 @@
       "titulo": ["Cristo rompe las cadenas"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -3854,7 +3854,7 @@
       "titulo": ["Cristo un año más te dio"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -3884,7 +3884,7 @@
       "titulo": ["Cual la quietud de un arroyo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -3928,7 +3928,7 @@
       "titulo": ["Cuán grande eres, Dios"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": ["Desconocido"],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -3956,7 +3956,7 @@
       "titulo": ["How Great Is Our God"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -4015,7 +4015,7 @@
       "titulo": ["Cuando Cristo vino a mi corazón"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -4061,7 +4061,7 @@
       "titulo": ["Cuando el pueblo de Dios ora"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -4103,7 +4103,7 @@
       "titulo": ["Cuando empieza el santo sábado"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/5MJ8DFLauPlvNTNGlbJZZx?si=dedd8715d6264a6a",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -4137,7 +4137,7 @@
       "titulo": ["Cuando miro los claros cielos"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -4182,7 +4182,7 @@
       "titulo": ["Cuenta conmigo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -4223,7 +4223,7 @@
       "titulo": ["Camminerò"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -4254,7 +4254,8 @@
         "Verso un mondo che non ha confini, no,",
         "verso mete da raggiungere, oramai...",
         "Verso il regno dell'amore",
-        "che è sempre un po' più in là."
+        "che è sempre un po' più in là.",
+        ""
       ],
       "nota": [""]
     }
@@ -4277,7 +4278,7 @@
       "titulo": ["Cristo tornerà"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -4369,7 +4370,7 @@
       "titulo": ["Como una pequeña semilla"],
       "titulo2": ["Creciendo (aka)"],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -4421,7 +4422,7 @@
       "titulo": ["Da una sonrisa"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -4459,7 +4460,7 @@
       "titulo": ["10.000 razones (Bendice al Señor)"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/0B0XKO9t9WJjUP7qxwTC8c?si=42ba04e594f14030",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -4510,7 +4511,7 @@
       "titulo": ["10,000 Reasons (Bless the Lord)"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/0fxpHpK3aw2nFWII6yveDD?si=5d045794a14a4247",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -4554,7 +4555,7 @@
       "it": {
         "titulo": ["Diecimila ragioni (10.000 Reasons) (*)"],
         "audio_url": "https://open.spotify.com/intl-es/track/27anRlrwjMYve3K0fGPJkH?si=36b39c383a4040e8",
-        "traductor": ["-"],
+        "traductor": [""],
         "partitura": "No",
         "revisado": ["No"],      
         "letra": [
@@ -4580,7 +4581,7 @@
       "titulo": ["Da una sonrisa"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -4616,7 +4617,7 @@
       "titulo": ["Dad gloria al Señor"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -4654,7 +4655,7 @@
       "titulo": ["Dad gracias"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -4691,7 +4692,7 @@
       "titulo": ["Dame a Cristo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -4734,7 +4735,7 @@
       "titulo": ["Dame fe"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -4800,7 +4801,7 @@
       "titulo": ["Dame un nuevo corazón"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -4838,7 +4839,7 @@
       "titulo": ["De gloria en gloria"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],     
       "letra": [
@@ -4876,7 +4877,7 @@
       "titulo": ["Demos gracias al Señor"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -4916,7 +4917,7 @@
       "titulo": ["Descansar"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -4968,7 +4969,7 @@
       "titulo": ["Después del río"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -5019,7 +5020,7 @@
       "titulo": ["Digno eres"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -5059,7 +5060,7 @@
       "titulo": ["Digno es el Señor"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -5101,7 +5102,7 @@
       "titulo": ["Dios, alzamos hoy tu nombre"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -5136,7 +5137,7 @@
       "titulo": ["Dios bueno es"],
       "titulo2": ["Dios es tan bueno (aka)"],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -5175,7 +5176,7 @@
       "titulo": ["Dios de Israel"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -5210,7 +5211,7 @@
       "titulo": ["Dios del cielo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -5260,7 +5261,7 @@
       "titulo": ["Dios es nuestro amparo y fortaleza"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -5301,7 +5302,7 @@
       "titulo": ["Dios está aquí"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -5331,7 +5332,7 @@
       "titulo": ["Dios no se cansa de amar"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -5395,7 +5396,7 @@
       "titulo": ["Dios, que tu luz"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -5480,7 +5481,7 @@
       "titulo": ["Dulce oración"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -5538,7 +5539,7 @@
       "titulo": ["En tus manos rotas vi"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -5582,7 +5583,7 @@
       "titulo": ["El hombre que anduvo en Galilea"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -5620,7 +5621,7 @@
       "titulo": ["El amor de Dios es maravilloso"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -5655,7 +5656,7 @@
       "es": {
         "titulo": ["Enciende una luz"],
         "audio": "https://open.spotify.com/intl-es/track/1UEwI2FyRaowh1kUWCzNLg?si=b1fb33d9c150481d",
-        "traductor": ["-"],
+        "traductor": [""],
         "partitura": "No",
         "revisado": ["No"],
         "letra": [
@@ -5696,7 +5697,7 @@
       "titulo": ["El amor de Cristo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -5731,7 +5732,7 @@
       "titulo": ["El corazón de la adoración"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -5774,7 +5775,7 @@
       "titulo": ["Él es Jehová el Señor"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -5838,7 +5839,7 @@
       "titulo": ["El mar se irá"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -5889,7 +5890,7 @@
       "titulo": ["El mejor lugar del mundo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -5939,7 +5940,7 @@
       "titulo": ["El poder de la cruz"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -5972,7 +5973,7 @@
       "titulo": ["El Salvador es mi amigo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -6037,7 +6038,7 @@
       "titulo": ["En mi alma suena un cantar"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"], 
       "letra": [
@@ -6080,7 +6081,7 @@
       "titulo": ["En mi caminar"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -6130,7 +6131,7 @@
       "titulo": ["En momentos así"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -6165,7 +6166,7 @@
       "titulo": ["En tus manos me entrego"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -6207,7 +6208,7 @@
       "titulo": ["Enséñame a servir"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -6272,7 +6273,7 @@
       "titulo": ["Enteramente fiel"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -6320,7 +6321,7 @@
       "titulo": ["Entrega total"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -6381,7 +6382,7 @@
       "titulo": ["Eres"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -6446,7 +6447,7 @@
       "titulo": ["Eres mi refugio"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -6466,7 +6467,7 @@
       "titulo": ["És o meu refúgio"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -6501,7 +6502,7 @@
       "titulo": ["Eres mi respirar"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -6535,7 +6536,7 @@
       "titulo": ["Eres mi todo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -6580,7 +6581,7 @@
       "titulo": ["Eres Tú"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -6625,7 +6626,7 @@
       "titulo": ["Es exaltado"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -6660,7 +6661,7 @@
       "titulo": ["Espíritu Santo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -6780,7 +6781,7 @@
       "titulo": ["Éste es mi deseo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -6815,7 +6816,7 @@
       "titulo": ["Estoy en paz"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -6862,7 +6863,7 @@
       "titulo": ["È bello stare qui"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -6906,7 +6907,7 @@
       "titulo": ["E ci sei tu"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -6961,7 +6962,7 @@
       "titulo": ["E da ora in poi"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -7035,7 +7036,7 @@
       "titulo": ["Eccomi"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -7095,7 +7096,7 @@
       "titulo": ["Él puede (*)"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -7138,7 +7139,7 @@
       "titulo": ["Fe en fuego"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -7176,7 +7177,7 @@
       "titulo": ["Faith on fire"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -7263,7 +7264,7 @@
       "titulo": ["Fino alla fine"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -7318,7 +7319,7 @@
       "titulo": ["Fiume, fiume"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -7366,7 +7367,7 @@
       "titulo": ["Fe no es sólo decirlo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -7409,7 +7410,7 @@
       "titulo": ["Fiel en toda prueba"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -7468,7 +7469,7 @@
       "titulo": ["Frágil embarcación"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -7511,7 +7512,7 @@
       "titulo": ["Fuente de esperanza"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -7539,7 +7540,7 @@
       "titulo": ["Fonte de esperança"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -7576,7 +7577,7 @@
       "titulo": ["Fuertes"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -7627,7 +7628,7 @@
       "titulo": ["GENTE COME NOI"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -7698,7 +7699,7 @@
       "titulo": ["GLI UOMINI CHE SOGNANO"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -7751,7 +7752,7 @@
       "titulo": ["Fuente de esperanza"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -7816,7 +7817,7 @@
       "titulo": ["Generación esperanza"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -7859,7 +7860,7 @@
       "titulo": ["Glorifico al Señor (*)"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -7896,7 +7897,7 @@
       "titulo": ["Himno de los Aventureros"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "letra": [
         "Estrofa 1",
         "Somos Aventureros alegres",
@@ -7950,7 +7951,7 @@
       "titulo": ["The Pathfinder Song"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -7969,7 +7970,7 @@
       "titulo": ["Hino dos Desbravadores"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -7990,7 +7991,7 @@
       "titulo": ["Nous sommes les Explorateurs"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -8058,7 +8059,7 @@
       "titulo": ["Hablar con Dios"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "data/partituras/hablar_con_dios.pdf",
       "revisado": ["No"],      
       "letra": [
@@ -8091,7 +8092,7 @@
       "titulo": ["NELLA PREGHIERA"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -8145,7 +8146,7 @@
       "titulo": ["Hay mil millones de estrellas"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -8236,7 +8237,7 @@
       "titulo": ["He decidido seguir a Cristo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -8285,7 +8286,7 @@
       "titulo": ["Heme aquí"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -8332,7 +8333,7 @@
       "titulo": ["Hijo de Dios"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -8378,7 +8379,7 @@
       "titulo": ["Hoy aquí"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -8414,7 +8415,7 @@
       "titulo": ["IO E TE"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -8516,7 +8517,7 @@
       "titulo": ["Te doy mi corazón *"],
       "titulo2": ["Este es mi deseo (aka)"],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": "No",
       "letra": [
@@ -8598,7 +8599,7 @@
       "titulo": ["I Give You My Heart"],
       "titulo2": ["This Is My Desire (aka)"],
       "audio_url": "https://www.youtube.com/watch?v=9bQY2komrnA&list=RD9bQY2komrnA&start_radio=1",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": "No",      
       "letra": [
@@ -8681,7 +8682,7 @@
       "titulo": ["Io ti dono il mio cuor"],
       "titulo2": [""],
       "audio_url": "https://www.youtube.com/watch?v=D2p7yuuum7s",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -8732,7 +8733,7 @@
       "titulo": ["Jesucristo basta"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -8784,7 +8785,7 @@
       "titulo": ["Jesús es mi vida"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -8831,7 +8832,7 @@
       "titulo": ["Jesús es mi luz"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -8870,7 +8871,7 @@
       "titulo": ["Jesús mi guía es"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -8909,7 +8910,7 @@
       "titulo": ["Jesús te ama"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -8962,7 +8963,7 @@
       "titulo": ["Jesús, tú eres mi alegría"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -9002,7 +9003,7 @@
       "titulo": ["Jesús, la montaña y yo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -9044,7 +9045,7 @@
       "titulo": ["Jesús me pastorea"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -9084,7 +9085,7 @@
       "titulo": ["Lávame en tu sangre"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -9119,7 +9120,7 @@
       "titulo": ["LA GRAZIA SUA (MIGHTY TO SAVE)"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -9179,7 +9180,7 @@
       "titulo": ["LINFA E VITA"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -9269,7 +9270,7 @@
       "titulo": ["La alegría"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -9324,7 +9325,7 @@
       "titulo": ["La barca"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -9387,7 +9388,7 @@
       "titulo": ["La bendición"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -9449,7 +9450,7 @@
       "titulo": ["La mañana gloriosa"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -9496,7 +9497,7 @@
       "titulo": ["La sangre de Cristo Jesús"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -9535,7 +9536,7 @@
       "titulo": ["La única esperanza"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -9572,7 +9573,7 @@
       "titulo": ["Lado a lado"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -9625,7 +9626,7 @@
       "titulo": ["Levanto la cruz"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -9679,7 +9680,7 @@
       "titulo": ["Llegó la hora"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -9736,7 +9737,7 @@
       "titulo": ["Llévame a la cruz"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -9781,7 +9782,7 @@
       "titulo": ["Miren qué linda es la vida"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No", "Hernando"],      
       "letra": [
@@ -9826,7 +9827,7 @@
       "titulo": ["Majestuoso Dios"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -9870,7 +9871,7 @@
       "titulo": ["Maranata"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -9921,7 +9922,7 @@
       "titulo": ["Maranatha"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -9987,7 +9988,7 @@
       "titulo": ["Maravillas"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -10037,7 +10038,7 @@
       "titulo": ["Maravilloso Dios"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -10099,7 +10100,7 @@
       "titulo": ["Marchando voy"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -10157,7 +10158,7 @@
       "titulo": ["Me siento bien"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -10196,7 +10197,7 @@
       "titulo": ["Mensajero"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "data/partituras/mensajero.pdf",
       "revisado": ["No"],      
       "letra": [
@@ -10242,7 +10243,7 @@
       "titulo": ["Mi Cristo me salva"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -10287,7 +10288,7 @@
       "titulo": ["Mi Dios es tan grande"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -10332,7 +10333,7 @@
       "titulo": ["Mi Dios puede salvar"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -10388,7 +10389,7 @@
       "titulo": ["Mi Dios, supremo Rey"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -10433,7 +10434,7 @@
       "titulo": ["Mi farol"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -10497,7 +10498,7 @@
       "titulo": ["Mi pastor"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -10547,7 +10548,7 @@
       "titulo": ["Mi reino"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -10592,7 +10593,7 @@
       "titulo": ["Mi roca"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -10646,7 +10647,7 @@
       "titulo": ["Mi todo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -10710,7 +10711,7 @@
       "titulo": ["Mirad cual amor"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -10754,7 +10755,7 @@
       "titulo": ["No me siento solo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -10801,7 +10802,7 @@
       "titulo": ["Nace en mí"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -10841,7 +10842,7 @@
       "titulo": ["Necesario"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -10898,7 +10899,7 @@
       "titulo": ["No existe bien para mi"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -10942,7 +10943,7 @@
       "titulo": ["No importa de donde tu vengas"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -10990,7 +10991,7 @@
       "titulo": ["No me olvidé de ti"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -11038,7 +11039,7 @@
       "titulo": ["Nunca estés desanimado"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -11079,7 +11080,7 @@
       "titulo": ["NON CI LASCEREMO MAI"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -11131,7 +11132,7 @@
       "titulo": ["NULLA È COME PRIMA"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -11201,7 +11202,7 @@
       "titulo": ["No hay Dios tan grande como tú"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -11262,7 +11263,7 @@
       "titulo": ["Oh Dios crea en mí"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -11309,7 +11310,7 @@
       "titulo": ["Oba oba"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -11365,7 +11366,7 @@
       "titulo": ["Océanos"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -11421,7 +11422,7 @@
       "titulo": ["Oh, amor de Dios"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -11478,7 +11479,7 @@
       "titulo": ["Padre de amor"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -11523,7 +11524,7 @@
       "titulo": ["Padre nuestro"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -11567,7 +11568,7 @@
       "titulo": ["Padre, yo te adoro"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -11609,7 +11610,7 @@
       "titulo": ["Paso a paso"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -11660,7 +11661,7 @@
       "titulo": ["Paz en la tormenta"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -11706,7 +11707,7 @@
       "titulo": ["Paz"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -11742,7 +11743,7 @@
       "titulo": ["Permanece en mi"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -11784,7 +11785,7 @@
       "titulo": ["Pescador de hombres"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -11837,7 +11838,7 @@
       "titulo": ["Poema de salvación"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -11877,7 +11878,7 @@
       "titulo": ["Pon tus manos en las manos del Señor"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -11925,7 +11926,7 @@
       "titulo": ["Por encima de todo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -11971,7 +11972,7 @@
       "titulo": ["Por eso alabamos"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -12025,7 +12026,7 @@
       "titulo": ["Por eso le amo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -12072,7 +12073,7 @@
       "titulo": ["Por tu gracia y amor"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -12119,7 +12120,7 @@
       "titulo": ["PARLARE CON TE"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -12164,7 +12165,7 @@
       "titulo": ["PIÙ CHE VINCITORI"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -12248,7 +12249,7 @@
       "titulo": ["Príncipe de paz"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -12280,7 +12281,7 @@
       "titulo": ["PRINCE OF PEACE"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -12358,7 +12359,7 @@
       "titulo": ["Promesa"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -12402,7 +12403,7 @@
       "titulo": ["Prometo fidelidad a la Biblia"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],
       "letra": [
@@ -12450,7 +12451,7 @@
       "titulo": ["Que pena pensar"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -12493,7 +12494,7 @@
       "titulo": ["Quédate Señor"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -12536,7 +12537,7 @@
       "titulo": ["Que el mundo te conozca"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -12585,7 +12586,7 @@
       "titulo": ["Queremos ver"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -12632,7 +12633,7 @@
       "titulo": ["Queremos ver a Cristo regresar"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -12687,7 +12688,7 @@
       "titulo": ["Quien dices que soy"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -12742,7 +12743,7 @@
       "titulo": ["Quién es el rey de la selva"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -12785,7 +12786,7 @@
       "titulo": ["Quiero cantar una linda canción"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -12835,7 +12836,7 @@
       "titulo": ["Quiero conocer a Jesús"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -12886,7 +12887,7 @@
       "titulo": ["Quien es el Rey de reyes"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -12926,7 +12927,7 @@
       "titulo": ["Recordaré"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -12992,7 +12993,7 @@
       "titulo": ["Rendid a Yahvé"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -13049,7 +13050,7 @@
       "titulo": ["Rescate de amor"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -13100,7 +13101,7 @@
       "titulo": ["Renuévame"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -13142,7 +13143,7 @@
       "titulo": ["Restaura"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -13184,7 +13185,7 @@
       "titulo": ["RITROVARTI IN CIELO"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -13241,7 +13242,7 @@
       "titulo": ["Salmo 1: Que alegría"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -13297,7 +13298,7 @@
       "titulo": ["Salmo 8: Cuando miro los claros cielos"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -13345,7 +13346,7 @@
       "titulo": ["Salmo 23: Jehová es mi pastor"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -13446,7 +13447,7 @@
       "titulo": ["Santo es el Señor"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -13502,7 +13503,7 @@
       "titulo": ["Santo Espíritu"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -13556,7 +13557,7 @@
       "titulo": ["Santo sólo es el Señor"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -13602,7 +13603,7 @@
       "titulo": ["Santuario en el tiempo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -13663,7 +13664,7 @@
       "titulo": ["Sé una luz"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -13712,7 +13713,7 @@
       "titulo": ["Sentado estaba en mi barca"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -13762,7 +13763,7 @@
       "titulo": ["Sencilla"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -13830,7 +13831,7 @@
       "titulo": ["Señor, aviva tu obra en mí"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -13883,7 +13884,7 @@
       "titulo": ["Señor, somos tu voz"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -13931,7 +13932,7 @@
       "titulo": ["Señor, tu gracia"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -13982,7 +13983,7 @@
       "titulo": ["Si comenzamos a orar"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -14023,7 +14024,7 @@
       "titulo": ["Si el cristiano tiene certeza"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -14071,7 +14072,7 @@
       "titulo": ["Si Jesús te satisface"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -14121,7 +14122,7 @@
       "titulo": ["Siempre de Jesús"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -14169,7 +14170,7 @@
       "titulo": ["Sólo en Jesús"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -14289,7 +14290,7 @@
       "titulo": ["Sólo en ti"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -14334,7 +14335,7 @@
       "titulo": ["Sólo tú"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -14390,7 +14391,7 @@
       "titulo": ["Somos la luz"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -14445,7 +14446,7 @@
       "titulo": ["Somos su voz"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -14489,7 +14490,7 @@
       "titulo": ["Soy de Jesús"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -14547,7 +14548,7 @@
       "titulo": ["SEI DI PIÙ"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -14590,7 +14591,7 @@
       "titulo": ["SOLTANTO TU"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -14660,7 +14661,7 @@
       "titulo": ["SOURCE OF LIFE"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -14732,7 +14733,7 @@
       "titulo": ["Sólo el poder de Dios"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -14840,7 +14841,7 @@
       "titulo": ["Tal como soy"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -14880,7 +14881,7 @@
       "titulo": ["Te exaltaré"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -14924,7 +14925,7 @@
       "titulo": ["Te seguiré"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -14983,7 +14984,7 @@
       "titulo": ["Tengo paz como un río"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -15036,7 +15037,7 @@
       "titulo": ["Tomado de la mano"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -15086,7 +15087,7 @@
       "titulo": ["Todo por Él"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -15152,7 +15153,7 @@
       "titulo": ["Todo poderoso"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -15201,7 +15202,7 @@
       "titulo": ["Tu amor me inundó"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -15257,7 +15258,7 @@
       "titulo": ["Tu amor por mí"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -15304,7 +15305,7 @@
       "titulo": ["Tu morada"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -15360,7 +15361,7 @@
       "titulo": ["Tú eres Dios"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -15411,7 +15412,7 @@
       "titulo": ["Tu poder"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -15461,7 +15462,7 @@
       "titulo": ["Tu santo nombre"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -15510,7 +15511,7 @@
       "titulo": ["Tuyo soy"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -15604,7 +15605,7 @@
       "pt": {
         "titulo": ["Tenho Paz"],
         "audio_url": "https://open.spotify.com/intl-es/track/00gQlL5wLo1puyxaTrXIdn?si=717d103f3f8e4dbd",
-        "traductor": ["-"],
+        "traductor": [""],
         "numero_himno": "",
         "letra": [
           "Não é que os meus dias sejam sempre sol",
@@ -15658,7 +15659,7 @@
       "titulo": ["SOURCE OF LIFE"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -15751,7 +15752,7 @@
       "titulo": ["THE ADVENTURE OF FAITH"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -15863,7 +15864,7 @@
       "titulo": ["TURN TO THE LIGHT"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -15951,7 +15952,7 @@
       "titulo": ["Un millón"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -15998,7 +15999,7 @@
       "titulo": ["Un palacio tengo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -16092,7 +16093,7 @@
       "titulo": ["UNA VIA CHE"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -16168,7 +16169,7 @@
       "titulo": ["Vamos a adorar"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -16213,7 +16214,7 @@
       "titulo": ["Ven a la cruz"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -16264,7 +16265,7 @@
       "titulo": ["Vengo a adorarte"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -16299,7 +16300,7 @@
       "titulo": ["SONO QUI A LODARTI"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -16359,7 +16360,7 @@
       "titulo": ["Vamos a henchir"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -16409,7 +16410,7 @@
       "titulo": ["Vasijas rotas"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -16456,7 +16457,7 @@
       "titulo": ["Vaso de honra" ],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -16490,7 +16491,7 @@
       "titulo": ["Ver a la cruz"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -16544,7 +16545,7 @@
       "titulo": ["Ven, es tiempo de adorarle"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -16588,7 +16589,7 @@
       "titulo": ["Ven, Espíritu Santo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -16651,7 +16652,7 @@
       "titulo": ["Veré a Jesús"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -16702,7 +16703,7 @@
       "titulo": ["Vive en mí"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -16753,7 +16754,7 @@
       "titulo": ["Voy caminando"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -16793,7 +16794,7 @@
       "titulo": ["VENGO A TE (STILL)"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -16849,7 +16850,7 @@
       "titulo": ["VIVERE CON ME"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -16908,7 +16909,7 @@
       "titulo": ["VITA TU MI DAI"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -16977,7 +16978,7 @@
       "titulo": ["VOCE NEL VENTO"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -17041,7 +17042,7 @@
       "titulo": ["VOGLIA DI STARE"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -17092,7 +17093,7 @@
       "titulo": ["Voglio vivere"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -17166,7 +17167,7 @@
       "titulo": ["Volerei"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -17236,7 +17237,7 @@
       "titulo": ["Si, lo veremos"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -17292,7 +17293,7 @@
       "titulo": ["Si tu triste estás"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -17337,7 +17338,7 @@
       "en": {
         "titulo": ["Worthy Of It All (Worthy)"],
         "audio_url": "https://open.spotify.com/intl-es/track/7pNuIYrXqvpkrspeuzPHRu?si=3c1e1d9b4661409c",
-        "traductor": ["-"],
+        "traductor": [""],
         "letra": [
           "All the saints and angels",
           "They bow before Your throne",
@@ -17418,7 +17419,7 @@
       "titulo": ["Yo nunca iré hacia atrás"],
       "titulo2": ["Cuando recuerdo (aka)"],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -17486,7 +17487,7 @@
       "titulo": ["Yo canto a Dios"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/727wYQUim4Yq2KvqdrFd51?si=9afd634ce9e24d41",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -17535,7 +17536,7 @@
       "titulo": ["Yo iré"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -17603,7 +17604,7 @@
       "titulo": ["Yo pensaba"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -17663,7 +17664,7 @@
       "titulo": ["Yo puedo todo"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -17728,7 +17729,7 @@
       "titulo": ["Yo soy Caleb"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/5hSdUmZfuA57C3Nhs11oqm?si=3e466b1463f54982",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -17792,7 +17793,7 @@
       "titulo": ["Yo soy feliz"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -17848,7 +17849,7 @@
       "titulo": ["Yo soy el mensaje"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/6hC2URW3c2y3QgillBHXD3?si=94de192b6bba45c1",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -17894,7 +17895,7 @@
       "titulo": ["Yo soy un C"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
@@ -17933,7 +17934,7 @@
       "titulo": ["Yo también (Un billón de veces)"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/3dJJivXsv4OT6tjrKWGQBb?si=8f31c8832e38425c",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -18022,7 +18023,7 @@
       "titulo": ["Yo te alabaré, Señor"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/4obNitOZKS90gj7CI7cONT?si=492a2e3caa2a4e0d",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -18079,7 +18080,7 @@
       "titulo": ["Yo tengo algo"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/1EJONorSGr8amMcTAJeje8?si=4bff0a347f6e4fef",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -18125,7 +18126,7 @@
       "titulo": ["Yo tengo esperanza"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/5J2aPgImC3eEw3URhBlcZG?si=58d6f5cbd2774280",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -18179,7 +18180,7 @@
       "titulo": ["Yo tengo un amigo que me ama"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "revisado": ["No"],
       "letra": [
         "[F]Yo tengo un amigo que me [Dm7]ama",
@@ -18213,7 +18214,7 @@
       "titulo": ["Yo tengo un amigo que se llama Jesús"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "revisado": ["Si", "Rolando"],
       "letra": [
         "Yo [C]tengo un a[Am]migo que se [F]llama Je[C]sús",
@@ -18242,7 +18243,7 @@
       "titulo": ["Yo voy (Pés na terra)"],
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/4tj4JGIkDKGPtdNVOV1xcx?si=f197d5a854d74de3",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
@@ -18285,7 +18286,7 @@
       "titulo": ["Yo voy (Eu vou)"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["-"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
