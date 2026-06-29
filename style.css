@@ -606,6 +606,7 @@ a.menu-item {
   background: rgba(56, 189, 248, 0.08);
   border-radius: 0 8px 8px 0;
   font-style: italic;
+  font-size: 1rem;
 }
 
 /* Canon */
@@ -738,6 +739,8 @@ body.projector .clear-btn {
   background: var(--sky);
   color: var(--navy);
 }
+
+
 
 /* ============================================================
    TAB BTN
@@ -1293,11 +1296,21 @@ body.projector h1       { font-size: 2.8rem; text-align: center; }
 body.projector #contenido { font-size: 2.8rem; line-height: 1.15; }
 body.projector .song-line { font-size: 3rem; line-height: 1.6; }
 body.projector .lyrics    { font-size: 3rem; }
-body.projector .chord     { font-size: 3rem; top: -1.9em; }
+
+body.projector .chord { 
+  font-size: 2.5rem;                  /*tamano de la letra*/
+  top: -2.2em;                        /*altura de la tablatura*/
+  font-weight: 500;                   /*ancho de la letra*/
+} 
+
 body.projector .chord-wrap{ width: 0; }
 body.projector .song-break{ height: 40px; }
 body.projector #alfabeto  { justify-content: center; }
-body.projector #menuBtn   { color: white; }
+body.projector #menuBtn   { color: black; }
+
+body.projector .song-note {
+  font-size: 1.0rem;  /* más chico */
+}
 
 /* ============================================================
    ANIMACIONES
