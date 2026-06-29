@@ -65,7 +65,28 @@ function cerrarMetronomo() {
   if (modal) modal.style.display = "none";
 }
 
-// VALIDACION PARA TITULO ORIGINAL
+// VALIDACION PARA TRADUCTOR
+function normalizePersonField(field) {
+  return (field || [])
+    .map(t => (t || "").trim())
+    .filter(t => t && t !== "-");
+}
+
+// Iconos en modals
+function getPersonLabel(tipo) {
+  switch (tipo) {
+    case "autor":
+      return "👤 Autor";
+    case "coautor":
+      return "👥 Coautor";
+    case "compositor":
+      return "✍🏼 Compositor";
+    case "traductor":
+      return "🌎 Traductor";
+    default:
+      return "🎭 Persona";
+  }
+}
 
 
 /* ===================== MODAL's ============================================================ */
@@ -881,12 +902,11 @@ function openPersonModal(nombre, tipo) {
 
   const filtradas = data.filter(song => {
     const campos = normalizeArrayField(song[tipo]);
-
     return campos.some(p => normalize(p).includes(normalized));
   });
 
   renderListModal({
-    title: `🎭 ${nombre}`,
+    title: `${getPersonLabel(tipo)}: ${nombre}`,
     list: filtradas
   });
 

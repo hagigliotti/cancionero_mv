@@ -53,6 +53,17 @@ function getIndexLetter(title) {
   return first.match(/[A-ZÁÉÍÓÚÑ0-9]/i) ? first : "#";
 }
 
+// PARA OCULTAR O NO EL TRADUCTOR 
+function normalizePersonField(field) {
+  if (!field) return [];
+
+  const arr = Array.isArray(field) ? field : [field];
+
+  return arr
+    .map(v => (v || "").trim())
+    .filter(v => v && v !== "-");
+}
+
 // ===================== OPEN SONG =====================
 function openSong(id) {
   const song = [...canciones, ...himnos, ...campamento].find(c => c.id === id || c.slug === id);
@@ -117,6 +128,12 @@ function openSong(id) {
     .map(t => (t || "").trim())
     .filter(t => t && t !== "-");
 
+  // PARA TRADUCTOR
+  const traductorLimpio = normalizePersonField(s.traductor);
+
+  const traductorHtml = traductorLimpio.length
+    ? `${renderPersonLinks("Traductor", traductorLimpio)} | `
+    : "";
 
   // ===================== META ENRIQUECIDO =====================
   const meta = `
@@ -147,8 +164,7 @@ function openSong(id) {
         ${renderPersonLinks("Compositor", song.compositor)}
         ${song.compositor ? " | " : ""}
 
-        ${renderPersonLinks("Traductor", s.traductor)}
-        ${s.traductor ? " | " : ""}
+        ${traductorHtml}
 
         <b>Año:</b> ${normalizeSimple(song.year)}
       </div>
