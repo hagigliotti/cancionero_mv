@@ -105,6 +105,19 @@ function openSong(id) {
     ? ` | <b>Otros títulos:</b> ${otrosTitulos.join(", ")}`
     : "";
     
+  
+  // TITULO ORIGINAL
+  const tituloOriginalLimpio = Array.isArray(song.titulo_original)
+    ? song.titulo_original
+    : song.titulo_original
+      ? [song.titulo_original]
+      : [];
+
+  const tituloOriginalFiltrado = tituloOriginalLimpio
+    .map(t => (t || "").trim())
+    .filter(t => t && t !== "-");
+
+
   // ===================== META ENRIQUECIDO =====================
   const meta = `
     <div class="song-meta">
@@ -115,7 +128,12 @@ function openSong(id) {
       
       <div>
         <b>Original:</b>
-        <i>"${normalizeSimple(song.titulo_original)}"</i>
+          ${tituloOriginalFiltrado.length
+            ? `
+              <i><span class="original-title">"${tituloOriginalFiltrado.join(", ")}"</span></i>
+            `
+            : ""
+          }
         ${otrosTitulosHtml}
       </div>
 

@@ -669,6 +669,12 @@ a.menu-item {
   font-weight: 600;
 }
 
+/*Titulo original "titulo_original": [""],*/
+.original-title {
+  color: #38bdf8;
+  font-weight: 700;
+}
+
 /* ============================================================
    BOTONES GENERALES (toggleLista, etc.)
    ============================================================ */
