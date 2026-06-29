@@ -14062,19 +14062,10 @@
   "year": ["Desconocido"],
   "tonalidad": ["La Mayor (A)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": [""],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Corito",
-    "Animación",
-    "Gozo",
-    "Comunidad",
-    "Fraternidad"
-  ],
+  "compas": ["4/4"],
+  "ritmo": ["Alegre"],
+  "referencia_biblica": ["Salmos 47:1", "Salmos 100:2"],
+  "tags": ["Comunión", "Fraternidad", "Dinámico", "Clásico", "Alabanza", "Gozo", "Comunidad"],
   "idiomas": {
     "es": {
       "titulo": ["Si Jesús te satisface"],
@@ -14082,8 +14073,9 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
+        "1",
         "[A]Si Jesús te satis[E]face",
         "[A]da tres palmas, (clap-clap-clap)",
         "[D]da tres palmas, (clap-clap-clap)",
@@ -14091,14 +14083,17 @@
         "[A]Si Jesús te satis[E]face",
         "[A]da tres palmas. (clap-clap-clap)",
         "",
-        "[D]Amigo que estás",
+        "Coro:",
+        "[D]Amigo que estás #sentado",
         "[A]saluda al que está a tu lado,",
-        "[D]y bríndale una sonrisa.",
+        "[D]y bríndale una sonrisa. (JA!, JA!, JA!)",
         "",
+        "Final:",
         "[A]Si Jesús te satis[E]face",
         "[A]da tres palmas. (clap-clap-clap)"
       ],
-      "nota": [""]
+      "nota": ["Se cambia el adjetivo 'sentado', 'parado', etc. del verbo 'estar' segun corresponda.",
+                "Se puede cambiar la cantidad de palmadas a 'da una palma', 'da dos palmas'."]
     }
   }
 },
@@ -14779,10 +14774,10 @@
   "year": ["Desconocido"],
   "tonalidad": ["La Mayor (A)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Alabanza", "Corito Infantil"],
-  "referencia_biblica": ["2 Timoteo 2:3"],
-  "tags": ["Cristiano", "Alabanza", "Infantil", "Soldado de Jesús", "Fe"],
+  "compas": ["4/4"],
+  "ritmo": ["Marcha"],
+  "referencia_biblica": ["2 Timoteo 2:3", "Efesios 6:11-13"],
+  "tags": ["Cristiano", "Alabanza", "Infantil", "Soldado de Jesús", "Fe", "Compromiso", "Fidelidad", "Marcha", "Clásico"],
 
   "idiomas": {
     "es": {
@@ -14791,24 +14786,30 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": ["No"],        
+      "revisado": ["Si", "Rolando"],        
       "letra": [
-        "[A] Somos soldaditos, [E] ciervos del se[A]ñor",
-        "[A] Vamos en defensa de [E] nuestro evan[A]gelio",
-        "Trompeta: TUTURURU TUTU - TUTURURU TUTU - TUTURURU TUTU - TUTU TUTU TU TU (A-E-A)",
+        "1",
+        "[A]Somos soldaditos, [E]siervos del Se[A]ñor,",
+        "[A]Vamos en defensa [E]de nuestro evan[A]gelio.",
+        "Trompeta: [A]TUTURURU TUTU TU - TUTURURU TUTU TU - TUTURURU TUTU TU- TUTU TU [E]TU [A]TU",
         "",
-        "[A] Aunque no soy de la infantería, [E] caballería, [A] artillería",
-        "[A] Aunque en avión no ande volando [E] pero soldado [A] yo soy",
+        "2",
+        "[A]Aunque no soy de la infantería, [E]caballería, [A]artillería,",
+        "[A]Aunque en avión no vaya volando, [E]¡pero soldado [A]soy!",
         "",
-        "[A] Soldado [D] soy de [A] Jesus, soldado [D] soy de [A] Jesus",
-        "Trompeta: TUTURURU TUTU - TUTURURU TUTU - TUTURURU TUTU - TUTU TUTU TU TU (A-E-A)",
+        "Coro:",
+        "Sol[A]dado [D]soy de [A]Jesús, soldado [D]soy de [A]Jesús.",
+        "Trompeta: [A]TUTURURU TUTU TU - TUTURURU TUTU TU - TUTURURU TUTU TU- TUTU TU [E]TU [A]TU",
         "",
-        "[A] Aunque no soy de la infantería, [E] caballería, [A] artillería",
-        "[A] Aunque en avión no ande volando [E] pero soldado [A] soy",
+        "3",
+        "[A]Aunque no soy de la infantería, [E]caballería, [A]artillería,",
+        "[A]Aunque en avión no vaya volando, [E]¡pero soldado [A]soy!",
         "",
-        "[A] Soldado [D] soy de [A] Jesus, soldado [D] soy de [A] Jesus"
+        "Coro:",
+        "Sol[A]dado [D]soy de [A]Jesús, soldado [D]soy de [A]Jesús.",
+        "Trompeta: [A]TUTURURU TUTU TU - TUTURURU TUTU TU - TUTURURU TUTU TU- TUTU TU [E]TU [A]TU"
       ],
-      "nota": [""]
+      "nota": ["Se canta haciendo mímica: trompeta, soldado, avión, infantería, caballería, artillería,"]
     }
   }
 },
@@ -15988,19 +15989,10 @@
   "year": ["Desconocido"],
   "tonalidad": ["Mi Mayor (E)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": [""],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Esperanza",
-    "Cielo",
-    "Eternidad",
-    "Promesa"
-  ],
+  "compas": ["4/4"],
+  "ritmo": ["Alegre"],
+  "referencia_biblica": ["San Juan 14:2", "Apocalipsis 21:23", "San Mateo 11:28"],
+  "tags": ["Invitación", "Alabanza", "Clásico", "Adoración", "Esperanza", "Cielo", "Eternidad", "Promesa", "Avivamiento", "Vida Eterna"],
   "idiomas": {
     "es": {
       "titulo": ["Un palacio tengo"],
@@ -16008,17 +16000,28 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
+        "1",
         "[E]Un palacio tengo allá",
-        "mas lindo que el sol,",
+        "más lindo que el sol,",
         "[A]un palacio tengo allá",
-        "[E]mas lindo que el sol,",
+        "más lindo que el [E]sol,",
         "un palacio tengo allá",
-        "[C#m]mas lindo que el sol,",
-        "[E]en el [B]más a[E]llá.",
-        "Bendito Cristo",
-        "contigo estaré..."
+        "[C#m]más lindo que el [E]sol,",
+        "en el [B7]más a[E]llá.",
+        "",
+        "2",
+        "[E]Bendito Cristo, contigo estaré...",
+        "[A]Bendito Cristo, contigo esta[E]ré...",
+        "Bendito Cristo, [C#m]contigo esta[E]ré...",
+        "en el [B7]más a[E]llá.",
+        "",
+        "3",
+        "[E]Si tú quieres ir al cielo ven al Señor,",
+        "[A]Si tú quieres ir al cielo ven al Se[E]ñor,",
+        "Si tú quieres ir al cielo [C#m]ven al Se[E]ñor,",
+        "en el [B7]más a[E]llá."
       ],
       "nota": [""]
     }
@@ -16441,21 +16444,13 @@
   "titulo_original": ["Desconocido"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
-  "year": ["Desconocido"],
+  "year": ["1999"],
   "tonalidad": ["Do Mayor (C)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Romanos 9:21"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Consagración",
-    "Petición",
-    "Servicio"
-  ],
+  "compas": ["4/4"],
+  "ritmo": ["Worship"],
+  "referencia_biblica": ["2 Timoteo 2:21", "Jeremías 18:6", "Romanos 9:21"],
+  "tags": ["Servicio", "Avivamiento", "Voluntad Divina", "Adoración", "Alabanza", "Consagración", "Petición"],
   "idiomas": {
     "es": {
       "titulo": ["Vaso de honra" ],
@@ -16463,7 +16458,7 @@
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
         "[C]Yo quiero [G]ser un [Am]vaso de [Em]honra",
         "[C]moldeado [F]por el [D]Se[G]ñor,",
@@ -16489,16 +16484,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Juan 3:16"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Evangelismo",
-    "Perdón",
-    "Llamado",
-    "Paz"
-  ],
+  "tags": ["Alabanza", "Adoración", "Evangelismo", "Perdón", "Llamado", "Paz"],
   "idiomas": {
     "es": {
       "titulo": ["Ver a la cruz"],
