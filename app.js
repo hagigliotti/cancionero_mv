@@ -65,6 +65,9 @@ function cerrarMetronomo() {
   if (modal) modal.style.display = "none";
 }
 
+// VALIDACION PARA TITULO ORIGINAL
+
+
 /* ===================== MODAL's ============================================================ */
 // ===================== REVISADOS ==========================================================
 let revisadoFiltroActual = "si"; // "si" | "no"

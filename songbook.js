@@ -96,6 +96,15 @@ function openSong(id) {
   const tituloBase = s.titulo || song.titulo_original || "Sin título";
   const tituloFinal = num ? `${num} - ${tituloBase}` : tituloBase;
 
+  // PARA QUITAR OTROS TITULOS SI ESTA VACIO
+  const otrosTitulos = (song.idiomas?.[idiomaActual]?.titulo2 || [])
+    .map(t => (t || "").trim())
+    .filter(t => t && t !== "-");
+
+  const otrosTitulosHtml = otrosTitulos.length
+    ? ` | <b>Otros títulos:</b> ${otrosTitulos.join(", ")}`
+    : "";
+    
   // ===================== META ENRIQUECIDO =====================
   const meta = `
     <div class="song-meta">
@@ -107,12 +116,7 @@ function openSong(id) {
       <div>
         <b>Original:</b>
         <i>"${normalizeSimple(song.titulo_original)}"</i>
-
-        ${
-          song.idiomas?.[idiomaActual]?.titulo2?.length
-            ? ` | <b>Otros títulos:</b> ${song.idiomas[idiomaActual].titulo2.join(", ")}`
-            : ""
-        }
+        ${otrosTitulosHtml}
       </div>
 
       <div>
