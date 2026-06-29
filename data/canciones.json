@@ -1,6 +1,8 @@
 [
 { "_commentA": "https://www.recursos-biblicos.com/2013/07/50-coritos-adventistas-muy-conocidos-parte-1.html",
-  "_commentB": "https://ministeriovarsa.com/himnos-en-guarani/" },
+  "_commentB": "https://ministeriovarsa.com/himnos-en-guarani/",
+  "_commentC": "https://www.hymnal.pro/coritario.html" 
+},
 
 { "_comment1": "LETRA A • -----------------------------------------------------------------------------------------------    LETRA A" },
 
@@ -786,7 +788,7 @@
   }
 },
 { "id": "al_son_del_cocodrilo",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Al son del cocodrilo"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -995,7 +997,7 @@
   }
 },
 { "id": "alla_en_el_monte_horeb",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Al son del cocodrilo"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -1123,7 +1125,7 @@
   }
 },
 { "id": "amigo_tengo_que_me_ama",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Amigo tengo que me ama"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -1683,7 +1685,7 @@
 
 { "_comment2": "LETRA B • -----------------------------------------------------------------------------------------------    LETRA B" },
 { "id": "bienvenidos_a_adorar",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Bienvenidos a adorar"],
   "autor": ["Joel Barrios"],
   "compositor": ["Joel Barrios"],
   "year": ["Desconocido"],
@@ -1977,7 +1979,7 @@
   }
 },
 { "id": "buscale_hoy",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Búscale hoy"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "tonalidad": ["Re Mayor (D)"],
@@ -2133,7 +2135,7 @@
 { "_comment3": "LETRA C • -----------------------------------------------------------------------------------------------    LETRA C" },
 
 { "id": "cabeza_hombros_rodillas_y_pies",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Cabeza, hombros, rodillas y pies"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -3195,7 +3197,7 @@
   }
 },
 { "id": "como_las_olas",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Como las olas"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -3297,7 +3299,7 @@
   }
 },
 { "id": "con_cristo_en_mi_alma",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Con Cristo en mi alma"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -3330,7 +3332,7 @@
   }
 },
 { "id": "con_cristo_con_cristo",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Con Cristo, con Cristo"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -3549,7 +3551,7 @@
   }
 },
 { "id": "creceras",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Crecerás"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -3769,7 +3771,7 @@
   }
 },
 { "id": "cristo_manda_que_subamos_mas",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Cristo manda que subamos más"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -3838,7 +3840,7 @@
   }
 },
 { "id": "cristo_un_año_mas_te_dio",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Cristo un año más te dio"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -3868,7 +3870,7 @@
   }
 },
 { "id": "cual_la_quietud_de_un_arroyo",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Cual la quietud de un arroyo"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -4000,7 +4002,7 @@
   }
 },
 { "id": "cuando_cristo_vino_a_mi_corazon",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Cuando Cristo vino a mi corazón"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -4045,7 +4047,7 @@
 },
 
 { "id": "cuando_el_pueblo_de_dios_ora",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Cuando el pueblo de Dios ora"],
   "autor": ["Forgiven"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -4121,7 +4123,7 @@
   }
 },
 { "id": "cuando_miro_los_claros_cielos",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Cuando miro los claros cielos"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -4166,7 +4168,7 @@
   }
 },
 { "id": "cuenta_conmigo",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Cuenta conmigo"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -4315,7 +4317,7 @@
   }
 },
 { "id": "cuan_bueno_cuan_maravilloso_es",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": [" Cuan bueno y maravilloso es"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -4406,7 +4408,7 @@
 
 { "_comment4": "LETRA D • -----------------------------------------------------------------------------------------------    LETRA D" },
 { "id": "da una_sonrisa",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Da una sonrisa"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -5245,7 +5247,7 @@
   }
 },
 { "id": "dios_es_nuestro_amparo_y_fortaleza",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Dios es nuestro amparo y fortaleza"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -5423,7 +5425,7 @@
   }
 },
 { "id": "dios_tu_sabes_que_te_amo",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Dios tú sabes que te amo"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -5605,7 +5607,7 @@
   }
 },
 { "id": "el_amor_de_dios_es_maravilloso",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["El amor de Dios es maravilloso"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -5681,7 +5683,7 @@
     }
   },
 { "id": "el_amor_de_cristo",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["El amor de Cristo"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -5957,7 +5959,7 @@
   }
 },
 { "id": "el_salvador_es_mi_amigo",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["El Salvador es mi amigo"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -6115,7 +6117,7 @@
   }
 },
 { "id": "en_momentos_asi",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["En momentos así"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -6305,7 +6307,7 @@
   }
 },
 { "id": "entrega_total",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Entrega total"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -6683,7 +6685,7 @@
   }
 },
 { "id": "estamos_de_fiesta_con_jesus",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Estamos de fiesta con Jesús"],
   "autor": ["Padre Mario"],
   "compositor": ["Padre Mario"],
   "year": ["Desconocido"],
@@ -6728,7 +6730,7 @@
   }
 },
 { "id": "estamos_tristes",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["¿Estamos tristes?"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -7080,7 +7082,7 @@
   }
 },
 { "id": "el_puede",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Él puede"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -7213,7 +7215,7 @@
   }
 },
 { "id": "fe_mas_fe",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Fe más fe"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -7233,7 +7235,6 @@
       "partitura": "No",
       "revisado": ["No"],        
       "letra": [
-        "Estrofa y Coro",
         "",
         "[D] Fe más fe, amor más amor,",
         "[A] ¿Quién no tiene pida al Salvador?",
@@ -7351,7 +7352,7 @@
   }
 },
 { "id": "fe_no_es_solo_decirlo",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Fe no es sólo decirlo"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -7844,7 +7845,7 @@
   }
 },
 { "id": "glorifico_al_senor",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Glorifico al Señor"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -7881,7 +7882,7 @@
 
 { "_comment8": "LETRA H • -----------------------------------------------------------------------------------------------    LETRA H" },
 { "id": "himno_aventureros",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Himno de los Aventureros"],
   "autor": ["Wanderson Paiva"],
   "compositor": ["Wanderson Paiva"],
   "year": ["1995 "],
@@ -8363,7 +8364,7 @@
   }
 },
 { "id": "hoy_aqui",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Hoy aquí"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -8812,7 +8813,7 @@
   }
 },
 { "id": "Jesús_es_mi_luz",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Jesús es mi luz"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -8943,7 +8944,7 @@
   }
 },
 { "id": "Jesús_tu_eres_mi_alegria",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Jesús, tú eres mi alegría"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["1990"],
@@ -9022,7 +9023,7 @@
   }
 },
 { "id": "Jesús_me_pastorea",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Jesús me pastorea"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -9069,7 +9070,7 @@
 { "_comment12": "LETRA L • -----------------------------------------------------------------------------------------------    LETRA L"  },
 
 { "id": "lavame_en_tu_sangre",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Lávame en tu sangre"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -9430,10 +9431,10 @@
   }
 },
 { "id": "la_manana_gloriosa",
-  "titulo_original": ["Desconocido"],
-  "autor": ["Desconocido"],
-  "compositor": ["Desconocido"],
-  "year": ["Desconocido"],
+  "titulo_original": ["Cuán gloriosa será la mañana"],
+  "autor": ["Felicia Beltrán", "Mariano Beltrán"],
+  "compositor": ["Robert C. Savage"],
+  "year": ["1950"],
   "tonalidad": ["Sol Mayor (G)"],
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
@@ -9447,8 +9448,8 @@
   ],
   "idiomas": {
     "es": {
-      "titulo": ["La mañana gloriosa"],
-      "titulo2": [""],
+      "titulo": ["Cuán gloriosa será la mañana"],
+      "titulo2": ["La mañana gloriosa (aka)"],
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
@@ -9477,7 +9478,7 @@
   }
 },
 { "id": "la_sangre_de_cristo_Jesús",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["La sangre de Cristo Jesús"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -9516,7 +9517,7 @@
   }
 },
 { "id": "la_unica_esperanza",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["La única esperanza"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -9766,7 +9767,7 @@
 
 { "_comment13": "LETRA M • -----------------------------------------------------------------------------------------------    LETRA M"  },
 { "id": "miren_que_linda_es_la_vida",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Miren qué linda es la vida"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -10267,7 +10268,7 @@
   }
 },
 { "id": "mi_dios_es_tan_grande",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Mi Dios es tan grande"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -10533,7 +10534,7 @@
   }
 },
 { "id": "mi_reino",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Mi reino"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -10731,7 +10732,7 @@
 { "_comment14": "LETRA N • -----------------------------------------------------------------------------------------------    LETRA N"  },
 
 { "id": "no_me_siento_solo",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["No me siento solo"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -10922,7 +10923,7 @@
   }
 },
 { "id": "no_importa_de_donde_tu_vengas",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["No importa de donde tu vengas"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -11018,7 +11019,7 @@
   }
 },
 { "id": "nunca_estes_desanimado",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Nunca estés desanimado"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -11065,7 +11066,7 @@
   }
 },
 { "id": "non_ci_lasceremo_mai",
-  "titulo_original": ["NON CI LASCEREMO MAI"],
+  "titulo_original": ["Non ci lasceremo mai"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -11077,7 +11078,7 @@
   "tags": [],
   "idiomas": {
     "it": {
-      "titulo": ["NON CI LASCEREMO MAI"],
+      "titulo": ["Non ci lasceremo mai"],
       "titulo2": [""],
       "audio_url": "",
       "traductor": [""],
@@ -11117,7 +11118,7 @@
   }
 },
 { "id": "nulla_e_come_prima",
-  "titulo_original": ["NULLA È COME PRIMA"],
+  "titulo_original": ["Nulla è come prima"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -11129,7 +11130,7 @@
   "tags": [],
   "idiomas": {
     "it": {
-      "titulo": ["NULLA È COME PRIMA"],
+      "titulo": ["Nulla è come prima"],
       "titulo2": [""],
       "audio_url": "",
       "traductor": [""],
@@ -11187,7 +11188,7 @@
   }
 },
 { "id": "no_hay_dios_tan_grande_como_tu",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["No hay Dios tan grande como tú"],
   "autor": ["Marcos Witt"],
   "compositor": ["Marcos Witt"],
   "year": ["Desconocido"],
@@ -11239,7 +11240,7 @@
 
 { "_comment16": "LETRA O • -----------------------------------------------------------------------------------------------    LETRA O"  },
 { "id": "oh_dios_crea_en_mi",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Oh Dios crea en mí"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -11289,7 +11290,7 @@
   }
 },
 { "id": "oba_oba",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Oba oba"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -11458,7 +11459,7 @@
 { "_comment17": "LETRA P • -----------------------------------------------------------------------------------------------    LETRA P"  },
 
 { "id": "padre_de_amor",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Padre de amor"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -11639,7 +11640,7 @@
   }
 },
 { "id": "paz_en_la_tormenta",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Paz en la tormenta"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -12337,7 +12338,7 @@
   }
 },
 { "id": "promesa",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Promesa"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -12428,7 +12429,7 @@
 
 { "_comment18": "LETRA Q • -----------------------------------------------------------------------------------------------    LETRA Q"  },
 { "id": "que_pena_pensar",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Que pena pensar"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -12470,7 +12471,7 @@
   }
 },
 { "id": "quedate_senor",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Quédate Señor"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -12515,7 +12516,7 @@
   }
 },
 { "id": "que_el_mundo_te_conozca",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Que el mundo te conozca"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -12611,7 +12612,7 @@
   }
 },
 { "id": "queremos_ver_a_cristo_regresar",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Queremos ver a Cristo regresar"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -12721,7 +12722,7 @@
   }
 },
 { "id": "quien_es_el_rey_de_la_selva",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Quién es el rey de la selva"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -12865,7 +12866,7 @@
   }
 },
 { "id": "quien_es_el_rey_de_reyes",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Quien es el Rey de reyes"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -13274,7 +13275,7 @@
   }
 },
 { "id": "salmo_8",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Cuando miro los claros cielos"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -13322,7 +13323,7 @@
   }
 },
 { "id": "salmo_23",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Jehová es mi pastor"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -13641,7 +13642,7 @@
   }
 },
 { "id": "se_una_luz",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Sé una luz"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -13690,7 +13691,7 @@
   }
 },
 { "id": "sentado_estaba_en_mi_barca",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Sentado estaba en mi barca"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -13960,7 +13961,7 @@
   }
 },
 { "id": "si_comenzamos_a_orar",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Si comenzamos a orar"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -14002,7 +14003,7 @@
   }
 },
 { "id": "si_eres_cristiano",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Si el cristiano tiene certeza"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -14057,7 +14058,7 @@
   }
 },
 { "id": "si_jesus_te_satisface",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Si Jesús te satisface"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -14216,7 +14217,7 @@
   }
 },
 { "id": "si_el_espiritu_de_dios",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Si el Espíritu de Dios esta aquí"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -14368,7 +14369,7 @@
   }
 },
 { "id": "somos_la_luz",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Somos la luz"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -14710,7 +14711,7 @@
   }
 },
 { "id": "solo_el_poder_de_dios",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Sólo el poder de Dios"],
   "autor": ["Diego Ibárcena"],
   "compositor": ["Diego Ibárcena"],
   "year": ["Desconocido"],
@@ -15014,7 +15015,7 @@
   }
 },
 { "id": "tomados_de_la_mano",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Tomado de la mano"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -15984,7 +15985,7 @@
   }
 },
 { "id": "un_palacio_tengo",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Un palacio tengo"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -16029,7 +16030,7 @@
   }
 },
 { "id": "una_mirada_de_fe",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Una mirada de fe"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -16049,6 +16050,7 @@
       "partitura": "No",
       "revisado": ["No"],        
       "letra": [
+        "1",
         "[D]Una mirada de fe,",
         "Una mirada de fe,",
         "Es la que [A]puede sal[A7]var al pe[D]cador",
@@ -16057,25 +16059,30 @@
         "Una mirada de fe,",
         "Es la que [A]puede sal[A7]var al pe[D]cador",
         "",
+        "Coro:",
         "Y si tu [G]vienes a Cristo Jesús",
         "[D]El te perdonara",
         "Porque una mirada de [A]fe",
-        "Es la que [A7]puede sal[D]var al pe[cador",
+        "Es la que [A7]puede sal[D]var al pecador",
         "",
+        "2",
         "[D]Una mirada de amor,",
         "Una mirada de amor,",
         "Es la que [A]puede sal[A7]var al pe[D]cado",
         "",
         "[D]Una mirada de amor,",
         "Una mirada de amor,",
-        "Es la que [A]puede sal[A7]var al pe[D]cado"
+        "Es la que [A]puede sal[A7]var al pe[D]cado",
+        "",
+        "Coro",
+        ""
       ],
       "nota": [""]
     }
   }
 },
 { "id": "una_via_che",
-  "titulo_original": ["UNA VIA CHE"],
+  "titulo_original": ["Una via che"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -16090,7 +16097,7 @@
   ],
   "idiomas": {
     "it": {
-      "titulo": ["UNA VIA CHE"],
+      "titulo": ["Una via che"],
       "titulo2": [""],
       "audio_url": "",
       "traductor": [""],
@@ -16146,7 +16153,7 @@
 
 { "_comment23": "LETRA V • -----------------------------------------------------------------------------------------------    LETRA V"  },
 { "id": "vamos_a_adorar",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Vamos a adorar"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -16345,7 +16352,7 @@
   }
 },
 { "id": "vamos_a_henchir",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Vamos a henchir"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -16442,7 +16449,7 @@
   }
 },
 { "id": "vaso_de_honra",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Vaso de honra"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["1999"],
@@ -16476,7 +16483,7 @@
   }
 },
 { "id": "ver_a_la_cruz",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Ver a la cruz"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -17214,7 +17221,7 @@
   }
 },
 { "id": "si_lo_veremos",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Si, lo veremos"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -17270,7 +17277,7 @@
   }
 },
 { "id": "si_tu_triste_estas",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Si tu triste estás"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -17824,7 +17831,7 @@
   }
 },
 { "id": "yo_soy_el_mensaje",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Yo soy el mensaje"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -17879,7 +17886,7 @@
   }
 },
 { "id": "yo_soy_un_c",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Yo soy un C-R-I-S-T-I-A-N-O"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -18055,7 +18062,7 @@
   }
 },
 { "id": "yo_tengo_algo",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Yo tengo algo"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -18165,7 +18172,7 @@
   }
 },
 { "id": "yo_tengo_un_amigo_que_me_ama",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Yo tengo un amigo que me ama"],
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
@@ -18385,7 +18392,7 @@
   }
 },
 { "id": "yo_tengo_gozo_en_mi_alma",
-  "titulo_original": ["Desconocido"],
+  "titulo_original": ["Yo tengo gozo en mi alma"],
   "autor": ["Cesáreo Gabaráin"],
   "compositor": ["Cesáreo Gabaráin"],
   "year": ["Desconocido"],
