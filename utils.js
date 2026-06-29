@@ -296,16 +296,15 @@ function renderPersonLinks(label, value) {
   if (!arr.length) return "";
 
   return `
-    <div>
+    <span>
       <b>${label}:</b>
       ${arr.map(p => `
         <span class="person-link"
-          onclick="openPersonModal('${p}', '${label.toLowerCase()}')"
-          style="cursor:pointer; color:#38bdf8;">
+          onclick="openPersonModal('${p}', '${label.toLowerCase()}')">
           ${p}
         </span>
       `).join(", ")}
-    </div>
+    </span>
   `;
 }
 

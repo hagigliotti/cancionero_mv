@@ -98,8 +98,12 @@ function openSong(id) {
 
   // ===================== META ENRIQUECIDO =====================
   const meta = `
-    <div class="meta">
+    <div class="song-meta">
 
+      <div class="flags">
+        <b>Idiomas:</b> ${renderLanguageFlags(song)}
+      </div>
+      
       <div>
         <b>Original:</b>
         <i>"${normalizeSimple(song.titulo_original)}"</i>
@@ -113,11 +117,18 @@ function openSong(id) {
 
       <div>
         ${renderPersonLinks("Autor", song.autor)}
+        ${song.autor ? " | " : ""}
+
         ${renderPersonLinks("Coautor", song.coautor)}
+        ${song.coautor ? " | " : ""}
+
         ${renderPersonLinks("Compositor", song.compositor)}
+        ${song.compositor ? " | " : ""}
+
         ${renderPersonLinks("Traductor", s.traductor)}
+        ${s.traductor ? " | " : ""}
+
         <b>Año:</b> ${normalizeSimple(song.year)}
-        
       </div>
 
       <div>
@@ -227,13 +238,13 @@ function openSong(id) {
             ${renderRevisadoPersonas(song.idiomas?.[idiomaActual]?.revisado)}
           </span>
 
-      </div>
-      ${renderAudioLink(song, s)}
-      <div class="flags">
-        <b>Idiomas:</b> ${renderLanguageFlags(song)}
+
+        ${renderAudioLink(song, s)}
+        <br>
       </div>
 
     </div>
+
   `;
 
   const nota = song.idiomas?.[idiomaActual]?.nota;
