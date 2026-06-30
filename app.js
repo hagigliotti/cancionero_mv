@@ -141,6 +141,53 @@ function renderListModal({ title, list }) {
     });
 }
 
+function renderPeopleModal({ title, list }) {
+  const cont = document.getElementById("peopleModalLista");
+  const titleEl = document.getElementById("peopleModalTitle");
+
+  titleEl.innerText = title;
+  cont.innerHTML = "";
+
+  if (!list.length) {
+    cont.innerHTML = "<p>No hay resultados.</p>";
+    return;
+  }
+
+  // eliminar duplicados por ID
+  const unique = new Map();
+  list.forEach(song => unique.set(song.id, song));
+  const cleanList = [...unique.values()];
+
+  cleanList
+    .sort((a, b) =>
+      (a.idiomas?.[idiomaActual]?.titulo || "").localeCompare(
+        b.idiomas?.[idiomaActual]?.titulo || "",
+        undefined,
+        { sensitivity: "base" }
+      )
+    )
+    .forEach(song => {
+
+      const titulo = getSongTitle(song);
+
+      if (!titulo || titulo === "Sin título") return;
+
+      const div = document.createElement("div");
+      div.className = "revisado-item";
+
+      const num = getNumeroHimno(song);
+
+      div.innerHTML = `🎵 ${num ? num + " - " : ""}${titulo}`;
+
+      div.onclick = () => {
+        cerrarPeopleModal();
+        openSong(song.id);
+      };
+
+      cont.appendChild(div);
+    });
+}
+
 // SOLO ESTADO CLICKABLE
 function formatRevisadoEstado(value) {
   const [estado] = normalizeRevisado(value);
@@ -160,8 +207,8 @@ function renderRevisadoPersonas(value) {
 async function cargarModales() {
   const modales = [
     "modals/info.html",
-    "modals/afinometro.html",
-    "modals/revised.html"
+    "modals/revised.html",
+    "modals/people.html"
   ];
 
   for (const path of modales) {
@@ -169,6 +216,14 @@ async function cargarModales() {
     const html = await res.text();
     document.body.insertAdjacentHTML("beforeend", html);
   }
+}
+
+function abrirPeopleModal() {
+  document.getElementById("peopleModal").style.display = "block";
+}
+
+function cerrarPeopleModal() {
+  document.getElementById("peopleModal").style.display = "none";
 }
 
 
@@ -913,7 +968,7 @@ function abrirAfinadorDesdeElemento(el, tipo = "tonalidad") {
 }
 
 
-// autor
+// autor - coautor - compositor - traductor
 function openPersonModal(nombre, tipo) {
   const data = getDataActual();
 
@@ -924,14 +979,13 @@ function openPersonModal(nombre, tipo) {
     return campos.some(p => normalize(p).includes(normalized));
   });
 
-  renderListModal({
+  renderPeopleModal({
     title: `${getPersonLabel(tipo)}: ${nombre}`,
     list: filtradas
   });
 
-  document.getElementById("listModal").style.display = "block";
+  abrirPeopleModal();
 }
-
 
 
 function renderMetaCompacto(song, s) {

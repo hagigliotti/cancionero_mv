@@ -247,7 +247,7 @@ function openSong(id) {
       </div>
 
       <div>
-        <b>Tags:</b>
+        <b>Temas:</b>
         ${
           song.tags?.length
             ? [...song.tags]
