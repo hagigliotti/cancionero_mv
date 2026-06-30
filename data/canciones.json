@@ -9434,7 +9434,7 @@
   "titulo_original": ["Cuán gloriosa será la mañana"],
   "autor": ["Felicia Beltrán", "Mariano Beltrán"],
   "compositor": ["Robert C. Savage"],
-  "year": ["1950"],
+  "year": ["≈1950"],
   "tonalidad": ["Sol Mayor (G)"],
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
@@ -13487,18 +13487,10 @@
   "year": ["Desconocido"],
   "tonalidad": ["Do Mayor (C)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": ["San Juan 14:17"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Espíritu Santo",
-    "Evangelismo",
-    "Testimonio"
-  ],
+  "compas": ["4/4"],
+  "ritmo": ["Alegre"],
+  "referencia_biblica": ["San Juan 14:17", "San Mateo 25:1-13", "San Mateo 5:16", "San Marcos 16:15"],
+  "tags": ["Espíritu Santo", "Misión", "Segunda Venida", "Fidelidad", "Clásico", "Alabanza", "Adoración", "Evangelismo", "Testimonio"],
   "idiomas": {
     "es": {
       "titulo": ["Santo Espíritu"],
@@ -13506,8 +13498,9 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
+        "1",
         "[C]Santo Espíritu, [F]llena mi vida,",
         "[C]pues por [Am]Cristo yo [G]quiero brillar.",
         "[C]Santo Es[C7]píritu, [F]llena mi vida,",
@@ -13517,6 +13510,7 @@
         "[C]Alaban[F]zas, ala[G]banzas, ala[C]banzas doy a [F - C]Cristo el Rey.",
         "[C]Alaban[F]zas, ala[G7]banzas, ala[C]banzas doy al Rey.",
         "",
+        "2",
         "[C]Con aceite mi [F]lámpara brilla,",
         "[G]brillará hasta que venga el Rey.",
         "Con aceite mi [F]lámpara brilla,",
@@ -13524,12 +13518,14 @@
         "",
         "Coro",
         "",
+        "3",
         "[C]Quiero dar tu men[F]saje a otros,",
         "[C]hasta que [Am]Cristo vuelva [G]otra vez.",
         "[F]Quiero dar tu men[C]saje a otros,",
         "[C]úsame las [G]almas a sal[C]var.",
         "",
-        "Coro"
+        "Coro",
+        ""
       ],
       "nota": [""]
     }
@@ -13697,18 +13693,10 @@
   "year": ["Desconocido"],
   "tonalidad": ["Re Mayor (D)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
+  "compas": ["4/4"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["San Juan 21:6"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Confianza",
-    "Fe",
-    "Obediencia"
-  ],
+  "referencia_biblica": ["San Juan 21:6", "San Lucas 5:4-6"],
+  "tags": ["Confianza", "Perseverancia", "Obediencia", "Vocación", "Llamado", "Alabanza", "Adoración", "Fe", "Obediencia"],
   "idiomas": {
     "es": {
       "titulo": ["Sentado estaba en mi barca"],
@@ -13716,25 +13704,32 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
-        "[D]Sentado estaba en mi barca mi[A]rando el inmenso [D]mar, [D7-G][D]",
-        "cansado ya de ti[D]rar la red, [Bm]sin un [E]pez sacar, [G-A]",
-        "[A]cuando escuché detrás mío la [D]voz del maestro [D7-G]hablar: [D]",
-        "\"Lanza la [G]red a tu [D]diestra [Bm]y así [G]podrás [A]pescar\". [D]",
+        "1",
+        "Sen[D]tado [A]estaba en mi [D]barca [G]mirando el [A]inmenso [D]mar, [D7]",
+        "[G]cansado ya de ti[D]rar la red, [Bm]sin un pez sa[A]car, ",
+        "[D]cuando escu[A]ché detrás [D]mío [D7] la [G]voz del ma[A]estro [D]hablar:",
+        "[G]Lanza la red a tu [D]diestra y así [Bm]podrás [A]pes[D]car.",
         "",
         "Coro:",
-        "[D]No te des por ven[D7-G]cido, lanza tu [D]red al mar, [G][Bm]",
-        "[E]el mar no está va[A]cío, intenta una vez más.",
-        "[D]No te des por ven[D7]cido, lanza tu [G]red al [D]mar,",
-        "[G]el mar no está va[Bm]cío, in[G-A]tenta una vez [D]más.",
+        "[D]No te des por vencido, [D7] [G]lanza tu red al [D]mar,",
+        "el [G]mar no está va[Bm]cío, intenta [E]una vez [A]más.",
+        "[D]No te des por vencido, [D7] [G]lanza tu red al [D]mar,",
+        "el [G]mar no está va[Bm]cío, intenta [E]una vez [D]más.",
         "",
-        "[D]No escuches a [A]toda la gente en [D]este in[D7]menso [G]mar, [D]",
-        "[G]todos somos muy [Bm]diferentes, [E]te puedes equi[A]vocar.",
-        "[D]Si quieres en [A]esta vida el [D]éxito [D7]alcan[G]zar, [D]",
-        "[G]sólo cuando [D]Cristo te [Bm]diga arroja tu [G-A-D]red al mar.",
+        "2",
+        "No es[D]cuches a [A]toda la [D]gente, [D7] en [G]este in[A]menso [D]mar, [D7]",
+        "[G]todos somos muy dife[Bm]rentes, te puedes [E]equivo[A]car.",
+        "Si [D]quieres [A]en esta vida [D7] el [G]éxito [A]alcan[D]zar,",
+        "[G]sólo cuando Cristo te [D]diga a[Bm]rroja tu [G]red [A]al [D]mar.",
         "",
-        "Coro"
+        "Coro:",
+        "[D]No te des por vencido, [D7] [G]lanza tu red al [D]mar,",
+        "el [G]mar no está va[Bm]cío, intenta [E]una vez [A]más.",
+        "[D]No te des por vencido, [D7] [G]lanza tu red al [D]mar,",
+        "el [G]mar no está va[Bm]cío, intenta [E]una vez [D]más.",
+        ""
       ],
       "nota": [""]
     }
@@ -14003,23 +13998,17 @@
   }
 },
 { "id": "si_eres_cristiano",
-  "titulo_original": ["Si el cristiano tiene certeza"],
-  "autor": ["Desconocido"],
+  "titulo_original": ["If You're Happy and You Know It"],
+  "autor": ["Dr. Alfred B. Smith"],
   "compositor": ["Desconocido"],
-  "year": ["Desconocido"],
+  "year": ["≈1957"],
   "tonalidad": ["Mi Mayor (E)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
+  "compas": ["4/4"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["1 Pedro 4:16"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Infantil",
-    "Dinámica",
-    "Júbilo"
-  ],
+  "referencia_biblica": ["1 Pedro 4:16", "Salmos 100:1-2", "Filipenses 4:4"],
+  "tags": ["Gozo", "Confianza", "Dinámico", "Clásico", "Alabanza", "Júbilo"],
+
   "idiomas": {
     "es": {
       "titulo": ["Si el cristiano tiene certeza"],
@@ -14027,7 +14016,7 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
         "[E]Si el cristiano tiene cer[B]teza, di amén. ¡Amén!",
         "[B7]Si el cristiano tiene cer[E]teza, di amén. ¡Amén!",
@@ -14048,12 +14037,13 @@
         "[B7]Si el cristiano tiene cer[E]teza, haz los tres. ¡Amén!, clap-clap, stomp-stomp",
         "[A]Si el [F#m]cristiano [E]tiene cer[C#m]teza toda la vida es una belleza.",
         "[F#m]Si el [B]cristiano [E]tiene certeza, haz los tres. ¡Amén!, clap-clap, stomp-stomp",
-        "",
-        "Variantes:",
-        " - Si el cristiano tiene certeza, haz al reves. stomp-stomp, clap-clap, ¡Amén!",
-        " - Si el cristiano tiene certeza, hace los seis. ¡Amén!, clap-clap, stomp-stomp, stomp-stomp, clap-clap, ¡Amén!"
+        ""
       ],
-      "nota": [""]
+      "nota": ["Variantes:",
+        " - Si el cristiano tiene certeza, haz al revés. stomp-stomp, clap-clap, ¡Amén!",
+        " - Si el cristiano tiene certeza, hace los seis. ¡Amén!, clap-clap, stomp-stomp, stomp-stomp, clap-clap, ¡Amén!",
+        "",
+        "La melodía se compara frecuentemente con una melodía folclórica tradicional rusa o letona, como la canción soviética de 1936 \"Molodejnaya\" (compuesta por Isaak Dunayevsky para la película Volga-Volga)"]
     }
   }
 },
