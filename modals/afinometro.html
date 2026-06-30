@@ -1,0 +1,137 @@
+<div id="metroModal" class="modal">
+  <div class="modal-content metro-content">
+
+    <span class="close" onclick="cerrarMetronomo()">&times;</span>
+
+    <h2>📟 Metrónomo y Afinador</h2>
+
+    <!-- ===================== TONO / AFINADOR ===================== -->
+    <div class="metro-info">
+      <div class="divider"></div>
+      <!-- ===== SELECTOR DE NOTA DE REFERENCIA ===== -->
+      <div class="reference-tone">
+
+        <b>Nota:</b>
+        <select id="referenceNote">
+          <option value="C">C - Do</option>
+          <option value="C#">C# - Do#</option>
+          <option value="Db">Db - Reb</option>
+          <option value="D">D - Re</option>
+          <option value="D#">D# - Re#</option>
+          <option value="Eb">Eb - Mib</option>
+          <option value="E">E - Mi</option>
+          <option value="F">F - Fa</option>
+          <option value="F#">F# - Fa#</option>
+          <option value="Gb">Gb - Solb</option>
+          <option value="G">G - Sol</option>
+          <option value="G#">G# - Sol#</option>
+          <option value="Ab">Ab - Lab</option>
+          <option value="A">A - La</option>
+          <option value="A#">A# - La#</option>
+          <option value="Bb">Bb - Sib</option>
+          <option value="B">B - Si</option>
+        </select>
+
+        <select id="referenceOctave">
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4" selected>4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+
+        <button onclick="playReferenceTone()">🔊 Play</button>
+
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="tuner-row">
+        <b>Afinación:</b>
+        <button id="micBtn" onclick="toggleMic()">🎤</button>
+        <!--<button id="toneBtn" onclick="playReferenceTone()">🔊</button>-->
+      </div>
+
+      <!-- ===== AFINADOR ===== -->
+      <div class="tuner-targets">
+        <button onclick="selectTargetNote('C')">C</button>
+        <button onclick="selectTargetNote('D')">D</button>
+        <button onclick="selectTargetNote('E')">E</button>
+        <button onclick="selectTargetNote('F')">F</button>
+        <button onclick="selectTargetNote('G')">G</button>
+        <button onclick="selectTargetNote('A')">A</button>
+        <button onclick="selectTargetNote('B')">B</button>
+      </div>
+
+      <div class="tuner-display">
+        <div id="tunerNote">-</div>
+        <div class="tuner-meter">
+          <div id="tunerNeedle"></div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- ===== COMPÁS ===== -->
+      <div class="compas-selector">
+
+        <b>Compás:</b>
+        <span id="metroCompas">4/4</span>
+
+        <button onclick="setCompas('2/4')">2/4</button>
+        <button onclick="setCompas('3/4')">3/4</button>
+        <button onclick="setCompas('4/4')">4/4</button>
+
+      </div>
+
+      <!-- ===== SUBDIVISIÓN ===== -->
+      <div class="metro-subdivision">
+
+        <b>Subdivisión:</b>
+        <button onclick="setSubdivision(1)" title="Negra (1 golpe por tiempo)">♩</button>
+        <button onclick="setSubdivision(2)" title="Corcheas (2 subdivisiones por tiempo)">♪</button>
+        <!--<button onclick="setSubdivision(3)" title="Tresillos (3 subdivisiones por tiempo)">𝅘𝅥𝅮</button>-->
+        <button onclick="setSubdivision(4)" title="Semicorcheas (4 subdivisiones por tiempo)">♬</button>
+        <!--<button onclick="setSubdivision(8)" title="Fusas 1/32 (8 subdivisiones por tiempo)">𝅘𝅥𝅯</button>-->
+
+      </div>
+      <!-- <div class="divider"></div> -->
+    </div>
+
+    <!-- ===================== METRÓNOMO ===================== -->
+    <div class="metro-bpm-box">
+
+      <button onclick="changeBpm(-1)">−</button>
+
+      <input
+        type="number"
+        id="metroBpm"
+        value="90"
+        min="20"
+        max="300"
+      />
+
+      <button onclick="changeBpm(1)">+</button>
+
+    </div>
+
+    <div class="metro-label">BPM</div>
+
+    <div id="metroBeat" class="metro-beat"></div>
+
+    <!-- ===================== CONTROLES ===================== -->
+    <!--<div class="divider"></div> -->
+    <div class="metro-controls">
+
+      <button id="metroPlayBtn" onclick="toggleMetronomo()">
+        ▶️ Play
+      </button>
+
+      <button id="metroSoundBtn" onclick="toggleMetroSound()">
+        🔊 Sonido
+      </button>
+
+    </div>
+    
+  </div>
+</div>
