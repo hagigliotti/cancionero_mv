@@ -156,8 +156,27 @@ function renderRevisadoPersonas(value) {
   return ` - ${personas.join(", ")}`;
 }
 
+// ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
+async function cargarModales() {
+  const modales = [
+    "modals/info.html",
+    "modals/afinometro.html",
+    "modals/revised.html"
+  ];
+
+  for (const path of modales) {
+    const res = await fetch(path);
+    const html = await res.text();
+    document.body.insertAdjacentHTML("beforeend", html);
+  }
+}
+
+
 // ===================== INIT ===============================================================   =====================
 async function init() {
+
+  await cargarModales(); // 👈 AQUI
+
   const res1 = await fetch(DATA_URLS.cancionero);
   const res2 = await fetch(DATA_URLS.himnario);
   const res3 = await fetch(DATA_URLS.campamento);
