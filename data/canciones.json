@@ -1773,7 +1773,11 @@
   "titulo_original": ["Brilla en mí"],
   "autor": ["Ariel Quispe", "David Guerrero"],
   "compositor": ["Ariel Quispe", "David Guerrero"],
+  "year": ["Desconocido"],
   "tonalidad": ["Do Mayor (C)"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 90:17"],
   "tags": [""],
 
@@ -3495,7 +3499,7 @@
         "Pro[F]clamo de los [C]montes que [F]Dios te [G]ama a [Am]ti",
         "Te [F]ama a ti, me ama a[C]mí, nos [Dm]ama [G]el Se[C]ñor."
       ],
-      "nota": ["Algunas versiones cominenzan con: \"Con solo una chispa puede arder el fuego\"."]
+      "nota": ["Algunas versiones cominenzan con la frase: \"Con solo una chispa puede arder el fuego, y los de alrededor ya sienten su calor\"."]
     }
   }
 },
@@ -10694,19 +10698,13 @@
   "titulo_original": ["Behold what manner of love"],
   "autor": ["Patricia Van Tine"],
   "compositor": ["Patricia Van Tine"],
-  "year": ["Desconocido"],
+  "year": ["1978"],
   "tonalidad": ["Do Mayor (C)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
+  "compas": ["4/4"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["1 Juan 3:1"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Amor del Padre",
-    "Hijos de Dios"
-  ],
+  "tags": ["Amor de Dios", "Identidad", "Filiación", "Escuela Sabática", "Clásico", "Alabanza", "Hijos de Dios", "Canon"],
   "idiomas": {
     "es": {
       "titulo": ["Mirad cual amor"],
@@ -10714,17 +10712,19 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
-        "[C]Mirad cuál amor nos ha [F]dado el Padre [C]",
-        "[C]al hacernos [G]hijos de Dios.",
-        "[F]Mirad cuál amor nos ha dado el Padre",
-        "[G]al hacernos [C]hijos de Dios.",
+        "1",
+        "Mi[C]rad cuál amor nos ha [F]dado el Padre",
+        "al [C]hacernos hijos de [G]Dios.",
+        "[C]Mirad cuál amor nos ha [F]dado el Padre",
+        "al [C]hacernos [G]hijos de [C]Dios.",
         "",
-        "[C-F]Para ser lla[C]mados hijos de [G]Dios,",
-        "[C-F]para ser lla[C]mados hijos de [G]Dios."
+        "Coro:",
+        "[C]Para [F]ser lla[C]mados hijos de [G]Dios,",
+        "[C]para [F]ser lla[C]mados [G]hijos de [C]Dios."
       ],
-      "nota": [""]
+      "nota": ["Su diseño melódico original está pensado para ser interpretado también como un canon a dos o más voces."]
     }
   }
 },
@@ -12475,21 +12475,12 @@
   "autor": ["Desconocido"],
   "compositor": ["Desconocido"],
   "year": ["Desconocido"],
-  "tonalidad": ["Sol Mayor (G)"],
+  "tonalidad": ["Do Mayor (C)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
+  "compas": ["4/4"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": [""],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Comunión",
-    "Súplica",
-    "Consagración",
-    "Presencia Divina"
-  ],
+  "referencia_biblica": ["San Lucas 24:29", "1 Corintios 6:19"],
+  "tags": ["Presencia de Dios", "Adoración", "Consagración", "Clásico", "Alabanza", "Comunión", "Súplica"],
   "idiomas": {
     "es": {
       "titulo": ["Quédate Señor"],
@@ -12497,21 +12488,21 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
-        "[G]Quédate Señor, quédate Señor",
-        "[D]quédate Señor en cada [G]corazón,",
-        "[G]quédate Señor, quédate Señor",
-        "[D]quédate Se[D7]ñor en [G]mí.",
+        "1",
+        "[C]Quédate Señor, [F]quédate Señor",
+        "[G]quédate Señor en [C]cada corazón,",
+        "[C]quédate Señor, [F]quédate Señor",
+        "[G]quédate Señor en [C]mí.",
         "",
-        "[C]Oh, Cristo [D]mío haz de mi alma",
-        "[G]un al[C]tar, para a[D]dorarte",
-        "[G]con devoción.",
-        "[C]Oh Cristo [D]mío haz de mi alma",
-        "[G]un al[C]tar, para adorarte",
-        "[D]de [D7]todo cora[G]zón."
+        "Coro:",
+        "Oh, Cristo [G]mío haz de mi alma un al[C]tar", 
+        "para a[G]dorarte con devo[C]ción.",
+        "Oh Cristo [G]mío haz de mi alma un al[C]tar", 
+        "para ado[F]rarte de [G]todo cora[C]zón."
       ],
-      "nota": [""]
+      "nota": ["Su letra se inspira en el ruego de los discípulos camino a Emaús ('Quédate con nosotros')"]
     }
   }
 },
