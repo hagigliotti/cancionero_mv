@@ -1401,4 +1401,14 @@ body.projector .song-note {
 }
 
 
-/* para toda la informacion antes de la cancion */
+/* BIBLIOTECA */
+.biblioteca-link {
+  color: var(--sky);   /* tu turquesa */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.biblioteca-link:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}

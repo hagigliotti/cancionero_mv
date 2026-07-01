@@ -12,6 +12,8 @@ let canciones = [];
 let himnos = [];
 let campamento = [];
 
+let biblioteca = [];
+
 let listaVisible = false;
 let letraActiva = null;
 
@@ -188,6 +190,46 @@ function renderPeopleModal({ title, list }) {
     });
 }
 
+// Biblioteca modal
+function renderBiblioteca(data) {
+  const cont = document.getElementById("bibliotecaLista");
+  cont.innerHTML = "";
+
+  if (!data.length) {
+    cont.innerHTML = "<p>No hay resultados</p>";
+    return;
+  }
+
+  data.forEach(item => {
+    const div = document.createElement("div");
+    div.className = "revisado-item";
+
+    const creditos = item.creditos || [];
+    const nombreDerechos = creditos[0];
+    const linkDerechos = creditos[1];
+
+    div.innerHTML = `
+      📕 <b>"${item.titulo}"</b><br>
+      ✍️ ${item.autor || "-"}<br>
+
+      ${nombreDerechos ? `
+        📜 Derechos:
+        <a class="biblioteca-link" href="${linkDerechos}" target="_blank">${nombreDerechos}</a>
+        <br>
+      ` : ""}
+
+      📖 ${item.tipo || "-"}<br><br>
+
+      <a class="biblioteca-link" href="${item.descarga}" target="_blank">⏬ Descargar</a>
+      ${item.permiso ? ` | <a class="biblioteca-link" href="${item.permiso}" target="_blank">📄 Permiso de utilización</a>` : ""}
+
+      <hr>
+    `;
+
+    cont.appendChild(div);
+  });
+}
+
 // SOLO ESTADO CLICKABLE
 function formatRevisadoEstado(value) {
   const [estado] = normalizeRevisado(value);
@@ -208,7 +250,8 @@ async function cargarModales() {
   const modales = [
     "modals/info.html",
     "modals/revised.html",
-    "modals/people.html"
+    "modals/people.html",
+    "modals/biblioteca.html"
   ];
 
   for (const path of modales) {
@@ -235,6 +278,9 @@ async function init() {
   const res1 = await fetch(DATA_URLS.cancionero);
   const res2 = await fetch(DATA_URLS.himnario);
   const res3 = await fetch(DATA_URLS.campamento);
+
+  const resBiblioteca = await fetch("data/biblioteca.json");
+  biblioteca = await resBiblioteca.json();
 
   const saved = localStorage.getItem("tablatura");
   tablaturaVisible = saved !== "off";
@@ -274,6 +320,17 @@ async function init() {
   document.getElementById("indice").classList.add("hidden");
 
   document.getElementById("buscador").addEventListener("input", e => search(e.target.value));
+
+  document.getElementById("bibliotecaSearch").addEventListener("input", e => {
+    const q = normalize(e.target.value);
+
+    const filtered = biblioteca.filter(b => {
+      return normalize(b.titulo).includes(q) ||
+            normalize(b.autor).includes(q);
+    });
+
+    renderBiblioteca(filtered);
+  });
 
   document.getElementById("idioma").addEventListener("change", e => {
       if (libroActual === "himnario") return;
@@ -967,6 +1024,15 @@ function abrirAfinadorDesdeElemento(el, tipo = "tonalidad") {
   }
 }
 
+// Biblioteca para descargar
+function abrirBiblioteca() {
+  document.getElementById("bibliotecaModal").style.display = "block";
+  renderBiblioteca(biblioteca);
+}
+
+function cerrarBiblioteca() {
+  document.getElementById("bibliotecaModal").style.display = "none";
+}
 
 // autor - coautor - compositor - traductor
 function openPersonModal(nombre, tipo) {
