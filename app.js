@@ -292,6 +292,8 @@ async function init() {
   himnos = (await res2.json()).map(normalizeSong);
   campamento = (await res3.json()).map(normalizeSong);
 
+  actualizarEstadisticas();
+
   const savedLibro = localStorage.getItem("libro");
   const savedIdioma = localStorage.getItem("idioma");
   libroActual = localStorage.getItem("libro") || "cancionero";
@@ -1124,4 +1126,49 @@ function renderMetaCompacto(song, s) {
 
     </div>
   `;
+}
+
+// =====================================================
+// ESTADÍSTICAS DEL CANCIONERO
+// =====================================================
+function actualizarEstadisticas() {
+
+  // unir los 3 libros
+  const todas = [
+    ...canciones,
+    ...himnos,
+    ...campamento
+  ];
+
+  // ------------------------------------
+  // Total de canciones
+  // ------------------------------------
+  const totalCanciones = todas.length;
+
+  // ------------------------------------
+  // Canciones traducidas
+  // (más de un idioma)
+  // ------------------------------------
+  let traducidas = 0;
+
+  // ------------------------------------
+  // Idiomas utilizados
+  // ------------------------------------
+  const idiomas = new Set();
+
+  todas.forEach(song => {
+
+    const langs = Object.keys(song.idiomas || {});
+
+    langs.forEach(lang => idiomas.add(lang));
+
+    if (langs.length > 1) {
+      traducidas++;
+    }
+
+  });
+
+  document.getElementById("totalCanciones").textContent = totalCanciones;
+  document.getElementById("totalTraducidas").textContent = traducidas;
+  document.getElementById("totalIdiomas").textContent = idiomas.size;
 }
