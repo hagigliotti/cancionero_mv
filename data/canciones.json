@@ -1145,6 +1145,7 @@
       "partitura": "No",
       "revisado": ["Si", "Rolando"],        
       "letra": [
+        "",
         "A[G]migo tengo que me ama,",
         "me [D]ama, me [G]ama.",
         "Amigo tengo que me ama,",
@@ -1541,6 +1542,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "You are here, moving in our midst, I worship You, I worship You.",
         "You are here, working in this place, I worship You, I worship You.",
         "",
@@ -1662,6 +1664,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Avancemos [G]en la [D]luz, [A]",
         "Con [D]fe y con [G]valor luchemos, u[D]nidos",
         "[A]por una [D-D7]meta igual.",
@@ -2081,6 +2084,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[SOL]Blessed Be Your [RE]Name",
         "[MI-]In the land that is [DO]plentiful",
         "[SOL]Where Your streams of [RE]abundance flow",
@@ -2202,6 +2206,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[E]Cada día con Cristo,",
         "[E7]me llena de perfecta [B7]paz,",
         "cada día con Cristo, le amo [E]más y más.",
@@ -2373,6 +2378,7 @@
       "partitura": "No",
       "revisado": ["No"],        
       "letra": [
+        "",
         "Como é bom acordar e sentir o calor,",
         "Levantar e cantar ao Senhor com fervor.",
         "Como é bom perceber que o sol já brilhou,",
@@ -2457,6 +2463,7 @@
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
+        "",
         "[A]Gozándome yo voy al hogar ce[E]lestial",
         "caminando, cami[A]nando.",
         "Pues no me importa más el placer terre[E]nal",
@@ -2702,7 +2709,7 @@
   "titulo_original": ["Louvai a Deus"],
   "autor": ["Flavio Regis", "Jamir"],  
   "compositor": ["Flavio Regis", "Jamir"],
-  "year": [""],  
+  "year": ["Desconocido"],  
   "tonalidad": ["Mi Mayor (E)", "Mi menor (Em)"],
   "tempo_bpm": [""],
   "compas": ["4/4"],
@@ -2752,6 +2759,7 @@
       "partitura": "No",
       "revisado": ["No"],               
       "letra": [
+        "",
         "Vales, montanhas, planícies, louvai,",
         "Luas, estrelas, planetas, louvai,",
         "Lagos e rios, ondas do mar, louvai.",
@@ -2767,7 +2775,7 @@
   "titulo_original": ["Testify to love"],
   "autor": ["Paul Field"],  
   "compositor": ["Paul Field"],  
-  "year": [""],
+  "year": ["Desconocido"],
   "tonalidad": ["Sol Mayor (G)", "La Mayor (A)"],
   "tempo_bpm": [""],
   "compas": ["4/4"],
@@ -2861,6 +2869,7 @@
       "partitura": "No",
       "revisado": ["No"],            
       "letra": [
+        "",
         "Over the mountains and the sea",
         "Your river runs with love for me",
         "And I will open up my heart",
@@ -2880,7 +2889,7 @@
   "compositor": ["Desconocido"],
   "tonalidad": ["La Mayor (A)"],
   "referencia_biblica": ["Romanos 9:9-10", "Salmos 92:1-2", "Salmos 5:3", "Isaías 40:31"],
-  "year": [""],  
+  "year": ["Desconocido"],  
   "tempo_bpm": [""],
   "compas": ["4/4"],
   "ritmo": [""],
@@ -2895,6 +2904,7 @@
       "partitura": "No",
       "revisado": ["No"],            
       "letra": [
+        "",
         "Con un [A]canto de ala[E]banza te [F#m]hago son[C#m]reír, [D]",
         "Je[A]sús, [Bm]siempre cantaré de [E]ti.",
         "",
@@ -2916,7 +2926,7 @@
   "compositor": ["Enrique S. Turrall"],
   "tonalidad": ["Sol Mayor (G)"],
   "referencia_biblica": ["Salmos 32:11", "Salmos 96:1-2", "Deuteronomio 31:6"],
-  "year": [""],  
+  "year": ["Desconocido"],  
   "tempo_bpm": [""],
   "compas": ["4/4"],
   "ritmo": ["Alegre"],
@@ -2962,6 +2972,7 @@
       "partitura": "No",
       "revisado": ["No"],              
       "letra": [
+        "",
         "Joyfully we sing here of the Savior's grace",
         "Telling of His love in every time and place",
         "Wishing all the world to know the Savior's name",
@@ -2992,6 +3003,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "Intro:", "[E] - [Bm] - [A] - [B7] (2 veces)",
         "",
         "[E]¡Celebrad a [A]Cristo, [B7]celeb[E]rad! [E-A-B7-E]",
@@ -3013,7 +3025,7 @@
   "compositor": ["Desconocido"],
   "tonalidad": ["Do Mayor (C)", "Re Mayor (D)"],
   "referencia_biblica": ["Salmos 118:24", "Romanos 5:1", "1 Tesalonicenses 4:16-17", "Salmos 13:5"],
-  "year": [""],  
+  "year": ["Desconocido"],  
   "tempo_bpm": [""],
   "compas": ["4/4"],
   "ritmo": [""],
@@ -3063,6 +3075,7 @@
       "partitura": "No",
       "revisado": ["No"],             
       "letra": [
+        "",
         "Neste momento me alegrarei",
         "E louvarei ao meu Salvador.",
         "Vou exaltar o Seu eterno amor,",
@@ -3099,6 +3112,7 @@
       "partitura": "No",
       "revisado": ["No"],             
       "letra": [
+        "",
         "[G]Cerca de Jesús [C]siempre [D]quiero es[G]tar,",
         "[Bm]pues lo que nece[C]sito [Em]siempre encuentro junto a [C]ti.",
         "[G]Quiero caminar [C]junto a [D]ti, Se[G]ñor,",
@@ -3118,6 +3132,7 @@
       "partitura": "No",
       "revisado": ["No"],            
       "letra": [
+        "",
         "Draw me close to You, never let me go",
         "I lay it all down again to hear You say that I'm Your friend",
         "You are my desire, no one else will do",
@@ -3222,6 +3237,7 @@
       "revisado": ["Si", "Rolando"],      
 
       "letra": [
+        "",
         "[G]Como las [Am]olas [D7]del enorme [G]mar",
         "[G]el amor de [Am]Cristo [D7]todo es para [G]mí.",
         "",
@@ -3323,6 +3339,7 @@
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
+        "",
         "Con [E]Cristo en mi alma sonrei[A]ré como el sol,",
         "[B7]sonreiré como el sol, [E]sonreiré como el sol.",
         "Con [E]Cristo en mi alma sonrei[A]ré como el sol,",
@@ -3398,6 +3415,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "Con Jesús en la familia ¡Qué hogar feliz!,",
         "¡Qué hogar feliz!, ¡Qué hogar feliz!",
         "Con Jesús en la familia ¡Qué hogar feliz!",
@@ -3440,6 +3458,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[A]Con Jesús soy feliz",
         "[D]porque sé que [E]Él me ama.",
         "[A]Con Jesús soy feliz",
@@ -3524,6 +3543,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Sé que el día llegará, [G]junto a ti po[D]dré estar.",
         "[Bm]Cara a cara te ve[F#m]ré, rodeado en tu po[A]der.",
         "[D]Se apaga mi temor en la [G]luz de tu a[D]mor,",
@@ -3638,6 +3658,7 @@
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
+        "",
         "Intro: [G] - [D] - [Am] -- [G]",
         "",
         "1",
@@ -3721,6 +3742,7 @@
       "partitura": "No",
       "revisado": ["Si", "Rolando"],        
       "letra": [
+        "",
         "[C]Cristo me ama, [Am]esto [Em]sé",
         "[F]Su palabra [C]dice asi",
         "[C]Los pequeños [Am]son de [Em]Él",
@@ -3756,6 +3778,7 @@
       "partitura": "No",
       "revisado": ["Si", "Rolando"],         
       "letra": [
+        "",
         "(clap - clap - thigh-slap)",
         "(clap - clap - thigh-slap)",
         "",
@@ -3795,6 +3818,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Cristo manda que subamos [G]más",
         "Que subamos [C]más",
         "[C]Mirando al mundo bajaremos [G]más",
@@ -3829,6 +3853,7 @@
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
+        "",
         "Cristo [E]rompe las ca[A]denas",
         "Cristo [B7]rompe las ca[E]denas",
         "Cristo rompe las ca[A]denas",
@@ -3864,6 +3889,7 @@
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
+        "",
         "[E]Cristo un año [B7]más te dio, lo pasaste [E]bien.",
         "[E]Y te ofrece [B7]con amor otro más tam[E]bién.",
         "[E]Un feliz cum[B7]ple[E]años Cristo te da[B7]rá.",
@@ -4071,6 +4097,7 @@
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
+        "",
         "Intro:",
         "[Bm] - [G - F#] - - [G - F#] - - [F# - Bm]",
         "",
@@ -4113,6 +4140,7 @@
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
+        "",
         "[G]Cuando empieza el santo sábado,",
         "¡qué alegría que me [D]da",
         "el estar con mis hermanos",
@@ -4192,6 +4220,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[E]Me enseñó la arena que mi [F#m]huella dejaré,",
         "y [A]que no serán mis pies los que me [E - A]guíen.",
         "[E]Aprendí del tiempo que no lo [F#m]puedo tener,",
@@ -4288,6 +4317,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[DO]Viva è in me l'im[SOL]magine del [LA-]giorno in cui",
         "Tu ritornerai quaggiù, Signor Gesù;",
         "[FA]vedo [DO]già i [RE-]colori dell'[LA-]arcobaleno",
@@ -4341,6 +4371,7 @@
       "partitura": "No",
       "revisado": ["No"],        
       "letra": [
+        "",
         "Cuan bueno cuan maravilloso es que vivamos en",
         "comunión cuan bueno cuan maravilloso es que",
         "vivamos en comunión",
@@ -4432,6 +4463,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Da una sonrisa, una sonrisa cierta,",
         "[A]una sonrisa a[D]bierta, llena de amor.",
         "",
@@ -4470,6 +4502,7 @@
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
+        "",
         "Coro:",
         "Que [C]todo lo que [G]soy a[D]labe al Se[Em]ñor",
         "Con [C]todo mi [G]cora[D]zón",
@@ -4521,6 +4554,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "Rit. [FA]Bless the Lord [DO]oh my soul",
         "[SOL]Oh my [LA-]soul",
         "[FA]Worship [DO]His [SOL]Holy name",
@@ -4591,6 +4625,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Da una son[A]risa, una sonrisa [D]cierta,",
         "una sonrisa [A]abierta, llena de a[D]mor.",
         "[D]Da una son[A]risa, una sonrisa [D]cierta,",
@@ -4627,6 +4662,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Dad [Dm]gloria al Se[C/E - G]ñor",
         "Dad gloria al Señor",
         "[C]pues [G]Él merece todo ho[C - Ab - Bb]nor.",
@@ -4665,6 +4701,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[E]Dad gracias de co[B]razón, dad gracias al [C#m]Santísimo, [G#m]",
         "[A]dad gracias por[E/G#]que ha dado a su [D]hijo Je[B]sús.",
         "[E]Dad gracias de co[B]razón, dad gracias al [C#m]Santísimo, [G#m]",
@@ -4702,6 +4739,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[A]De mañana al desper[F#m]tar,",
         "[D]de mañana al desper[A]tar,",
         "[A]de mañana al desper[F#m]tar,",
@@ -4745,6 +4783,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[E]Hay montañas que tengo que mo[B]ver",
         "con la [C#m7]fe que no duda de [A]nada.",
         "[E]Hay batallas que tengo que ven[B]cer",
@@ -4811,6 +4850,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[E]Dame un nuevo cora[A]zón, Señor,",
         "[B]un corazón para ado[E]rarte,",
         "[C#m]un corazón para [F#m]servirte,",
@@ -4849,6 +4889,7 @@
       "partitura": "No",
       "revisado": ["Si", "Rolando"],     
       "letra": [
+        "",
         "[D]De gloria en [A]gloria te [Bm]veo. [D7]",
         "[G]Cuanto más te co[D]nozco",
         "[E]quiero saber más de [A]ti.",
@@ -4887,6 +4928,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[A]Demos gracias al Señor, [D]demos [A]gracias,",
         "demos [E7]gracias por su [A]amor.",
         "[A]Demos gracias al Señor, [D]demos [A]gracias,",
@@ -4927,6 +4969,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[Em]No quiero vivir pensando en el mañana, yo quiero ser fe[D]liz.",
         "[Em]Días vienen y van, yo no temeré, puedo confiar en [D]ti.",
         "[Bm]Si el futuro in[G]cierto es, [Bm]seguiré ade[G]lante con fe.",
@@ -4979,6 +5022,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]He oído de una tierra her[C]mosa y so[G]ñada,",
         "un lu[G]gar donde la ale[C]gría es to[G]tal.",
         "Con mis [Em]ojos la diviso no muy [Cm]distante, [G][G/B]",
@@ -5030,6 +5074,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[A]Dios de gloria, [C#m]yo te adoro,",
         "[D]mi [E]Rey de honra y majes[A]tad.",
         "[A]Con mi alma yo ce[C#m]lebro",
@@ -5070,6 +5115,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Gracias por la cruz, oh [C]Dios,",
         "[G]el precio que pa[C]gaste [D]por [G]mí",
         "Llevando mi pe[Em]cado allí.",
@@ -5112,6 +5158,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Dios, al[C]zamos hoy tu [D]nombre,",
         "[G]te can[C]tamos ala[D]banzas,",
         "[G]está tu a[C]mor en nuestras [D]vidas,",
@@ -5186,6 +5233,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Dios de Israel, [Bm]Cristo Jesús,",
         "habita en [G]mí, Espíritu, [D]luz.",
         "",
@@ -5221,6 +5269,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C#m]Todo lo cre[A]aste:",
         "[B]la [C#m]tierra, cielo y [A]mar.",
         "[B]Los cielos son tu [C#m]tabernáculo, [A]",
@@ -5271,6 +5320,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[A]Dios es nuestro amparo y forta[C#m]leza,",
         "[D]nuestro pronto au[E]xilio en las tribu[A]laciones,",
         "[Bm]por tanto no te[E]merá mi co[A E F#m]razón",
@@ -5312,6 +5362,7 @@
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
+        "",
         "[C]Dios es[G]tá a[Am]quí, ¡Aleluya! [C7]",
         "[F]tan cierto como el aire [G]que res[C]piro, [C7]",
         "[F]tan cierto como la [G]mañana se le[C]va[G]an[Am]ta,",
@@ -5342,6 +5393,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Cuando andamos por la vida [Em]sin destino o di[F]rección, [G]",
         "[C]cuando faltan los a[Em]migos, autoes[F]tima y emo[E]ción,",
         "[Am]Dios nos llama por el [C/G]nombre, [F]puede ver nuestro can[C/E]sancio,",
@@ -5406,6 +5458,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Dios, [F]que tu [C]luz pueda [C/E]ilu[F]minar [G]todo nuestro [C]ser.",
         "[C]Dios, [F]que tu [C]luz pueda [C/E]ilu[F]minar [G]todo nuestro [C]ser.",
         "",
@@ -5449,6 +5502,7 @@
       "partitura": "No",
       "revisado": ["No"],        
       "letra": [
+        "",
         "Coro:",
         "[La] Dios tu sabes [Mi] que te amo [Fa#m]",
         "[Sim7] que tienes mi [Sibm] vida en tus [Sim7] manos",
@@ -5491,6 +5545,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Dulce oración, dulce [F]oración, de [C]toda",
         "influencia mundanal",
         "[G]Elevas tu mi corazón,",
@@ -5591,6 +5646,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]En tus manos [G]rotas vi, [Am]todo tu amor [Em]por mí,",
         "[F]comprendí en[Dm]tonces tu amis[G]tad.",
         "[C]Me ha comprado tu [G]dolor,",
@@ -5749,6 +5805,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]El amor de Cristo es dulce y grande,",
         "[A]el amor de Cristo es dulce y grande,",
         "[D]el amor de Cristo es dulce y grande,",
@@ -5784,6 +5841,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Cuando vengo a ti quiero ala[A]bar, [Em]adorarte a [A]ti.",
         "[D]Quiero ofrecer un canto [A]digno a ti, que me [Em]aceptes Se[A]ñor.",
         "[Em]Más que una [D/F#]simple can[A]ción, yo te traigo, [Em]Señor, todo [D]mi cora[A]zón.",
@@ -5891,6 +5949,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[A]Si me falta pa[D]sión, toca [A]mi cora[D]zón,",
         "[F#m]y mis [C#m]ojos ve[D]rán lo que tú [E]vas a hacer.",
         "[A]Si algo no [D]puedo ver, [A]fortalece [D]mi fe,",
@@ -5942,6 +6001,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]El mundo [D]aún tiene muchas be[Em]llezas",
         "[C]que alegran la [D]vida y nos hacen so[G - C/G]ñar.",
         "[G]Lugares sin [D]par de la natu[Em]raleza",
@@ -5992,6 +6052,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[Eb/G]Oh, qué [F/A]triste [Bb]fue ese a[Cm]mane[Bb/D]cer;",
         "[Eb]Cristo entre[Bb/D]gado [Cm7]para mo[F]rir.",
         "[Eb/G]Siendo [F/A]justo y [Bb]fiel, conde[Cm]nado [Bb/D]fue,",
@@ -6090,6 +6151,7 @@
       "partitura": "No",
       "revisado": ["No"], 
       "letra": [
+        "",
         "[Estrofa 1]",
         "En mi [G]alma suena un cantar,",
         "un cantar de [A7]paz y [D7]amor;",
@@ -6133,6 +6195,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Todos mis tesoros pueden [Bm]desa[G]parecer,",
         "[G]lo que amo hoy tal vez ma[D]ñana ya no es[A]té.",
         "[G]Pero a mi lado siempre [Bm]alguien estará,",
@@ -6183,6 +6246,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]En mo[Bm]mentos a[Em]sí yo canto can[A]ción,",
         "[Em]canción de a[A]mor a mi [D]Cris[A]to.",
         "[D]En mo[Bm]mentos a[Em]sí yo busco al Se[A]ñor,",
@@ -6218,6 +6282,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[Em - C]Sin ti, Señor, [G - D]polvo soy.",
         "[Em - C]Ningún valor, [G]barro soy.",
         "[Am]Yo no voy a [C]cuestionar",
@@ -6260,6 +6325,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Vivimos hoy sin aten[A]ción",
         "[Em]y las personas [C]piden compren[A]sión.",
         "[D]Jesús murió y así mos[F#m]tró",
@@ -6325,6 +6391,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]No quiero pen[Bm]sar",
         "[Am]ni recordar lo [C/D]que he dejado.",
         "[G]Aquello que Dios co[Bm]menzó",
@@ -6373,6 +6440,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[Verse 1]",
         "[A]Oh Cristo yo quiero expresar",
         "[D]Mi gran alegría sin par",
@@ -6434,6 +6502,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Oh, Señor, en ti he confi[F]ado,",
         "pongo en tus manos mi Es[F]píri[C]tu.",
         "[C]Oh, Señor, me has redi[F]mido",
@@ -6499,6 +6568,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Eres mi refugio y mi [Bm]fortaleza,",
         "[G]mi socorro eterno, eres mi a[D]brigo.",
         "[D]Eres mi refugio y mi [Bm]fortaleza,",
@@ -6554,6 +6624,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Eres mi respi[C]rar, [G]eres mi respi[C]rar.",
         "[G]Dios, [D]tu pre[Em]sencia [C]vive [Em]en [D]mí.",
         "[G]Eres mi [C]pan, Señor. [G]Eres mi [C]pan, Señor.",
@@ -6588,6 +6659,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Eres mi [A]fuerza y mi po[Bm]der,",
         "el [F#m]gran tesoro que bus[G]qué,",
         "eres mi [A]todo, [D - A]Dios.",
@@ -6633,6 +6705,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Eres tú la [G]única razón",
         "de mi [Am]adoración, oh Je[F]sús.",
         "[C]Eres tú la [G]esperanza que",
@@ -6678,6 +6751,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[E]Es exaltado, en lo [C#m]alto exaltado",
         "[A]es el Rey, le ala[B]baré.",
         "[E]Es exaltado, por [C#m]siempre exaltado",
@@ -6713,6 +6787,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Espíritu Santo, anhelo tu pre[G]sencia,",
         "[F]con [Fm]poder y gloria llena este lu[C]gar.",
         "[C]Espíritu Santo, anhelo tu pre[G]sencia,",
@@ -6751,6 +6826,7 @@
       "partitura": "No",
       "revisado": ["No"],        
       "letra": [
+        "",
         "[G]Estamos de fiesta con Jesus",
         "al cielo queremos [D]ir,",
         "estamos reunidos en la mesa,",
@@ -6796,6 +6872,7 @@
       "partitura": "No",
       "revisado": ["No"],        
       "letra": [
+        "",
         "(Intro: C - G - C)",
         "",
         "[C]¿Estamos tristes?",
@@ -6833,6 +6910,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Éste es mi de[Bm]seo, [G]hon[D]rarte a [A]ti,",
         "[Bm]con todo mi [D]ser, te adoro a [C - G - A]ti.",
         "[D]Con todas mis [Bm]fuerzas te [G]ala[D]ba[A]ré,",
@@ -6868,6 +6946,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Cú[G/B]breme [Am]con tu a[F]mor, [D/F#][G]",
         "[C]con poder pro[F]tégeme, [Dm]Se[G]ñor.",
         "[C]Guár[G/B]dame, [Am]Señor, en [F]ti, [D/F#][G]",
@@ -6915,6 +6994,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[RE]E' bello stare qui [LA]uniti tutti insieme",
         "[SI-]Da un vincolo d'amore, [LA]noi siamo amici",
         "[SOL]E siamo fratelli di un unico Padre che odia il dolore e il [RE]male.",
@@ -6959,6 +7039,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[DO]Ne ho viste tante di cose io,",
         "[SOL]dentro ai miei anni trascorsi [MI]ormai",
         "[LA-]con sensazioni belle e brutte che",
@@ -7014,6 +7095,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[MI]Lui sta bus[SI]sando al tuo [DO#-7]cuor",
         "Ti sta chiedendo di arrenderti",
         "Abbandonandoti al Suo amor",
@@ -7088,6 +7170,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[SOL]Eccomi Gesù vengo [DO]verso Te,",
         "A parlarti del mio cuore",
         "e di come batte quando sento il nome tuo.",
@@ -7148,6 +7231,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[Intro]",
         "[G]- [D7]- [G]",
         "",
@@ -7229,6 +7313,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]There's an ember deep with[G/D]in me",
         "but it's [D/F#]only a little [Asus4 A]flame",
         "But my [D]faith keeps growing [G/D]stronger",
@@ -7315,6 +7400,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[LA]So che [RE]presto Gesù tornerà [LA]",
         "[LA/DO#]Tutto il [RE]cielo an[LA]sioso aspettando Lo [MI]sta",
         "[FA#-]Ed in[DO#-]sieme [RE]noi guarderemo a [LA/DO#]Lui sol",
@@ -7370,6 +7456,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[DO]Fiume, fiume, [LA-]tu che vai e [DO]ci porti nella [LA-]terra che",
         "[DO]il Signore ha [LA-]dato a [MI-]noi, che [SOL]lottiamo per [SOL7]raggiungerla.",
         "[DO]Non tardare, [DO7]non fermarti mai,",
@@ -7418,6 +7505,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[F]Fe no es sólo decirlo,",
         "[Bb]tampoco imagi[F]narlo.",
         "[F]Fe es descansar con[Am]fiado",
@@ -7520,6 +7608,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Si la vida exige hoy [A]más de lo que puedo [D]dar",
         "[C#m]y mis luchas se trans[F#m]forman en ba[D]tallas",
         "[C#m]y cuando ya no [F#m]tengo fuerzas y co[C#]mienzo a nau[F#m]fragar,",
@@ -7563,6 +7652,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Hoy puedo ver que la [A]gente está se[F#]dienta,",
         "[Bm]quieren saber dónde se en[Am7]cuentra el agua [D7]viva.",
         "[G7]Oh, Señor, [F#7]siempre por tu [Bm]gracia [F#m]quiero [G#m7]ser",
@@ -7591,6 +7681,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Eu posso ver tanta [A]gente que tem [F#]sede",
         "[Bm]Querem saber onde se en[Am7]contra a água [D7]viva",
         "[G7]Oh, senhor, [F#7]pela tua [Bm]graça [F#m][G#m7]",
@@ -7628,6 +7719,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[F]No tendremos te[Bb]mor [Dm]de enfrentar el [Bb]mal.",
         "[F]Si pasamos por [C]luchas, mi Dios es re[Bb]fugio contra el [C]mal.",
         "[F]No queremos fa[Bb]llar [Dm]frente a la tenta[Bb]ción",
@@ -7679,6 +7771,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[DO]Dio ho [SOL]bisogno di [LA-]parlarti",
         "Non mi interessa [FA]vivere una vita senza [DO]senso,",
         "Una vita a [SOL]rincorrere il [LA-]vento",
@@ -7750,6 +7843,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[MI-]Amico mio, [LA-]ascoltami",
         "[RE]Sai che c'è una via [SOL]migliore",
         "Per colmare quel vuoto che",
@@ -7803,6 +7897,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Hoy puedo ver que la [A]gente está se[F#]dienta,",
         "[Bm]quieren saber dónde se en[Am7]cuentra el agua [D7]viva.",
         "[G7]Oh, Señor, [F#7]siempre por tu [Bm]gracia [F#m]quiero [G#m7]ser",
@@ -7826,6 +7921,7 @@
       "titulo2": [""],
       "audio_url": "",
       "letra": [
+        "",
         "[D]Eu posso ver tanta [A]gente que tem [F#]sede",
         "[Bm]Querem saber onde se en[Am7]contra a água [D7]viva",
         "[G7]Oh, senhor, [F#7]pela tua [Bm]graça [F#m][G#m7]",
@@ -7868,6 +7964,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Nuestros padres predicaban sobre el re[Bm7]greso de Jesús",
         "[Em]y esperaron [Em/D]tanto tiempo por el [C]brillo de su luz.",
         "[G]La promesa es [Am7]verdadera, a Je[Bm7]sús vamos a ver.",
@@ -7911,6 +8008,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[F]Glorifico al Se[Bb]ñor [C]porque Él es [F]bueno,",
         "[F]glorifico al Se[Bb]ñor [C]porque Él es [F]bueno.",
         "[F]Cantad a [Bb]Él, can[C]tad a [F]Él,",
@@ -7946,6 +8044,7 @@
       "audio_url": "",
       "traductor": [""],
       "letra": [
+        "",
         "Estrofa 1",
         "Somos Aventureros alegres",
         "Que confían en Cristo Jesús",
@@ -7983,6 +8082,7 @@
       "partitura": "No",
       "revisado": ["Si", "Rolando"],
       "letra": [
+        "",
         "Con[E]quistadores somos,",
         "los siervos del buen Se[A]ñor,",
         "adelante vamos [B7]ya luchando",
@@ -8002,6 +8102,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "We are the Pathfinders strong,",
         "The servants of God are we.",
         "Faithful as we march along,",
@@ -8021,6 +8122,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "Nós somos os desbravadores",
         "Os servos do Rei dos Reis",
         "Sempre avante assim marchamos",
@@ -8042,6 +8144,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "Nous sommes les Explorateurs,",
         "Les serviteurs du Seigneur;",
         "Bons, loyaux et purs,",
@@ -8076,6 +8179,7 @@
       "partitura": "No",
       "revisado": ["No"],        
       "letra": [
+        "",
         "Avancemos sin temor Guías Mayores",
         "Investidos con valor",
         "Ayudando a los jóvenes que quieren",
@@ -8110,6 +8214,7 @@
       "partitura": "data/partituras/hablar_con_dios.pdf",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[E]En la [A]oración en[D]cuentro [A]calma,",
         "[E]en la o[A]ración en[D]cuentro [A]paz. [A7]",
         "Orar a [D]Dios refresca el [A]alma,",
@@ -8143,6 +8248,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[LA]Nella preghiera io trovo calma",
         "Nella preghiera io trovo [RE]amor, [LA]",
         "[RE]pregare Dio fa bene all’[LA]anima, [RE]",
@@ -8197,6 +8303,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Hay mil mi[G]llones de es[C]trellas [C7]",
         "[F]en esta [G]noche que ahora [C]negra ves.",
         "[F]En el de[G]sierto un oasis [C - G - Am]te espera",
@@ -8337,6 +8444,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Hay un mundo que en ti[D/F#]nieblas [Em]está,",
         "[Em/D]que no conoce al Salva[C]dor.",
         "[G/B]Millones que su [Am]vida [A]deben entre[D]gar.",
@@ -8384,6 +8492,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[F]Hijo de Dios, [Am]luz de la luz,",
         "[Bb]Dios entre noso[C]tros, oh Je[F]sús.",
         "Hijo de Dios, [Am]hijo de amor,",
@@ -8430,6 +8539,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Hoy aquí, mi [Bm]Jesús",
         "[Em]me tomó en sus [A]brazos,",
         "[D]y sentí el [Bm]calor",
@@ -8466,6 +8576,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[DO]Oh Signore ti prego [SOL]rispondimi",
         "[RE]Quando domani ti [MI-]chiamerò",
         "Ho bisogno di parlarti",
@@ -8733,6 +8844,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[RE]Questo è ciò che [SI-7]voglio: [SOL]lodare [LA]Te",
         "[SI-7]con tutto il [RE]mio cuore Ti ado[DO]rerò. [SOL][LA]",
         "Quello che c’è in me Ti lodi, o Dio,",
@@ -8784,6 +8896,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[Em]Nuestros corazones [C]insaci[G]ables son [Em][C][G]",
         "[Em]hasta que co[C]nocen [G]a su Salva[D]dor. [Em - C - G - D]",
         "",
@@ -8836,6 +8949,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[A]Cuando el cielo y sus es[C#m]trellas me hablan del [D]amor [Dm]de [A]Dios,",
         "[F#m]y las flores, al a[D]brirse, buscan el [B]calor del [E]sol,",
         "[C#m]pienso en ese [F#m]amor eterno que cui[Bm]dado [C#]a todos [F#m]da,",
@@ -8883,6 +8997,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Jesús es mi luz, [C]no temeré, [G]",
         "Jesús es mi luz, [D]no temeré. [D7]",
         "[G]Jesús es mi luz, [C]no temeré,",
@@ -8922,6 +9037,7 @@
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
+        "",
         "[Am]Jesús mi [Dm7]guía es,",
         "[G]amigo y [C]protector.",
         "[F]Él es mi [Dm7]buen pastor,",
@@ -9014,6 +9130,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Jesús, tú eres mi ale[C]gría,",
         "[G]Jesús, tú eres mi can[D]tar.",
         "[G]Jesús, tú eres mi ale[C]gría,",
@@ -9054,6 +9171,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Jesús, la mon[C]taña y [G]yo,",
         "un [Em]poco de [A]tiempo en o[D]ración.",
         "[G]Jesús, la mon[C]taña y [G]yo,",
@@ -9096,6 +9214,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[ReM]Jesús me pastorea",
         "yo voy con [La7]El hasta el [ReM]fin.",
         "Jesús me pastorea",
@@ -9192,6 +9311,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Lávame en tu [C]sangre, [G]oh Se[Em]ñor,",
         "[Am]y más [D]blanco que la [G]nieve yo se[D]ré.",
         "[G]Lávame en tu [C]sangre, [G]oh Se[Em]ñor,",
@@ -9227,6 +9347,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[DO]L’aiuto che mi [SOL]serve solo Lui può [MI-]darlo",
         "[RE]La grazia Sua [DO]su me",
         "È una mano sempre aperta solleva ogni peso",
@@ -9287,6 +9408,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "INTRO: [MI-][RE][DO][RE]X2",
         "",
         "[MI-]Le notti in preghiera Tu mi hai con[RE]solato",
@@ -9432,6 +9554,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Aunque ande por el mar y tenga mucho que [A]temer,",
         "mi barca está segura aunque durmiendo adentro es[Bm]tés.",
         "La tempestad vendrá pero no ahogará mi [G]fe.",
@@ -9495,6 +9618,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Dios te guarde y [F]bendiga,",
         "[C]que extienda su amor y [G]te muestre favor. [Am]",
         "[C]Dios te [F]mire con agrado y [C]te [G]dé [C]paz. (x2)",
@@ -9557,6 +9681,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Cuán gloriosa será la ma[C]ñana",
         "cuando [G]venga Jesús el Salva[D]dor, [D7]",
         "[G]las naciones, unidas como [C]hermanas,",
@@ -9604,6 +9729,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]La sangre de [C]Cristo Je[G]sús",
         "me [D]limpia de todo pe[G]cado.",
         "[G]La sangre de [C]Cristo Je[G]sús",
@@ -9643,6 +9769,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]La única espe[F]ranza de [C]mi vida",
         "es saber que [G]Tú estás [G7]junto a [C]mí.",
         "[C]La única espe[F]ranza de [C]mi vida",
@@ -9733,6 +9860,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Levanto la [F]cruz, [C]la cruz de Je[G]sús, [Am]",
         "pro[C]clamo su [F]nombre.",
         "[C]Para que el [F]mundo [C]hoy conozca de [G]Él, [Am]",
@@ -9787,6 +9915,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Llegó la hora de [D]adorar,",
         "llegó la hora de [Em]cantar.",
         "[C]Él viene ya, [G]Él viene ya.",
@@ -9844,6 +9973,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[Bm]Salvador, [A]vengo a Ti, [G]mi alma [D]descan[A]sará.",
         "[Bm]Tu amor [A]me atrae [G]hacia Ti, [D]Señor. [A]",
         "[Em]Todo lo que [A]soy [Bm]y lo que [A]tengo [G]hoy,",
@@ -9936,6 +10066,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[A]Oh Señor, majes[E]tuoso [D]es [E]tu nombre en la tierra.",
         "[A]Oh Señor, majes[E]tuoso [D]es [E]tu nombre en la tierra.",
         "",
@@ -9980,6 +10111,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[Bm]Señor, tú eres la luz, tú eres salvación, [G]",
         "[Bm]a ti me ren[D]di[A]ré.",
         "[G]Si a tu lado estoy, seguro en tu amor,",
@@ -10031,6 +10163,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Cielos y mares [F]anuncian ¡Cristo [C]viene!",
         "Nuestra esfe[Am]ranza, al fin, se consuma[C]rá. [F]",
         "[Am]¡Pronto ven[G]drá!, ¡pronto vendrá!, ¡pronto vendrá!",
@@ -10097,6 +10230,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "Mi corazón se alegra en el Se[A]ñor, [B][E]",
         "proclama[D]ré su grandeza.",
         "Pues su perdón ofrece con a[A]mor, [B][E]",
@@ -10147,6 +10281,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]De lo alto del cielo y profundo del mar, [G]",
         "creación que revela su majes[A]tad. [Bm][A]",
         "[D]Primavera y otoño hablan de ti, [G]",
@@ -10209,6 +10344,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C#m]Contigo estoy, vas [A]marcando el paso y sé",
         "que al [E]cielo marcho [B]hoy.",
         "[C#m]Oigo tu voz y [A]no quedan dudas de",
@@ -10267,6 +10403,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[E]Me siento bien, [B7]bien, [E]bien.",
         "Me siento [B]bien con mi Je[E]sús [B7][E]",
         "porque el Es[C#m]píritu de [F#]Cristo es el que hace",
@@ -10306,6 +10443,7 @@
       "partitura": "data/partituras/mensajero.pdf",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[A]Hay días que ni sé decir, [A]",
         "[Bm]no tengo motiva[E]ción,",
         "[D]y siento en mí dolor sin fin,",
@@ -10352,6 +10490,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[A]Mi Cristo me [E]salva, [F#m]no hay nin[G]gu[D]no i[E]gual. [D]",
         "[A]Cada vez [D]más quiero a[A]labar su [F#m]grande y po[E]deroso amor.",
         "[A]Mi escudo, mi [E]abrigo, [F#m]es protec[E]ción para [D]mí.",
@@ -10397,6 +10536,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[E]Mi Dios es tan grande, tan [C#m]fuerte, poderoso,",
         "no hay [F#m]nada que [B]Él no pueda ha[E]cer.",
         "[E]Mi Dios es tan grande, tan [C#m]fuerte, poderoso,",
@@ -10442,6 +10582,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[A]Todos necesitan [E]amor que nunca falla,",
         "tu [C#m]gracia y compasión. [B]",
         "[A]Todos necesitan [E]perdón y esperanza,",
@@ -10498,6 +10639,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[Em]Poderoso, poderoso, poderoso, ¡poderoso es mi Dios! [Em-D-Em]",
         "[Em]Él abrió el Mar Rojo por librar a Israel,",
         "[C]¡mi Dios es [D]supremo [Em]Rey!",
@@ -10543,6 +10685,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]En mis luchas con[F]migo estás",
         "[F]y cuando [C]caigo no [G]me dejarás.",
         "[F]Tú amor me guia[C]rá,",
@@ -10607,6 +10750,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[F]Contigo ando muy se[C]guro, el [G]mal a[Am]lejas con a[F]mor. [C][G]",
         "[F]Soy una oveja y pro[C]curo los [E]cuidados [Am]del Pas[D]tor. [F/G][C]",
         "",
@@ -10657,6 +10801,7 @@
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
+        "",
         "[C]Mi reino es [G]como un grano [Am]de mostaza,",
         "[F]que los hombres [Dm]en la tierra sembra[G-G7]rán,",
         "[C]y que cuando crezca [E]será grande y [G]fuerte,",
@@ -10696,6 +10841,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Mi esperanza está en Jesús, [F][G]",
         "en su justicia y en la cruz. [Am]",
         "[G]De nadie más dependeré, [F]",
@@ -10744,6 +10890,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[A - B - E]Estaba per[A/E]dido, Je[E]sús me encontró,",
         "[B]yo era un es[C#m]clavo y [F#]me libe[B]ró.",
         "[D]Yo soy tan in[E]digno, tan [A]vil pecador,",
@@ -10909,6 +11056,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]No me siento solo, solo,",
         "[C]solo, solo, [G]solo,",
         "no me siento solo, solo,",
@@ -10956,6 +11104,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[A]Dios, yo te [E]pido en ora[F#m]ción:",
         "[D-E]nace en mí, dame [A]salvación.",
         "[A]Dios, yo te [E]pido en ora[F#m]ción:",
@@ -11053,6 +11202,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]No existe bien para [Em]mí que esté fuera de ti, [C]",
         "[D]gracias, Dios mío, me siento feliz.",
         "[G]Por cuanto amor tú me [Em]diste, me asombro Señor, [C]",
@@ -11145,6 +11295,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[A]Si las sombras de esta [C#m]vida de[D]bilitan [Dm]hoy tu [A]fe,",
         "y en tu [C#]mente surgen [F#m]dudas de que [Bm]venga otra [D-E]vez,",
         "[A]mira hoy ha[C#m]cia el Calvario [F#m]a la [E]cruz don[D]de sufrí,",
@@ -11193,6 +11344,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Nunca estés desani[G]mado,",
         "[F]nunca [G]vayas hacia a[C]trás.",
         "[F]Cuando tomes deci[C]siones,",
@@ -11234,6 +11386,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[DO]E se [SOL]domani non tornerai",
         "[SIB]Si spegnerà il mio cuore ed io mi spegnerò con [FA]lui.",
         "Ma se domani tu non tornerai",
@@ -11286,6 +11439,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[LA]Un fiume d'acqua viva si fa spazio nel deserto",
         "[RE]Tutto fiorisce, [MI]nulla è come prima",
         "[LA]Vecchie rovine prendono vita",
@@ -11417,6 +11571,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Oh Dios [Bm]crea en mí",
         "[G]un cora[A]zón para ti",
         "[D]dame a[Bm]mor [G]y rectitud",
@@ -11464,6 +11619,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[E-C#m]Ahhh...",
         "Oba, oba, oba, oba oba,",
         "[A]Ahhh...",
@@ -11520,6 +11676,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Tu voz me llama a las [A]aguas [D]",
         "[G]donde mis pies pueden fallar. [A]",
         "[Bm]Ahí te encuentro en lo in[D]cierto,",
@@ -11576,6 +11733,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[F#m]¡Oh amor de [D]Dios!, tu inmen[A]sidad",
         "[F#m]el hombre [E]no podrá con[A]tar,",
         "[D]ni comprender la [A]gran verdad:",
@@ -11633,6 +11791,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Padre de amor que [Em]en el cielo estás,",
         "[Fm]tu nombre [Bb]san[F]to [C/B]es. [Am]",
         "[C]Venga tu reino y se haga tu voluntad",
@@ -11678,6 +11837,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Padre nuestro del [C - G]cielo,",
         "[C]tu nombre [D]santo es.",
         "[G]Que tu reino [C]venga [G]pronto",
@@ -11722,6 +11882,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Padre, yo te [Em]adoro, [A - D]",
         "[Em]toda mi vida te [A - D]entrego",
         "[D - Em - A]porque te [D]amo.",
@@ -11764,6 +11925,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Oh Dios, eres mi [A]Dios,",
         "[G]por siempre te ala[Em-G]baré. [D]",
         "[A]Oh Dios, eres mi Dios, [G]",
@@ -11815,6 +11977,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Cuando lloras por las [G]veces que intentaste, [D]",
         "[Bm]y tratas de olvidar las [A]lágrimas que lloraste,",
         "[G]sólo tienes pena y [F#]tristeza y el [Bm]futuro incierto [G]espera,",
@@ -11861,6 +12024,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[Dm]Paz no es la ausencia",
         "[G]de problemas hoy,",
         "[Dm]es saber como enfren[G]tar",
@@ -11897,6 +12061,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Ven, oh Señor, en [F/D]mí habi[C]tar,",
         "[Am]pues quiero [C]ser templo [G]fiel. [F]",
         "[C]Cuando yo salga de este lugar,",
@@ -11939,6 +12104,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C-G]Tú has venido a la [Am]ori[C7]lla,",
         "[F]no has bus[Dm]cado ni a [G]sabios ni a ricos,",
         "[G]tan sólo quieres que [Am]yo te [C7]siga. [C]",
@@ -11992,6 +12158,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Cristo mo[G]riste en una [F]cruz, [C]",
         "[F]resuci[C]taste con po[G]der. [C]",
         "[C]Perdona [G]mis pe[F]cados [Am]hoy,",
@@ -12032,6 +12199,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Pon tus manos en las manos del Señor de Galilea, [Dm - F]",
         "[F]pon tus [G]manos en las [C]manos del Señor que calma el mar.",
         "[C]Es Jesús el que te [C7]va a cuidar [F]noche y [Fm]día sin cesar.",
@@ -12080,6 +12248,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Por encima del [D]poder, [G]",
         "[C]por encima del [D]trono y del [G]rey,",
         "[G/F#]por en[Em]cima de toda cre[C-G]ación, [D]",
@@ -12126,6 +12295,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C-G]Vino a vivir [F]vida perfecta,",
         "[C-G]vino a hacer la [F]vida nuestra luz,",
         "[C-G]vino a morir por [F]darnos el perdón,",
@@ -12180,6 +12350,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]El que me amó [G]vino una [A]vez",
         "[F#m]a nuestro mundo a [Bm]padecer,",
         "[Em]sobre la cruz [A]me rescató",
@@ -12227,6 +12398,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Vengo a ti, Jesús, [Bm - Em]",
         "quiero renovar mi ser,",
         "[C]con el gran [D]amor que encon[G-C-D]tré en ti.",
@@ -12274,6 +12446,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[LA]Quando penso a te, [MI]quando sei con me",
         "Io sento un tocco sulle mani ed un amore senza pari",
         "E sento un vento fra gli alberi, che mi dice che sei [DO]qui",
@@ -12319,6 +12492,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "Intro: [DO][FA][DO][FA][DO][FA][DO][SOL][DO]",
         "",
         "[FA]Anche se [DO]forza più non ho",
@@ -12403,6 +12577,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "Tú eres [D]Santo, (Tú eres Santo,)",
         "[G]poderoso, (poderoso,)",
         "tú eres [Em]digno (tú eres digno)",
@@ -12435,6 +12610,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[RE]You are holy (you are holy)",
         "[SOL]You are mighty (you are mighty)",
         "[MI-]You are worthy (you are worthy)",
@@ -12513,6 +12689,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Cristo Jesús me con[Dm]fió",
         "[G]la tarea de predi[C]car, [G-C]",
         "[Dm]muchas semillas sembrar,",
@@ -12557,6 +12734,7 @@
       "partitura": "No",
       "revisado": ["No"],
       "letra": [
+        "",
         "Prometo fidelidad a la Biblia",
         "A su mensaje de un Salvador",
         "Crucificado, resucitado",
@@ -12605,6 +12783,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Que pena pen[D7]sar",
         "que mu[G]chísimos hombres",
         "no viven la [A]vida [A7]",
@@ -12682,6 +12861,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[E]¿Quién soy yo [B]cuando hay [C#m]ángeles de luz",
         "que quisieran [B]predi[A]car de tu [F#m]amor y ver[B]dad?",
         "[E]¿Quién soy yo [B]cuando a [C#m]mi alrededor",
@@ -12731,6 +12911,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Un nuevo tiempo co[C]mienza a na[G]cer,",
         "[Em]tiempo de cre[D]cer y de [G]nada te[C]mer. [D - G]",
         "[G]Muchos se fueron es[C]perando a Jesús",
@@ -12778,6 +12959,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[E]Queremos ver a [B]Cristo re[C#m]gresar",
         "[A]lleno de gloria y [E]majestad,",
         "[B]que todos co[C#m]nozcan al Señor,",
@@ -12833,6 +13015,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]¿Quién soy yo para que el gran [Bm - A]rey, me acep[D]te así?",
         "[D]Me encontró en mi perdi[Bm - A]ción, su [G]amor por mí,",
         "[Bm]oh, su [A]amor por [G]mí.",
@@ -12888,6 +13071,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]¿Quién es el rey de la selva? ¡uh!, ¡uh!",
         "[D]¿Quién es el rey del [A]mar? ¡barabaraba!",
         "[A]¿Quién es el rey del uni[D]verso? ¡iuhhh!",
@@ -12931,6 +13115,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Quiero cantar una [Am]linda canción",
         "[F]de un hombre que [G]me transformó.",
         "[C]Quiero cantar una [Am]linda canción",
@@ -12981,6 +13166,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[A]Mi orgullo me sa[B]có del jardín, [C#m]",
         "[B]su humildad puso el jardín en mí. [A]",
         "Y si vendiera todo lo que tengo [B]",
@@ -13032,6 +13218,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[E]Que lo digan todos: [B]¿quién es el rey de [E]reyes?",
         "[E]Que lo digan todos: [B]¿quién es el rey de [E]reyes?",
         "",
@@ -13072,6 +13259,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[E]El pan de vida fue que[F#m]brado por a[A]mor. [C#m - B]",
         "[A]Tu muerte en la cruz com[E]pró mi salva[F#m]ción. [A - C#m - B - E]",
         "[E]La copa bebe[F#m]ré en me[A]moria de [C#m]ti. [A]",
@@ -13138,6 +13326,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "Rendid a Yahvé, santos del Señor, [G]",
         "gloria y poder al que hace la creación. [C]",
         "[G]Rendid honor al glorioso nombre del Señor",
@@ -13195,6 +13384,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D7]Creador del uni[Bm]verso eres tú, mi Rey, mi [A-Em7]Dios de amor.",
         "[Bm]Caímos en las [D7]garras del mal, [A-Em7]todo se llenó de oscuridad.",
         "[G]No nos [D/F#]abandonaste, pe[A]learías por mí,",
@@ -13288,6 +13478,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Restaura mi [Em]ser, res[Bm]taura mi vi[A]vir, [G]",
         "[D]restaura mi desilu[A]sión, res[Em]taura mi que[G]brantado cora[A]zón.",
         "[D]Restaura mis [Em]sueños, res[Bm]taura mis [A]planes, Señor.",
@@ -13330,6 +13521,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[RE]È stato bello [SOL]stare insieme a [RE]te",
         "[SOL]La per poter parlare di [LA4]Gesù, [LA]",
         "[RE]Possano i nostri canti [SOL]scaldarti il [RE]cuor,",
@@ -13387,6 +13579,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Qué alegría encon[Am]trarás si [G/B]no buscas el pe[C]cado",
         "[Am]ni oyes los con[D]sejos de maldad,",
         "[Am]sino que [G/B]en la ley de [C]Dios siempre encuentras tu delicia",
@@ -13443,6 +13636,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Cuando miro los [Bm]claros cielos [cite: 84, 85, 86]",
         "[C]y lo que es [Am]obra de tus [D]dedos, ",
         "[Em]digo qué [C]es el hombre ",
@@ -13491,6 +13685,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Jehová es mi pas[D]tor [BIS]",
         "[C]nada me fal[D]tará.",
         "",
@@ -13521,6 +13716,7 @@
       "titulo2": [""],
       "audio_url": "https://open.spotify.com/intl-es/track/4ExA7ngx24fjobzbmxna3c?si=2c6a4b719f344941",
       "letra": [
+        "",
         "[Am]Alzaré mis ojos [Dm]a los [Am]montes.",
         "[Dm]¿De dónde ven[Am]drá [E]mi so[Am]corro?",
         "[Am]Mi socorro viene [Dm]de Jeho[Am]vá",
@@ -13541,7 +13737,7 @@
         "[Dm]desde [Am]ahora [E]y para [Am]siempre,",
         "[Dm]desde [Am]ahora [E]y para [Am]siempre."
       ],
-      "nota": ["Basada en una melodía italiana del siglo XVII llamada La Mantovana por Bedřich Smetana"]
+      "nota": ["Basada en una melodía italiana del siglo XVII llamada \"La Mantovana\" por Bedřich Smetana"]
     },
     "he": {
       "titulo": ["Hatikvah (הַתִּקְוָה)"],
@@ -13549,6 +13745,7 @@
       "audio_url": "https://open.spotify.com/intl-es/track/1mmiS92bNewNo1DfUai5am?si=90d2afaa0dd4459d",
       "traductor": "Naftali Herz Imber",
       "letra": [
+        "",
         "[Am]Kol od ba[Dm]levav pe[Am]nimah (כֹּל עוֹד בַּלֵּבָב פְּנִימָה)",
         "[Dm]Nefesh yehu[Am]di ho[E]mi[Am]yah, (נֶפֶשׁ יְהוּדִי הוֹמִיָּה,)",
         "[Am]Ulfa'atei miz[Dm]rach ka[Am]dimah, (וּלְפַאֲתֵי מִזְרָח קָדִימָה,)",
@@ -13592,6 +13789,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[E]Alza tus manos a [A]Dios, nuestra [B]fuerza es el [E]gozo de [A]Él. [B]",
         "[E]Nos postramos en a[A]doración, ¡cuán [B]grande y majestuoso es [E]Él!",
         "[F#-A]Cantémosle a Él:",
@@ -13698,6 +13896,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[F]San[C]to sólo [G/B]es el Se[Am]ñor,",
         "[F]digno [C]de todo lo[G]or.",
         "[C]Dios de bon[E]dad, de jus[Am]ticia y amor,",
@@ -13744,6 +13943,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Entro en tu templo, [D/F#]santuario en el tiempo.",
         "[G]Quiero ado[Am]rar como tú deseas,",
         "[Em]quiero ser[D]vir como tú me pides.",
@@ -13805,6 +14005,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Brilla cual luz en la [Bm]oscuri[G]dad, sé una [A]luz.",
         "[D]El mundo busca [G]salva[A]ción, sé una luz",
         "[Bm]donde sólo se [Em]puede ver do[G]lor",
@@ -13903,6 +14104,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Dame una fe sencilla",
         "[F#m]como risa de niños cuando juegan,",
         "[G]como gota de rocío que se rueda,",
@@ -13971,6 +14173,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Quiero, mi Se[Em]ñor, darte mi cora[F]zón. [G]",
         "[F]Quiero alabarte a [G]ti, sólo vivir por ti.",
         "",
@@ -14024,6 +14227,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[F]Una voz nos [C]llama y de[G]bemos atender,",
         "[C]es la voz de [Dm]Cristo que nos [G]dice qué hacer.",
         "[C]Ir por todo el [G]mundo predicando su amor",
@@ -14123,6 +14327,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Si comenzamos a orar, (Si comenzamos a orar),",
         "[G]temblará este templo. (temblará este templo).",
         "[G7]Si comenzamos a orar, (Si comenzamos a orar),",
@@ -14158,6 +14363,7 @@
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
+        "",
         "[E]Si el cristiano tiene cer[B]teza, di amén. ¡Amén!",
         "[B7]Si el cristiano tiene cer[E]teza, di amén. ¡Amén!",
         "[F#m]Si el cristiano tiene cer[E]teza toda la vida es una [C#m]belleza.",
@@ -14257,6 +14463,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[A]Yo quiero ser [E/G#]siempre de Je[A]sús, [D][A]",
         "[C#m]alumbraré al [D]mundo con su [E]luz.",
         "[A/C#]En todo [D]tiempo y en [C#/F]cualquier [F#m]lugar [C#m/E]",
@@ -14305,6 +14512,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[F]Sólo en Je[C]sús esta mi fe,",
         "[F]mi espe[C]ranza y [F]mi canción.",
         "[F]Piedra an[C]gular, firme sostén,",
@@ -14424,6 +14632,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G/B][A/C#][Dm][G][C-G/B][Am][G]",
         "[Dm]Porque tu amor es mejor que la vida,",
         "[G]mientras viva, mis [A]labios te alabarán.",
@@ -14469,6 +14678,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[Em-C][G][D][Em-C]",
         "[Em-C]Solo tú mi corazón llenaste con tu amor.",
         "[Am]Cambiaste [G]todo [D]mi alre[Em-C]dedor,",
@@ -14525,6 +14735,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[Bb-F]Hay secretos que guar[Dm]dar [C]y temores que enfr[Bb-F]entar. [Dm-C]",
         "[Bb]Nuestra identidad no [F]es la oscuridad, [Bb]somos [F]hijos [Dm]de la [C]luz.",
         "[Bb]Vamos [Dm]ya, leván[C]tate, [Dm]tu misión suprema es.",
@@ -14580,6 +14791,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D-A]Somos su voz, da[Bm]remos su men[Em]saje; [E][A]",
         "[D]somos sus [A]pies, i[Bm]re[Em]mos por do[E]quier. [A]",
         "",
@@ -14624,6 +14836,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Dos caminos que elegir, [A]dos señores que [G]seguir. [D-A-G]",
         "[G]¿Cuál es la [A]mejor op[D]ción? Sólo [D]hay una decisión.",
         "[A/B-B7]Cuántas veces yo bus[C]qué mis ca[Em]minos sin",
@@ -14682,6 +14895,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[SOL]Su ogni [DO]potenza, [RE]sopra ogni [SOL]re,",
         "Più di ogni cosa creata intorno a me.",
         "",
@@ -14725,6 +14939,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "Non so se mai io capi[LA]rò",
         "[MI]Quello che [FA#-]dice e quel che fa,",
         "[RE]So solo che per me mo[MI4]rì, [MI]",
@@ -14795,6 +15010,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "INTRO: [SI-][LA][SOL]X2",
         "",
         "[SI-]I cannot [LA]see You all [SOL]around me",
@@ -14867,6 +15083,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[INTRODUCCIÓN]",
         "B6 Ab7 C#m7 F#13 Ebm7 Ab7-9 C#m7 C7-5",
         "Bmaj9 Ab9 C#m7 F#7 Ebm7 Ab7 C#m7 F#13",
@@ -14960,7 +15177,7 @@
   "idiomas": {
     "es": {
       "titulo": ["Si mi amigo no va"],
-      "titulo2": ["r"],
+      "titulo2": [""],
       "audio_url": "",
       "traductor": ["-"],
       "partitura": "No",
@@ -15008,6 +15225,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Tal como soy Señor, [Em]sin nada que ofrecer más que mi canción.",
         "[G]No tengo más que [C]darte pues [Am]todo es [D7]tuyo Señor.",
         "[Em]Tal como soy Señor, sin nada que entregar más que el corazón.",
@@ -15048,6 +15266,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[Bm]Te exaltaré, mi [Em]Dios mi [Bm]Rey,",
         "[Em]y bende[Bm]ciré tu [F#]nom[Bm]bre",
         "[Em]eternamente [Bm]y para siempre.",
@@ -15092,6 +15311,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D-G][D]",
         "[D]Voy a contarte lo que no ves,",
         "[Bm]todo a tu alre[G]dedor te [A]habla de El.",
@@ -15151,6 +15371,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Tengo paz como un [D7]río,",
         "[G]tengo paz como un [D]río,",
         "[D]tengo paz como un [E - A]río en mi ser.",
@@ -15204,6 +15425,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "Coro:",
         "[D-D7]Tomados de la mano con Él yo voy",
         "[G]tomados de la mano, [A]con El yo voy,",
@@ -15254,6 +15476,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[Am]Los cielos [F]claman las [C]obras del eterno,",
         "[Am]galaxias [F]cantan de [C]su inmensidad.",
         "[F]Y una voz con [C]son de gloria",
@@ -15320,6 +15543,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[F#m]La única ra[D]zón de mi adoración",
         "[A]eres tú, mi Se[E]ñor.",
         "[F#m]El único mo[D]tivo para vivir",
@@ -15369,6 +15593,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[F#m]Ante ti hoy me encuentro, y postrado me presento,",
         "[A]tu esplendor [D]me con[A]quis[E]tó.",
         "[F#m]Con tu paz me abrazas, me rodeas con tu gracia,",
@@ -15425,6 +15650,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Tu amor por [Em]mí",
         "[Am]es más dulce [Em]que la miel,",
         "[F]y tu mise[C]ricordia es [Dm]nueva [G]cada día.",
@@ -15472,6 +15698,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Quédate a[D/C#]quí, Señor,",
         "[D/C]yo sé que es [G/B]tarde, aun así yo insisto.",
         "[D]Quiero mi[D/C]rarte a los ojos",
@@ -15528,6 +15755,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "Desde el fondo del mar, desde el fondo del mar,",
         "[G]del más alto lugar, del más alto lugar,",
         "[Am]del más hondo abismo del más hondo abismo",
@@ -15579,6 +15807,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Queremos hoy pedir, Señor,",
         "[D-C]tu poder, tu po[G]der.",
         "[Bm]No hay otra [C]forma de avan[G]zar,",
@@ -15629,6 +15858,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[Dm]Todo ser que vive alabe [F]el nombre del Señor.",
         "[Bb]Toda criatura se de[F]rrama a sus pies.",
         "[Dm]En el sonido de su voz, [F]el universo se formó.",
@@ -15678,6 +15908,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[A]Va naciendo un nuevo tiempo, una nueva generación,",
         "[A]para llevar tu gloria a [D]todo el mundo.",
         "[F#m]Un tiempo de consagración, restauración de tu verdad,",
@@ -15826,6 +16057,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "INTRO: [SI-][LA][SOL]X2",
         "",
         "[SI-]I cannot [LA]see You all [SOL]around me",
@@ -15919,6 +16151,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[SIB]He left everything behind and he went",
         "[FA]Walking the path of the wind",
         "[SOL-]Burning inside with a [MIB]passion that [LAB]would never end",
@@ -16031,6 +16264,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[MI]God is light",
         "[SI]There’s no darkness in him",
         "[MI]He holds the [LA]sun with his [MI]word [SI4][SI]",
@@ -16119,6 +16353,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "Alguien dijo: «nada hay nuevo bajo el sol,",
         "[Gm]todo es vani[Bb]dad, nada [F]más que espe[C]rar».",
         "[Gm]Pero tú [Bb]haces [F]todo [C]nuevo.",
@@ -16266,6 +16501,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[FA]Oh Signor mio [DO]Dio",
         "[RE-]Ho bisogno di Te",
         "[SIB]Per vivere",
@@ -16342,6 +16578,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Vamos a ado[A]rar al Se[Em]ñor,",
         "[D]vamos a exal[G]tar su amor,",
         "vamos a ento[F#]nar [Bm]himnos [Bm/A]de loor",
@@ -16533,6 +16770,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Vamos a henchir el mundo de alegría.",
         "[C]Hay que reír y [G]nunca murmurar.",
         "[C]hasta hablar de [F]Cristo noche y día.",
@@ -16583,6 +16821,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[Em]Mi alma estaba [G]rota y herida",
         "[Em]pero tu gracia [G]la restauró.",
         "[Em]Manos vacías [G]que tu llenaste,",
@@ -16630,6 +16869,7 @@
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
+        "",
         "[C]Yo quiero [G]ser un [Am]vaso de [Em]honra",
         "[C]moldeado [F]por el [D]Se[G]ñor,",
         "[G]con el men[F]saje de [C]amor y esperanza,",
@@ -16664,6 +16904,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[E]Tienes [A]dudas en tu [E]ser,",
         "[C#m]o temes [B]no poder ven[A]cer,",
         "[B]mira a A[C#m]quel que luchó",
@@ -16718,6 +16959,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Ven, es tiempo de a[F/C]dorar[C]le,",
         "[Dm]ven, es [C]tiempo de [F]dar tu corazón. [C]",
         "[C]Ven, tal como [F/C]estás y a[C]dora,",
@@ -16762,6 +17004,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[Ab]Ven, Espíritu [Db]Santo, [Ab]cámbiame [Ab7]con tu po[Db]der. [Ab7]",
         "[Ab]Quiero tener la vic[Ab7]toria, quiero [Db]ser puro [Ab]otra [Ab7]vez. [Db]",
         "[Ab]Ven a guiar a [Db]tu pueblo, [Ab]al corazón [Db]ven a hablar.",
@@ -16825,6 +17068,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[A]Aguardo [G#m-B]Aguardo el día en que veré",
         "[C#m]una pe[C#m]queña [A]luz bri[E]llar,",
         "[C#m]y esa [A]luz aumen[G#m-B]tará,",
@@ -16876,6 +17120,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Padre, vengo a [C/G]ti para pe[G]dir:",
         "[C/G]limpia hoy mi [Bm/E]corazón con [D]tu gracia.",
         "[G]Padre, haz de [C/G]él un buen lu[G]gar",
@@ -16927,6 +17172,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Voy caminando [G]siempre con[Am]tento",
         "[Em]rumbo al [F]cielo [Dm]con Je[G]sús.",
         "[G-Am]No tengo [C]miedo, [Em]no tengo dudas,",
@@ -16967,6 +17213,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[LA][MI][FA#-][RE][SI-][MI4][MI]",
         "Vengo a te, proteggimi",
         "",
@@ -17023,6 +17270,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[SOL]Immagina per un istante il [SI-]mondo senza sole",
         "[SOL]Senza quella luce e quel [LA]calore",
         "Immagina per un istante un arcobaleno",
@@ -17082,6 +17330,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[DO]Mi risveglio con un [RE]motivo: camminare con [MI-]Te",
         "E decido di star alla Tua presenza.",
         "",
@@ -17151,6 +17400,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[SOL]Occhi che [MI-]vedono [DO]ombre e sogni [RE]che",
         "Cadono si infrangono nelle tenebre",
         "",
@@ -17215,6 +17465,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[DO]Niente può [SOL]dividermi [LA-]da te",
         "[FA]c’è qualcosa che ci [SOL]avvicina,",
         "[FA]Un legame che ci [SOL]unisce",
@@ -17266,6 +17517,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[FA#-]Ed ogni volta che mi [DO#-]guardo dentro,",
         "[LA]ho un motivo [MI]in più",
         "[FA#-]Per lottare anche [DO#-]contro vento",
@@ -17410,6 +17662,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[C]Si, lo veremos",
         "[F]cuando venga en [C]gloria,",
         "[C]si, lo ve[Am]remos al [F]rey y Se[G]ñor.",
@@ -17466,6 +17719,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Si tu triste estás",
         "[A7]y no tienes paz",
         "[A]cuéntaselo a Él",
@@ -17660,6 +17914,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Yo canto del [A]gran amor de [Bm]Cristo,",
         "[D]alabo al [G]Rey y Salvador.",
         "[A]Me hizo [Bm]Él, con sus propias manos,",
@@ -17709,6 +17964,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Nos diste una mi[C]sión para cum[D]plir, Señor:",
         "[C]llevar tu men[D]saje, anunciar que [G]eres [D/F#]el Salvador.",
         "[Em]En un mundo [C]lleno de corazones",
@@ -17845,6 +18101,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "Coro:",
         "[F]Yo puedo [C]todo, [G]todo lo [Am]puedo",
         "[F]en Cristo [G]que me [C]fortalece.",
@@ -17910,6 +18167,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[Am]Nace un nuevo [C]día, yo elijo vi[C]vir",
         "[Am]para tu [F]reino, para tu [C]reino.",
         "[Am]Todo lo que [Bb]soy, mi talento y mi don,",
@@ -17974,6 +18232,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[G]Yo soy feliz porque Jesús es muy bueno conmigo,",
         "[C]yo soy feliz porque [D]él es mi amigo. (x2)",
         "",
@@ -18030,6 +18289,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "Coro:",
         "[F]Yo soy un [F/A]mensaje, soy carta abierta,",
         "[Bb]yo soy texto [C]vivo, todos pueden ver.",
@@ -18076,6 +18336,7 @@
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
+        "",
         "Yo soy un [G]C, ",
         "yo soy un C-R-I,",
         "yo soy un C-R-I-S-T-I-A-N-O. [D]",
@@ -18115,6 +18376,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[A]En el principio, Dios creador,",
         "[E]antes del tiempo eras tú.",
         "[F#m]En las tinieblas tu voz se escuchó,",
@@ -18204,6 +18466,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Yo te alabaré, Señor,",
         "con [D]todo el [G]cora[A]zón cantaré y te adoraré.",
         "[D]Yo te ala[A]baré, Señor,",
@@ -18261,6 +18524,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[D]Yo tengo algo que el mundo no me da,",
         "[A]que el mundo [B]no me [D]puede quitar (clap - clap). (x2)",
         "[G]Es Jesucristo [D]que me ha salvado,",
@@ -18307,6 +18571,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[A]Yo tengo [D]esperanza en [A]Dios, mi Se[E]ñor.",
         "[D]Si a veces no [A]tienes motivos para continuar,",
         "[D]Yo tengo [A]esperanza en Dios, mi Señor.",
@@ -18360,6 +18625,7 @@
       "traductor": [""],
       "revisado": ["No"],
       "letra": [
+        "",
         "[F]Yo tengo un amigo que me [Dm7]ama",
         "[C]Me ama, [F]me ama,",
         "[C]Yo [F]tengo un amigo que me [Dm7]ama",
@@ -18394,6 +18660,7 @@
       "traductor": [""],
       "revisado": ["Si", "Rolando"],
       "letra": [
+        "",
         "Yo [C]tengo un a[Am]migo que se [F]llama Je[C]sús",
         "El co[F]noce mis [C]penas, y las [G]ilumnia con su luz.",
         "[F]El es mi espe[Fm]ranza, mi espe[C]ranza tan anhe[Am]lada",
@@ -18424,6 +18691,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[A]Todos queremos [E]otro hogar, [D]un nuevo E[E]dén para morar.",
         "[A]Nos queda[D]remos por a[B]quí sólo un [E]poco más.",
         "[D/B]Esta pro[A]mesa quiero al[D]canzar, [C#]no quiero espe[F#m]rar.",
@@ -18467,6 +18735,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
+        "",
         "[E]No quiero ser aquel que oye sólo por oír.",
         "[A]En tu palabra [E]dices que tu amor está en mí.",
         "[C#m]El sacer[B/D#]docio es [E]mío si [A]es que por fe lo acepté;",
