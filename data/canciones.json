@@ -734,7 +734,7 @@
   "tempo_bpm": ["85"],
   "compas": ["4/4"],
   "ritmo": ["Balada"],
-  "referencia_biblica": ["1 Juan 2:6"],
+  "referencia_biblica": ["1 San Juan 2:6"],
   "tags": ["Consuelo", "Confianza", "Amistad"],
 
   "idiomas": {
@@ -3428,7 +3428,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Salmos 23:3", "Salmos 37:23", "1 Juan 4:19"],
+  "referencia_biblica": ["Salmos 23:3", "Salmos 37:23", "1 San Juan 4:19"],
   "tags": ["Infantil", "Gozo", "Confianza", "Dirección", "Amor de Dios"],
 
   "idiomas": {
@@ -3469,7 +3469,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["4/4"],
   "ritmo": ["Folk"],
-  "referencia_biblica": ["Jeremías 23:29", "Santiago 3:5", "San Mateo 5:14-16", "1 Juan 4:11"],
+  "referencia_biblica": ["Jeremías 23:29", "Santiago 3:5", "San Mateo 5:14-16", "1 San Juan 4:11"],
   "tags": ["Amor de Dios", "Testimonio", "Comunión", "Campamento", "Clásico"],
 
   "idiomas": {
@@ -5394,7 +5394,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["1 Juan 1:5"],
+  "referencia_biblica": ["1 San Juan 1:5"],
   "tags": ["Worship", "Adoración"],
 
   "idiomas": {
@@ -5525,7 +5525,49 @@
     }
   }
 },
-
+{
+    "id": "dia_tan_grande",
+    "titulo_original": ["Heaven Came Down and Glory Filled My Soul"],
+    "autor": ["John W. Peterson"],
+    "compositor": ["John W. Peterson"],
+    "year": ["1961"],
+    "tonalidad": ["F"],
+    "tempo_bpm": ["96"],
+    "compas": ["4/4"],
+    "ritmo": ["Himno"],
+    "referencia_biblica": ["Juan 3:3-5; Tito 3:5; 2 Corintios 4:6; Efesios 2:4-7; Juan 14:1-3"],
+    "tags": ["Conversión", "Gracia", "Espíritu Santo", "Gozo", "Esperanza Celestial"],
+    "idiomas": {
+      "es": {
+        "titulo": ["Día tan grande"],
+        "titulo2": ["Dios descendió (aka)"],
+        "audio_url": "",
+        "traductor": [""],
+        "partitura": "No",
+        "revisado": ["No"],
+        "letra": [
+        "1",
+        "Día tan [G]grande no puedo olvidar,",
+        "día de [D7]gloria sin [G]par;",
+        "cuando en tinieblas al verme andar,",
+        "vino a sal[D7]varme el Se[G]ñor. [G7]",
+        "",
+        "Gran com[D]pasión tuvo [G]Cristo de mí,",
+        "de gozo y de [A7]paz me lle[D]nó; [D7]",
+        "qui[G]tó las sombras, ¡oh, gloria a Su nombre!",
+        "la noche en [D7]día cam[G]bió.",
+        "",
+        "Coro:",
+        "Dios descen[G]dió y de gloria me llenó,",
+        "cuando Je[Am]sús por [D7]gracia me sal[G]vó;",
+        "fui ciego, [C]me hizo ver, y [G]en el re[Em]nacer,",
+        "Dios descen[G]dió y de [D7]gloria me lle[G]nó.",
+        ""
+        ],
+        "nota": ["Esta es la letra original del \"corito\" conocido. Para agregarlo al Himnario Adventista #308 se le han agregado dos estrofas adicionales y modificado la letra."]
+      }
+    }
+  },
 { "_comment5": "LETRA E • -----------------------------------------------------------------------------------------------    LETRA E" },
 
 { "id": "en_tus_manos_rotas_vi",
@@ -9073,6 +9115,62 @@
 
 { "_comment12": "LETRA L • -----------------------------------------------------------------------------------------------    LETRA L"  },
 
+{ "id": "la_iglesia_sigue_caminando",
+  "titulo_original": ["La iglesia sigue caminando"],
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": ["Desconocido"],
+  "tonalidad": ["Re menor (Dm)"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Alegre"],
+  "referencia_biblica": ["San Mateo 16:18", "San Mateo 28:19-20", "Hechos 1:8"],
+  "tags": ["Avivamiento", "Iglesia", "Predicación", "Victoria", "Perseverancia", "Clásico"],
+
+  "idiomas": {
+      "es": {
+        "titulo": ["La iglesia sigue caminando"],
+        "titulo2": [""],
+        "audio_url": "https://www.youtube.com/watch?v=mmLPnFgemW0&list=RDmmLPnFgemW0&start_radio=1",
+        "traductor": [""],
+        "partitura": "No",
+        "revisado": ["No"],      
+        "letra": [
+          "1",
+          "En la [Dm]lucha y en las pruebas,",
+          "la iglesia sigue cami[A7]nando;",
+          "en la lucha y en las pruebas,",
+          "la iglesia sigue cami[Dm]nando,",
+          "solo se de[A7]tiene para predi[Dm]car. [D7]",
+          "",
+          "Coro:",
+          "¡Oh, [Gm]gloria, aleluya!,",
+          "la [Dm]iglesia sigue caminando;",
+          "¡oh, [A7]gloria, aleluya!,",
+          "la [Dm]iglesia sigue cami[D7]nando,",
+          "solo se [Gm]de[A7]tiene para predi[Dm]car.",
+          "",
+          "2",
+          "Por los [Dm]valles, por los montes,",
+          "la iglesia sigue cami[A7]nando;",
+          "por los valles, por los montes,",
+          "la iglesia sigue cami[Dm]nando,",
+          "solo se de[A7]tiene para predi[Dm]car.",
+          "",
+          "Coro:",
+          "¡Oh, [Gm]gloria, aleluya!,",
+          "la [Dm]iglesia sigue caminando;",
+          "¡oh, [A7]gloria, aleluya!,",
+          "la [Dm]iglesia sigue cami[D7]nando,",
+          "solo se [Gm]de[A7]tiene para predi[Dm]car.",
+          ""
+      ],
+      "nota": [""]
+    }
+  }
+},
+
+
 { "id": "lavame_en_tu_sangre",
   "titulo_original": ["Lávame en tu sangre"],
   "autor": ["Desconocido"],
@@ -9490,7 +9588,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["1 Juan 1:7"],
+  "referencia_biblica": ["1 San Juan 1:7"],
   "tags": [
     
     "Cristiano",
@@ -9779,8 +9877,8 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["3/4"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Salmos 133:1", "Levítico 19:18", "2 Corintios 5:14-15"],
-  "tags": ["Alabanza", "Adoración", "Dios", "Amor cristiano", "Fraternidad", "Unidad", "Comunidad"],
+  "referencia_biblica": ["Salmos 133:1", "Levítico 19:18", "2 Corintios 5:14-15", "Efesios 4:3", "1 San Juan 4:11"],
+  "tags": ["Alabanza", "Adoración", "Dios", "Amor cristiano", "Fraternidad", "Unidad", "Comunidad", "Comunión", "Reunión"],
 
   "idiomas": {
     "es": {
@@ -9789,23 +9887,25 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": ["No", "Hernando"],      
+      "revisado": ["No", "Hernando", "Rolando"],      
       "letra": [
-        "[A]Miren qué linda es la vida cuando estamos j[D]untos a[Bm]sí,",
-        "[E]y tenemos algo [E7]que compar[A-E]tir.",
-        "[A]Dios nos une, nos reúne y nos hace a [Bm]todos sent[A7]ir ",
+        "1",
+        "[A]Miren qué linda es la vida cuando estamos [D]juntos a[Bm]sí,",
+        "[E]y tenemos algo [E7]que compar[A]tir.",
+        "[A]Dios nos une, nos reúne y nos hace a [D]todos sen[Bm]tir ",
         "[E]que la vida así es más [E7]fácil vi[A]vir.",
         "",
+        "Puente:",
         "[A]Todo es más [A7]lindo sa[D]biendo a[Bm]mar,",
         "[E]hoy lo po[E7]demos lo[A]grar.",
-        "[A]Todo es más [A7]lindo si [D]sabemos [B]dar,",
+        "[A]Todo es más [A7]lindo si [D]sabemos [Bm]dar,",
         "[E]todo es cues[E7]tión de empez[A]ar.",
         "",
         "Coro:",
-        "[A7]¡Oh, veng[D]amos a alabar a Di[E]os, todos j[A]untos, un[F#]idos ",
-        "y t[Bm]odo empi[E]eza a cambi[A]ar!",
-        "[A7]¡Oh, veng[D]amos a alabar a Di[E]os, y junt[C#]emos las ma[F#]nos ",
-        "porq[Bm]ue nos [E]une su am[A]or!"
+        "[A7]¡Oh, ven[D]gamos a alabar a Di[E]os, todos [A]juntos, u[F#m]nidos ",
+        "y [Bm]todo empie[E]za a cam[A]biar!",
+        "[A7]¡Oh, venga[D]mos alabar a Di[E]os, y junte[C#]mos las ma[F#]nos ",
+        "por[Bm]que nos [E]une su am[A]or!"
       ],
       "nota": [""]
     }
@@ -10586,13 +10686,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Isaías 28:16"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Protección"
-  ],
+  "tags": ["Alabanza", "Adoración", "Protección"],
   "idiomas": {
     "es": {
       "titulo": ["Mi roca"],
@@ -10640,13 +10734,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 16:2"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Gratitud"
-  ],
+  "tags": ["Alabanza", "Adoración", "Gratitud"],
   "idiomas": {
     "es": {
       "titulo": ["Mi todo"],
@@ -10703,7 +10791,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["4/4"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["1 Juan 3:1"],
+  "referencia_biblica": ["1 San Juan 3:1"],
   "tags": ["Amor de Dios", "Identidad", "Filiación", "Escuela Sabática", "Clásico", "Alabanza", "Hijos de Dios", "Canon"],
   "idiomas": {
     "es": {
@@ -10725,6 +10813,67 @@
         "[C]para [F]ser lla[C]mados [G]hijos de [C]Dios."
       ],
       "nota": ["Su diseño melódico original está pensado para ser interpretado también como un canon a dos o más voces."]
+    }
+  }
+},
+{ "id": "mundo_sin_sentido",
+  "titulo_original": ["Mundo sin sentido"],
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": ["Desconocido"],
+  "tonalidad": ["Do Mayor (C)"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Balada / Testimonio"],
+  "referencia_biblica": ["Mateo 5:14-16", "Marcos 16:15", "Juan 14:27"],
+  "tags": ["Misión", "Testimonio", "Evangelismo", "Gozo", "Paz"],
+  "idiomas": {
+    "es": {
+      "titulo": ["Mundo sin sentido"],
+      "titulo2": [""],
+      "audio_url": "",
+      "traductor": [""],
+      "partitura": "No",
+      "revisado": ["Si", "Rolando"],      
+      "letra": [
+        "1",
+        "[C]Mundo sin sentido y en [Am]soledad,",
+        "[F]hombres que se odian, [G]gente sin bondad.",
+        "[C]¿Por qué no les llevo la [Am]felici[C]dad,",
+        "[F]que me ha[G]ce [C]cantar?",
+        "",
+        "Coro:",
+        "[C7]Porque [F]Cristo es [G]mi Se[C]ñor,",
+        "[Am]y vive [F]conmigo en mi [G]cora[C]zón.",
+        "[C7]Porque [F]Cristo es [G]mi Se[C]ñor,",
+        "[Am]y vive [F]conmigo en mi [G]cora[C]zón.",
+        "",
+        "2",
+        "[C]Gente perturbada [Am]buscando paz,",
+        "[F]anda sin sentido, [G]llena de ansiedad.",
+        "[C]¿Por qué no les llevo la [Am]felici[C]dad,",
+        "[F]que me ha[G]ce [C]cantar?",
+        "",
+        "Coro:",
+        "[C7]Porque [F]Cristo es [G]mi Se[C]ñor,",
+        "[Am]y vive [F]conmigo en mi [G]cora[C]zón.",
+        "[C7]Porque [F]Cristo es [G]mi Se[C]ñor,",
+        "[Am]y vive [F]conmigo en mi [G]cora[C]zón.",
+        "",
+        "3",
+        "[C]Siempre yo encuentro opor[Am]tunidad,",
+        "[F]para hablar de Cristo [G]a mi alrededor.",
+        "[C]¿Por qué no les llevo la [Am]felici[C]dad,",
+        "[F]que me ha[G]ce [C]cantar?",
+        "",
+        "Coro:",
+        "[C7]Porque [F]Cristo es [G]mi Se[C]ñor,",
+        "[Am]y vive [F]conmigo en mi [G]cora[C]zón.",
+        "[C7]Porque [F]Cristo es [G]mi Se[C]ñor,",
+        "[Am]y vive [F]conmigo en mi [G]cora[C]zón.",
+        ""
+      ],
+      "nota": [""]
     }
   }
 },
@@ -10929,16 +11078,10 @@
   "year": ["Desconocido"],
   "tonalidad": ["Re Mayor (D)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": ["1 Juan 2:10"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Fraternidad",
-    "Hermandad"
-  ],
+  "compas": ["4/4"],
+  "ritmo": ["Alegre"],
+  "referencia_biblica": ["1 San Juan 2:10", "Gálatas 3:28", "2 Reyes 10:15", "Salmos 133:1"],
+  "tags": ["Fraternidad", "Unidad", "Comunión", "Hermandad", "Clásico", "Alabanza"],
   "idiomas": {
     "es": {
       "titulo": ["No importa de donde tu vengas"],
@@ -10946,27 +11089,33 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
-        "[D]No importa de dónde tú [G]vengas, [D]",
-        "[D]si detrás del Calvario tú [A-A7]estás.",
-        "[D]Si tu corazón [D7]es como el [G-Gm]mío,",
-        "[D]dame la mano y mi [A]hermano se[D]rás.",
+        "1",
+        "No [D]importa de dónde tú vengas,",
+        "si detrás del [D7]Calvario tú [A]estás.",
+        "Si tu [D]corazón es como el [G]mío,",
+        "Dame la [D]mano y mi [A]hermano se[D]rás.",
         "",
         "Coro:",
-        "[A]Dame la mano, [D]querido hermano,",
-        "[A]dame la mano y mi [D]hermano serás.",
-        "[A]Dame la mano, [D]querido hermano,",
-        "[D]dame la mano y mi hermano serás.",
+        "Dame la [A]mano, querido her[D]mano,",
+        "dame la [A]mano y mi [A7]hermano [D]serás.",
+        "Dame la [A]mano, querido her[D]mano,",
+        "dame la [A]mano y mi [A7]hermano [D]serás.",
         "",
-        "[D]No importa si [A]eres pobre o [G]rico, [D]",
-        "[D]si detrás del Calvario tú [A-A7]estás.",
-        "[D]Si tu corazón [D7]es como el [G-Gm]mío,",
-        "[D]dame la mano y mi hermano serás.",
+        "2",
+        "No [D]importa si eres pobre o rico,",
+        "si detrás del [D7]Calvario tú [A]estás.",
+        "Si tu [D]corazón es como el [G]mío,",
+        "dame la [D]mano y mi [A]hermano [D]serás.",
         "",
-        "Coro"
+        "Coro:",
+        "Dame la [A]mano, querido her[D]mano,",
+        "dame la [A]mano y mi [A7]hermano [D]serás.",
+        "Dame la [A]mano, querido her[D]mano,",
+        "dame la [A]mano y mi [A7]hermano [D]serás."
       ],
-      "nota": [""]
+      "nota": ["Se suele improvisar agregando otras estrofas por variantes como 'No importa de qué color seas' o 'No importa la iglesia a la que vayas', entre otras."]
     }
   }
 },
@@ -12014,7 +12163,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["1 Juan 4:19"],
+  "referencia_biblica": ["1 San Juan 4:19"],
   "tags": [
     
     "Cristiano",
@@ -12565,7 +12714,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["1 Juan 2:28"],
+  "referencia_biblica": ["1 San Juan 2:28"],
   "tags": [
     
     "Cristiano",
@@ -13074,20 +13223,13 @@
   "titulo_original": ["Renuévame"],
   "autor": ["Marcos Witt"],
   "compositor": ["Marcos Witt"],
-  "year": ["Desconocido"],
-  "tonalidad": ["Do Mayor (C)"],
+  "year": ["1990"],
+  "tonalidad": ["Re Mayor (D)"],
   "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Romanos 12:2"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Renovación",
-    "Entrega"
-  ],
+  "compas": ["4/4"],
+  "ritmo": ["Worship"],
+  "referencia_biblica": ["Romanos 12:2", "Salmos 51:10", "Efesios 4:23", "Ezequiel 36:26"],
+  "tags": ["Adoración", "Consagración", "Quebrantamiento", "Renovación", "Clásico", "Alabanza", "Entrega"],
   "idiomas": {
     "es": {
       "titulo": ["Renuévame"],
@@ -13095,18 +13237,25 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Rolando"],      
       "letra": [
-        "[C]Renuévame, Se[Dm]ñor Je[G]sús, [C]",
-        "[F]ya no [Dm]quiero ser i[G]gual.",
-        "[C]Renuévame, Se[Dm]ñor Je[G]sús, [C]",
-        "[G]pon en [F]mí tu cora[Dm]zón.",
+        "1",
+        "Re[D]nuéva[G]me, Se[A]ñor Je[D]sús,",
+        "ya no [Em]quiero ser i[A]gual.",
+        "Re[D]nuéva[G]me, Se[A]ñor Je[D]sús,",
+        "pon en [G]mí tu cora[A]zón.",
         "",
         "Coro:",
-        "Porque [C]todo lo que [Em]hay [F]dentro de [C]mí",
-        "[F]necesita [Dm]ser cam[F]biado, Se[G]ñor.",
-        "Porque [C]todo lo que [G]hay dentro de [Am]mi cora[Em]zón",
-        "[F]necesita [G]más de [C]ti."
+        "Porque [D]todo lo que hay dentro de [Bm]mí",
+        "nece[G]sita ser cam[Em]biado, Se[A]ñor.",
+        "Porque [D]todo lo que hay dentro de [Bm]mi cora[D]zón",
+        "[G]necesita [A]más de [D]ti.",
+        "",
+        "Repite",
+        "",
+        "Final:",
+        "[G]necesita [A]más de [D]ti.",
+        "[G]necesita [A]más de [D]ti."
       ],
       "nota": [""]
     }
@@ -14357,7 +14506,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["1 Juan 2:8-10"],
+  "referencia_biblica": ["1 San Juan 2:8-10"],
   "tags": [
     
     "Cristiano",
@@ -14412,7 +14561,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["1 Juan 2:8-10"],
+  "referencia_biblica": ["1 San Juan 2:8-10"],
   "tags": [
     
     "Cristiano",
@@ -14792,6 +14941,39 @@
         "Trompeta: [A]TUTURURU TUTU TU - TUTURURU TUTU TU - TUTURURU TUTU TU- TUTU TU [E]TU [A]TU"
       ],
       "nota": ["Se canta haciendo mímica: trompeta, soldado, avión, infantería, caballería, artillería,"]
+    }
+  }
+},
+{
+  "id": "si_mi_amigo_no_va_",
+  "titulo_original": ["Si mi hermano no va"],
+  "autor": ["Desconocido"],
+  "compositor": ["Tradicional"],
+  "year": ["Desconocido"],
+  "tonalidad": ["Do Mayor (C)"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Alegre"],
+  "referencia_biblica": ["Gálatas 6:2", "Romanos 15:1", "Juan 14:2"],
+  "tags": ["Fraternidad", "Servicio", "Hogar Celestial", "Apoyo", "Clásico"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["Si mi amigo no va"],
+      "titulo2": ["r"],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": ["Si", "Rolando"],      
+      "letra": [
+        "1",
+        "Si mi amigo no [C]va, [F/C] le ayudaré, [F/C]",
+        "Si mi amigo no [G]va, le ayuda[C]ré, [F/C]", 
+        "Si mi amigo no [C7]va, le ayuda[F]ré,",
+        "Voy al [C]Hogar, Celeste [G]Hogar,",
+        "Voy al [C]Hogar, sí [F]voy al [C]Hogar."
+      ],
+      "nota": ["Se suele cantar repitiendo la estrofa y variando el sujeto (p. ej. 'Si mi hermano no va...', 'Si el vecino no va...' y/o agregando el nombre de los presentes)."]
     }
   }
 },
@@ -15476,7 +15658,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["1 Juan 4:6"],
+  "referencia_biblica": ["1 San Juan 4:6"],
   "tags": [
     
     "Cristiano",
