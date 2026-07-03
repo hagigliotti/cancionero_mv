@@ -1476,12 +1476,14 @@ body.projector .qr-proyector {
     max-width: 420px;
     margin: auto;
     border-radius: 18px;
-    padding: 20px;
+    padding: 25px;
     background: rgba(20, 20, 20, 0.92);
     backdrop-filter: blur(10px);
     color: #fff;
 
     min-height: 80vh;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 /* =========================
@@ -1584,7 +1586,7 @@ body.projector .qr-proyector {
 
 body.projector .qr-proyector {
     display: block;
-    border-radius: 18px;
+    border-radius: 12px;
     overflow: hidden;
 }
 
