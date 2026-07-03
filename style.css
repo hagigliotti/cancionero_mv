@@ -1508,8 +1508,23 @@ body.projector .qr-proyector {
 .share-hero img {
     width: 100%;
     max-width: 260px;
-    border-radius: 12px;
+    border-radius: 14px;   /* 🔥 un poco más elegante */
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* MODO OSCURO / LIGHT MODE */
+.light-mode .share-hero img,
+.dark-mode .share-hero img {
+    border-radius: 14px;
+}
+
+/* MODO PROYECTOR (más limpio y sin sombra dura) */
+body.projector .share-hero img {
+    border-radius: 18px;
+    box-shadow: 0 0 18px rgba(255,255,255,0.15);
 }
 
 /* =========================
@@ -1606,13 +1621,3 @@ body.projector .qr-proyector {
     padding: 10px;
 }
 
-.qr-label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.qr-container {
-    display: block;
-    text-align: center;
-}
