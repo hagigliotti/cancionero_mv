@@ -1,0 +1,63 @@
+<div id="shareModal" class="modal" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+
+    <span class="close" onclick="cerrarShareModal()">&times;</span>
+
+    <h2>🔗 Compartir Cancionero MV</h2>
+
+    <hr>
+
+    <!-- LINK PRINCIPAL -->
+    <div class="share-block">
+      <p><b>📌 Enlace principal:</b></p>
+
+      <input id="shareLink" type="text"
+        value="https://hagigliotti.github.io/cancionero_mv/index.html"
+        readonly>
+
+      <button onclick="copyShareLink()">📋 Copiar link</button>
+
+      <div class="share-icons">
+        <a target="_blank"
+           href="https://wa.me/?text=https://hagigliotti.github.io/cancionero_mv/index.html">
+           🟢 WhatsApp
+        </a>
+
+        <a target="_blank"
+           href="https://t.me/share/url?url=https://hagigliotti.github.io/cancionero_mv/index.html">
+           ✈️ Telegram
+        </a>
+      </div>
+
+      <img src="imagenes/Cancionero_blue.png" class="share-img">
+    </div>
+
+    <hr>
+
+    <!-- INSTAGRAM STORIES -->
+    <div class="share-block">
+      <p><b>📸 Instagram Stories:</b></p>
+
+      <img src="imagenes/Banner_white.png" class="share-story-img">
+
+      <p class="small-text">
+        Agrega este link en tu historia:
+      </p>
+
+      <input type="text"
+        value="https://hagigliotti.github.io/cancionero_mv/index.html"
+        readonly>
+    </div>
+
+    <hr>
+
+    <!-- QR -->
+    <div class="share-block">
+      <p><b>📱 Escanear QR:</b></p>
+
+      <img src="imagenes/qrcode_1.png" class="share-qr">
+
+    </div>
+
+  </div>
+</div>
