@@ -1580,6 +1580,12 @@ body.projector .qr-proyector {
     color: white;
 }
 
+body.projector .qr-proyector {
+    display: block;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
 /* =========================
    QR
 ========================= */
