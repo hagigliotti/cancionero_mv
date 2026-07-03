@@ -50,22 +50,6 @@ function initTabButton() {
   btn.addEventListener("click", toggleTablatura);
 }
 
-// FUNCIONES GLOBALES
-
-function abrirMetronomo() {
-  const modal = document.getElementById("metroModal");
-  if (modal) modal.style.display = "block";
-}
-
-function abrirMetronomoDesdeMenu() {
-  const modal = document.getElementById("metroModal");
-  if (modal) modal.style.display = "block";
-}
-
-function cerrarMetronomo() {
-  const modal = document.getElementById("metroModal");
-  if (modal) modal.style.display = "none";
-}
 
 // VALIDACION PARA TRADUCTOR
 function normalizePersonField(field) {
@@ -92,6 +76,31 @@ function getPersonLabel(tipo) {
 
 
 /* ===================== MODAL's ============================================================ */
+
+// ===================== AFINÓMETRO ==========================================================
+function abrirAfinometroModal() {
+  const modal = document.getElementById("metroModal");
+
+  if (!modal) {
+    console.warn("Afinómetro modal no encontrado (metroModal)");
+    return;
+  }
+
+  modal.style.display = "block";
+}
+
+function cerrarAfinometroModal() {
+  const modal = document.getElementById("metroModal");
+  if (modal) modal.style.display = "none";
+}
+
+
+
+
+
+
+
+
 // ===================== REVISADOS ==========================================================
 let revisadoFiltroActual = "si"; // "si" | "no"
 
@@ -252,6 +261,7 @@ async function cargarModales() {
     "modals/revised.html",
     "modals/people.html",
     "modals/share.html",
+    "modals/afinometro.html",
     "modals/biblioteca.html"
   ];
 
@@ -935,103 +945,9 @@ function renderAudioLink(song, idiomaData) {
   `;
 }
 
-// ===================== METRÓNOMO / AFINADOR =====================
-
-// abrir desde menú
-function abrirMetronomoDesdeMenu() {
-  abrirMetronomoYAfinador(null);
-}
-
-// abrir desde canción (tonalidad, bpm, compás)
-function abrirAfinadorDesdeElemento(el, tipo = "general") {
-  const data = {
-    tonalidad: el.dataset.tonalidad || "",
-    bpm: el.dataset.bpm || "",
-    compas: el.dataset.compas || ""
-  };
-
-  abrirMetronomoYAfinador(data);
-}
-
-// función central
-function abrirMetronomoYAfinador(data) {
-  // 🔥 Si no tienes modal todavía, esto evita que “no pase nada”
-  let modal = document.getElementById("modalMetronomo");
-
-  if (!modal) {
-    console.warn("No existe modalMetronomo en el HTML");
-    return;
-  }
-
-  modal.style.display = "block";
-
-  // si tienes inputs dentro del modal
-  if (data) {
-    const ton = document.getElementById("inputTonalidad");
-    const bpm = document.getElementById("inputBpm");
-    const comp = document.getElementById("inputCompas");
-
-    if (ton) ton.value = data.tonalidad;
-    if (bpm) bpm.value = data.bpm;
-    if (comp) comp.value = data.compas;
-  }
-}
 
 
-
-function abrirMetronomo() {
-  const modal = document.getElementById("metroModal");
-  if (modal) modal.style.display = "block";
-}
-
-function cerrarMetronomo() {
-  const modal = document.getElementById("metroModal");
-  if (modal) modal.style.display = "none";
-}
-
-// para cerrar con la X
-window.cerrarMetronomo = cerrarMetronomo;
-window.abrirMetronomo = abrirMetronomo;
-
-
-function abrirAfinadorDesdeElemento(el, tipo = "tonalidad") {
-  const modal = document.getElementById("metroModal");
-
-  const tonalidad = el.dataset.tonalidad;
-  const bpm = el.dataset.bpm;
-  const compas = el.dataset.compas;
-
-  // abrir modal
-  modal.style.display = "block";
-
-  // ================= TONALIDAD =================
-  if (tonalidad && tipo === "tonalidad") {
-    const noteSelect = document.getElementById("referenceNote");
-
-    // separar "Re Mayor (D)" → tomar D
-    const match = tonalidad.match(/\(([^)]+)\)/);
-    const note = match ? match[1] : tonalidad;
-
-    if (noteSelect) {
-      noteSelect.value = note;
-    }
-  }
-
-  // ================= BPM =================
-  if (bpm && tipo === "bpm") {
-    const bpmInput = document.getElementById("metroBpm");
-    if (bpmInput) {
-      bpmInput.value = bpm;
-    }
-  }
-
-  // ================= COMPÁS =================
-  if (compas && tipo === "compas") {
-    setCompas(compas);
-  }
-}
-
-// Biblioteca para descargar
+// ============= MODAL BIBLIOTECA  para descargar
 function abrirBiblioteca() {
   document.getElementById("bibliotecaModal").style.display = "block";
   renderBiblioteca(biblioteca);
@@ -1215,3 +1131,6 @@ function copyShareLink() {
 
   showToast("Link copiado 📋");
 }
+
+
+

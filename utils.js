@@ -473,25 +473,3 @@ function cerrarListModal() {
 
 
 
-// Funcion para cerrar modals
-function closeModal(id) {
-  const modal = document.getElementById(id);
-  if (modal) modal.style.display = "none";
-}
-
-function closeAllModals() {
-  const modals = [
-    "infoModal",
-    "bibliotecaModal",
-    "shareModal",
-    "peopleModal",
-    "metroModal",
-    "modalMetronomo",
-    "listModal"
-  ];
-
-  modals.forEach(id => {
-    const m = document.getElementById(id);
-    if (m) m.style.display = "none";
-  });
-}

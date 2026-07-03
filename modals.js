@@ -1,13 +1,6 @@
-function abrirMetronomo() {
-  const modal = document.getElementById("metroModal");
-  if (modal) modal.style.display = "block";
-}
+async function abrirAfinometroModal() {
 
-function cerrarMetronomo() {
-  const modal = document.getElementById("metroModal");
-  if (modal) modal.style.display = "none";
-}
+    closeMenu();
 
-// para cerrar con la X
-window.cerrarMetronomo = cerrarMetronomo;
-window.abrirMetronomo = abrirMetronomo;
+    await abrirModal("modals/afinometro.html");
+}
