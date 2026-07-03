@@ -1,0 +1,47 @@
+<div id="shareModal" class="modal" role="dialog" aria-hidden="true">
+  <div class="modal-content share-modal">
+
+    <span class="close" onclick="cerrarShareModal()">&times;</span>
+
+    <h2 class="share-title">🔗 Compartir Cancionero MV</h2>
+
+    <!-- HERO IMAGE -->
+    <div class="share-hero">
+      <img src="imagenes/Banner_white.png" alt="Cancionero MV">
+    </div>
+
+    <!-- LINK CARD -->
+    <div class="share-card">
+      <label>📌 Enlace</label>
+
+      <div class="share-input-group">
+        <input id="shareLink"
+          type="text"
+          value="http://bit.ly/cancionero_mv"
+          readonly>
+
+        <button onclick="copyShareLink()">📋 Copiar</button>
+      </div>
+
+      <div class="share-buttons">
+        <a class="wa" target="_blank"
+           href="https://wa.me/?text=http://bit.ly/cancionero_mv">
+          🟢 WhatsApp
+        </a>
+
+        <a class="tg" target="_blank"
+           href="https://t.me/share/url?url=http://bit.ly/cancionero_mv">
+          ✈️ Telegram
+        </a>
+      </div>
+    </div>
+
+    <!-- QR CARD -->
+    <div class="share-card qr-card">
+      <label>📱 Escanear QR Code</label>
+
+      <p></p><div><img src="imagenes/qrcode_1.png" class="qr-big"></div></p>
+    </div>
+
+  </div>
+</div>
