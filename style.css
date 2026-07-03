@@ -1412,3 +1412,43 @@ body.projector .song-note {
   text-decoration: none;
   opacity: 0.8;
 }
+
+
+
+/* TEXTO BIBLICO DE PRESENTACION */
+/* ==========================================================
+   MENSAJE INICIAL
+   Se muestra cuando no hay ninguna canción seleccionada.
+========================================================== */
+
+.mensaje-inicio {
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--color-texto);
+}
+
+.mensaje-inicio .versiculo {
+    font-family: "Great Vibes", cursive;
+    font-size: 2.4rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.mensaje-inicio .referencia {
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    opacity: .8;
+}
+
+/* ==========================================================
+   FUENTE GREAT VIBES
+========================================================== */
+
+@font-face {
+    font-family: "Great Vibes";
+    src: url("fonts/great-vibes/GreatVibes-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}

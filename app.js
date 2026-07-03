@@ -404,6 +404,9 @@ function clearAll() {
   // cerrar dropdown menu si está abierto
   document.getElementById("dropdownMenu")?.classList.remove("active");
 
+  // muestra versiculo de bienvenida
+  mostrarMensajeInicio();
+
   // volver arriba
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
@@ -596,6 +599,7 @@ function search(q) {
   if (!query.length) {
     list.innerHTML = "";
     listaVisible = false;
+    mostrarMensajeInicio();
     return;
   }
 
@@ -1171,4 +1175,17 @@ function actualizarEstadisticas() {
   document.getElementById("totalCanciones").textContent = totalCanciones;
   document.getElementById("totalTraducidas").textContent = traducidas;
   document.getElementById("totalIdiomas").textContent = idiomas.size;
+}
+
+
+// ==========================================================
+// MENSAJE INICIAL
+// ==========================================================
+
+function mostrarMensajeInicio() {
+    document.getElementById("mensajeInicio").style.display = "block";
+}
+
+function ocultarMensajeInicio() {
+    document.getElementById("mensajeInicio").style.display = "none";
 }

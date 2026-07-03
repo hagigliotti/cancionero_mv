@@ -101,6 +101,7 @@ function openSong(id) {
   closeList();
   listaVisible = false;
   letraActiva = null;
+  ocultarMensajeInicio();
 
   const num = getNumeroHimno(song);
 
@@ -384,8 +385,11 @@ function selectLetter(letter) {
   letraActiva = letter;
   listaVisible = true;
 
+  ocultarMensajeInicio();
+
   openList();
   renderList(letter);
+  ocultarMensajeInicio();
 }
 
 
@@ -644,6 +648,9 @@ function renderAlphabet() {
 
 // ===================== RANGE SELECT =====================
 function selectRange(start, end) {
+
+  ocultarMensajeInicio();
+
   openList();
   renderHymnRange(start, end);
 
