@@ -1442,6 +1442,19 @@ body.projector .song-note {
     opacity: .8;
 }
 
+/* imagen qrcode para proyector */
+.qr-proyector {
+    display: none;
+    margin: 25px auto 0;
+    width: 180px;
+    height: auto;
+}
+
+/* SOLO en modo proyector */
+body.projector .qr-proyector {
+    display: block;
+}
+
 /* ==========================================================
    FUENTE GREAT VIBES
 ========================================================== */
