@@ -1,62 +1,46 @@
 <div id="shareModal" class="modal" role="dialog" aria-hidden="true">
-  <div class="modal-content">
+  <div class="modal-content share-modal">
 
     <span class="close" onclick="cerrarShareModal()">&times;</span>
 
-    <h2>🔗 Compartir Cancionero MV</h2>
+    <h2 class="share-title">🔗 Compartir Cancionero MV</h2>
 
-    <hr>
+    <!-- HERO IMAGE -->
+    <div class="share-hero">
+      <img src="imagenes/Banner_white.png" alt="Cancionero MV">
+    </div>
 
-    <!-- LINK PRINCIPAL -->
-    <div class="share-block">
-      <p><b>📌 Enlace principal:</b></p>
+    <!-- LINK CARD -->
+    <div class="share-card">
+      <label>📌 Enlace</label>
 
-      <input id="shareLink" type="text"
-        value="https://hagigliotti.github.io/cancionero_mv/index.html"
-        readonly>
+      <div class="share-input-group">
+        <input id="shareLink"
+          type="text"
+          value="http://bit.ly/cancionero_mv"
+          readonly>
 
-      <button onclick="copyShareLink()">📋 Copiar link</button>
-
-      <div class="share-icons">
-        <a target="_blank"
-           href="https://wa.me/?text=https://hagigliotti.github.io/cancionero_mv/index.html">
-           🟢 WhatsApp
-        </a>
-
-        <a target="_blank"
-           href="https://t.me/share/url?url=https://hagigliotti.github.io/cancionero_mv/index.html">
-           ✈️ Telegram
-        </a>
+        <button onclick="copyShareLink()">📋 Copiar</button>
       </div>
 
-      <img src="imagenes/Cancionero_blue.png" class="share-img">
+      <div class="share-buttons">
+        <a class="wa" target="_blank"
+           href="https://wa.me/?text=http://bit.ly/cancionero_mv">
+          🟢 WhatsApp
+        </a>
+
+        <a class="tg" target="_blank"
+           href="https://t.me/share/url?url=http://bit.ly/cancionero_mv">
+          ✈️ Telegram
+        </a>
+      </div>
     </div>
 
-    <hr>
+    <!-- QR CARD -->
+    <div class="share-card qr-card">
+      <label>📱 Escanear QR</label>
 
-    <!-- INSTAGRAM STORIES -->
-    <div class="share-block">
-      <p><b>📸 Instagram Stories:</b></p>
-
-      <img src="imagenes/Banner_white.png" class="share-story-img">
-
-      <p class="small-text">
-        Agrega este link en tu historia:
-      </p>
-
-      <input type="text"
-        value="https://hagigliotti.github.io/cancionero_mv/index.html"
-        readonly>
-    </div>
-
-    <hr>
-
-    <!-- QR -->
-    <div class="share-block">
-      <p><b>📱 Escanear QR:</b></p>
-
-      <img src="imagenes/qrcode_1.png" class="share-qr">
-
+      <img src="imagenes/qrcode_1.png" class="qr-big">
     </div>
 
   </div>
