@@ -1465,3 +1465,133 @@ body.projector .qr-proyector {
     font-weight: normal;
     font-style: normal;
 }
+
+
+
+/* =========================
+   MODAL BASE (glass effect)
+========================= */
+
+.share-modal {
+    max-width: 420px;
+    margin: auto;
+    border-radius: 18px;
+    padding: 20px;
+    background: rgba(20, 20, 20, 0.92);
+    backdrop-filter: blur(10px);
+    color: #fff;
+}
+
+/* =========================
+   TITULO
+========================= */
+
+.share-title {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.share-hero {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.share-hero img {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* =========================
+   CARD STYLE
+========================= */
+
+.share-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    padding: 14px;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   INPUT + BUTTON
+========================= */
+
+.share-input-group {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.share-input-group input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 0.85rem;
+}
+
+.share-input-group button {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: #00c853;
+    color: white;
+}
+
+/* =========================
+   BOTONES SHARE
+========================= */
+
+.share-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    gap: 10px;
+}
+
+.share-buttons a {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.share-buttons .wa {
+    background: #25D366;
+    color: white;
+}
+
+.share-buttons .tg {
+    background: #229ED9;
+    color: white;
+}
+
+/* =========================
+   QR
+========================= */
+
+.qr-card {
+    text-align: center;
+}
+
+.qr-big {
+    width: 180px;
+    margin-top: 10px;
+    border-radius: 12px;
+    background: white;
+    padding: 10px;
+}

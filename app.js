@@ -251,6 +251,7 @@ async function cargarModales() {
     "modals/info.html",
     "modals/revised.html",
     "modals/people.html",
+    "modals/share.html",
     "modals/biblioteca.html"
   ];
 
@@ -1188,4 +1189,29 @@ function mostrarMensajeInicio() {
 
 function ocultarMensajeInicio() {
     document.getElementById("mensajeInicio").style.display = "none";
+}
+
+
+// MODAL COMPARTIR
+// ===================== SHARE MODAL =====================
+
+function abrirShareModal() {
+  const modal = document.getElementById("shareModal");
+  if (modal) modal.style.display = "block";
+}
+
+function cerrarShareModal() {
+  const modal = document.getElementById("shareModal");
+  if (modal) modal.style.display = "none";
+}
+
+// copiar link
+function copyShareLink() {
+  const input = document.getElementById("shareLink");
+  input.select();
+  input.setSelectionRange(0, 99999);
+
+  navigator.clipboard.writeText(input.value);
+
+  showToast("Link copiado 📋");
 }
