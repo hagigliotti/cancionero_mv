@@ -1605,3 +1605,14 @@ body.projector .qr-proyector {
     background: white;
     padding: 10px;
 }
+
+.qr-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.qr-container {
+    display: block;
+    text-align: center;
+}
