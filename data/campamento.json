@@ -181,6 +181,45 @@
 { "_comment1": "LETRA B • -----------------------------------------------------------------------------------------------    LETRA B" },
 { "_comment1": "LETRA C • -----------------------------------------------------------------------------------------------    LETRA C" },
 {
+  "id": "caracolito_caracolito",
+  "titulo_original": ["Caracolito"],
+  "corito": "No",
+  "campamento": "Si",
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": ["Desconocido"],
+  "tonalidad": ["Do Mayor (C)"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Infantil", "Alegre"],
+  "referencia_biblica": [""],
+  "tags": ["Infantil", "Niños", "Creación", "Naturaleza"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["Caracolito"],
+      "titulo2": [""],
+      "audio_url": "",
+      "traductor": ["Desconocido"],
+      "partitura": "No",
+      "revisado": ["No"],      
+      "letra": [
+        "1",
+        "Caracolito, caracolito,",
+        "¿quién te hizo tan chiquito?",
+        "Si te escondes en la arena,",
+        "el mar te va a llevar.",
+        "Y pobre caracolito,",
+        "solito vas a quedar.",
+        "Y pobre caracolito,",
+        "solito vas a quedar."
+      ],
+      "nota": [""]
+    }
+  }
+},
+
+{
   "id": "cu_cu_cantaba_la_rana",
   "titulo_original": ["Cú cú cantaba la rana"],
   "corito": "No",
