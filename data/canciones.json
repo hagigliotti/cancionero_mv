@@ -8167,8 +8167,8 @@
 },
 {  "id": "himno_de_los_guias_mayores",
   "titulo_original": ["Master Guide Song"],
-  "autor": [""],
-  "compositor": [""],
+  "autor": ["Ever García Leiva"],
+  "compositor": ["Ever García Leiva"],
   "year": ["Desconocido"],
   "tonalidad": ["Desconocido"],
   "tempo_bpm": ["Desconocido"],
@@ -8184,19 +8184,19 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": ["No"],        
+      "revisado": ["Si", "Rolando"],        
       "letra": [
         "",
-        "Avancemos sin temor Guías Mayores",
-        "Investidos con valor",
+        "Avan[E]cemos sin temor Guías Mayores",
+        "Investidos con va[B7]lor",
         "Ayudando a los jóvenes que quieren",
-        "De Jesús en pos seguir",
+        "De Jesús en pos se[E]guir",
         "Anunciando el mensaje a los perdidos",
-        "Constreñido el corazón",
-        "Que en el cielo nos espera una corona",
-        "Con estrellas que Dios nos dará"
+        "Constre[A]ñido el corazón",
+        "Que en el cielo nos espera una co[E]rona",
+        "Con es[A]trellas que [B7]Dios nos da[E]rá"
       ],
-      "nota": ["En otros paises de sudamerica existe otra estrofa."]
+      "nota": ["En otros paises existe una segunda estrofa que dice: \"Esta lucha la inició Lutero Warren, que el pastor Kern prosiguió, levantando en alto la gloriosa antorcha que a este mundo iluminó; aunque densa oscuridad nos amanece, caminemos sin temor, en la luz que los pioneros encendieron para guiarnos por la senda JA.\""]
     }
   }
 },
@@ -9044,18 +9044,19 @@
       "partitura": "No",
       "revisado": ["Si", "Rolando"],      
       "letra": [
+        "1",
+        "[Am]Jesús mi [Dm]guía es,",
+        "a[G]migo y protec[C]tor.",
+        "Él [F]es mi buen pas[Dm]tor,",
+        "y [E]cuando yo sienta temor en Él confia[Am]ré.",
         "",
-        "[Am]Jesús mi [Dm7]guía es,",
-        "[G]amigo y [C]protector.",
-        "[F]Él es mi [Dm7]buen pastor,",
-        "y [E7sus]cuando sienta te[E]mor en Él confi[Am]aré.",
-        "",
-        "[Dm]En Él confi[G]aré.",
-        "[C]Aunque débil [F]soy",
-        "[Dm7]me da su [E7sus]poder y su [E]amor.",
-        "En Él confi[Am]aré."
+        "Coro:",
+        "En Él [Dm]confia[G]ré.",
+        "Aunque [C]débil [F]soy,",
+        "me [Dm]da su [E7]poder y su [E]amor.",
+        "En Él confia[Am]ré."
       ],
-      "nota": [""]
+      "nota": ["Se canta en canon, cuando un grupo comienza a cantar el coro, el segundo grupo comienza a cantar la primera estrofa."]
     }
   }
 },
@@ -14517,21 +14518,22 @@
       "revisado": ["Si", "Rolando"],      
       "letra": [
         "1",
-        "[A]Si Jesús te satis[E]face",
-        "[A]da tres palmas, (clap-clap-clap)",
-        "[D]da tres palmas, (clap-clap-clap)",
-        "[A]otra vez. (clap-clap-clap)",
-        "[A]Si Jesús te satis[E]face",
-        "[A]da tres palmas. (clap-clap-clap)",
+        "Si [A]Jesús te satis[E]face",
+        "da tres [A]palmas, (clap-clap-clap)",
+        "da tres [D]palmas, (clap-clap-clap)",
+        "otra [A]vez. (clap-clap-clap)",
+        "Si [A]Jesús te satis[E]face",
+        "da tres [A]palmas. (clap-clap-clap)",
         "",
-        "Coro:",
-        "[D]Amigo que estás #sentado",
-        "[A]saluda al que está a tu lado,",
-        "[D]y bríndale una sonrisa. (JA!, JA!, JA!)",
+        "Puente",
+        "A[D]migo que estás sentado",
+        "sa[A]luda al que está a tu lado,",
+        "y [D]bríndale una sonrisa.",
+        "¡Ja, ja, ja!",
         "",
         "Final:",
-        "[A]Si Jesús te satis[E]face",
-        "[A]da tres palmas. (clap-clap-clap)"
+        "Si [A]Jesús te satis[E]face",
+        "da tres [A]palmas. (clap-clap-clap)"
       ],
       "nota": ["Se cambia el adjetivo 'sentado', 'parado', etc. del verbo 'estar' segun corresponda.",
                 "Se puede cambiar la cantidad de palmadas a 'da una palma', 'da dos palmas'."]
@@ -17475,7 +17477,7 @@
       "titulo": ["Alive"],
       "titulo2": [""],
       "audio_url": "",
-      "traductor": ["Original"],
+      "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],
       "letra": [
