@@ -4148,7 +4148,12 @@
         "[C]Piensa en la [F]cruz donde [G]murió por [Am]ti",
         "y [F]ábrele [G]hoy tu cora[C]zón. [C7]",
         "",
-        "Coro"
+        "Coro:",
+        "[F]Mi vida co[G]menzó cuan[C]do el Señor lle[Am]gó,",
+        "[F]por eso hoy le [G]canto de su a[C]mor. [C7]",
+        "[F]Mi vida comen[G]zó cuan[C]do el Señor lle[Am]gó,",
+        "[F]por eso hoy le [G]canto de su a[C]mor.",
+        ""
       ],
       "nota": [""]
     }
@@ -8849,11 +8854,11 @@
       "audio_url": "https://www.youtube.com/watch?v=D2p7yuuum7s",
       "traductor": [""],
       "partitura": "No",
-      "revisado": ["No"],      
+      "revisado": ["Si", "Mauricio"],      
       "letra": [
         "",
         "[RE]Questo è ciò che [SI-7]voglio: [SOL]lodare [LA]Te",
-        "[SI-7]con tutto il [RE]mio cuore Ti ado[DO]rerò. [SOL / LA]",
+        "[SI-]con tutto il [RE]mio cuore Ti ado[DO]rerò. [SOL / LA]",
         "Quello che c’è in me Ti lodi, o Dio,",
         "Quello che io adoro sei solo Tu.",
         "",
@@ -14382,7 +14387,9 @@
       "letra": [
         "1",
         "[E]Señor, tu gracia [B]me da solaz",
-        "[C#m]y tu pre[A]sencia me da [E]la paz. (x2)",
+        "[C#m]y tu pre[A]sencia me da [E]la paz.",
+        "[E]Señor, tu gracia [B]me da solaz",
+        "[C#m]y tu pre[A]sencia me da [E]la paz.",
         "[C#m]Tu gran fuerza [A]me sostiene, es mi refugio en la tormenta,",
         "[E]por eso te [B]alabo, tú [A]eres mi Dios.",
         "",

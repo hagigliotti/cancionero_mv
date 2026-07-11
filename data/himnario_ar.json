@@ -1362,13 +1362,15 @@
       "audio_url": "",
       "traductor": ["Desconocido"],
       "partitura": "No",
-      "revisado": ["Si", "Hernando"],
+      "revisado": ["Si", "Rolando"],
       "letra": [
+        "1",
+        "[D]Abre mis [G]ojos, [A]Jesús quiero [D]verte,",
+        "[Bm]conmigo te[Em]nerte, [A]decir que te [G]a[D]mo.",
         "",
-        "[D]Abre mis [G]ojos, [A]Jesús quiero [D]verte,[Bm]",
-        "conmigo te[Em]nerte, [A]decir que te [G]amo.[D]",
-        "[D]Abre mi [G]oído, [A]hoy quiero escu[D]charte.[Bm]",
-        "¡Abre mis [Em]ojos [A]para contem[G]plarte![D]",
+        "2",
+        "[D]Abre mi [G]oído, [A]hoy quiero escu[D]charte,",
+        "[Bm]abre mis [Em]ojos [A]para contem[G]plar[D]te.",
         ""
       ],
       "nota": [""]
