@@ -1940,7 +1940,11 @@
         "[C/E]Señor, yo quiero bri[F]llar por [G]ti y al mundo ilumi[C]nar.",
         "[C/E]Yo quiero que a tra[F]vés de mi [G]vida [F/G]te puedan encon[C]trar.",
         "[C/E]Aunque yo no [F]diga una pa[G]labra, [Am]todos [G]vean tu gran a[F]mor.",
-        "[Dm]Yo quiero bri[F/G]llar por ti, bri[G]llar y mostrar tu a[C]mor."
+        "[Dm]Yo quiero bri[F/G]llar por ti, bri[G]llar y mostrar tu a[C]mor.",
+        "",
+        "Final:",
+        "[Dm]Yo quiero bri[F/G]llar por ti, bri[G]llar y mostrar tu a[C]mor.",
+        ""
       ],
       "nota": [""]
     }
@@ -2484,7 +2488,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Éxodo 13:21", "Hebreos 11:16"],
-  "tags": ["Alabanza", "Alegre", "Peregrinaje", "Clásico"],
+  "tags": ["Alabanza", "Alegre", "Peregrinaje", "Clásico", "Canon"],
 
   "idiomas": {
     "es": {
@@ -2497,22 +2501,22 @@
 
       "letra": [
         "1",
-        "Caminando [D]voy, (hacia Cana[A]án)",
-        "caminando [A7]voy, (hacia Cana[D]án)",
+        "Caminando [D]voy (Caminando voy), hacia Cana[A]án (hacia Canaán).",
+        "Caminando [A7]voy (Caminando voy), hacia Cana[D]án (hacia Canaán).",
         "Caminando [D7]voy, hacia Cana[G]án...",
         "¡Oh, Gloria a [D]Dios!",
         "Caminando [A7]voy hacia Cana[D]án.",
         "",
         "2",
-        "Si usted no va, (no me impida a mí)",
-        "si usted no va, (no me impida a mí)",
-        "si usted no va, no me impida a mí...",
+        "Si usted no va (Si usted no va), no me impida a mí (no me impida a mí).",
+        "Si usted no va (Si usted no va), no me impida a mí (no me impida a mí).",
+        "Si usted no va, no me impida a mí...",
         "¡Oh, Gloria a Dios!",
         "caminando voy hacia Canaán.",
         "",
         "3",
-        "Al venir Jesús, (yo me voy con Él)",
-        "al venir Jesús, (yo me voy con Él)",
+        "Al venir Jesús (Al venir Jesús), yo me voy con Él (yo me voy con Él)",
+        "al venir Jesús (Al venir Jesús), yo me voy con Él (yo me voy con Él)",
         "al venir Jesús, yo me voy con Él...",
         "¡Oh, Gloria a Dios!",
         "caminando voy hacia Canaán."
@@ -7270,7 +7274,7 @@
 
   "idiomas": {
     "es": {
-      "titulo": ["Él puede (*)"],
+      "titulo": ["Él puede"],
       "titulo2": [""],
       "audio_url": "",
       "traductor": [""],
@@ -7278,23 +7282,22 @@
       "revisado": ["No"],      
       "letra": [
         "",
-        "[Intro]",
-        "[G]- [D7]- [G]",
+        "Intro:",
+        "[G D7 G]",
         "",
         "Coro:",
         "[G]Él puede, él puede, yo sé que él puede",
         "[D7]Yo sé que mi Jesús me hara vencedor",
         "[G]Yo sé que mi Jesús me hará vencedor.",
         "",
-        "(Se repite el coro tantas veces como se desee, acelerando el ritmo)",
-        "",
-        "[Estrofa]",
-        "[G]Él sana los enfermos,",
-        "[D7]Reprende los demonios,",
-        "[G]Resucita a los muertos,",
-        "[D7]Yo sé que [G]él puede mi Jesús."
+        "1",
+        "[G]Sanó a los enfermos,",
+        "[D7]al muerto vida di,",
+        "[G]al cojo hizo caminar ,",
+        "[D7]y al ci[G]ego vista dio",
+        ""
       ],
-      "nota": [""]
+      "nota": ["Se repite el coro tantas veces como se desee, acelerando el ritmo."]
     }
   }
 },
@@ -12313,8 +12316,14 @@
         "3",
         "Pon tus [C]pies en las huellas del Señor de Gali[G]lea,",
         "pon tus [F]pies en las huellas del Señor que [G]calma el [C]mar.",
-        "Es [C7]Jesús el que te va a cuidar [F]noche y día sin ce[Fm]sar.",
-        "Pon tus [C]pies en las huellas del Se[G]ñor que calma el [C]mar."
+        "Es [C7]Jesús el que te va a guiar [F]noche y día sin ce[Fm]sar.",
+        "Pon tus [C]pies en las huellas del Se[G]ñor que calma el [C]mar.",
+        "",
+        "4",
+        "Y en tus [C]labios la Palabra del Señor de Gali[G]lea,",
+        "y en tus [F]labios la Palabra del Señor que [G]calma el [C]mar.",
+        "Es [C7]Jesús el que te va a guiar [F]noche y día sin ce[Fm]sar.",
+        "Y en tus [C]labios la Palabra del Se[G]ñor que calma el [C]mar."
       ],
       "nota": [""]
     }
@@ -16522,25 +16531,29 @@
       "revisado": ["Si", "Rolando"],      
       "letra": [
         "1",
-        "[E]Un palacio tengo allá",
-        "más lindo que el sol,",
-        "[A]un palacio tengo allá",
-        "más lindo que el [E]sol,",
-        "un palacio tengo allá",
-        "[C#m]más lindo que el [E]sol,",
+        "[E]Un palacio tengo allá más lindo que el sol,",
+        "[A]un palacio tengo allá más lindo que el [E]sol,",
+        "un palacio tengo allá [C#m]más lindo que el [E]sol,",
         "en el [B7]más a[E]llá.",
         "",
         "2",
-        "[E]Bendito Cristo, contigo estaré...",
-        "[A]Bendito Cristo, contigo esta[E]ré...",
-        "Bendito Cristo, [C#m]contigo esta[E]ré...",
+        "[E]Bendito Cristo, contigo estaré.",
+        "[A]Bendito Cristo, contigo esta[E]ré.",
+        "Bendito Cristo, [C#m]contigo esta[E]ré.",
         "en el [B7]más a[E]llá.",
         "",
         "3",
         "[E]Si tú quieres ir al cielo ven al Señor,",
         "[A]Si tú quieres ir al cielo ven al Se[E]ñor,",
         "Si tú quieres ir al cielo [C#m]ven al Se[E]ñor,",
-        "en el [B7]más a[E]llá."
+        "en el [B7]más a[E]llá.",
+        "",
+        "4",
+        "[E]Maranata significa \"Viene el Señor\",",
+        "[A]Maranata significa \"Viene el Se[E]ñor\",",
+        "Maranata significa \"Viene [C#m]el Se[E]ñor\",",
+        "desde el [B7]más a[E]llá.",
+        ""
       ],
       "nota": [""]
     }
