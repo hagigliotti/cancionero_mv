@@ -193,7 +193,7 @@ function openSong(id) {
               data-tonalidad="${normalizeMeta(song, "tonalidad")}"
               data-bpm="${normalizeMeta(song, "tempo_bpm") || ""}"
               data-compas="${normalizeMeta(song, "compas") || ""}"
-              onclick="abrirAfinadorDesdeElemento(this, 'tonalidad')">
+              onclick="event.stopPropagation(); abrirAfinadorDesdeElemento(this, 'tonalidad')">
               ${normalizeMeta(song, "tonalidad")}
             </span> |
           `
@@ -210,7 +210,7 @@ function openSong(id) {
               data-tonalidad="${normalizeMeta(song, "tonalidad") || ""}"
               data-bpm="${normalizeMeta(song, "tempo_bpm")}"
               data-compas="${normalizeMeta(song, "compas") || ""}"
-              onclick="abrirAfinadorDesdeElemento(this, 'bpm')">
+              onclick="event.stopPropagation(); abrirAfinadorDesdeElemento(this, 'bpm')">
               ${normalizeMeta(song, "tempo_bpm")}
             </span> |
           `
@@ -227,7 +227,7 @@ function openSong(id) {
               data-tonalidad="${normalizeMeta(song, "tonalidad") || ""}"
               data-bpm="${normalizeMeta(song, "tempo_bpm") || ""}"
               data-compas="${normalizeMeta(song, "compas")}"
-              onclick="abrirAfinadorDesdeElemento(this, 'compas')">
+              onclick="event.stopPropagation(); abrirAfinadorDesdeElemento(this, 'compas')">
               ${normalizeMeta(song, "compas")}
             </span> |
           `
@@ -300,7 +300,10 @@ function openSong(id) {
 
   // Render completo
   document.getElementById("contenido").innerHTML = `
-  <h2>${tituloFinal}</h2>
+  <h2 class="song-title-row">
+    ${tituloFinal}
+    <button type="button" class="fav-add-btn" onclick="abrirMisListas('${song.id}')" title="Agregar a una lista">⭐</button>
+  </h2>
 
   ${meta}
 
@@ -326,6 +329,7 @@ function openSong(id) {
 `;
 
   applyTablaturaState();
+  resetTranspose(); // cada canción arranca en su tonalidad original, sin transposición previa
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -372,16 +376,27 @@ function renderAlphabet() {
 
 
 // ===================== LETTER SELECT =====================
+// tira horizontal: tocar la misma letra dos veces cierra la lista
 function selectLetter(letter) {
 
   // 🔥 SI HAGO CLICK EN LA MISMA LETRA → CERRAR LISTA
   if (letraActiva === letter && listaVisible) {
     closeList();
     letraActiva = null;
+    highlightLetter(null);
+
+    // si no hay una canción abierta, volver a mostrar el versículo de bienvenida
+    if (!document.getElementById("contenido").innerHTML.trim()) {
+      mostrarMensajeInicio();
+    }
     return;
   }
 
-  // 🔥 NUEVA LETRA → abrir lista
+  abrirLetra(letter);
+}
+
+// riel lateral: siempre abre/salta a la letra, sin toggle (para poder arrastrar el dedo)
+function abrirLetra(letter) {
   letraActiva = letter;
   listaVisible = true;
 
@@ -389,7 +404,7 @@ function selectLetter(letter) {
 
   openList();
   renderList(letter);
-  ocultarMensajeInicio();
+  highlightLetter(letter);
 }
 
 
@@ -604,45 +619,81 @@ function renderAlphabet() {
 
   let letras = Array.from(letrasDisponibles).sort();
 
-  if (!letras.includes("#")) letras.unshift("#");
-  letras.unshift("*");
-
-  // ===================== 🔥 AQUÍ LA CLAVE =====================
-  let rangosHtml = "";
-
+  // en el Himnario se busca por número (segundo renglón de rangos), no por "#"
   if (libroActual === "himnario") {
-
-    const rangos = buildHymnRanges(idiomaActual);
-
-    if (rangos.length > 0) {
-      rangosHtml = `
-        <div class="alpha-row hymn-ranges">
-          ${rangos.map(r => `
-            <button class="alpha"
-              onclick="selectRange(${r[0]}, ${r[1]})">
-              ${r[0]}-${r[1]}
-            </button>
-          `).join("")}
-        </div>
-      `;
-    }
+    letras = letras.filter(l => l !== "#");
+  } else if (!letras.includes("#")) {
+    letras.unshift("#");
   }
+
+  letras.unshift("*");
 
   container.innerHTML = `
     <div class="alpha-row">
 
       ${letras.map(l => `
-        <button class="alpha" onclick="selectLetter('${l}')">
+        <button class="alpha" data-letter="${l}" onclick="selectLetter('${l}')">
           ${l === "*" ? "🔤" : l === "#" ? "#️⃣" : l}
         </button>
       `).join("")}
-
-      ${rangosHtml}
 
       <button class="alpha clear-btn" onclick="clearAll()">🧹</button>
 
     </div>
   `;
+
+  // ===================== SEGUNDO RENGLÓN: RANGOS DE HIMNOS (solo Himnario) =====================
+  const rangosNav = document.getElementById("himnoRangosNav");
+  const rangosCont = document.getElementById("himnoRangos");
+
+  if (rangosNav && rangosCont) {
+    const rangos = libroActual === "himnario" ? buildHymnRanges(idiomaActual) : [];
+
+    if (rangos.length > 0) {
+      rangosNav.classList.remove("hidden");
+      rangosCont.innerHTML = `
+        <div class="alpha-row">
+          ${rangos.map(r => `
+            <button class="alpha" onclick="selectRange(${r[0]}, ${r[1]})">
+              ${r[0]}-${r[1]}
+            </button>
+          `).join("")}
+        </div>
+      `;
+    } else {
+      rangosNav.classList.add("hidden");
+      rangosCont.innerHTML = "";
+    }
+  }
+
+  const rail = document.getElementById("letterRail");
+  if (rail) {
+    rail.innerHTML = letras.map(l => `
+      <span data-letter="${l}">${l === "*" ? "●" : l === "#" ? "#" : l}</span>
+    `).join("");
+  }
+
+  highlightLetter(letraActiva);
+}
+
+// resalta la letra activa en la tira y en el riel lateral
+function highlightLetter(letter) {
+  let activeChip = null;
+
+  document.querySelectorAll("#alfabeto [data-letter]").forEach(el => {
+    const isActive = letter !== null && el.dataset.letter === letter;
+    el.classList.toggle("active", isActive);
+    if (isActive) activeChip = el;
+  });
+
+  document.querySelectorAll("#letterRail [data-letter]").forEach(el => {
+    el.classList.toggle("active", letter !== null && el.dataset.letter === letter);
+  });
+
+  // si la letra se eligió desde el riel, la tira de arriba se ajusta para mostrarla
+  if (activeChip) {
+    activeChip.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+  }
 }
 
 
@@ -655,6 +706,7 @@ function selectRange(start, end) {
   renderHymnRange(start, end);
 
   letraActiva = null;
+  highlightLetter(null);
   listaVisible = true;
 
   document.getElementById("contenido").innerHTML = "";

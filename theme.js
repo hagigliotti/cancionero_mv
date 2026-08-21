@@ -18,6 +18,7 @@ function toggleTheme() {
 
   updateThemeMenuText();
   updateLogo();
+  updateThemeColorMeta();
 }
 
 function loadTheme() {
@@ -32,6 +33,16 @@ function loadTheme() {
 
   updateThemeMenuText();
   updateLogo();
+  updateThemeColorMeta();
+}
+
+// barra de estado del sistema (modo standalone) acorde al tema activo
+function updateThemeColorMeta() {
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (!meta) return;
+
+  const isLight = document.body.classList.contains("light-mode");
+  meta.setAttribute("content", isLight ? "#0d1e30" : "#f8fafc");
 }
 
 function updateThemeMenuText() {
@@ -40,9 +51,11 @@ function updateThemeMenuText() {
 
   const isLight = document.body.classList.contains("light-mode");
 
-  item.innerHTML = isLight
-    ? "👓 Tema claro"
-    : "🕶️ Tema oscuro";
+  const icon = item.querySelector(".sec-icon");
+  const label = item.querySelector(".menu-row-label");
+
+  if (icon) icon.textContent = isLight ? "👓" : "🕶️";
+  if (label) label.textContent = isLight ? "Tema claro" : "Tema oscuro";
 }
 
 

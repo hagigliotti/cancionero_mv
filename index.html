@@ -4,15 +4,27 @@
 <!-- ======================================== HEAD ======================================== -->
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-  <title>🎶 Cancionero MV</title>
+  <title>Cancionero MV</title>
 
-  <!-- ICONOS -->
+  <!-- PWA / APARIENCIA DE APP -->
+  <link rel="manifest" href="manifest.webmanifest?v=2">
+  <link rel="icon" href="imagenes/icons/favicon-32.png?v=2" sizes="32x32">
+  <link rel="icon" href="imagenes/icons/favicon-16.png?v=2" sizes="16x16">
+  <link rel="apple-touch-icon" href="imagenes/icons/apple-touch-icon.png?v=2">
+
+  <meta name="theme-color" content="#122033">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Cancionero MV">
+
+  <!-- ICONOS (font-awesome) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=30">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XS6DM59CNT"></script>
@@ -48,101 +60,123 @@
           <i class="fa-solid fa-bars"></i>
         </button>
 
+        <div id="menuBackdrop" class="menu-backdrop" onclick="closeMenu()"></div>
+
         <div id="dropdownMenu" class="dropdown-menu">
 
-          <div class="menu-item" onclick="abrirInfoDesdeMenu()">ℹ️ Acerca de...</div>
-
-          <div class="divider"></div>
-
-          <div class="menu-section-title">
-            📚 Libros e Idiomas:
+          <div class="menu-head">
+            <button type="button" class="about-close" onclick="closeMenu()" aria-label="Cerrar menú">✕</button>
+            <div class="about-badge">🎶</div>
+            <h2>Cancionero MV</h2>
+            <div class="about-meta">Menú</div>
           </div>
 
-          <div class="menu-item" style="display:flex; justify-content:space-between; align-items:center;">
-            📖 Libro:
-            <select id="menuLibro">
-              <option value="cancionero">Cancionero MV</option>
-              <option value="himnario">Himnario Adventista</option>
-              <option value="campamento">Campamento</option>
-            </select>
+          <div class="menu-body">
+
+            <div class="menu-group">
+              <div class="menu-item" onclick="abrirInfoDesdeMenu()">
+                <span class="sec-icon">ℹ️</span> Acerca de...
+              </div>
+            </div>
+
+            <div class="menu-group">
+              <p class="contact-label">Libros e idiomas</p>
+
+              <div class="menu-item" onclick="abrirMisListas()"><span class="sec-icon">⭐</span> Mis Listas</div>
+
+              <div class="menu-row">
+                <span class="sec-icon">📖</span>
+                <span class="menu-row-label">Libro</span>
+                <select id="menuLibro">
+                  <option value="cancionero">Cancionero MV</option>
+                  <option value="himnario">Himnario Adventista</option>
+                  <option value="campamento">Campamento</option>
+                </select>
+              </div>
+
+              <div class="menu-row">
+                <span class="sec-icon">🌐</span>
+                <span class="menu-row-label">Idioma</span>
+                <select id="menuIdioma">
+                  <option value="es">🇦🇷 Español</option>
+                  <option value="en">🇺🇸 English</option>
+                  <option value="it">🇮🇹 Italiano</option>
+                  <option value="pt">🇧🇷 Português</option>
+                  <option value="gn">🇵🇾 Guaraní</option>
+                </select>
+              </div>
+
+              <div class="menu-item" onclick="abrirBiblioteca()">
+                <span class="sec-icon">📚</span> Biblioteca
+              </div>
+            </div>
+
+            <div class="menu-group">
+              <p class="contact-label">Ajustes</p>
+
+              <div class="menu-row">
+                <span class="sec-icon">🅰️</span>
+                <span class="menu-row-label">Tamaño de letra</span>
+                <div class="font-controls">
+                  <button type="button" onclick="cambiarFuente(-1)">A-</button>
+                  <button type="button" onclick="resetFuente()">A</button>
+                  <button type="button" onclick="cambiarFuente(1)">A+</button>
+                </div>
+              </div>
+
+              <div class="menu-item" onclick="abrirAfinometroModal()">
+                <span class="sec-icon">📟</span> Metrónomo y Afinador
+              </div>
+
+              <div class="menu-row" id="tabToggle">
+                <span class="sec-icon">🎸</span>
+                <span class="menu-row-label">Tablatura</span>
+                <button id="tabBtn" type="button">Mostrar</button>
+              </div>
+
+              <div class="menu-row">
+                <span class="sec-icon">🎼</span>
+                <span class="menu-row-label">Transponer tonalidad</span>
+                <div class="font-controls transpose-controls">
+                  <button type="button" onclick="transposeChords(-1)" title="Medio tono abajo">♭</button>
+                  <button type="button" onclick="resetTranspose()" title="Tonalidad original">♮</button>
+                  <button type="button" onclick="transposeChords(1)" title="Medio tono arriba">♯</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-group">
+              <p class="contact-label">Modos de visualización</p>
+
+              <div id="themeMenuItem" class="menu-item" onclick="toggleTheme(); closeMenu()">
+                <span class="sec-icon">🕶️</span>
+                <span class="menu-row-label">Tema oscuro</span>
+              </div>
+
+              <div class="menu-item" onclick="toggleProjectorMode(); closeMenu()">
+                <span class="sec-icon">📽️</span> Proyector
+              </div>
+            </div>
+
           </div>
 
-          <div class="menu-item" style="display:flex; justify-content:space-between; align-items:center;">
-            🌐 Idioma:
-            <select id="menuIdioma" disabled>
-              <option value="es">🇦🇷 Español</option>
-              <option value="en">🇺🇸 English</option>
-              <option value="it">🇮🇹 Italiano</option>
-              <option value="pt">🇧🇷 Português</option>
-            </select>
+          <div class="menu-contact">
+            <p class="contact-label">Feedback</p>
+            <div class="contact-row">
+              <a href="#" onclick="abrirShareModal(); return false;">
+                <span class="c-icon share-c">🔗</span>
+                <span>Compartir</span>
+              </a>
+              <a href="mailto:hagigliotti@gmail.com?subject=Feedback%20-%20Cancionero%20MV">
+                <span class="c-icon mail-c">📩</span>
+                <span>Escribime</span>
+              </a>
+              <a href="https://www.paypal.com/" target="_blank" rel="noopener noreferrer">
+                <span class="c-icon pay-c">💖</span>
+                <span>Donaciones</span>
+              </a>
+            </div>
           </div>
-
-          <div class="menu-item" onclick="abrirBiblioteca()">
-            📚 Biblioteca
-          </div>
-
-          <div class="divider"></div>
-<!--
-          <div class="menu-item" onclick="closeMenu()">⭐ Favoritos</div>
-
-          <div class="divider"></div>
--->
-
-          <div class="menu-item font-controls" style="display:flex; justify-content:space-between; align-items:center;">
-            
-            🅰️ Tamaño:<br><br>
-            <button type="button" onclick="cambiarFuente(-1)">A-</button>
-            <button type="button" onclick="resetFuente()">A</button>
-            <button type="button" onclick="cambiarFuente(1)">A+</button>
-          </div>
-          
-          <div class="menu-item tab-item" id="tabToggle">
-            <span>🎸</span>
-            Tablatura:
-            <button id="tabBtn" type="button">Mostrar</button>
-          </div>
-
-          <div class="menu-item" onclick="abrirAfinometroModal()">
-            📟 Metrónomo y Afinador (🚧)
-          </div>
-
-          <div class="divider"></div>
-
-<!--
-          <div class="menu-title">
-            🎼 Transposición:
-          </div>
-
-          <div class="menu-item sub-item">
-            <button onclick="transposeDown()">⬇️ -1</button>
-            <button onclick="resetTranspose()">⏺️ 0</button>
-            <button onclick="transposeUp()">⬆️ +1</button>
-          </div>
-
-          <div class="divider"></div>
--->
-          <div class="menu-section-title">
-            🧩 Modos de visualización:
-          </div>
-
-          <div id="themeMenuItem" class="menu-item sub-item" onclick="toggleTheme(); closeMenu()">
-            🕶️ Tema oscuro
-          </div>
-          
-          <div class="menu-item sub-item" onclick="toggleProjectorMode(); closeMenu()">
-            📽️ Proyector
-          </div>
-
-          <div class="divider"></div>
-
-          <div class="menu-section-title">
-            ♻️ Feedback:
-          </div>
-          <a class="menu-item sub-item" href="#" onclick="abrirShareModal(); return false;">🔗 Compartir</a>
-
-          <a class="menu-item sub-item" href="mailto:hagigliotti@gmail.com?subject=Feedback%20-%20Cancionero%20MV">📩 Escribime</a>
-
-          <a class="menu-item sub-item" href="https://www.paypal.com/" target="_blank" rel="noopener noreferrer">💖 Donaciones</a>
 
         </div>
       </div>
@@ -176,12 +210,33 @@
   </div>
 
   <!-- ===================== ALFABETO ===================== -->
-  <div id="alfabeto"></div>
+  <div class="alfabeto-nav">
+    <button type="button" class="alpha-arrow" onclick="scrollAlfabeto(-1)" aria-label="Letras anteriores">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <div id="alfabeto"></div>
+    <button type="button" class="alpha-arrow" onclick="scrollAlfabeto(1)" aria-label="Letras siguientes">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <!-- ===================== RANGOS DE HIMNOS (solo Himnario) ===================== -->
+  <div class="alfabeto-nav hidden" id="himnoRangosNav">
+    <button type="button" class="alpha-arrow" onclick="scrollHimnoRangos(-1)" aria-label="Rangos anteriores">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <div id="himnoRangos"></div>
+    <button type="button" class="alpha-arrow" onclick="scrollHimnoRangos(1)" aria-label="Rangos siguientes">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
 
   <!-- ===================== ÍNDICE ===================== -->
-  <ul id="indice" class="hidden"></ul>
+  <div class="indice-wrap">
+    <ul id="indice" class="hidden"></ul>
+    <div id="letterRail" class="letter-rail hidden"></div>
+  </div>
   <br>
-  <hr> <!-- Linea que divide el menu superior con el indice y alfabeto de la cancion-->
 
   <!-- ===================== MENSAJE INICIAL ===================== -->
   
@@ -202,13 +257,54 @@
 
 
 <!-- ======================================== JS ======================================== -->
-<script src="modals.js"></script>
-<script src="lenguage.js"></script>
-<script src="utils.js"></script>
-<script src="theme.js"></script>
-<script src="afinometro.js"></script>
-<script src="app.js"></script>
-<script src="songbook.js"></script>
+<script src="modals.js?v=4"></script>
+<script src="lenguage.js?v=4"></script>
+<script src="utils.js?v=4"></script>
+<script src="theme.js?v=5"></script>
+<script src="afinometro.js?v=17"></script>
+<script src="app.js?v=17"></script>
+<script src="songbook.js?v=10"></script>
+
+<!-- ======================================== PWA OFFLINE ======================================== -->
+<div id="updateBanner" class="update-banner">
+  <span>🔄 Hay una versión nueva del Cancionero</span>
+  <button type="button" onclick="location.reload()">Actualizar</button>
+  <button type="button" class="update-banner-close" onclick="ocultarAvisoActualizacion()" aria-label="Cerrar">✕</button>
+</div>
+
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("sw.js").then(reg => {
+
+        // hay un service worker nuevo instalándose: avisar solo si YA había
+        // uno controlando la página antes (si no, es la primera instalación,
+        // no una actualización, y no corresponde avisar nada)
+        reg.addEventListener("updatefound", () => {
+          const nuevoWorker = reg.installing;
+          if (!nuevoWorker) return;
+
+          nuevoWorker.addEventListener("statechange", () => {
+            if (nuevoWorker.state === "installed" && navigator.serviceWorker.controller) {
+              mostrarAvisoActualizacion();
+            }
+          });
+        });
+
+      }).catch(err => {
+        console.warn("No se pudo registrar el service worker:", err);
+      });
+    });
+  }
+
+  function mostrarAvisoActualizacion() {
+    document.getElementById("updateBanner")?.classList.add("show");
+  }
+
+  function ocultarAvisoActualizacion() {
+    document.getElementById("updateBanner")?.classList.remove("show");
+  }
+</script>
 
 <!-- ======================================== FOOTER ======================================== -->
 <footer class="app-footer"><br>
