@@ -529,6 +529,47 @@ function closeMenu() {
   document.body.classList.remove("menu-open");
 }
 
+// ===== GESTOS: deslizar desde el borde izquierdo abre el menú, =====
+// ===== deslizar hacia la izquierda con el menú abierto lo cierra =====
+(function () {
+  const EDGE_ZONE = 24;
+  const SWIPE_THRESHOLD = 60;
+  let startX = 0;
+  let startY = 0;
+  let tracking = false;
+  let fromEdge = false;
+
+  document.addEventListener("touchstart", (e) => {
+    if (e.touches.length !== 1) return;
+
+    const isOpen = document.getElementById("dropdownMenu")?.classList.contains("active");
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    fromEdge = startX <= EDGE_ZONE;
+    tracking = isOpen || fromEdge;
+  }, { passive: true });
+
+  document.addEventListener("touchend", (e) => {
+    if (!tracking) return;
+    tracking = false;
+
+    const touch = e.changedTouches[0];
+    const dx = touch.clientX - startX;
+    const dy = touch.clientY - startY;
+
+    // gestos mayormente verticales son scroll, no swipe de menú
+    if (Math.abs(dy) > Math.abs(dx)) return;
+
+    const isOpen = document.getElementById("dropdownMenu")?.classList.contains("active");
+
+    if (!isOpen && fromEdge && dx > SWIPE_THRESHOLD) {
+      toggleMenu();
+    } else if (isOpen && dx < -SWIPE_THRESHOLD) {
+      closeMenu();
+    }
+  }, { passive: true });
+})();
+
 // ===== BOTON ACERCA DE.... =================================================================
 function info() {
   document.getElementById("infoModal").style.display = "block";
