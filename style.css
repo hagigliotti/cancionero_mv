@@ -29,10 +29,12 @@
 
   /* fondos de página: mismo degradé para el body y para el .top-bar (con
      background-attachment:fixed en ambos) para que queden pegados sin
-     costura sin importar el scroll */
-  --bg-day:   linear-gradient(180deg, #ffffff 0%, #eaf6ff 45%, #cfe9fb 100%);
-  --bg-night: radial-gradient(120% 60% at 20% -10%, rgba(56,189,248,0.16), transparent 60%),
-              linear-gradient(160deg, #0d1e30 0%, #122033 60%, #1a2e45 100%);
+     costura sin importar el scroll. Sólido (color de los logos Cancionero_*)
+     hasta ~28% de la pantalla (logo + barra + alfabeto), recién ahí empieza
+     a degradar hacia abajo */
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, #eaf6ff 62%, #cfe9fb 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(56,189,248,0.14), transparent 65%),
+              linear-gradient(180deg, #0d1e30 0%, #0d1e30 28%, #122033 62%, #1a2e45 100%);
 }
 
 /* ============================================================

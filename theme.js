@@ -101,18 +101,18 @@ function updateLogo() {
 
   // prioridad: modo proyector
   if (document.body.classList.contains("projector")) {
-    logo.src = "imagenes/Banner_black.png";
+    logo.src = "imagenes/Cancionero_black.png";
     return;
   }
 
-  // tema claro
+  // modo nocturno (fondo navy)
   if (document.body.classList.contains("light-mode")) {
-    logo.src = "imagenes/Banner_blu.png";
+    logo.src = "imagenes/Cancionero_blue.png";
     return;
   }
 
-  // tema oscuro azul
-  logo.src = "imagenes/Banner_white.png";
+  // modo diurno (fondo claro)
+  logo.src = "imagenes/Cancionero_white.png";
 }
 
 // ===================== MOBILE =====================
