@@ -1,0 +1,21 @@
+<div id="listasModal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="listasTitle">
+  <div class="modal-content about-modal">
+
+    <div class="about-head">
+      <button type="button" class="about-close" onclick="cerrarMisListas()" aria-label="Cerrar">✕</button>
+      <div class="about-badge">⭐</div>
+      <h2 id="listasTitle">Mis Listas</h2>
+      <div class="about-meta" id="listasContextLabel">Armá tus propios repertorios</div>
+    </div>
+
+    <div class="nueva-lista-row">
+      <input id="nuevaListaInput" type="text" placeholder="Nombre de la lista (ej. Retiro enero)" onkeydown="if(event.key==='Enter') crearListaDesdeInput();">
+      <button type="button" class="play-btn" onclick="crearListaDesdeInput()">+ Crear</button>
+    </div>
+
+    <div class="about-body">
+      <div id="listasContainer"></div>
+    </div>
+
+  </div>
+</div>

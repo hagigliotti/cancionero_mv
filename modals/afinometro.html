@@ -1,137 +1,180 @@
-<div id="metroModal" class="modal">
-  <div class="modal-content metro-content">
+<div id="metroModal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="metroTitle">
+  <div class="modal-content about-modal metro-modal">
 
-    <span class="close" onclick="cerrarAfinometroModal()">&times;</span>
+    <div class="about-head">
+      <button type="button" class="about-close" onclick="cerrarAfinometroModal()" aria-label="Cerrar">✕</button>
+      <div class="about-badge">📟</div>
+      <h2 id="metroTitle">Metrónomo y Afinador</h2>
+      <div class="about-meta">Herramientas para ensayar</div>
+    </div>
 
-    <h2>📟 Metrónomo y Afinador</h2>
+    <div class="about-body metro-body">
 
-    <!-- ===================== TONO / AFINADOR ===================== -->
-    <div class="metro-info">
-      <div class="divider"></div>
-      <!-- ===== SELECTOR DE NOTA DE REFERENCIA ===== -->
-      <div class="reference-tone">
+      <!-- ===================== 1. REPRODUCIR NOTA ===================== -->
+      <div class="menu-group">
+        <p class="contact-label">🎵 Reproducir nota</p>
 
-        <b>Nota:</b>
-        <select id="referenceNote">
-          <option value="C">C - Do</option>
-          <option value="C#">C# - Do#</option>
-          <option value="Db">Db - Reb</option>
-          <option value="D">D - Re</option>
-          <option value="D#">D# - Re#</option>
-          <option value="Eb">Eb - Mib</option>
-          <option value="E">E - Mi</option>
-          <option value="F">F - Fa</option>
-          <option value="F#">F# - Fa#</option>
-          <option value="Gb">Gb - Solb</option>
-          <option value="G">G - Sol</option>
-          <option value="G#">G# - Sol#</option>
-          <option value="Ab">Ab - Lab</option>
-          <option value="A">A - La</option>
-          <option value="A#">A# - La#</option>
-          <option value="Bb">Bb - Sib</option>
-          <option value="B">B - Si</option>
-        </select>
+        <div class="note-grid" id="refNoteGrid"></div>
 
-        <select id="referenceOctave">
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4" selected>4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-        </select>
-
-        <button onclick="playReferenceTone()">🔊 Play</button>
-
-      </div>
-
-      <div class="divider"></div>
-
-      <div class="tuner-row">
-        <b>Afinación:</b>
-        <button id="micBtn" onclick="toggleMic()">🎤</button>
-        <!--<button id="toneBtn" onclick="playReferenceTone()">🔊</button>-->
-      </div>
-
-      <!-- ===== AFINADOR ===== -->
-      <div class="tuner-targets">
-        <button onclick="selectTargetNote('C')">C</button>
-        <button onclick="selectTargetNote('D')">D</button>
-        <button onclick="selectTargetNote('E')">E</button>
-        <button onclick="selectTargetNote('F')">F</button>
-        <button onclick="selectTargetNote('G')">G</button>
-        <button onclick="selectTargetNote('A')">A</button>
-        <button onclick="selectTargetNote('B')">B</button>
-      </div>
-
-      <div class="tuner-display">
-        <div id="tunerNote">-</div>
-        <div class="tuner-meter">
-          <div id="tunerNeedle"></div>
+        <div class="octave-row">
+          <span class="menu-row-label">Octava</span>
+          <div class="stepper">
+            <button type="button" onclick="changeRefOctave(-1)">−</button>
+            <span id="refOctaveValue">4</span>
+            <button type="button" onclick="changeRefOctave(1)">+</button>
+          </div>
+          <button type="button" class="play-btn" onclick="playReferenceTone()">🔊 Play</button>
         </div>
       </div>
 
-      <div class="divider"></div>
+      <!-- ===================== 2. AFINADOR ===================== -->
+      <div class="menu-group">
+        <p class="contact-label">🎯 Afinador</p>
 
-      <!-- ===== COMPÁS ===== -->
-      <div class="compas-selector">
+        <div class="instrument-chips" id="instrumentChips">
+          <button type="button" class="chip active" data-instrument="general" onclick="setTunerInstrument('general')">🎼 General</button>
+          <button type="button" class="chip" data-instrument="guitarra" onclick="setTunerInstrument('guitarra')">🎸 Guitarra</button>
+          <button type="button" class="chip" data-instrument="bajo" onclick="setTunerInstrument('bajo')">🎸 Bajo</button>
+          <button type="button" class="chip" data-instrument="violin" onclick="setTunerInstrument('violin')">🎻 Violín</button>
+          <button type="button" class="chip" data-instrument="ukelele" onclick="setTunerInstrument('ukelele')">🪕 Ukelele</button>
+        </div>
 
-        <b>Compás:</b>
-        <span id="metroCompas">4/4</span>
+        <div class="tuner-targets" id="tunerTargets"></div>
 
-        <button onclick="setCompas('2/4')">2/4</button>
-        <button onclick="setCompas('3/4')">3/4</button>
-        <button onclick="setCompas('4/4')">4/4</button>
+        <button id="micBtn" type="button" class="mic-btn" onclick="toggleMic()">🎤 Activar micrófono</button>
 
+        <div class="tuner-display">
+          <div id="tunerNote">-</div>
+          <div id="tunerCents" class="tuner-cents">&nbsp;</div>
+
+          <div class="tuner-meter">
+            <div class="tuner-meter-center"></div>
+            <div id="tunerNeedle"></div>
+          </div>
+        </div>
       </div>
 
-      <!-- ===== SUBDIVISIÓN ===== -->
-      <div class="metro-subdivision">
+      <!-- ===================== 3. METRÓNOMO ===================== -->
+      <div class="menu-group">
+        <p class="contact-label">🥁 Metrónomo</p>
 
-        <b>Subdivisión:</b>
-        <button onclick="setSubdivision(1)" title="Negra (1 golpe por tiempo)">♩</button>
-        <button onclick="setSubdivision(2)" title="Corcheas (2 subdivisiones por tiempo)">♪</button>
-        <!--<button onclick="setSubdivision(3)" title="Tresillos (3 subdivisiones por tiempo)">𝅘𝅥𝅮</button>-->
-        <button onclick="setSubdivision(4)" title="Semicorcheas (4 subdivisiones por tiempo)">♬</button>
-        <!--<button onclick="setSubdivision(8)" title="Fusas 1/32 (8 subdivisiones por tiempo)">𝅘𝅥𝅯</button>-->
+        <div class="metro-bpm-box">
+          <button type="button" onclick="changeBpm(-1)">−</button>
+          <input type="number" id="metroBpm" value="90" min="20" max="300" />
+          <button type="button" onclick="changeBpm(1)">+</button>
+        </div>
+        <div class="metro-label">BPM</div>
 
+        <div id="metroBeat" class="metro-beat"></div>
+
+        <div class="metro-sub-row">
+          <span class="menu-row-label">Compás</span>
+          <div class="chip-row" id="compasSelector">
+            <button type="button" class="chip active" data-compas="2/4" onclick="setCompas('2/4')">2/4</button>
+            <button type="button" class="chip" data-compas="3/4" onclick="setCompas('3/4')">3/4</button>
+            <button type="button" class="chip" data-compas="4/4" onclick="setCompas('4/4')">4/4</button>
+            <button type="button" class="chip" data-compas="6/8" onclick="setCompas('6/8')">6/8</button>
+            <button type="button" class="chip" data-compas="5/4" onclick="setCompas('5/4')">5/4</button>
+          </div>
+        </div>
+
+        <div class="metro-sub-row">
+          <span class="menu-row-label">Subdivisión</span>
+          <div class="chip-row" id="subdivisionSelector">
+            <button type="button" class="chip active" data-subdivision="1" onclick="setSubdivision(1)" title="Negra (1 golpe por tiempo)">♩</button>
+            <button type="button" class="chip" data-subdivision="2" onclick="setSubdivision(2)" title="Corcheas (2 subdivisiones por tiempo)">♪</button>
+            <button type="button" class="chip" data-subdivision="4" onclick="setSubdivision(4)" title="Semicorcheas (4 subdivisiones por tiempo)">♬</button>
+          </div>
+        </div>
+
+        <div class="metro-sub-row">
+          <span class="menu-row-label">Acento</span>
+          <div class="chip-row" id="accentSelector">
+            <button type="button" class="chip active" data-accent="recto" onclick="setAccentMode('recto')">Recto</button>
+            <button type="button" class="chip" data-accent="secundario" onclick="setAccentMode('secundario')">Con acento 2°</button>
+          </div>
+        </div>
+
+        <div class="metro-controls">
+          <button id="metroPlayBtn" type="button" onclick="toggleMetronomo()">▶️ Play</button>
+          <button id="metroSoundBtn" type="button" onclick="toggleMetroSound()">🔊 Sonido</button>
+        </div>
       </div>
-      <!-- <div class="divider"></div> -->
+
+      <!-- ===================== 4. REPRODUCIR ACORDE ===================== -->
+      <div class="menu-group">
+        <p class="contact-label">🎶 Reproducir acorde</p>
+
+        <div class="note-grid" id="chordRootGrid"></div>
+
+        <div class="chip-row chord-quality-row" id="chordQualityChips">
+          <button type="button" class="chip active" data-quality="mayor" onclick="selectChordQuality('mayor', this)">Mayor</button>
+          <button type="button" class="chip" data-quality="menor" onclick="selectChordQuality('menor', this)">menor</button>
+          <button type="button" class="chip" data-quality="dom7" onclick="selectChordQuality('dom7', this)">7</button>
+          <button type="button" class="chip" data-quality="maj7" onclick="selectChordQuality('maj7', this)">Maj7</button>
+          <button type="button" class="chip" data-quality="min7" onclick="selectChordQuality('min7', this)">min7</button>
+          <button type="button" class="chip" data-quality="sus2" onclick="selectChordQuality('sus2', this)">sus2</button>
+          <button type="button" class="chip" data-quality="sus4" onclick="selectChordQuality('sus4', this)">sus4</button>
+          <button type="button" class="chip" data-quality="dim" onclick="selectChordQuality('dim', this)">dim</button>
+          <button type="button" class="chip" data-quality="dim7" onclick="selectChordQuality('dim7', this)">dim7</button>
+          <button type="button" class="chip" data-quality="m7b5" onclick="selectChordQuality('m7b5', this)">m7b5</button>
+          <button type="button" class="chip" data-quality="aug" onclick="selectChordQuality('aug', this)">aug</button>
+          <button type="button" class="chip" data-quality="sexta" onclick="selectChordQuality('sexta', this)">6</button>
+          <button type="button" class="chip" data-quality="msexta" onclick="selectChordQuality('msexta', this)">m6</button>
+        </div>
+
+        <div id="chordNotesLabel" class="chord-notes-display"></div>
+
+        <div class="octave-row">
+          <span class="menu-row-label">Octava</span>
+          <div class="stepper">
+            <button type="button" onclick="changeChordOctave(-1)">−</button>
+            <span id="chordOctaveValue">4</span>
+            <button type="button" onclick="changeChordOctave(1)">+</button>
+          </div>
+          <button type="button" class="play-btn" onclick="playChord()">🔊 Play</button>
+        </div>
+      </div>
+
+      <!-- ===================== 5. CÍRCULO DE QUINTAS ===================== -->
+      <div class="menu-group">
+        <p class="contact-label">🔵 Círculo de quintas</p>
+
+        <div class="fifths-circle" id="fifthsCircle"></div>
+
+        <div class="fifths-legend">
+          <span>5tas ↻</span>
+          <span>↺ 4tas</span>
+        </div>
+
+        <div id="fifthsInfo" class="chord-notes-display">Tocá una tonalidad para escucharla</div>
+
+        <div id="fifthsDiatonic" class="chip-row diatonic-row"></div>
+      </div>
+
+      <!-- ===================== 6. ESCALAS ===================== -->
+      <div class="menu-group">
+        <p class="contact-label">🎼 Escalas</p>
+
+        <div class="note-grid" id="pentaRootGrid"></div>
+
+        <div class="chip-row chord-quality-row" id="pentaTypeChips">
+          <button type="button" class="chip active" data-type="mayor" onclick="selectPentaType('mayor', this)">Mayor</button>
+          <button type="button" class="chip" data-type="menor" onclick="selectPentaType('menor', this)">menor</button>
+        </div>
+
+        <div class="scale-full-row">
+          <span id="pentaNotesLabel" class="chord-notes-display"></span>
+          <button type="button" class="scale-mini-play" onclick="playPentaScale()" title="Tocar pentatónica">▶</button>
+        </div>
+
+        <div class="scale-full-row">
+          <span id="scaleFullLabel" class="chord-notes-display scale-full-label"></span>
+          <button type="button" class="scale-mini-play" onclick="playFullScale()" title="Tocar escala completa">▶</button>
+        </div>
+      </div>
+
     </div>
 
-    <!-- ===================== METRÓNOMO ===================== -->
-    <div class="metro-bpm-box">
-
-      <button onclick="changeBpm(-1)">−</button>
-
-      <input
-        type="number"
-        id="metroBpm"
-        value="90"
-        min="20"
-        max="300"
-      />
-
-      <button onclick="changeBpm(1)">+</button>
-
-    </div>
-
-    <div class="metro-label">BPM</div>
-
-    <div id="metroBeat" class="metro-beat"></div>
-
-    <!-- ===================== CONTROLES ===================== -->
-    <!--<div class="divider"></div> -->
-    <div class="metro-controls">
-
-      <button id="metroPlayBtn" onclick="toggleMetronomo()">
-        ▶️ Play
-      </button>
-
-      <button id="metroSoundBtn" onclick="toggleMetroSound()">
-        🔊 Sonido
-      </button>
-
-    </div>
-    
   </div>
 </div>

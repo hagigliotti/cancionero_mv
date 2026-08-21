@@ -1,99 +1,155 @@
 <div id="infoModal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="modalTitle">
-  <div class="modal-content">
+  <div class="modal-content about-modal">
 
-    <span class="close" onclick="cerrarInfo()" aria-label="Cerrar">&times;</span>
-
-    <h2 id="modalTitle">📖 Cancionero MV (Digital)</h2>
-
-    <hr>
-
-    <div class="modal-version-info">
-      <p><strong>Versión:</strong> 2.0</p>
-      <p><strong>Última actualización:</strong> 2026.07</p>
-      <strong>Total de canciones:</strong> <span id="totalCanciones">...</span><br>
-      <strong>Canciones traducidas:</strong> <span id="totalTraducidas">...</span><br>
-      <strong>Idiomas disponibles:</strong> <span id="totalIdiomas">...</span></p>
+    <div class="about-head">
+      <button type="button" class="about-close" onclick="cerrarInfo()" aria-label="Cerrar">✕</button>
+      <div class="about-badge">📖</div>
+      <h2 id="modalTitle">Cancionero MV (Digital)</h2>
+      <div class="about-meta">Versión <span id="appVersion">…</span> · Actualizado <span id="appUpdated">…</span></div>
     </div>
 
-    <hr>
-    
-    <section class="info-importante">
-      <p><strong>Información importante sobre Copyright, Autores y Permisos:</strong></p>
-      <div style="font-size: 0.9em; text-align: justify; line-height: 1.5; color: #333;">
-        
-        <p>El <strong>“Cancionero MV”</strong> fue desarrollado por Hernando Gigliotti y editado en colaboración con Elisa Vilaltella y Rolando Gigliotti.</p>
-        
-        <p>Este material sin fines de lucro es una recopilación con fines religiosos, comunitarios y educativos. Las canciones y sus correspondientes derechos pertenecen a sus respectivos autores y editoriales.</p>
-        
-        <p>El código fuente, la estructura de la base de datos, arreglos y contenidos desarrollados específicamente para este proyecto son propiedad intelectual de sus autores y están protegidos por las leyes de derecho de autor.</p>
+    <div class="about-stats">
+      <div class="stat-chip"><b id="totalCanciones">...</b><span>Canciones</span></div>
+      <div class="stat-chip"><b id="totalTraducidas">...</b><span>Traducidas</span></div>
+      <div class="stat-chip"><b id="totalIdiomas">...</b><span>Idiomas</span></div>
+    </div>
 
-        <div style="background-color: #fff9e6; padding: 10px; border-radius: 5px; margin: 10px 0; border: 1px solid #ffeeba;">
-          <p style="margin: 0;">🡺 Si te gustaría agregar un canto o comunicarme algún error, por favor escribime.</p>
-          <p style="margin: 0;">🡸 Si algún titular desea la modificación o retirada de su contenido, puede contactarse para proceder de inmediato.</p>
+    <div class="about-body">
+
+      <details class="about-section" open>
+        <summary>
+          <span class="sec-icon">📲</span>
+          Cómo instalar la app
+          <span class="sec-chevron">▸</span>
+        </summary>
+        <div class="about-panel">
+          <p><strong>No hace falta instalar nada</strong> — el Cancionero funciona directo desde el navegador, online, con solo abrir el link. Instalarlo es opcional: sirve para abrirlo sin la barra del navegador y para que ande sin internet.</p>
+
+          <div class="callout">
+            📱 <strong>iPhone (tiene que ser Safari, no funciona desde Chrome):</strong><br>
+            Abrí el sitio en Safari → tocá el ícono de compartir (el cuadrado con la flecha hacia arriba) → deslizá y elegí <strong>"Agregar a inicio"</strong> → confirmá con <strong>Agregar</strong>.
+          </div>
+
+          <div class="callout">
+            🤖 <strong>Android (Chrome):</strong><br>
+            Abrí el sitio en Chrome → tocá los 3 puntitos (arriba a la derecha) → elegí <strong>"Instalar app"</strong> (o "Agregar a pantalla principal") → confirmá.
+          </div>
+
+          <div class="callout">
+            💻 <strong>PC con Windows (Chrome / Edge):</strong><br>
+            Abrí el sitio → buscá el ícono de instalar en la barra de direcciones (una pantalla con una flecha, o un ⊕) → <strong>Instalar</strong>. Si no lo ves, andá a los 3 puntos del navegador → <strong>"Instalar Cancionero MV..."</strong>.
+          </div>
+
+          <div class="callout">
+            🖥️ <strong>Mac:</strong><br>
+            En <strong>Safari</strong> (macOS Sonoma o más nuevo): menú <strong>Archivo → Agregar al Dock...</strong><br>
+            En <strong>Chrome/Edge</strong>: igual que en PC, el ícono de instalar en la barra de direcciones.
+          </div>
+
+          <p>Con la app instalada, la próxima vez abre directo desde el ícono en tu pantalla — sin escribir la dirección de nuevo. Las letras y acordes de las canciones quedan guardados en el dispositivo (funcionan sin internet); las imágenes, archivos grandes (PDFs, audios) y las referencias bíblicas de las canciones (abren en Bible Gateway) siguen necesitando internet.</p>
         </div>
-      </div>
-    </section>
-    
-    <hr>
+      </details>
 
-    <section class="licencia-contenedor">
-      <p><strong>Licencia y Términos Legales:</strong></p>
-      <div style="font-size: 0.8em; text-align: justify; color: #666; background: #f4f4f4; padding: 12px; border-radius: 4px; border: 1px solid #ddd; max-height: 150px; overflow-y: auto; font-family: sans-serif;">
-        <p><strong>Copyright (c) 2026 Hernando Gigliotti — TODOS LOS DERECHOS RESERVADOS</strong></p>
-        <p>Este repositorio (código, tablaturas, acordes, metadatos e imágenes) está protegido por leyes internacionales de derecho de autor. Queda prohibida la copia, modificación, distribución o uso comercial sin permiso previo por escrito.</p>
-        <p>La presencia en GitHub no otorga derechos de uso a terceros. Ciertos materiales se incluyen bajo permisos exclusivos no transferibles. Las bifurcaciones (forks) o réplicas no autorizadas están expresamente prohibidas.</p>
-        <p><em>Para consultas o autorizaciones, contacte al titular de los derechos.</em></p>
-      </div>
-    </section>
+      <details class="about-section">
+        <summary>
+          <span class="sec-icon">📜</span>
+          Copyright, autores y permisos
+          <span class="sec-chevron">▸</span>
+        </summary>
+        <div class="about-panel">
+          <p>El <strong>“Cancionero MV”</strong> fue desarrollado por Hernando Gigliotti y editado en colaboración con Elisa Vilaltella y Rolando Gigliotti.</p>
+          <p>Este material sin fines de lucro es una recopilación con fines religiosos, comunitarios y educativos. Las canciones y sus correspondientes derechos pertenecen a sus respectivos autores y editoriales.</p>
+          <p>El código fuente, la estructura de la base de datos, arreglos y contenidos desarrollados específicamente para este proyecto son propiedad intelectual de sus autores y están protegidos por las leyes de derecho de autor.</p>
+          <div class="callout">
+            🡺 Si te gustaría agregar un canto o comunicarme algún error, por favor escribime.<br>
+            🡸 Si algún titular desea la modificación o retirada de su contenido, puede contactarse para proceder de inmediato.
+          </div>
+        </div>
+      </details>
 
-    <hr>
+      <details class="about-section">
+        <summary>
+          <span class="sec-icon">⚖️</span>
+          Licencia y términos legales
+          <span class="sec-chevron">▸</span>
+        </summary>
+        <div class="about-panel">
+          <div class="legal-box">
+            <p><strong>Copyright (c) 2026 Hernando Gigliotti — TODOS LOS DERECHOS RESERVADOS</strong></p>
+            <p>Este repositorio (código, tablaturas, acordes, metadatos e imágenes) está protegido por leyes internacionales de derecho de autor. Queda prohibida la copia, modificación, distribución o uso comercial sin permiso previo por escrito.</p>
+            <p>La presencia en GitHub no otorga derechos de uso a terceros. Ciertos materiales se incluyen bajo permisos exclusivos no transferibles. Las bifurcaciones (forks) o réplicas no autorizadas están expresamente prohibidas.</p>
+            <p><em>Para consultas o autorizaciones, contacte al titular de los derechos.</em></p>
+          </div>
+        </div>
+      </details>
 
-    <section class="creditos">
-      <p><strong>Creator, Lead Software Engineer (Full-Stack):</strong> Hernando Gigliotti</p>
-      <p><strong>Developer Back-end / Colaboración:</strong> Elisa Vilaltella</p>
-      <p><strong>Digital Music Encoding:</strong> Rolando Gigliotti, Hernando Gigliotti</p>
-    </section>
+      <details class="about-section">
+        <summary>
+          <span class="sec-icon">👥</span>
+          Créditos
+          <span class="sec-chevron">▸</span>
+        </summary>
+        <div class="about-panel">
+          <p><strong>Creator, Lead Software Engineer (Full-Stack):</strong> Hernando Gigliotti</p>
+          <p><strong>Developer Back-end / Colaboración:</strong> Elisa Vilaltella</p>
+          <p><strong>Digital Music Encoding:</strong> Rolando Gigliotti, Hernando Gigliotti, Mauricio Iakmiu</p>
+        </div>
+      </details>
 
-    <hr>
+      <details class="about-section">
+        <summary>
+          <span class="sec-icon">📚</span>
+          Fuentes del contenido
+          <span class="sec-chevron">▸</span>
+        </summary>
+        <div class="about-panel">
+          <ul>
+            <li>Cancionero "V Encuentro GM".</li>
+            <li>Cancionero Hosanna 2023.</li>
+            <li>Cancionero JA Iglesia Adventista de Olivos (Argentina).</li>
+            <li>Cancioneros varios (internet).</li>
+            <li>Innario GA Compagnon 2024 (Italia).</li>
+          </ul>
+        </div>
+      </details>
 
-    <section class="fuentes"></section>
-    <p style="font-size: 0.9em;"><strong>Fuente del contenido (Preservación):</strong></p>
-    <ul>
-      <li>Cancionero "V Encuentro GM".</li>
-      <li>Cancionero Hosanna 2023.</li>
-      <li>Cancionero JA Iglesia Adventista de Olivos (Argentina).</li>
-      <li>Cancioneros varios (internet).</li>
-      <li>Innario GA Compagnon 2024 (Italia).</li>
-    </ul>
+      <details class="about-section">
+        <summary>
+          <span class="sec-icon">✨</span>
+          Funcionalidades
+          <span class="sec-chevron">▸</span>
+        </summary>
+        <div class="about-panel">
+          <ul>
+            <li>Búsqueda de canciones, compositores, etc.</li>
+            <li>Modo proyector (iglesia)</li>
+            <li>Multi-idioma</li>
+            <li>Visualización de acordes</li>
+            <li>Visualización de tonalidades, bpm, etc.</li>
+            <li>Lectura bíblica</li>
+          </ul>
+        </div>
+      </details>
 
-    <hr>
-
-    <section class="funcionalidades"></section>
-    <p style="font-size: 0.9em;"><strong>Funcionalidades:</strong></p>
-    <ul>
-      <li>Búsqueda de canciones, compositores, etc.</li>
-      <li>Modo proyector (iglesia)</li>
-      <li>Multi-idioma</li>
-      <li>Visualización de acordes</li>
-      <li>Visualización de tonalidades, bpm, etc.</li>
-      <li>Lectura bíblica</li>
-    </ul>
-
-    <hr>
-    
-    <section class="contacto"></section>
-    <p style="font-size: 0.9em;"><strong>Contacto:</strong></p>
-    <div class="social-links" style="line-height: 1.2;">
-      <a href="https://www.instagram.com/hagigliotti" target="_blank" rel="noopener noreferrer" style="display: block; margin-bottom: 4px;">
-        <i class="fa-brands fa-instagram"></i> @hagigliotti
-      </a>
-      <a href="https://www.youtube.com/@hagproducciones" target="_blank" rel="noopener noreferrer" style="display: block; margin-bottom: 4px;">
-        <i class="fa-brands fa-youtube"></i> HAG Producciones
-      </a>
-      <a href="https://github.com/hagigliotti/cancionero_mv/issues" target="_blank" rel="noopener noreferrer" style="display: block; margin-bottom: 0;">
-        <i class="fa-brands fa-github"></i> Reportar Error o Sugerencia (Requiere iniciar sesión)
-      </a>
     </div>
-    
+
+    <div class="about-contact">
+      <p class="contact-label">Contacto</p>
+      <div class="contact-row">
+        <a href="https://www.instagram.com/hagigliotti" target="_blank" rel="noopener noreferrer">
+          <span class="c-icon ig"><i class="fa-brands fa-instagram"></i></span>
+          <span>@hagigliotti<br><small>Instagram</small></span>
+        </a>
+        <a href="https://www.youtube.com/@hagproducciones" target="_blank" rel="noopener noreferrer">
+          <span class="c-icon yt"><i class="fa-brands fa-youtube"></i></span>
+          <span>HAG Producciones<br><small>YouTube</small></span>
+        </a>
+        <a href="https://github.com/hagigliotti/cancionero_mv/issues" target="_blank" rel="noopener noreferrer">
+          <span class="c-icon gh"><i class="fa-brands fa-github"></i></span>
+          <span>Reportar error o sugerencia<br><small>GitHub · requiere sesión</small></span>
+        </a>
+      </div>
+    </div>
+
   </div> <!-- cierre de modal-content -->
 </div> <!-- cierre de infoModal -->

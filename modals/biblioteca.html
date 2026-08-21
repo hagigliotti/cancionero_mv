@@ -1,16 +1,18 @@
-<div id="bibliotecaModal" class="modal">
-  <div class="modal-content">
+<div id="bibliotecaModal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="bibliotecaTitle">
+  <div class="modal-content about-modal">
 
-    <span class="close" onclick="cerrarBiblioteca()">&times;</span>
-
-    <h2>📚 Biblioteca</h2>
-
-    <!-- FILTROS -->
-    <div style="margin:10px 0;">
-      <input id="bibliotecaSearch" placeholder="🔍 Buscar título o autor..." />
+    <div class="about-head">
+      <button type="button" class="about-close" onclick="cerrarBiblioteca()" aria-label="Cerrar">✕</button>
+      <div class="about-badge">📚</div>
+      <h2 id="bibliotecaTitle">Biblioteca</h2>
+      <div class="about-meta"><span id="bibliotecaCount">...</span> recurso(s) disponible(s)</div>
     </div>
 
-    <div id="bibliotecaLista"></div>
+    <div class="biblio-search-wrap">
+      <input id="bibliotecaSearch" type="text" placeholder="🔎 Buscar título o autor..." />
+    </div>
+
+    <div id="bibliotecaLista" class="about-body biblio-list"></div>
 
   </div>
 </div>
