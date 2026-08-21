@@ -13862,16 +13862,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 8"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Salmo",
-    "Creación",
-    "Grandeza",
-    "Soberanía"
-  ],
+  "tags": ["Alabanza","Adoración","Salmo","Creación","Grandeza","Soberanía"],
   "idiomas": {
     "es": {
       "titulo": ["Salmo 8: Cuando miro los claros cielos"],
@@ -13882,20 +13873,20 @@
       "revisado": ["No"],      
       "letra": [
         "",
-        "[G]Cuando miro los [Bm]claros cielos [cite: 84, 85, 86]",
+        "[G]Cuando miro los [Bm]claros cielos",
         "[C]y lo que es [Am]obra de tus [D]dedos, ",
         "[Em]digo qué [C]es el hombre ",
-        "[D7]para que te [D]acuerdes de él. [cite: 87, 88, 89]",
+        "[D7]para que te [D]acuerdes de él.",
         "",
-        "[Em]Todo lo [D]pusiste [cite: 90, 91, 92]",
-        "[C]de[Am]bajo de [D]sus pies, [cite: 93, 94, 95]",
-        "[Em]todo lo [D]que pasa [cite: 96, 97, 98]",
-        "[G]por la [C]senda de [Am]la [D]mar. [cite: 99, 100, 101, 102]",
+        "[Em]Todo lo [D]pusiste",
+        "[C]de[Am]bajo de [D]sus pies,",
+        "[Em]todo lo [D]que pasa",
+        "[G]por la [C]senda de [Am]la [D]mar.",
         "",
-        "[Em]Oh Je[C]hová, Se[Am]ñor nuestro [cite: 103, 104, 105, 106]",
-        "[D]cuan grande [G]es tu nombre [cite: 107, 108, 109]",
-        "[Em]en toda [C]la tierra [cite: 110, 111, 112]",
-        "[D]y en mi [G]corazón. [BIS / cite: 113, 114, 115, 117]"
+        "[Em]Oh Je[C]hová, Se[Am]ñor nuestro",
+        "[D]cuan grande [G]es tu nombre",
+        "[Em]en toda [C]la tierra",
+        "[D]y en mi [G]corazón."
       ],
       "nota": [""]
     }
