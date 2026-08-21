@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css?v=30">
+  <link rel="stylesheet" href="style.css?v=31">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XS6DM59CNT"></script>
@@ -268,8 +268,10 @@
 <!-- ======================================== PWA OFFLINE ======================================== -->
 <div id="updateBanner" class="update-banner">
   <span>🔄 Hay una versión nueva del Cancionero</span>
-  <button type="button" onclick="location.reload()">Actualizar</button>
-  <button type="button" class="update-banner-close" onclick="ocultarAvisoActualizacion()" aria-label="Cerrar">✕</button>
+  <div class="update-banner-actions">
+    <button type="button" onclick="location.reload()">Actualizar</button>
+    <button type="button" class="update-banner-close" onclick="ocultarAvisoActualizacion()" aria-label="Cerrar">✕</button>
+  </div>
 </div>
 
 <script>
