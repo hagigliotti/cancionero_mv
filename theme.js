@@ -46,16 +46,14 @@ function updateThemeColorMeta() {
 }
 
 function updateThemeMenuText() {
-  const item = document.getElementById("themeMenuItem");
-  if (!item) return;
+  const btn = document.getElementById("themeToggleBtn");
+  if (!btn) return;
 
   const isLight = document.body.classList.contains("light-mode");
 
-  const icon = item.querySelector(".sec-icon");
-  const label = item.querySelector(".menu-row-label");
-
-  if (icon) icon.textContent = isLight ? "👓" : "🕶️";
-  if (label) label.textContent = isLight ? "Tema claro" : "Tema oscuro";
+  btn.textContent = isLight ? "👓" : "🕶️";
+  btn.title = isLight ? "Cambiar a tema oscuro" : "Cambiar a tema claro";
+  btn.setAttribute("aria-label", btn.title);
 }
 
 

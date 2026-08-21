@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css?v=35">
+  <link rel="stylesheet" href="style.css?v=37">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XS6DM59CNT"></script>
@@ -65,6 +65,7 @@
         <div id="dropdownMenu" class="dropdown-menu">
 
           <div class="menu-head">
+            <button type="button" id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleTheme()" title="Cambiar tema claro/oscuro" aria-label="Cambiar tema claro/oscuro">🕶️</button>
             <button type="button" class="about-close" onclick="closeMenu()" aria-label="Cerrar menú">✕</button>
             <div class="about-badge">🎶</div>
             <h2>Cancionero MV</h2>
@@ -75,14 +76,12 @@
 
             <div class="menu-group">
               <div class="menu-item" onclick="abrirInfoDesdeMenu()">
-                <span class="sec-icon">ℹ️</span> Acerca de...
+                <span class="sec-icon">ℹ️</span> Información de la app
               </div>
             </div>
 
             <div class="menu-group">
-              <p class="contact-label">Libros e idiomas</p>
-
-              <div class="menu-item" onclick="abrirMisListas()"><span class="sec-icon">⭐</span> Mis Listas</div>
+              <p class="contact-label">Cancionero</p>
 
               <div class="menu-row">
                 <span class="sec-icon">📖</span>
@@ -105,6 +104,12 @@
                   <option value="gn">🇵🇾 Guaraní</option>
                 </select>
               </div>
+            </div>
+
+            <div class="menu-group">
+              <p class="contact-label">Mi música</p>
+
+              <div class="menu-item" onclick="abrirMisListas()"><span class="sec-icon">⭐</span> Mis Listas</div>
 
               <div class="menu-item" onclick="abrirBiblioteca()">
                 <span class="sec-icon">📚</span> Biblioteca
@@ -112,7 +117,7 @@
             </div>
 
             <div class="menu-group">
-              <p class="contact-label">Ajustes</p>
+              <p class="contact-label">Lectura y herramientas</p>
 
               <div class="menu-row">
                 <span class="sec-icon">🅰️</span>
@@ -146,13 +151,7 @@
             </div>
 
             <div class="menu-group">
-              <p class="contact-label">Modos de visualización</p>
-
-              <div id="themeMenuItem" class="menu-item" onclick="toggleTheme(); closeMenu()">
-                <span class="sec-icon">🕶️</span>
-                <span class="menu-row-label">Tema oscuro</span>
-              </div>
-
+              <p class="contact-label">Modo iglesia</p>
               <div class="menu-item" onclick="toggleProjectorMode(); closeMenu()">
                 <span class="sec-icon">📽️</span> Proyector
               </div>
@@ -260,7 +259,7 @@
 <script src="modals.js?v=4"></script>
 <script src="lenguage.js?v=4"></script>
 <script src="utils.js?v=4"></script>
-<script src="theme.js?v=6"></script>
+<script src="theme.js?v=7"></script>
 <script src="afinometro.js?v=17"></script>
 <script src="app.js?v=17"></script>
 <script src="songbook.js?v=10"></script>

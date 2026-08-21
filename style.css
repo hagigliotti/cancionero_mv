@@ -92,6 +92,9 @@ h1 { text-align: center; padding: 10px; margin: 0; }
 
 .app {
   padding-bottom: 0px;
+  /* despega el logo del notch/Dynamic Island en iPhone (sobre todo instalada
+     como app, sin la barra del navegador que antes daba ese margen gratis) */
+  padding-top: calc(14px + env(safe-area-inset-top, 0));
 }
 
 /* ============================================================
@@ -1346,6 +1349,28 @@ body.dark .modal-content {
 
 .dark-mode .about-close { background: var(--gray-50); }
 .about-close:hover { opacity: 1; background: var(--sky); color: #fff; }
+
+.theme-toggle-btn {
+  position: absolute;
+  top: 14px;
+  right: 54px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.08);
+  opacity: 0.9;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  border: none;
+  transition: var(--trans);
+}
+
+.dark-mode .theme-toggle-btn { background: var(--gray-50); }
+.theme-toggle-btn:hover { opacity: 1; background: var(--sky); }
 
 .about-badge {
   width: 52px;
