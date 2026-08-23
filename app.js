@@ -788,11 +788,14 @@ function search(q) {
 
   });
 
+  // no exigir que la canción tenga título en el idioma actual: si el match
+  // viene de otro idioma (ej. busco "moving in our midst" en español y solo
+  // existe la letra en inglés), igual debe aparecer con su mejor título disponible
   const sorted = sortByTitle(results)
-    .filter(c => c.idiomas?.[idiomaActual]?.titulo?.trim());
+    .filter(c => getSongTitle(c) !== "Sin título");
 
   list.innerHTML = sorted.map(c => {
-    const titulo = normalizeText(c.idiomas?.[idiomaActual]?.titulo);
+    const titulo = getSongTitle(c);
     const num = getNumeroHimno(c);
     const flags = getAvailableFlags(c);
 

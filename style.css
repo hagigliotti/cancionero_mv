@@ -1262,6 +1262,7 @@ a.menu-item {
   top: 0;
   width: 100%;
   height: 100%;
+  height: 100dvh;
   background: rgba(10, 20, 35, 0.72);
   backdrop-filter: blur(4px);
 }
@@ -1278,6 +1279,7 @@ a.menu-item {
   max-width: 500px;
   border-radius: var(--radius-lg);
   max-height: 82vh;
+  max-height: 82dvh; /* dvh = alto real visible, sin contar la barra del navegador que aparece/desaparece en Android/iPhone */
   overflow-y: auto;
   box-shadow: var(--shadow-lg);
   color: var(--navy);
@@ -1339,6 +1341,7 @@ body.dark .modal-content {
 .about-modal {
   max-width: 440px;
   max-height: 90vh;
+  max-height: 90dvh;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -1883,6 +1886,7 @@ details[open] .sec-chevron { transform: rotate(90deg); }
   max-width: 600px;
   width: 95%;
   max-height: 90vh;
+  max-height: 90dvh;
   overflow-y: auto;
   text-align: left;
 }
@@ -2417,16 +2421,16 @@ body.projector .song-note {
    ============================================================ */
 @media (max-width: 460px) {
   .song-line {
-    font-size: 16px !important;
+    font-size: calc(16px * var(--font-scale, 1)) !important;
     line-height: 2.0;
   }
 
-  .lyrics { 
-    font-size: 1.6rem;
+  .lyrics {
+    font-size: calc(1.6rem * var(--font-scale, 1));
   }
 
   .chord {
-    font-size: 1em !important;
+    font-size: calc(1em * var(--font-scale, 1));
     top: -3.0em; /*-3.6*/ /*Esto es la distancia ente el text y la tablatura: mas grande - mas alto*/
   }
 

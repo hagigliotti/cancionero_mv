@@ -35,6 +35,18 @@ function normalizeArrayField(value) {
   return [value];
 }
 
+// quita las tablaturas "[C#m]" de la letra ANTES de normalizar, para que las
+// palabras partidas por un acorde en el medio (ej. "ha[B]blar") vuelvan a
+// quedar unidas ("hablar") y se puedan encontrar en la búsqueda
+function stripChords(value) {
+  return (value || "").toString().replace(/\[[^\]]*\]/g, "");
+}
+
+function stripChordsDeep(value) {
+  if (Array.isArray(value)) return value.map(stripChordsDeep);
+  return stripChords(value);
+}
+
 // ===================== BUSQUEDA / SEARCH =====================
 function smartSort(a, b) {
 
@@ -63,13 +75,16 @@ function smartSort(a, b) {
 function buildSearchText(song) {
   const textos = [];
 
-  // ===== TÍTULOS =====
+  // ===== TÍTULOS, LETRA Y TRADUCTOR (en todos los idiomas cargados) =====
   const idiomas = song.idiomas || {};
 
   Object.values(idiomas).forEach(lang => {
     if (lang?.titulo) textos.push(lang.titulo);
     if (lang?.titulo2) textos.push(lang.titulo2);
-    if (lang?.letra) textos.push(lang.letra);
+    if (lang?.traductor) textos.push(lang.traductor);
+    // la letra puede traer tablatura ("ha[B]blar") — se quita antes de unir
+    // las palabras, si no la búsqueda de "hablar" no la encontraría
+    if (lang?.letra) textos.push(stripChordsDeep(lang.letra));
   });
 
   // ===== TÍTULO ORIGINAL =====
@@ -79,16 +94,14 @@ function buildSearchText(song) {
   textos.push(song.autor);
   textos.push(song.coautor);
   textos.push(song.compositor);
-  textos.push(song.traductor);
+
+  // ===== OTROS CAMPOS BUSCABLES =====
+  textos.push(song.year);
+  textos.push(song.ritmo);
+  textos.push(song.referencia_biblica);
+  textos.push(song.tags);
 
   return normalize(textos.flat().join(" "));
-}
-
-// ===== TAGS =====
-if (song.tags) {
-  textos.push(
-    song.tags.map(t => normalize(t)).join(" ")
-  );
 }
 
 // ===================== SEGURIDAD =====================
@@ -177,9 +190,10 @@ function sortByTitle(data) {
     const aTitulo1 = a.idiomas?.[idiomaActual]?.titulo || "";
     const bTitulo1 = b.idiomas?.[idiomaActual]?.titulo || "";
 
-    // 🔥 clave de orden: titulo2 si existe, si no titulo1
-    const aKey = normalize(aTitulo2 || aTitulo1);
-    const bKey = normalize(bTitulo2 || bTitulo1);
+    // 🔥 clave de orden: titulo2 si existe, si no titulo1, si no el mejor
+    // título disponible en otro idioma (canción sin versión en el idioma actual)
+    const aKey = normalize(aTitulo2 || aTitulo1 || getSongTitle(a));
+    const bKey = normalize(bTitulo2 || bTitulo1 || getSongTitle(b));
 
     return aKey.localeCompare(bKey, undefined, {
       sensitivity: "base",
