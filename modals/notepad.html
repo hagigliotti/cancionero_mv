@@ -1,0 +1,58 @@
+<!-- ============================================================
+     BLOC MUSICAL — modal aislado, no comparte lógica con el cancionero
+     ============================================================ -->
+<div id="notepadModal" class="np-modal" role="dialog" aria-hidden="true" aria-labelledby="npTitle">
+  <div class="np-content">
+
+    <div class="np-head">
+      <button type="button" class="np-close" onclick="cerrarNotepad()" aria-label="Cerrar">✕</button>
+      <div class="np-badge">🎙️</div>
+      <h2 id="npTitle">Bloc musical</h2>
+      <div class="np-meta">Grabá una idea y no te la olvides más</div>
+    </div>
+
+    <!-- ===================== LISTA ===================== -->
+    <div class="np-body" id="npListView">
+      <div class="np-new-row">
+        <input type="text" id="npNewName" placeholder="Nombre de la nueva canción..." />
+        <button type="button" class="np-btn-primary" onclick="crearGrabacion()">+ Nueva</button>
+      </div>
+      <div id="npList" class="np-list"></div>
+    </div>
+
+    <!-- ===================== DETALLE / GRABADOR ===================== -->
+    <div class="np-body hidden" id="npDetailView">
+      <div class="np-detail-head">
+        <button type="button" class="np-back" onclick="volverALista()">← Volver</button>
+        <input type="text" id="npDetailName" class="np-name-input" onblur="npGuardarCampos()" />
+      </div>
+
+      <div class="np-waveform-wrap">
+        <canvas id="npWaveform" class="np-waveform"></canvas>
+      </div>
+
+      <div class="np-playback-row">
+        <button type="button" id="npPlayBtn" class="np-play-btn" onclick="togglePlayback()">▶️</button>
+        <span id="npDuration">0:00</span>
+      </div>
+
+      <div class="np-tags-row">
+        <input type="text" id="npTonalidad" placeholder="Tonalidad" onblur="npGuardarCampos()" />
+        <input type="text" id="npRitmo" placeholder="Ritmo" onblur="npGuardarCampos()" />
+        <input type="text" id="npBpm" placeholder="BPM" onblur="npGuardarCampos()" />
+      </div>
+
+      <div class="np-rec-row">
+        <button type="button" id="npRecBtn" class="np-rec-btn" onclick="toggleGrabacion()" aria-label="Grabar"></button>
+        <span id="npRecStatus" class="np-rec-status">Tocá para grabar</span>
+        <p class="np-mic-note">🎤 El micrófono se usa solo para grabar esta canción — nada más. Sos vos quien decide qué grabar acá.</p>
+      </div>
+
+      <div class="np-detail-actions">
+        <button type="button" onclick="descargarGrabacion()">⬇️ Descargar</button>
+        <button type="button" class="np-danger" onclick="eliminarGrabacionActual()">🗑️ Eliminar</button>
+      </div>
+    </div>
+
+  </div>
+</div>
