@@ -759,20 +759,28 @@ function updateClearSearchBtn() {
 function search(q) {
   const query = normalize(q.trim());
   const list = document.getElementById("indice");
+  const rail = document.getElementById("letterRail");
 
   updateClearSearchBtn();
 
+  // buscador vacío (borrado a mano o con la "x"): cerrar todo, sin riel,
+  // solo el versículo de bienvenida
   if (!query.length) {
+    closeList();
     list.innerHTML = "";
-    listaVisible = false;
     mostrarMensajeInicio();
     return;
   }
 
+  ocultarMensajeInicio();
+
   if (!listaVisible) {
     openList();
-    listaVisible = true;
   }
+
+  // en modo búsqueda no hace falta el riel alfabético: con pocos resultados
+  // filtrados no aporta nada y solo ocupa espacio de más
+  rail?.classList.add("hidden");
 
   const data = [...canciones, ...himnos, ...campamento];
 
@@ -793,6 +801,17 @@ function search(q) {
   // existe la letra en inglés), igual debe aparecer con su mejor título disponible
   const sorted = sortByTitle(results)
     .filter(c => getSongTitle(c) !== "Sin título");
+
+  if (!sorted.length) {
+    list.innerHTML = `
+      <li class="search-empty">
+        <div class="search-empty-icon">🔎</div>
+        <div>No encontramos canciones para "<b>${escapeHtml(q.trim())}</b>"</div>
+        <div class="search-empty-sub">Probá con otra palabra o menos texto</div>
+      </li>
+    `;
+    return;
+  }
 
   list.innerHTML = sorted.map(c => {
     const titulo = getSongTitle(c);

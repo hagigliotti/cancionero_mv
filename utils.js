@@ -96,9 +96,9 @@ function buildSearchText(song) {
   textos.push(song.compositor);
 
   // ===== OTROS CAMPOS BUSCABLES =====
+  // referencia_biblica se muestra en los datos de la canción pero no se busca
   textos.push(song.year);
   textos.push(song.ritmo);
-  textos.push(song.referencia_biblica);
   textos.push(song.tags);
 
   return normalize(textos.flat().join(" "));

@@ -750,6 +750,33 @@ a.menu-item {
   box-shadow: var(--shadow-md);
 }
 
+/* sin resultados de búsqueda */
+#indice li.search-empty {
+  text-align: center;
+  cursor: default;
+  padding: 28px 18px;
+  line-height: 1.5;
+}
+
+#indice li.search-empty:hover {
+  transform: none;
+  border-color: inherit !important;
+  background: inherit !important;
+  box-shadow: none !important;
+}
+
+.search-empty-icon {
+  font-size: 26px;
+  margin-bottom: 6px;
+  opacity: 0.8;
+}
+
+.search-empty-sub {
+  font-size: 13px;
+  opacity: 0.55;
+  margin-top: 4px;
+}
+
 /* ============================================================
    CONTENIDO (letra de canción)
    ============================================================ */
