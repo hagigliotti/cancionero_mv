@@ -316,7 +316,7 @@ async function cargarModales() {
     "modals/afinometro.html?v=13",
     "modals/biblioteca.html?v=3",
     "modals/listas.html?v=1",
-    "modals/notepad.html?v=2"
+    "modals/notepad.html?v=4"
   ];
 
   for (const path of modales) {

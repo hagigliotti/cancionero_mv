@@ -2,8 +2,7 @@
 // BLOC MUSICAL — archivo completamente aislado del cancionero.
 // No comparte variables ni funciones con app.js / songbook.js / afinometro.js.
 // Graba audio con el micrófono, lo guarda LOCAL en el dispositivo (IndexedDB,
-// funciona offline) y permite descargarlo. No sube nada a ningún servidor ni
-// repositorio: eso queda como paso manual del usuario (botón Descargar).
+// funciona offline) y permite descargarlo. No sube nada a ningún servidor.
 // No hay detección automática de tonalidad/ritmo — se completan a mano.
 // ===============================================================================================
 
@@ -85,6 +84,19 @@ function npFormatDuration(sec) {
   return `${m}:${s.toString().padStart(2, "0")}`;
 }
 
+// primera letra "normalizada" (sin acentos) del nombre, para el riel lateral
+const NP_ACENTOS_RE = new RegExp("[\\u0300-\\u036f]", "g");
+
+function npLetraInicial(nombre) {
+  const sinAcentos = (nombre || "").normalize("NFD").replace(NP_ACENTOS_RE, "");
+  const clean = sinAcentos
+    .trim().toUpperCase()
+    .replace(/^[^A-Z0-9]+/, "");
+
+  const first = clean.charAt(0);
+  return /[A-Z0-9]/.test(first) ? first : "#";
+}
+
 // ===================== ABRIR / CERRAR MODAL =====================
 function abrirNotepad() {
   if (typeof closeMenu === "function") closeMenu();
@@ -114,22 +126,62 @@ async function npMostrarLista() {
   npRecordings.sort((a, b) => b.createdAt - a.createdAt);
 
   const cont = document.getElementById("npList");
+  const rail = document.getElementById("npListRail");
   if (!cont) return;
 
   if (!npRecordings.length) {
     cont.innerHTML = `<p class="np-empty">Todavía no grabaste ninguna idea.<br>Ponele un nombre arriba y arrancá.</p>`;
+    rail?.classList.add("hidden");
     return;
   }
 
-  cont.innerHTML = npRecordings.map(r => `
-    <div class="np-item" onclick="abrirGrabacion('${r.id}')">
-      <span class="np-item-icon">🎵</span>
-      <div class="np-item-info">
-        <b>${npEscapeHtml(r.nombre)}</b>
-        <span class="np-item-sub">${npFormatDuration(r.duration)}${r.tonalidad ? " · " + npEscapeHtml(r.tonalidad) : ""}${r.bpm ? " · " + npEscapeHtml(String(r.bpm)) + " BPM" : ""}</span>
+  const letrasVistas = [];
+
+  cont.innerHTML = npRecordings.map(r => {
+    const letra = npLetraInicial(r.nombre);
+    if (!letrasVistas.includes(letra)) letrasVistas.push(letra);
+
+    return `
+      <div class="np-row" data-letter="${letra}" onclick="abrirGrabacion('${r.id}')">
+        <span class="np-row-icon">🎵</span>
+        <div class="np-row-info">
+          <b>${npEscapeHtml(r.nombre)}</b>
+          <span class="np-row-sub">${npFormatDuration(r.duration)}${r.tonalidad ? " · " + npEscapeHtml(r.tonalidad) : ""}${r.bpm ? " · " + npEscapeHtml(String(r.bpm)) + " BPM" : ""}</span>
+        </div>
+        <button type="button" class="np-row-btn" onclick="npRenombrarRapido(event, '${r.id}')" title="Renombrar" aria-label="Renombrar">✏️</button>
+        <button type="button" class="np-row-btn np-row-btn-danger" onclick="npEliminarRapido(event, '${r.id}')" title="Eliminar" aria-label="Eliminar">🗑️</button>
       </div>
-    </div>
-  `).join("");
+    `;
+  }).join("");
+
+  npRenderListRail(letrasVistas);
+}
+
+// riel de letras: solo aparece si hay letras suficientes como para que la
+// lista no entre completa en la ventana visible
+function npRenderListRail(letras) {
+  const scrollEl = document.getElementById("npList");
+  const railEl = document.getElementById("npListRail");
+  if (!scrollEl || !railEl) return;
+
+  const MIN_LETRAS = 6;
+
+  if (letras.length < MIN_LETRAS) {
+    railEl.classList.add("hidden");
+    railEl.innerHTML = "";
+    return;
+  }
+
+  railEl.classList.remove("hidden");
+  railEl.innerHTML = letras.map(l => `<span data-letter="${l}">${l}</span>`).join("");
+
+  railEl.querySelectorAll("[data-letter]").forEach(el => {
+    el.onclick = () => {
+      const target = scrollEl.querySelector(`.np-row[data-letter="${el.dataset.letter}"]`);
+      if (!target) return;
+      scrollEl.scrollTo({ top: target.offsetTop - 6, behavior: "smooth" });
+    };
+  });
 }
 
 async function crearGrabacion() {
@@ -144,13 +196,44 @@ async function crearGrabacion() {
     duration: 0,
     tonalidad: "",
     ritmo: "",
-    bpm: ""
+    bpm: "",
+    letra: ""
   };
 
   await npPut(record);
   if (input) input.value = "";
 
   await abrirGrabacion(record.id);
+}
+
+// renombrar/eliminar directo desde la lista, sin entrar al detalle
+async function npRenombrarRapido(event, id) {
+  event.stopPropagation();
+
+  const all = await npGetAll();
+  const record = all.find(r => r.id === id);
+  if (!record) return;
+
+  const nuevo = prompt("Nuevo nombre:", record.nombre);
+  if (nuevo === null) return;
+
+  record.nombre = nuevo.trim() || record.nombre;
+  await npPut(record);
+  npMostrarLista();
+}
+
+async function npEliminarRapido(event, id) {
+  event.stopPropagation();
+
+  if (!confirm("¿Eliminar esta grabación? No se puede deshacer.")) return;
+
+  if (id === npCurrentId) {
+    npDetenerGrabacionSiActiva();
+    npPausarPlayback();
+  }
+
+  await npDeleteRecord(id);
+  npMostrarLista();
 }
 
 // ===================== VISTA: DETALLE =====================
@@ -171,6 +254,7 @@ async function abrirGrabacion(id) {
   document.getElementById("npTonalidad").value = record.tonalidad || "";
   document.getElementById("npRitmo").value = record.ritmo || "";
   document.getElementById("npBpm").value = record.bpm || "";
+  document.getElementById("npLetra").value = record.letra || "";
   document.getElementById("npDuration").textContent = npFormatDuration(record.duration);
   document.getElementById("npPlayBtn").textContent = "▶️";
 
@@ -197,6 +281,7 @@ async function npGuardarCampos() {
   record.tonalidad = document.getElementById("npTonalidad").value.trim();
   record.ritmo = document.getElementById("npRitmo").value.trim();
   record.bpm = document.getElementById("npBpm").value.trim();
+  record.letra = document.getElementById("npLetra").value;
 
   await npPut(record);
 }
@@ -385,7 +470,7 @@ function npPausarPlayback() {
   }
 }
 
-// ===================== DESCARGA (paso manual para subirlo a tu repo) =====================
+// ===================== DESCARGA =====================
 async function descargarGrabacion() {
   const all = await npGetAll();
   const record = all.find(r => r.id === npCurrentId);

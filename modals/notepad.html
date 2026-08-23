@@ -12,12 +12,16 @@
     </div>
 
     <!-- ===================== LISTA ===================== -->
-    <div class="np-body" id="npListView">
+    <div id="npListView">
       <div class="np-new-row">
         <input type="text" id="npNewName" placeholder="Nombre de la nueva canción..." />
         <button type="button" class="np-btn-primary" onclick="crearGrabacion()">+ Nueva</button>
       </div>
-      <div id="npList" class="np-list"></div>
+
+      <div class="np-list-wrap">
+        <div id="npList" class="np-list"></div>
+        <div class="np-list-rail hidden" id="npListRail"></div>
+      </div>
     </div>
 
     <!-- ===================== DETALLE / GRABADOR ===================== -->
@@ -28,7 +32,10 @@
       </div>
 
       <div class="np-waveform-wrap">
-        <canvas id="npWaveform" class="np-waveform"></canvas>
+        <div class="np-waveform-scroll">
+          <canvas id="npWaveform" class="np-waveform"></canvas>
+        </div>
+        <textarea id="npLetra" class="np-letra-inline" placeholder="Letra y acordes de esta grabación... ej: [Am]Alabaré a Jehová [C]en mi vida" onblur="npGuardarCampos()"></textarea>
       </div>
 
       <div class="np-playback-row">
