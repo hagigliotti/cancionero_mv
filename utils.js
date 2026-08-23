@@ -369,9 +369,9 @@ function renderRevisadoModal() {
     }
   });
 
-  const btn = document.getElementById("toggleRevisadoBtn");
+  document.getElementById("revisadoToggleWrap")?.classList.remove("hidden");
 
-  if (btn) btn.style.display = "inline-block";
+  const btn = document.getElementById("toggleRevisadoBtn");
 
   if (btn) {
     btn.innerText =
@@ -380,15 +380,16 @@ function renderRevisadoModal() {
         : "✔️ Ver revisadas";
   }
 
+  const icon = revisadoEstadoActual === "si" ? "✅" : "❌";
+
   const title =
     revisadoEstadoActual === "si"
-      ? "✔️ Canciones revisadas"
-      : "❌ Canciones no revisadas";
-
-  document.getElementById("listModalTitle").innerText = title;
+      ? "Canciones revisadas"
+      : "Canciones no revisadas";
 
   renderListModal({
     title,
+    icon,
     list: filtered
   });
 
@@ -466,14 +467,12 @@ function renderTagModal() {
 
   const title = `Tag: ${tagModalValue}`;
 
-  document.getElementById("listModalTitle").innerText = title;
-
-  // ocultar botón de revisados
-  const btn = document.getElementById("toggleRevisadoBtn");
-  if (btn) btn.style.display = "none";
+  // ocultar el toggle de revisadas (no aplica acá)
+  document.getElementById("revisadoToggleWrap")?.classList.add("hidden");
 
   renderListModal({
     title,
+    icon: "🏷️",
     list: filtered
   });
 

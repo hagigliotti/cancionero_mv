@@ -105,24 +105,87 @@ function cerrarAfinometroModal() {
 // ===================== REVISADOS ==========================================================
 let revisadoFiltroActual = "si"; // "si" | "no"
 
-function renderListModal({ title, list }) {
-  const cont = document.getElementById("listModalLista");
-  const titleEl = document.getElementById("listModalTitle");
+// arma un renglón angosto de canción clickeable, con estrella para
+// agregar/sacar de una lista (Mis Listas) sin tener que abrir la canción
+function buildSongRow(song, titulo, num, letra, onSelect) {
+  const div = document.createElement("div");
+  div.className = "song-row";
+  div.dataset.letter = letra;
 
-  titleEl.innerText = title;
-  cont.innerHTML = "";
+  const baseTitle = num ? `${num} - ${titulo}` : titulo;
 
-  if (!list.length) {
-    cont.innerHTML = "<p>No hay resultados.</p>";
+  div.innerHTML = `
+    <span class="song-row-icon">🎵</span>
+    <span class="song-row-title">${baseTitle}</span>
+    <button type="button" class="fav-add-btn" title="Agregar a una lista">⭐</button>
+  `;
+
+  div.addEventListener("click", onSelect);
+
+  div.querySelector(".fav-add-btn").addEventListener("click", (e) => {
+    e.stopPropagation();
+    abrirMisListas(song.id);
+  });
+
+  return div;
+}
+
+// riel de letras propio de estos modales: solo aparece si la lista filtrada
+// tiene letras suficientes como para no entrar completa en la ventana visible
+function renderModalLetterRail(scrollEl, railEl, letras) {
+  if (!scrollEl || !railEl) return;
+
+  const MIN_LETRAS = 6;
+
+  if (letras.length < MIN_LETRAS) {
+    railEl.classList.add("hidden");
+    railEl.innerHTML = "";
     return;
   }
 
+  railEl.classList.remove("hidden");
+  railEl.innerHTML = letras.map(l => `<span data-letter="${l}">${l === "#" ? "#" : l}</span>`).join("");
+
+  railEl.querySelectorAll("[data-letter]").forEach(el => {
+    el.onclick = () => {
+      const target = scrollEl.querySelector(`.song-row[data-letter="${el.dataset.letter}"]`);
+      if (!target) return;
+      scrollEl.scrollTo({ top: target.offsetTop - 6, behavior: "smooth" });
+    };
+  });
+}
+
+// arma las filas + el riel a partir de una lista ya ordenada alfabéticamente
+function renderSongRows(sorted, cont, scrollEl, railEl, onSelectFactory) {
+  cont.innerHTML = "";
+
+  if (!sorted.length) {
+    cont.innerHTML = `<p class="biblio-empty">No hay resultados</p>`;
+    railEl?.classList.add("hidden");
+    return;
+  }
+
+  const letrasVistas = [];
+
+  sorted.forEach(song => {
+    const titulo = getSongTitle(song);
+    const num = getNumeroHimno(song);
+    const letra = getIndexLetter(titulo);
+
+    if (!letrasVistas.includes(letra)) letrasVistas.push(letra);
+
+    cont.appendChild(buildSongRow(song, titulo, num, letra, onSelectFactory(song)));
+  });
+
+  renderModalLetterRail(scrollEl, railEl, letrasVistas);
+}
+
+function sortSongsByTitle(list) {
   // 🔥 eliminar duplicados por ID
   const unique = new Map();
   list.forEach(song => unique.set(song.id, song));
-  const cleanList = [...unique.values()];
 
-  cleanList
+  return [...unique.values()]
     .sort((a, b) =>
       (a.idiomas?.[idiomaActual]?.titulo || "").localeCompare(
         b.idiomas?.[idiomaActual]?.titulo || "",
@@ -130,74 +193,48 @@ function renderListModal({ title, list }) {
         { sensitivity: "base" }
       )
     )
-    .forEach(song => {
-
+    .filter(song => {
       const titulo = getSongTitle(song);
-
-      // 🔥 filtro real
-      if (!titulo || titulo === "Sin título") return;
-
-      const div = document.createElement("div");
-      div.className = "revisado-item";
-
-      const num = getNumeroHimno(song);
-
-      div.innerHTML = `🎵 ${num ? num + " - " : ""}${titulo}`;
-
-      div.onclick = () => {
-        document.getElementById("listModal").style.display = "none";
-        openSong(song.id);
-      };
-
-      cont.appendChild(div);
+      return titulo && titulo !== "Sin título";
     });
 }
 
-function renderPeopleModal({ title, list }) {
-  const cont = document.getElementById("peopleModalLista");
-  const titleEl = document.getElementById("peopleModalTitle");
+function renderListModal({ title, list, icon }) {
+  const cont = document.getElementById("listModalLista");
+  const titleEl = document.getElementById("listModalTitle");
+  const badgeEl = document.getElementById("listModalBadge");
+  const countEl = document.getElementById("listModalCount");
+  const railEl = document.getElementById("listModalRail");
 
   titleEl.innerText = title;
-  cont.innerHTML = "";
+  if (badgeEl) badgeEl.textContent = icon || "📋";
 
-  if (!list.length) {
-    cont.innerHTML = "<p>No hay resultados.</p>";
-    return;
-  }
+  const sorted = sortSongsByTitle(list);
+  if (countEl) countEl.textContent = sorted.length;
 
-  // eliminar duplicados por ID
-  const unique = new Map();
-  list.forEach(song => unique.set(song.id, song));
-  const cleanList = [...unique.values()];
+  renderSongRows(sorted, cont, cont, railEl, song => () => {
+    document.getElementById("listModal").style.display = "none";
+    openSong(song.id);
+  });
+}
 
-  cleanList
-    .sort((a, b) =>
-      (a.idiomas?.[idiomaActual]?.titulo || "").localeCompare(
-        b.idiomas?.[idiomaActual]?.titulo || "",
-        undefined,
-        { sensitivity: "base" }
-      )
-    )
-    .forEach(song => {
+function renderPeopleModal({ title, list, icon }) {
+  const cont = document.getElementById("peopleModalLista");
+  const titleEl = document.getElementById("peopleModalTitle");
+  const badgeEl = document.getElementById("peopleModalBadge");
+  const countEl = document.getElementById("peopleModalCount");
+  const railEl = document.getElementById("peopleModalRail");
 
-      const titulo = getSongTitle(song);
+  titleEl.innerText = title;
+  if (badgeEl) badgeEl.textContent = icon || "👤";
 
-      if (!titulo || titulo === "Sin título") return;
+  const sorted = sortSongsByTitle(list);
+  if (countEl) countEl.textContent = sorted.length;
 
-      const div = document.createElement("div");
-      div.className = "revisado-item";
-
-      const num = getNumeroHimno(song);
-
-      div.innerHTML = `🎵 ${num ? num + " - " : ""}${titulo}`;
-
-      div.onclick = () => {
-        cerrarPeopleModal();
-        openSong(song.id);
-      };
-
-      cont.appendChild(div);
-    });
+  renderSongRows(sorted, cont, cont, railEl, song => () => {
+    cerrarPeopleModal();
+    openSong(song.id);
+  });
 }
 
 // Biblioteca modal
@@ -273,10 +310,10 @@ function renderRevisadoPersonas(value) {
 async function cargarModales() {
   const modales = [
     "modals/info.html?v=5",
-    "modals/revised.html?v=2",
-    "modals/people.html?v=2",
+    "modals/revised.html?v=4",
+    "modals/people.html?v=4",
     "modals/share.html?v=5",
-    "modals/afinometro.html?v=10",
+    "modals/afinometro.html?v=13",
     "modals/biblioteca.html?v=3",
     "modals/listas.html?v=1"
   ];
@@ -327,8 +364,10 @@ async function init() {
   const savedIdioma = localStorage.getItem("idioma");
   libroActual = localStorage.getItem("libro") || "cancionero";
   idiomaActual = localStorage.getItem("idioma") || "es";
+  cargarBanderasStorage();
   setIdioma(idiomaActual);
   updateLangFlag();
+  renderBanderaSelect();
 
   //libroActual = savedLibro || "cancionero";
   //idiomaActual = savedIdioma || "es";
@@ -1352,8 +1391,11 @@ function openPersonModal(nombre, tipo) {
     return campos.some(p => normalize(p).includes(normalized));
   });
 
+  const [icon, ...resto] = getPersonLabel(tipo).split(" ");
+
   renderPeopleModal({
-    title: `${getPersonLabel(tipo)}: ${nombre}`,
+    icon,
+    title: `${resto.join(" ")}: ${nombre}`,
     list: filtradas
   });
 

@@ -31,6 +31,157 @@ const FLAG_NAMES = {
   is: "Islandés"
 };
 
+// ===============================================================================================
+// ===================== BANDERA POR PAÍS (personalización, NO cambia el idioma) =================
+// El idioma del contenido (letra, tablatura, índice) sigue siendo uno solo por código
+// ("es", "en", "pt"); esto solo decide QUÉ bandera se muestra para ese idioma,
+// según el país del usuario — pura personalización visual.
+const FLAG_VARIANTS = {
+  es: {
+    AR: { emoji: "🇦🇷", nombre: "Argentina" },
+    ES: { emoji: "🇪🇸", nombre: "España" },
+    MX: { emoji: "🇲🇽", nombre: "México" },
+    CO: { emoji: "🇨🇴", nombre: "Colombia" },
+    PE: { emoji: "🇵🇪", nombre: "Perú" },
+    CL: { emoji: "🇨🇱", nombre: "Chile" },
+    VE: { emoji: "🇻🇪", nombre: "Venezuela" },
+    EC: { emoji: "🇪🇨", nombre: "Ecuador" },
+    UY: { emoji: "🇺🇾", nombre: "Uruguay" },
+    PY: { emoji: "🇵🇾", nombre: "Paraguay" },
+    BO: { emoji: "🇧🇴", nombre: "Bolivia" },
+    CR: { emoji: "🇨🇷", nombre: "Costa Rica" },
+    PA: { emoji: "🇵🇦", nombre: "Panamá" },
+    GT: { emoji: "🇬🇹", nombre: "Guatemala" },
+    HN: { emoji: "🇭🇳", nombre: "Honduras" },
+    NI: { emoji: "🇳🇮", nombre: "Nicaragua" },
+    SV: { emoji: "🇸🇻", nombre: "El Salvador" },
+    DO: { emoji: "🇩🇴", nombre: "Rep. Dominicana" },
+    CU: { emoji: "🇨🇺", nombre: "Cuba" },
+    PR: { emoji: "🇵🇷", nombre: "Puerto Rico" }
+  },
+  en: {
+    US: { emoji: "🇺🇸", nombre: "Estados Unidos" },
+    GB: { emoji: "🇬🇧", nombre: "Reino Unido" }
+  },
+  pt: {
+    BR: { emoji: "🇧🇷", nombre: "Brasil" },
+    PT: { emoji: "🇵🇹", nombre: "Portugal" }
+  }
+};
+
+const FLAG_VARIANT_DEFAULT = { es: "AR", en: "US", pt: "BR" };
+
+let banderaPorIdioma = {};
+
+// intenta adivinar el país a partir del idioma configurado en el sistema del
+// celular (ej. "es-PE", "en-GB"). Es solo una sugerencia inicial: refleja la
+// configuración del dispositivo, no la ubicación real
+function detectarPaisPorNavegador(lang) {
+  const variants = FLAG_VARIANTS[lang];
+  if (!variants) return null;
+
+  const locales = (navigator.languages && navigator.languages.length)
+    ? navigator.languages
+    : [navigator.language];
+
+  for (const loc of locales) {
+    const region = (loc.split("-")[1] || "").toUpperCase();
+    if (region && variants[region]) return region;
+  }
+
+  return null;
+}
+
+function cargarBanderasStorage() {
+  try {
+    banderaPorIdioma = JSON.parse(localStorage.getItem("banderaPorIdioma")) || {};
+  } catch (e) {
+    banderaPorIdioma = {};
+  }
+
+  // completar automáticamente, una sola vez, los idiomas con variantes que
+  // todavía no tengan bandera guardada — de ahí en más queda fijo
+  Object.keys(FLAG_VARIANTS).forEach(lang => {
+    if (banderaPorIdioma[lang]) return;
+    banderaPorIdioma[lang] = detectarPaisPorNavegador(lang) || FLAG_VARIANT_DEFAULT[lang];
+  });
+
+  guardarBanderas();
+}
+
+function guardarBanderas() {
+  localStorage.setItem("banderaPorIdioma", JSON.stringify(banderaPorIdioma));
+}
+
+// bandera a mostrar para un idioma dado (con variante de país si existe)
+function getFlagEmoji(lang) {
+  const variants = FLAG_VARIANTS[lang];
+
+  if (variants) {
+    const code = banderaPorIdioma[lang] || FLAG_VARIANT_DEFAULT[lang];
+    return variants[code]?.emoji || FLAGS[lang] || "🌐";
+  }
+
+  return FLAGS[lang] || "🌐";
+}
+
+// elegir manualmente la bandera/país para un idioma (queda guardado)
+function setBanderaIdioma(lang, code) {
+  if (!FLAG_VARIANTS[lang]?.[code]) return;
+
+  banderaPorIdioma[lang] = code;
+  guardarBanderas();
+
+  updateLangFlag();
+  renderBanderaSelect();
+}
+
+// abre el selector nativo de país: se dispara tocando la bandera de la fila
+// Idioma (no hay un renglón aparte, queda oculto ahí mismo)
+function abrirBanderaPicker(event) {
+  event?.stopPropagation();
+
+  const select = document.getElementById("menuBandera");
+  if (!select || !FLAG_VARIANTS[idiomaActual]) return;
+
+  select.focus();
+  select.click();
+}
+
+// actualiza el ícono de bandera de la fila Idioma y las opciones del
+// selector oculto detrás — solo queda "clickeable" si el idioma activo
+// tiene más de un país disponible
+function renderBanderaSelect() {
+  const icon = document.getElementById("idiomaFlagIcon");
+  const select = document.getElementById("menuBandera");
+  if (!select) return;
+
+  const variants = FLAG_VARIANTS[idiomaActual];
+
+  if (!variants) {
+    if (icon) {
+      icon.textContent = "🌐";
+      icon.classList.remove("flag-pick");
+    }
+    select.innerHTML = "";
+    return;
+  }
+
+  const current = banderaPorIdioma[idiomaActual] || FLAG_VARIANT_DEFAULT[idiomaActual];
+
+  if (icon) {
+    icon.textContent = variants[current]?.emoji || "🌐";
+    icon.classList.add("flag-pick");
+  }
+
+  const ordenados = Object.entries(variants)
+    .sort((a, b) => a[1].nombre.localeCompare(b[1].nombre, "es", { sensitivity: "base" }));
+
+  select.innerHTML = ordenados.map(([code, info]) => `
+    <option value="${code}" ${code === current ? "selected" : ""}>${info.emoji} ${info.nombre}</option>
+  `).join("");
+}
+
 
 // ===============================================================================================
 // ===================== ESTADO GLOBAL DEL IDIOMA ===============================================
@@ -102,6 +253,7 @@ function setIdioma(lang) {
   if (menuIdioma) menuIdioma.value = lang;
 
   updateLangFlag();
+  renderBanderaSelect();
 
   // refrescar UI dependiente del idioma
   renderAlphabet();
@@ -115,7 +267,7 @@ function updateLangFlag() {
   const langBtn = document.getElementById("langBtn");
   if (!langBtn) return;
 
-  langBtn.innerText = FLAGS[idiomaActual] || "🌐";
+  langBtn.innerText = getFlagEmoji(idiomaActual);
 }
 
 
@@ -132,7 +284,7 @@ function getAvailableFlags(song) {
     .map(lang => `
       <span onclick="changeLanguage('${lang}', '${song.id}')"
             style="cursor:pointer">
-        ${FLAGS[lang] || "🌐"}
+        ${getFlagEmoji(lang)}
       </span>
     `)
     .join(" ");
@@ -149,7 +301,7 @@ function renderLanguageFlags(song) {
     .map(lang => `
       <span class="flag ${lang === idiomaActual ? "active" : ""}"
             onclick="changeLanguage('${lang}', '${song.id}')">
-        ${FLAGS[lang] || "🌐"}
+        ${getFlagEmoji(lang)}
       </span>
     `).join("");
 }
@@ -164,6 +316,9 @@ function changeLanguage(lang, songId) {
 
   const idiomaSelect = document.getElementById("idioma");
   if (idiomaSelect) idiomaSelect.value = lang;
+
+  updateLangFlag();
+  renderBanderaSelect();
 
   renderAlphabet();
   openSong(songId);

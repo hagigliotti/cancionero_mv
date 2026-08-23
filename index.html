@@ -9,10 +9,10 @@
   <title>Cancionero MV</title>
 
   <!-- PWA / APARIENCIA DE APP -->
-  <link rel="manifest" href="manifest.webmanifest?v=2">
-  <link rel="icon" href="imagenes/icons/favicon-32.png?v=2" sizes="32x32">
-  <link rel="icon" href="imagenes/icons/favicon-16.png?v=2" sizes="16x16">
-  <link rel="apple-touch-icon" href="imagenes/icons/apple-touch-icon.png?v=2">
+  <link rel="manifest" href="manifest.webmanifest?v=3">
+  <link rel="icon" href="imagenes/icons/favicon-32.png?v=3" sizes="32x32">
+  <link rel="icon" href="imagenes/icons/favicon-16.png?v=3" sizes="16x16">
+  <link rel="apple-touch-icon" href="imagenes/icons/apple-touch-icon.png?v=3">
 
   <meta name="theme-color" content="#122033">
   <meta name="mobile-web-app-capable" content="yes">
@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css?v=44">
+  <link rel="stylesheet" href="style.css?v=50">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XS6DM59CNT"></script>
@@ -93,17 +93,6 @@
                 </select>
               </div>
 
-              <div class="menu-row">
-                <span class="sec-icon">🌐</span>
-                <span class="menu-row-label">Idioma</span>
-                <select id="menuIdioma">
-                  <option value="es">🇦🇷 Español</option>
-                  <option value="en">🇺🇸 English</option>
-                  <option value="it">🇮🇹 Italiano</option>
-                  <option value="pt">🇧🇷 Português</option>
-                  <option value="gn">🇵🇾 Guaraní</option>
-                </select>
-              </div>
             </div>
 
             <div class="menu-group">
@@ -117,7 +106,11 @@
             </div>
 
             <div class="menu-group">
-              <p class="contact-label">Lectura y herramientas</p>
+              <p class="contact-label">Ajustes</p>
+
+              <div class="menu-item" onclick="abrirAfinometroModal()">
+                <span class="sec-icon">📟</span> Metrónomo y Afinador
+              </div>
 
               <div class="menu-row">
                 <span class="sec-icon">🅰️</span>
@@ -127,10 +120,6 @@
                   <button type="button" onclick="resetFuente()">A</button>
                   <button type="button" onclick="cambiarFuente(1)">A+</button>
                 </div>
-              </div>
-
-              <div class="menu-item" onclick="abrirAfinometroModal()">
-                <span class="sec-icon">📟</span> Metrónomo y Afinador
               </div>
 
               <div class="menu-row" id="tabToggle">
@@ -148,6 +137,19 @@
                   <button type="button" onclick="transposeChords(1)" title="Medio tono arriba">♯</button>
                 </div>
               </div>
+
+              <div class="menu-row">
+                <span class="sec-icon" id="idiomaFlagIcon" onclick="abrirBanderaPicker(event)" title="Tocá para elegir tu bandera">🌐</span>
+                <span class="menu-row-label">Idioma</span>
+                <select id="menuIdioma">
+                  <option value="es">🇦🇷 Español</option>
+                  <option value="en">🇺🇸 English</option>
+                  <option value="it">🇮🇹 Italiano</option>
+                  <option value="pt">🇧🇷 Português</option>
+                  <option value="gn">🇵🇾 Guaraní</option>
+                </select>
+              </div>
+              <select id="menuBandera" class="bandera-hidden-select" onchange="setBanderaIdioma(idiomaActual, this.value)"></select>
             </div>
 
             <div class="menu-group">
@@ -260,11 +262,11 @@
 
 <!-- ======================================== JS ======================================== -->
 <script src="modals.js?v=4"></script>
-<script src="lenguage.js?v=4"></script>
-<script src="utils.js?v=7"></script>
+<script src="lenguage.js?v=7"></script>
+<script src="utils.js?v=8"></script>
 <script src="theme.js?v=7"></script>
-<script src="afinometro.js?v=17"></script>
-<script src="app.js?v=23"></script>
+<script src="afinometro.js?v=19"></script>
+<script src="app.js?v=26"></script>
 <script src="songbook.js?v=12"></script>
 
 <!-- ======================================== PWA OFFLINE ======================================== -->

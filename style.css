@@ -404,6 +404,19 @@ a.menu-item {
   font-weight: 600;
 }
 
+/* ícono de bandera dentro de la fila Idioma: clickeable, abre el país oculto detrás */
+.sec-icon.flag-pick { cursor: pointer; }
+.sec-icon.flag-pick:active { transform: scale(0.88); }
+
+/* selector de país: sin fila propia, se abre tocando la bandera de arriba */
+.bandera-hidden-select {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* selects dentro del menú */
 .dropdown-menu select {
   border: none;
@@ -1908,53 +1921,99 @@ details[open] .sec-chevron { transform: rotate(90deg); }
 
 .fav-add-btn:hover { opacity: 1; transform: scale(1.15); }
 
-/* Modal revisado */
-.revisado-content {
-  max-width: 600px;
-  width: 95%;
-  max-height: 90vh;
-  max-height: 90dvh;
-  overflow-y: auto;
-  text-align: left;
-}
-
-.revisado-header {
+/* Modal revisado / tags / autor-compositor: misma ficha ".about-modal" que Biblioteca */
+.revisado-toggle-wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 0 22px 14px;
+  flex-shrink: 0;
+}
+
+/* envuelve la lista + el riel de letras para que el riel no se mueva al scrollear */
+.modal-body-wrap {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+
+.modal-body-wrap .about-body {
+  flex: 1;
+  min-width: 0;
+}
+
+/* lista de canciones más angosta que las tarjetas de Biblioteca (un renglón c/u) */
+.song-list { gap: 6px; }
+
+.song-row {
+  display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 14px;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  cursor: pointer;
+  transition: var(--trans);
 }
 
-#revisadoTitulo { margin: 0; }
+.dark-mode .song-row { background: var(--gray-50); border-color: var(--gray-100); }
 
-#toggleRevisadoBtn {
-  padding: 7px 14px;
-  border-radius: var(--radius-xl);
-  border: none;
-  cursor: pointer;
-  font-size: 13px;
-  background: var(--navy);
-  color: white;
-  transition: var(--trans);
+.song-row:hover { border-color: var(--sky); background: rgba(56,189,248,0.06); }
+.dark-mode .song-row:hover { background: #f0f9ff; }
+
+.song-row-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  background: rgba(56,189,248,0.12);
+  color: var(--sky);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.dark-mode .song-row-icon { background: var(--sky-glow); color: var(--sky-dark); }
+
+.song-row-title {
+  flex: 1;
+  min-width: 0;
+  font-size: 13.5px;
+  font-weight: 600;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-#toggleRevisadoBtn:hover {
-  background: var(--sky);
-  color: var(--navy);
-}
+.song-row .fav-add-btn { font-size: 15px; }
 
-.revisado-item {
-  padding: 10px 14px;
-  margin: 5px 0;
-  border-radius: 10px;
+/* riel de letras propio de estos modales: siempre visible al costado de la
+   lista (no hace falta position:sticky, la lista scrollea sola, el riel no) */
+.modal-letter-rail {
+  flex-shrink: 0;
+  width: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  padding: 4px 2px 4px 0;
   cursor: pointer;
-  background: var(--gray-50);
-  transition: var(--trans);
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-.revisado-item:hover { background: #f0f9ff; opacity: 0.9; }
+.modal-letter-rail span {
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.4;
+  opacity: 0.5;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.modal-letter-rail span:hover { opacity: 1; color: var(--sky-dark); }
+.light-mode .modal-letter-rail span:hover { color: var(--sky); }
 
 /* Modal header genérico */
 .modal-header {
@@ -2004,6 +2063,83 @@ details[open] .sec-chevron { transform: rotate(90deg); }
    ============================================================ */
 .metro-modal { max-width: 480px; }
 .metro-body { text-align: left; }
+
+/* nav fija: siempre visible arriba del modal, salta a cada sección */
+.metro-tabs {
+  position: sticky;
+  top: -4px;
+  z-index: 5;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 8px 14px;
+  margin: -4px -14px 4px;
+  background: rgba(16, 29, 46, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  scrollbar-width: none;
+}
+
+.metro-tabs::-webkit-scrollbar { display: none; }
+
+.dark-mode .metro-tabs {
+  background: rgba(255,255,255,0.94);
+  border-color: var(--gray-100);
+}
+
+.metro-tab {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  border-radius: var(--radius-xl);
+  border: none;
+  font-size: 11.5px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+  opacity: 0.7;
+  transition: var(--trans);
+}
+
+.dark-mode .metro-tab { background: var(--gray-50); }
+
+.metro-tab:hover { opacity: 1; }
+
+.metro-tab.active {
+  opacity: 1;
+  background: var(--sky);
+  color: #06202e;
+}
+
+.tuner-hz { font-size: 12px; opacity: 0.55; margin-top: 1px; font-weight: 600; }
+
+/* tap tempo */
+.tap-tempo-btn {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  margin: 8px auto 4px;
+  padding: 10px;
+  border-radius: var(--radius-xl);
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: var(--trans);
+}
+
+.dark-mode .tap-tempo-btn { background: var(--gray-50); }
+.tap-tempo-btn:hover { background: rgba(56,189,248,0.16); }
+.dark-mode .tap-tempo-btn:hover { background: var(--sky-glow); }
+
+.tap-tempo-btn.tap-flash {
+  background: var(--sky) !important;
+  color: #06202e !important;
+  transform: scale(0.96);
+}
 
 /* ---- grilla de notas (reproducir tono de referencia) ---- */
 .note-grid {
