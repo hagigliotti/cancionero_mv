@@ -490,3 +490,105 @@ async function descargarGrabacion() {
   a.click();
   a.remove();
 }
+
+// ===================== EXPORTAR / IMPORTAR =====================
+// Cada navegador (Safari, Chrome, la app instalada) guarda su IndexedDB por
+// separado, aunque sea el mismo sitio y el mismo celular — es un límite de
+// los navegadores, no algo que se pueda evitar desde acá. Este archivo es el
+// puente manual para pasar tus grabaciones de un lado a otro.
+function npBlobToBase64(blob) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onloadend = () => resolve(String(reader.result).split(",")[1] || "");
+    reader.onerror = reject;
+    reader.readAsDataURL(blob);
+  });
+}
+
+function npBase64ToBlob(base64, type) {
+  const byteChars = atob(base64);
+  const byteNumbers = new Array(byteChars.length);
+  for (let i = 0; i < byteChars.length; i++) byteNumbers[i] = byteChars.charCodeAt(i);
+  return new Blob([new Uint8Array(byteNumbers)], { type: type || "audio/webm" });
+}
+
+async function exportarGrabaciones() {
+  const all = await npGetAll();
+
+  if (!all.length) {
+    alert("Todavía no tenés ninguna grabación para exportar.");
+    return;
+  }
+
+  const grabaciones = await Promise.all(all.map(async (r) => ({
+    id: r.id,
+    nombre: r.nombre,
+    createdAt: r.createdAt,
+    duration: r.duration,
+    tonalidad: r.tonalidad,
+    ritmo: r.ritmo,
+    bpm: r.bpm,
+    letra: r.letra,
+    audioType: r.blob?.type || null,
+    audioBase64: r.blob ? await npBlobToBase64(r.blob) : null
+  })));
+
+  const data = {
+    tipo: "cancionero-mv-bloc-musical",
+    version: 1,
+    exportadoEl: new Date().toISOString(),
+    grabaciones
+  };
+
+  const blob = new Blob([JSON.stringify(data)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `bloc-musical_${new Date().toISOString().slice(0, 10)}.json`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
+
+function importarGrabaciones(event) {
+  const file = event.target.files?.[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+
+  reader.onload = async () => {
+    try {
+      const data = JSON.parse(reader.result);
+      const grabaciones = data.grabaciones;
+
+      if (!Array.isArray(grabaciones) || !grabaciones.length) {
+        alert("El archivo no tiene grabaciones del Bloc musical.");
+        return;
+      }
+
+      for (const g of grabaciones) {
+        const record = {
+          id: g.id || ("np_" + Date.now() + "_" + Math.random().toString(36).slice(2)),
+          nombre: g.nombre || "Grabación importada",
+          createdAt: g.createdAt || Date.now(),
+          blob: g.audioBase64 ? npBase64ToBlob(g.audioBase64, g.audioType) : null,
+          duration: g.duration || 0,
+          tonalidad: g.tonalidad || "",
+          ritmo: g.ritmo || "",
+          bpm: g.bpm || "",
+          letra: g.letra || ""
+        };
+
+        await npPut(record);
+      }
+
+      npMostrarLista();
+      alert("✅ Grabaciones importadas con éxito.");
+    } catch (e) {
+      console.error("Error importando grabaciones:", e);
+      alert("No se pudo leer el archivo. ¿Es un export del Bloc musical?");
+    }
+  };
+
+  reader.readAsText(file);
+  event.target.value = "";
+}

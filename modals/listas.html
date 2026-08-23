@@ -13,6 +13,15 @@
       <button type="button" class="play-btn" onclick="crearListaDesdeInput()">+ Crear</button>
     </div>
 
+    <div class="listas-io-row">
+      <button type="button" class="chip" onclick="exportarMisListas()">⬆️ Exportar</button>
+      <label class="chip listas-import-btn">
+        ⬇️ Importar
+        <input type="file" accept=".json,application/json" onchange="importarMisListas(event)" hidden>
+      </label>
+    </div>
+    <p class="listas-io-hint">Para ver las mismas listas en otro navegador o dispositivo: exportá acá y luego importá ese archivo allá.</p>
+
     <div class="about-body">
       <div id="listasContainer"></div>
     </div>

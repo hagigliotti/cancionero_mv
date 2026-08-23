@@ -1824,6 +1824,29 @@ details[open] .sec-chevron { transform: rotate(90deg); }
 .nueva-lista-row input::placeholder { color: rgba(232,244,253,0.5); }
 .dark-mode .nueva-lista-row input::placeholder { color: var(--gray-500); }
 
+.listas-io-row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 22px 6px;
+  flex-shrink: 0;
+}
+
+.listas-import-btn {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.listas-io-hint {
+  font-size: 11px;
+  opacity: 0.55;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 22px 14px;
+  flex-shrink: 0;
+}
+
 .lista-check {
   display: flex;
   align-items: center;

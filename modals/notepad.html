@@ -18,6 +18,15 @@
         <button type="button" class="np-btn-primary" onclick="crearGrabacion()">+ Nueva</button>
       </div>
 
+      <div class="np-io-row">
+        <button type="button" onclick="exportarGrabaciones()">⬆️ Exportar</button>
+        <label class="np-import-btn">
+          ⬇️ Importar
+          <input type="file" accept=".json,application/json" onchange="importarGrabaciones(event)" hidden>
+        </label>
+      </div>
+      <p class="np-io-hint">Para ver las mismas grabaciones en otro navegador o dispositivo: exportá acá y luego importá ese archivo allá.</p>
+
       <div class="np-list-wrap">
         <div id="npList" class="np-list"></div>
         <div class="np-list-rail hidden" id="npListRail"></div>

@@ -148,6 +148,38 @@
 
 .np-btn-primary:hover { background: var(--sky-dark); }
 
+.np-io-row { display: flex; justify-content: center; gap: 8px; margin-bottom: 6px; flex-shrink: 0; }
+
+.np-io-row button,
+.np-import-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+  font-size: 11.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dark-mode .np-io-row button,
+.dark-mode .np-import-btn { background: var(--gray-50); }
+
+.np-io-row button:hover,
+.np-import-btn:hover { background: rgba(56,189,248,0.16); }
+
+.np-io-hint {
+  font-size: 10.5px;
+  opacity: 0.5;
+  text-align: center;
+  line-height: 1.5;
+  margin: 0 0 12px;
+  flex-shrink: 0;
+}
+
 /* lista + riel de letras: el riel queda fijo, solo la lista scrollea */
 .np-list-wrap {
   flex: 1;

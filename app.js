@@ -315,8 +315,8 @@ async function cargarModales() {
     "modals/share.html?v=5",
     "modals/afinometro.html?v=13",
     "modals/biblioteca.html?v=3",
-    "modals/listas.html?v=1",
-    "modals/notepad.html?v=5"
+    "modals/listas.html?v=2",
+    "modals/notepad.html?v=6"
   ];
 
   for (const path of modales) {
@@ -1314,6 +1314,56 @@ function editarNombreLista(id) {
   lista.name = limpio;
   guardarListas();
   renderMisListas();
+}
+
+// exportar/importar: cada navegador (Safari, Chrome, la app instalada) guarda
+// sus datos por separado, aunque sea el mismo sitio y el mismo celular — esto
+// es un límite de los navegadores, no algo que se pueda evitar. Exportar a un
+// archivo es el puente manual para pasar las listas de un lado a otro.
+function exportarMisListas() {
+  const data = {
+    tipo: "cancionero-mv-mis-listas",
+    version: 1,
+    exportadoEl: new Date().toISOString(),
+    misListas
+  };
+
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `mis-listas_${new Date().toISOString().slice(0, 10)}.json`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
+
+function importarMisListas(event) {
+  const file = event.target.files?.[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+
+  reader.onload = () => {
+    try {
+      const data = JSON.parse(reader.result);
+      const nuevas = data.misListas || data;
+
+      if (!nuevas || typeof nuevas !== "object" || Array.isArray(nuevas)) {
+        alert("El archivo no tiene el formato esperado de Mis Listas.");
+        return;
+      }
+
+      Object.assign(misListas, nuevas);
+      guardarListas();
+      renderMisListas();
+      alert("✅ Listas importadas con éxito.");
+    } catch (e) {
+      alert("No se pudo leer el archivo. ¿Es un export de Mis Listas?");
+    }
+  };
+
+  reader.readAsText(file);
+  event.target.value = "";
 }
 
 function toggleSongInLista(listaId, songId) {
