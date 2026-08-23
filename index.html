@@ -276,8 +276,11 @@
 
 <script>
   if ("serviceWorker" in navigator) {
+    let swReg = null;
+
     window.addEventListener("load", () => {
       navigator.serviceWorker.register("sw.js").then(reg => {
+        swReg = reg;
 
         // hay un service worker nuevo instalándose: avisar solo si YA había
         // uno controlando la página antes (si no, es la primera instalación,
@@ -297,6 +300,20 @@
         console.warn("No se pudo registrar el service worker:", err);
       });
     });
+
+    // una PWA instalada (ícono en la pantalla de inicio) casi nunca se
+    // "recarga" de verdad al reabrirla — el navegador no revisa solo si hay
+    // una versión nueva. Forzamos el chequeo cada vez que la app vuelve a
+    // primer plano, así el aviso de actualización aparece sin tener que
+    // borrar e instalar la app de nuevo.
+    const forzarChequeoDeActualizacion = () => {
+      if (document.visibilityState === "visible" && swReg) {
+        swReg.update().catch(() => {});
+      }
+    };
+
+    document.addEventListener("visibilitychange", forzarChequeoDeActualizacion);
+    window.addEventListener("pageshow", forzarChequeoDeActualizacion);
   }
 
   function mostrarAvisoActualizacion() {
