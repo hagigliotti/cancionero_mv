@@ -584,10 +584,15 @@ function closeMenu() {
     if (e.touches.length !== 1) return;
 
     const isOpen = document.getElementById("dropdownMenu")?.classList.contains("active");
+    const startedInMenuBody = !!e.target.closest(".menu-body");
+
     startX = e.touches[0].clientX;
     startY = e.touches[0].clientY;
     fromEdge = startX <= EDGE_ZONE;
-    tracking = isOpen || fromEdge;
+
+    // si el toque arranca dentro de la lista scrolleable del menú, no lo
+    // tratamos como gesto de cerrar — así el scroll nativo nunca se interrumpe
+    tracking = (isOpen && !startedInMenuBody) || fromEdge;
   }, { passive: true });
 
   document.addEventListener("touchend", (e) => {

@@ -354,6 +354,8 @@ body.menu-open {
   flex: 1;
   min-height: 0;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
   padding: 0 12px 6px;
   border-top: 1px solid rgba(255,255,255,0.08);
 }
