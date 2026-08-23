@@ -8,7 +8,7 @@
 
 // 👉 Subir este número cada vez que cambie la lista de archivos de abajo
 // (o cuando quieras forzar que todos descarten la caché vieja).
-const CACHE_VERSION = "v49";
+const CACHE_VERSION = "v50";
 
 const APP_SHELL_CACHE = `cancionero-shell-${CACHE_VERSION}`;
 const DATA_CACHE = `cancionero-data-${CACHE_VERSION}`;
@@ -29,14 +29,14 @@ const APP_SHELL_FILES = [
   "songbook.js?v=12",
   "notepad.js?v=3",
 
-  "modals/info.html?v=8",
+  "modals/info.html?v=9",
   "modals/revised.html?v=4",
   "modals/people.html?v=4",
   "modals/share.html?v=5",
   "modals/afinometro.html?v=13",
   "modals/biblioteca.html?v=3",
   "modals/listas.html?v=1",
-  "modals/notepad.html?v=4",
+  "modals/notepad.html?v=5",
 
   "imagenes/icons/favicon-16.png?v=3",
   "imagenes/icons/favicon-32.png?v=3",
