@@ -444,6 +444,8 @@ function clearAll() {
 
   // volver arriba
   window.scrollTo({ top: 0, behavior: "smooth" });
+
+  updateClearSearchBtn();
 }
 
 // ===================== CAMBIAR EL NOMBRE DE LA PAGINA Y TITULO ======================
@@ -741,9 +743,24 @@ function resetTranspose() {
 
 
 // ===== SEARCH - BUSQUEDA BLANDA =================================================================
+// El botón X del buscador sirve para "limpiar y volver al inicio": debe verse
+// no solo cuando hay texto escrito, sino también con una canción abierta o la
+// lista visible, aunque no se haya usado el buscador para llegar ahí.
+function updateClearSearchBtn() {
+  const buscador = document.getElementById("buscador");
+  const contenido = document.getElementById("contenido");
+
+  const hayQuery = !!buscador?.value.trim().length;
+  const haySong = !!contenido?.innerHTML.trim().length;
+
+  document.getElementById("clearBuscadorBtn")?.classList.toggle("hidden", !(hayQuery || haySong || listaVisible));
+}
+
 function search(q) {
   const query = normalize(q.trim());
   const list = document.getElementById("indice");
+
+  updateClearSearchBtn();
 
   if (!query.length) {
     list.innerHTML = "";
@@ -871,6 +888,7 @@ function openList() {
   document.getElementById("letterRail")?.classList.remove("hidden");
 
   listaVisible = true;
+  updateClearSearchBtn();
 }
 
 function closeList() {
@@ -883,6 +901,7 @@ function closeList() {
   document.getElementById("letterRail")?.classList.add("hidden");
 
   listaVisible = false;
+  updateClearSearchBtn();
 }
 
 // ===================== LISTA =====================
@@ -962,61 +981,104 @@ function tieneIdioma(c) {
 }
 
 // ===================== LETRA =====================
+// Etiquetas de sección reconocidas dentro de la letra, agrupadas por cómo se
+// muestran. Para sumar un idioma/palabra nueva alcanza con agregar una línea
+// acá — no hace falta tocar renderLyrics.
+//   "coro"        → placa destacada (misma prominencia que el número de estrofa)
+//   "voces"       → etiqueta chica, en el mismo renglón que la letra siguiente
+//   "instruccion" → título de sección chico, en su propio renglón
+const SECTION_LABELS = [
+  { type: "coro", regex: /^coro:?$/i },
+  { type: "coro", regex: /^chorus:?$/i },        // inglés
+  { type: "coro", regex: /^refrão:?$/i },        // portugués
+  { type: "coro", regex: /^chœur:?$/i },         // francés
+
+  { type: "voces", regex: /^voz 1:?$/i },
+  { type: "voces", regex: /^voz 2:?$/i },
+  { type: "voces", regex: /^todos:?$/i },
+  { type: "voces", regex: /^voz masculina:?$/i },
+  { type: "voces", regex: /^voz femenina:?$/i },
+
+  { type: "instruccion", regex: /^intro:?$/i },
+  { type: "instruccion", regex: /^canon:?$/i },
+  { type: "instruccion", regex: /^puente:?$/i },
+  { type: "instruccion", regex: /^modula:?$/i },
+  { type: "instruccion", regex: /^final:?$/i },
+  { type: "instruccion", regex: /^interludio:?$/i },
+  { type: "instruccion", regex: /^repite:?$/i },
+  { type: "instruccion", regex: /^repite x2:?$/i },
+  { type: "instruccion", regex: /^repite x3:?$/i },
+  { type: "instruccion", regex: /^instrucción x3:?$/i },
+  { type: "instruccion", regex: /^bridge:?$/i },     // inglés (puente)
+  { type: "instruccion", regex: /^interlude:?$/i },  // inglés (interludio)
+  { type: "instruccion", regex: /^ponte:?$/i },      // italiano (puente)
+];
+
+function detectSectionLabel(clean) {
+  const found = SECTION_LABELS.find(l => l.regex.test(clean));
+  return found ? found.type : null;
+}
+
 function renderLyrics(text) {
   if (!text) return "";
 
   const lines = Array.isArray(text) ? text : text.split("\n");
+  let html = "";
 
-  return lines.map(line => {
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
 
     if (!line || line === "br") {
-      return `<div class="song-break"></div>`;
+      html += `<div class="song-break"></div>`;
+      continue;
     }
 
-    // 🔥 Detectar títulos especiales
     const clean = line.trim();
 
-    const esIntro = /^intro:?$/i.test(clean);
-    const esNumero = /^\d+$/.test(clean);
-    const esCanon = /^canon:?$/i.test(clean);
-    const esCoro = /^coro:?$/i.test(clean);
-    const esPuente = /^puente:?$/i.test(clean);
-    const esModula = /^modula:?$/i.test(clean);
-    const esFinal = /^final:?$/i.test(clean);
-    const esInterludio = /^interludio:?$/i.test(clean);
-    const esRepite = /^repite:?$/i.test(clean);
-    const esRepitex2 = /^repite x2:?$/i.test(clean);
-    const esRepitex3 = /^repite x3:?$/i.test(clean);
-    const esInstruccion = /^instrucción x3:?$/i.test(clean);
-    const esVoz1 = /^voz 1:?$/i.test(clean);
-    const esVoz2 = /^voz 2:?$/i.test(clean);
-
-    const esMasc = /^voz masculina:?$/i.test(clean);
-    const esFem = /^voz femenina:?$/i.test(clean);
-
-    const enChorus = /^chorus:?$/i.test(clean);
-    const enBridge = /^bridge:?$/i.test(clean);
-    const enInterlude = /^interlude:?$/i.test(clean);
-
-    const ptRefrão = /^refrão:?$/i.test(clean);
-
-    const frChœur = /^chœur:?$/i.test(clean);
-
-    const itPonte = /^ponte:?$/i.test(clean);
-
-
-    if (esIntro || esNumero || esCanon ||  esCoro || esModula || esFinal || esPuente || esInterludio || esRepite || esRepitex2 || esRepitex3 || 
-          esMasc || esFem || esFem || esInstruccion || esVoz1 || esVoz2 ||
-        enChorus || enBridge || enInterlude ||
-        ptRefrão || 
-        frChœur || 
-        itPonte) {
-      return `<div class="titulo-seccion">${escapeHtml(line)}</div>`;
+    // Número de estrofa → placa circular
+    if (/^\d+$/.test(clean)) {
+      html += `<div class="lyric-badge lyric-badge-numero"><span>${escapeHtml(clean)}</span></div>`;
+      continue;
     }
 
-    return renderChordLine(line);
+    const tipo = detectSectionLabel(clean);
 
-  }).join("");
+    // Coro y traducciones → placa destacada (misma idea que el número, adaptada a texto)
+    if (tipo === "coro") {
+      html += `<div class="lyric-badge lyric-badge-coro">${escapeHtml(line)}</div>`;
+      continue;
+    }
+
+    // Instrucciones estructurales → título de sección chico, en su propio renglón
+    if (tipo === "instruccion") {
+      html += `<div class="titulo-seccion">${escapeHtml(line)}</div>`;
+      continue;
+    }
+
+    // Voces/canon → etiqueta sutil, pegada a la letra que sigue en el mismo renglón
+    if (tipo === "voces") {
+      const next = lines[i + 1];
+      const nextClean = (next || "").trim();
+      const nextEsEspecial = !next || next === "br" || /^\d+$/.test(nextClean) || detectSectionLabel(nextClean);
+
+      const tagHtml = `<span class="voces-tag">${escapeHtml(line)}</span>`;
+
+      if (!nextEsEspecial) {
+        html += renderChordLine(next).replace(
+          '<div class="song-line">',
+          `<div class="song-line">${tagHtml} `
+        );
+        i++; // ya consumimos la línea de letra que sigue
+      } else {
+        html += `<div class="song-line">${tagHtml}</div>`;
+      }
+      continue;
+    }
+
+    html += renderChordLine(line);
+  }
+
+  return html;
 }
 
 function renderChordLine(line) {

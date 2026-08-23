@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css?v=39">
+  <link rel="stylesheet" href="style.css?v=41">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XS6DM59CNT"></script>
@@ -181,7 +181,10 @@
       </div>
 
       <!-- 🔎 BUSCADOR 👓🕶️-->
-      <input id="buscador" type="text" placeholder="🔎 Buscar titulo, letra, compositor, tiempo, ritmo, tags, etc." />
+      <div class="buscador-container">
+        <input id="buscador" type="text" placeholder="🔎 Buscar titulo, letra, compositor, tiempo, ritmo, tags, etc." />
+        <button type="button" id="clearBuscadorBtn" class="clear-search-btn hidden" onclick="clearAll()" aria-label="Borrar búsqueda">✕</button>
+      </div>
 
       <!-- 🌐 IDIOMA (botón rápido) -->
       <div class="lang-wrapper">
@@ -261,8 +264,8 @@
 <script src="utils.js?v=4"></script>
 <script src="theme.js?v=7"></script>
 <script src="afinometro.js?v=17"></script>
-<script src="app.js?v=18"></script>
-<script src="songbook.js?v=10"></script>
+<script src="app.js?v=21"></script>
+<script src="songbook.js?v=12"></script>
 
 <!-- ======================================== PWA OFFLINE ======================================== -->
 <div id="updateBanner" class="update-banner">

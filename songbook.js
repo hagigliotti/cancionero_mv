@@ -71,6 +71,7 @@ function openSong(id) {
   if (!song) {
     document.getElementById("contenido").innerHTML =
       "<p>⚠️ Canción no disponible en este libro o idioma.</p>";
+    updateClearSearchBtn();
     return;
   }
 
@@ -95,6 +96,7 @@ function openSong(id) {
   if (!s) {
     document.getElementById("contenido").innerHTML =
       "<p>⚠️ Canción no disponible en este idioma.</p>";
+    updateClearSearchBtn();
     return;
   }
 
@@ -331,6 +333,8 @@ function openSong(id) {
   applyTablaturaState();
   resetTranspose(); // cada canción arranca en su tonalidad original, sin transposición previa
   window.scrollTo({ top: 0, behavior: "smooth" });
+
+  updateClearSearchBtn();
 }
 
 
@@ -368,8 +372,6 @@ function renderAlphabet() {
           ${l === "*" ? "🔤" : l === "#" ? "#️⃣" : l}
         </button>
       `).join("")}
-
-      <button class="alpha clear-btn" onclick="clearAll()">🧹</button>
     </div>
   `;
 }
@@ -636,8 +638,6 @@ function renderAlphabet() {
           ${l === "*" ? "🔤" : l === "#" ? "#️⃣" : l}
         </button>
       `).join("")}
-
-      <button class="alpha clear-btn" onclick="clearAll()">🧹</button>
 
     </div>
   `;

@@ -182,12 +182,12 @@ body.projector .top-bar { background: #000; }
 /* ============================================================
    BUSCADOR
    ============================================================ */
-.buscador-container { flex: 1; min-width: 0; }
+.buscador-container { flex: 1; min-width: 0; position: relative; display: flex; align-items: center; }
 
 #buscador {
   width: 100%;
   box-sizing: border-box;
-  padding: 11px 18px;
+  padding: 11px 40px 11px 18px;
   border-radius: var(--radius-xl);
   border: 2px solid transparent;
   font-size: 15px;
@@ -197,6 +197,32 @@ body.projector .top-bar { background: #000; }
   color: inherit;
   backdrop-filter: blur(6px);
 }
+
+.clear-search-btn {
+  position: absolute;
+  right: 6px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 1;
+  cursor: pointer;
+  background: rgba(0,0,0,0.12);
+  color: inherit;
+  opacity: 0.75;
+  transition: var(--trans);
+}
+
+.clear-search-btn:hover { opacity: 1; background: var(--sky); color: #fff; }
+
+.light-mode .clear-search-btn { background: rgba(255,255,255,0.18); color: #e8f4fd; }
+.dark-mode .clear-search-btn  { background: var(--gray-100); color: var(--navy); }
+
+body.projector .clear-search-btn { background: rgba(255,255,255,0.15); color: #fff; }
 
 .light-mode #buscador {
   background: rgba(255,255,255,0.08);
@@ -822,14 +848,50 @@ a.menu-item {
 
 .lyric-line { white-space: pre-wrap; }
 
-/* Títulos de estrofas/coros */
+/* Instrucciones estructurales: Repite, Puente, Modula, Interludio, etc. */
 .titulo-seccion {
-  font-size: 0.75em;
+  font-size: 0.68em;
   font-weight: 700;
-  opacity: 0.6;
-  margin-top: 16px;
+  opacity: 0.55;
+  margin-top: 14px;
   margin-bottom: 4px;
   letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+/* Voces/canon: etiqueta chica pegada a la letra que sigue en el mismo renglón */
+.voces-tag {
+  font-size: 0.62em;
+  font-weight: 700;
+  opacity: 0.55;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Número de estrofa y Coro: placas destacadas */
+.lyric-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 0 6px;
+  background: var(--sky);
+  color: #fff;
+  font-weight: 700;
+}
+
+.lyric-badge-numero {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
+.lyric-badge-coro {
+  padding: 3px 14px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
 }
 
@@ -921,35 +983,6 @@ a.menu-item {
 
 #toggleLista { display: none; }
 
-/* Botón limpiar */
-.clear-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--sky);
-  color: var(--navy);
-  font-weight: 700;
-  font-size: 13px;
-  transition: var(--trans);
-  flex-shrink: 0;
-}
-
-.clear-btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 4px 12px rgba(56,189,248,.40);
-}
-
-.light-mode .clear-btn,
-.dark-mode .clear-btn,
-body.projector .clear-btn {
-  background: var(--sky);
-  color: var(--navy);
-}
 
 
 
