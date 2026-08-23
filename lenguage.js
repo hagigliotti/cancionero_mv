@@ -159,8 +159,10 @@ function renderBanderaSelect() {
   const variants = FLAG_VARIANTS[idiomaActual];
 
   if (!variants) {
+    // sin variantes de país (ej. italiano, guaraní): igual se muestra SU
+    // bandera fija, solo que el ícono no abre ningún selector
     if (icon) {
-      icon.textContent = "🌐";
+      icon.textContent = getFlagEmoji(idiomaActual);
       icon.classList.remove("flag-pick");
     }
     select.innerHTML = "";

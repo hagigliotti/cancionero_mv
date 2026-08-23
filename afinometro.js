@@ -13,7 +13,7 @@ let swing = 0;       // 0 = recto, 100 = swing extremo
 let subStep = 0;
 
 let subdivision = 1;
-let accentMode = "recto"; // "recto" | "secundario"
+let accentBeat = 1; // qué pulso del compás (1-indexado) lleva el acento fuerte
 
 
 // ===================== AFINADOR ================================================================
@@ -32,6 +32,20 @@ let currentTunerMode = "general"; // "general" | "guitarra" | "bajo" | "violin" 
 let selectedRefNote = "C";
 let selectedRefOctave = 4;
 
+// afinación de referencia (La4): 440Hz es el estándar, pero algunos coros u
+// orquestas afinan un poco más alto (442, 444...) o más bajo (barroco, 415)
+let a4Reference = 440;
+
+function changeA4(delta) {
+  a4Reference += delta;
+
+  if (a4Reference < 400) a4Reference = 400;
+  if (a4Reference > 480) a4Reference = 480;
+
+  const el = document.getElementById("a4Value");
+  if (el) el.textContent = `${a4Reference} Hz`;
+}
+
 
 
 // ===============================================================================================    =====================
@@ -48,6 +62,8 @@ function setCompas(compas) {
     btn.classList.toggle("active", btn.dataset.compas === compas);
   });
 
+  renderAccentBeatSelector();
+
   if (metroRunning) {
     stopMetronomo();
     startMetronomo();
@@ -55,25 +71,32 @@ function setCompas(compas) {
 }
 
 
-// función de acento
-function isStrongBeat(currentBeat, compas) {
-  if (currentBeat === 0) return true;
-
-  if (accentMode === "secundario") {
-    if (compas === "6/8" && currentBeat === 3) return true; // 2 grupos de 3
-    if (compas === "5/4" && currentBeat === 3) return true; // agrupado 3+2
-    if (compas === "4/4" && currentBeat === 2) return true; // acento en el 3
-  }
-
-  return false;
+// función de acento: el usuario elige directamente qué pulso lleva el acento
+function isStrongBeat(currentBeat) {
+  return currentBeat === (accentBeat - 1);
 }
 
-function setAccentMode(mode) {
-  accentMode = mode;
+function setAccentBeat(n) {
+  accentBeat = parseInt(n, 10) || 1;
 
-  document.querySelectorAll("#accentSelector [data-accent]").forEach(btn => {
-    btn.classList.toggle("active", btn.dataset.accent === mode);
+  document.querySelectorAll("#accentBeatSelector [data-accent-beat]").forEach(btn => {
+    btn.classList.toggle("active", parseInt(btn.dataset.accentBeat, 10) === accentBeat);
   });
+}
+
+// regenera los botones 1..N (N = pulsos del compás actual) para elegir el acento
+function renderAccentBeatSelector() {
+  const container = document.getElementById("accentBeatSelector");
+  if (!container) return;
+
+  const beats = parseInt(currentCompas.split("/")[0]) || 4;
+
+  if (accentBeat > beats) accentBeat = 1;
+
+  container.innerHTML = Array.from({ length: beats }, (_, i) => i + 1).map(n => `
+    <button type="button" class="chip ${n === accentBeat ? "active" : ""}"
+            data-accent-beat="${n}" onclick="setAccentBeat(${n})">${n}</button>
+  `).join("");
 }
 
 const subdivisions = {
@@ -165,7 +188,7 @@ function stopMetronomo() {
 function playBeat(baseInterval) {
 
   const beats = parseInt(currentCompas.split("/")[0]) || 4;
-  const strongBeat = isStrongBeat(currentBeat, currentCompas);
+  const strongBeat = isStrongBeat(currentBeat);
 
   animateBeat(strongBeat);
 
@@ -257,6 +280,50 @@ function setSubdivision(value) {
 
 function setSwing(value) {
   swing = parseInt(value);
+}
+
+// ===== TAP TEMPO: tocar el ritmo con el dedo/mouse para setear el BPM =====
+let tapTimes = [];
+
+function tapTempo() {
+  const now = performance.now();
+
+  // si pasó más de 2s desde el último toque, es un ritmo nuevo: reiniciar la cuenta
+  if (tapTimes.length && now - tapTimes[tapTimes.length - 1] > 2000) {
+    tapTimes = [];
+  }
+
+  tapTimes.push(now);
+  if (tapTimes.length > 6) tapTimes.shift(); // solo se usan los últimos 6 toques
+
+  flashTapTempoBtn();
+
+  if (tapTimes.length < 2) return; // hace falta al menos 2 toques para calcular un BPM
+
+  const intervals = [];
+  for (let i = 1; i < tapTimes.length; i++) {
+    intervals.push(tapTimes[i] - tapTimes[i - 1]);
+  }
+
+  const avgInterval = intervals.reduce((a, b) => a + b, 0) / intervals.length;
+  let bpm = Math.round(60000 / avgInterval);
+  bpm = Math.max(20, Math.min(300, bpm));
+
+  const input = document.getElementById("metroBpm");
+  if (input) input.value = bpm;
+
+  if (metroRunning) {
+    stopMetronomo();
+    startMetronomo();
+  }
+}
+
+function flashTapTempoBtn() {
+  const btn = document.getElementById("tapTempoBtn");
+  if (!btn) return;
+
+  btn.classList.add("tap-flash");
+  setTimeout(() => btn.classList.remove("tap-flash"), 120);
 }
 
 
@@ -438,9 +505,7 @@ function autoCorrelate(buffer, sampleRate) {
 }
 
 function freqToNote(freq) {
-  const A4 = 440;
-
-  const noteNum = 12 * (Math.log2(freq / A4)) + 69;
+  const noteNum = 12 * (Math.log2(freq / a4Reference)) + 69;
 
   const rounded = Math.round(noteNum);
 
@@ -457,11 +522,13 @@ function updateTunerUI(freq) {
 
   const noteEl = document.getElementById("tunerNote");
   const centsEl = document.getElementById("tunerCents");
+  const hzEl = document.getElementById("tunerHz");
   const needle = document.getElementById("tunerNeedle");
 
   if (!noteEl || !needle) return;
 
   noteEl.innerText = note;
+  if (hzEl) hzEl.innerText = `${freq.toFixed(1)} Hz`;
 
   // ==========================================
   // MODO NORMAL (sin nota objetivo)
@@ -599,7 +666,7 @@ function noteToFreq(note, octave = 4) {
   const semitoneDistance =
     SEMITONES[note] + ((octave - 4) * 12);
 
-  return 440 * Math.pow(2, semitoneDistance / 12);
+  return a4Reference * Math.pow(2, semitoneDistance / 12);
 }
 
 // ===== GRILLA DE NOTAS PARA REPRODUCIR TONO DE REFERENCIA ============================
@@ -1260,9 +1327,48 @@ function initAfinadorUI() {
     btn.classList.toggle("active", parseInt(btn.dataset.subdivision, 10) === subdivision);
   });
 
-  document.querySelectorAll("#accentSelector [data-accent]").forEach(btn => {
-    btn.classList.toggle("active", btn.dataset.accent === accentMode);
+  renderAccentBeatSelector();
+  initMetroTabsNav();
+}
+
+// ===================== NAV FIJA DEL MODAL (pestañas que saltan a cada sección) ====================
+let metroTabsObserver = null;
+
+function scrollToMetroSection(id) {
+  const target = document.getElementById(id);
+  if (!target) return;
+
+  // scrollIntoView + scroll-margin-top (CSS) es mucho más confiable entre
+  // navegadores que calcular la posición a mano con getBoundingClientRect
+  target.scrollIntoView({ behavior: "smooth", block: "start" });
+  setActiveMetroTab(id);
+}
+
+function setActiveMetroTab(id) {
+  document.querySelectorAll(".metro-tab").forEach(t =>
+    t.classList.toggle("active", t.dataset.target === id)
+  );
+}
+
+// mantiene la pestaña activa sincronizada mientras se scrollea a mano
+function initMetroTabsNav() {
+  const scrollContainer = document.querySelector("#metroModal .about-body");
+  const sections = document.querySelectorAll("#metroModal .menu-group[id]");
+  if (!scrollContainer || !sections.length) return;
+
+  if (metroTabsObserver) metroTabsObserver.disconnect();
+
+  metroTabsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) setActiveMetroTab(entry.target.id);
+    });
+  }, {
+    root: scrollContainer,
+    rootMargin: "-42% 0px -50% 0px",
+    threshold: 0
   });
+
+  sections.forEach(sec => metroTabsObserver.observe(sec));
 }
 
 

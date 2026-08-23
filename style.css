@@ -2067,7 +2067,7 @@ details[open] .sec-chevron { transform: rotate(90deg); }
 /* nav fija: siempre visible arriba del modal, salta a cada sección */
 .metro-tabs {
   position: sticky;
-  top: -4px;
+  top: 0;
   z-index: 5;
   display: flex;
   gap: 6px;
@@ -2081,6 +2081,9 @@ details[open] .sec-chevron { transform: rotate(90deg); }
 }
 
 .metro-tabs::-webkit-scrollbar { display: none; }
+
+/* deja lugar para la nav fija al saltar a una sección con scrollIntoView() */
+#metroModal .menu-group[id] { scroll-margin-top: 54px; }
 
 .dark-mode .metro-tabs {
   background: rgba(255,255,255,0.94);
