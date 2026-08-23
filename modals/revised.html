@@ -1,19 +1,22 @@
-<!-- ===================== MODAL REVISADO SI/NO ============== -->
-<div id="listModal" class="modal">
-  <div class="modal-content revisado-content">
+<!-- ===================== MODAL LISTA (revisado / no revisado / tags) ===================== -->
+<div id="listModal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="listModalTitle">
+  <div class="modal-content about-modal">
 
-    <span class="close" onclick="cerrarListModal()">&times;</span>
-
-    <!-- HEADER NUEVO -->
-    <div class="revisado-header">
+    <div class="about-head">
+      <button type="button" class="about-close" onclick="cerrarListModal()" aria-label="Cerrar">✕</button>
+      <div class="about-badge" id="listModalBadge">📋</div>
       <h2 id="listModalTitle">Listado</h2>
-
-      <button id="toggleRevisadoBtn" onclick="toggleRevisadoEstado()">
-        ❌ Ver no revisadas
-      </button>
+      <div class="about-meta"><span id="listModalCount">0</span> canción(es)</div>
     </div>
 
-    <div id="listModalLista"></div>
+    <div class="revisado-toggle-wrap hidden" id="revisadoToggleWrap">
+      <button id="toggleRevisadoBtn" type="button" class="chip" onclick="toggleRevisadoEstado()">❌ Ver no revisadas</button>
+    </div>
+
+    <div class="modal-body-wrap">
+      <div id="listModalLista" class="about-body biblio-list song-list"></div>
+      <div class="modal-letter-rail hidden" id="listModalRail"></div>
+    </div>
 
   </div>
 </div>

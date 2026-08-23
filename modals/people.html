@@ -1,13 +1,17 @@
-<div id="peopleModal" class="modal">
-  <div class="modal-content revisado-content">
+<div id="peopleModal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="peopleModalTitle">
+  <div class="modal-content about-modal">
 
-    <span class="close" onclick="cerrarPeopleModal()">&times;</span>
-
-    <div class="revisado-header">
+    <div class="about-head">
+      <button type="button" class="about-close" onclick="cerrarPeopleModal()" aria-label="Cerrar">✕</button>
+      <div class="about-badge" id="peopleModalBadge">👤</div>
       <h2 id="peopleModalTitle">Listado</h2>
+      <div class="about-meta"><span id="peopleModalCount">0</span> canción(es)</div>
     </div>
 
-    <div id="peopleModalLista"></div>
+    <div class="modal-body-wrap">
+      <div id="peopleModalLista" class="about-body biblio-list song-list"></div>
+      <div class="modal-letter-rail hidden" id="peopleModalRail"></div>
+    </div>
 
   </div>
 </div>
