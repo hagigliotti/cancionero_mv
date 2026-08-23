@@ -8,7 +8,7 @@
 
 // 👉 Subir este número cada vez que cambie la lista de archivos de abajo
 // (o cuando quieras forzar que todos descarten la caché vieja).
-const CACHE_VERSION = "v43";
+const CACHE_VERSION = "v44";
 
 const APP_SHELL_CACHE = `cancionero-shell-${CACHE_VERSION}`;
 const DATA_CACHE = `cancionero-data-${CACHE_VERSION}`;
@@ -27,7 +27,7 @@ const APP_SHELL_FILES = [
   "app.js?v=26",
   "songbook.js?v=12",
 
-  "modals/info.html?v=5",
+  "modals/info.html?v=6",
   "modals/revised.html?v=4",
   "modals/people.html?v=4",
   "modals/share.html?v=5",
