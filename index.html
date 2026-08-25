@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css?v=53">
+  <link rel="stylesheet" href="style.css?v=57">
   <link rel="stylesheet" href="notepad.css?v=5">
 
   <!-- Google tag (gtag.js) -->
@@ -272,7 +272,7 @@
 <script src="theme.js?v=7"></script>
 <script src="afinometro.js?v=20"></script>
 <script src="app.js?v=29"></script>
-<script src="songbook.js?v=12"></script>
+<script src="songbook.js?v=13"></script>
 <script src="notepad.js?v=4"></script>
 
 <!-- ======================================== PWA OFFLINE ======================================== -->
@@ -337,6 +337,39 @@
 <footer class="app-footer"><br>
   © 2026 @hagigliotti — Cancionero MV
 <br></footer>
+
+<!-- achica la barra de letras/números al scrollear y quedar pegada (sticky)
+     debajo del buscador; mide el alto real de la barra de búsqueda y de la
+     fila de letras (en vez de asumir un número fijo) para que no se tapen
+     entre sí. Aislado a propósito, no toca nada del resto de la app -->
+<script>
+  (function () {
+    let scrolled = false;
+
+    function syncOffsets() {
+      const topBar = document.querySelector(".top-bar");
+      const firstRow = document.querySelector(".alfabeto-nav");
+      const root = document.documentElement.style;
+
+      if (topBar) root.setProperty("--topbar-h", topBar.offsetHeight + "px");
+      if (firstRow) root.setProperty("--alfabeto-row-h", firstRow.offsetHeight + "px");
+    }
+
+    function onScroll() {
+      const shouldBeScrolled = window.scrollY > 30;
+      if (shouldBeScrolled !== scrolled) {
+        scrolled = shouldBeScrolled;
+        document.body.classList.toggle("scrolled", scrolled);
+        syncOffsets(); // el alto de los botones cambia al achicarse/agrandarse
+      }
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", syncOffsets);
+    window.addEventListener("load", syncOffsets);
+    syncOffsets();
+  })();
+</script>
 </body>
 
 </html>

@@ -407,6 +407,10 @@ function abrirLetra(letter) {
   openList();
   renderList(letter);
   highlightLetter(letter);
+
+  // si estabas leyendo el final de una canción, que la lista se vea de
+  // entrada arriba del todo, sin tener que scrollear manualmente
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 
@@ -710,6 +714,10 @@ function selectRange(start, end) {
   listaVisible = true;
 
   document.getElementById("contenido").innerHTML = "";
+
+  // si estabas leyendo el final de un himno, que la lista se vea de
+  // entrada arriba del todo, sin tener que scrollear manualmente
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 
