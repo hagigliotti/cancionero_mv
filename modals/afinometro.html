@@ -2,7 +2,7 @@
   <div class="modal-content about-modal metro-modal">
 
     <div class="about-head">
-      <button type="button" class="about-close" onclick="cerrarAfinometroModal()" aria-label="Cerrar">✕</button>
+      <button type="button" class="about-close" data-action="cerrarAfinometroModal" aria-label="Cerrar">✕</button>
       <div class="about-badge">📟</div>
       <h2 id="metroTitle">Metrónomo y Afinador</h2>
       <div class="about-meta">Herramientas para ensayar</div>
@@ -12,12 +12,12 @@
 
       <!-- ===================== NAV FIJA ===================== -->
       <nav class="metro-tabs" id="metroTabs">
-        <button type="button" class="metro-tab active" data-target="sec-afinador" onclick="scrollToMetroSection('sec-afinador')">🎯 Afinador</button>
-        <button type="button" class="metro-tab" data-target="sec-metronomo" onclick="scrollToMetroSection('sec-metronomo')">🥁 Metrónomo</button>
-        <button type="button" class="metro-tab" data-target="sec-notas" onclick="scrollToMetroSection('sec-notas')">🎵 Notas</button>
-        <button type="button" class="metro-tab" data-target="sec-acordes" onclick="scrollToMetroSection('sec-acordes')">🎶 Acordes</button>
-        <button type="button" class="metro-tab" data-target="sec-escalas" onclick="scrollToMetroSection('sec-escalas')">🎼 Escalas</button>
-        <button type="button" class="metro-tab" data-target="sec-quintas" onclick="scrollToMetroSection('sec-quintas')">🔵 Quintas</button>
+        <button type="button" class="metro-tab active" data-target="sec-afinador" data-action="scrollToMetroSection" data-args='["sec-afinador"]'>🎯 Afinador</button>
+        <button type="button" class="metro-tab" data-target="sec-metronomo" data-action="scrollToMetroSection" data-args='["sec-metronomo"]'>🥁 Metrónomo</button>
+        <button type="button" class="metro-tab" data-target="sec-notas" data-action="scrollToMetroSection" data-args='["sec-notas"]'>🎵 Notas</button>
+        <button type="button" class="metro-tab" data-target="sec-acordes" data-action="scrollToMetroSection" data-args='["sec-acordes"]'>🎶 Acordes</button>
+        <button type="button" class="metro-tab" data-target="sec-escalas" data-action="scrollToMetroSection" data-args='["sec-escalas"]'>🎼 Escalas</button>
+        <button type="button" class="metro-tab" data-target="sec-quintas" data-action="scrollToMetroSection" data-args='["sec-quintas"]'>🔵 Quintas</button>
       </nav>
 
       <!-- ===================== 1. AFINADOR ===================== -->
@@ -25,25 +25,25 @@
         <p class="contact-label">🎯 Afinador</p>
 
         <div class="instrument-chips" id="instrumentChips">
-          <button type="button" class="chip active" data-instrument="general" onclick="setTunerInstrument('general')">🎼 General</button>
-          <button type="button" class="chip" data-instrument="guitarra" onclick="setTunerInstrument('guitarra')">🎸 Guitarra</button>
-          <button type="button" class="chip" data-instrument="bajo" onclick="setTunerInstrument('bajo')">🎸 Bajo</button>
-          <button type="button" class="chip" data-instrument="violin" onclick="setTunerInstrument('violin')">🎻 Violín</button>
-          <button type="button" class="chip" data-instrument="ukelele" onclick="setTunerInstrument('ukelele')">🪕 Ukelele</button>
+          <button type="button" class="chip active" data-instrument="general" data-action="setTunerInstrument" data-args='["general"]'>🎼 General</button>
+          <button type="button" class="chip" data-instrument="guitarra" data-action="setTunerInstrument" data-args='["guitarra"]'>🎸 Guitarra</button>
+          <button type="button" class="chip" data-instrument="bajo" data-action="setTunerInstrument" data-args='["bajo"]'>🎸 Bajo</button>
+          <button type="button" class="chip" data-instrument="violin" data-action="setTunerInstrument" data-args='["violin"]'>🎻 Violín</button>
+          <button type="button" class="chip" data-instrument="ukelele" data-action="setTunerInstrument" data-args='["ukelele"]'>🪕 Ukelele</button>
         </div>
 
         <div class="octave-row a4-row">
           <span class="menu-row-label">La4 (afinación)</span>
           <div class="stepper">
-            <button type="button" onclick="changeA4(-1)">−</button>
+            <button type="button" data-action="changeA4" data-args="[-1]">−</button>
             <span id="a4Value">440 Hz</span>
-            <button type="button" onclick="changeA4(1)">+</button>
+            <button type="button" data-action="changeA4" data-args="[1]">+</button>
           </div>
         </div>
 
         <div class="tuner-targets" id="tunerTargets"></div>
 
-        <button id="micBtn" type="button" class="mic-btn" onclick="toggleMic()">🎤 Activar micrófono</button>
+        <button id="micBtn" type="button" class="mic-btn" data-action="toggleMic">🎤 Activar micrófono</button>
 
         <div class="tuner-display">
           <div id="tunerNote">-</div>
@@ -62,43 +62,43 @@
         <p class="contact-label">🥁 Metrónomo</p>
 
         <div class="metro-bpm-box">
-          <button type="button" onclick="changeBpm(-1)">−</button>
+          <button type="button" data-action="changeBpm" data-args="[-1]">−</button>
           <input type="number" id="metroBpm" value="90" min="20" max="300" />
-          <button type="button" onclick="changeBpm(1)">+</button>
+          <button type="button" data-action="changeBpm" data-args="[1]">+</button>
         </div>
         <div class="metro-label">BPM</div>
 
-        <button type="button" id="tapTempoBtn" class="tap-tempo-btn" onclick="tapTempo()">👆 Tap tempo</button>
+        <button type="button" id="tapTempoBtn" class="tap-tempo-btn" data-action="tapTempo">👆 Tap tempo</button>
 
         <div id="metroBeat" class="metro-beat"></div>
 
         <div class="metro-sub-row">
           <span class="menu-row-label">Compás</span>
           <div class="chip-row" id="compasSelector">
-            <button type="button" class="chip" data-compas="1/4" onclick="setCompas('1/4')">1/4</button>
-            <button type="button" class="chip" data-compas="2/4" onclick="setCompas('2/4')">2/4</button>
-            <button type="button" class="chip" data-compas="3/4" onclick="setCompas('3/4')">3/4</button>
-            <button type="button" class="chip active" data-compas="4/4" onclick="setCompas('4/4')">4/4</button>
-            <button type="button" class="chip" data-compas="5/4" onclick="setCompas('5/4')">5/4</button>
-            <button type="button" class="chip" data-compas="6/4" onclick="setCompas('6/4')">6/4</button>
-            <button type="button" class="chip" data-compas="7/4" onclick="setCompas('7/4')">7/4</button>
-            <button type="button" class="chip" data-compas="1/8" onclick="setCompas('1/8')">1/8</button>
-            <button type="button" class="chip" data-compas="2/8" onclick="setCompas('2/8')">2/8</button>
-            <button type="button" class="chip" data-compas="3/8" onclick="setCompas('3/8')">3/8</button>
-            <button type="button" class="chip" data-compas="4/8" onclick="setCompas('4/8')">4/8</button>
-            <button type="button" class="chip" data-compas="5/8" onclick="setCompas('5/8')">5/8</button>
-            <button type="button" class="chip" data-compas="6/8" onclick="setCompas('6/8')">6/8</button>
-            <button type="button" class="chip" data-compas="7/8" onclick="setCompas('7/8')">7/8</button>
+            <button type="button" class="chip" data-compas="1/4" data-action="setCompas" data-args='["1/4"]'>1/4</button>
+            <button type="button" class="chip" data-compas="2/4" data-action="setCompas" data-args='["2/4"]'>2/4</button>
+            <button type="button" class="chip" data-compas="3/4" data-action="setCompas" data-args='["3/4"]'>3/4</button>
+            <button type="button" class="chip active" data-compas="4/4" data-action="setCompas" data-args='["4/4"]'>4/4</button>
+            <button type="button" class="chip" data-compas="5/4" data-action="setCompas" data-args='["5/4"]'>5/4</button>
+            <button type="button" class="chip" data-compas="6/4" data-action="setCompas" data-args='["6/4"]'>6/4</button>
+            <button type="button" class="chip" data-compas="7/4" data-action="setCompas" data-args='["7/4"]'>7/4</button>
+            <button type="button" class="chip" data-compas="1/8" data-action="setCompas" data-args='["1/8"]'>1/8</button>
+            <button type="button" class="chip" data-compas="2/8" data-action="setCompas" data-args='["2/8"]'>2/8</button>
+            <button type="button" class="chip" data-compas="3/8" data-action="setCompas" data-args='["3/8"]'>3/8</button>
+            <button type="button" class="chip" data-compas="4/8" data-action="setCompas" data-args='["4/8"]'>4/8</button>
+            <button type="button" class="chip" data-compas="5/8" data-action="setCompas" data-args='["5/8"]'>5/8</button>
+            <button type="button" class="chip" data-compas="6/8" data-action="setCompas" data-args='["6/8"]'>6/8</button>
+            <button type="button" class="chip" data-compas="7/8" data-action="setCompas" data-args='["7/8"]'>7/8</button>
           </div>
         </div>
 
         <div class="metro-sub-row">
           <span class="menu-row-label">Subdivisión</span>
           <div class="chip-row" id="subdivisionSelector">
-            <button type="button" class="chip active" data-subdivision="1" onclick="setSubdivision(1)" title="Negra (1 golpe por tiempo)">♩</button>
-            <button type="button" class="chip" data-subdivision="2" onclick="setSubdivision(2)" title="Corcheas (2 subdivisiones por tiempo)">♪</button>
-            <button type="button" class="chip" data-subdivision="3" onclick="setSubdivision(3)" title="Tresillo (3 subdivisiones por tiempo)">♪³</button>
-            <button type="button" class="chip" data-subdivision="4" onclick="setSubdivision(4)" title="Semicorcheas (4 subdivisiones por tiempo)">♬</button>
+            <button type="button" class="chip active" data-subdivision="1" data-action="setSubdivision" data-args="[1]" title="Negra (1 golpe por tiempo)">♩</button>
+            <button type="button" class="chip" data-subdivision="2" data-action="setSubdivision" data-args="[2]" title="Corcheas (2 subdivisiones por tiempo)">♪</button>
+            <button type="button" class="chip" data-subdivision="3" data-action="setSubdivision" data-args="[3]" title="Tresillo (3 subdivisiones por tiempo)">♪³</button>
+            <button type="button" class="chip" data-subdivision="4" data-action="setSubdivision" data-args="[4]" title="Semicorcheas (4 subdivisiones por tiempo)">♬</button>
           </div>
         </div>
 
@@ -108,8 +108,8 @@
         </div>
 
         <div class="metro-controls">
-          <button id="metroPlayBtn" type="button" onclick="toggleMetronomo()">▶️ Play</button>
-          <button id="metroSoundBtn" type="button" onclick="toggleMetroSound()">🔊 Sonido</button>
+          <button id="metroPlayBtn" type="button" data-action="toggleMetronomo">▶️ Play</button>
+          <button id="metroSoundBtn" type="button" data-action="toggleMetroSound">🔊 Sonido</button>
         </div>
       </div>
 
@@ -122,11 +122,11 @@
         <div class="octave-row">
           <span class="menu-row-label">Octava</span>
           <div class="stepper">
-            <button type="button" onclick="changeRefOctave(-1)">−</button>
+            <button type="button" data-action="changeRefOctave" data-args="[-1]">−</button>
             <span id="refOctaveValue">4</span>
-            <button type="button" onclick="changeRefOctave(1)">+</button>
+            <button type="button" data-action="changeRefOctave" data-args="[1]">+</button>
           </div>
-          <button type="button" class="play-btn" onclick="playReferenceTone()">🔊 Play</button>
+          <button type="button" class="play-btn" data-action="playReferenceTone">🔊 Play</button>
         </div>
       </div>
 
@@ -137,19 +137,19 @@
         <div class="note-grid" id="chordRootGrid"></div>
 
         <div class="chip-row chord-quality-row" id="chordQualityChips">
-          <button type="button" class="chip active" data-quality="mayor" onclick="selectChordQuality('mayor', this)">Mayor</button>
-          <button type="button" class="chip" data-quality="menor" onclick="selectChordQuality('menor', this)">menor</button>
-          <button type="button" class="chip" data-quality="dom7" onclick="selectChordQuality('dom7', this)">7</button>
-          <button type="button" class="chip" data-quality="maj7" onclick="selectChordQuality('maj7', this)">Maj7</button>
-          <button type="button" class="chip" data-quality="min7" onclick="selectChordQuality('min7', this)">min7</button>
-          <button type="button" class="chip" data-quality="sus2" onclick="selectChordQuality('sus2', this)">sus2</button>
-          <button type="button" class="chip" data-quality="sus4" onclick="selectChordQuality('sus4', this)">sus4</button>
-          <button type="button" class="chip" data-quality="dim" onclick="selectChordQuality('dim', this)">dim</button>
-          <button type="button" class="chip" data-quality="dim7" onclick="selectChordQuality('dim7', this)">dim7</button>
-          <button type="button" class="chip" data-quality="m7b5" onclick="selectChordQuality('m7b5', this)">m7b5</button>
-          <button type="button" class="chip" data-quality="aug" onclick="selectChordQuality('aug', this)">aug</button>
-          <button type="button" class="chip" data-quality="sexta" onclick="selectChordQuality('sexta', this)">6</button>
-          <button type="button" class="chip" data-quality="msexta" onclick="selectChordQuality('msexta', this)">m6</button>
+          <button type="button" class="chip active" data-quality="mayor" data-action="selectChordQuality" data-args='["mayor","@el"]'>Mayor</button>
+          <button type="button" class="chip" data-quality="menor" data-action="selectChordQuality" data-args='["menor","@el"]'>menor</button>
+          <button type="button" class="chip" data-quality="dom7" data-action="selectChordQuality" data-args='["dom7","@el"]'>7</button>
+          <button type="button" class="chip" data-quality="maj7" data-action="selectChordQuality" data-args='["maj7","@el"]'>Maj7</button>
+          <button type="button" class="chip" data-quality="min7" data-action="selectChordQuality" data-args='["min7","@el"]'>min7</button>
+          <button type="button" class="chip" data-quality="sus2" data-action="selectChordQuality" data-args='["sus2","@el"]'>sus2</button>
+          <button type="button" class="chip" data-quality="sus4" data-action="selectChordQuality" data-args='["sus4","@el"]'>sus4</button>
+          <button type="button" class="chip" data-quality="dim" data-action="selectChordQuality" data-args='["dim","@el"]'>dim</button>
+          <button type="button" class="chip" data-quality="dim7" data-action="selectChordQuality" data-args='["dim7","@el"]'>dim7</button>
+          <button type="button" class="chip" data-quality="m7b5" data-action="selectChordQuality" data-args='["m7b5","@el"]'>m7b5</button>
+          <button type="button" class="chip" data-quality="aug" data-action="selectChordQuality" data-args='["aug","@el"]'>aug</button>
+          <button type="button" class="chip" data-quality="sexta" data-action="selectChordQuality" data-args='["sexta","@el"]'>6</button>
+          <button type="button" class="chip" data-quality="msexta" data-action="selectChordQuality" data-args='["msexta","@el"]'>m6</button>
         </div>
 
         <div id="chordNotesLabel" class="chord-notes-display"></div>
@@ -157,11 +157,11 @@
         <div class="octave-row">
           <span class="menu-row-label">Octava</span>
           <div class="stepper">
-            <button type="button" onclick="changeChordOctave(-1)">−</button>
+            <button type="button" data-action="changeChordOctave" data-args="[-1]">−</button>
             <span id="chordOctaveValue">4</span>
-            <button type="button" onclick="changeChordOctave(1)">+</button>
+            <button type="button" data-action="changeChordOctave" data-args="[1]">+</button>
           </div>
-          <button type="button" class="play-btn" onclick="playChord()">🔊 Play</button>
+          <button type="button" class="play-btn" data-action="playChord">🔊 Play</button>
         </div>
       </div>
 
@@ -172,28 +172,28 @@
         <div class="note-grid" id="pentaRootGrid"></div>
 
         <div class="chip-row chord-quality-row" id="pentaTypeChips">
-          <button type="button" class="chip active" data-type="mayor" onclick="selectPentaType('mayor', this)">Mayor</button>
-          <button type="button" class="chip" data-type="menor" onclick="selectPentaType('menor', this)">menor</button>
+          <button type="button" class="chip active" data-type="mayor" data-action="selectPentaType" data-args='["mayor","@el"]'>Mayor</button>
+          <button type="button" class="chip" data-type="menor" data-action="selectPentaType" data-args='["menor","@el"]'>menor</button>
         </div>
 
         <div class="scale-full-row">
-          <span id="pentaNotesLabel" class="chord-notes-display"></span>
-          <button type="button" class="scale-mini-play" onclick="playPentaScale()" title="Tocar pentatónica">▶</button>
+          <span id="scaleFullLabel" class="chord-notes-display"></span>
+          <button type="button" class="scale-mini-play" data-action="playFullScale" title="Tocar escala completa">▶</button>
         </div>
 
         <div class="scale-full-row">
-          <span id="scaleFullLabel" class="chord-notes-display scale-full-label"></span>
-          <button type="button" class="scale-mini-play" onclick="playFullScale()" title="Tocar escala completa">▶</button>
+          <span id="pentaNotesLabel" class="chord-notes-display scale-full-label"></span>
+          <button type="button" class="scale-mini-play" data-action="playPentaScale" title="Tocar pentatónica">▶</button>
         </div>
       </div>
 
-      <!-- ===================== 6. CÍRCULO DE QUINTAS ===================== -->
+      <!-- ===================== 6. CÍRCULO DE CUARTAS Y QUINTAS ===================== -->
       <div class="menu-group" id="sec-quintas">
-        <p class="contact-label">🔵 Círculo de quintas</p>
+        <p class="contact-label">🔵 Círculo de cuartas y quintas</p>
 
         <div class="fifths-legend">
-          <span>5tas ↻</span>
-          <span>↺ 4tas</span>
+          <span>↺ 4tas<br><small>+1♭</small></span>
+          <span>5tas ↻<br><small>+1♯</small></span>
         </div>
 
         <div class="fifths-circle" id="fifthsCircle"></div>

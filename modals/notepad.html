@@ -5,7 +5,7 @@
   <div class="np-content">
 
     <div class="np-head">
-      <button type="button" class="np-close" onclick="cerrarNotepad()" aria-label="Cerrar">✕</button>
+      <button type="button" class="np-close" data-action="cerrarNotepad" aria-label="Cerrar">✕</button>
       <div class="np-badge">🎙️</div>
       <h2 id="npTitle">Bloc musical</h2>
       <div class="np-meta">Grabá una idea y no te la olvides más</div>
@@ -15,11 +15,11 @@
     <div id="npListView">
       <div class="np-new-row">
         <input type="text" id="npNewName" placeholder="Nombre de la nueva canción..." />
-        <button type="button" class="np-btn-primary" onclick="crearGrabacion()">+ Nueva</button>
+        <button type="button" class="np-btn-primary" data-action="crearGrabacion">+ Nueva</button>
       </div>
 
       <div class="np-io-row">
-        <button type="button" onclick="exportarGrabaciones()">⬆️ Exportar</button>
+        <button type="button" data-action="exportarGrabaciones">⬆️ Exportar</button>
         <label class="np-import-btn">
           ⬇️ Importar
           <input type="file" accept=".json,application/json" onchange="importarGrabaciones(event)" hidden>
@@ -36,7 +36,7 @@
     <!-- ===================== DETALLE / GRABADOR ===================== -->
     <div class="np-body hidden" id="npDetailView">
       <div class="np-detail-head">
-        <button type="button" class="np-back" onclick="volverALista()">← Volver</button>
+        <button type="button" class="np-back" data-action="volverALista">← Volver</button>
         <input type="text" id="npDetailName" class="np-name-input" onblur="npGuardarCampos()" />
       </div>
 
@@ -48,7 +48,7 @@
       </div>
 
       <div class="np-playback-row">
-        <button type="button" id="npPlayBtn" class="np-play-btn" onclick="togglePlayback()">▶️</button>
+        <button type="button" id="npPlayBtn" class="np-play-btn" data-action="togglePlayback">▶️</button>
         <span id="npDuration">0:00</span>
       </div>
 
@@ -59,14 +59,14 @@
       </div>
 
       <div class="np-rec-row">
-        <button type="button" id="npRecBtn" class="np-rec-btn" onclick="toggleGrabacion()" aria-label="Grabar"></button>
+        <button type="button" id="npRecBtn" class="np-rec-btn" data-action="toggleGrabacion" aria-label="Grabar"></button>
         <span id="npRecStatus" class="np-rec-status">Tocá para grabar</span>
         <p class="np-mic-note">🎤 El micrófono se usa solo para grabar esta canción. Queda guardado local, en tu celular — no se sube a ningún lado. Vos decidís qué grabar acá.</p>
       </div>
 
       <div class="np-detail-actions">
-        <button type="button" onclick="descargarGrabacion()">⬇️ Descargar</button>
-        <button type="button" class="np-danger" onclick="eliminarGrabacionActual()">🗑️ Eliminar</button>
+        <button type="button" data-action="descargarGrabacion">⬇️ Descargar</button>
+        <button type="button" class="np-danger" data-action="eliminarGrabacionActual">🗑️ Eliminar</button>
       </div>
     </div>
 

@@ -2,7 +2,7 @@
   <div class="modal-content about-modal">
 
     <div class="about-head">
-      <button type="button" class="about-close" onclick="cerrarShareModal()" aria-label="Cerrar">✕</button>
+      <button type="button" class="about-close" data-action="cerrarShareModal" aria-label="Cerrar">✕</button>
       <div class="about-badge">🔗</div>
       <h2 id="shareTitle">Compartir Cancionero MV</h2>
       <div class="about-meta">Invitá a otros a sumarse</div>
@@ -16,7 +16,7 @@
       </div>
 
       <!-- COMPARTIR NATIVO (AirDrop, Mensajes, Mail, Nearby Share, etc.) -->
-      <button type="button" class="share-native-btn" onclick="shareNative()">
+      <button type="button" class="share-native-btn" data-action="shareNative">
         📤 Compartir
       </button>
       <p class="share-native-hint" id="shareNativeHint">Incluye AirDrop, Mensajes, Mail y todo lo que tengas instalado</p>
@@ -31,7 +31,7 @@
             value="http://bit.ly/cancionero_mv"
             readonly>
 
-          <button onclick="copyShareLink()">📋 Copiar</button>
+          <button data-action="copyShareLink">📋 Copiar</button>
         </div>
 
         <p class="share-card-subtitle">O directo por:</p>

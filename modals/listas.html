@@ -2,7 +2,7 @@
   <div class="modal-content about-modal">
 
     <div class="about-head">
-      <button type="button" class="about-close" onclick="cerrarMisListas()" aria-label="Cerrar">✕</button>
+      <button type="button" class="about-close" data-action="cerrarMisListas" aria-label="Cerrar">✕</button>
       <div class="about-badge">⭐</div>
       <h2 id="listasTitle">Mis Listas</h2>
       <div class="about-meta" id="listasContextLabel">Armá tus propios repertorios</div>
@@ -10,11 +10,11 @@
 
     <div class="nueva-lista-row">
       <input id="nuevaListaInput" type="text" placeholder="Nombre de la lista (ej. Retiro enero)" onkeydown="if(event.key==='Enter') crearListaDesdeInput();">
-      <button type="button" class="play-btn" onclick="crearListaDesdeInput()">+ Crear</button>
+      <button type="button" class="play-btn" data-action="crearListaDesdeInput">+ Crear</button>
     </div>
 
     <div class="listas-io-row">
-      <button type="button" class="chip" onclick="exportarMisListas()">⬆️ Exportar</button>
+      <button type="button" class="chip" data-action="exportarMisListas">⬆️ Exportar</button>
       <label class="chip listas-import-btn">
         ⬇️ Importar
         <input type="file" accept=".json,application/json" onchange="importarMisListas(event)" hidden>

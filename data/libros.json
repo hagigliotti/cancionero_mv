@@ -1,0 +1,39 @@
+[
+  {
+    "id": "cancionero",
+    "archivo": "canciones.json",
+    "nombre": "Cancionero MV",
+    "icono": "🎶"
+  },
+  {
+    "id": "himnario",
+    "archivo": "himnario_ar.json",
+    "nombre": "Himnario Adventista",
+    "icono": "🎵",
+    "numeroHimno": true,
+    "idiomaFijo": true,
+    "coritosPara": "cancionero"
+  },
+  {
+    "id": "campamento",
+    "archivo": "campamento.json",
+    "nombre": "Campamento",
+    "icono": "🏕️"
+  },
+  {
+    "id": "seleccion_argentina",
+    "archivo": "seleccion_argentina.json",
+    "nombre": "Selección Argentina",
+    "icono": "⚽",
+    "oculto": true,
+    "codigo": "29686085"
+  },
+  {
+    "id": "independiente",
+    "archivo": "independiente.json",
+    "nombre": "Rey de Copas",
+    "icono": "😈",
+    "oculto": true,
+    "codigo": "29686085"
+  }
+]
