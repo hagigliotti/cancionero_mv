@@ -8,7 +8,7 @@
 
 // 👉 Subir este número cada vez que cambie la lista de archivos de abajo
 // (o cuando quieras forzar que todos descarten la caché vieja).
-const CACHE_VERSION = "v56";
+const CACHE_VERSION = "v78";
 
 const APP_SHELL_CACHE = `cancionero-shell-${CACHE_VERSION}`;
 const DATA_CACHE = `cancionero-data-${CACHE_VERSION}`;
@@ -16,33 +16,32 @@ const DATA_CACHE = `cancionero-data-${CACHE_VERSION}`;
 const APP_SHELL_FILES = [
   "./",
   "index.html",
-  "style.css?v=57",
-  "notepad.css?v=5",
-  "manifest.webmanifest?v=3",
+  "style.css?v=78",
+  "notepad.css?v=78",
+  "manifest.webmanifest?v=78",
 
-  "modals.js?v=4",
-  "lenguage.js?v=8",
-  "utils.js?v=8",
-  "theme.js?v=7",
-  "afinometro.js?v=20",
-  "app.js?v=29",
-  "songbook.js?v=13",
-  "notepad.js?v=4",
+  "lenguage.js?v=78",
+  "utils.js?v=78",
+  "theme.js?v=78",
+  "afinometro.js?v=78",
+  "app.js?v=78",
+  "songbook.js?v=78",
+  "notepad.js?v=78",
 
-  "modals/info.html?v=9",
-  "modals/revised.html?v=4",
-  "modals/people.html?v=4",
-  "modals/share.html?v=5",
-  "modals/afinometro.html?v=13",
-  "modals/biblioteca.html?v=3",
-  "modals/listas.html?v=2",
-  "modals/notepad.html?v=6",
+  "modals/info.html?v=78",
+  "modals/revised.html?v=78",
+  "modals/people.html?v=78",
+  "modals/share.html?v=78",
+  "modals/afinometro.html?v=78",
+  "modals/biblioteca.html?v=78",
+  "modals/listas.html?v=78",
+  "modals/notepad.html?v=78",
 
-  "imagenes/icons/favicon-16.png?v=3",
-  "imagenes/icons/favicon-32.png?v=3",
-  "imagenes/icons/apple-touch-icon.png?v=3",
-  "imagenes/icons/icon-192.png?v=3",
-  "imagenes/icons/icon-512.png?v=3",
+  "imagenes/icons/favicon-16.png?v=78",
+  "imagenes/icons/favicon-32.png?v=78",
+  "imagenes/icons/apple-touch-icon.png?v=78",
+  "imagenes/icons/icon-192.png?v=78",
+  "imagenes/icons/icon-512.png?v=78",
 
   "imagenes/Cancionero_blue.png",
   "imagenes/Cancionero_white.png",
@@ -52,11 +51,13 @@ const APP_SHELL_FILES = [
   "fonts/great-vibes/GreatVibes-Regular.ttf"
 ];
 
-// datos que se guardan con estrategia "red primero" (se actualizan solos cuando hay internet)
-const DATA_FILES = [
-  "data/canciones.json",
-  "data/himnario_ar.json",
-  "data/campamento.json",
+// datos que se guardan con estrategia "red primero" (se actualizan solos cuando hay internet).
+// libros.json le dice a la app qué libros existen (id, archivo, nombre, etc.)
+// — agregar o sacar un libro es soltar el .json en /data y sumar/sacar una
+// línea ahí, sin tocar este archivo. Acá solo lo leemos para precachear
+// también los .json de cada libro que liste.
+const EXTRA_DATA_FILES = [
+  "data/libros.json",
   "data/biblioteca.json"
 ];
 
@@ -75,11 +76,24 @@ self.addEventListener("install", (event) => {
       // poder abrir cualquier canción sin internet apenas se instala la app.
       // Las imágenes de partituras, audios y PDFs NO se cachean acá — esas
       // siguen viajando por internet solo cuando hacen falta.
-      caches.open(DATA_CACHE).then((cache) =>
-        Promise.allSettled(
-          DATA_FILES.map((file) => cache.add(file))
-        )
-      )
+      caches.open(DATA_CACHE).then(async (cache) => {
+        const results = await Promise.allSettled(
+          EXTRA_DATA_FILES.map((file) => cache.add(file))
+        );
+
+        try {
+          const res = await fetch("data/libros.json");
+          const libros = await res.json();
+          const libroResults = await Promise.allSettled(
+            libros.map((libro) => cache.add(`data/${libro.archivo}`))
+          );
+          return results.concat(libroResults);
+        } catch (err) {
+          // primera instalación sin conexión: no hay libros.json todavía,
+          // no pasa nada, se cachean solos la próxima vez que haya internet
+          return results;
+        }
+      })
     ])
   );
   self.skipWaiting();
@@ -113,7 +127,9 @@ self.addEventListener("fetch", (event) => {
   // hacen falta para leer/tocar una canción, mejor que viajen por internet
   if (/\.(mp3|wav|pdf)$/i.test(url.pathname)) return;
 
-  const isData = DATA_FILES.some((f) => url.pathname.endsWith(f));
+  // cualquier .json bajo /data/ (libros.json, cada libro, biblioteca.json) —
+  // así un libro nuevo queda con la misma estrategia sin tocar este archivo
+  const isData = /\/data\/.*\.json$/i.test(url.pathname);
 
   if (isData) {
     event.respondWith(

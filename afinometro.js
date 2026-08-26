@@ -95,7 +95,7 @@ function renderAccentBeatSelector() {
 
   container.innerHTML = Array.from({ length: beats }, (_, i) => i + 1).map(n => `
     <button type="button" class="chip ${n === accentBeat ? "active" : ""}"
-            data-accent-beat="${n}" onclick="setAccentBeat(${n})">${n}</button>
+            data-accent-beat="${n}" ${dataAction("setAccentBeat", [n])}>${n}</button>
   `).join("");
 }
 
@@ -675,7 +675,7 @@ function renderRefNoteGrid() {
   if (!cont) return;
 
   cont.innerHTML = NOTE_STRINGS.map(n => `
-    <button type="button" class="note-btn${n === selectedRefNote ? " active" : ""}" data-note="${n}" onclick="selectRefNote('${n}', this)">
+    <button type="button" class="note-btn${n === selectedRefNote ? " active" : ""}" data-note="${n}" ${dataAction("selectRefNote", [n, "@el"])}>
       ${n}<small>${NOTE_LABELS[n]}</small>
     </button>
   `).join("");
@@ -720,7 +720,7 @@ function renderTunerTargets(mode) {
 
   if (mode === "general") {
     cont.innerHTML = NOTE_STRINGS.map(n => `
-      <button type="button" data-note="${n}" onclick="selectTargetNote('${n}', 4, this)">
+      <button type="button" data-note="${n}" ${dataAction("selectTargetNote", [n, 4, "@el"])}>
         ${n}<small>${NOTE_LABELS[n]}</small>
       </button>
     `).join("");
@@ -730,7 +730,7 @@ function renderTunerTargets(mode) {
   const strings = INSTRUMENT_PRESETS[mode] || [];
 
   cont.innerHTML = strings.map(s => `
-    <button type="button" data-note="${s.note}" onclick="selectTargetNote('${s.note}', ${s.octave}, this)">
+    <button type="button" data-note="${s.note}" ${dataAction("selectTargetNote", [s.note, s.octave, "@el"])}>
       ${s.label}<small>${s.note}${s.octave}</small>
     </button>
   `).join("");
@@ -780,7 +780,7 @@ function renderChordRootGrid() {
   if (!cont) return;
 
   cont.innerHTML = NOTE_STRINGS.map(n => `
-    <button type="button" class="note-btn${n === selectedChordRoot ? " active" : ""}" data-note="${n}" onclick="selectChordRoot('${n}', this)">
+    <button type="button" class="note-btn${n === selectedChordRoot ? " active" : ""}" data-note="${n}" ${dataAction("selectChordRoot", [n, "@el"])}>
       ${n}<small>${NOTE_LABELS[n]}</small>
     </button>
   `).join("");
@@ -1042,7 +1042,7 @@ function renderFifthsCircle() {
     const y = 50 + 42 * Math.sin(angle);
 
     return `
-      <button type="button" class="fifths-node" style="left:${x}%; top:${y}%;" onclick="selectFifthsKey(${i}, this)">
+      <button type="button" class="fifths-node" style="left:${x}%; top:${y}%;" ${dataAction("selectFifthsKey", [i, "@el"])}>
         ${k.note}
       </button>
     `;
@@ -1054,7 +1054,7 @@ function renderFifthsCircle() {
     const y = 50 + 26 * Math.sin(angle);
 
     return `
-      <button type="button" class="fifths-node minor" style="left:${x}%; top:${y}%;" onclick="selectFifthsMinor(${i}, this)">
+      <button type="button" class="fifths-node minor" style="left:${x}%; top:${y}%;" ${dataAction("selectFifthsMinor", [i, "@el"])}>
         ${k.minorNote}m
       </button>
     `;
@@ -1117,7 +1117,7 @@ function updateFifthsDiatonic(root, isMinor) {
   const chords = getDiatonicChords(root, isMinor);
 
   cont.innerHTML = chords.map(c => `
-    <button type="button" class="chip diatonic-chip" onclick="playChordSymbol('${normalizeNoteName(c.note)}', '${c.quality}')">${c.label}</button>
+    <button type="button" class="chip diatonic-chip" ${dataAction("playChordSymbol", [normalizeNoteName(c.note), c.quality])}>${c.label}</button>
   `).join("");
 }
 
@@ -1136,7 +1136,7 @@ function renderPentaRootGrid() {
   if (!cont) return;
 
   cont.innerHTML = NOTE_STRINGS.map(n => `
-    <button type="button" class="note-btn${n === selectedPentaRoot ? " active" : ""}" data-note="${n}" onclick="selectPentaRoot('${n}', this)">
+    <button type="button" class="note-btn${n === selectedPentaRoot ? " active" : ""}" data-note="${n}" ${dataAction("selectPentaRoot", [n, "@el"])}>
       ${n}<small>${NOTE_LABELS[n]}</small>
     </button>
   `).join("");
@@ -1345,9 +1345,17 @@ function scrollToMetroSection(id) {
 }
 
 function setActiveMetroTab(id) {
-  document.querySelectorAll(".metro-tab").forEach(t =>
-    t.classList.toggle("active", t.dataset.target === id)
-  );
+  let activeTab = null;
+
+  document.querySelectorAll(".metro-tab").forEach(t => {
+    const isActive = t.dataset.target === id;
+    t.classList.toggle("active", isActive);
+    if (isActive) activeTab = t;
+  });
+
+  // la nav de pestañas scrollea horizontal: si la sección activa cambia
+  // scrolleando a mano, que la pestaña correspondiente quede siempre visible
+  activeTab?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
 }
 
 // mantiene la pestaña activa sincronizada mientras se scrollea a mano
@@ -1369,6 +1377,49 @@ function initMetroTabsNav() {
   });
 
   sections.forEach(sec => metroTabsObserver.observe(sec));
+
+  initMetroTabsDrag();
+}
+
+// ===== ARRASTRAR CON EL MOUSE PARA MOVER LA NAV DE PESTAÑAS (click + drag) =====
+// mismo patrón que la tira de letras del cancionero; el modal se carga una
+// sola vez (queda en el DOM entre aperturas), así que el guard evita
+// engancharlo de nuevo cada vez que se reabre
+function initMetroTabsDrag() {
+  const el = document.querySelector(".metro-tabs");
+  if (!el || el.dataset.dragBound) return;
+  el.dataset.dragBound = "1";
+
+  let isDown = false;
+  let moved = false;
+  let startX = 0;
+  let scrollStart = 0;
+
+  el.addEventListener("mousedown", e => {
+    isDown = true;
+    moved = false;
+    startX = e.pageX;
+    scrollStart = el.scrollLeft;
+  });
+
+  window.addEventListener("mousemove", e => {
+    if (!isDown) return;
+
+    const dx = e.pageX - startX;
+    if (Math.abs(dx) > 4) moved = true;
+
+    el.scrollLeft = scrollStart - dx;
+  });
+
+  window.addEventListener("mouseup", () => { isDown = false; });
+
+  // si hubo arrastre, cancelar el click para no disparar scrollToMetroSection() sin querer
+  el.addEventListener("click", e => {
+    if (moved) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
+  }, true);
 }
 
 
@@ -1396,7 +1447,7 @@ function abrirAfinadorDesdeCancion(tonalidad, bpm) {
   initAfinadorUI();
 }
 
-function abrirAfinadorDesdeElemento(el, tipo) {
+function abrirAfinadorDesdeElemento(tipo, el) {
 
   const tonalidad = el.dataset.tonalidad;
   const bpm = el.dataset.bpm;

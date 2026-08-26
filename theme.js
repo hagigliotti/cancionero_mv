@@ -65,7 +65,15 @@ function showToast(msg) {
 
   document.body.appendChild(toast);
 
-  setTimeout(() => toast.remove(), 2500);
+  // fuerza el reflow antes de agregar "show": si se agrega en el mismo
+  // frame que se crea el elemento, el navegador puede saltearse la
+  // transición de entrada y aparecer sin animar
+  requestAnimationFrame(() => toast.classList.add("show"));
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+    toast.addEventListener("transitionend", () => toast.remove(), { once: true });
+  }, 2800);
 }
 
 

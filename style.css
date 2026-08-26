@@ -305,6 +305,14 @@ body.menu-open {
   overflow: hidden;
 }
 
+/* mientras hay un modal abierto (info, afinador, biblioteca, etc.), la
+   página de fondo no debe poder scrollear: si no, un toque cerca del borde
+   del modal a veces termina moviendo el fondo y el scroll interno del
+   modal queda en un estado raro (no sube ni baja más) */
+body.modal-open {
+  overflow: hidden;
+}
+
 .dropdown-menu {
   position: fixed;
   top: 0;
@@ -849,7 +857,11 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
   padding: 0 16px;
   font-size: 16px;
   box-sizing: border-box;
-  overflow-x: hidden;
+  /* "clip" y no "hidden": con hidden, el navegador promueve overflow-y a
+     "auto" (regla del spec cuando un eje no es "visible"), y eso convierte
+     a #contenido en su propio contenedor de scroll — rompiendo el
+     position:sticky del título a medida que avanza la canción */
+  overflow-x: clip;
 }
 
 .meta {
@@ -992,10 +1004,98 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
   padding: 12px 14px;
   margin-bottom: 18px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  
+
   font-size: 14px;
   line-height: 1.5;
   color: var(--gray-500);
+}
+
+/* ============================================================
+   TELEPROMPTER (scroll automático de la letra)
+   ============================================================ */
+.teleprompter-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  /* vive dentro de .song-title-row (que es la sticky), siempre pegado a la
+     derecha, compartiendo renglón con el título y la estrella */
+  flex: 0 0 auto;
+  margin-left: auto;
+  padding: 4px 8px;
+  border-radius: var(--radius-xl);
+  background: rgba(56, 189, 248, 0.10);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  transition: var(--trans);
+}
+
+/* verde mientras está reproduciendo (el rojo se reserva para "grabando",
+   que acá no aplica) */
+.teleprompter-bar.active {
+  background: rgba(34, 197, 94, 0.12);
+  border-color: rgba(34, 197, 94, 0.4);
+}
+
+.teleprompter-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gray-500);
+  white-space: nowrap;
+}
+
+.teleprompter-play-btn {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--sky);
+  color: #06202e;
+  transition: var(--trans);
+}
+
+.teleprompter-play-btn:hover { background: var(--sky-dark); }
+
+.teleprompter-play-btn.active {
+  background: var(--green);
+  color: #fff;
+}
+
+.teleprompter-speed {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gray-500);
+}
+
+.teleprompter-speed button {
+  /* chico en el conjunto, pero sigue siendo un tap cómodo para quien
+     está tocando y necesita ajustar la velocidad rápido */
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  background: rgba(255,255,255,0.10);
+  color: inherit;
+  transition: var(--trans);
+}
+
+.dark-mode .teleprompter-speed button { background: var(--gray-100); }
+
+.teleprompter-speed button:hover { background: var(--sky); color: #06202e; }
+
+#teleprompterSpeedLabel { min-width: 26px; text-align: center; }
+
+body.projector .teleprompter-bar {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.25);
 }
 
 .song-meta a {
@@ -1370,6 +1470,8 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
   max-height: 82vh;
   max-height: 82dvh; /* dvh = alto real visible, sin contar la barra del navegador que aparece/desaparece en Android/iPhone */
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
   box-shadow: var(--shadow-lg);
   color: var(--navy);
   animation: modalIn 0.22s ease;
@@ -1392,6 +1494,38 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
 .close:hover { opacity: 1; color: var(--red); }
 
 body.dark .modal-content {
+  background: #1e293b;
+  color: #fff;
+}
+
+/* ===== TOAST (mensaje flotante centrado, se abre y se cierra solo) ===== */
+.toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 3000;
+  max-width: 85vw;
+  padding: 16px 22px;
+  border-radius: var(--radius-md);
+  background: #fff;
+  color: var(--navy);
+  box-shadow: var(--shadow-lg);
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.4;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.92);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+body.dark .toast {
   background: #1e293b;
   color: #fff;
 }
@@ -1567,6 +1701,8 @@ body.dark .modal-content {
   flex: 1;
   min-height: 0;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
   padding: 4px 14px 10px;
   border-top: 1px solid rgba(255,255,255,0.08);
 }
@@ -1975,16 +2111,50 @@ details[open] .sec-chevron { transform: rotate(90deg); }
 .lista-remove-btn:hover { background: var(--red); color: #fff; }
 
 /* botón ⭐ junto al título de la canción, para agregarla a una lista */
+/* grande y normal mientras no scrolleaste; en cuanto bajás un poco
+   (body.scrolled, mismo umbral que ya achica la barra de letras) se achica
+   y pasa a un solo renglón con el teleprompter */
 .song-title-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
+  position: sticky;
+  /* mismo enganche que ya usa el riel de letras: justo debajo de la barra
+     de letras (que también es sticky), para no superponerse con ella */
+  top: calc(var(--topbar-h, 56px) + var(--alfabeto-row-h, 48px));
+  z-index: 60;
+  padding: 6px 0;
+}
+
+.light-mode .song-title-row { background: var(--bg-night); background-attachment: fixed; }
+.dark-mode  .song-title-row { background: var(--bg-day);   background-attachment: fixed; }
+body.projector .song-title-row { background: #000; }
+
+.song-title-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* pegada arriba: título chico y truncado (con puntos suspensivos) en vez
+   de partir el renglón en dos líneas */
+body.scrolled .song-title-row { flex-wrap: nowrap; }
+
+body.scrolled .song-title-text {
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .fav-add-btn {
   border: none;
   background: none;
-  font-size: 0.65em;
+  font-size: 20px;
   cursor: pointer;
   opacity: 0.5;
   transition: var(--trans);
@@ -1992,6 +2162,8 @@ details[open] .sec-chevron { transform: rotate(90deg); }
 }
 
 .fav-add-btn:hover { opacity: 1; transform: scale(1.15); }
+
+body.scrolled .fav-add-btn { font-size: 15px; }
 
 /* Modal revisado / tags / autor-compositor: misma ficha ".about-modal" que Biblioteca */
 .revisado-toggle-wrap {
@@ -2154,6 +2326,11 @@ details[open] .sec-chevron { transform: rotate(90deg); }
 
 .metro-tabs::-webkit-scrollbar { display: none; }
 
+@media (hover: hover) and (pointer: fine) {
+  .metro-tabs { cursor: grab; }
+  .metro-tabs:active { cursor: grabbing; }
+}
+
 /* deja lugar para la nav fija al saltar a una sección con scrollIntoView() */
 #metroModal .menu-group[id] { scroll-margin-top: 54px; }
 
@@ -2256,12 +2433,21 @@ details[open] .sec-chevron { transform: rotate(90deg); }
 .fifths-legend {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   max-width: 220px;
   margin: 0 auto;
   font-size: 10.5px;
   font-weight: 700;
   letter-spacing: 0.03em;
   opacity: 0.5;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.fifths-legend small {
+  display: block;
+  font-size: 9px;
+  font-weight: 600;
 }
 
 .fifths-node {
@@ -2557,13 +2743,34 @@ details[open] .sec-chevron { transform: rotate(90deg); }
 }
 
 .metro-bpm-box input {
+  box-sizing: border-box;
   width: 110px;
+  padding: 2px 8px;
   text-align: center;
   font-size: 38px;
   font-weight: 800;
-  border: none;
-  background: transparent;
+  border: 2px solid transparent;
+  border-radius: var(--radius-lg);
   color: inherit;
+  transition: var(--trans);
+}
+
+.light-mode .metro-bpm-box input {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.20);
+}
+
+.dark-mode .metro-bpm-box input {
+  background: var(--gray-50);
+  border-color: var(--gray-200);
+}
+
+.metro-bpm-box input:hover { border-color: var(--sky); }
+
+.metro-bpm-box input:focus {
+  border-color: var(--sky) !important;
+  outline: none;
+  box-shadow: 0 0 0 4px var(--sky-glow);
 }
 
 .metro-label { text-align: center; margin-top: 2px; opacity: 0.6; font-size: 12.5px; letter-spacing: 1px; }

@@ -1,46 +1,123 @@
 // ===============================================================================================    =====================
 // ===================== DATA ===============================================================
-const DATA_URLS = {
-  cancionero: "data/canciones.json",
-  himnario: "data/himnario_ar.json",
-  campamento: "data/campamento.json"
-};
+// Los libros (cancionero, himnario, campamento, etc.) salen de data/libros.json,
+// NO de código: para agregar o sacar un libro alcanza con soltar/borrar su
+// .json en /data y sumar/sacar su línea en libros.json — no hace falta tocar
+// ningún .js. Ver LIBROS / librosData más abajo.
+let LIBROS = [];        // manifest cargado de data/libros.json
+let librosData = {};    // { [idDeLibro]: [...canciones normalizadas] }
+
+// libros con "oculto": true no aparecen en el menú ni en resultados de
+// búsqueda hasta que se desbloquean con su "codigo" (8 dígitos, tecleado en
+// el buscador — ver tryUnlockLibros). Se recuerda en este dispositivo.
+// OJO: es solo para no mostrarlo en la app, no es seguridad real — el
+// archivo .json del libro sigue siendo un link público como cualquier otro.
+let librosDesbloqueados = JSON.parse(localStorage.getItem("librosDesbloqueados") || "[]");
 
 let libroActual = "cancionero";
-
-let canciones = [];
-let himnos = [];
-let campamento = [];
 
 let biblioteca = [];
 
 let listaVisible = false;
 let letraActiva = null;
 
-let modalMode = { type: "", value: "" };
-
 let tablaturaVisible = true;
+
+// ===================== HELPERS DE LIBROS =====================
+function getLibroDef(id) {
+  return LIBROS.find(l => l.id === id) || LIBROS[0];
+}
+
+function getLibroSongs(id) {
+  return librosData[id] || [];
+}
+
+function isLibroVisible(libro) {
+  return !libro.oculto || librosDesbloqueados.includes(libro.id);
+}
+
+// solo libros visibles (no oculta los que están bloqueados de búsquedas,
+// estadísticas ni del menú)
+function getTodasLasCanciones() {
+  return LIBROS.filter(isLibroVisible).flatMap(l => getLibroSongs(l.id));
+}
+
+function renderMenuLibroOptions() {
+  const select = document.getElementById("menuLibro");
+  if (!select) return;
+
+  select.innerHTML = LIBROS.filter(isLibroVisible).map(l =>
+    `<option value="${l.id}">${l.icono ? l.icono + " " : ""}${l.nombre}</option>`
+  ).join("");
+  select.value = libroActual;
+}
+
+// código de 8 dígitos tecleado en el buscador: funciona como interruptor
+// para el/los libros ocultos que tengan ese código — la primera vez lo
+// desbloquea, escribiéndolo de nuevo lo vuelve a ocultar. Devuelve true si
+// hizo algo (para que search() no siga tratándolo como una búsqueda normal)
+function tryUnlockLibros(codigo) {
+  const match = LIBROS.filter(l => l.oculto && l.codigo === codigo);
+
+  if (!match.length) return false;
+
+  const desbloqueados = [];
+  const ocultados = [];
+
+  match.forEach(l => {
+    const idx = librosDesbloqueados.indexOf(l.id);
+
+    if (idx === -1) {
+      librosDesbloqueados.push(l.id);
+      desbloqueados.push(l.nombre);
+    } else {
+      librosDesbloqueados.splice(idx, 1);
+      ocultados.push(l.nombre);
+
+      // si justo estabas viendo ese libro, volvé a uno visible
+      if (libroActual === l.id) {
+        cambiarLibroActivo(LIBROS.find(isLibroVisible)?.id || LIBROS[0]?.id);
+      }
+    }
+  });
+
+  localStorage.setItem("librosDesbloqueados", JSON.stringify(librosDesbloqueados));
+
+  const buscador = document.getElementById("buscador");
+  if (buscador) buscador.value = "";
+  updateClearSearchBtn();
+  closeList();
+  mostrarMensajeInicio();
+
+  renderMenuLibroOptions();
+  actualizarEstadisticas();
+
+  const mensaje = [
+    desbloqueados.length ? `🔓 Desbloqueaste: ${desbloqueados.join(", ")}` : "",
+    ocultados.length ? `🔒 Ocultaste: ${ocultados.join(", ")}` : ""
+  ].filter(Boolean).join(" — ");
+
+  showToast(mensaje);
+
+  return true;
+}
 
 // ===================== DATA ACTUAL =====================
 function getDataActual() {
+  const propias = getLibroSongs(libroActual);
 
-  // HIMNARIO → solo himnos
-  if (libroActual === "himnario") {
-    return himnos;
-  }
+  // libros que declaran "coritosPara": "<libroActual>" aportan sus
+  // canciones marcadas como corito (ej. el Himnario suma coritos al
+  // Cancionero, sin mezclar el resto de sus himnos)
+  const coritos = LIBROS
+    .filter(l => l.coritosPara === libroActual)
+    .flatMap(l => getLibroSongs(l.id).filter(h =>
+      normalize(h.corito) === "SI" ||
+      h.corito === true ||
+      h.corito === "Si"
+    ));
 
-  if (libroActual === "campamento") {
-    return campamento;
-  }
-
-  // CANCIONERO → // canciones + himnos marcados como corito
-  const coritos = himnos.filter(h =>
-    normalize(h.corito) === "SI" ||
-    h.corito === true ||
-    h.corito === "Si"
-  );
-
-  return [...canciones, ...coritos];
+  return [...propias, ...coritos];
 }
 
 function initTabButton() {
@@ -51,12 +128,7 @@ function initTabButton() {
 }
 
 
-// VALIDACION PARA TRADUCTOR
-function normalizePersonField(field) {
-  return (field || [])
-    .map(t => (t || "").trim())
-    .filter(t => t && t !== "-");
-}
+// VALIDACION PARA TRADUCTOR: normalizePersonField vive en songbook.js
 
 // Iconos en modals
 function getPersonLabel(tipo) {
@@ -86,6 +158,7 @@ function abrirAfinometroModal() {
     return;
   }
 
+  closeMenu();
   modal.style.display = "block";
   initAfinadorUI();
 }
@@ -309,20 +382,26 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=9",
-    "modals/revised.html?v=4",
-    "modals/people.html?v=4",
-    "modals/share.html?v=5",
-    "modals/afinometro.html?v=13",
-    "modals/biblioteca.html?v=3",
-    "modals/listas.html?v=2",
-    "modals/notepad.html?v=6"
+    "modals/info.html?v=78",
+    "modals/revised.html?v=78",
+    "modals/people.html?v=78",
+    "modals/share.html?v=78",
+    "modals/afinometro.html?v=78",
+    "modals/biblioteca.html?v=78",
+    "modals/listas.html?v=78",
+    "modals/notepad.html?v=78"
   ];
 
   for (const path of modales) {
-    const res = await fetch(path);
-    const html = await res.text();
-    document.body.insertAdjacentHTML("beforeend", html);
+    // un modal que falla en cargar (typo, corte de red) no debe frenar a
+    // los demás ni, más importante, al resto de init()
+    try {
+      const res = await fetch(path);
+      const html = await res.text();
+      document.body.insertAdjacentHTML("beforeend", html);
+    } catch (err) {
+      console.warn(`No se pudo cargar el modal "${path}":`, err);
+    }
   }
 }
 
@@ -340,40 +419,49 @@ async function init() {
 
   await cargarModales(); // 👈 AQUI
 
-  const res1 = await fetch(DATA_URLS.cancionero);
-  const res2 = await fetch(DATA_URLS.himnario);
-  const res3 = await fetch(DATA_URLS.campamento);
-
-  const resBiblioteca = await fetch("data/biblioteca.json");
-  biblioteca = await resBiblioteca.json();
-
   const saved = localStorage.getItem("tablatura");
   tablaturaVisible = saved !== "off";
 
   initTabButton();
   applyTablaturaState();
 
-  canciones = (await res1.json()).map(normalizeSong);
-  himnos = (await res2.json()).map(normalizeSong);
-  campamento = (await res3.json()).map(normalizeSong);
+  // si esto falla (sin conexión y sin caché todavía, un corte pasajero),
+  // no debe cortar el resto de init(): sin este try/catch, el buscador, el
+  // idioma y las banderas quedaban totalmente sin funcionar
+  try {
+    const resLibros = await fetch("data/libros.json");
+    LIBROS = await resLibros.json();
+
+    await Promise.all(LIBROS.map(async libro => {
+      const res = await fetch(`data/${libro.archivo}`);
+      librosData[libro.id] = (await res.json()).map(normalizeSong);
+    }));
+
+    const resBiblioteca = await fetch("data/biblioteca.json");
+    biblioteca = await resBiblioteca.json();
+  } catch (err) {
+    console.warn("No se pudieron cargar los datos de canciones:", err);
+    showToast("⚠️ No se pudieron cargar las canciones. Revisá tu conexión.");
+  }
 
   actualizarEstadisticas();
   cargarVersion();
   cargarListasStorage();
 
-  const savedLibro = localStorage.getItem("libro");
-  const savedIdioma = localStorage.getItem("idioma");
-  libroActual = localStorage.getItem("libro") || "cancionero";
+  libroActual = localStorage.getItem("libro") || LIBROS[0]?.id || "cancionero";
+
+  // por si el libro guardado quedó oculto/bloqueado (ej. se borró su código)
+  if (!isLibroVisible(getLibroDef(libroActual) || {})) {
+    libroActual = LIBROS.find(isLibroVisible)?.id || LIBROS[0]?.id || "cancionero";
+  }
+
   idiomaActual = localStorage.getItem("idioma") || "es";
   cargarBanderasStorage();
   setIdioma(idiomaActual);
   updateLangFlag();
   renderBanderaSelect();
 
-  //libroActual = savedLibro || "cancionero";
-  //idiomaActual = savedIdioma || "es";
-
-  document.getElementById("menuLibro").value = libroActual;
+  renderMenuLibroOptions();
   document.getElementById("idioma").value = idiomaActual;
   document.getElementById("menuIdioma").value = idiomaActual;
 
@@ -404,7 +492,7 @@ async function init() {
   });
 
   document.getElementById("idioma").addEventListener("change", e => {
-      if (libroActual === "himnario") return;
+      if (getLibroDef(libroActual)?.idiomaFijo) return;
 
       setIdioma(e.target.value);
       document.getElementById("menuIdioma").value = e.target.value;
@@ -414,39 +502,41 @@ async function init() {
     });
 
   document.getElementById("menuIdioma").addEventListener("change", e => {
-      if (libroActual === "himnario") return;
+      if (getLibroDef(libroActual)?.idiomaFijo) return;
 
       setIdioma(e.target.value);
     });
 
   document.getElementById("menuLibro").addEventListener("change", e => {
-      libroActual = e.target.value;
-      localStorage.setItem("libro", libroActual);
-
-      closeMenu();
-
-      letraActiva = null;
-      listaVisible = false;
-
-      document.getElementById("contenido").innerHTML = "";
-      document.getElementById("indice").innerHTML = "";
-
-      const idiomaSelect = document.getElementById("idioma");
-
-      if (libroActual === "himnario") {
-        idiomaSelect.disabled = false;
-      } else {
-        idiomaSelect.disabled = false;
-      }
-
-      // IMPORTANTE: refrescar UI
-      renderAlphabet();
-      updateAppTitle();
-      renderList(null);
-
-    initTabButton();
-    applyTablaturaState();
+    cambiarLibroActivo(e.target.value);
+    closeMenu();
   });
+}
+
+// cambia el libro activo y refresca toda la UI que depende de él — usado
+// tanto al elegirlo del menú como cuando un libro se vuelve a ocultar
+// (tryUnlockLibros) mientras se lo estaba viendo
+function cambiarLibroActivo(id) {
+  stopTeleprompter();
+
+  libroActual = id;
+  localStorage.setItem("libro", libroActual);
+
+  letraActiva = null;
+  listaVisible = false;
+
+  document.getElementById("contenido").innerHTML = "";
+  document.getElementById("indice").innerHTML = "";
+
+  document.getElementById("idioma").disabled = false;
+
+  renderMenuLibroOptions();
+  renderAlphabet();
+  updateAppTitle();
+  renderList(null);
+
+  initTabButton();
+  applyTablaturaState();
 }
 
 init();
@@ -456,6 +546,8 @@ init();
 // ===================== ALFABETO ===========================================================
 // ===================== BOTON LIMPIAR ======================
 function clearAll() {
+  stopTeleprompter();
+
   // limpiar buscador
   const buscador = document.getElementById("buscador");
   if (buscador) buscador.value = "";
@@ -490,39 +582,22 @@ function clearAll() {
 
 // ===================== CAMBIAR EL NOMBRE DE LA PAGINA Y TITULO ======================
 function updateAppTitle() {
-  let titleText = "";
-
-  switch (libroActual) {
-    case "himnario":
-      titleText = "🎵 Himnario Adventista";
-      break;
-
-    case "campamento":
-      titleText = "🏕️ Campamento";
-      break;
-
-    default:
-      titleText = "🎶 Cancionero MV";
-      break;
-  }
+  const libro = getLibroDef(libroActual);
 
   // SOLO título navegador
-  document.title = titleText;
+  document.title = libro ? `${libro.icono ? libro.icono + " " : ""}${libro.nombre}` : "🎶 Cancionero MV";
 }
 
-// ===================== DETECCION AUTOMATICA DE LIBRO (CANCIONERO O HIMANRIO) ======================
+// ===================== DETECCION AUTOMATICA DE LIBRO =====================
 
 function detectLibroBySong(song) {
-  if (himnos.some(h => h.id === song.id)) return "himnario";
-  if (campamento.some(c => c.id === song.id)) return "campamento";
-  return "cancionero";
+  for (const libro of LIBROS) {
+    if (getLibroSongs(libro.id).some(s => s.id === song.id)) return libro.id;
+  }
+  return LIBROS[0]?.id || "cancionero";
 }
 
-// ===================== MOBILE =====================
-function isMobileOrTablet() {
-  return /Mobi|Android|iPhone|iPad|iPod|Tablet/i.test(navigator.userAgent);
-}
-
+// ===================== MOBILE ===================== (isMobileOrTablet vive en theme.js)
 function handleMenuVisibility() {
   if (isMobileOrTablet()) {
     document.getElementById("indice").classList.add("hidden");
@@ -544,7 +619,6 @@ window.addEventListener("click", function (e) {
   const menu = document.getElementById("dropdownMenu");
   const btn = document.getElementById("menuBtn");
   const modal = document.getElementById("infoModal");
-  const modalContent = modal?.querySelector(".modal-content");
 
   // ===== MENU =====
   if (menu && btn && !menu.contains(e.target) && !btn.contains(e.target)) {
@@ -626,17 +700,8 @@ function cerrarInfo() {
   document.getElementById("infoModal").style.display = "none";
 }
 
-// Cerrar haciendo click fuera del cuadro
-window.onclick = function(event) {
-  const modal = document.getElementById("infoModal");
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-};
-
-
-
-
+// Cerrar haciendo click fuera del cuadro: ya lo maneja el
+// window.addEventListener("click", ...) de más arriba
 
 
 
@@ -802,6 +867,9 @@ function updateClearSearchBtn() {
 }
 
 function search(q) {
+  // código de 8 dígitos: no es una búsqueda, es para desbloquear un libro oculto
+  if (/^\d{8}$/.test(q.trim()) && tryUnlockLibros(q.trim())) return;
+
   const query = normalize(q.trim());
   const list = document.getElementById("indice");
   const rail = document.getElementById("letterRail");
@@ -827,7 +895,7 @@ function search(q) {
   // filtrados no aporta nada y solo ocupa espacio de más
   rail?.classList.add("hidden");
 
-  const data = [...canciones, ...himnos, ...campamento];
+  const data = getTodasLasCanciones();
 
   const results = data.filter(song => {
 
@@ -866,7 +934,7 @@ function search(q) {
     const baseTitle = num ? `${num} - ${titulo}` : titulo;
 
     return `
-      <li onclick="selectSong('${c.id}')">
+      <li ${dataAction("selectSong", [c.id])}>
         <div style="display:flex; justify-content:space-between; gap:10px;">
           <span>${baseTitle}</span>
           <span style="opacity:0.7; font-size:14px;">${flags}</span>
@@ -972,46 +1040,8 @@ function closeList() {
 }
 
 // ===================== LISTA =====================
-function getSortedData() {
-  return [...getDataActual()].sort((a, b) => {
-    const A = getSongSortKey(a);
-    const B = getSongSortKey(b);
-
-    if (A.type !== B.type) {
-      return A.type === "number" ? -1 : 1;
-    }
-
-    return A.num - B.num;
-  });
-}
-
-function getSongSortKey(song) {
-  const title = song.idiomas?.[idiomaActual]?.titulo || "";
-
-  const t = normalize(title);
-
-  // 10.000 / 10000
-  const big = t.match(/^(\d{1,3}(?:\.\d{3})+|\d+)/);
-  if (big) {
-    return {
-      type: "number",
-      num: parseInt(big[1].replace(/\./g, ""), 10)
-    };
-  }
-
-  // Salmo 1 / etc
-  const salmo = t.match(/(\d+)/);
-  if (salmo) {
-    return {
-      type: "number",
-      num: parseInt(salmo[1], 10)
-    };
-  }
-
-  return { type: "text", num: 999999 };
-}
-
-
+// getSortedData y getSongSortKey viven en songbook.js (tienen el manejo
+// especial del Himnario por número, que esta versión no tenía)
 
 function extractNumber(text) {
   const match = text.match(/\d+/g);
@@ -1021,26 +1051,6 @@ function extractNumber(text) {
   return parseInt(match[0], 10);
 }
 
-function extractOrderValue(text) {
-  if (!text) return { type: "text", num: Infinity, raw: "" };
-
-  const t = normalize(text).trim();
-
-  // 🔥 CASO 1: número tipo 10.000 o 10000
-  const bigNumber = t.match(/^(\d{1,3}(?:\.\d{3})+|\d+)/);
-  if (bigNumber) {
-    const num = parseInt(bigNumber[1].replace(/\./g, ""), 10);
-    return { type: "number", num, raw: t };
-  }
-
-  // 🔥 CASO 2: Salmo 1 / Himno 23 etc (solo si empieza con palabra + número)
-  const wordNumber = t.match(/^[a-záéíóúñ]+\s+(\d+)/i);
-  if (wordNumber) {
-    return { type: "number", num: parseInt(wordNumber[1], 10), raw: t };
-  }
-
-  return { type: "text", num: Infinity, raw: t };
-}
 
 // ===================== eliminar cancion de LISTA si no hay cancion =====================
 function tieneIdioma(c) {
@@ -1169,7 +1179,7 @@ function renderChordLine(line) {
     }
 
     // acorde asociado a la siguiente palabra (clickeable: lo toca sin abrir el modal)
-    output += `<span class="chord-wrap"><span class="chord" data-chord="${escapeHtml(chord)}" onclick="playChordsFromLyrics(this)">${chord}</span></span>`;
+    output += `<span class="chord-wrap"><span class="chord" data-chord="${escapeHtml(chord)}" ${dataAction("playChordsFromLyrics", ["@el"])}>${chord}</span></span>`;
 
     lastIndex = regex.lastIndex;
   }
@@ -1221,6 +1231,7 @@ function renderAudioLink(song, idiomaData) {
 
 // ============= MODAL BIBLIOTECA  para descargar
 function abrirBiblioteca() {
+  closeMenu();
   document.getElementById("bibliotecaModal").style.display = "block";
   renderBiblioteca(biblioteca);
 }
@@ -1247,7 +1258,7 @@ function guardarListas() {
 }
 
 function findSongById(id) {
-  return [...canciones, ...himnos, ...campamento].find(c => c.id === id || c.slug === id);
+  return getTodasLasCanciones().find(c => c.id === id || c.slug === id);
 }
 
 // songId opcional: si viene de una canción abierta, el modal muestra un check por lista
@@ -1404,8 +1415,8 @@ function renderMisListas() {
 
           return `
             <div class="lista-song-row">
-              <span onclick="cerrarMisListas(); openSong('${songId}')">🎵 ${titulo}</span>
-              <button type="button" class="lista-remove-btn" onclick="toggleSongInLista('${id}', '${songId}')" title="Quitar de la lista">✕</button>
+              <span ${dataAction("cerrarMisListas,openSong", [songId])}>🎵 ${titulo}</span>
+              <button type="button" class="lista-remove-btn" ${dataAction("toggleSongInLista", [id, songId])} title="Quitar de la lista">✕</button>
             </div>
           `;
         }).join("")
@@ -1417,13 +1428,13 @@ function renderMisListas() {
           <span class="sec-icon">⭐</span>
           <span class="menu-row-label">${escapeHtml(lista.name)} <small>(${lista.songIds.length})</small></span>
           ${listasContextSongId ? `
-            <label class="lista-check" onclick="event.stopPropagation()">
+            <label class="lista-check" data-stop>
               <input type="checkbox" ${enEstaLista ? "checked" : ""} onchange="toggleSongInLista('${id}', '${listasContextSongId}')">
             </label>
           ` : `
-            <div class="lista-manage-btns" onclick="event.stopPropagation()">
-              <button type="button" class="lista-edit-btn" onclick="editarNombreLista('${id}')" title="Cambiar nombre">✏️</button>
-              <button type="button" class="lista-delete-btn" onclick="eliminarLista('${id}')" title="Eliminar lista">🗑️</button>
+            <div class="lista-manage-btns" data-stop>
+              <button type="button" class="lista-edit-btn" ${dataAction("editarNombreLista", [id])} title="Cambiar nombre">✏️</button>
+              <button type="button" class="lista-delete-btn" ${dataAction("eliminarLista", [id])} title="Eliminar lista">🗑️</button>
             </div>
           `}
           <span class="sec-chevron">▸</span>
@@ -1459,89 +1470,13 @@ function openPersonModal(nombre, tipo) {
 }
 
 
-function renderMetaCompacto(song, s) {
-
-  const original = song.titulo_original || "Sin título";
-
-  const otrosTitulos =
-    s.titulo2?.length
-      ? s.titulo2.join(", ")
-      : "-";
-
-  const autores = normalizeArrayField(song.autor).join(", ") || "-";
-  const compositores = normalizeArrayField(song.compositor).join(", ") || "-";
-  const traductores = normalizeArrayField(s.traductor).join(", ") || "-";
-
-  const tonalidad = normalizeMeta(song, "tonalidad") || "Desconocido";
-  const bpm = normalizeMeta(song, "tempo_bpm") || "Desconocido";
-  const compas = normalizeMeta(song, "compas") || "Desconocido";
-  const ritmo = formatRitmo(song.ritmo) || "Desconocido";
-
-  const partitura =
-    s.partitura && s.partitura !== "No"
-      ? "Sí"
-      : "No";
-
-  const biblia =
-    normalizeReferenciaBiblica(song.referencia_biblica).length
-      ? normalizeReferenciaBiblica(song.referencia_biblica).join(", ")
-      : "-";
-
-  const tags =
-    song.tags?.length
-      ? song.tags.join(", ")
-      : "-";
-
-  const revisado =
-    formatRevisadoDisplay(s.revisado || song.revisado) || "-";
-
-  return `
-    <div class="meta-compacto">
-
-      <div>
-        Original: "${original}" |
-        Otros títulos: ${otrosTitulos} |
-        Año: ${song.year || "-"}
-      </div>
-
-      <div>
-        Autor: ${autores} |
-        Compositor: ${compositores} |
-        Traductor: ${traductores}
-      </div>
-
-      <div>
-        Tonalidad: ${tonalidad} |
-        BPM: ${bpm} |
-        Compás: ${compas} |
-        Ritmo: ${ritmo} |
-        Partitura: ${partitura}
-      </div>
-
-      <div>
-        Referencia bíblica: ${biblia}
-      </div>
-
-      <div>
-        Tags: ${tags} |
-        Revisado: ${revisado}
-      </div>
-
-    </div>
-  `;
-}
-
 // =====================================================
 // ESTADÍSTICAS DEL CANCIONERO
 // =====================================================
 function actualizarEstadisticas() {
 
-  // unir los 3 libros
-  const todas = [
-    ...canciones,
-    ...himnos,
-    ...campamento
-  ];
+  // unir todos los libros
+  const todas = getTodasLasCanciones();
 
   // ------------------------------------
   // Total de canciones
@@ -1600,10 +1535,14 @@ async function cargarVersion() {
 
 function mostrarMensajeInicio() {
     document.getElementById("mensajeInicio").style.display = "block";
+    const hr = document.getElementById("mensajeInicioHr");
+    if (hr) hr.style.display = "block";
 }
 
 function ocultarMensajeInicio() {
     document.getElementById("mensajeInicio").style.display = "none";
+    const hr = document.getElementById("mensajeInicioHr");
+    if (hr) hr.style.display = "none";
 }
 
 

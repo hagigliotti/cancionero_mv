@@ -142,14 +142,14 @@ async function npMostrarLista() {
     if (!letrasVistas.includes(letra)) letrasVistas.push(letra);
 
     return `
-      <div class="np-row" data-letter="${letra}" onclick="abrirGrabacion('${r.id}')">
+      <div class="np-row" data-letter="${letra}" ${dataAction("abrirGrabacion", [r.id])}>
         <span class="np-row-icon">🎵</span>
         <div class="np-row-info">
           <b>${npEscapeHtml(r.nombre)}</b>
           <span class="np-row-sub">${npFormatDuration(r.duration)}${r.tonalidad ? " · " + npEscapeHtml(r.tonalidad) : ""}${r.bpm ? " · " + npEscapeHtml(String(r.bpm)) + " BPM" : ""}</span>
         </div>
-        <button type="button" class="np-row-btn" onclick="npRenombrarRapido(event, '${r.id}')" title="Renombrar" aria-label="Renombrar">✏️</button>
-        <button type="button" class="np-row-btn np-row-btn-danger" onclick="npEliminarRapido(event, '${r.id}')" title="Eliminar" aria-label="Eliminar">🗑️</button>
+        <button type="button" class="np-row-btn" ${dataAction("npRenombrarRapido", [r.id])} title="Renombrar" aria-label="Renombrar">✏️</button>
+        <button type="button" class="np-row-btn np-row-btn-danger" ${dataAction("npEliminarRapido", [r.id])} title="Eliminar" aria-label="Eliminar">🗑️</button>
       </div>
     `;
   }).join("");
@@ -207,9 +207,7 @@ async function crearGrabacion() {
 }
 
 // renombrar/eliminar directo desde la lista, sin entrar al detalle
-async function npRenombrarRapido(event, id) {
-  event.stopPropagation();
-
+async function npRenombrarRapido(id) {
   const all = await npGetAll();
   const record = all.find(r => r.id === id);
   if (!record) return;
@@ -222,9 +220,7 @@ async function npRenombrarRapido(event, id) {
   npMostrarLista();
 }
 
-async function npEliminarRapido(event, id) {
-  event.stopPropagation();
-
+async function npEliminarRapido(id) {
   if (!confirm("¿Eliminar esta grabación? No se puede deshacer.")) return;
 
   if (id === npCurrentId) {

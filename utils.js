@@ -110,7 +110,17 @@ function escapeHtml(str = "") {
   return str
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+// ===================== ACCIONES (reemplazo de onclick="...") =====================
+// Genera el par data-action/data-args que usa el listener delegado de
+// index.html. args va como JSON para no romper con comillas/acentos en
+// nombres de canciones, tags, etc. (antes eso rompía el onclick a mano).
+function dataAction(name, args = []) {
+  const json = args.length ? ` data-args="${escapeHtml(JSON.stringify(args))}"` : "";
+  return `data-action="${name}"${json}`;
 }
 
 // ===================== REVISADO LABEL (🔥 FIX PEDIDO) =====================
@@ -250,7 +260,11 @@ function normalizeRitmo(ritmo) {
 }
 
 function normalizeText(text = "") {
-  return text?.toString().trim() || "";
+  if (!text) return "";
+  // varios campos (título, título original) a veces vienen como array de
+  // variantes: se listan separadas por coma en vez de pegarse sin espacio
+  if (Array.isArray(text)) return text.filter(Boolean).join(", ");
+  return text.toString().trim();
 }
 
 function formatRitmo(ritmo) {
@@ -314,7 +328,7 @@ function renderPersonLinks(label, value) {
       <b>${label}:</b>
       ${arr.map(p => `
         <span class="person-link"
-          onclick="openPersonModal('${p}', '${label.toLowerCase()}')">
+          ${dataAction("openPersonModal", [p, label.toLowerCase()])}>
           ${p}
         </span>
       `).join(", ")}
@@ -345,10 +359,7 @@ function normalizeMeta(song, field) {
 }
 
 // ===================== MODAL REVISADO =====================
-function cerrarListModal() {
-  document.getElementById("listModal").style.display = "none";
-}
-
+// cerrarListModal: ver la versión más abajo (también limpia tagModalValue)
 
 
 function toggleRevisadoEstado() {
@@ -396,7 +407,8 @@ function renderRevisadoModal() {
   document.getElementById("listModal").style.display = "block";
 }
 
-function openRevisadoList(valor) {
+function openRevisadoList(el) {
+  const valor = JSON.parse(el.dataset.revisado);
   const [estado] = normalizeRevisado(valor);
   revisadoEstadoActual = (estado === "si") ? "si" : "no";
   renderRevisadoModal();

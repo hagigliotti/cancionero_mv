@@ -138,9 +138,7 @@ function setBanderaIdioma(lang, code) {
 
 // abre el selector nativo de país: se dispara tocando la bandera de la fila
 // Idioma (no hay un renglón aparte, queda oculto ahí mismo)
-function abrirBanderaPicker(event) {
-  event?.stopPropagation();
-
+function abrirBanderaPicker() {
   const select = document.getElementById("menuBandera");
   if (!select || !FLAG_VARIANTS[idiomaActual]) return;
 
@@ -284,7 +282,7 @@ function getAvailableFlags(song) {
     .filter(lang => idiomas[lang])
     .sort((a, b) => (FLAG_NAMES[a] || a).localeCompare(FLAG_NAMES[b] || b))
     .map(lang => `
-      <span onclick="changeLanguage('${lang}', '${song.id}')"
+      <span ${dataAction("changeLanguage", [lang, song.id])}
             style="cursor:pointer">
         ${getFlagEmoji(lang)}
       </span>
@@ -302,7 +300,7 @@ function renderLanguageFlags(song) {
     .sort((a, b) => (FLAG_NAMES[a] || a).localeCompare(FLAG_NAMES[b] || b))
     .map(lang => `
       <span class="flag ${lang === idiomaActual ? "active" : ""}"
-            onclick="changeLanguage('${lang}', '${song.id}')">
+            ${dataAction("changeLanguage", [lang, song.id])}>
         ${getFlagEmoji(lang)}
       </span>
     `).join("");
@@ -432,11 +430,7 @@ function getSongTitle(song) {
 
 // ===============================================================================================
 // ===================== NORMALIZACIÓN GENERAL ==================================================
-function normalizeText(value) {
-  if (!value) return "";
-  if (Array.isArray(value)) return value.filter(Boolean).join(", ");
-  return value;
-}
+// normalizeText vive en utils.js (se usa acá para titulo/titulo_original)
 
 function normalizeSimple(value) {
   if (!value) return "";

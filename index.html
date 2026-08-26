@@ -9,10 +9,10 @@
   <title>Cancionero MV</title>
 
   <!-- PWA / APARIENCIA DE APP -->
-  <link rel="manifest" href="manifest.webmanifest?v=3">
-  <link rel="icon" href="imagenes/icons/favicon-32.png?v=3" sizes="32x32">
-  <link rel="icon" href="imagenes/icons/favicon-16.png?v=3" sizes="16x16">
-  <link rel="apple-touch-icon" href="imagenes/icons/apple-touch-icon.png?v=3">
+  <link rel="manifest" href="manifest.webmanifest?v=78">
+  <link rel="icon" href="imagenes/icons/favicon-32.png?v=78" sizes="32x32">
+  <link rel="icon" href="imagenes/icons/favicon-16.png?v=78" sizes="16x16">
+  <link rel="apple-touch-icon" href="imagenes/icons/apple-touch-icon.png?v=78">
 
   <meta name="theme-color" content="#122033">
   <meta name="mobile-web-app-capable" content="yes">
@@ -24,8 +24,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css?v=57">
-  <link rel="stylesheet" href="notepad.css?v=5">
+  <link rel="stylesheet" href="style.css?v=78">
+  <link rel="stylesheet" href="notepad.css?v=78">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XS6DM59CNT"></script>
@@ -57,17 +57,17 @@
 
       <!-- ☰ MENU -->
       <div class="menu-wrapper">
-        <button type="button" id="menuBtn" onclick="toggleMenu()">
+        <button type="button" id="menuBtn" data-action="toggleMenu">
           <i class="fa-solid fa-bars"></i>
         </button>
 
-        <div id="menuBackdrop" class="menu-backdrop" onclick="closeMenu()"></div>
+        <div id="menuBackdrop" class="menu-backdrop" data-action="closeMenu"></div>
 
         <div id="dropdownMenu" class="dropdown-menu">
 
           <div class="menu-head">
-            <button type="button" id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleTheme()" title="Cambiar tema claro/oscuro" aria-label="Cambiar tema claro/oscuro">🕶️</button>
-            <button type="button" class="about-close" onclick="closeMenu()" aria-label="Cerrar menú">✕</button>
+            <button type="button" id="themeToggleBtn" class="theme-toggle-btn" data-action="toggleTheme" title="Cambiar tema claro/oscuro" aria-label="Cambiar tema claro/oscuro">🕶️</button>
+            <button type="button" class="about-close" data-action="closeMenu" aria-label="Cerrar menú">✕</button>
             <div class="about-badge">🎶</div>
             <h2>Cancionero MV</h2>
             <div class="about-meta">Menú</div>
@@ -76,7 +76,7 @@
           <div class="menu-body">
 
             <div class="menu-group">
-              <div class="menu-item" onclick="abrirInfoDesdeMenu()">
+              <div class="menu-item" data-action="abrirInfoDesdeMenu">
                 <span class="sec-icon">ℹ️</span> Información de la app
               </div>
             </div>
@@ -88,9 +88,7 @@
                 <span class="sec-icon">📖</span>
                 <span class="menu-row-label">Libro</span>
                 <select id="menuLibro">
-                  <option value="cancionero">Cancionero MV</option>
-                  <option value="himnario">Himnario Adventista</option>
-                  <option value="campamento">Campamento</option>
+                  <!-- opciones generadas en app.js desde data/libros.json -->
                 </select>
               </div>
 
@@ -99,13 +97,13 @@
             <div class="menu-group">
               <p class="contact-label">Mi música</p>
 
-              <div class="menu-item" onclick="abrirMisListas()"><span class="sec-icon">⭐</span> Mis Listas</div>
+              <div class="menu-item" data-action="abrirMisListas"><span class="sec-icon">⭐</span> Mis Listas</div>
 
-              <div class="menu-item" onclick="abrirBiblioteca()">
+              <div class="menu-item" data-action="abrirBiblioteca">
                 <span class="sec-icon">📚</span> Biblioteca
               </div>
 
-              <div class="menu-item" onclick="abrirNotepad()">
+              <div class="menu-item" data-action="abrirNotepad">
                 <span class="sec-icon">🎙️</span> Bloc musical
               </div>
             </div>
@@ -113,7 +111,7 @@
             <div class="menu-group">
               <p class="contact-label">Ajustes</p>
 
-              <div class="menu-item" onclick="abrirAfinometroModal()">
+              <div class="menu-item" data-action="abrirAfinometroModal">
                 <span class="sec-icon">📟</span> Metrónomo y Afinador
               </div>
 
@@ -121,9 +119,9 @@
                 <span class="sec-icon">🅰️</span>
                 <span class="menu-row-label">Tamaño de letra</span>
                 <div class="font-controls">
-                  <button type="button" onclick="cambiarFuente(-1)">A-</button>
-                  <button type="button" onclick="resetFuente()">A</button>
-                  <button type="button" onclick="cambiarFuente(1)">A+</button>
+                  <button type="button" data-action="cambiarFuente" data-args="[-1]">A-</button>
+                  <button type="button" data-action="resetFuente">A</button>
+                  <button type="button" data-action="cambiarFuente" data-args="[1]">A+</button>
                 </div>
               </div>
 
@@ -137,14 +135,14 @@
                 <span class="sec-icon">🎼</span>
                 <span class="menu-row-label">Transponer tonalidad</span>
                 <div class="font-controls transpose-controls">
-                  <button type="button" onclick="transposeChords(-1)" title="Medio tono abajo">♭</button>
-                  <button type="button" onclick="resetTranspose()" title="Tonalidad original">♮</button>
-                  <button type="button" onclick="transposeChords(1)" title="Medio tono arriba">♯</button>
+                  <button type="button" data-action="transposeChords" data-args="[-1]" title="Medio tono abajo">♭</button>
+                  <button type="button" data-action="resetTranspose" title="Tonalidad original">♮</button>
+                  <button type="button" data-action="transposeChords" data-args="[1]" title="Medio tono arriba">♯</button>
                 </div>
               </div>
 
               <div class="menu-row">
-                <span class="sec-icon" id="idiomaFlagIcon" onclick="abrirBanderaPicker(event)" title="Tocá para elegir tu bandera">🌐</span>
+                <span class="sec-icon" id="idiomaFlagIcon" data-action="abrirBanderaPicker" title="Tocá para elegir tu bandera">🌐</span>
                 <span class="menu-row-label">Idioma de las canciones</span>
                 <select id="menuIdioma">
                   <option value="es">Español</option>
@@ -159,7 +157,7 @@
 
             <div class="menu-group">
               <p class="contact-label">Modo iglesia</p>
-              <div class="menu-item" onclick="toggleProjectorMode(); closeMenu()">
+              <div class="menu-item" data-action="toggleProjectorMode,closeMenu">
                 <span class="sec-icon">📽️</span> Proyector
               </div>
             </div>
@@ -169,7 +167,7 @@
           <div class="menu-contact">
             <p class="contact-label">Feedback</p>
             <div class="contact-row">
-              <a href="#" onclick="abrirShareModal(); return false;">
+              <a href="#" data-action="abrirShareModal">
                 <span class="c-icon share-c">🔗</span>
                 <span>Compartir</span>
               </a>
@@ -190,7 +188,7 @@
       <!-- 🔎 BUSCADOR 👓🕶️-->
       <div class="buscador-container">
         <input id="buscador" type="text" placeholder="🔎 Buscar por título, letra, autor, compositor, año, ritmo o tags" />
-        <button type="button" id="clearBuscadorBtn" class="clear-search-btn hidden" onclick="clearAll()" aria-label="Borrar búsqueda">✕</button>
+        <button type="button" id="clearBuscadorBtn" class="clear-search-btn hidden" data-action="clearAll" aria-label="Borrar búsqueda">✕</button>
       </div>
 
       <!-- 🌐 IDIOMA (botón rápido) -->
@@ -215,27 +213,27 @@
 
   <!-- ===================== CONTROLES ===================== -->
   <div class="top-row">
-    <button type="button" id="toggleLista" onclick="toggleLista()">📁</button> 
+    <button type="button" id="toggleLista" data-action="toggleLista">📁</button>
   </div>
 
   <!-- ===================== ALFABETO ===================== -->
   <div class="alfabeto-nav">
-    <button type="button" class="alpha-arrow" onclick="scrollAlfabeto(-1)" aria-label="Letras anteriores">
+    <button type="button" class="alpha-arrow" data-action="scrollAlfabeto" data-args="[-1]" aria-label="Letras anteriores">
       <i class="fa-solid fa-chevron-left"></i>
     </button>
     <div id="alfabeto"></div>
-    <button type="button" class="alpha-arrow" onclick="scrollAlfabeto(1)" aria-label="Letras siguientes">
+    <button type="button" class="alpha-arrow" data-action="scrollAlfabeto" data-args="[1]" aria-label="Letras siguientes">
       <i class="fa-solid fa-chevron-right"></i>
     </button>
   </div>
 
   <!-- ===================== RANGOS DE HIMNOS (solo Himnario) ===================== -->
   <div class="alfabeto-nav hidden" id="himnoRangosNav">
-    <button type="button" class="alpha-arrow" onclick="scrollHimnoRangos(-1)" aria-label="Rangos anteriores">
+    <button type="button" class="alpha-arrow" data-action="scrollHimnoRangos" data-args="[-1]" aria-label="Rangos anteriores">
       <i class="fa-solid fa-chevron-left"></i>
     </button>
     <div id="himnoRangos"></div>
-    <button type="button" class="alpha-arrow" onclick="scrollHimnoRangos(1)" aria-label="Rangos siguientes">
+    <button type="button" class="alpha-arrow" data-action="scrollHimnoRangos" data-args="[1]" aria-label="Rangos siguientes">
       <i class="fa-solid fa-chevron-right"></i>
     </button>
   </div>
@@ -248,7 +246,8 @@
   <br>
 
   <!-- ===================== MENSAJE INICIAL ===================== -->
-  
+  <hr id="mensajeInicioHr">
+
   <div id="mensajeInicio" class="mensaje-inicio">
     <p class="versiculo">
       "Alabaré a Jehová en mi vida; cantaré salmos a mi Dios mientras viva."
@@ -266,20 +265,19 @@
 
 
 <!-- ======================================== JS ======================================== -->
-<script src="modals.js?v=4"></script>
-<script src="lenguage.js?v=8"></script>
-<script src="utils.js?v=8"></script>
-<script src="theme.js?v=7"></script>
-<script src="afinometro.js?v=20"></script>
-<script src="app.js?v=29"></script>
-<script src="songbook.js?v=13"></script>
-<script src="notepad.js?v=4"></script>
+<script src="lenguage.js?v=78"></script>
+<script src="utils.js?v=78"></script>
+<script src="theme.js?v=78"></script>
+<script src="afinometro.js?v=78"></script>
+<script src="app.js?v=78"></script>
+<script src="songbook.js?v=78"></script>
+<script src="notepad.js?v=78"></script>
 
 <!-- ======================================== PWA OFFLINE ======================================== -->
 <div id="updateBanner" class="update-banner">
   <span>Nueva actualización</span>
-  <button type="button" onclick="location.reload()">Actualizar</button>
-  <button type="button" class="update-banner-close" onclick="ocultarAvisoActualizacion()" aria-label="Cerrar">✕</button>
+  <button type="button" data-action="recargarPagina">Actualizar</button>
+  <button type="button" class="update-banner-close" data-action="ocultarAvisoActualizacion" aria-label="Cerrar">✕</button>
 </div>
 
 <script>
@@ -331,6 +329,10 @@
   function ocultarAvisoActualizacion() {
     document.getElementById("updateBanner")?.classList.remove("show");
   }
+
+  function recargarPagina() {
+    location.reload();
+  }
 </script>
 
 <!-- ======================================== FOOTER ======================================== -->
@@ -368,6 +370,63 @@
     window.addEventListener("resize", syncOffsets);
     window.addEventListener("load", syncOffsets);
     syncOffsets();
+  })();
+</script>
+
+<!-- reemplaza los onclick="..." inline: cualquier elemento con
+     data-action="nombreFuncion" (y data-args='[...]' opcional, con los
+     argumentos literales) dispara esa función global al clickearlo. Si algún
+     argumento necesita ser el elemento clickeado (antes "this") o el evento
+     (antes "event"), se pone el string "@el" o "@event" en esa posición del
+     array — NO se agregan solos, para no pisar parámetros opcionales de
+     funciones que a veces se llaman sin todos sus argumentos (ej.
+     abrirMisListas(songId = null)). data-stop corta la propagación antes de
+     que el click llegue a un <summary> ancestro (evita que togglee el
+     <details> al tocar un control de adentro, ej. los checkbox/botones
+     dentro de una tarjeta de "Mis Listas"). Va en fase de captura a
+     propósito, porque data-stop necesita actuar ANTES de que el evento
+     llegue al <summary>. Aislado a propósito -->
+<script>
+  document.addEventListener("click", function (e) {
+    if (e.target.closest("[data-stop]")) {
+      e.stopPropagation();
+    }
+
+    const el = e.target.closest("[data-action]");
+    if (!el) return;
+
+    if (el.tagName === "A") e.preventDefault();
+
+    const raw = el.dataset.args ? JSON.parse(el.dataset.args) : [];
+    const args = raw.map(a => a === "@el" ? el : a === "@event" ? e : a);
+
+    el.dataset.action.split(",").forEach(name => {
+      const fn = window[name.trim()];
+      if (typeof fn === "function") fn(...args);
+    });
+  }, true);
+</script>
+
+<!-- bloquea el scroll del fondo mientras cualquier modal (.modal) está
+     visible, sin tocar las funciones que ya abren/cierran cada uno (todas
+     solo cambian su style.display). Aislado a propósito -->
+<script>
+  (function () {
+    function syncModalOpen() {
+      const anyOpen = Array.from(document.querySelectorAll(".modal"))
+        .some(m => getComputedStyle(m).display !== "none");
+
+      document.body.classList.toggle("modal-open", anyOpen);
+    }
+
+    const observer = new MutationObserver(syncModalOpen);
+    observer.observe(document.body, {
+      subtree: true,
+      attributes: true,
+      attributeFilter: ["style"]
+    });
+
+    syncModalOpen();
   })();
 </script>
 </body>

@@ -5,7 +5,7 @@
 
 // Funciones Helpers
 function hasHymnNumbersInCurrentLanguage() {
-  return himnos.some(song => {
+  return getLibroSongs(libroActual).some(song => {
     const num = parseInt(
       song.idiomas?.[idiomaActual]?.numero_himno,
       10
@@ -66,7 +66,7 @@ function normalizePersonField(field) {
 
 // ===================== OPEN SONG =====================
 function openSong(id) {
-  const song = [...canciones, ...himnos, ...campamento].find(c => c.id === id || c.slug === id);
+  const song = getTodasLasCanciones().find(c => c.id === id || c.slug === id);
 
   if (!song) {
     document.getElementById("contenido").innerHTML =
@@ -77,8 +77,7 @@ function openSong(id) {
 
   const detectedLibro = detectLibroBySong(song);
 
-  if (libroActual === "himnario" && detectedLibro === "himnario") {
-    libroActual = "himnario";
+  if (libroActual === detectedLibro) {
     renderAlphabet();
     updateAppTitle();
   }
@@ -104,6 +103,8 @@ function openSong(id) {
   listaVisible = false;
   letraActiva = null;
   ocultarMensajeInicio();
+  stopTeleprompter(); // cada canción arranca con el teleprompter parado
+  teleprompterSpeedMult = 1;
 
   const num = getNumeroHimno(song);
 
@@ -186,7 +187,7 @@ function openSong(id) {
         }
       </div>
 
-      <div class="song-metro" onclick="abrirMetronomoDesdeMenu()" style="cursor:pointer;">
+      <div class="song-metro" ${dataAction("abrirMetronomoDesdeMenu")} style="cursor:pointer;">
       
         ${normalizeMeta(song, "tonalidad") && normalize(normalizeMeta(song, "tonalidad")) !== "DESCONOCIDO"
           ? `
@@ -195,7 +196,7 @@ function openSong(id) {
               data-tonalidad="${normalizeMeta(song, "tonalidad")}"
               data-bpm="${normalizeMeta(song, "tempo_bpm") || ""}"
               data-compas="${normalizeMeta(song, "compas") || ""}"
-              onclick="event.stopPropagation(); abrirAfinadorDesdeElemento(this, 'tonalidad')">
+              ${dataAction("abrirAfinadorDesdeElemento", ["tonalidad", "@el"])}>
               ${normalizeMeta(song, "tonalidad")}
             </span> |
           `
@@ -212,7 +213,7 @@ function openSong(id) {
               data-tonalidad="${normalizeMeta(song, "tonalidad") || ""}"
               data-bpm="${normalizeMeta(song, "tempo_bpm")}"
               data-compas="${normalizeMeta(song, "compas") || ""}"
-              onclick="event.stopPropagation(); abrirAfinadorDesdeElemento(this, 'bpm')">
+              ${dataAction("abrirAfinadorDesdeElemento", ["bpm", "@el"])}>
               ${normalizeMeta(song, "tempo_bpm")}
             </span> |
           `
@@ -229,7 +230,7 @@ function openSong(id) {
               data-tonalidad="${normalizeMeta(song, "tonalidad") || ""}"
               data-bpm="${normalizeMeta(song, "tempo_bpm") || ""}"
               data-compas="${normalizeMeta(song, "compas")}"
-              onclick="event.stopPropagation(); abrirAfinadorDesdeElemento(this, 'compas')">
+              ${dataAction("abrirAfinadorDesdeElemento", ["compas", "@el"])}>
               ${normalizeMeta(song, "compas")}
             </span> |
           `
@@ -260,7 +261,7 @@ function openSong(id) {
                   a.localeCompare(b, "es", { sensitivity: "base" })
                 )
                 .map(tag =>
-                  `<span class="tag-link" onclick="openTagModal('${tag}')">${tag}</span>`
+                  `<span class="tag-link" ${dataAction("openTagModal", [tag])}>${tag}</span>`
                 )
                 .join(", ")
             : "Desconocido"
@@ -270,7 +271,7 @@ function openSong(id) {
           <span
             class="song-meta-revisado"
             data-revisado='${JSON.stringify(song.idiomas?.[idiomaActual]?.revisado)}'
-            onclick="openRevisadoList(JSON.parse(this.dataset.revisado))"
+            ${dataAction("openRevisadoList", ["@el"])}
           >
             ${formatRevisadoEstado(song.idiomas?.[idiomaActual]?.revisado)}
           </span>
@@ -302,14 +303,22 @@ function openSong(id) {
 
   // Render completo
   document.getElementById("contenido").innerHTML = `
-  <h2 class="song-title-row">
-    ${tituloFinal}
-    <button type="button" class="fav-add-btn" onclick="abrirMisListas('${song.id}')" title="Agregar a una lista">⭐</button>
-  </h2>
+  <div class="song-title-row" id="songTitleRow">
+    <h2 class="song-title-text">${tituloFinal}</h2>
+    <button type="button" class="fav-add-btn" ${dataAction("abrirMisListas", [song.id])} title="Agregar a una lista">⭐</button>
+
+    <div class="teleprompter-bar" id="teleprompterBar" data-bpm="${normalizeMeta(song, "tempo_bpm") || ""}">
+      <span class="teleprompter-label">Teleprónter</span>
+      <button type="button" class="teleprompter-play-btn" id="teleprompterPlayBtn" ${dataAction("toggleTeleprompter")} title="Teleprompter: scroll automático de la letra">▶</button>
+      <div class="teleprompter-speed">
+        <button type="button" ${dataAction("adjustTeleprompterSpeed", [-1])} title="Más lento">−</button>
+        <span id="teleprompterSpeedLabel">1.0x</span>
+        <button type="button" ${dataAction("adjustTeleprompterSpeed", [1])} title="Más rápido">+</button>
+      </div>
+    </div>
+  </div>
 
   ${meta}
-
-
 
   <div class="lyrics">
     ${renderLyrics(s.letra)}
@@ -339,43 +348,7 @@ function openSong(id) {
 
 
 // ===================== ALPHABET =====================
-// -------- VERSIÓN 1 --------
-function renderAlphabet() {
-  const container = document.getElementById("alfabeto");
-
-  const allSongs = getDataActual();
-
-  let letrasDisponibles = new Set();
-
-  allSongs.forEach(c => {
-    const titulo = c.idiomas?.[idiomaActual]?.titulo;
-    if (!titulo) return;
-
-    const clean = titulo.replace(/^[¿¡!?\s"'“”‘’]+/, "");
-    const first = normalize(clean.charAt(0));
-
-    if (!first) return;
-
-    if (/^\d/.test(first)) letrasDisponibles.add("#");
-    else letrasDisponibles.add(first);
-  });
-
-  let letras = Array.from(letrasDisponibles).sort();
-
-  if (!letras.includes("#")) letras.unshift("#");
-  letras.unshift("*");
-
-  container.innerHTML = `
-    <div class="alpha-row">
-      ${letras.map(l => `
-        <button class="alpha" onclick="selectLetter('${l}')">
-          ${l === "*" ? "🔤" : l === "#" ? "#️⃣" : l}
-        </button>
-      `).join("")}
-    </div>
-  `;
-}
-
+// renderAlphabet: ver "VERSIÓN 2 (HIMNARIO + RANGOS)" más abajo
 
 // ===================== LETTER SELECT =====================
 // tira horizontal: tocar la misma letra dos veces cierra la lista
@@ -460,7 +433,7 @@ function renderList(letter) {
 
   // ===================== RENDER =====================
   list.innerHTML = expanded.map(item => `
-    <li onclick="openSong('${item.song.id}')">
+    <li ${dataAction("openSong", [item.song.id])}>
       <div style="display:flex; justify-content:space-between; align-items:center;">
         <span>${item.displayTitle}</span>
         <span style="opacity:0.7; font-size:14px;">
@@ -475,7 +448,7 @@ function buildDisplayTitle(song, title) {
 
   const langData = song?.idiomas?.[idiomaActual];
 
-  if (libroActual === "himnario") {
+  if (getLibroDef(libroActual)?.numeroHimno) {
 
     const num = parseInt(langData?.numero_himno, 10);
 
@@ -487,35 +460,11 @@ function buildDisplayTitle(song, title) {
   return title;
 }
 
-// Obtener numeros existentes
-function getHymnNumbersForCurrentLanguage() {
-  return himnos
-    .map(song => parseInt(song.idiomas?.[idiomaActual]?.numero_himno, 10))
-    .filter(n => !isNaN(n) && n > 0);
-}
-
-// generar rangos automáticamente
-function buildHymnRanges() {
-
-  const nums = getHymnNumbersForCurrentLanguage();
-
-  if (!nums.length) return []; // ❌ no hay rangos
-
-  const min = Math.min(...nums);
-  const max = Math.max(...nums);
-
-  const ranges = [];
-
-  for (let i = Math.floor(min / 50) * 50; i <= max; i += 50) {
-    ranges.push([i + 1, i + 50]);
-  }
-
-  return ranges;
-}
+// buildHymnRanges(lang) más abajo es la versión activa
 
 //Función nueva: detectar si hay numeración en el idioma
 function getHymnNumbersByLanguage(lang) {
-  return himnos
+  return getLibroSongs(libroActual)
     .map(h => parseInt(h.idiomas?.[lang]?.numero_himno, 10))
     .filter(n => !isNaN(n))
     .sort((a, b) => a - b);
@@ -571,8 +520,8 @@ function expandSongTitles(song) {
 function getSortedData() {
   const data = [...getDataActual()];
 
-  // HIMNARIO: orden por número real
-  if (libroActual === "himnario") {
+  // libros con numeración propia (ej. Himnario): orden por número real
+  if (getLibroDef(libroActual)?.numeroHimno) {
     return data.sort((a, b) => {
       const A = parseInt(a.idiomas?.[idiomaActual]?.numero_himno || 0, 10);
       const B = parseInt(b.idiomas?.[idiomaActual]?.numero_himno || 0, 10);
@@ -625,8 +574,9 @@ function renderAlphabet() {
 
   let letras = Array.from(letrasDisponibles).sort();
 
-  // en el Himnario se busca por número (segundo renglón de rangos), no por "#"
-  if (libroActual === "himnario") {
+  // en libros con numeración propia se busca por número (segundo renglón de
+  // rangos), no por "#"
+  if (getLibroDef(libroActual)?.numeroHimno) {
     letras = letras.filter(l => l !== "#");
   } else if (!letras.includes("#")) {
     letras.unshift("#");
@@ -638,7 +588,7 @@ function renderAlphabet() {
     <div class="alpha-row">
 
       ${letras.map(l => `
-        <button class="alpha" data-letter="${l}" onclick="selectLetter('${l}')">
+        <button class="alpha" data-letter="${l}" ${dataAction("selectLetter", [l])}>
           ${l === "*" ? "🔤" : l === "#" ? "#️⃣" : l}
         </button>
       `).join("")}
@@ -651,14 +601,14 @@ function renderAlphabet() {
   const rangosCont = document.getElementById("himnoRangos");
 
   if (rangosNav && rangosCont) {
-    const rangos = libroActual === "himnario" ? buildHymnRanges(idiomaActual) : [];
+    const rangos = getLibroDef(libroActual)?.numeroHimno ? buildHymnRanges(idiomaActual) : [];
 
     if (rangos.length > 0) {
       rangosNav.classList.remove("hidden");
       rangosCont.innerHTML = `
         <div class="alpha-row">
           ${rangos.map(r => `
-            <button class="alpha" onclick="selectRange(${r[0]}, ${r[1]})">
+            <button class="alpha" ${dataAction("selectRange", [r[0], r[1]])}>
               ${r[0]}-${r[1]}
             </button>
           `).join("")}
@@ -704,6 +654,7 @@ function highlightLetter(letter) {
 // ===================== RANGE SELECT =====================
 function selectRange(start, end) {
 
+  stopTeleprompter();
   ocultarMensajeInicio();
 
   openList();
@@ -726,7 +677,7 @@ function renderHymnRange(start, end) {
 
   const list = document.getElementById("indice");
 
-  const himnosRango = himnos
+  const himnosRango = getLibroSongs(libroActual)
     .map(song => {
       const num = parseInt(
         song.idiomas?.[idiomaActual]?.numero_himno,
@@ -753,7 +704,7 @@ function renderHymnRange(start, end) {
       : `${titulo}`;
 
     return `
-      <li onclick="openSong('${item.song.id}')">
+      <li ${dataAction("openSong", [item.song.id])}>
         <div style="display:flex; justify-content:space-between;">
           <span>${label}</span>
           <span class="lang-flags-list">
@@ -767,10 +718,111 @@ function renderHymnRange(start, end) {
 
 // ===================== ALPHABET DATA =====================
 function getAlphabetData() {
-  if (libroActual === "himnario") return himnos;
-  if (libroActual === "campamento") return campamento;
+  return getLibroSongs(libroActual); // sin coritos para evitar contaminación
+}
 
-  return canciones; // sin coritos para evitar contaminación
+
+
+// ===================== TELEPROMPTER =====================
+// scroll automático a velocidad aproximada según el BPM de la canción: no
+// hay dato de cuántos compases dura cada línea, así que es una velocidad
+// constante estimada, ajustable a mano con los botones +/- de cada canción
+let teleprompterActive = false;
+let teleprompterSpeedMult = 1;
+let teleprompterLastTs = null;
+let teleprompterRAF = null;
+let teleprompterRestante = 0; // píxeles fraccionarios acumulados entre cuadros
+
+const TELEPROMPTER_DEFAULT_BPM = 80; // cuando la canción no tiene BPM cargado
+const TELEPROMPTER_PX_PER_BEAT = 10; // punto de partida, se ajusta con +/-
+
+function getTeleprompterPxPerSecond() {
+  const bar = document.getElementById("teleprompterBar");
+  const bpm = parseInt(bar?.dataset.bpm, 10);
+  const bpmEfectivo = (!isNaN(bpm) && bpm > 0) ? bpm : TELEPROMPTER_DEFAULT_BPM;
+
+  return (bpmEfectivo / 60) * TELEPROMPTER_PX_PER_BEAT * teleprompterSpeedMult;
+}
+
+function toggleTeleprompter() {
+  if (teleprompterActive) {
+    stopTeleprompter();
+  } else {
+    startTeleprompter();
+  }
+}
+
+function startTeleprompter() {
+  const bar = document.getElementById("teleprompterBar");
+  if (!bar) return;
+
+  teleprompterActive = true;
+  teleprompterLastTs = null;
+  teleprompterRestante = 0;
+
+  const btn = document.getElementById("teleprompterPlayBtn");
+  if (btn) {
+    btn.textContent = "⏸";
+    btn.classList.add("active");
+  }
+  bar.classList.add("active");
+
+  const tick = (ts) => {
+    if (!teleprompterActive) return;
+
+    if (teleprompterLastTs !== null) {
+      const dt = (ts - teleprompterLastTs) / 1000;
+
+      // scrollBy redondea a píxeles enteros: a velocidad baja, cada cuadro
+      // mueve una fracción de píxel que solo hace efecto si se acumula
+      teleprompterRestante += getTeleprompterPxPerSecond() * dt;
+
+      const pixelesEnteros = Math.floor(teleprompterRestante);
+      if (pixelesEnteros >= 1) {
+        window.scrollBy(0, pixelesEnteros);
+        teleprompterRestante -= pixelesEnteros;
+      }
+
+      // llegó al final de la página: para solo, no reinicia desde arriba
+      const llegoAlFinal =
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+
+      if (llegoAlFinal) {
+        stopTeleprompter();
+        return;
+      }
+    }
+
+    teleprompterLastTs = ts;
+    teleprompterRAF = requestAnimationFrame(tick);
+  };
+
+  teleprompterRAF = requestAnimationFrame(tick);
+}
+
+function stopTeleprompter() {
+  teleprompterActive = false;
+  teleprompterLastTs = null;
+
+  if (teleprompterRAF) {
+    cancelAnimationFrame(teleprompterRAF);
+    teleprompterRAF = null;
+  }
+
+  const btn = document.getElementById("teleprompterPlayBtn");
+  if (btn) {
+    btn.textContent = "▶";
+    btn.classList.remove("active");
+  }
+
+  document.getElementById("teleprompterBar")?.classList.remove("active");
+}
+
+function adjustTeleprompterSpeed(dir) {
+  teleprompterSpeedMult = Math.min(3, Math.max(0.4, +(teleprompterSpeedMult + dir * 0.1).toFixed(1)));
+
+  const label = document.getElementById("teleprompterSpeedLabel");
+  if (label) label.textContent = teleprompterSpeedMult.toFixed(1) + "x";
 }
 
 

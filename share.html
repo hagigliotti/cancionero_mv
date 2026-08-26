@@ -1,7 +1,7 @@
 <div id="shareModal" class="modal" role="dialog" aria-hidden="true">
   <div class="modal-content share-modal">
 
-    <span class="close" onclick="cerrarShareModal()">&times;</span>
+    <span class="close" data-action="cerrarShareModal">&times;</span>
 
     <h2 class="share-title">🔗 Compartir Cancionero MV</h2>
 
@@ -20,7 +20,7 @@
           value="http://bit.ly/cancionero_mv"
           readonly>
 
-        <button onclick="copyShareLink()">📋 Copiar</button>
+        <button data-action="copyShareLink">📋 Copiar</button>
       </div>
 
       <div class="share-buttons">
