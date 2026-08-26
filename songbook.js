@@ -340,6 +340,7 @@ function openSong(id) {
 `;
 
   applyTablaturaState();
+  applyTeleprompterBarVisibility();
   resetTranspose(); // cada canción arranca en su tonalidad original, sin transposición previa
   window.scrollTo({ top: 0, behavior: "smooth" });
 

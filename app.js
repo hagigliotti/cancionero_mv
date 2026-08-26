@@ -22,6 +22,7 @@ let listaVisible = false;
 let letraActiva = null;
 
 let tablaturaVisible = true;
+let teleprompterBarVisible = true;
 
 // ===================== HELPERS DE LIBROS =====================
 function getLibroDef(id) {
@@ -125,6 +126,13 @@ function initTabButton() {
   if (!btn) return;
 
   btn.addEventListener("click", toggleTablatura);
+}
+
+function initTeleprompterToggleButton() {
+  const btn = document.getElementById("teleprompterToggleBtn");
+  if (!btn) return;
+
+  btn.addEventListener("click", toggleTeleprompterBarVisibility);
 }
 
 
@@ -382,14 +390,14 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=78",
-    "modals/revised.html?v=78",
-    "modals/people.html?v=78",
-    "modals/share.html?v=78",
-    "modals/afinometro.html?v=78",
-    "modals/biblioteca.html?v=78",
-    "modals/listas.html?v=78",
-    "modals/notepad.html?v=78"
+    "modals/info.html?v=79",
+    "modals/revised.html?v=79",
+    "modals/people.html?v=79",
+    "modals/share.html?v=79",
+    "modals/afinometro.html?v=79",
+    "modals/biblioteca.html?v=79",
+    "modals/listas.html?v=79",
+    "modals/notepad.html?v=79"
   ];
 
   for (const path of modales) {
@@ -422,8 +430,14 @@ async function init() {
   const saved = localStorage.getItem("tablatura");
   tablaturaVisible = saved !== "off";
 
+  const savedTeleprompter = localStorage.getItem("teleprompterBar");
+  teleprompterBarVisible = savedTeleprompter !== "off";
+
   initTabButton();
   applyTablaturaState();
+
+  initTeleprompterToggleButton();
+  applyTeleprompterBarVisibility();
 
   // si esto falla (sin conexión y sin caché todavía, un corte pasajero),
   // no debe cortar el resto de init(): sin este try/catch, el buscador, el
@@ -537,6 +551,9 @@ function cambiarLibroActivo(id) {
 
   initTabButton();
   applyTablaturaState();
+
+  initTeleprompterToggleButton();
+  applyTeleprompterBarVisibility();
 }
 
 init();
@@ -727,6 +744,32 @@ function applyTablaturaState() {
 
     btn.classList.remove("on", "off");
     btn.classList.add(tablaturaVisible ? "on" : "off");
+  }
+}
+
+// TELEPRÓNTER - Mostrar / ocultar la barra (mismo patrón que la tablatura)
+function toggleTeleprompterBarVisibility() {
+  teleprompterBarVisible = !teleprompterBarVisible;
+
+  localStorage.setItem("teleprompterBar", teleprompterBarVisible ? "on" : "off");
+
+  applyTeleprompterBarVisibility();
+}
+
+function applyTeleprompterBarVisibility() {
+  const bar = document.getElementById("teleprompterBar");
+  const btn = document.getElementById("teleprompterToggleBtn");
+
+  if (bar) bar.style.display = teleprompterBarVisible ? "" : "none";
+
+  // si se oculta mientras estaba scrolleando, hay que frenarlo (vive en songbook.js)
+  if (!teleprompterBarVisible) stopTeleprompter();
+
+  if (btn) {
+    btn.innerText = teleprompterBarVisible ? "Ocultar" : "Mostrar";
+
+    btn.classList.remove("on", "off");
+    btn.classList.add(teleprompterBarVisible ? "on" : "off");
   }
 }
 

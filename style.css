@@ -1193,7 +1193,7 @@ body.projector .teleprompter-bar {
 .tab-btn.on  { background: var(--green);  color: #fff; border-color: var(--green); }
 .tab-btn.off { background: var(--red);    color: #fff; border-color: var(--red); }
 
-#tabBtn {
+.menu-toggle-btn {
   margin-left: 8px;
   padding: 4px 14px;
   border-radius: var(--radius-xl);
