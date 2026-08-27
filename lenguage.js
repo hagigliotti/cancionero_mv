@@ -292,36 +292,66 @@ function updateLangFlag() {
 // ===============================================================================================
 // ===================== FLAGS POR CANCION ======================================================
 
+// agrupa las banderas en filas (hasta 4 por fila; 5 si son más de 8 en
+// total, para no dejar una última fila casi vacía) — con 4 o menos entra
+// todo en una sola fila, como siempre
+function chunkFlagRows(langs) {
+  const rowSize = langs.length > 8 ? 5 : 4;
+  const rows = [];
+  for (let i = 0; i < langs.length; i += rowSize) rows.push(langs.slice(i, i + rowSize));
+  return rows;
+}
+
+function wrapFlagRows(langs, flagHtml) {
+  const rows = chunkFlagRows(langs);
+  if (rows.length <= 1) return langs.map(flagHtml).join("");
+  return rows.map(row => `<span class="flags-row">${row.map(flagHtml).join("")}</span>`).join("");
+}
+
+// nota (♪) chica pegada a la bandera, solo si ESE idioma tiene audio propio
+// (audio_url puede variar de un idioma a otro dentro de la misma canción)
+function audioNoteHtml(idiomaData) {
+  return idiomaData?.audio_url ? `<span class="flag-audio-note">♪</span>` : "";
+}
+
 // Devuelve banderas disponibles (versión compacta para listas)
 function getAvailableFlags(song) {
   const idiomas = song.idiomas || {};
 
-  return Object.keys(idiomas)
+  const langs = Object.keys(idiomas)
     .filter(lang => idiomas[lang])
-    .sort((a, b) => (FLAG_NAMES[a] || a).localeCompare(FLAG_NAMES[b] || b))
-    .map(lang => `
-      <span ${dataAction("changeLanguage", [lang, song.id])}
-            style="cursor:pointer">
-        ${getFlagEmoji(lang)}
-      </span>
-    `)
-    .join(" ");
+    .sort((a, b) => (FLAG_NAMES[a] || a).localeCompare(FLAG_NAMES[b] || b));
+
+  return wrapFlagRows(langs, lang => `
+    <span ${dataAction("changeLanguage", [lang, song.id])}
+          title="${IDIOMA_NOMBRES[lang] || lang}"
+          style="cursor:pointer; margin-right:6px;">
+      ${getFlagEmoji(lang)}
+    </span>
+  `);
 }
 
 
-// Devuelve banderas con estilo (UI más completa)
-function renderLanguageFlags(song) {
+// Devuelve banderas con estilo (UI más completa). mostrarNotaAudio: la ♪
+// solo se pide desde el listado por letra/número (ver renderList en
+// songbook.js) — en la canción abierta y en el rango de himnos no se muestra
+function renderLanguageFlags(song, mostrarNotaAudio = false) {
   const idiomas = song.idiomas || {};
 
-  return Object.keys(idiomas)
+  const langs = Object.keys(idiomas)
     .filter(lang => idiomas[lang]?.titulo)
-    .sort((a, b) => (FLAG_NAMES[a] || a).localeCompare(FLAG_NAMES[b] || b))
-    .map(lang => `
-      <span class="flag ${lang === idiomaActual ? "active" : ""}"
-            ${dataAction("changeLanguage", [lang, song.id])}>
-        ${getFlagEmoji(lang)}
-      </span>
-    `).join("");
+    .sort((a, b) => (FLAG_NAMES[a] || a).localeCompare(FLAG_NAMES[b] || b));
+
+  // la bandera va en su propio span (.flag-emoji) separado de la nota de
+  // audio: así el subrayado de "activo" (border-bottom) queda solo debajo
+  // de la bandera, no estirado también debajo de la ♪
+  return wrapFlagRows(langs, lang => `
+    <span class="flag ${lang === idiomaActual ? "active" : ""}"
+          ${dataAction("changeLanguage", [lang, song.id])}
+          title="${IDIOMA_NOMBRES[lang] || lang}">
+      <span class="flag-emoji">${getFlagEmoji(lang)}</span>${mostrarNotaAudio ? audioNoteHtml(idiomas[lang]) : ""}
+    </span>
+  `);
 }
 
 

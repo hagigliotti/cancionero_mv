@@ -730,7 +730,7 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 /* riel estilo "Contactos": arrastrás el dedo y salta de letra */
@@ -793,7 +793,7 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
 }
 
 #indice li {
-  padding: 12px 16px;
+  padding: 8px 16px;
   border-radius: var(--radius-md);
   cursor: pointer;
   transition: var(--trans);
@@ -1418,6 +1418,7 @@ body.dark-mode.projector .teleprompter-bar {
 .flags {
   margin-top: 8px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
   font-size: 1.3em;
@@ -1436,9 +1437,31 @@ body.dark-mode.projector .teleprompter-bar {
 
 .flag:hover { opacity: 1; transform: scale(1.2); }
 
-.flag.active {
-  opacity: 1;
+.flag.active { opacity: 1; }
+
+/* el subrayado de "idioma activo" va solo debajo de la bandera en sí, no
+   debajo de la notita de audio (♪) que puede ir pegada al lado) */
+.flag.active .flag-emoji {
   border-bottom: 2px solid var(--sky);
+}
+
+/* cuando una canción tiene muchos idiomas, las banderas se agrupan en más
+   de una fila (ver chunkFlagRows en lenguage.js) — cada fila es su propio
+   bloque, así se apilan en vez de amontonarse en una sola línea larga */
+.flags-row {
+  display: flex;
+  align-items: center;
+}
+
+.flags .flags-row { flex-basis: 100%; }
+
+/* nota (♪) chica pegada a una bandera puntual: indica que ESE idioma en
+   particular tiene audio propio (audio_url), no toda la canción */
+.flag-audio-note {
+  font-size: 0.5em;
+  vertical-align: super;
+  margin-left: 1px;
+  opacity: 0.85;
 }
 
 .lang-flags-list {

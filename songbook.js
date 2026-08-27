@@ -444,7 +444,7 @@ function renderList(letter) {
       <div style="display:flex; justify-content:space-between; align-items:center;">
         <span>${item.displayTitle}</span>
         <span style="opacity:0.7; font-size:14px;">
-          ${renderLanguageFlags(item.song)}
+          ${renderLanguageFlags(item.song, true)}
         </span>
       </div>
     </li>
