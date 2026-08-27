@@ -31,6 +31,24 @@ const FLAG_NAMES = {
   is: "Islandés"
 };
 
+// Nombre del IDIOMA en sí (no del país) — para listar "en qué idiomas hay
+// canciones" (ver abrirValoresModal("idioma") en app.js). Cubre todos los
+// códigos que aparecen realmente en los datos, incluidos los que no están
+// en el selector rápido de arriba (hebreo, zulú, etc.)
+const IDIOMA_NOMBRES = {
+  es: "Español",
+  en: "English",
+  it: "Italiano",
+  pt: "Português",
+  gn: "Guaraní",
+  fr: "Francés",
+  he: "Hebreo",
+  zu: "Zulú",
+  af: "Afrikáans",
+  sw: "Suajili",
+  is: "Islandés"
+};
+
 // ===============================================================================================
 // ===================== BANDERA POR PAÍS (personalización, NO cambia el idioma) =================
 // El idioma del contenido (letra, tablatura, índice) sigue siendo uno solo por código

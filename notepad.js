@@ -123,7 +123,7 @@ async function npMostrarLista() {
   npCurrentId = null;
 
   npRecordings = await npGetAll();
-  npRecordings.sort((a, b) => b.createdAt - a.createdAt);
+  npRecordings.sort((a, b) => a.nombre.localeCompare(b.nombre, "es", { sensitivity: "base" }));
 
   const cont = document.getElementById("npList");
   const rail = document.getElementById("npListRail");

@@ -1593,6 +1593,8 @@ function renderPentaRootGrid() {
 
   updatePentaNotesDisplay();
   updateScaleFullDisplay();
+  updateChromaticScaleDisplay();
+  updateHarmonicMinorDisplay();
 }
 
 function selectPentaRoot(note, btnEl) {
@@ -1603,6 +1605,8 @@ function selectPentaRoot(note, btnEl) {
 
   updatePentaNotesDisplay();
   updateScaleFullDisplay();
+  updateChromaticScaleDisplay();
+  updateHarmonicMinorDisplay();
 }
 
 function selectPentaType(type, btnEl) {
@@ -1658,11 +1662,13 @@ function updateScaleFullDisplay() {
 
   const notes = spellScale(selectedPentaRoot, intervals);
 
-  el.innerText = `${rootLabel} ${typeLabel} completa — ${notes.join(" · ")}`;
+  el.innerText = `Escala diatónica: ${rootLabel} ${typeLabel} — ${notes.join(" · ")}`;
 }
 
-async function playFullScale() {
-
+// toca una lista de intervalos (semitonos desde la raíz elegida en Escalas),
+// uno tras otro — usado por las cuatro escalas de esta pestaña (completa,
+// cromática, y ahora menor armónica) para no repetir el mismo motor 3 veces
+async function playScaleIntervals(intervals, noteDuration = 0.26, gap = 0.22) {
   audioCtx =
     audioCtx || new (window.AudioContext || window.webkitAudioContext)();
 
@@ -1670,12 +1676,8 @@ async function playFullScale() {
     await audioCtx.resume();
   }
 
-  const intervals = selectedPentaType === "menor" ? MINOR_SCALE_INTERVALS : MAJOR_SCALE_INTERVALS;
   const rootFreq = noteToFreq(selectedPentaRoot, 4);
-
   const now = audioCtx.currentTime;
-  const noteDuration = 0.26;
-  const gap = 0.22;
 
   intervals.forEach((semitones, i) => {
     const freq = rootFreq * Math.pow(2, semitones / 12);
@@ -1698,6 +1700,11 @@ async function playFullScale() {
   });
 }
 
+async function playFullScale() {
+  const intervals = selectedPentaType === "menor" ? MINOR_SCALE_INTERVALS : MAJOR_SCALE_INTERVALS;
+  await playScaleIntervals(intervals);
+}
+
 function getPentaNoteNames(root, type) {
   const formula = PENTATONIC_FORMULAS[type] || PENTATONIC_FORMULAS.mayor;
   const rootIdx = NOTE_STRINGS.indexOf(root);
@@ -1716,44 +1723,57 @@ function updatePentaNotesDisplay() {
   const rootLabel = NOTE_LABELS[selectedPentaRoot].split("/")[0];
   const names = getPentaNoteNames(selectedPentaRoot, selectedPentaType);
 
-  el.innerText = `${rootLabel} pentatónica ${formula.label} — ${names.join(" · ")}`;
+  el.innerText = `Escala pentatónica: ${rootLabel} ${formula.label} — ${names.join(" · ")}`;
+}
+
+// ===== ESCALA CROMÁTICA (los 12 semitonos desde la raíz) — no depende de
+// Mayor/menor, así que solo se recalcula cuando cambia la raíz =====
+function getChromaticNoteNames(root) {
+  const rootIdx = NOTE_STRINGS.indexOf(root);
+
+  return Array.from({ length: 12 }, (_, i) => {
+    const idx = (rootIdx + i) % 12;
+    return NOTE_LABELS[NOTE_STRINGS[idx]].split("/")[0];
+  });
+}
+
+function updateChromaticScaleDisplay() {
+  const el = document.getElementById("chromaticNotesLabel");
+  if (!el) return;
+
+  const rootLabel = NOTE_LABELS[selectedPentaRoot].split("/")[0];
+  const names = getChromaticNoteNames(selectedPentaRoot);
+
+  el.innerText = `Escala cromática: ${rootLabel} — ${names.join(" · ")}`;
+}
+
+async function playChromaticScale() {
+  const intervals = Array.from({ length: 12 }, (_, i) => i);
+  await playScaleIntervals(intervals, 0.2, 0.16);
+}
+
+// ===== ESCALA MENOR ARMÓNICA — menor natural con la 7ma subida, es la que
+// le da ese aire "solemne"/oriental a ciertos himnos en tonalidad menor.
+// No depende del selector Mayor/menor: es siempre una escala menor =====
+const HARMONIC_MINOR_INTERVALS = [0, 2, 3, 5, 7, 8, 11];
+
+function updateHarmonicMinorDisplay() {
+  const el = document.getElementById("harmonicMinorLabel");
+  if (!el) return;
+
+  const rootLabel = NOTE_LABELS[selectedPentaRoot].split("/")[0];
+  const notes = spellScale(selectedPentaRoot, HARMONIC_MINOR_INTERVALS);
+
+  el.innerText = `Escala menor armónica: ${rootLabel} — ${notes.join(" · ")}`;
+}
+
+async function playHarmonicMinorScale() {
+  await playScaleIntervals(HARMONIC_MINOR_INTERVALS);
 }
 
 async function playPentaScale() {
-
-  audioCtx =
-    audioCtx || new (window.AudioContext || window.webkitAudioContext)();
-
-  if (audioCtx.state === "suspended") {
-    await audioCtx.resume();
-  }
-
   const formula = PENTATONIC_FORMULAS[selectedPentaType] || PENTATONIC_FORMULAS.mayor;
-  const rootFreq = noteToFreq(selectedPentaRoot, 4);
-
-  const now = audioCtx.currentTime;
-  const noteDuration = 0.32;
-  const gap = 0.28;
-
-  formula.intervals.forEach((semitones, i) => {
-    const freq = rootFreq * Math.pow(2, semitones / 12);
-    const start = now + i * gap;
-
-    const osc = audioCtx.createOscillator();
-    const gain = audioCtx.createGain();
-
-    osc.type = "sine";
-    osc.frequency.value = freq;
-
-    gain.gain.setValueAtTime(0.35, start);
-    gain.gain.exponentialRampToValueAtTime(0.001, start + noteDuration);
-
-    osc.connect(gain);
-    gain.connect(audioCtx.destination);
-
-    osc.start(start);
-    osc.stop(start + noteDuration);
-  });
+  await playScaleIntervals(formula.intervals, 0.32, 0.28);
 }
 
 

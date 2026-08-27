@@ -149,6 +149,8 @@ function getPersonLabel(tipo) {
       return "✍🏼 Compositor";
     case "traductor":
       return "🌎 Traductor";
+    case "tags":
+      return "🏷️ Tag";
     default:
       return "🎭 Persona";
   }
@@ -299,7 +301,10 @@ function renderListModal({ title, list, icon }) {
   });
 }
 
-function renderPeopleModal({ title, list, icon }) {
+// onSelect (opcional): fábrica song => callback para el click de cada fila.
+// Por defecto abre la canción tal cual (openSong); abrirIdiomaSongsModal la
+// pisa para abrir en el idioma elegido en vez del idioma activo
+function renderPeopleModal({ title, list, icon, onSelect }) {
   const cont = document.getElementById("peopleModalLista");
   const titleEl = document.getElementById("peopleModalTitle");
   const badgeEl = document.getElementById("peopleModalBadge");
@@ -312,10 +317,10 @@ function renderPeopleModal({ title, list, icon }) {
   const sorted = sortSongsByTitle(list);
   if (countEl) countEl.textContent = sorted.length;
 
-  renderSongRows(sorted, cont, cont, railEl, song => () => {
+  renderSongRows(sorted, cont, cont, railEl, onSelect || (song => () => {
     cerrarPeopleModal();
     openSong(song.id);
-  });
+  }));
 }
 
 // Biblioteca modal
@@ -390,14 +395,15 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=98",
-    "modals/revised.html?v=98",
-    "modals/people.html?v=98",
-    "modals/share.html?v=98",
-    "modals/afinometro.html?v=98",
-    "modals/biblioteca.html?v=98",
-    "modals/listas.html?v=98",
-    "modals/notepad.html?v=98"
+    "modals/info.html?v=104",
+    "modals/revised.html?v=104",
+    "modals/people.html?v=104",
+    "modals/valores.html?v=104",
+    "modals/share.html?v=104",
+    "modals/afinometro.html?v=104",
+    "modals/biblioteca.html?v=104",
+    "modals/listas.html?v=104",
+    "modals/notepad.html?v=104"
   ];
 
   for (const path of modales) {
@@ -1465,7 +1471,8 @@ function renderMisListas() {
   const cont = document.getElementById("listasContainer");
   if (!cont) return;
 
-  const ids = Object.keys(misListas);
+  const ids = Object.keys(misListas)
+    .sort((a, b) => misListas[a].name.localeCompare(misListas[b].name, "es", { sensitivity: "base" }));
 
   if (!ids.length) {
     cont.innerHTML = `<p class="biblio-empty">Todavía no creaste ninguna lista — escribí un nombre arriba y tocá "+ Crear".</p>`;
@@ -1537,6 +1544,127 @@ function openPersonModal(nombre, tipo) {
   abrirPeopleModal();
 }
 
+// ===================== LISTADO DE VALORES (Autores/Compositores/Coautores/Tags) =====================
+// se abre desde Información de la app — muestra todos los valores distintos
+// de ese campo (en el libro activo, mismo alcance que openPersonModal, para
+// que lo que se lista acá siempre tenga resultado al elegirlo) con cuántas
+// canciones tiene cada uno; elegir uno abre el listado de canciones (peopleModal)
+function getDistinctValues(tipo) {
+  const data = getDataActual();
+  const counts = new Map();
+
+  if (tipo === "idioma") {
+    // caso especial: song.idiomas es un objeto { es: {...}, he: {...} },
+    // no un array como autor/compositor/coautor/tags
+    data.forEach(song => {
+      Object.keys(song.idiomas || {}).forEach(codigo => {
+        counts.set(codigo, (counts.get(codigo) || 0) + 1);
+      });
+    });
+
+    return [...counts.entries()]
+      .map(([codigo, count]) => ({ nombre: IDIOMA_NOMBRES[codigo] || codigo, codigo, count }))
+      .sort((a, b) => a.nombre.localeCompare(b.nombre, "es", { sensitivity: "base" }));
+  }
+
+  data.forEach(song => {
+    normalizeArrayField(song[tipo]).forEach(valor => {
+      const limpio = (valor || "").toString().trim();
+      if (!limpio) return;
+      counts.set(limpio, (counts.get(limpio) || 0) + 1);
+    });
+  });
+
+  return [...counts.entries()]
+    .map(([nombre, count]) => ({ nombre, count }))
+    .sort((a, b) => a.nombre.localeCompare(b.nombre, "es", { sensitivity: "base" }));
+}
+
+const VALORES_TITULO_PLURAL = { autor: "Autores", coautor: "Coautores", compositor: "Compositores", tags: "Tags", idioma: "Idiomas" };
+
+function renderValoresModal(tipo) {
+  const cont = document.getElementById("valoresModalLista");
+  const titleEl = document.getElementById("valoresModalTitle");
+  const badgeEl = document.getElementById("valoresModalBadge");
+  const countEl = document.getElementById("valoresModalCount");
+  const railEl = document.getElementById("valoresModalRail");
+  if (!cont) return;
+
+  const icon = tipo === "idioma" ? "🌐" : getPersonLabel(tipo).split(" ")[0];
+
+  titleEl.innerText = VALORES_TITULO_PLURAL[tipo] || "Listado";
+  if (badgeEl) badgeEl.textContent = icon;
+
+  const valores = getDistinctValues(tipo);
+  if (countEl) countEl.textContent = valores.length;
+
+  cont.innerHTML = "";
+
+  if (!valores.length) {
+    cont.innerHTML = `<p class="biblio-empty">No hay datos para mostrar</p>`;
+    railEl?.classList.add("hidden");
+    return;
+  }
+
+  const letrasVistas = [];
+
+  valores.forEach(({ nombre, codigo, count }) => {
+    const letra = getIndexLetter(nombre);
+    if (!letrasVistas.includes(letra)) letrasVistas.push(letra);
+
+    const filaIcon = tipo === "idioma" ? getFlagEmoji(codigo) : icon;
+
+    const div = document.createElement("div");
+    div.className = "song-row";
+    div.dataset.letter = letra;
+    div.innerHTML = `
+      <span class="song-row-icon">${filaIcon}</span>
+      <span class="song-row-title">${escapeHtml(nombre)}</span>
+      <span class="valor-count">${count}</span>
+    `;
+    div.addEventListener("click", () => {
+      cerrarValoresModal();
+      if (tipo === "idioma") {
+        abrirIdiomaSongsModal(codigo, nombre);
+      } else {
+        openPersonModal(nombre, tipo);
+      }
+    });
+    cont.appendChild(div);
+  });
+
+  renderModalLetterRail(cont, railEl, letrasVistas);
+}
+
+// listado de canciones en un idioma puntual (elegido desde el chip
+// "Idiomas") — a diferencia de autor/compositor/etc., acá elegir una
+// canción la abre YA en ese idioma (changeLanguage), no en el idioma activo
+function abrirIdiomaSongsModal(codigo, nombreIdioma) {
+  const filtradas = getDataActual().filter(song => !!(song.idiomas && song.idiomas[codigo]));
+
+  renderPeopleModal({
+    icon: getFlagEmoji(codigo),
+    title: `Idioma: ${nombreIdioma}`,
+    list: filtradas,
+    onSelect: song => () => {
+      cerrarPeopleModal();
+      changeLanguage(codigo, song.id);
+    }
+  });
+
+  abrirPeopleModal();
+}
+
+function abrirValoresModal(tipo) {
+  cerrarInfo();
+  renderValoresModal(tipo);
+  document.getElementById("valoresModal").style.display = "block";
+}
+
+function cerrarValoresModal() {
+  document.getElementById("valoresModal").style.display = "none";
+}
+
 
 // =====================================================
 // ESTADÍSTICAS DEL CANCIONERO
@@ -1558,7 +1686,9 @@ function actualizarEstadisticas() {
   let traducidas = 0;
 
   // ------------------------------------
-  // Idiomas utilizados
+  // Idiomas utilizados (todos los que aparezcan en los datos, no solo los
+  // del selector rápido #idioma — canciones sueltas en hebreo, zulú, etc.
+  // también cuentan y se pueden explorar desde el chip "Idiomas")
   // ------------------------------------
   const idiomas = new Set();
 

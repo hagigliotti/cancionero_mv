@@ -1717,6 +1717,40 @@ body.light-mode .toast {
 
 .dark-mode .stat-chip span { color: var(--gray-500); }
 
+#statIdiomasChip { cursor: pointer; }
+#statIdiomasChip:hover { background: rgba(255,255,255,0.09); }
+.dark-mode #statIdiomasChip:hover { background: var(--gray-100); }
+
+/* fila de filtros chicos (Autores/Compositores/Coautores/Tags) — más finos
+   y angostos que los .stat-chip de arriba, a propósito: son navegación, no
+   estadísticas */
+.about-mini-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 22px 18px;
+  flex-shrink: 0;
+}
+
+.mini-stat-chip {
+  flex: 1 1 auto;
+  padding: 5px 10px;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.05);
+  color: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  touch-action: manipulation;
+}
+
+.dark-mode .mini-stat-chip { background: var(--gray-50); border-color: var(--gray-100); }
+.mini-stat-chip:hover { background: rgba(255,255,255,0.09); }
+.dark-mode .mini-stat-chip:hover { background: var(--gray-100); }
+
 .about-body {
   flex: 1;
   min-height: 0;
@@ -2259,6 +2293,18 @@ body.scrolled .fav-add-btn { font-size: 15px; }
 
 .song-row .fav-add-btn { font-size: 15px; }
 
+.valor-count {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0.55;
+  padding: 2px 7px;
+  border-radius: var(--radius-xl);
+  background: rgba(255,255,255,0.06);
+}
+
+.dark-mode .valor-count { background: var(--gray-100); }
+
 /* riel de letras propio de estos modales: siempre visible al costado de la
    lista (no hace falta position:sticky, la lista scrollea sola, el riel no) */
 .modal-letter-rail {
@@ -2604,7 +2650,7 @@ body.light-mode .chord-popover { background: #1e293b; color: #fff; }
 
 .fifths-legend small {
   display: block;
-  font-size: 9px;
+  font-size: 11.5px;
   font-weight: 600;
 }
 
@@ -2647,12 +2693,20 @@ body.light-mode .chord-popover { background: #1e293b; color: #fff; }
 .scale-full-row {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 8px;
   margin-top: 2px;
 }
 
-.scale-full-label { margin-top: 0; opacity: 0.65; font-size: 12px; }
+/* escala a la izquierda, botón de play siempre a la derecha (sin importar
+   si el texto de la escala ocupa una o dos líneas) */
+.scale-full-row .chord-notes-display {
+  text-align: left;
+  flex: 1;
+  margin-top: 0;
+}
+
+.scale-full-label { opacity: 0.65; font-size: 12px; }
 
 .scale-mini-play {
   flex-shrink: 0;

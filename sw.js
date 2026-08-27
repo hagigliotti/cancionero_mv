@@ -8,7 +8,7 @@
 
 // 👉 Subir este número cada vez que cambie la lista de archivos de abajo
 // (o cuando quieras forzar que todos descarten la caché vieja).
-const CACHE_VERSION = "v98";
+const CACHE_VERSION = "v104";
 
 const APP_SHELL_CACHE = `cancionero-shell-${CACHE_VERSION}`;
 const DATA_CACHE = `cancionero-data-${CACHE_VERSION}`;
@@ -16,32 +16,32 @@ const DATA_CACHE = `cancionero-data-${CACHE_VERSION}`;
 const APP_SHELL_FILES = [
   "./",
   "index.html",
-  "style.css?v=98",
-  "notepad.css?v=98",
-  "manifest.webmanifest?v=98",
+  "style.css?v=104",
+  "notepad.css?v=104",
+  "manifest.webmanifest?v=104",
 
-  "lenguage.js?v=98",
-  "utils.js?v=98",
-  "theme.js?v=98",
-  "afinometro.js?v=98",
-  "app.js?v=98",
-  "songbook.js?v=98",
-  "notepad.js?v=98",
+  "lenguage.js?v=104",
+  "utils.js?v=104",
+  "theme.js?v=104",
+  "afinometro.js?v=104",
+  "app.js?v=104",
+  "songbook.js?v=104",
+  "notepad.js?v=104",
 
-  "modals/info.html?v=98",
-  "modals/revised.html?v=98",
-  "modals/people.html?v=98",
-  "modals/share.html?v=98",
-  "modals/afinometro.html?v=98",
-  "modals/biblioteca.html?v=98",
-  "modals/listas.html?v=98",
-  "modals/notepad.html?v=98",
+  "modals/info.html?v=104",
+  "modals/revised.html?v=104",
+  "modals/people.html?v=104",
+  "modals/share.html?v=104",
+  "modals/afinometro.html?v=104",
+  "modals/biblioteca.html?v=104",
+  "modals/listas.html?v=104",
+  "modals/notepad.html?v=104",
 
-  "imagenes/icons/favicon-16.png?v=98",
-  "imagenes/icons/favicon-32.png?v=98",
-  "imagenes/icons/apple-touch-icon.png?v=98",
-  "imagenes/icons/icon-192.png?v=98",
-  "imagenes/icons/icon-512.png?v=98",
+  "imagenes/icons/favicon-16.png?v=104",
+  "imagenes/icons/favicon-32.png?v=104",
+  "imagenes/icons/apple-touch-icon.png?v=104",
+  "imagenes/icons/icon-192.png?v=104",
+  "imagenes/icons/icon-512.png?v=104",
 
   "imagenes/Cancionero_blue.png",
   "imagenes/Cancionero_white.png",
