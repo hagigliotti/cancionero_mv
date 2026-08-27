@@ -1,0 +1,22 @@
+<!-- ============================================================
+     LISTADO DE VALORES (Autores / Compositores / Coautores / Tags)
+     — se abre desde Información de la app; elegir un valor lleva
+     al listado de canciones de ese autor/tag (peopleModal, ya existente)
+     ============================================================ -->
+<div id="valoresModal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="valoresModalTitle">
+  <div class="modal-content about-modal">
+
+    <div class="about-head">
+      <button type="button" class="about-close" data-action="cerrarValoresModal" aria-label="Cerrar">✕</button>
+      <div class="about-badge" id="valoresModalBadge">👤</div>
+      <h2 id="valoresModalTitle">Listado</h2>
+      <div class="about-meta"><span id="valoresModalCount">0</span> en total — tocá uno para ver sus canciones</div>
+    </div>
+
+    <div class="modal-body-wrap">
+      <div id="valoresModalLista" class="about-body biblio-list song-list"></div>
+      <div class="modal-letter-rail hidden" id="valoresModalRail"></div>
+    </div>
+
+  </div>
+</div>

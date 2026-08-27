@@ -11,7 +11,14 @@
     <div class="about-stats">
       <div class="stat-chip"><b id="totalCanciones">...</b><span>Canciones</span></div>
       <div class="stat-chip"><b id="totalTraducidas">...</b><span>Traducidas</span></div>
-      <div class="stat-chip"><b id="totalIdiomas">...</b><span>Idiomas</span></div>
+      <div class="stat-chip" id="statIdiomasChip" data-action="abrirValoresModal" data-args='["idioma"]' title="Tocá para ver cuáles y explorar canciones"><b id="totalIdiomas">...</b><span>Idiomas</span></div>
+    </div>
+
+    <div class="about-mini-stats">
+      <button type="button" class="mini-stat-chip" data-action="abrirValoresModal" data-args='["autor"]'>Autores</button>
+      <button type="button" class="mini-stat-chip" data-action="abrirValoresModal" data-args='["compositor"]'>Compositores</button>
+      <button type="button" class="mini-stat-chip" data-action="abrirValoresModal" data-args='["coautor"]'>Coautores</button>
+      <button type="button" class="mini-stat-chip" data-action="abrirValoresModal" data-args='["tags"]'>Tags</button>
     </div>
 
     <div class="about-body">
@@ -59,6 +66,97 @@
         <div class="about-panel">
           <p>El <strong>Cancionero MV</strong> es una aplicación web pensada para músicos, equipos de alabanza y directores de canto: reúne cancionero, himnario y cantos de campamento en un solo lugar, con acordes, tonalidad, tiempo y todo lo necesario para tocar o dirigir una canción sin depender de varios PDFs o cuadernos sueltos.</p>
           <p>Sirve tanto para el uso personal — practicar, afinar el instrumento, transportar una canción a otra tonalidad — como para el momento en vivo: en el atril, en el ensayo, o proyectada en la pantalla durante el servicio.</p>
+        </div>
+      </details>
+
+      <details class="about-section">
+        <summary>
+          <span class="sec-icon">✨</span>
+          Funcionalidades — guía completa
+          <span class="sec-chevron">▸</span>
+        </summary>
+        <div class="about-panel">
+
+          <p><strong>📖 Buscar y elegir una canción</strong></p>
+          <ul>
+            <li><strong>Libro</strong> (menú ☰ → Ajustes): cambia entre Cancionero, Himnario Adventista y Cantos de Campamento.</li>
+            <li><strong>Buscador</strong> (lupa, arriba): busca a la vez por título, letra, autor, compositor, año, ritmo o etiquetas — no hace falta escribir el nombre exacto de la canción.</li>
+            <li><strong>Barra de letras</strong> (A, B, C...): abre la lista de canciones que empiezan con esa letra. En el Himnario también se puede ubicar una canción por su número de himno.</li>
+            <li><strong>⭐ (estrella)</strong> junto a cualquier canción de una lista: la agrega o saca de "Mis Listas" sin necesidad de abrirla primero.</li>
+          </ul>
+
+          <p><strong>🎸 Letra, acordes y tonalidad</strong></p>
+          <ul>
+            <li><strong>Tablatura</strong> — Mostrar/Ocultar (Ajustes → Tablatura): muestra u oculta las letras de los acordes (Do, Re7, Sol...) escritas arriba de la letra de la canción. Se apaga si solo se quiere ver el texto, sin distracciones.</li>
+            <li><strong>Tocar un acorde:</strong> tocando cualquier acorde escrito sobre la letra se escucha su sonido, y — según cómo esté configurado el diagrama de acordes — se abre una ventanita mostrando cómo hacerlo.</li>
+            <li><strong>Diagrama de acordes</strong> — selector Ninguno / Piano / Guitarra / Bajo / Ukelele (Ajustes → Diagrama de acordes): elige en qué instrumento se muestra ese diagrama al tocar un acorde. Con "Ninguno" la ventanita no aparece (el acorde igual suena) — útil para solo escuchar sin que la letra quede tapada.</li>
+            <li><strong>Trasporte</strong> — Activo/Inactivo (Ajustes → Trasporte): si la canción fue transportada a otra tonalidad, este interruptor decide si el sonido y el diagrama que aparecen al tocar un acorde siguen esa nueva tonalidad (<em>Activo</em>, recomendado — es lo que realmente se está cantando) o si siempre muestran el acorde tal cual está escrito originalmente en la canción (<em>Inactivo</em>).</li>
+            <li><strong>Transponer tonalidad</strong> ♭ ♮ ♯ (Ajustes → Transponer tonalidad): sube o baja toda la canción medio tono por vez, sin perder de vista en qué tonalidad estaba escrita originalmente. El botón ♮ vuelve todo a como estaba.</li>
+            <li><strong>Tamaño de letra</strong> A- A A+ (Ajustes → Tamaño de letra): agranda o achica el texto de la canción en pantalla.</li>
+            <li>Si la canción tiene una grabación de referencia, aparece un botón de <strong>Audio</strong> (Spotify, YouTube o Apple Music) para escucharla.</li>
+            <li>Si tiene una cita bíblica asociada, aparece con un enlace directo al pasaje.</li>
+            <li>Si está traducida a otro idioma, se puede cambiar el idioma de esa canción puntual con la banderita 🌐 (mantenida presionada abre el selector completo; con un toque rápido pasa al próximo idioma disponible).</li>
+          </ul>
+
+          <div class="callout">
+            💡 <strong>Tablatura, Diagrama de acordes y Trasporte son tres cosas distintas:</strong> Tablatura muestra u oculta el <em>nombre</em> del acorde sobre la letra; Diagrama de acordes controla si al tocarlo aparece <em>cómo hacerlo</em> en un instrumento; Trasporte decide si eso sigue o no la tonalidad transportada.
+          </div>
+
+          <p><strong>📜 Teleprónter</strong> — Mostrar/Ocultar (Ajustes → Teleprónter)</p>
+          <ul>
+            <li>Muestra u oculta la barra que hace scroll automático de la letra, para leer con las manos libres mientras se toca o canta — con botón de play/pausa y control de velocidad.</li>
+          </ul>
+
+          <p><strong>📽️ Modo iglesia / Proyector</strong> — Activo/Inactivo (menú → Modo iglesia → Proyector)</p>
+          <ul>
+            <li>Solo disponible en tablet, PC o Mac (no en celulares). Cambia a una vista simplificada de letra gigante, pensada para proyectar en pantalla durante el servicio.</li>
+            <li>Arranca siempre en oscuro (fondo negro); si se prefiere fondo claro, el botón de tema (🕶️) también funciona en este modo — y la app recuerda esa elección la próxima vez que se active el proyector, por separado del tema que se use normalmente en el celular.</li>
+          </ul>
+
+          <p><strong>⭐ Mis Listas</strong> (menú → Mis Listas, o tocando la ⭐ de cualquier canción)</p>
+          <ul>
+            <li>Arma repertorios propios (ej. "Retiro enero", "Grupos pequeños", "Escuela Sabática", "Culto de sábado", "Sociedad de jóvenes", etc.) con las canciones que se quiera, en el orden que se quiera.</li>
+            <li><strong>Exportar / Importar:</strong> descarga las listas a un archivo para tener un respaldo o pasarlas a otro celular o computadora, e importarlas de nuevo cuando haga falta.</li>
+          </ul>
+
+          <p><strong>📟 Metrónomo y Afinador</strong> (menú → Metrónomo y Afinador)</p>
+          <ul>
+            <li><strong>Afinador:</strong> usa el micrófono para detectar qué nota se está tocando o cantando, con presets para Guitarra, Bajo, Violín y Ukelele (o "General" para cualquier nota), y calibración del La4 (440Hz por defecto, ajustable si un coro u orquesta afina distinto).</li>
+            <li><strong>Metrónomo:</strong> click configurable con más de diez compases (de 1/4 a 7/4 y de 1/8 a 7/8), subdivisiones (negra, corcheas, tresillo, semicorcheas), acento en el tiempo que se elija, y "Tap tempo" para marcar el ritmo tocando con el dedo en vez de escribir el BPM a mano.</li>
+            <li><strong>Reproducir nota:</strong> toca una nota en el piano (o en los botones) para escuchar su sonido exacto — con su frecuencia en Hz — en la octava elegida.</li>
+            <li><strong>Reproducir acorde:</strong> elegí una raíz y una calidad de acorde (mayor, menor, séptima, etc.) para escucharlo y ver su diagrama en el instrumento elegido (mismo selector que el de la letra de las canciones).</li>
+            <li><strong>Escalas:</strong> elegí una tonalidad para escuchar su escala completa y su versión pentatónica, con el detalle de las notas de cada una.</li>
+            <li><strong>Círculo de quintas:</strong> círculo interactivo de tonalidades — tocalo para escuchar una tonalidad y ver sus acordes diatónicos (los que "quedan bien" en esa tonalidad).</li>
+          </ul>
+
+          <p><strong>📚 Biblioteca</strong> (menú → Biblioteca)</p>
+          <ul>
+            <li>Recursos descargables de uso general — no ligados a una canción en particular: partituras, libros, audios y videos, con sus créditos y permisos de uso cuando corresponde.</li>
+          </ul>
+
+          <p><strong>🎙️ Bloc musical</strong> (menú → Bloc musical)</p>
+          <ul>
+            <li>Grabador de ideas musicales: graba con el micrófono (se ve la forma de onda de lo grabado), escribí la letra y acordes al lado, anotá tonalidad, ritmo y BPM.</li>
+            <li>Cada grabación se puede descargar, y todas juntas se pueden exportar/importar igual que Mis Listas, para pasarlas a otro dispositivo.</li>
+            <li>Todo queda guardado únicamente en el dispositivo — nada se sube a internet, y el micrófono nunca graba sin que se toque el botón correspondiente.</li>
+          </ul>
+
+          <p><strong>🕶️ Tema e idioma de la app</strong></p>
+          <ul>
+            <li>El botón de anteojos (🕶️, arriba del menú) cambia entre tema claro y oscuro.</li>
+            <li>El idioma general de la app (menú, botones) se cambia en Ajustes → Idioma de las canciones, o con un toque rápido en la banderita 🌐 de arriba.</li>
+          </ul>
+
+          <p><strong>🔗 Compartir</strong> (menú → Compartir)</p>
+          <ul>
+            <li>Copia el link de la app, o lo comparte directo por WhatsApp, mail, etc. (según lo que esté instalado) para invitar a alguien a usarla.</li>
+          </ul>
+
+          <p><strong>📲 Instalación y uso sin internet</strong></p>
+          <ul>
+            <li>Se instala como cualquier app, sin pasar por una tienda de aplicaciones (ver la sección "Cómo instalar la app" más arriba), y una vez instalada funciona sin conexión: la letra y los acordes de las canciones ya quedan guardados en el dispositivo. Las imágenes, archivos grandes y las referencias bíblicas (que abren en otro sitio) sí necesitan internet.</li>
+          </ul>
+
         </div>
       </details>
 
@@ -123,58 +221,6 @@
             <li>Cancioneros varios (internet).</li>
             <li>Innario GA Compagnon 2024 (Italia).</li>
           </ul>
-        </div>
-      </details>
-
-      <details class="about-section">
-        <summary>
-          <span class="sec-icon">✨</span>
-          Funcionalidades
-          <span class="sec-chevron">▸</span>
-        </summary>
-        <div class="about-panel">
-
-          <p><strong>📖 Cancionero</strong></p>
-          <ul>
-            <li>Cancionero, Himnario Adventista y cantos de Campamento en un solo lugar, con búsqueda instantánea por título, letra, autor, compositor, año, ritmo o etiquetas.</li>
-            <li>Índice alfabético y por número de himno, con navegación rápida por letra.</li>
-            <li>"Mis Listas": armá tus propios repertorios con las canciones que quieras.</li>
-            <li>Biblioteca de partituras, audios y recursos descargables por canción.</li>
-          </ul>
-
-          <p><strong>🎸 Acordes y tonalidad</strong></p>
-          <ul>
-            <li>Acordes visibles sobre la letra, con transposición instantánea (♭ ♮ ♯) sin perder de vista la tonalidad original.</li>
-            <li>Cada acorde suena al tocarlo, útil para ensayar de oído o verificar un cambio de tonalidad.</li>
-          </ul>
-
-          <p><strong>📟 Metrónomo y afinador</strong></p>
-          <ul>
-            <li>Afinador cromático por micrófono, con presets para guitarra, bajo, violín y ukelele, y calibración de La4 (440Hz o el que necesites).</li>
-            <li>Metrónomo con más de diez compases (de 1/4 a 7/4 y de 1/8 a 7/8), subdivisiones —incluido tresillo—, acento configurable por tiempo y "tap tempo" para marcar el ritmo con el dedo.</li>
-            <li>Reproductor de notas, acordes y escalas, más un círculo de quintas interactivo para ver la relación entre tonalidades.</li>
-          </ul>
-
-          <p><strong>🌐 Multi-idioma</strong></p>
-          <ul>
-            <li>Español, inglés, portugués, italiano y guaraní, con bandera personalizada según tu país (Argentina, España, México, Brasil, Portugal, y más).</li>
-          </ul>
-
-          <p><strong>📽️ Modo iglesia</strong></p>
-          <ul>
-            <li>Vista simplificada y de letra grande, pensada para proyectar en pantalla durante el servicio.</li>
-          </ul>
-
-          <p><strong>📲 App instalable</strong></p>
-          <ul>
-            <li>Se instala como cualquier app, sin tienda de aplicaciones, y funciona sin internet: la letra y los acordes de las canciones quedan guardados en el dispositivo.</li>
-          </ul>
-
-          <p><strong>📜 Referencias bíblicas</strong></p>
-          <ul>
-            <li>Cada canción puede incluir su referencia bíblica, con acceso directo al pasaje.</li>
-          </ul>
-
         </div>
       </details>
 
