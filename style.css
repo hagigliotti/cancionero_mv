@@ -162,8 +162,10 @@ h1 { text-align: center; padding: 10px; margin: 0; }
 .light-mode .top-bar { background: var(--bg-night); background-attachment: fixed; }
 .dark-mode  .top-bar { background: var(--bg-day);   background-attachment: fixed; }
 
-/* modo proyector: fondo negro sin importar el tema que hubiera activo antes */
-body.projector .top-bar { background: #000; }
+/* modo proyector: respeta el tema claro/oscuro elegido (ver comentario
+   completo junto al resto de las reglas de MODO PROYECTOR) */
+body.light-mode.projector .top-bar { background: #000; }
+body.dark-mode.projector  .top-bar { background: #fff; }
 
 .top-row {
   display: flex;
@@ -425,23 +427,27 @@ a.menu-item {
   height: 1px;
   opacity: 0;
   pointer-events: none;
+  color: var(--navy);
 }
 
-/* selects dentro del menú */
-.dropdown-menu select {
+/* selects dentro del menú — SIEMPRE fondo claro + texto oscuro, sin
+   depender del tema: el desplegable nativo del navegador (con las opciones)
+   no se puede re-estilar del todo por CSS, y con texto claro quedaba
+   invisible al abrirlo o pasar el mouse por una opción (fondo de hover
+   nativo, casi siempre claro) */
+.dropdown-menu select,
+.chord-instrument-select {
   border: none;
   border-radius: var(--radius-xl);
   padding: 6px 10px;
   font-size: 12.5px;
   font-weight: 600;
-  color: inherit;
-  background: rgba(255,255,255,0.08);
+  color: var(--navy);
+  background: var(--gray-50);
   cursor: pointer;
   outline: none;
   max-width: 130px;
 }
-
-.dark-mode .dropdown-menu select { background: var(--gray-50); color: var(--navy); }
 
 /* botones A+ A A- dentro del menú */
 .font-controls { display: flex; gap: 4px; }
@@ -550,7 +556,8 @@ a.menu-item {
    la letra tapándose con la letra de la canción al scrollear */
 .light-mode .alfabeto-nav { background: var(--bg-night); background-attachment: fixed; }
 .dark-mode  .alfabeto-nav { background: var(--bg-day);   background-attachment: fixed; }
-body.projector .alfabeto-nav { background: #000; }
+body.light-mode.projector .alfabeto-nav { background: #000; }
+body.dark-mode.projector  .alfabeto-nav { background: #fff; }
 
 #alfabeto,
 #himnoRangos {
@@ -711,7 +718,7 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
   justify-content: flex-end;
   gap: 2px;
   width: 92%;
-  margin: 10px auto;
+  margin: 2px auto;
 }
 
 #indice {
@@ -1093,9 +1100,14 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
 
 #teleprompterSpeedLabel { min-width: 26px; text-align: center; }
 
-body.projector .teleprompter-bar {
+body.light-mode.projector .teleprompter-bar {
   background: rgba(255,255,255,0.06);
   border-color: rgba(255,255,255,0.25);
+}
+
+body.dark-mode.projector .teleprompter-bar {
+  background: rgba(18,32,51,0.06);
+  border-color: rgba(18,32,51,0.25);
 }
 
 .song-meta a {
@@ -1207,6 +1219,11 @@ body.projector .teleprompter-bar {
   background: var(--gray-50);
   color: var(--navy);
   transition: var(--trans);
+  /* ancho fijo (el de "Inactivo", la más larga de todas: Mostrar/Ocultar,
+     Activo/Inactivo) para que el botón no cambie de tamaño ni mueva el
+     resto del renglón según qué palabra le toque mostrar */
+  min-width: 76px;
+  text-align: center;
 }
 
 /* ============================================================
@@ -1368,7 +1385,9 @@ body.projector .teleprompter-bar {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%23122033' d='M5.5 7l4.5 5 4.5-5z'/%3E%3C/svg%3E");
 }
 
-/* Idioma select en header */
+/* Idioma select en header — el select en sí es invisible (se abre
+   programáticamente desde la bandera), pero su lista nativa de opciones sí
+   se ve: texto oscuro fijo para que no quede ilegible según el tema */
 #idioma {
   margin: 10px;
   padding: 8px;
@@ -1377,6 +1396,7 @@ body.projector .teleprompter-bar {
   position: absolute;
   opacity: 0;
   pointer-events: none;
+  color: var(--navy);
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1525,7 +1545,7 @@ body.dark .modal-content {
   transform: translate(-50%, -50%) scale(1);
 }
 
-body.dark .toast {
+body.light-mode .toast {
   background: #1e293b;
   color: #fff;
 }
@@ -2124,12 +2144,13 @@ details[open] .sec-chevron { transform: rotate(90deg); }
      de letras (que también es sticky), para no superponerse con ella */
   top: calc(var(--topbar-h, 56px) + var(--alfabeto-row-h, 48px));
   z-index: 60;
-  padding: 6px 0;
+  padding: 2px 0 6px;
 }
 
 .light-mode .song-title-row { background: var(--bg-night); background-attachment: fixed; }
 .dark-mode  .song-title-row { background: var(--bg-day);   background-attachment: fixed; }
-body.projector .song-title-row { background: #000; }
+body.light-mode.projector .song-title-row { background: #000; }
+body.dark-mode.projector  .song-title-row { background: #fff; }
 
 .song-title-text {
   flex: 1 1 auto;
@@ -2149,6 +2170,12 @@ body.scrolled .song-title-text {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+/* sin el teleprónter compitiendo por lugar en el renglón, el título achicado
+   puede quedar un poco más grande */
+body.scrolled.teleprompter-hidden .song-title-text {
+  font-size: 18px;
 }
 
 .fav-add-btn {
@@ -2400,6 +2427,10 @@ body.scrolled .fav-add-btn { font-size: 15px; }
   gap: 6px;
 }
 
+/* separa la grilla de notas de acordes del selector de instrumento que
+   queda justo arriba (#afinometroChordInstrument) — sin esto quedan pegados */
+#chordRootGrid { margin-top: 14px; }
+
 .chord-quality-row { margin-top: 12px; }
 
 .chord-notes-display {
@@ -2409,6 +2440,133 @@ body.scrolled .fav-add-btn { font-size: 15px; }
   margin-top: 10px;
   opacity: 0.85;
   min-height: 1.2em;
+}
+
+/* ============================================================
+   DIAGRAMAS DE ACORDES (mástil y piano) — SVG generado en afinometro.js
+   ============================================================ */
+.chord-diagram-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.chord-fret-svg,
+.chord-piano-svg {
+  display: block;
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+}
+
+.chord-piano-svg { max-width: 320px; }
+
+.chord-fret-nut     { fill: var(--gray-500); }
+.chord-fret-line    { stroke: rgba(148,163,184,0.55); stroke-width: 1.5; }
+.chord-string-line  { stroke: rgba(148,163,184,0.55); stroke-width: 1.5; }
+.chord-fret-marker  { font-size: 11px; font-weight: 700; fill: var(--gray-500); }
+.chord-fret-basefret{ font-size: 10px; font-weight: 700; fill: var(--gray-500); }
+.chord-fret-dot     { fill: var(--sky); }
+
+.chord-inversion-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.chord-piano-svg {
+  background: rgba(148,163,184,0.16);
+  border-radius: 8px;
+  padding: 6px 4px 2px;
+}
+
+.chord-piano-white { fill: #fdfdfd; stroke: var(--navy); stroke-width: 1.5; }
+.chord-piano-black { fill: #1e293b; stroke: var(--navy); stroke-width: 1; }
+.chord-piano-white.active { fill: var(--sky); }
+.chord-piano-black.active { fill: var(--sky-dark); }
+.chord-piano-white.root,
+.chord-piano-black.root { fill: var(--green); }
+
+.chord-piano-clickable { cursor: pointer; }
+.chord-piano-clickable:hover.chord-piano-white { fill: var(--gray-100); }
+.chord-piano-clickable:hover.chord-piano-black { fill: #334155; }
+
+/* ---- popover de acorde (al tocar uno en la letra) ---- */
+.chord-popover-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2500;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.chord-popover-backdrop.hidden { display: none; }
+
+.chord-popover {
+  position: relative;
+  background: #fff;
+  color: var(--navy);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 24px 22px 18px;
+  width: 100%;
+  max-width: 340px;
+  text-align: center;
+  animation: modalIn 0.22s ease;
+}
+
+body.light-mode .chord-popover { background: #1e293b; color: #fff; }
+
+.chord-popover-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chord-popover-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  opacity: 0.5;
+  cursor: pointer;
+  color: inherit;
+}
+
+.chord-popover-close:hover { opacity: 1; }
+
+.chord-popover-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.chord-popover-name {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.chord-popover-play {
+  margin-top: 14px;
+  border: none;
+  border-radius: var(--radius-xl);
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--sky);
+  color: #06202e;
+  cursor: pointer;
 }
 
 /* ---- círculo de quintas ---- */
@@ -2547,6 +2705,12 @@ body.scrolled .fav-add-btn { font-size: 15px; }
   align-items: center;
   gap: 10px;
   margin-top: 12px;
+}
+
+.ref-freq-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--sky-dark);
 }
 
 .stepper {
@@ -2823,25 +2987,27 @@ body.scrolled .fav-add-btn { font-size: 15px; }
 /* ============================================================
    MODO PROYECTOR
    ============================================================ */
-body.projector {
-  background: #000;
-  color: #fff;
-}
+/* el fondo respeta el tema claro/oscuro elegido — antes siempre forzaba
+   negro, ignorando el tema. .light-mode = tema oscuro ("modo nocturno"),
+   .dark-mode = tema claro ("modo diurno"), ver comentarios más arriba */
+body.light-mode.projector { background: #000; color: #fff; }
+body.dark-mode.projector  { background: #fff; color: var(--navy); }
 
 body.projector h1       { font-size: 2.8rem; text-align: center; }
 body.projector #contenido { font-size: 2.8rem; line-height: 1.15; }
 body.projector .song-line { font-size: 3rem; line-height: 1.6; }
 body.projector .lyrics    { font-size: 3rem; }
+body.projector .song-title-text { font-size: 3rem; }
 
-body.projector .chord { 
+body.projector .chord {
   font-size: 2.5rem;                  /*tamano de la letra*/
   top: -2.2em;                        /*altura de la tablatura*/
   font-weight: 500;                   /*ancho de la letra*/
-} 
+}
 
 body.projector .chord-wrap{ width: 0; }
 body.projector .song-break{ height: 40px; }
-body.projector #menuBtn   { color: black; }
+body.light-mode.projector #menuBtn { color: #fff; }
 
 body.projector .song-note {
   font-size: 1.0rem;  /* más chico */

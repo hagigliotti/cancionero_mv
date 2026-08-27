@@ -44,6 +44,8 @@ function changeA4(delta) {
 
   const el = document.getElementById("a4Value");
   if (el) el.textContent = `${a4Reference} Hz`;
+
+  updateRefFreqLabel(); // la calibración también cambia el Hz de la nota elegida en "Reproducir nota"
 }
 
 
@@ -675,20 +677,65 @@ function renderRefNoteGrid() {
   if (!cont) return;
 
   cont.innerHTML = NOTE_STRINGS.map(n => `
-    <button type="button" class="note-btn${n === selectedRefNote ? " active" : ""}" data-note="${n}" ${dataAction("selectRefNote", [n, "@el"])}>
+    <button type="button" class="note-btn${n === selectedRefNote ? " active" : ""}" data-note="${n}" ${dataAction("selectRefNote", [n])}>
       ${n}<small>${NOTE_LABELS[n]}</small>
     </button>
   `).join("");
 
   const octaveSpan = document.getElementById("refOctaveValue");
   if (octaveSpan) octaveSpan.innerText = selectedRefOctave;
+
+  renderRefNotePiano();
+  updateRefFreqLabel();
 }
 
-function selectRefNote(note, btnEl) {
+// muestra en Hz la nota+octava elegida en "Reproducir nota" (según la
+// calibración de La4 actual) — puramente informativo, no cambia el sonido
+function updateRefFreqLabel() {
+  const span = document.getElementById("refFreqValue");
+  if (!span) return;
+
+  span.textContent = `${noteToFreq(selectedRefNote, selectedRefOctave).toFixed(1)} Hz`;
+}
+
+// piano de 1 octava (Do a Si) para elegir la nota tocando directo la tecla,
+// en vez de (o además de) los botones de arriba — mismo estado, mismo sonido
+function renderRefNotePiano() {
+  const cont = document.getElementById("refNotePianoContainer");
+  if (!cont) return;
+
+  const whiteW = 26, whiteH = 108, blackW = 16, blackH = 66;
+  const w = 7 * whiteW + 10;
+  const h = whiteH + 10;
+
+  let svg = `<svg viewBox="0 0 ${w} ${h}" class="chord-piano-svg" role="img" aria-label="Piano para elegir nota">`;
+
+  PIANO_OCTAVE_LAYOUT.filter(k => k.type === "white").forEach(k => {
+    const x = 5 + k.x * whiteW;
+    const clase = ["chord-piano-key", "chord-piano-white", "chord-piano-clickable",
+      k.note === selectedRefNote ? "active" : ""].filter(Boolean).join(" ");
+    svg += `<rect x="${x}" y="5" width="${whiteW - 1}" height="${whiteH}" rx="3" class="${clase}" ${dataAction("selectRefNote", [k.note])} />`;
+  });
+
+  PIANO_OCTAVE_LAYOUT.filter(k => k.type === "black").forEach(k => {
+    const x = 5 + k.x * whiteW;
+    const clase = ["chord-piano-key", "chord-piano-black", "chord-piano-clickable",
+      k.note === selectedRefNote ? "active" : ""].filter(Boolean).join(" ");
+    svg += `<rect x="${x}" y="5" width="${blackW}" height="${blackH}" rx="2" class="${clase}" ${dataAction("selectRefNote", [k.note])} />`;
+  });
+
+  cont.innerHTML = svg + "</svg>";
+}
+
+function selectRefNote(note) {
   selectedRefNote = note;
 
-  document.querySelectorAll("#refNoteGrid .note-btn").forEach(btn => btn.classList.remove("active"));
-  btnEl?.classList.add("active");
+  document.querySelectorAll("#refNoteGrid .note-btn").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.note === note);
+  });
+
+  renderRefNotePiano(); // sincroniza el teclado con lo que se haya elegido (botón o tecla)
+  updateRefFreqLabel();
 
   playReferenceTone();
 }
@@ -698,6 +745,8 @@ function changeRefOctave(delta) {
 
   const span = document.getElementById("refOctaveValue");
   if (span) span.innerText = selectedRefOctave;
+
+  updateRefFreqLabel();
 }
 
 // ===== MODO DEL AFINADOR: GENERAL O INSTRUMENTO =======================================
@@ -797,6 +846,7 @@ function renderChordRootGrid() {
 
 function selectChordRoot(note, btnEl) {
   selectedChordRoot = note;
+  chordInversionState.acordes = 0;
 
   document.querySelectorAll("#chordRootGrid .note-btn").forEach(btn => btn.classList.remove("active"));
   btnEl?.classList.add("active");
@@ -814,6 +864,7 @@ function changeChordOctave(delta) {
 
 function selectChordQuality(quality, btnEl) {
   selectedChordQuality = quality;
+  chordInversionState.acordes = 0;
 
   document.querySelectorAll("#chordQualityChips [data-quality]").forEach(btn => btn.classList.remove("active"));
   btnEl?.classList.add("active");
@@ -842,6 +893,13 @@ function updateChordNotesDisplay() {
   const names = getChordNoteNames(selectedChordRoot, selectedChordQuality);
 
   el.innerText = `${rootLabel} ${formula.label} — ${names.join(" · ")}`;
+
+  const diagramEl = document.getElementById("chordDiagramContainer");
+  if (diagramEl) {
+    diagramEl.innerHTML = chordInstrumentPref === "ninguno"
+      ? ""
+      : renderChordDiagram(selectedChordRoot, selectedChordQuality, chordInstrumentPref, "acordes");
+  }
 }
 
 async function playChord() {
@@ -979,6 +1037,11 @@ async function playChordsFromLyrics(el) {
 
   if (!tokens.length) return;
 
+  // "capo virtual" (ver chordFollowsTranspose): si la canción está
+  // transportada y el toggle está activo, el sonido y el diagrama siguen
+  // ese transporte en vez del acorde tal cual está escrito
+  const semitonos = chordFollowsTranspose ? transposeLevel : 0;
+
   const gapBetween = 0.65;
   let i = 0;
 
@@ -986,11 +1049,394 @@ async function playChordsFromLyrics(el) {
     const parsed = parseChordSymbol(token);
     if (!parsed) return;
 
-    playChordSymbol(parsed.root, parsed.quality, i * gapBetween);
+    const root = semitonos ? transposeNoteToken(parsed.root, semitonos) : parsed.root;
+    playChordSymbol(root, parsed.quality, i * gapBetween);
     i++;
   });
 
   highlightElement(el);
+
+  // además del sonido, mostrar cómo se hace en el instrumento elegido (si
+  // hay uno elegido — "ninguno" lo desactiva). Con una progresión de varios
+  // acordes en el mismo corchete, se muestra el diagrama del primero
+  const primerAcorde = parseChordSymbol(tokens[0]);
+  if (primerAcorde) {
+    const root = semitonos ? transposeNoteToken(primerAcorde.root, semitonos) : primerAcorde.root;
+    const nombreMostrado = semitonos ? transposeChordText(tokens[0], semitonos) : tokens[0];
+    mostrarAcordePopover(root, primerAcorde.quality, nombreMostrado);
+  }
+}
+
+// ===================== DIAGRAMAS DE ACORDES (guitarra/bajo/ukelele/piano) =====================
+// motor genérico: dado un acorde (raíz + calidad) y una afinación (cuerdas
+// de más grave a más aguda), busca en qué traste de cada cuerda suena una
+// nota del acorde — el traste más bajo posible, prefiriendo al aire. No es
+// necesariamente "la" digitación de ningún método, pero siempre es una
+// forma correcta de tocar ese acorde en esa afinación
+function getChordPitchClasses(root, quality) {
+  const formula = CHORD_FORMULAS[quality] || CHORD_FORMULAS.mayor;
+  const rootIdx = NOTE_STRINGS.indexOf(root);
+  return formula.intervals.map(s => NOTE_STRINGS[(rootIdx + s + 120) % 12]);
+}
+
+function buscarPosicionesTrastes(cuerdas, notasAcorde, maxTraste) {
+  return cuerdas.map(cuerda => {
+    const abiertaIdx = NOTE_STRINGS.indexOf(cuerda.note);
+
+    for (let traste = 0; traste <= maxTraste; traste++) {
+      const nota = NOTE_STRINGS[(abiertaIdx + traste) % 12];
+      if (notasAcorde.includes(nota)) return traste;
+    }
+    return null; // silenciada: ninguna nota del acorde cae en el rango buscado
+  });
+}
+
+const CHORD_DIAGRAM_TRASTES_VISIBLES = 4;
+
+function calcularDiagramaMastil(cuerdas, root, quality) {
+  const notasAcorde = getChordPitchClasses(root, quality);
+
+  let posiciones = buscarPosicionesTrastes(cuerdas, notasAcorde, CHORD_DIAGRAM_TRASTES_VISIBLES);
+
+  // si con los primeros trastes quedó todo mudo (acorde que no cae ahí),
+  // reintenta en un rango más amplio antes de mostrar un diagrama vacío
+  if (posiciones.every(p => p === null)) {
+    posiciones = buscarPosicionesTrastes(cuerdas, notasAcorde, 11);
+  }
+
+  const usados = posiciones.filter(p => p !== null && p > 0);
+  const minUsado = usados.length ? Math.min(...usados) : 0;
+  const maxUsado = usados.length ? Math.max(...usados) : 0;
+
+  // si el rango de trastes usados no entra en la ventana visible, la
+  // ventana arranca en el traste más bajo usado (como el "3fr" de un
+  // diagrama de acordes de verdad)
+  const baseFret = (maxUsado - minUsado < CHORD_DIAGRAM_TRASTES_VISIBLES && minUsado > 1)
+    ? minUsado
+    : 0;
+
+  return { posiciones, baseFret };
+}
+
+function renderDiagramaMastil(cuerdas, root, quality) {
+  const { posiciones, baseFret } = calcularDiagramaMastil(cuerdas, root, quality);
+
+  const nCuerdas = cuerdas.length;
+  const nTrastes = CHORD_DIAGRAM_TRASTES_VISIBLES;
+  const padL = 22, padT = 28, padB = 8, padR = 14;
+  const pasoCuerda = 24;
+  const pasoTraste = 28;
+
+  const w = padL + (nCuerdas - 1) * pasoCuerda + padR;
+  const h = padT + nTrastes * pasoTraste + padB;
+
+  let svg = `<svg viewBox="0 0 ${w} ${h}" class="chord-fret-svg" role="img" aria-label="Diagrama de acorde">`;
+
+  if (baseFret === 0) {
+    svg += `<rect x="${padL - 1.5}" y="${padT - 3}" width="${(nCuerdas - 1) * pasoCuerda + 3}" height="4" class="chord-fret-nut" />`;
+  } else {
+    svg += `<text x="${padL - 12}" y="${padT + pasoTraste / 2 + 4}" class="chord-fret-basefret">${baseFret + 1}fr</text>`;
+  }
+
+  for (let t = 1; t <= nTrastes; t++) {
+    const y = padT + t * pasoTraste;
+    svg += `<line x1="${padL}" y1="${y}" x2="${padL + (nCuerdas - 1) * pasoCuerda}" y2="${y}" class="chord-fret-line" />`;
+  }
+
+  for (let c = 0; c < nCuerdas; c++) {
+    const x = padL + c * pasoCuerda;
+    svg += `<line x1="${x}" y1="${padT}" x2="${x}" y2="${padT + nTrastes * pasoTraste}" class="chord-string-line" />`;
+  }
+
+  posiciones.forEach((traste, c) => {
+    const x = padL + c * pasoCuerda;
+
+    if (traste === null) {
+      svg += `<text x="${x}" y="${padT - 12}" text-anchor="middle" class="chord-fret-marker">✕</text>`;
+      return;
+    }
+
+    if (traste === 0) {
+      svg += `<text x="${x}" y="${padT - 12}" text-anchor="middle" class="chord-fret-marker">○</text>`;
+      return;
+    }
+
+    const relativo = traste - baseFret;
+    const y = padT + (relativo - 0.5) * pasoTraste;
+    svg += `<circle cx="${x}" cy="${y}" r="7.5" class="chord-fret-dot" />`;
+  });
+
+  return svg + "</svg>";
+}
+
+// teclado de una octava (C a B) para el diagrama de piano — layout fijo,
+// siempre las mismas 12 teclas por octava, cambia solo cuáles quedan
+// marcadas y desde dónde arranca el teclado (ver getPianoWindowKeys)
+const PIANO_OCTAVE_LAYOUT = [
+  { note: "C",  type: "white", x: 0 },
+  { note: "C#", type: "black", x: 0.65 },
+  { note: "D",  type: "white", x: 1 },
+  { note: "D#", type: "black", x: 1.65 },
+  { note: "E",  type: "white", x: 2 },
+  { note: "F",  type: "white", x: 3 },
+  { note: "F#", type: "black", x: 3.65 },
+  { note: "G",  type: "white", x: 4 },
+  { note: "G#", type: "black", x: 4.65 },
+  { note: "A",  type: "white", x: 5 },
+  { note: "A#", type: "black", x: 5.65 },
+  { note: "B",  type: "white", x: 6 }
+];
+
+// arma un tramo de "numOctavas" arrancando cerca de "root" — así, leyendo el
+// teclado de izquierda a derecha, las notas del acorde aparecen en el orden
+// real en que se tocarían (fundamental primero), en vez del orden
+// "de fábrica" que salía siempre al anclar todo en Do.
+// El teclado SIEMPRE arranca con 1 tecla blanca de "aire" ANTES de la raíz
+// (aunque la raíz ya sea blanca) y termina en blanca — si arranca pegada al
+// borde izquierdo, o si la raíz es una negra sin blanca de referencia al
+// lado, queda roto visualmente y no se distingue bien cuál es la raíz.
+// Devuelve { teclas, raizOffset }: raizOffset es la posición real de la raíz
+// dentro de "teclas" (nunca 0, porque siempre hay 1 blanca antes).
+function getPianoWindowKeys(root, numOctavas) {
+  const inicioBlanco = root.includes("#") ? root.replace("#", "") : root;
+
+  const master = [];
+  // arranca 1 octava antes de la "real" para poder retroceder a la blanca
+  // anterior aunque la raíz ya sea "Do" (primer índice del layout) — sin
+  // esta octava de más no hay adónde retroceder y explota el while de abajo
+  for (let oct = -1; oct < numOctavas + 2; oct++) {
+    PIANO_OCTAVE_LAYOUT.forEach(k => master.push({ note: k.note, type: k.type, x: k.x + oct * 7 }));
+  }
+
+  const layoutIdx = PIANO_OCTAVE_LAYOUT.findIndex(k => k.note === inicioBlanco);
+  const anchorIdx = layoutIdx + 12; // compensa la octava extra antepuesta arriba
+  const rootIdx = anchorIdx + (root.includes("#") ? 1 : 0);
+
+  let startIdx = anchorIdx - 1;
+  while (master[startIdx].type !== "white") startIdx--;
+
+  // +1 para que además de las numOctavas*12 semitonos, cierre también con
+  // la tecla blanca de arriba (misma nota que "inicioBlanco", blanca siempre)
+  const ventana = master.slice(startIdx, anchorIdx + numOctavas * 12 + 1);
+  const xOffset = ventana[0].x;
+
+  return {
+    teclas: ventana.map((k, i) => ({ ...k, offset: i, x: k.x - xOffset })),
+    raizOffset: rootIdx - startIdx
+  };
+}
+
+// intervalos de una inversión: k=0 fundamental, k=1 primera inversión, etc.
+// — rota la lista de intervalos y les suma una octava a los que "envuelven"
+// para atrás, para que sigan quedando en orden ascendente
+function getInversionIntervals(baseIntervals, k) {
+  const n = baseIntervals.length;
+  return Array.from({ length: n }, (_, i) => {
+    const idx = (k + i) % n;
+    return baseIntervals[idx] + (idx < k ? 12 : 0);
+  });
+}
+
+const CHORD_DIAGRAM_PIANO_OCTAVAS = 2;
+
+function renderDiagramaPiano(root, quality, inversion) {
+  const formula = CHORD_FORMULAS[quality] || CHORD_FORMULAS.mayor;
+  const offsetsActivos = getInversionIntervals(formula.intervals, inversion);
+
+  const { teclas, raizOffset } = getPianoWindowKeys(root, CHORD_DIAGRAM_PIANO_OCTAVAS);
+
+  const whiteW = 22, whiteH = 100, blackW = 14, blackH = 62;
+  const nBlancas = teclas.filter(k => k.type === "white").length;
+  const w = nBlancas * whiteW + 10;
+  const h = whiteH + 10;
+
+  let svg = `<svg viewBox="0 0 ${w} ${h}" class="chord-piano-svg" role="img" aria-label="Diagrama de acorde en piano">`;
+
+  teclas.filter(k => k.type === "white").forEach(k => {
+    const x = 5 + k.x * whiteW;
+    const desdeRaiz = k.offset - raizOffset;
+    const clase = ["chord-piano-key", "chord-piano-white",
+      offsetsActivos.includes(desdeRaiz) ? "active" : "",
+      offsetsActivos.includes(desdeRaiz) && desdeRaiz % 12 === 0 ? "root" : ""].filter(Boolean).join(" ");
+    svg += `<rect x="${x}" y="5" width="${whiteW - 1}" height="${whiteH}" rx="3" class="${clase}" />`;
+  });
+
+  teclas.filter(k => k.type === "black").forEach(k => {
+    const x = 5 + k.x * whiteW;
+    const desdeRaiz = k.offset - raizOffset;
+    const clase = ["chord-piano-key", "chord-piano-black",
+      offsetsActivos.includes(desdeRaiz) ? "active" : "",
+      offsetsActivos.includes(desdeRaiz) && desdeRaiz % 12 === 0 ? "root" : ""].filter(Boolean).join(" ");
+    svg += `<rect x="${x}" y="5" width="${blackW}" height="${blackH}" rx="2" class="${clase}" />`;
+  });
+
+  return svg + "</svg>";
+}
+
+const CHORD_DIAGRAM_INSTRUMENTOS = {
+  guitarra: { tipo: "mastil", cuerdas: INSTRUMENT_PRESETS.guitarra },
+  bajo:     { tipo: "mastil", cuerdas: INSTRUMENT_PRESETS.bajo },
+  ukelele:  { tipo: "mastil", cuerdas: INSTRUMENT_PRESETS.ukelele },
+  piano:    { tipo: "piano" }
+};
+
+// preferencia de instrumento para los diagramas — separada de la del
+// afinador/metrónomo, se elige en Ajustes > Diagrama de acordes
+let chordInstrumentPref = localStorage.getItem("chordInstrument") || "guitarra";
+
+// "capo virtual": si está activo, tocar un acorde de la letra usa el
+// acorde YA TRANSPUESTO (transposeLevel, ver app.js) tanto para el sonido
+// como para el diagrama — así el diagrama siempre coincide con lo que
+// realmente vas a tocar/cantar. Si está inactivo, siempre muestra/suena el
+// acorde ORIGINAL escrito en la canción, sin importar la transposición.
+let chordFollowsTranspose = localStorage.getItem("chordFollowsTranspose") !== "0";
+
+function toggleChordFollowsTranspose() {
+  chordFollowsTranspose = !chordFollowsTranspose;
+  localStorage.setItem("chordFollowsTranspose", chordFollowsTranspose ? "1" : "0");
+  applyChordFollowsTransposeState();
+}
+
+function applyChordFollowsTransposeState() {
+  const btn = document.getElementById("chordTransposeToggleBtn");
+  if (!btn) return;
+
+  btn.innerText = chordFollowsTranspose ? "Activo" : "Inactivo";
+  btn.classList.remove("on", "off");
+  btn.classList.add(chordFollowsTranspose ? "on" : "off");
+}
+
+function initChordTransposeToggleButton() {
+  const btn = document.getElementById("chordTransposeToggleBtn");
+  if (!btn) return;
+
+  btn.addEventListener("click", toggleChordFollowsTranspose);
+  applyChordFollowsTransposeState();
+}
+
+// qué inversión se está mostrando, por separado en el popover de la letra
+// y en el tab Acordes del Afinómetro (para que no se pisen entre sí)
+let chordInversionState = { popover: 0, acordes: 0 };
+
+const INVERSION_NOMBRES = ["Fundamental", "1ª inversión", "2ª inversión", "3ª inversión"];
+
+function renderChordDiagram(root, quality, instrumento, contexto = "popover") {
+  const def = CHORD_DIAGRAM_INSTRUMENTOS[instrumento];
+  if (!def) return "";
+
+  if (def.tipo !== "piano") {
+    return renderDiagramaMastil(def.cuerdas, root, quality);
+  }
+
+  const formula = CHORD_FORMULAS[quality] || CHORD_FORMULAS.mayor;
+  const nInversiones = formula.intervals.length;
+  const inversion = Math.min(chordInversionState[contexto] || 0, nInversiones - 1);
+
+  const svg = renderDiagramaPiano(root, quality, inversion);
+  if (nInversiones <= 1) return svg;
+
+  const rootIdx = NOTE_STRINGS.indexOf(root);
+
+  const chips = Array.from({ length: nInversiones }, (_, k) => {
+    const bajoOffset = getInversionIntervals(formula.intervals, k)[0];
+    const bajoLabel = NOTE_LABELS[NOTE_STRINGS[(rootIdx + bajoOffset) % 12]].split("/")[0];
+    const activa = k === inversion ? " active" : "";
+    const titulo = INVERSION_NOMBRES[k] || `${k + 1}ª inversión`;
+
+    return `<button type="button" class="chip${activa}" ${dataAction("setChordInversion", [contexto, k])} title="${titulo}">${bajoLabel}</button>`;
+  }).join("");
+
+  return `${svg}<div class="chord-inversion-chips">${chips}</div>`;
+}
+
+// cambia qué inversión se muestra y vuelve a dibujar el diagrama en el
+// contexto correspondiente (popover de la letra o tab Acordes)
+function setChordInversion(contexto, k) {
+  chordInversionState[contexto] = k;
+
+  if (contexto === "popover" && acordePopoverActual) {
+    const diagramEl = document.getElementById("chordPopoverDiagram");
+    if (diagramEl) {
+      diagramEl.innerHTML = renderChordDiagram(acordePopoverActual.root, acordePopoverActual.quality, chordInstrumentPref, "popover");
+    }
+  } else if (contexto === "acordes") {
+    updateChordNotesDisplay();
+  }
+}
+
+// hay tres selects para lo mismo (menú, Afinómetro, y el popover que se abre
+// al tocar un acorde en la letra — para no tener que cerrar el popover ni
+// salir del modal a cambiarlo) — cambiar uno tiene que reflejarse en todos
+function initChordInstrumentSelect() {
+  const selects = [
+    document.getElementById("menuChordInstrument"),
+    document.getElementById("afinometroChordInstrument"),
+    document.getElementById("chordPopoverInstrument")
+  ].filter(Boolean);
+
+  if (!selects.length) return;
+
+  selects.forEach(sel => {
+    sel.value = chordInstrumentPref;
+
+    sel.addEventListener("change", e => {
+      chordInstrumentPref = e.target.value;
+      localStorage.setItem("chordInstrument", chordInstrumentPref);
+
+      selects.forEach(otro => { if (otro !== e.target) otro.value = chordInstrumentPref; });
+
+      updateChordNotesDisplay(); // refresca el diagrama del tab Acordes si está abierto
+
+      if (acordePopoverActual) {
+        const diagramEl = document.getElementById("chordPopoverDiagram");
+        if (diagramEl) {
+          diagramEl.innerHTML = renderChordDiagram(
+            acordePopoverActual.root, acordePopoverActual.quality, chordInstrumentPref, "popover"
+          );
+        }
+      }
+    });
+  });
+}
+
+// ===== POPOVER: se abre al tocar un acorde en la letra de una canción =====
+let acordePopoverActual = null; // { root, quality } — para el botón "escuchar de nuevo"
+
+function mostrarAcordePopover(root, quality, nombreMostrado) {
+  if (chordInstrumentPref === "ninguno") return;
+
+  const backdrop = document.getElementById("chordPopoverBackdrop");
+  const nameEl = document.getElementById("chordPopoverName");
+  const diagramEl = document.getElementById("chordPopoverDiagram");
+  if (!backdrop || !nameEl || !diagramEl) return;
+
+  acordePopoverActual = { root, quality };
+  chordInversionState.popover = 0; // cada acorde nuevo arranca en posición fundamental
+
+  nameEl.textContent = nombreMostrado || root;
+  diagramEl.innerHTML = renderChordDiagram(root, quality, chordInstrumentPref, "popover");
+
+  backdrop.classList.remove("hidden");
+}
+
+function cerrarAcordePopover() {
+  document.getElementById("chordPopoverBackdrop")?.classList.add("hidden");
+  acordePopoverActual = null;
+}
+
+function initChordPopover() {
+  const backdrop = document.getElementById("chordPopoverBackdrop");
+  const playBtn = document.getElementById("chordPopoverPlayBtn");
+  if (!backdrop || !playBtn) return;
+
+  // cerrar tocando afuera de la tarjeta (no en cualquier click dentro del popover)
+  backdrop.addEventListener("click", e => {
+    if (e.target === backdrop) cerrarAcordePopover();
+  });
+
+  playBtn.addEventListener("click", () => {
+    if (acordePopoverActual) playChordSymbol(acordePopoverActual.root, acordePopoverActual.quality);
+  });
 }
 
 

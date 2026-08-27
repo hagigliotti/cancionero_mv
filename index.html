@@ -9,10 +9,10 @@
   <title>Cancionero MV</title>
 
   <!-- PWA / APARIENCIA DE APP -->
-  <link rel="manifest" href="manifest.webmanifest?v=79">
-  <link rel="icon" href="imagenes/icons/favicon-32.png?v=79" sizes="32x32">
-  <link rel="icon" href="imagenes/icons/favicon-16.png?v=79" sizes="16x16">
-  <link rel="apple-touch-icon" href="imagenes/icons/apple-touch-icon.png?v=79">
+  <link rel="manifest" href="manifest.webmanifest?v=98">
+  <link rel="icon" href="imagenes/icons/favicon-32.png?v=98" sizes="32x32">
+  <link rel="icon" href="imagenes/icons/favicon-16.png?v=98" sizes="16x16">
+  <link rel="apple-touch-icon" href="imagenes/icons/apple-touch-icon.png?v=98">
 
   <meta name="theme-color" content="#122033">
   <meta name="mobile-web-app-capable" content="yes">
@@ -24,8 +24,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css?v=79">
-  <link rel="stylesheet" href="notepad.css?v=79">
+  <link rel="stylesheet" href="style.css?v=98">
+  <link rel="stylesheet" href="notepad.css?v=98">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XS6DM59CNT"></script>
@@ -111,10 +111,6 @@
             <div class="menu-group">
               <p class="contact-label">Ajustes</p>
 
-              <div class="menu-item" data-action="abrirAfinometroModal">
-                <span class="sec-icon">📟</span> Metrónomo y Afinador
-              </div>
-
               <div class="menu-row">
                 <span class="sec-icon">🅰️</span>
                 <span class="menu-row-label">Tamaño de letra</span>
@@ -125,16 +121,8 @@
                 </div>
               </div>
 
-              <div class="menu-row" id="tabToggle">
-                <span class="sec-icon">🎸</span>
-                <span class="menu-row-label">Tablatura</span>
-                <button id="tabBtn" class="menu-toggle-btn" type="button">Mostrar</button>
-              </div>
-
-              <div class="menu-row" id="teleprompterToggleRow">
-                <span class="sec-icon">📜</span>
-                <span class="menu-row-label">Teleprónter</span>
-                <button id="teleprompterToggleBtn" class="menu-toggle-btn" type="button">Ocultar</button>
+              <div class="menu-item" data-action="abrirAfinometroModal">
+                <span class="sec-icon">📟</span> Metrónomo y Afinador
               </div>
 
               <div class="menu-row">
@@ -148,23 +136,55 @@
               </div>
 
               <div class="menu-row">
+                <span class="sec-icon">🎹</span>
+                <span class="menu-row-label">Diagrama de acordes</span>
+                <select id="menuChordInstrument" class="chord-instrument-select">
+                  <option value="ninguno">Ninguno</option>
+                  <option value="piano">Piano</option>
+                  <option value="guitarra">Guitarra</option>
+                  <option value="bajo">Bajo</option>
+                  <option value="ukelele">Ukelele</option>
+                </select>
+              </div>
+
+              <div class="menu-row" id="tabToggle">
+                <span class="sec-icon">🎸</span>
+                <span class="menu-row-label">Tablatura</span>
+                <button id="tabBtn" class="menu-toggle-btn" type="button">Mostrar</button>
+              </div>
+
+              <div class="menu-row" id="chordTransposeToggleRow">
+                <span class="sec-icon">🎚️</span>
+                <span class="menu-row-label">Trasporte</span>
+                <button id="chordTransposeToggleBtn" class="menu-toggle-btn" type="button">Activo</button>
+              </div>
+
+              <div class="menu-row" id="teleprompterToggleRow">
+                <span class="sec-icon">📜</span>
+                <span class="menu-row-label">Teleprónter</span>
+                <button id="teleprompterToggleBtn" class="menu-toggle-btn" type="button">Ocultar</button>
+              </div>
+
+              <div class="menu-row">
                 <span class="sec-icon" id="idiomaFlagIcon" data-action="abrirBanderaPicker" title="Tocá para elegir tu bandera">🌐</span>
                 <span class="menu-row-label">Idioma de las canciones</span>
                 <select id="menuIdioma">
-                  <option value="es">Español</option>
                   <option value="en">English</option>
+                  <option value="es">Español</option>
+                  <option value="gn">Guaraní</option>
                   <option value="it">Italiano</option>
                   <option value="pt">Português</option>
-                  <option value="gn">Guaraní</option>
                 </select>
               </div>
               <select id="menuBandera" class="bandera-hidden-select" onchange="setBanderaIdioma(idiomaActual, this.value)"></select>
             </div>
 
-            <div class="menu-group">
+            <div class="menu-group" id="projectorToggleGroup">
               <p class="contact-label">Modo iglesia</p>
-              <div class="menu-item" data-action="toggleProjectorMode,closeMenu">
-                <span class="sec-icon">📽️</span> Proyector
+              <div class="menu-row" id="projectorToggleRow">
+                <span class="sec-icon">📽️</span>
+                <span class="menu-row-label">Proyector</span>
+                <button id="projectorToggleBtn" class="menu-toggle-btn" type="button">Inactivo</button>
               </div>
             </div>
 
@@ -202,14 +222,14 @@
         <button type="button" id="langBtn">🇦🇷</button>
 
         <select id="idioma">
-          <option value="es" selected>Español</option>
           <option value="en">English</option>
+          <option value="es" selected>Español</option>
+          <option value="gn">Guaraní</option>
           <option value="it">Italiano</option>
           <option value="pt">Português</option>
           <!-- <option value="fr">Français</option> -->
           <!-- <option value="de">Deutsch</option> -->
           <!-- <option value="he">עברית</option> -->
-          <option value="gn">Guaraní</option>
           <!-- <option value="zu">isiZulu</option> -->
         </select>
       </div>
@@ -249,7 +269,6 @@
     <ul id="indice" class="hidden"></ul>
     <div id="letterRail" class="letter-rail hidden"></div>
   </div>
-  <br>
 
   <!-- ===================== MENSAJE INICIAL ===================== -->
   <hr id="mensajeInicioHr">
@@ -271,19 +290,38 @@
 
 
 <!-- ======================================== JS ======================================== -->
-<script src="lenguage.js?v=79"></script>
-<script src="utils.js?v=79"></script>
-<script src="theme.js?v=79"></script>
-<script src="afinometro.js?v=79"></script>
-<script src="app.js?v=79"></script>
-<script src="songbook.js?v=79"></script>
-<script src="notepad.js?v=79"></script>
+<script src="lenguage.js?v=98"></script>
+<script src="utils.js?v=98"></script>
+<script src="theme.js?v=98"></script>
+<script src="afinometro.js?v=98"></script>
+<script src="app.js?v=98"></script>
+<script src="songbook.js?v=98"></script>
+<script src="notepad.js?v=98"></script>
 
 <!-- ======================================== PWA OFFLINE ======================================== -->
 <div id="updateBanner" class="update-banner">
   <span>Nueva actualización</span>
   <button type="button" data-action="recargarPagina">Actualizar</button>
   <button type="button" class="update-banner-close" data-action="ocultarAvisoActualizacion" aria-label="Cerrar">✕</button>
+</div>
+
+<!-- ======================================== DIAGRAMA DE ACORDE (popover) ======================================== -->
+<div id="chordPopoverBackdrop" class="chord-popover-backdrop hidden">
+  <div class="chord-popover">
+    <button type="button" class="chord-popover-close" data-action="cerrarAcordePopover" aria-label="Cerrar">✕</button>
+    <div class="chord-popover-header">
+      <div class="chord-popover-name" id="chordPopoverName"></div>
+      <select id="chordPopoverInstrument" class="chord-instrument-select">
+        <option value="ninguno">Ninguno</option>
+        <option value="piano">Piano</option>
+        <option value="guitarra">Guitarra</option>
+        <option value="bajo">Bajo</option>
+        <option value="ukelele">Ukelele</option>
+      </select>
+    </div>
+    <div class="chord-popover-diagram" id="chordPopoverDiagram"></div>
+    <button type="button" class="chord-popover-play" id="chordPopoverPlayBtn">🔊 Escuchar de nuevo</button>
+  </div>
 </div>
 
 <script>
@@ -376,6 +414,14 @@
     window.addEventListener("resize", syncOffsets);
     window.addEventListener("load", syncOffsets);
     syncOffsets();
+
+    // la barra de letras se achica con una transición CSS (no es instantáneo):
+    // medir el alto justo al togglear "scrolled" captura el alto VIEJO (antes
+    // de achicarse), dejando el título de la canción pegado más abajo de lo
+    // debido y con un hueco por donde se llega a asomar el contenido de atrás
+    // al scrollear. Se vuelve a medir cuando la transición realmente termina.
+    document.querySelector(".alfabeto-nav")?.addEventListener("transitionend", syncOffsets);
+    document.querySelector(".top-bar")?.addEventListener("transitionend", syncOffsets);
   })();
 </script>
 
@@ -433,6 +479,52 @@
     });
 
     syncModalOpen();
+  })();
+</script>
+
+<!-- flechas arriba/abajo (o PageUp/PageDown) scrollean el modal o menú
+     abierto — pensado para controles remotos tipo Android TV, donde no hay
+     mouse/touch para arrastrar el scroll con el dedo. Si no hay ningún
+     modal/menú abierto, no hace nada y el navegador scrollea la página
+     como siempre. Aislado a propósito -->
+<script>
+  (function () {
+    const TECLAS = ["ArrowUp", "ArrowDown", "PageUp", "PageDown"];
+
+    function buscarScrolleable(raiz) {
+      const candidatos = [raiz, ...raiz.querySelectorAll("*")];
+
+      return candidatos.find(el => {
+        const cs = getComputedStyle(el);
+        return (cs.overflowY === "auto" || cs.overflowY === "scroll") &&
+               el.scrollHeight > el.clientHeight + 4;
+      }) || null;
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (!TECLAS.includes(e.key)) return;
+
+      // no pisar el uso normal de las flechas en un input/select/textarea
+      const tag = document.activeElement?.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+
+      const modalAbierto = Array.from(document.querySelectorAll(".modal, .np-modal"))
+        .find(m => getComputedStyle(m).display !== "none");
+      const menuAbierto = document.querySelector(".dropdown-menu.active");
+
+      const raiz = modalAbierto || menuAbierto;
+      if (!raiz) return;
+
+      const objetivo = buscarScrolleable(raiz);
+      if (!objetivo) return;
+
+      const esPage = e.key === "PageUp" || e.key === "PageDown";
+      const distancia = esPage ? objetivo.clientHeight * 0.9 : 80;
+      const subir = e.key === "ArrowUp" || e.key === "PageUp";
+
+      objetivo.scrollBy({ top: subir ? -distancia : distancia, behavior: "smooth" });
+      e.preventDefault();
+    });
   })();
 </script>
 </body>

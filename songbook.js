@@ -66,6 +66,8 @@ function normalizePersonField(field) {
 
 // ===================== OPEN SONG =====================
 function openSong(id) {
+  mostrarCancionActual(); // por si se venía de una lista que la había ocultado
+
   const song = getTodasLasCanciones().find(c => c.id === id || c.slug === id);
 
   if (!song) {
@@ -361,8 +363,11 @@ function selectLetter(letter) {
     letraActiva = null;
     highlightLetter(null);
 
-    // si no hay una canción abierta, volver a mostrar el versículo de bienvenida
-    if (!document.getElementById("contenido").innerHTML.trim()) {
+    // sin elegir nada de la lista: la canción que estaba abierta vuelve a
+    // aparecer tal cual estaba; si no había ninguna, el versículo de bienvenida
+    if (document.getElementById("contenido").innerHTML.trim()) {
+      mostrarCancionActual();
+    } else {
       mostrarMensajeInicio();
     }
     return;
@@ -377,6 +382,7 @@ function abrirLetra(letter) {
   listaVisible = true;
 
   ocultarMensajeInicio();
+  ocultarCancionActual();
 
   openList();
   renderList(letter);
@@ -657,6 +663,7 @@ function selectRange(start, end) {
 
   stopTeleprompter();
   ocultarMensajeInicio();
+  ocultarCancionActual();
 
   openList();
   renderHymnRange(start, end);
@@ -664,8 +671,6 @@ function selectRange(start, end) {
   letraActiva = null;
   highlightLetter(null);
   listaVisible = true;
-
-  document.getElementById("contenido").innerHTML = "";
 
   // si estabas leyendo el final de un himno, que la lista se vea de
   // entrada arriba del todo, sin tener que scrollear manualmente

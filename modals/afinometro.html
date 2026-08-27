@@ -119,6 +119,8 @@
 
         <div class="note-grid" id="refNoteGrid"></div>
 
+        <div id="refNotePianoContainer" class="chord-diagram-wrap"></div>
+
         <div class="octave-row">
           <span class="menu-row-label">Octava</span>
           <div class="stepper">
@@ -126,6 +128,7 @@
             <span id="refOctaveValue">4</span>
             <button type="button" data-action="changeRefOctave" data-args="[1]">+</button>
           </div>
+          <span id="refFreqValue" class="ref-freq-label"></span>
           <button type="button" class="play-btn" data-action="playReferenceTone">🔊 Play</button>
         </div>
       </div>
@@ -133,6 +136,17 @@
       <!-- ===================== 4. REPRODUCIR ACORDE ===================== -->
       <div class="menu-group" id="sec-acordes">
         <p class="contact-label">🎶 Reproducir acorde</p>
+
+        <div class="octave-row">
+          <span class="menu-row-label">Diagrama de acordes</span>
+          <select id="afinometroChordInstrument" class="chord-instrument-select">
+            <option value="ninguno">Ninguno</option>
+            <option value="piano">Piano</option>
+            <option value="guitarra">Guitarra</option>
+            <option value="bajo">Bajo</option>
+            <option value="ukelele">Ukelele</option>
+          </select>
+        </div>
 
         <div class="note-grid" id="chordRootGrid"></div>
 
@@ -153,6 +167,8 @@
         </div>
 
         <div id="chordNotesLabel" class="chord-notes-display"></div>
+
+        <div id="chordDiagramContainer" class="chord-diagram-wrap"></div>
 
         <div class="octave-row">
           <span class="menu-row-label">Octava</span>

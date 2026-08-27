@@ -390,14 +390,14 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=79",
-    "modals/revised.html?v=79",
-    "modals/people.html?v=79",
-    "modals/share.html?v=79",
-    "modals/afinometro.html?v=79",
-    "modals/biblioteca.html?v=79",
-    "modals/listas.html?v=79",
-    "modals/notepad.html?v=79"
+    "modals/info.html?v=98",
+    "modals/revised.html?v=98",
+    "modals/people.html?v=98",
+    "modals/share.html?v=98",
+    "modals/afinometro.html?v=98",
+    "modals/biblioteca.html?v=98",
+    "modals/listas.html?v=98",
+    "modals/notepad.html?v=98"
   ];
 
   for (const path of modales) {
@@ -438,6 +438,10 @@ async function init() {
 
   initTeleprompterToggleButton();
   applyTeleprompterBarVisibility();
+
+  initChordInstrumentSelect();
+  initChordTransposeToggleButton();
+  initChordPopover();
 
   // si esto falla (sin conexión y sin caché todavía, un corte pasajero),
   // no debe cortar el resto de init(): sin este try/catch, el buscador, el
@@ -480,13 +484,20 @@ async function init() {
   document.getElementById("menuIdioma").value = idiomaActual;
 
   renderAlphabet();
+
+  // el proyector se activa ANTES de cargar el tema: loadTheme() necesita
+  // saber si ya está en modo proyector para leer la preferencia de tema
+  // correcta (la del proyector, guardada aparte de la normal)
+  if (localStorage.getItem("projector") === "on") {
+    document.body.classList.add("projector");
+  }
+
   loadTheme();
   updateThemeMenuText();
   updateLogo();
 
-  if (localStorage.getItem("projector") === "on") {
-    document.body.classList.add("projector");
-  }
+  initProjectorToggleButton();
+  updateProjectorMenuButton();
 
   handleMenuVisibility();
 
@@ -549,10 +560,12 @@ function cambiarLibroActivo(id) {
   updateAppTitle();
   renderList(null);
 
-  initTabButton();
+  // ojo: NO se re-llama a initTabButton()/initTeleprompterToggleButton()
+  // acá — esos botones son fijos en el HTML (no se recrean al cambiar de
+  // libro), así que volver a "init"-earlos solo apilaría un listener de
+  // click más encima de los que ya había, y cada toggle terminaba
+  // disparando la función varias veces de una
   applyTablaturaState();
-
-  initTeleprompterToggleButton();
   applyTeleprompterBarVisibility();
 }
 
@@ -571,6 +584,7 @@ function clearAll() {
 
   // limpiar contenido
   document.getElementById("contenido").innerHTML = "";
+  mostrarCancionActual(); // por si había quedado oculto por una lista abierta
 
   // cerrar lista
   closeList();
@@ -762,6 +776,10 @@ function applyTeleprompterBarVisibility() {
 
   if (bar) bar.style.display = teleprompterBarVisible ? "" : "none";
 
+  // sin la barra del teleprónter compitiendo por lugar, el título achicado
+  // (cuando ya se scrolleó) puede quedar un poco más grande — ver CSS
+  document.body.classList.toggle("teleprompter-hidden", !teleprompterBarVisible);
+
   // si se oculta mientras estaba scrolleando, hay que frenarlo (vive en songbook.js)
   if (!teleprompterBarVisible) stopTeleprompter();
 
@@ -919,16 +937,23 @@ function search(q) {
 
   updateClearSearchBtn();
 
-  // buscador vacío (borrado a mano o con la "x"): cerrar todo, sin riel,
-  // solo el versículo de bienvenida
+  // buscador vacío (borrado a mano, sin pasar por la "x"): la lista se
+  // cierra y, si había una canción abierta antes de buscar, vuelve a
+  // aparecer tal cual estaba; si no había ninguna, el versículo de bienvenida
   if (!query.length) {
     closeList();
     list.innerHTML = "";
-    mostrarMensajeInicio();
+
+    if (document.getElementById("contenido").innerHTML.trim()) {
+      mostrarCancionActual();
+    } else {
+      mostrarMensajeInicio();
+    }
     return;
   }
 
   ocultarMensajeInicio();
+  ocultarCancionActual();
 
   if (!listaVisible) {
     openList();
@@ -1586,6 +1611,20 @@ function ocultarMensajeInicio() {
     document.getElementById("mensajeInicio").style.display = "none";
     const hr = document.getElementById("mensajeInicioHr");
     if (hr) hr.style.display = "none";
+}
+
+// oculta/muestra la canción abierta SIN borrarla — se usa al abrir la lista
+// por letra/rango: mientras se elige de la lista no tiene sentido ver la
+// canción anterior mezclada debajo, pero si se cierra la lista sin elegir
+// nada (misma letra de nuevo), la canción tiene que seguir ahí como estaba
+function ocultarCancionActual() {
+  const contenido = document.getElementById("contenido");
+  if (contenido) contenido.style.display = "none";
+}
+
+function mostrarCancionActual() {
+  const contenido = document.getElementById("contenido");
+  if (contenido) contenido.style.display = "";
 }
 
 
