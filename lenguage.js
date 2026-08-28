@@ -50,6 +50,13 @@ const IDIOMA_NOMBRES = {
 };
 
 // ===============================================================================================
+// ===================== TRADUCCIÓN DE TAGS ======================================================
+// El diccionario TAG_TRANSLATIONS y la función getTagDisplay() se movieron a
+// su propio archivo: tag-translations.js (cargado antes que este en
+// index.html) — para agregar o corregir una traducción de tag, editar ahí,
+// no acá.
+
+// ===============================================================================================
 // ===================== BANDERA POR PAÍS (personalización, NO cambia el idioma) =================
 // El idioma del contenido (letra, tablatura, índice) sigue siendo uno solo por código
 // ("es", "en", "pt"); esto solo decide QUÉ bandera se muestra para ese idioma,
@@ -154,24 +161,10 @@ function setBanderaIdioma(lang, code) {
   renderBanderaSelect();
 }
 
-// abre el selector nativo de país: se dispara tocando la bandera de la fila
-// Idioma (no hay un renglón aparte, queda oculto ahí mismo)
-function abrirBanderaPicker() {
-  const select = document.getElementById("menuBandera");
-  if (!select || !FLAG_VARIANTS[idiomaActual]) return;
-
-  select.focus();
-  select.click();
-}
-
-// actualiza el ícono de bandera de la fila Idioma y las opciones del
-// selector oculto detrás — solo queda "clickeable" si el idioma activo
-// tiene más de un país disponible
+// actualiza el ícono de bandera de la fila Idioma — solo queda "clickeable"
+// si el idioma activo tiene más de un país disponible
 function renderBanderaSelect() {
   const icon = document.getElementById("idiomaFlagIcon");
-  const select = document.getElementById("menuBandera");
-  if (!select) return;
-
   const variants = FLAG_VARIANTS[idiomaActual];
 
   if (!variants) {
@@ -181,7 +174,6 @@ function renderBanderaSelect() {
       icon.textContent = getFlagEmoji(idiomaActual);
       icon.classList.remove("flag-pick");
     }
-    select.innerHTML = "";
     return;
   }
 
@@ -191,13 +183,54 @@ function renderBanderaSelect() {
     icon.textContent = variants[current]?.emoji || "🌐";
     icon.classList.add("flag-pick");
   }
+}
+
+// popover con la lista de países del idioma activo (se dispara tocando la
+// bandera de la fila Idioma). Antes esto intentaba abrir un <select> nativo
+// oculto con .focus()+.click(): poco confiable entre navegadores (a veces
+// no abría nada) y el foco programático sobre un elemento casi invisible
+// hacía que la página saltara para "mostrarlo" — de ahí el salto raro del
+// menú. Un popover propio evita las dos cosas.
+function abrirBanderaPicker() {
+  const variants = FLAG_VARIANTS[idiomaActual];
+  if (!variants) return;
+
+  const backdrop = document.getElementById("banderaPopoverBackdrop");
+  const lista = document.getElementById("banderaPopoverList");
+  if (!backdrop || !lista) return;
+
+  const current = banderaPorIdioma[idiomaActual] || FLAG_VARIANT_DEFAULT[idiomaActual];
 
   const ordenados = Object.entries(variants)
     .sort((a, b) => a[1].nombre.localeCompare(b[1].nombre, "es", { sensitivity: "base" }));
 
-  select.innerHTML = ordenados.map(([code, info]) => `
-    <option value="${code}" ${code === current ? "selected" : ""}>${info.emoji} ${info.nombre}</option>
+  lista.innerHTML = ordenados.map(([code, info]) => `
+    <button type="button" class="bandera-option ${code === current ? "active" : ""}"
+            ${dataAction("elegirBanderaDesdePicker", [code])}>
+      <span class="bandera-option-emoji">${info.emoji}</span>
+      <span class="bandera-option-name">${info.nombre}</span>
+    </button>
   `).join("");
+
+  backdrop.classList.remove("hidden");
+}
+
+function cerrarBanderaPicker() {
+  document.getElementById("banderaPopoverBackdrop")?.classList.add("hidden");
+}
+
+function elegirBanderaDesdePicker(code) {
+  setBanderaIdioma(idiomaActual, code);
+  cerrarBanderaPicker();
+}
+
+function initBanderaPicker() {
+  const backdrop = document.getElementById("banderaPopoverBackdrop");
+  if (!backdrop) return;
+
+  backdrop.addEventListener("click", e => {
+    if (e.target === backdrop) cerrarBanderaPicker();
+  });
 }
 
 
@@ -334,8 +367,13 @@ function getAvailableFlags(song) {
 
 // Devuelve banderas con estilo (UI más completa). mostrarNotaAudio: la ♪
 // solo se pide desde el listado por letra/número (ver renderList en
-// songbook.js) — en la canción abierta y en el rango de himnos no se muestra
-function renderLanguageFlags(song, mostrarNotaAudio = false) {
+// songbook.js) — en la canción abierta y en el rango de himnos no se muestra.
+// singleRow: en filas angostas (listado por letra/número) las banderas se
+// agrupan en filas fijas de 4/5 para no desbordar; dentro de la canción
+// abierta (.song-meta) hay mucho más ancho disponible, así que ahí no se
+// pre-agrupan — se dejan sueltas y el flex-wrap del contenedor las acomoda
+// solo, entrando todas en una fila si entran
+function renderLanguageFlags(song, mostrarNotaAudio = false, singleRow = false) {
   const idiomas = song.idiomas || {};
 
   const langs = Object.keys(idiomas)
@@ -345,13 +383,15 @@ function renderLanguageFlags(song, mostrarNotaAudio = false) {
   // la bandera va en su propio span (.flag-emoji) separado de la nota de
   // audio: así el subrayado de "activo" (border-bottom) queda solo debajo
   // de la bandera, no estirado también debajo de la ♪
-  return wrapFlagRows(langs, lang => `
+  const flagHtml = lang => `
     <span class="flag ${lang === idiomaActual ? "active" : ""}"
           ${dataAction("changeLanguage", [lang, song.id])}
           title="${IDIOMA_NOMBRES[lang] || lang}">
       <span class="flag-emoji">${getFlagEmoji(lang)}</span>${mostrarNotaAudio ? audioNoteHtml(idiomas[lang]) : ""}
     </span>
-  `);
+  `;
+
+  return singleRow ? langs.map(flagHtml).join("") : wrapFlagRows(langs, flagHtml);
 }
 
 
@@ -421,9 +461,11 @@ function getSortTitle(song) {
   return normalize(song.idiomas?.[idiomaActual]?.titulo || "");
 }
 
-// Número de himno si existe
-function getNumeroHimno(c) {
-  return c.idiomas?.[idiomaActual]?.numero_himno ?? "";
+// Número de himno si existe. lang opcional: por defecto el idioma activo,
+// pero el listado de un tag filtrado por idioma (ver renderPeopleModal)
+// necesita mostrar el número de ESE idioma, no del que esté activo ahora
+function getNumeroHimno(c, lang = idiomaActual) {
+  return c.idiomas?.[lang]?.numero_himno ?? "";
 }
 
 
@@ -441,10 +483,11 @@ function getAllSongTitles(song) {
 }
 
 
-// Devuelve el mejor título disponible (fallback automático)
-function getSongTitle(song) {
+// Devuelve el mejor título disponible (fallback automático). lang opcional:
+// por defecto el idioma activo — ver getNumeroHimno para el porqué
+function getSongTitle(song, lang = idiomaActual) {
 
-  const current = song?.idiomas?.[idiomaActual]?.titulo;
+  const current = song?.idiomas?.[lang]?.titulo;
 
   if (Array.isArray(current)) {
     const valid = current.find(t => typeof t === "string" && t.trim());

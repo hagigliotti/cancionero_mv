@@ -52,3 +52,29 @@ Puedes colaborar de muchas formas:
 
 ```bash
 git checkout -b mi-mejora
+```
+
+3. Hacé los cambios y probá que la app siga funcionando correctamente.
+4. Confirmá los cambios con un mensaje claro y descriptivo.
+
+```bash
+git commit -m "Agrega traducción al portugués de X canción"
+```
+
+5. Subí la rama a tu fork.
+
+```bash
+git push origin mi-mejora
+```
+
+6. Abrí un Pull Request hacia este repositorio, describiendo brevemente qué cambiaste y por qué.
+
+Un mantenedor revisará el Pull Request y podrá pedir ajustes antes de aceptarlo. No hay garantía de que toda contribución sea incorporada.
+
+---
+
+## ⚖️ Nota sobre el fork y la licencia
+
+Cancionero MV se distribuye con todos los derechos reservados (ver [LICENCE.md](LICENCE.md)). El único uso autorizado del fork de este repositorio es el descrito arriba: preparar y enviar una contribución mediante un Pull Request. Usar un fork para alojar, publicar o distribuir una versión propia e independiente de la app no está autorizado.
+
+Al enviar una contribución, aceptás que la misma pasa a formar parte del proyecto bajo los mismos términos de licencia que el resto del repositorio.

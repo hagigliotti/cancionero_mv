@@ -238,8 +238,9 @@ function renderModalLetterRail(scrollEl, railEl, letras) {
   });
 }
 
-// arma las filas + el riel a partir de una lista ya ordenada alfabéticamente
-function renderSongRows(sorted, cont, scrollEl, railEl, onSelectFactory) {
+// arma las filas + el riel a partir de una lista ya ordenada alfabéticamente.
+// lang opcional: por defecto el idioma activo — ver getNumeroHimno
+function renderSongRows(sorted, cont, scrollEl, railEl, onSelectFactory, lang = idiomaActual) {
   cont.innerHTML = "";
 
   if (!sorted.length) {
@@ -251,8 +252,8 @@ function renderSongRows(sorted, cont, scrollEl, railEl, onSelectFactory) {
   const letrasVistas = [];
 
   sorted.forEach(song => {
-    const titulo = getSongTitle(song);
-    const num = getNumeroHimno(song);
+    const titulo = getSongTitle(song, lang);
+    const num = getNumeroHimno(song, lang);
     const letra = getIndexLetter(titulo);
 
     if (!letrasVistas.includes(letra)) letrasVistas.push(letra);
@@ -263,21 +264,23 @@ function renderSongRows(sorted, cont, scrollEl, railEl, onSelectFactory) {
   renderModalLetterRail(scrollEl, railEl, letrasVistas);
 }
 
-function sortSongsByTitle(list) {
+// lang opcional: por defecto el idioma activo — ver getNumeroHimno para el
+// porqué (listado de un tag filtrado por idioma puntual)
+function sortSongsByTitle(list, lang = idiomaActual) {
   // 🔥 eliminar duplicados por ID
   const unique = new Map();
   list.forEach(song => unique.set(song.id, song));
 
   return [...unique.values()]
     .sort((a, b) =>
-      (a.idiomas?.[idiomaActual]?.titulo || "").localeCompare(
-        b.idiomas?.[idiomaActual]?.titulo || "",
+      (a.idiomas?.[lang]?.titulo || "").localeCompare(
+        b.idiomas?.[lang]?.titulo || "",
         undefined,
         { sensitivity: "base" }
       )
     )
     .filter(song => {
-      const titulo = getSongTitle(song);
+      const titulo = getSongTitle(song, lang);
       return titulo && titulo !== "Sin título";
     });
 }
@@ -301,26 +304,73 @@ function renderListModal({ title, list, icon }) {
   });
 }
 
+// dónde está parado el listado actual de canciones de un tag puntual — lo
+// usa el selector de idioma de acá adentro para saber qué re-consultar
+let peopleModalTagContext = null;
+
 // onSelect (opcional): fábrica song => callback para el click de cada fila.
 // Por defecto abre la canción tal cual (openSong); abrirIdiomaSongsModal la
-// pisa para abrir en el idioma elegido en vez del idioma activo
-function renderPeopleModal({ title, list, icon, onSelect }) {
+// pisa para abrir en el idioma elegido en vez del idioma activo.
+// idiomaMostrar (opcional): en qué idioma mostrar título/número — por
+// defecto el activo, pero un tag filtrado por idioma sigue ESE idioma.
+// tagIdiomaContext (opcional): { nombre, filtroIdioma } — solo presente
+// cuando esto es el listado de canciones de un tag; habilita el selector
+// de idioma propio y el estado vacío con "volver a Tags"
+function renderPeopleModal({ title, list, icon, onSelect, idiomaMostrar, tagIdiomaContext }) {
   const cont = document.getElementById("peopleModalLista");
   const titleEl = document.getElementById("peopleModalTitle");
   const badgeEl = document.getElementById("peopleModalBadge");
   const countEl = document.getElementById("peopleModalCount");
   const railEl = document.getElementById("peopleModalRail");
+  const backBtn = document.getElementById("peopleModalBack");
+  const idiomaRow = document.getElementById("peopleModalIdiomaRow");
+  const idiomaSelect = document.getElementById("peopleModalIdioma");
 
   titleEl.innerText = title;
   if (badgeEl) badgeEl.textContent = icon || "👤";
 
-  const sorted = sortSongsByTitle(list);
+  // el botón de volver solo aparece si se llegó acá desde el listado general
+  // (Autores/Compositores/Coautores/Tags/Idiomas en Info de la app) — si se
+  // llegó tocando el autor/compositor DENTRO de una canción, no hay a dónde
+  // volver, así que queda oculto (ver openPersonModal / peopleModalOrigen)
+  if (backBtn) {
+    if (peopleModalOrigen) {
+      backBtn.textContent = `← ${VALORES_TITULO_PLURAL[peopleModalOrigen.tipo] || "Volver"}`;
+      backBtn.classList.remove("hidden");
+    } else {
+      backBtn.classList.add("hidden");
+    }
+  }
+
+  peopleModalTagContext = tagIdiomaContext || null;
+  if (idiomaRow) {
+    idiomaRow.classList.toggle("hidden", !tagIdiomaContext);
+    if (tagIdiomaContext && idiomaSelect) idiomaSelect.value = tagIdiomaContext.filtroIdioma || "";
+  }
+
+  const lang = idiomaMostrar || idiomaActual;
+  const sorted = sortSongsByTitle(list, lang);
   if (countEl) countEl.textContent = sorted.length;
+
+  if (!sorted.length && tagIdiomaContext) {
+    const idiomaLabel = tagIdiomaContext.filtroIdioma
+      ? (IDIOMA_NOMBRES[tagIdiomaContext.filtroIdioma] || tagIdiomaContext.filtroIdioma)
+      : null;
+
+    cont.innerHTML = `
+      <div class="biblio-empty">
+        <p>${idiomaLabel ? `No se encontraron canciones con este tag en ${idiomaLabel}.` : "No se encontraron canciones con este tag."}</p>
+        <button type="button" class="chip" ${dataAction("volverAValoresDesdePeople")}>← Volver a Tags</button>
+      </div>
+    `;
+    railEl?.classList.add("hidden");
+    return;
+  }
 
   renderSongRows(sorted, cont, cont, railEl, onSelect || (song => () => {
     cerrarPeopleModal();
     openSong(song.id);
-  }));
+  }), lang);
 }
 
 // Biblioteca modal
@@ -395,15 +445,15 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=108",
-    "modals/revised.html?v=108",
-    "modals/people.html?v=108",
-    "modals/valores.html?v=108",
-    "modals/share.html?v=108",
-    "modals/afinometro.html?v=108",
-    "modals/biblioteca.html?v=108",
-    "modals/listas.html?v=108",
-    "modals/notepad.html?v=108"
+    "modals/info.html?v=123",
+    "modals/revised.html?v=123",
+    "modals/people.html?v=123",
+    "modals/valores.html?v=123",
+    "modals/share.html?v=123",
+    "modals/afinometro.html?v=123",
+    "modals/biblioteca.html?v=123",
+    "modals/listas.html?v=123",
+    "modals/notepad.html?v=123"
   ];
 
   for (const path of modales) {
@@ -448,6 +498,9 @@ async function init() {
   initChordInstrumentSelect();
   initChordTransposeToggleButton();
   initChordPopover();
+  initBanderaPicker();
+  initValoresModal();
+  initPeopleModal();
 
   // si esto falla (sin conexión y sin caché todavía, un corte pasajero),
   // no debe cortar el resto de init(): sin este try/catch, el buscador, el
@@ -1522,23 +1575,61 @@ function renderMisListas() {
   }).join("");
 }
 
-// autor - coautor - compositor - traductor
-function openPersonModal(nombre, tipo) {
+// de dónde se abrió el peopleModal actual — null si no hay "para dónde
+// volver" (ver renderPeopleModal / openPersonModal / abrirIdiomaSongsModal)
+let peopleModalOrigen = null;
+
+// autor - coautor - compositor - traductor - tags
+// origen (opcional): { tipo, filtroIdioma } — solo lo pasa el click de
+// renderValoresModal (viene de Autores/Compositores/Coautores/Tags en Info
+// de la app). Cuando se llama desde el link de autor/compositor DENTRO de
+// una canción no se pasa nada, así que no queda "para dónde volver"
+function openPersonModal(nombre, tipo, origen) {
+  peopleModalOrigen = origen || null;
+
   const data = getDataActual();
 
-  const normalized = normalize(nombre);
+  // match EXACTO (recortando espacios de más, nada más) — antes usaba
+  // normalize() + includes(), que ignora mayúsculas/acentos y hace substring:
+  // "alabanza" y "Amor" mostraban las canciones de "Alabanza"/"Adoracion" o
+  // de "Amor a Dios"/"Amor cristiano" mezcladas con las del valor exacto
+  // elegido, cuando en realidad son tags/nombres distintos en los datos
+  const buscado = nombre.trim();
 
-  const filtradas = data.filter(song => {
+  let filtradas = data.filter(song => {
     const campos = normalizeArrayField(song[tipo]);
-    return campos.some(p => normalize(p).includes(normalized));
+    return campos.some(p => (p || "").toString().trim() === buscado);
   });
+
+  // Tags con un idioma puntual (elegido en el listado general o en el
+  // selector de acá adentro): la lista de canciones y sus títulos siguen
+  // ESE idioma, no el que esté activo en el resto de la app
+  const filtroIdioma = tipo === "tags" ? (origen?.filtroIdioma || "") : "";
+  if (filtroIdioma) {
+    filtradas = filtradas.filter(song => !!song.idiomas?.[filtroIdioma]?.titulo);
+  }
 
   const [icon, ...resto] = getPersonLabel(tipo).split(" ");
 
+  // el título muestra el tag YA traducido al idioma que se está mirando —
+  // "nombre" en sí (usado para el re-filtrado si se cambia el idioma acá
+  // adentro) se queda siempre en español, que es como está guardado
+  const nombreMostrado = tipo === "tags" ? getTagDisplay(nombre, filtroIdioma || idiomaActual) : nombre;
+
+  // si la lista está filtrada por idioma (tags), cada canción debe abrirse
+  // YA en ESE idioma — no en el idioma activo de la app (ver abrirIdiomaSongsModal)
   renderPeopleModal({
     icon,
-    title: `${resto.join(" ")}: ${nombre}`,
-    list: filtradas
+    title: `${resto.join(" ")}: ${nombreMostrado}`,
+    list: filtradas,
+    idiomaMostrar: filtroIdioma || idiomaActual,
+    tagIdiomaContext: tipo === "tags" ? { nombre, filtroIdioma } : null,
+    onSelect: filtroIdioma
+      ? song => () => {
+          cerrarPeopleModal();
+          changeLanguage(filtroIdioma, song.id);
+        }
+      : null
   });
 
   abrirPeopleModal();
@@ -1549,8 +1640,17 @@ function openPersonModal(nombre, tipo) {
 // de ese campo (en el libro activo, mismo alcance que openPersonModal, para
 // que lo que se lista acá siempre tenga resultado al elegirlo) con cuántas
 // canciones tiene cada uno; elegir uno abre el listado de canciones (peopleModal)
-function getDistinctValues(tipo) {
-  const data = getDataActual();
+// filtroIdioma solo lo usa tipo==="tags": los tags son un campo único por
+// canción (no por idioma, la data no los separa así), así que "tags en
+// español" en realidad significa "tags de canciones que tienen español" —
+// deja afuera las canciones que no tengan esa traducción
+function getDistinctValues(tipo, filtroIdioma) {
+  let data = getDataActual();
+
+  if (tipo === "tags" && filtroIdioma) {
+    data = data.filter(song => !!song.idiomas?.[filtroIdioma]?.titulo);
+  }
+
   const counts = new Map();
 
   if (tipo === "idioma") {
@@ -1575,27 +1675,52 @@ function getDistinctValues(tipo) {
     });
   });
 
+  // "raw" es el valor tal cual está guardado (español) — se usa para
+  // buscar/filtrar. "nombre" es lo que se muestra: en Tags, traducido al
+  // idioma elegido (ver getTagDisplay); en el resto, igual a "raw"
   return [...counts.entries()]
-    .map(([nombre, count]) => ({ nombre, count }))
+    .map(([raw, count]) => ({
+      nombre: tipo === "tags" ? getTagDisplay(raw, filtroIdioma) : raw,
+      raw,
+      count
+    }))
     .sort((a, b) => a.nombre.localeCompare(b.nombre, "es", { sensitivity: "base" }));
 }
 
 const VALORES_TITULO_PLURAL = { autor: "Autores", coautor: "Coautores", compositor: "Compositores", tags: "Tags", idioma: "Idiomas" };
 
-function renderValoresModal(tipo) {
+// si el valoresModal actual se abrió desde Información de la app (chips de
+// arriba) o desde otro lado (ej. tocando "Temas:" dentro de una canción) —
+// controla si se muestra "← Información de la app" (ver abrirValoresModal)
+let valoresModalFromInfo = true;
+
+function renderValoresModal(tipo, filtroIdioma) {
   const cont = document.getElementById("valoresModalLista");
   const titleEl = document.getElementById("valoresModalTitle");
   const badgeEl = document.getElementById("valoresModalBadge");
   const countEl = document.getElementById("valoresModalCount");
   const railEl = document.getElementById("valoresModalRail");
+  const idiomaRow = document.getElementById("valoresModalIdiomaRow");
+  const backBtn = document.getElementById("valoresModalBack");
   if (!cont) return;
+
+  backBtn?.classList.toggle("hidden", !valoresModalFromInfo);
+
+  // lista nueva → búsqueda en blanco (si quedaba texto de una lista
+  // anterior, filtraría de entrada sobre datos que ni siquiera se ven)
+  const searchInput = document.getElementById("valoresModalSearch");
+  if (searchInput) searchInput.value = "";
+  document.getElementById("valoresModalSearchClear")?.classList.add("hidden");
+
+  // el selector de idioma solo tiene sentido para Tags (ver getDistinctValues)
+  idiomaRow?.classList.toggle("hidden", tipo !== "tags");
 
   const icon = tipo === "idioma" ? "🌐" : getPersonLabel(tipo).split(" ")[0];
 
   titleEl.innerText = VALORES_TITULO_PLURAL[tipo] || "Listado";
   if (badgeEl) badgeEl.textContent = icon;
 
-  const valores = getDistinctValues(tipo);
+  const valores = getDistinctValues(tipo, filtroIdioma);
   if (countEl) countEl.textContent = valores.length;
 
   cont.innerHTML = "";
@@ -1608,7 +1733,7 @@ function renderValoresModal(tipo) {
 
   const letrasVistas = [];
 
-  valores.forEach(({ nombre, codigo, count }) => {
+  valores.forEach(({ nombre, raw, codigo, count }) => {
     const letra = getIndexLetter(nombre);
     if (!letrasVistas.includes(letra)) letrasVistas.push(letra);
 
@@ -1627,7 +1752,9 @@ function renderValoresModal(tipo) {
       if (tipo === "idioma") {
         abrirIdiomaSongsModal(codigo, nombre);
       } else {
-        openPersonModal(nombre, tipo);
+        // "raw" es el valor en español (con el que hay que buscar); "nombre"
+        // acá puede venir ya traducido (Tags), solo sirve para mostrarlo
+        openPersonModal(raw, tipo, { tipo, filtroIdioma, fromInfo: valoresModalFromInfo });
       }
     });
     cont.appendChild(div);
@@ -1640,6 +1767,8 @@ function renderValoresModal(tipo) {
 // "Idiomas") — a diferencia de autor/compositor/etc., acá elegir una
 // canción la abre YA en ese idioma (changeLanguage), no en el idioma activo
 function abrirIdiomaSongsModal(codigo, nombreIdioma) {
+  peopleModalOrigen = { tipo: "idioma" };
+
   const filtradas = getDataActual().filter(song => !!(song.idiomas && song.idiomas[codigo]));
 
   renderPeopleModal({
@@ -1655,14 +1784,101 @@ function abrirIdiomaSongsModal(codigo, nombreIdioma) {
   abrirPeopleModal();
 }
 
-function abrirValoresModal(tipo) {
-  cerrarInfo();
-  renderValoresModal(tipo);
+// filtroIdioma opcional: si no se pasa (entrada normal desde Info de la
+// app), Tags arranca filtrado por el idioma que se está usando ahora mismo.
+// Si se pasa (volviendo desde el listado de canciones de un tag puntual),
+// respeta ese filtro tal cual estaba antes de entrar — ver
+// volverAValoresDesdePeople
+//
+// opts.fromInfo (default true): false cuando se abre desde otro lado que no
+// es Información de la app (ej. tocando "Temas:" dentro de una canción) —
+// en ese caso no tiene sentido cerrar Info (nunca estuvo abierto) ni
+// mostrar el "← Información de la app" arriba del listado
+function abrirValoresModal(tipo, filtroIdioma, opts = {}) {
+  const fromInfo = opts.fromInfo !== false;
+  valoresModalFromInfo = fromInfo;
+
+  if (fromInfo) cerrarInfo();
+
+  const idiomaFinal = tipo === "tags" ? (filtroIdioma !== undefined && filtroIdioma !== null ? filtroIdioma : idiomaActual) : undefined;
+
+  const idiomaSelect = document.getElementById("valoresModalIdioma");
+  if (tipo === "tags" && idiomaSelect) idiomaSelect.value = idiomaFinal;
+
+  renderValoresModal(tipo, idiomaFinal);
   document.getElementById("valoresModal").style.display = "block";
+}
+
+// vuelve del listado de canciones (peopleModal) al listado general de donde
+// se vino (Autores/Compositores/Coautores/Tags/Idiomas) — ver peopleModalOrigen
+function volverAValoresDesdePeople() {
+  if (!peopleModalOrigen) return;
+
+  cerrarPeopleModal();
+  abrirValoresModal(peopleModalOrigen.tipo, peopleModalOrigen.filtroIdioma, { fromInfo: peopleModalOrigen.fromInfo });
+}
+
+// selector de idioma DENTRO del listado de canciones de un tag — por si te
+// confundiste de idioma en Tags y no querés volver a la lista general para
+// corregirlo. Re-consulta el mismo tag con el idioma nuevo, sin moverse.
+function initPeopleModal() {
+  const idiomaSelect = document.getElementById("peopleModalIdioma");
+  idiomaSelect?.addEventListener("change", () => {
+    if (!peopleModalTagContext) return;
+
+    openPersonModal(peopleModalTagContext.nombre, "tags", {
+      tipo: "tags",
+      filtroIdioma: idiomaSelect.value,
+      fromInfo: peopleModalOrigen?.fromInfo
+    });
+  });
+}
+
+function initValoresModal() {
+  const idiomaSelect = document.getElementById("valoresModalIdioma");
+  idiomaSelect?.addEventListener("change", () => {
+    renderValoresModal("tags", idiomaSelect.value);
+  });
+
+  const searchInput = document.getElementById("valoresModalSearch");
+  searchInput?.addEventListener("input", () => filtrarValoresModal(searchInput.value));
+
+  document.getElementById("valoresModalSearchClear")?.addEventListener("click", () => {
+    if (searchInput) searchInput.value = "";
+    filtrarValoresModal("");
+    searchInput?.focus();
+  });
+}
+
+// búsqueda blanda: filtra las filas ya renderizadas por texto (sin volver a
+// pedir los datos), acentos/mayúsculas no importan — igual que el buscador
+// principal de la app
+function filtrarValoresModal(termino) {
+  const cont = document.getElementById("valoresModalLista");
+  const railEl = document.getElementById("valoresModalRail");
+  const clearBtn = document.getElementById("valoresModalSearchClear");
+  if (!cont) return;
+
+  const q = normalize(termino);
+
+  cont.querySelectorAll(".song-row").forEach(row => {
+    const texto = row.querySelector(".song-row-title")?.textContent || "";
+    row.style.display = normalize(texto).includes(q) ? "" : "none";
+  });
+
+  railEl?.classList.toggle("hidden", !!q);
+  clearBtn?.classList.toggle("hidden", !q);
 }
 
 function cerrarValoresModal() {
   document.getElementById("valoresModal").style.display = "none";
+}
+
+// a diferencia de la ✕ (que solo cierra), esto vuelve al modal de
+// Información de la app — de donde siempre se llega a este listado
+function volverAInfoDesdeValores() {
+  cerrarValoresModal();
+  info();
 }
 
 

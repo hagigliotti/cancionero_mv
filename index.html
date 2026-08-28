@@ -9,10 +9,10 @@
   <title>Cancionero MV</title>
 
   <!-- PWA / APARIENCIA DE APP -->
-  <link rel="manifest" href="manifest.webmanifest?v=108">
-  <link rel="icon" href="imagenes/icons/favicon-32.png?v=108" sizes="32x32">
-  <link rel="icon" href="imagenes/icons/favicon-16.png?v=108" sizes="16x16">
-  <link rel="apple-touch-icon" href="imagenes/icons/apple-touch-icon.png?v=108">
+  <link rel="manifest" href="manifest.webmanifest?v=123">
+  <link rel="icon" href="imagenes/icons/favicon-32.png?v=123" sizes="32x32">
+  <link rel="icon" href="imagenes/icons/favicon-16.png?v=123" sizes="16x16">
+  <link rel="apple-touch-icon" href="imagenes/icons/apple-touch-icon.png?v=123">
 
   <meta name="theme-color" content="#122033">
   <meta name="mobile-web-app-capable" content="yes">
@@ -24,8 +24,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css?v=108">
-  <link rel="stylesheet" href="notepad.css?v=108">
+  <link rel="stylesheet" href="style.css?v=123">
+  <link rel="stylesheet" href="notepad.css?v=123">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XS6DM59CNT"></script>
@@ -176,7 +176,6 @@
                   <option value="pt">Português</option>
                 </select>
               </div>
-              <select id="menuBandera" class="bandera-hidden-select" onchange="setBanderaIdioma(idiomaActual, this.value)"></select>
             </div>
 
             <div class="menu-group" id="projectorToggleGroup">
@@ -290,13 +289,14 @@
 
 
 <!-- ======================================== JS ======================================== -->
-<script src="lenguage.js?v=108"></script>
-<script src="utils.js?v=108"></script>
-<script src="theme.js?v=108"></script>
-<script src="afinometro.js?v=108"></script>
-<script src="app.js?v=108"></script>
-<script src="songbook.js?v=108"></script>
-<script src="notepad.js?v=108"></script>
+<script src="tag-translations.js?v=123"></script>
+<script src="lenguage.js?v=123"></script>
+<script src="utils.js?v=123"></script>
+<script src="theme.js?v=123"></script>
+<script src="afinometro.js?v=123"></script>
+<script src="app.js?v=123"></script>
+<script src="songbook.js?v=123"></script>
+<script src="notepad.js?v=123"></script>
 
 <!-- ======================================== PWA OFFLINE ======================================== -->
 <div id="updateBanner" class="update-banner">
@@ -321,6 +321,15 @@
     </div>
     <div class="chord-popover-diagram" id="chordPopoverDiagram"></div>
     <button type="button" class="chord-popover-play" id="chordPopoverPlayBtn">🔊 Escuchar de nuevo</button>
+  </div>
+</div>
+
+<!-- ======================================== BANDERA POR PAÍS (popover) ======================================== -->
+<div id="banderaPopoverBackdrop" class="chord-popover-backdrop hidden">
+  <div class="chord-popover">
+    <button type="button" class="chord-popover-close" data-action="cerrarBanderaPicker" aria-label="Cerrar">✕</button>
+    <div class="chord-popover-name">🌐 Elegí tu bandera</div>
+    <div id="banderaPopoverList" class="bandera-popover-list"></div>
   </div>
 </div>
 
@@ -401,12 +410,38 @@
       if (firstRow) root.setProperty("--alfabeto-row-h", firstRow.offsetHeight + "px");
     }
 
+    // la barra de letras y la de arriba se achican con una transición CSS
+    // (no es instantáneo): medir el alto solo al principio y al final del
+    // achique (transitionend) deja al título de la canción (sticky, pegado
+    // "top: var(--topbar-h) + var(--alfabeto-row-h)") mal ubicado DURANTE
+    // esos ~0.22s — el texto ya se achicó pero el hueco de arriba todavía
+    // mide el alto viejo, y recién al final salta de golpe al alto correcto.
+    // Eso es la "vibración": dos saltos en vez de un solo movimiento fluido.
+    // Solución: mientras dura la transición, medir en cada frame (no solo
+    // al principio y al final) para que el título se mueva JUNTO con el
+    // achique real de las barras, no después.
+    let syncRafId = null;
+
+    function syncOffsetsDuringTransition() {
+      const start = performance.now();
+      const DURATION = 280; // un poco más que --trans (0.22s), por las dudas
+
+      if (syncRafId) cancelAnimationFrame(syncRafId);
+
+      function tick(now) {
+        syncOffsets();
+        syncRafId = (now - start < DURATION) ? requestAnimationFrame(tick) : null;
+      }
+
+      syncRafId = requestAnimationFrame(tick);
+    }
+
     function onScroll() {
       const shouldBeScrolled = window.scrollY > 30;
       if (shouldBeScrolled !== scrolled) {
         scrolled = shouldBeScrolled;
         document.body.classList.toggle("scrolled", scrolled);
-        syncOffsets(); // el alto de los botones cambia al achicarse/agrandarse
+        syncOffsetsDuringTransition();
       }
     }
 
@@ -414,14 +449,6 @@
     window.addEventListener("resize", syncOffsets);
     window.addEventListener("load", syncOffsets);
     syncOffsets();
-
-    // la barra de letras se achica con una transición CSS (no es instantáneo):
-    // medir el alto justo al togglear "scrolled" captura el alto VIEJO (antes
-    // de achicarse), dejando el título de la canción pegado más abajo de lo
-    // debido y con un hueco por donde se llega a asomar el contenido de atrás
-    // al scrollear. Se vuelve a medir cuando la transición realmente termina.
-    document.querySelector(".alfabeto-nav")?.addEventListener("transitionend", syncOffsets);
-    document.querySelector(".top-bar")?.addEventListener("transitionend", syncOffsets);
   })();
 </script>
 

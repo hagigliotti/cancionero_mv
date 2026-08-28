@@ -2,7 +2,6 @@
 let revisadoModoActivo = false;
 let modalContext = "normal";
 let revisadoEstadoActual = "si";
-let tagModalValue = "";
 
 // ===================== HELPERS =====================
 
@@ -359,8 +358,7 @@ function normalizeMeta(song, field) {
 }
 
 // ===================== MODAL REVISADO =====================
-// cerrarListModal: ver la versión más abajo (también limpia tagModalValue)
-
+// cerrarListModal: ver la versión más abajo
 
 function toggleRevisadoEstado() {
   revisadoEstadoActual = (revisadoEstadoActual === "si") ? "no" : "si";
@@ -464,36 +462,8 @@ function showPersonSongs(valor, tipo) {
   renderPersonModal();
 }
 
-// ===================== MODAL TAGS =====================
-function openTagModal(tag) {
-  tagModalValue = tag;
-  renderTagModal();
-}
-
-function renderTagModal() {
-  const data = getDataActual();
-
-  const filtered = data.filter(song =>
-    song.tags?.some(t => normalize(t) === normalize(tagModalValue))
-  );
-
-  const title = `Tag: ${tagModalValue}`;
-
-  // ocultar el toggle de revisadas (no aplica acá)
-  document.getElementById("revisadoToggleWrap")?.classList.add("hidden");
-
-  renderListModal({
-    title,
-    icon: "🏷️",
-    list: filtered
-  });
-
-  document.getElementById("listModal").style.display = "block";
-}
-
 function cerrarListModal() {
   document.getElementById("listModal").style.display = "none";
-  tagModalValue = "";
 }
 
 

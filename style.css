@@ -416,19 +416,75 @@ a.menu-item {
   font-weight: 600;
 }
 
+/* fila "Idioma" del listado de Tags: alinea el ícono 🌐 con los íconos de
+   la lista de abajo (misma indentación que .about-body, 14px) y el select
+   pegado al label en vez de estirado al borde derecho */
+/* margin, no padding: para que el "✕" (position:absolute, right:6px)
+   quede referenciado al borde REAL del input, no al borde del wrap con
+   su padding de más (si no, el botón queda pisando el borde/afuera) */
+.valores-search-wrap { position: relative; display: flex; align-items: center; margin: 0 22px 10px; flex-shrink: 0; }
+
+.valores-search-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px 40px 9px 16px;
+  border-radius: var(--radius-xl);
+  border: 2px solid transparent;
+  font-size: 14px;
+  outline: none;
+  transition: var(--trans);
+  background: rgba(255,255,255,0.10);
+  color: inherit;
+}
+
+.light-mode .valores-search-input {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(56,189,248,0.30);
+  color: #e8f4fd;
+}
+.light-mode .valores-search-input::placeholder { color: rgba(232,244,253,0.50); }
+
+.dark-mode .valores-search-input {
+  background: var(--gray-50);
+  border-color: var(--gray-100);
+  color: var(--navy);
+}
+.dark-mode .valores-search-input::placeholder { color: var(--gray-500); }
+
+.valores-search-input:focus {
+  border-color: var(--sky) !important;
+  box-shadow: 0 0 0 4px var(--sky-glow) !important;
+}
+
+#valoresModalIdiomaRow,
+#peopleModalIdiomaRow {
+  padding-left: 24px;
+  padding-right: 14px;
+}
+
+#peopleModalIdiomaRow .sec-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  font-size: 12px;
+}
+
+#peopleModalIdiomaRow .menu-row-label { flex: 0 0 auto; }
+
+#valoresModalIdiomaRow .sec-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  font-size: 12px;
+}
+
+#valoresModalIdiomaRow .menu-row-label {
+  flex: 0 0 auto;
+}
+
 /* ícono de bandera dentro de la fila Idioma: clickeable, abre el país oculto detrás */
 .sec-icon.flag-pick { cursor: pointer; }
 .sec-icon.flag-pick:active { transform: scale(0.88); }
-
-/* selector de país: sin fila propia, se abre tocando la bandera de arriba */
-.bandera-hidden-select {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  pointer-events: none;
-  color: var(--navy);
-}
 
 /* selects dentro del menú — SIEMPRE fondo claro + texto oscuro, sin
    depender del tema: el desplegable nativo del navegador (con las opciones)
@@ -1245,6 +1301,17 @@ body.dark-mode.projector .teleprompter-bar {
 
 .tag-link:hover { opacity: 0.8; text-decoration: underline; }
 
+/* la etiqueta "Temas:" (a diferencia de los tags en sí) queda del mismo
+   gris que el resto de los títulos de sección (Autor:, Compositor:...),
+   pero subrayada para dar la pista de que se puede tocar */
+.temas-label-link {
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.temas-label-link:hover { opacity: 0.8; }
+
 .tonalidad-link {
   cursor: pointer;
   color: var(--sky);
@@ -1652,6 +1719,25 @@ body.light-mode .toast {
 .dark-mode .about-close { background: var(--gray-50); }
 .about-close:hover { opacity: 1; background: var(--sky); color: #fff; }
 
+/* volver al modal de Información de la app — solo en los listados que se
+   abren DESDE ahí (Autores/Compositores/Coautores/Tags/Idiomas): a
+   diferencia de .about-close (cierra sin más), esto reabre Info detrás.
+   En flujo normal (no absoluta) arriba del badge, para no pisarlo */
+.about-back {
+  display: block;
+  border: none;
+  background: none;
+  color: inherit;
+  opacity: 0.65;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.about-back:hover { opacity: 1; }
+
 .theme-toggle-btn {
   position: absolute;
   top: 52px;
@@ -1979,6 +2065,13 @@ details[open] .sec-chevron { transform: rotate(90deg); }
   opacity: 0.6;
   font-size: 13.5px;
   padding: 30px 0;
+}
+
+/* si el estado vacío trae un botón (ej. "volver a Tags" cuando un tag no
+   tiene canciones en el idioma elegido), que no quede apagado como el texto */
+.biblio-empty .chip {
+  opacity: 1;
+  margin-top: 12px;
 }
 
 .biblio-card {
@@ -2637,6 +2730,44 @@ body.light-mode .chord-popover { background: #1e293b; color: #fff; }
   color: #06202e;
   cursor: pointer;
 }
+
+/* popover de "elegí tu bandera" (país por idioma) */
+.bandera-popover-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 14px;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.bandera-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 8px 10px;
+  background: rgba(255,255,255,0.05);
+  color: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  touch-action: manipulation;
+}
+
+.dark-mode .bandera-option { background: var(--gray-50); }
+.bandera-option:hover { background: rgba(56,189,248,0.12); }
+
+.bandera-option.active {
+  background: var(--sky);
+  color: #06202e;
+}
+
+.bandera-option-emoji { font-size: 20px; }
 
 /* ---- círculo de quintas ---- */
 .fifths-circle {

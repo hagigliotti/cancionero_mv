@@ -146,7 +146,7 @@ function openSong(id) {
     <div class="song-meta">
 
       <div class="flags">
-        <b>Idiomas:</b> ${renderLanguageFlags(song)}
+        <b>Idiomas:</b> ${renderLanguageFlags(song, false, true)}
       </div>
       
       <div>
@@ -253,18 +253,22 @@ function openSong(id) {
       </div>
 
       <div>
-        <b>Temas:</b>
+        <b class="temas-label-link" ${dataAction("abrirValoresModal", ["tags", null, { fromInfo: false }])} title="Ver todos los tags">Temas:</b>
         ${
           song.tags?.length
             ? [...song.tags]
                 .map(tag => tag?.toString().trim())
-                .map(tag => tag.charAt(0).toUpperCase() + tag.slice(1).toLowerCase())
+                .filter(Boolean)
+                // el tag guardado siempre está en español; se muestra
+                // traducido al idioma en el que se está viendo la canción
+                // (ver getTagDisplay), pero se busca/filtra por el original
                 .sort((a, b) =>
-                  a.localeCompare(b, "es", { sensitivity: "base" })
+                  getTagDisplay(a, idiomaActual).localeCompare(getTagDisplay(b, idiomaActual), "es", { sensitivity: "base" })
                 )
-                .map(tag =>
-                  `<span class="tag-link" ${dataAction("openTagModal", [tag])}>${tag}</span>`
-                )
+                .map(tag => {
+                  const mostrado = getTagDisplay(tag, idiomaActual);
+                  return `<span class="tag-link" ${dataAction("openPersonModal", [tag, "tags", { tipo: "tags", filtroIdioma: idiomaActual, fromInfo: false }])}>${mostrado}</span>`;
+                })
                 .join(", ")
             : "Desconocido"
         } |

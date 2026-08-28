@@ -1,8 +1,8 @@
 {
     "name": "Cancionero MV",
-    "version": "2.27.2",
-    "build": 108,
-    "updated": "27/08/2026",
+    "version": "2.33.3",
+    "build": 123,
+    "updated": "28/08/2026",
     "_versionado": "version/updated los edita Claude a mano (no un script), formato X.Y.Z: Z (patch, 2.6.0->2.6.1) = arreglo de bug o prolijidad interna, no se nota en la app; Y (minor, 2.6->2.7) = funcionalidad nueva o mejora visible; X (major, 2.x->3.0) = rediseno grande o cambio de fondo en como funciona la app. updated es la fecha del dia en que se hizo el cambio, formato DD/MM/AAAA. build SI sigue siendo automatico (bump-version.ps1), es solo para el cache-busting y no se muestra al usuario.",
     "author": "Hernando Gigliotti",
     "ayudantes": "Elisa Vilaltella",

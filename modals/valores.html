@@ -7,10 +7,29 @@
   <div class="modal-content about-modal">
 
     <div class="about-head">
+      <button type="button" class="about-back" id="valoresModalBack" data-action="volverAInfoDesdeValores">← Información de la app</button>
       <button type="button" class="about-close" data-action="cerrarValoresModal" aria-label="Cerrar">✕</button>
       <div class="about-badge" id="valoresModalBadge">👤</div>
       <h2 id="valoresModalTitle">Listado</h2>
       <div class="about-meta"><span id="valoresModalCount">0</span> en total — tocá uno para ver sus canciones</div>
+    </div>
+
+    <div class="valores-search-wrap">
+      <input type="text" id="valoresModalSearch" class="valores-search-input" placeholder="🔎 Buscar...">
+      <button type="button" id="valoresModalSearchClear" class="clear-search-btn hidden" aria-label="Borrar búsqueda">✕</button>
+    </div>
+
+    <div class="menu-row hidden" id="valoresModalIdiomaRow">
+      <span class="sec-icon">🌐</span>
+      <span class="menu-row-label">Idioma</span>
+      <select id="valoresModalIdioma" class="chord-instrument-select">
+        <option value="">Todos</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="gn">Guaraní</option>
+        <option value="it">Italiano</option>
+        <option value="pt">Português</option>
+      </select>
     </div>
 
     <div class="modal-body-wrap">
