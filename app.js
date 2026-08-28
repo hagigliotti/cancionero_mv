@@ -445,15 +445,16 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=123",
-    "modals/revised.html?v=123",
-    "modals/people.html?v=123",
-    "modals/valores.html?v=123",
-    "modals/share.html?v=123",
-    "modals/afinometro.html?v=123",
-    "modals/biblioteca.html?v=123",
-    "modals/listas.html?v=123",
-    "modals/notepad.html?v=123"
+    "modals/info.html?v=128",
+    "modals/revised.html?v=128",
+    "modals/people.html?v=128",
+    "modals/valores.html?v=128",
+    "modals/share.html?v=128",
+    "modals/contacto.html?v=128",
+    "modals/afinometro.html?v=128",
+    "modals/biblioteca.html?v=128",
+    "modals/listas.html?v=128",
+    "modals/notepad.html?v=128"
   ];
 
   for (const path of modales) {
@@ -1860,11 +1861,27 @@ function filtrarValoresModal(termino) {
   if (!cont) return;
 
   const q = normalize(termino);
+  let visibles = 0;
 
   cont.querySelectorAll(".song-row").forEach(row => {
-    const texto = row.querySelector(".song-row-title")?.textContent || "";
-    row.style.display = normalize(texto).includes(q) ? "" : "none";
+    const coincide = normalize(row.querySelector(".song-row-title")?.textContent || "").includes(q);
+    row.style.display = coincide ? "" : "none";
+    if (coincide) visibles++;
   });
+
+  // si la búsqueda (sola o combinada con el filtro de idioma) no encuentra
+  // nada, la lista quedaba vacía sin ninguna explicación — ahora se avisa
+  let sinResultados = cont.querySelector(".valores-no-results");
+  if (q && !visibles) {
+    if (!sinResultados) {
+      sinResultados = document.createElement("p");
+      sinResultados.className = "biblio-empty valores-no-results";
+      cont.appendChild(sinResultados);
+    }
+    sinResultados.textContent = `No se encontraron resultados para "${termino.trim()}"`;
+  } else if (sinResultados) {
+    sinResultados.remove();
+  }
 
   railEl?.classList.toggle("hidden", !!q);
   clearBtn?.classList.toggle("hidden", !q);
@@ -1993,6 +2010,18 @@ function abrirShareModal() {
 
 function cerrarShareModal() {
   const modal = document.getElementById("shareModal");
+  if (modal) modal.style.display = "none";
+}
+
+// MODAL CONTACTO — accesible desde el menú principal y desde el pie del
+// modal de Información de la app (ver .about-contact-actions)
+function abrirContactoModal() {
+  const modal = document.getElementById("contactoModal");
+  if (modal) modal.style.display = "block";
+}
+
+function cerrarContactoModal() {
+  const modal = document.getElementById("contactoModal");
   if (modal) modal.style.display = "none";
 }
 

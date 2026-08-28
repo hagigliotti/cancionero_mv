@@ -8,7 +8,7 @@
 
 // 👉 Subir este número cada vez que cambie la lista de archivos de abajo
 // (o cuando quieras forzar que todos descarten la caché vieja).
-const CACHE_VERSION = "v123";
+const CACHE_VERSION = "v128";
 
 const APP_SHELL_CACHE = `cancionero-shell-${CACHE_VERSION}`;
 const DATA_CACHE = `cancionero-data-${CACHE_VERSION}`;
@@ -16,33 +16,34 @@ const DATA_CACHE = `cancionero-data-${CACHE_VERSION}`;
 const APP_SHELL_FILES = [
   "./",
   "index.html",
-  "style.css?v=123",
-  "notepad.css?v=123",
-  "manifest.webmanifest?v=123",
+  "style.css?v=128",
+  "notepad.css?v=128",
+  "manifest.webmanifest?v=128",
 
-  "tag-translations.js?v=123",
-  "lenguage.js?v=123",
-  "utils.js?v=123",
-  "theme.js?v=123",
-  "afinometro.js?v=123",
-  "app.js?v=123",
-  "songbook.js?v=123",
-  "notepad.js?v=123",
+  "tag-translations.js?v=128",
+  "lenguage.js?v=128",
+  "utils.js?v=128",
+  "theme.js?v=128",
+  "afinometro.js?v=128",
+  "app.js?v=128",
+  "songbook.js?v=128",
+  "notepad.js?v=128",
 
-  "modals/info.html?v=123",
-  "modals/revised.html?v=123",
-  "modals/people.html?v=123",
-  "modals/share.html?v=123",
-  "modals/afinometro.html?v=123",
-  "modals/biblioteca.html?v=123",
-  "modals/listas.html?v=123",
-  "modals/notepad.html?v=123",
+  "modals/info.html?v=128",
+  "modals/revised.html?v=128",
+  "modals/people.html?v=128",
+  "modals/share.html?v=128",
+  "modals/contacto.html?v=128",
+  "modals/afinometro.html?v=128",
+  "modals/biblioteca.html?v=128",
+  "modals/listas.html?v=128",
+  "modals/notepad.html?v=128",
 
-  "imagenes/icons/favicon-16.png?v=123",
-  "imagenes/icons/favicon-32.png?v=123",
-  "imagenes/icons/apple-touch-icon.png?v=123",
-  "imagenes/icons/icon-192.png?v=123",
-  "imagenes/icons/icon-512.png?v=123",
+  "imagenes/icons/favicon-16.png?v=128",
+  "imagenes/icons/favicon-32.png?v=128",
+  "imagenes/icons/apple-touch-icon.png?v=128",
+  "imagenes/icons/icon-192.png?v=128",
+  "imagenes/icons/icon-512.png?v=128",
 
   "imagenes/Cancionero_blue.png",
   "imagenes/Cancionero_white.png",

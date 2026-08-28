@@ -9,10 +9,10 @@
   <title>Cancionero MV</title>
 
   <!-- PWA / APARIENCIA DE APP -->
-  <link rel="manifest" href="manifest.webmanifest?v=123">
-  <link rel="icon" href="imagenes/icons/favicon-32.png?v=123" sizes="32x32">
-  <link rel="icon" href="imagenes/icons/favicon-16.png?v=123" sizes="16x16">
-  <link rel="apple-touch-icon" href="imagenes/icons/apple-touch-icon.png?v=123">
+  <link rel="manifest" href="manifest.webmanifest?v=128">
+  <link rel="icon" href="imagenes/icons/favicon-32.png?v=128" sizes="32x32">
+  <link rel="icon" href="imagenes/icons/favicon-16.png?v=128" sizes="16x16">
+  <link rel="apple-touch-icon" href="imagenes/icons/apple-touch-icon.png?v=128">
 
   <meta name="theme-color" content="#122033">
   <meta name="mobile-web-app-capable" content="yes">
@@ -24,8 +24,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css?v=123">
-  <link rel="stylesheet" href="notepad.css?v=123">
+  <link rel="stylesheet" href="style.css?v=128">
+  <link rel="stylesheet" href="notepad.css?v=128">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XS6DM59CNT"></script>
@@ -191,18 +191,18 @@
 
           <div class="menu-contact">
             <p class="contact-label">Feedback</p>
-            <div class="contact-row">
-              <a href="#" data-action="abrirShareModal">
-                <span class="c-icon share-c">🔗</span>
+            <div class="menu-actions-row">
+              <a href="#" class="menu-action-btn share-c" data-action="closeMenu,abrirShareModal">
+                <span class="menu-action-icon">🔗</span>
                 <span>Compartir</span>
               </a>
-              <a href="mailto:hagigliotti@gmail.com?subject=Feedback%20-%20Cancionero%20MV">
-                <span class="c-icon mail-c">📩</span>
-                <span>Escribime</span>
+              <a href="https://www.paypal.com/" target="_blank" rel="noopener noreferrer" class="menu-action-btn donate-c">
+                <span class="menu-action-icon">☕</span>
+                <span>Buy me a coffee</span>
               </a>
-              <a href="https://www.paypal.com/" target="_blank" rel="noopener noreferrer">
-                <span class="c-icon pay-c">💖</span>
-                <span>Donaciones</span>
+              <a href="#" class="menu-action-btn contact-c" data-action="closeMenu,abrirContactoModal">
+                <span class="menu-action-icon">✉️</span>
+                <span>Contacto</span>
               </a>
             </div>
           </div>
@@ -289,14 +289,14 @@
 
 
 <!-- ======================================== JS ======================================== -->
-<script src="tag-translations.js?v=123"></script>
-<script src="lenguage.js?v=123"></script>
-<script src="utils.js?v=123"></script>
-<script src="theme.js?v=123"></script>
-<script src="afinometro.js?v=123"></script>
-<script src="app.js?v=123"></script>
-<script src="songbook.js?v=123"></script>
-<script src="notepad.js?v=123"></script>
+<script src="tag-translations.js?v=128"></script>
+<script src="lenguage.js?v=128"></script>
+<script src="utils.js?v=128"></script>
+<script src="theme.js?v=128"></script>
+<script src="afinometro.js?v=128"></script>
+<script src="app.js?v=128"></script>
+<script src="songbook.js?v=128"></script>
+<script src="notepad.js?v=128"></script>
 
 <!-- ======================================== PWA OFFLINE ======================================== -->
 <div id="updateBanner" class="update-banner">
