@@ -445,16 +445,16 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=128",
-    "modals/revised.html?v=128",
-    "modals/people.html?v=128",
-    "modals/valores.html?v=128",
-    "modals/share.html?v=128",
-    "modals/contacto.html?v=128",
-    "modals/afinometro.html?v=128",
-    "modals/biblioteca.html?v=128",
-    "modals/listas.html?v=128",
-    "modals/notepad.html?v=128"
+    "modals/info.html?v=129",
+    "modals/revised.html?v=129",
+    "modals/people.html?v=129",
+    "modals/valores.html?v=129",
+    "modals/share.html?v=129",
+    "modals/contacto.html?v=129",
+    "modals/afinometro.html?v=129",
+    "modals/biblioteca.html?v=129",
+    "modals/listas.html?v=129",
+    "modals/notepad.html?v=129"
   ];
 
   for (const path of modales) {
@@ -505,17 +505,22 @@ async function init() {
 
   // si esto falla (sin conexión y sin caché todavía, un corte pasajero),
   // no debe cortar el resto de init(): sin este try/catch, el buscador, el
-  // idioma y las banderas quedaban totalmente sin funcionar
+  // idioma y las banderas quedaban totalmente sin funcionar.
+  // { cache: "no-store" } en los tres fetch: sin esto, el navegador puede
+  // servir estos .json desde SU PROPIO caché HTTP (por debajo del Service
+  // Worker, que igual pide "red primero") y mostrar datos viejos —por
+  // ejemplo tags editados en canciones.json que no se veían actualizados
+  // aunque el archivo en el repo ya estuviera bien.
   try {
-    const resLibros = await fetch("data/libros.json");
+    const resLibros = await fetch("data/libros.json", { cache: "no-store" });
     LIBROS = await resLibros.json();
 
     await Promise.all(LIBROS.map(async libro => {
-      const res = await fetch(`data/${libro.archivo}`);
+      const res = await fetch(`data/${libro.archivo}`, { cache: "no-store" });
       librosData[libro.id] = (await res.json()).map(normalizeSong);
     }));
 
-    const resBiblioteca = await fetch("data/biblioteca.json");
+    const resBiblioteca = await fetch("data/biblioteca.json", { cache: "no-store" });
     biblioteca = await resBiblioteca.json();
   } catch (err) {
     console.warn("No se pudieron cargar los datos de canciones:", err);

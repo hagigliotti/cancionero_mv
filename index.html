@@ -9,10 +9,10 @@
   <title>Cancionero MV</title>
 
   <!-- PWA / APARIENCIA DE APP -->
-  <link rel="manifest" href="manifest.webmanifest?v=128">
-  <link rel="icon" href="imagenes/icons/favicon-32.png?v=128" sizes="32x32">
-  <link rel="icon" href="imagenes/icons/favicon-16.png?v=128" sizes="16x16">
-  <link rel="apple-touch-icon" href="imagenes/icons/apple-touch-icon.png?v=128">
+  <link rel="manifest" href="manifest.webmanifest?v=129">
+  <link rel="icon" href="imagenes/icons/favicon-32.png?v=129" sizes="32x32">
+  <link rel="icon" href="imagenes/icons/favicon-16.png?v=129" sizes="16x16">
+  <link rel="apple-touch-icon" href="imagenes/icons/apple-touch-icon.png?v=129">
 
   <meta name="theme-color" content="#122033">
   <meta name="mobile-web-app-capable" content="yes">
@@ -24,8 +24,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css?v=128">
-  <link rel="stylesheet" href="notepad.css?v=128">
+  <link rel="stylesheet" href="style.css?v=129">
+  <link rel="stylesheet" href="notepad.css?v=129">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XS6DM59CNT"></script>
@@ -289,20 +289,26 @@
 
 
 <!-- ======================================== JS ======================================== -->
-<script src="tag-translations.js?v=128"></script>
-<script src="lenguage.js?v=128"></script>
-<script src="utils.js?v=128"></script>
-<script src="theme.js?v=128"></script>
-<script src="afinometro.js?v=128"></script>
-<script src="app.js?v=128"></script>
-<script src="songbook.js?v=128"></script>
-<script src="notepad.js?v=128"></script>
+<script src="tag-translations.js?v=129"></script>
+<script src="lenguage.js?v=129"></script>
+<script src="utils.js?v=129"></script>
+<script src="theme.js?v=129"></script>
+<script src="afinometro.js?v=129"></script>
+<script src="app.js?v=129"></script>
+<script src="songbook.js?v=129"></script>
+<script src="notepad.js?v=129"></script>
 
 <!-- ======================================== PWA OFFLINE ======================================== -->
 <div id="updateBanner" class="update-banner">
   <span>Nueva actualización</span>
   <button type="button" data-action="recargarPagina">Actualizar</button>
   <button type="button" class="update-banner-close" data-action="ocultarAvisoActualizacion" aria-label="Cerrar">✕</button>
+</div>
+
+<div id="installBanner" class="update-banner">
+  <span>📲 Instalá Cancionero MV</span>
+  <button type="button" data-action="instalarApp">Instalar</button>
+  <button type="button" class="update-banner-close" data-action="cerrarAvisoInstalacion" aria-label="Cerrar">✕</button>
 </div>
 
 <!-- ======================================== DIAGRAMA DE ACORDE (popover) ======================================== -->
@@ -334,8 +340,19 @@
 </div>
 
 <script>
+  // true en cuanto el Service Worker NUEVO toma el control de esta pestaña
+  // de verdad (evento controllerchange) — hasta que eso no pasa, recargar
+  // puede seguir trayendo la versión vieja (ver recargarPagina más abajo)
+  let controladorNuevoActivo = false;
+  let recargaPendiente = false;
+
   if ("serviceWorker" in navigator) {
     let swReg = null;
+
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+      controladorNuevoActivo = true;
+      if (recargaPendiente) location.reload();
+    });
 
     window.addEventListener("load", () => {
       navigator.serviceWorker.register("sw.js").then(reg => {
@@ -383,8 +400,76 @@
     document.getElementById("updateBanner")?.classList.remove("show");
   }
 
+  // el service worker nuevo ya se instaló con skipWaiting() + clients.claim()
+  // (ver sw.js), pero tomar el control de ESTA pestaña no es instantáneo —
+  // por eso a veces "Actualizar" recargaba antes de que eso terminara y
+  // traía la misma versión de antes. Si el controlador nuevo ya está activo,
+  // recargamos ya; si no, esperamos al evento controllerchange (con un
+  // timeout de respaldo por si algo raro pasa y ese evento nunca llega).
   function recargarPagina() {
-    location.reload();
+    ocultarAvisoActualizacion();
+
+    if (controladorNuevoActivo) {
+      location.reload();
+      return;
+    }
+
+    recargaPendiente = true;
+    setTimeout(() => { if (recargaPendiente) location.reload(); }, 2000);
+  }
+
+  // ======================================== INSTALAR LA APP ========================================
+  // beforeinstallprompt solo existe en navegadores Chromium (Chrome/Edge/
+  // Samsung Internet) en Android y PC — Safari/iPhone no lo tiene, ahí la
+  // instalación sigue siendo manual (ver "Cómo instalar la app" en
+  // Información de la app, no hay forma de ofrecerla desde código).
+  let avisoInstalacion = null;
+
+  function appYaInstalada() {
+    return window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
+  }
+
+  window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    avisoInstalacion = e;
+
+    if (appYaInstalada()) return;
+
+    // si ya dijo "ahora no" (o ya se le preguntó) hace menos de 14 días,
+    // no insistimos cada vez que abre la app
+    const ultimoAviso = parseInt(localStorage.getItem("installPromptDismissed") || "0", 10);
+    const catorceDias = 14 * 24 * 60 * 60 * 1000;
+    if (Date.now() - ultimoAviso < catorceDias) return;
+
+    // si el aviso de "hay una actualización" ya está mostrándose, no lo tapamos
+    if (document.getElementById("updateBanner")?.classList.contains("show")) return;
+
+    document.getElementById("installBanner")?.classList.add("show");
+  });
+
+  // se instaló (desde este aviso o desde el menú del navegador): no
+  // preguntar más
+  window.addEventListener("appinstalled", () => {
+    avisoInstalacion = null;
+    localStorage.setItem("installPromptDismissed", Date.now().toString());
+    document.getElementById("installBanner")?.classList.remove("show");
+  });
+
+  function cerrarAvisoInstalacion() {
+    document.getElementById("installBanner")?.classList.remove("show");
+    localStorage.setItem("installPromptDismissed", Date.now().toString());
+  }
+
+  async function instalarApp() {
+    document.getElementById("installBanner")?.classList.remove("show");
+    if (!avisoInstalacion) return;
+
+    avisoInstalacion.prompt();
+    await avisoInstalacion.userChoice;
+    avisoInstalacion = null;
+
+    // se haya aceptado o no, no lo volvemos a mostrar por un tiempo
+    localStorage.setItem("installPromptDismissed", Date.now().toString());
   }
 </script>
 

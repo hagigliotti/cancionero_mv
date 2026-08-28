@@ -8,7 +8,7 @@
 
 // 👉 Subir este número cada vez que cambie la lista de archivos de abajo
 // (o cuando quieras forzar que todos descarten la caché vieja).
-const CACHE_VERSION = "v128";
+const CACHE_VERSION = "v129";
 
 const APP_SHELL_CACHE = `cancionero-shell-${CACHE_VERSION}`;
 const DATA_CACHE = `cancionero-data-${CACHE_VERSION}`;
@@ -16,34 +16,34 @@ const DATA_CACHE = `cancionero-data-${CACHE_VERSION}`;
 const APP_SHELL_FILES = [
   "./",
   "index.html",
-  "style.css?v=128",
-  "notepad.css?v=128",
-  "manifest.webmanifest?v=128",
+  "style.css?v=129",
+  "notepad.css?v=129",
+  "manifest.webmanifest?v=129",
 
-  "tag-translations.js?v=128",
-  "lenguage.js?v=128",
-  "utils.js?v=128",
-  "theme.js?v=128",
-  "afinometro.js?v=128",
-  "app.js?v=128",
-  "songbook.js?v=128",
-  "notepad.js?v=128",
+  "tag-translations.js?v=129",
+  "lenguage.js?v=129",
+  "utils.js?v=129",
+  "theme.js?v=129",
+  "afinometro.js?v=129",
+  "app.js?v=129",
+  "songbook.js?v=129",
+  "notepad.js?v=129",
 
-  "modals/info.html?v=128",
-  "modals/revised.html?v=128",
-  "modals/people.html?v=128",
-  "modals/share.html?v=128",
-  "modals/contacto.html?v=128",
-  "modals/afinometro.html?v=128",
-  "modals/biblioteca.html?v=128",
-  "modals/listas.html?v=128",
-  "modals/notepad.html?v=128",
+  "modals/info.html?v=129",
+  "modals/revised.html?v=129",
+  "modals/people.html?v=129",
+  "modals/share.html?v=129",
+  "modals/contacto.html?v=129",
+  "modals/afinometro.html?v=129",
+  "modals/biblioteca.html?v=129",
+  "modals/listas.html?v=129",
+  "modals/notepad.html?v=129",
 
-  "imagenes/icons/favicon-16.png?v=128",
-  "imagenes/icons/favicon-32.png?v=128",
-  "imagenes/icons/apple-touch-icon.png?v=128",
-  "imagenes/icons/icon-192.png?v=128",
-  "imagenes/icons/icon-512.png?v=128",
+  "imagenes/icons/favicon-16.png?v=129",
+  "imagenes/icons/favicon-32.png?v=129",
+  "imagenes/icons/apple-touch-icon.png?v=129",
+  "imagenes/icons/icon-192.png?v=129",
+  "imagenes/icons/icon-512.png?v=129",
 
   "imagenes/Cancionero_blue.png",
   "imagenes/Cancionero_white.png",
@@ -78,16 +78,26 @@ self.addEventListener("install", (event) => {
       // poder abrir cualquier canción sin internet apenas se instala la app.
       // Las imágenes de partituras, audios y PDFs NO se cachean acá — esas
       // siguen viajando por internet solo cuando hacen falta.
+      // fetch manual + cache.put (en vez de cache.add) con "no-store": así
+      // este precacheo SIEMPRE trae la versión más nueva del .json, sin que
+      // el caché HTTP del navegador le sirva por debajo una copia vieja del
+      // mismo archivo (cache.add() de por sí no fuerza eso).
       caches.open(DATA_CACHE).then(async (cache) => {
+        const fetchAndCache = async (file) => {
+          const res = await fetch(file, { cache: "no-store" });
+          await cache.put(file, res.clone());
+          return res;
+        };
+
         const results = await Promise.allSettled(
-          EXTRA_DATA_FILES.map((file) => cache.add(file))
+          EXTRA_DATA_FILES.map((file) => fetchAndCache(file))
         );
 
         try {
-          const res = await fetch("data/libros.json");
+          const res = await fetch("data/libros.json", { cache: "no-store" });
           const libros = await res.json();
           const libroResults = await Promise.allSettled(
-            libros.map((libro) => cache.add(`data/${libro.archivo}`))
+            libros.map((libro) => fetchAndCache(`data/${libro.archivo}`))
           );
           return results.concat(libroResults);
         } catch (err) {
@@ -134,8 +144,11 @@ self.addEventListener("fetch", (event) => {
   const isData = /\/data\/.*\.json$/i.test(url.pathname);
 
   if (isData) {
+    // "no-store": evita que el caché HTTP del navegador (una capa por
+    // debajo del Service Worker) sirva una copia vieja de este .json antes
+    // de que este fetch llegue siquiera a la red
     event.respondWith(
-      fetch(req)
+      fetch(req.url, { cache: "no-store" })
         .then((res) => {
           const copy = res.clone();
           caches.open(DATA_CACHE).then((cache) => cache.put(req, copy));
@@ -146,8 +159,14 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // resto del app shell: caché primero (rápido y funciona offline), red de respaldo
+  // resto del app shell: caché primero (rápido y funciona offline), red de
+  // respaldo. { cacheName: APP_SHELL_CACHE } fuerza a buscar SOLO en el
+  // caché de la versión activa — sin esto, caches.match() busca en TODOS
+  // los cachés que existan, y durante el ratito en que "activate" todavía
+  // no terminó de borrar el caché de la versión anterior, podía devolver
+  // esa versión vieja en vez de la nueva recién instalada (el motivo de
+  // que a veces "Actualizar" no trajera los cambios).
   event.respondWith(
-    caches.match(req).then((cached) => cached || fetch(req))
+    caches.match(req, { cacheName: APP_SHELL_CACHE }).then((cached) => cached || fetch(req))
   );
 });
