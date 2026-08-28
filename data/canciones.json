@@ -16,7 +16,7 @@
   "compas": ["4/4"],
   "ritmo": ["Adoración"],
   "referencia_biblica": ["San Mateo 11:28"],
-  "tags": ["worship", "Adoración", "Clásico", "Entrega", "Consuelo", "Confianza"],
+  "tags": ["Adoración", "Clásico", "Entrega", "Consuelo", "Confianza"],
 
   "idiomas": {
     "es": {
@@ -111,7 +111,7 @@
   "compas": ["4/4"],
   "ritmo": ["Worship"],
   "referencia_biblica": ["San Lucas 14:33"],
-  "tags": ["Adoración", "Entrega", "Worship"],
+  "tags": ["Adoración", "Entrega"],
 
   "idiomas": {
     "es": {
@@ -394,7 +394,7 @@
   "compas": ["4/4"],
   "ritmo": ["Worship"],
   "referencia_biblica": ["Apocalipsis 4:8"],
-  "tags": ["Clásico", "Adoración", "Worship", "Clásico"],
+  "tags": ["Clásico", "Adoración"],
 
   "idiomas": {
     "es": {
@@ -531,7 +531,7 @@
   "compas": ["4/4"],
   "ritmo":  ["Worship", "Adoración"],
   "referencia_biblica": ["Salmos 22:1", "Apocalipsis 19:6"],
-  "tags": ["Adoración", "Worship", "Majestuoso"],
+  "tags": ["Adoración", "Majestuoso"],
 
   "idiomas": {
     "es": {
@@ -1353,7 +1353,7 @@
   "compas": ["6/8"],
   "ritmo": ["Worship"],
   "referencia_biblica": ["San Juan 15:13"],
-  "tags": ["Amor de Dios", "Gracia", "Sacrificio", "Worship"],
+  "tags": ["Amor de Dios", "Gracia", "Sacrificio", "Adoración"],
 
   "idiomas": {
     "es": {
@@ -1588,7 +1588,7 @@
   "compas": ["4/4"],
   "ritmo": ["Worship"],
   "referencia_biblica": ["Isaías 43:19"],
-  "tags": ["Worship", "Fidelidad", "Adoración"],
+  "tags": ["Adoración", "Fidelidad"],
 
   "idiomas": {
     "es": {
@@ -1827,7 +1827,7 @@
   "compas": ["4/4"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmo 122:1", "Salmo 100:4", "Salmo 84:10", "Éxodo 20:8-10"],
-  "tags": ["Alabanza", "Adoración", "Bienvenida", "Sábado", "Comunidad", "Fraternidad", "Worship"],
+  "tags": ["Alabanza", "Adoración", "Bienvenida", "Sábado", "Comunidad", "Fraternidad"],
 
   "idiomas": {
     "es": {
@@ -2216,7 +2216,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Worship"],
   "referencia_biblica": ["Job 1:21"],
-  "tags": ["Worship"],
+  "tags": ["Adoración"],
 
   "idiomas": {
     "en": {
@@ -2439,7 +2439,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": [""],
-  "tags": ["Himno", "Clásico", "Salvacion", "Segunda Venida"],
+  "tags": ["Himno", "Clásico", "Salvación", "Segunda Venida"],
 
   "idiomas": {
     "es": {
@@ -3277,7 +3277,7 @@
   "compas": ["4/4"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Lucas 24:5-6", "1 Corintios 15:20"],
-  "tags": ["Worship", "Alabanza", "Resurrección", "Gozo", "Clásico"],
+  "tags": ["Adoración", "Alabanza", "Resurrección", "Gozo", "Clásico"],
 
   "idiomas": {
     "es": {
@@ -3782,7 +3782,7 @@
   "compas": ["4/4"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Josué 24:15", "Hechos 16:31"],
-  "tags": ["Familia", "Hogar", "Gozo", "Clásico", "Gozo", "Alabanza"],
+  "tags": ["Familia", "Hogar", "Gozo", "Clásico", "Alabanza"],
 
   "idiomas": {
     "es": {
@@ -3971,7 +3971,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Adoración", "Hebreo"],
   "referencia_biblica": ["Génesis 5:24", "Salmos 1:3", "Éxodo 16:21", "Proverbios 14:1"],
-  "tags": ["Alabanza", "Adoración", "Crecimiento", "Confianza", "Vida Eterna", "Comunión", "Familia", "Devoción", "Crecimiento", "Vida Cristiana"],
+  "tags": ["Alabanza", "Adoración", "Crecimiento", "Confianza", "Vida Eterna", "Comunión", "Familia", "Devoción", "Vida Cristiana"],
 
   "idiomas": {
     "es": {
@@ -4277,7 +4277,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Números 6:24-26", "Salmos 90:12", "Proverbios 9:11"],
-  "tags": ["Cumpleaños", "Celebracion", "Clásico", "Aniversario"],
+  "tags": ["Cumpleaños", "Celebración", "Clásico", "Aniversario"],
 
   "idiomas": {
     "es": {
@@ -4352,7 +4352,7 @@
   "compas": ["4/4"],
   "ritmo": ["Worship"],
   "referencia_biblica": ["Salmos 95:3", "Salmos 104:1", "Apocalipsis 22:13", "Apocalipsis 5:5-6"],
-  "tags": ["Adoración", "Grandeza", "Majesatad", "Trinidad"],
+  "tags": ["Adoración", "Grandeza", "Majestad", "Trinidad"],
 
   "idiomas": {
     "es": {
@@ -4446,7 +4446,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["2 Corintios 5:17"],
-  "tags": ["Testimonio", "Transformacion", "Evangelismo", "Clásico"],
+  "tags": ["Testimonio", "Transformación", "Evangelismo", "Clásico"],
   "idiomas": {
     "es": {
       "titulo": ["Cuando Cristo vino a mi corazón"],
@@ -4670,7 +4670,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Isaia 40:31", "Salmi 23:4", "Matteo 28:20"],
-  "tags": ["Scout", "Cammino", "Fiducia", "Giovani", "Classico"],
+  "tags": ["Scout", "Caminos", "Confianza", "Jóvenes", "Clásico"],
 
   "idiomas": {
     "it": {
@@ -4734,7 +4734,7 @@
   "compas": ["4/4"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Apocalisse 21:4", "Apocalisse 4:3", "Ebrei 13:5"],
-  "tags": ["Ritorno di Cristo", "Speranza", "Fiducia", "Nuova Gerusalemme", "Adorazione"],
+  "tags": ["Segunda Venida", "Esperanza", "Confianza", "Nueva Jerusalén", "Adoración"],
 
   "idiomas": {
     "it": {
@@ -4959,7 +4959,7 @@
   "ritmo": "Worship",
   "audio": "https://open.spotify.com/track/16e4Q3plJrKkncoLKR1CQ1",
   "referencia": "Salmos 103:1",
-  "tags": ["adoración", "alabanza", "worship", "cristiana", "iglesia", "congregacional"],
+  "tags": ["Adoración", "Alabanza", "Iglesia", "Congregacional"],
 
   "idiomas": {
     "es": {
@@ -5766,7 +5766,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Nahum 1:7", "Salmos 145:9"],
-  "tags": ["Bondad", "Gratitud", "Segunda venida"],
+  "tags": ["Bondad", "Gratitud", "Segunda Venida"],
 
   "idiomas": {
     "es": {
@@ -6059,7 +6059,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["1 San Juan 1:5"],
-  "tags": ["Worship", "Adoración"],
+  "tags": ["Adoración"],
 
   "idiomas": {
     "es": {
@@ -6513,7 +6513,7 @@
   "compas": ["4/4"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Levítico 25:38", "Génesis 22:14", "Jueces 6:24", "Jeremías 8:22"],
-  "tags": ["Alabanza", "Poder", "Alabanza", "Liberación", "Clásico"],
+  "tags": ["Alabanza", "Poder", "Liberación", "Clásico"],
   
   "idiomas": {
     "es": {
@@ -6637,7 +6637,7 @@
   "compas": ["4/4"],
   "ritmo": ["Balada"],
   "referencia_biblica": ["Salmos 84:10"],
-  "tags": ["Adoración", "Oracion", "Paz", "Esperanza", "Vida nueva", "Alabanza", "Consuelo"],
+  "tags": ["Adoración", "Oración", "Paz", "Esperanza", "Vida nueva", "Alabanza", "Consuelo"],
 
   "idiomas": {
     "es": {
@@ -8921,7 +8921,7 @@
   "compas": ["4/4"],
   "ritmo": ["Balada"],
   "referencia_biblica": ["Filipenses 4:6-7"],
-  "tags": ["Oracion", "Paz", "Adoracion", "Consuelo", "Alabanza"],
+  "tags": ["Oración", "Paz", "Adoración", "Consuelo", "Alabanza"],
 
   "idiomas": {
     "es": {
@@ -9412,7 +9412,7 @@
   "compas": ["4/4"],
   "ritmo": ["Worship"],
   "referencia_biblica": ["1 San Juan 4:16", "Romanos 12:1", "Salmos 86:12"],
-  "tags": ["Entrega", "Adoración", "Consagración", "Worship"],
+  "tags": ["Entrega", "Adoración", "Consagración"],
   "idiomas": {
 
     "es": {
@@ -9701,7 +9701,7 @@
   "compas": ["4/4"],
   "ritmo": [""],
   "referencia_biblica": ["Salmos 19:1", "San Mateo 6:28-30", "San Juan 14:6", "Salmos 27:1", "Salmos 8:3-4"],
-  "tags": ["Creación", "Confianza", "Amor de Dios", "Guía", "Consuelo", "Adoración", "Vida eterna"],
+  "tags": ["Creación", "Confianza", "Amor de Dios", "Guía", "Consuelo", "Adoración", "Vida Eterna"],
   
   "idiomas": {
     "es": {
@@ -9793,7 +9793,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 23", "Salmos 56:3", "2 Corintios 12:9"],
-  "tags": ["Confianza", "Buen Pastor", "Protección", "Fortaleza", "Clásico", "Adoración", "Confianza"],
+  "tags": ["Confianza", "Buen Pastor", "Protección", "Fortaleza", "Clásico", "Adoración"],
   "idiomas": {
     "es": {
       "titulo": ["Jesús mi guía es"],
@@ -10036,8 +10036,7 @@
     }
   }
 },
-{
-  "id": "voy_a_contar_una_historia_jonas",
+{ "id": "voy_a_contar_una_historia_jonas",
   "titulo_original": ["La historia de Jonás"],
   "autor": ["Felipe Garibo"],
   "compositor": ["Felipe Garibo"],
@@ -10133,7 +10132,6 @@
     }
   }
 },
-
 { "id": "lavame_en_tu_sangre",
   "titulo_original": ["Lávame en tu sangre"],
   "autor": ["Desconocido"],
@@ -10155,7 +10153,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
-        "",
+        "1",
         "[G]Lávame en tu [C]sangre, [G]oh Se[Em]ñor,",
         "[Am]y más [D]blanco que la [G]nieve yo se[D]ré.",
         "[G]Lávame en tu [C]sangre, [G]oh Se[Em]ñor,",
@@ -10321,8 +10319,7 @@
     }
   }
 },
-{ 
-  "id": "la_alegria",
+{ "id": "la_alegria",
   "titulo_original": ["La alegría está en el corazón"],
   "autor": ["William Rojas"],
   "compositor": ["William Rojas"],
@@ -10355,7 +10352,7 @@
         "es el [D]amor que solo [G]tiene",
         "quien [A]conoce a Je[D]sús.",
         "",
-        "2",
+        "Puente:",
         "[D]¡Ale[D7]luya, Ale[G]luya, [D]",
         "Ale[D]luya, [Bm]Alelu[E]ya! [A]",
         "",
@@ -10392,12 +10389,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Marcos 4:40"],
-  "tags": [
-    
-    "Cristiano",
-    "Confianza",
-    "Adoración"
-  ],
+  "tags": ["Confianza","Adoración"],
   "idiomas": {
     "es": {
       "titulo": ["La barca"],
@@ -10407,7 +10399,7 @@
       "partitura": "No",
       "revisado": ["No"],      
       "letra": [
-        "",
+        "1",
         "[D]Aunque ande por el mar y tenga mucho que [A]temer,",
         "mi barca está segura aunque durmiendo adentro es[Bm]tés.",
         "La tempestad vendrá pero no ahogará mi [G]fe.",
@@ -10425,6 +10417,7 @@
         "Si [G]aún cuidas de las [Bm]aves",
         "yo [D]confiaré, en [A]ti confiaré.",
         "",
+        "2",
         "[D]Y hoy te proclamarán aquellos que han caído y hoy de pie es[A]tán,",
         "los que tenían miedo y hoy son [Bm]fuertes,",
         "los que aún sin verte te encontra[G]ron",
@@ -10435,7 +10428,12 @@
         "¿Cómo no alabarte cuando [G]sé",
         "que te [A]quedaste a mi lado otra [D]vez?",
         "",
-        "Coro",
+        "Coro:",
+        "[G]Si el mundo está en tus [Bm]manos",
+        "ya [D]no temeré, ya [A]no temeré,",
+        "y [G]en ti confiaré.",
+        "Si [G]aún cuidas de las [Bm]aves",
+        "yo [D]confiaré, en [A]ti confiaré.",
         "",
         "[D]Aunque ande por el mar y tenga mucho que [A]temer,",
         "mi barca está segura aunque durmiendo adentro es[Bm]tés.",
@@ -11381,7 +11379,7 @@
   "compas": ["4/4"],
   "ritmo": ["Alegre infantil"],
   "referencia_biblica": ["Jeremías 32:17"],
-  "tags": ["Poder de Dios", "Creacion", "Alabanza", "Gozo"],
+  "tags": ["Poder de Dios", "Creación", "Alabanza", "Gozo"],
 
   "idiomas": {
     "es": {
@@ -12589,7 +12587,7 @@
   "compas": ["3/4"],
   "ritmo": ["Himno"],
   "referencia_biblica": ["Efesios 3:18-19"],
-  "tags": ["Amor de Dios", "Himno", "Salvacion", "Gracia", "Adoracion"],
+  "tags": ["Amor de Dios", "Himno", "Salvación", "Gracia", "Adoración"],
 
   "idiomas": {
     "es": {
@@ -12611,8 +12609,10 @@
         "un Salva[G]dor tam[C]bién. [C7]",
         "",
         "Coro:",
-        "¡Oh amor de [F]Dios!, brotando es[C]tás, inmensu[G]rable, eter[C]nal. [C7]",
-        "Por las e[F]dades dura[C]rás, inago[G]table rau[C]dal.",
+        "¡Oh amor de [F]Dios!, brotando es[C]tás, ",
+        "inmensu[G]rable, eter[C]nal. [C7]",
+        "Por las e[F]dades dura[C]rás, ",
+        "inago[G]table rau[C]dal.",
         "",
         "2",
         "Yo sé que el [C]mundo pasa[Am]rá",
@@ -12625,9 +12625,10 @@
         "su pueblo [G]entona[C]rá. [C7]",
         "",
         "Coro:",
-        "¡Oh amor de [F]Dios!, brotando es[C]tás, inmensu[G]rable, eter[C]nal. [C7]",
-        "Por las e[F]dades dura[C]rás, inago[G]table rau[C]dal.",
-        ""
+        "¡Oh amor de [F]Dios!, brotando es[C]tás, ",
+        "inmensu[G]rable, eter[C]nal. [C7]",
+        "Por las e[F]dades dura[C]rás, ",
+        "inago[G]table rau[C]dal."
       ],
       "nota": [""]
     }
@@ -12646,12 +12647,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Mateo 6:9, 10"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Oración",
-    "Padre Nuestro"
+  "tags": ["Alabanza","Oración","Padre Nuestro"
   ],
   "idiomas": {
     "es": {
@@ -13212,7 +13208,7 @@
   "compas": ["4/4"],
   "ritmo": ["Balada"],
   "referencia_biblica": ["Apocalipsis 1:7"],
-  "tags": ["Segunda Venida", "Amor de Dios", "Salvacion", "Entrega", "Esperanza"],
+  "tags": ["Segunda Venida", "Amor de Dios", "Salvación", "Entrega", "Esperanza"],
 
   "idiomas": {
     "es": {
@@ -13600,7 +13596,7 @@
   "compas": ["4/4"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": [""],
-  "tags": ["Fidelidad", "Biblia", "Salvacion"],
+  "tags": ["Fidelidad", "Biblia", "Salvación"],
 
   "idiomas": {
     "es": {
@@ -15885,74 +15881,6 @@
     }
   }
 },
-{ "id": "source_of_life",
-  "titulo_original": ["SOURCE OF LIFE"],
-  "autor": ["Desconocido"],
-  "compositor": ["Desconocido"],
-  "year": ["Desconocido"],
-  "tonalidad": ["Si menor (Bm)"],
-  "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": [""],
-  "tags": [
-    "Men",
-    "Womens"
-  ],
-  "idiomas": {
-    "en": {
-      "titulo": ["SOURCE OF LIFE"],
-      "titulo2": [""],
-      "audio_url": "",
-      "traductor": [""],
-      "partitura": "No",
-      "revisado": ["No"],      
-      "letra": [
-        "",
-        "INTRO: [SI- / LA / SOL]X2",
-        "",
-        "[SI-]I cannot [LA]see You all [SOL]around me",
-        "Shadows seem to hide Your face from me",
-        "My heart is longing to feel Your presence",
-        "I just need Your light to shine once more",
-        "",
-        "[MI-]But in the [RE]silence I will [LA4]find You [LA]again",
-        "Lord in the silence I can hear Your voice",
-        "",
-        "Rit. [SOL]When I fall I will [RE]arise [LA]and even",
-        "in the [SI-]darkest [SOL]times",
-        "You will [RE]be a Light [LA]to me",
-        "[SOL]I will [RE]fear no evil [LA]as I know",
-        "You [SI-]are my guiding [SOL]Star",
-        "You’re [RE]my only Saviour",
-        "[FA]everlasting [DO]pure [RE]Source of Life",
-        "",
-        "Your children suffer from disconnection",
-        "They’re in need of someone who truly cares",
-        "I’ll give them Your Love share my hope and my faith I’ll",
-        "show them Jesús He’s the only Way",
-        "",
-        "Rit. When I fall I will arise and even",
-        "in the darkest times",
-        "You will be a Light to me",
-        "I will fear no evil as I know",
-        "You are my guiding Star",
-        "You’re my only Saviour",
-        "everlasting pure Source of Life",
-        "",
-        "MEN:",
-        "[RE]My Creator [MI-]You have [RE/FA#]saved [SOL]me",
-        "[RE]Lord you [LA]give me Your [SOL]unfailing love",
-        "",
-        "WOMENS:",
-        "[RE]You're my [MI-]Healer [RE/FA#]Redeemer",
-        "[SOL]You give me strength as I need it",
-        "[RE]I adore [LA]you King [SOL]of the universe"
-      ],
-      "nota": [""]
-    }
-  }
-},
 { "id": "solo_el_poder_de_dios",
   "titulo_original": ["Sólo el poder de Dios"],
   "autor": ["Diego Ibárcena"],
@@ -16113,8 +16041,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Juan 6:37"],
-  "tags": [
-    
+  "tags": [    
     "Cristiano",
     "Alabanza",
     "Adoración",
@@ -16989,9 +16916,7 @@
   "ritmo": ["Desconocido"],
   "referencia_biblica": [""],
   "tags": [
-    "Men",
-    "Womens",
-    "Together"
+    "Unidad"
   ],
   "idiomas": {
     "en": {
@@ -17082,11 +17007,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": [""],
-  "tags": [
-    "Uomini",
-    "Donne",
-    "Insieme"
-  ],
+  "tags": ["Unidad"],
   "idiomas": {
     "en": {
       "titulo": ["THE ADVENTURE OF FAITH"],
@@ -17198,7 +17119,7 @@
   "ritmo": ["Desconocido"],
   "referencia_biblica": [""],
   "tags": [
-    "Multilingue"
+    "Multilingüe"
   ],
   "idiomas": {
     "en": {
@@ -17440,7 +17361,7 @@
   "referencia_biblica": [""],
   "tags": [
     "Italiano",
-    "Lode"
+    "Alabanza"
   ],
   "idiomas": {
     "it": {
@@ -17564,7 +17485,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": [""],
-  "tags": ["Alabanza", "Testimonio", "Llamado", "Invitacion"],
+  "tags": ["Alabanza", "Testimonio", "Llamado", "Invitación"],
   "idiomas": {
     "es": {
       "titulo": ["Ven a la cruz"],
@@ -18164,7 +18085,7 @@
   "referencia_biblica": [""],
   "tags": [
     "Italiano",
-    "Adorazione"
+    "Adoración"
   ],
   "idiomas": {
     "it": {
@@ -18221,7 +18142,7 @@
   "referencia_biblica": [""],
   "tags": [
     "Italiano",
-    "Adorazione"
+    "Adoración"
   ],
   "idiomas": {
     "it": {
@@ -18279,7 +18200,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Efesios 2:4-5", "Gálatas 5:1", "Isaías 40:31"],
-  "tags": ["Lode", "Alabanza", "Inglés","Praise", "Adoración", "Worship", "Vida", "Esperanza"],
+  "tags": ["Alabanza", "Inglés", "Adoración", "Vida", "Esperanza"],
   "idiomas": {
     "es": {
       "titulo": ["Vivo estás"],
@@ -18443,7 +18364,7 @@
   "referencia_biblica": [""],
   "tags": [
     "Italiano",
-    "Speranza"
+    "Esperanza"
   ],
   "idiomas": {
     "it": {
@@ -18508,7 +18429,7 @@
   "referencia_biblica": [""],
   "tags": [
     "Italiano",
-    "Amicizia"
+    "Amistad"
   ],
   "idiomas": {
     "it": {
@@ -18559,8 +18480,8 @@
   "referencia_biblica": [""],
   "tags": [
     "Italiano",
-    "Vita",
-    "Speranza"
+    "Vida",
+    "Esperanza"
   ],
   "idiomas": {
     "it": {
@@ -18634,8 +18555,8 @@
   "referencia_biblica": [""],
   "tags": [
     "Italiano",
-    "Lode",
-    "Adorazione"
+    "Alabanza",
+    "Adoración"
   ],
   "idiomas": {
     "it": {
@@ -18794,7 +18715,7 @@
     "compas": ["4/4"],
     "ritmo": "Worship Ballad",
     "referencia_biblica": ["Revelation 4:11", "Revelation 5:8-14", "Romans 11:36"],
-    "tags": ["Worship", "Adoration", "Exaltation", "Throne Room"],
+    "tags": ["Adoración", "Exaltación"],
 
     "idiomas": {
       "en": {
@@ -19823,7 +19744,7 @@
   "compas": ["4/4"],
   "ritmo": ["Alegre"],
   "referencia_biblica": ["Filipenses 4:4, 7", "Juan 3:16", "Gálatas 5:22"],
-  "tags": ["Gozo", "Clásico", "Alabanza", "Gozo", "Paz", "Corazón", "Alegría"],
+  "tags": ["Gozo", "Clásico", "Alabanza", "Paz", "Corazón", "Alegría"],
 
   "idiomas": {
     "es": {

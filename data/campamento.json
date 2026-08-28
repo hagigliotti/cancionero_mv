@@ -134,7 +134,7 @@
   "compas": [""],
   "ritmo": ["Canción Infantil", "Tradicional"],
   "referencia_biblica": [""],
-  "tags": ["Campamento", "Juego", "Tradicional", "Infantil"],
+  "tags": ["Campamento", "Tradicional", "Infantil"],
   "idiomas": {
     "es": {
       "titulo": ["Aserrín, aserrán"],
@@ -193,7 +193,7 @@
   "compas": ["4/4"],
   "ritmo": ["Infantil", "Alegre"],
   "referencia_biblica": [""],
-  "tags": ["Infantil", "Niños", "Creación", "Naturaleza"],
+  "tags": ["Infantil", "Creación", "Naturaleza"],
 
   "idiomas": {
     "es": {
@@ -232,7 +232,7 @@
   "compas": [""],
   "ritmo": ["Canción Infantil", "Tradicional"],
   "referencia_biblica": [""],
-  "tags": ["Campamento", "Juego", "Tradicional", "Infantil"],
+  "tags": ["Campamento", "Tradicional", "Infantil"],
   "idiomas": {
     "es": {
       "titulo": ["Cú cú cantaba la rana"],
@@ -285,7 +285,7 @@
   "compas": [""],
   "ritmo": ["Canción Infantil", "Dinámica"],
   "referencia_biblica": [""],
-  "tags": ["Campamento", "Juego", "Gestos", "Fogata"],
+  "tags": ["Campamento", "Gestos", "Fogata"],
   "idiomas": {
     "es": {
       "titulo": ["El ciclón"],
@@ -330,7 +330,7 @@
   "compas": [""],
   "ritmo": ["Canción Infantil", "Dinámica"],
   "referencia_biblica": [""],
-  "tags": ["Campamento", "Juego", "Acumulativa", "Onomatopeyas"],
+  "tags": ["Campamento", "Acumulativa", "Onomatopeyas"],
   "idiomas": {
     "es": {
       "titulo": ["En la feria del maestro Andrés"],
@@ -392,7 +392,7 @@
   "compas": [""],
   "ritmo": ["Romance", "Canción Infantil"],
   "referencia_biblica": [""],
-  "tags": ["Campamento", "Juego", "Tradicional", "Fogata"],
+  "tags": ["Campamento", "Tradicional", "Fogata"],
   "idiomas": {
     "es": {
       "titulo": ["Estaba la Catalina"],
@@ -591,7 +591,7 @@
   "compas": [""],
   "ritmo": ["Corrido", "Canción Infantil", "Tradicional"],
   "referencia_biblica": [""],
-  "tags": ["Campamento", "Juego", "Tradicional", "Folk"],
+  "tags": ["Campamento", "Tradicional", "Folk"],
   "idiomas": {
     "es": {
       "titulo": ["La cucaracha"],
@@ -625,7 +625,7 @@
   "compas": [""],
   "ritmo": ["Canción Infantil", "Tradicional"],
   "referencia_biblica": [""],
-  "tags": ["Campamento", "Juego", "Tradicional", "Histórica"],
+  "tags": ["Campamento", "Tradicional", "Histórica"],
   "idiomas": {
     "es": {
       "titulo": ["Mambrú se fue a la guerra"],
@@ -714,7 +714,7 @@
   "compas": [""],
   "ritmo": ["Canción Infantil", "Tradicional"],
   "referencia_biblica": [""],
-  "tags": ["Campamento", "Juego", "Tradicional", "Infantil"],
+  "tags": ["Campamento", "Tradicional", "Infantil"],
   "idiomas": {
     "es": {
       "titulo": ["Que llueva, que llueva"],
@@ -813,7 +813,7 @@
   "compas": [""],
   "ritmo": ["Canción Infantil", "Tradicional"],
   "referencia_biblica": [""],
-  "tags": ["Campamento", "Juego", "Contar", "Infantil"],
+  "tags": ["Campamento", "Contar", "Infantil"],
   "idiomas": {
     "es": {
       "titulo": ["Un elefante se balanceaba"],
@@ -850,7 +850,7 @@
   "compas": [""],
   "ritmo": ["Dinámica", "Canción Infantil"],
   "referencia_biblica": [""],
-  "tags": ["Campamento", "Scouts", "Juego", "Humor"],
+  "tags": ["Campamento", "Scouts", "Humor"],
   "idiomas": {
     "es": {
       "titulo": ["Yo tengo un moco"],
@@ -886,7 +886,7 @@
   "compas": [""],
   "ritmo": ["Canción Infantil", "Dinámica"],
   "referencia_biblica": [""],
-  "tags": ["Campamento", "Juego", "Gestos", "Infantil"],
+  "tags": ["Campamento", "Gestos", "Infantil"],
   "idiomas": {
     "es": {
       "titulo": ["Yo tengo una casita"],

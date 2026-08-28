@@ -3,13 +3,15 @@
     "id": "cancionero",
     "archivo": "canciones.json",
     "nombre": "Cancionero MV",
-    "icono": "🎶"
+    "icono": "",
+    "_comentario1": "\"icono\": \"🎶\""
   },
   {
     "id": "himnario",
     "archivo": "himnario_ar.json",
     "nombre": "Himnario Adventista",
-    "icono": "🎵",
+    "icono": "",
+    "_comentario2": "\"icono\": \"🎵\"",
     "numeroHimno": true,
     "idiomaFijo": true,
     "coritosPara": "cancionero"
@@ -18,13 +20,15 @@
     "id": "campamento",
     "archivo": "campamento.json",
     "nombre": "Campamento",
-    "icono": "🏕️"
+    "icono": "",
+    "_comentario3": "\"icono\": \"🏕️\""
   },
   {
     "id": "seleccion_argentina",
     "archivo": "seleccion_argentina.json",
     "nombre": "Selección Argentina",
-    "icono": "⚽",
+    "icono": "",
+    "_comentario4": "\"icono\": \"⚽\"",
     "oculto": true,
     "codigo": "29686085"
   },
@@ -32,7 +36,8 @@
     "id": "independiente",
     "archivo": "independiente.json",
     "nombre": "Rey de Copas",
-    "icono": "😈",
+    "icono": "",
+    "_comentario5": "\"icono\": \"😈\"",
     "oculto": true,
     "codigo": "29686085"
   }

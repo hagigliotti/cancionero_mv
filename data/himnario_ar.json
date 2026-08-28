@@ -1353,7 +1353,7 @@
   "compas": ["4/4"],
   "ritmo": ["Balada"],
   "referencia_biblica": ["Salmos 119:18"],
-  "tags": ["Adoración", "Oración", "Petición", "Worship"],
+  "tags": ["Adoración", "Oración", "Petición"],
 
   "idiomas": {
     "es": {
@@ -3643,7 +3643,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
+    "tags": ["Navidad", "Villancico"],
     "idiomas": {
       "es": {
         "titulo": ["¡Al mundo paz!"],
@@ -3694,7 +3694,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
+    "tags": ["Navidad", "Villancico"],
     "idiomas": {
       "es": {
         "titulo": ["Se oye un canto en alta esfera"],
@@ -3757,7 +3757,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
+    "tags": ["Navidad", "Villancico"],
     "idiomas": {
       "es": {
         "titulo": ["Venid, pastorcillos"],
@@ -3802,7 +3802,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
+    "tags": ["Navidad", "Villancico"],
     "idiomas": {
       "es": {
         "titulo": ["Noche de paz"],
@@ -3852,7 +3852,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
+    "tags": ["Navidad", "Villancico"],
     "idiomas": {
       "es": {
         "titulo": ["Ya repican las campanas"],
@@ -3897,7 +3897,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
+    "tags": ["Navidad", "Villancico"],
     "idiomas": {
       "es": {
         "titulo": ["La primera Navidad"],
@@ -3953,7 +3953,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten", "Gospel"],
+    "tags": ["Navidad", "Villancico", "Gospel"],
     "idiomas": {
       "es": {
         "titulo": ["Ve, dilo en las montañas"],
@@ -4074,7 +4074,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
+    "tags": ["Navidad", "Villancico"],
     "idiomas": {
       "es": {
         "titulo": ["Allá en el pesebre"],
@@ -4119,7 +4119,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
+    "tags": ["Navidad", "Villancico"],
     "idiomas": {
       "es": {
         "titulo": ["A medianoche en Belén"],
@@ -4164,7 +4164,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
+    "tags": ["Navidad", "Villancico"],
     "idiomas": {
       "es": {
         "titulo": ["Venid, fieles todos"],
@@ -4210,7 +4210,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
+    "tags": ["Navidad", "Villancico"],
     "idiomas": {
       "es": {
         "titulo": ["Oh, aldehuela de Belén"],
@@ -4255,7 +4255,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
+    "tags": ["Navidad", "Villancico"],
     "idiomas": {
       "es": {
         "titulo": ["Cristianos, alegraos hoy"],
@@ -4312,7 +4312,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
+    "tags": ["Navidad", "Villancico"],
     "idiomas": {
       "es": {
         "titulo": ["Somos del oriente"],
@@ -4375,7 +4375,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
+    "tags": ["Navidad", "Villancico"],
     "idiomas": {
       "es": {
         "titulo": ["¿Qué niño es este?"],
@@ -4425,7 +4425,7 @@
     "compas": [""],
     "ritmo": [""],
     "referencia_biblica": [""],
-    "tags": ["Navidad", "Villancico", "Christmas", "Natale", "Natal", "Noël", "Weihnachten"],
+    "tags": ["Navidad", "Villancico"],
     "idiomas": {
       "es": {
         "titulo": ["Angeles cantando están"],
@@ -5564,7 +5564,7 @@
     "compas": ["4/4"],
     "ritmo": ["Himno"],
     "referencia_biblica": ["Salmos 89:1; 1 Corintios 15:1-4"],
-    "tags": ["Evangelio", "Amor de Dios", "Fidelidad", "Alabanza"],
+    "tags": ["Evangelismo", "Amor de Dios", "Fidelidad", "Alabanza"],
     "idiomas": {
       "es": {
         "titulo": ["Dime la antigua historia"],
@@ -7470,7 +7470,7 @@
     "compas": ["4/4"],
     "ritmo": ["Balada"],
     "referencia_biblica": ["Salmos 116:1, 2"],
-    "tags": ["Adoración", "Oración", "Gratitud", "Worship", "Devoción"],
+    "tags": ["Adoración", "Oración", "Gratitud", "Devoción"],
     
     "idiomas": {
       "es": {
@@ -13348,7 +13348,7 @@
     "compas": ["3/2"],
     "ritmo": ["Himno"],
     "referencia_biblica": ["Juan 9:4; Romanos 13:11; 1 Corintios 6:20; Apocalipsis 22:5"],
-    "tags": ["Servicio", "Vida Cristiana", "Testimonio", "Fidelidad", "Esperanza Celestial"],
+    "tags": ["Servicio", "Vida Cristiana", "Testimonio", "Fidelidad", "Esperanza"],
     "idiomas": {
       "es": {
         "titulo": ["Un día más por Cristo"],
@@ -13720,7 +13720,7 @@
     "compas": ["4/4"],
     "ritmo": ["Himno"],
     "referencia_biblica": ["Gálatas 6:14; 1 Juan 2:15; Romanos 8:29; 2 Timoteo 4:8"],
-    "tags": ["Separación del Mundo", "Consagración", "Fidelidad", "Esperanza Celestial"],
+    "tags": ["Separación del Mundo", "Consagración", "Fidelidad", "Esperanza"],
     "idiomas": {
       "es": {
         "titulo": ["Hoy me llama el mundo en vano"],
@@ -14390,7 +14390,7 @@
     "compas": ["4/4"],
     "ritmo": ["Himno"],
     "referencia_biblica": ["Romanos 5:1; Mateo 11:28; Filipenses 3:9; Salmo 16:11"],
-    "tags": ["Confianza", "Justificación", "Paz", "Salvación", "Esperanza Celestial"],
+    "tags": ["Confianza", "Justificación", "Paz", "Salvación", "Esperanza"],
     "idiomas": {
       "es": {
         "titulo": ["Confío en Jesucristo"],
@@ -14758,7 +14758,7 @@
     "compas": ["4/4"],
     "ritmo": ["Himno"],
     "referencia_biblica": ["Efesios 2:8; 2 Corintios 5:17; 1 Pedro 2:11; 1 Pedro 1:4"],
-    "tags": ["Justificación por la Fe", "Gracia", "Conversión", "Esperanza Celestial"],
+    "tags": ["Justificación por la Fe", "Gracia", "Conversión", "Esperanza"],
     "idiomas": {
       "es": {
         "titulo": ["Por fe en Cristo, el Redentor"],
@@ -15375,7 +15375,7 @@
     "compas": ["4/4"],
     "ritmo": ["Himno"],
     "referencia_biblica": ["Job 19:25; 2 Timoteo 4:8; 1 Juan 2:2; Juan 14:3"],
-    "tags": ["Redención", "Confianza", "Gratitud", "Segunda Venida", "Esperanza Celestial"],
+    "tags": ["Redención", "Confianza", "Gratitud", "Segunda Venida", "Esperanza"],
     "idiomas": {
       "es": {
         "titulo": ["Mi Redentor, el Rey de gloria"],
@@ -15590,7 +15590,7 @@
     "compas": ["4/4"],
     "ritmo": ["Himno"],
     "referencia_biblica": ["Juan 3:3-5; Tito 3:5; 2 Corintios 4:6; Efesios 2:4-7; Juan 14:1-3"],
-    "tags": ["Conversión", "Gracia", "Espíritu Santo", "Gozo", "Esperanza Celestial"],
+    "tags": ["Conversión", "Gracia", "Espíritu Santo", "Gozo", "Esperanza"],
     "idiomas": {
       "es": {
         "titulo": ["Dios descendió"],
@@ -15641,7 +15641,7 @@
     "compas": ["4/4"],
     "ritmo": ["Himno"],
     "referencia_biblica": ["Mateo 11:28; Lucas 15:10; Juan 10:4; 1 Tesalonicenses 4:16-17"],
-    "tags": ["Llamado", "Consagración", "Testimonio", "Esperanza Celestial"],
+    "tags": ["Llamado", "Consagración", "Testimonio", "Esperanza"],
     "idiomas": {
       "es": {
         "titulo": ["La voz de Jesús"],
@@ -16215,7 +16215,7 @@
     "compas": ["4/4"],
     "ritmo": ["Himno"],
     "referencia_biblica": ["1 Tesalonicenses 4:17; Apocalipsis 21:4; Salmo 16:11; Juan 16:22"],
-    "tags": ["Comunión", "Consolación", "Segunda Venida", "Esperanza Celestial"],
+    "tags": ["Comunión", "Consolación", "Segunda Venida", "Esperanza"],
     "idiomas": {
       "es": {
         "titulo": ["Jamás se dice \"adiós\" allá"],
