@@ -313,7 +313,7 @@
   "compas": ["4/4"],
   "ritmo": ["Infantil", "Animación"],
   "referencia_biblica": ["Génesis 15:5", "Gálatas 3:7"],
-  "tags": ["Clásico", "Niños", "Juego", "Movimiento", "Fe"],
+  "tags": ["Clásico", "Niños", "Movimiento", "Fe"],
 
   "idiomas": {
     "es": {
@@ -816,7 +816,7 @@
   "compas": ["4/4"],
   "ritmo": ["Alegre"],
   "referencia_biblica": ["Génesis 1:20-25"],
-  "tags": ["Clásico", "Mímica", "Alabanza", "Infantil", "Dinámica", "Creación", "Animales"],
+  "tags": ["Clásico", "Mímica", "Alabanza", "Infantil", "Dinámico", "Creación", "Animales"],
 
   "idiomas": {
     "es": {
@@ -1038,7 +1038,7 @@
   "compas": ["2/4"],
   "ritmo": ["Alabanza", "Hebreo"],
   "referencia_biblica": ["Éxodo 3:1-5"],
-  "tags": ["Clásico", "Alabanza", "Avivamiento", "Moisés", "Zarza Ardiendo"],
+  "tags": ["Clásico", "Alabanza", "Avivamiento", "Historia Bíblica"],
 
   "idiomas": {
     "es": {
@@ -1269,7 +1269,7 @@
   "compas": ["4/4"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": [""],
-  "tags": ["Camporí 'Amigos de Esperanza' ABo 2011", "Esperanza"],
+  "tags": ["Esperanza"],
 
   "idiomas": {
     "es": {
@@ -3971,7 +3971,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Adoración", "Hebreo"],
   "referencia_biblica": ["Génesis 5:24", "Salmos 1:3", "Éxodo 16:21", "Proverbios 14:1"],
-  "tags": ["Alabanza", "Adoración", "Crecimiento", "Confianza", "Vida Eterna", "Comunión", "Familia", "Devoción", "Vida Cristiana"],
+  "tags": ["Alabanza", "Adoración", "Crecimiento Espiritual", "Confianza", "Vida Eterna", "Comunión", "Familia", "Devoción", "Vida Cristiana"],
 
   "idiomas": {
     "es": {
@@ -4126,7 +4126,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Alabanza", "Worship", "Suave"],
   "referencia_biblica": ["Efesios 5:2", "San Mateo 19:14", "San Mateo 19:14", "San Marcos 10:14", "San Juan 15:15"],
-  "tags": ["Alabanza", "Crecimiento", "Ánimo", "Avivamiento", "Clásico", "Amor", "Confianza"],
+  "tags": ["Alabanza", "Crecimiento Espiritual", "Ánimo", "Avivamiento", "Clásico", "Amor", "Confianza"],
 
   "idiomas": {
     "es": {
@@ -4163,7 +4163,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Alabanza", "Infantil", "We will rock you"],
   "referencia_biblica": ["Efesios 5:2", "San Mateo 19:14", "San Mateo 19:14", "San Marcos 10:14", "San Juan 15:15"],
-  "tags": ["Alabanza", "Crecimiento", "Ánimo", "Avivamiento", "Clásico", "Amor", "Confianza"],
+  "tags": ["Alabanza", "Crecimiento Espiritual", "Ánimo", "Avivamiento", "Clásico", "Amor", "Confianza"],
 
   "idiomas": {
     "es": {
@@ -4583,7 +4583,7 @@
   "compas": ["4/4"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 8:1-9"],
-  "tags": ["Adoración", "Creación", "Grandeza de Dios", "Salmo", "Clásico"],
+  "tags": ["Adoración", "Creación", "Grandeza", "Salmo", "Clásico"],
 
   "idiomas": {
     "es": {
@@ -5388,7 +5388,7 @@
   "compas": ["4/4"],
   "ritmo": ["Worship"],
   "referencia_biblica": ["San Juan 11:40", "2 Corintios 3:18", "Jeremías 18:6"],
-  "tags": ["Adoración", "Presencia", "Transformación"],
+  "tags": ["Adoración", "Presencia de Dios", "Transformación"],
 
   "idiomas": {
     "es": {
@@ -6103,7 +6103,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Adoración"],
   "referencia_biblica": ["Juan 21:17"],
-  "tags": ["Cristiano", "Adoración", "Amor a Dios", "Consuelo", "Confianza", "Libertad", "Oración"],
+  "tags": ["Adoración", "Amor a Dios", "Consuelo", "Confianza", "Libertad", "Oración"],
 
   "idiomas": {
     "es": {
@@ -6222,7 +6222,7 @@
     "compas": ["4/4"],
     "ritmo": ["Himno"],
     "referencia_biblica": ["Juan 3:3-5; Tito 3:5; 2 Corintios 4:6; Efesios 2:4-7; Juan 14:1-3"],
-    "tags": ["Conversión", "Gracia", "Espíritu Santo", "Gozo", "Esperanza Celestial"],
+    "tags": ["Conversión", "Gracia", "Espíritu Santo", "Gozo", "Esperanza"],
     "idiomas": {
       "es": {
         "titulo": ["Día tan grande"],
@@ -6813,7 +6813,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Himno", "Alabanza"],
   "referencia_biblica": ["Efesios 5:19"],
-  "tags": ["Himno Clásico", "Adoración", "Paz", "Gozo"],
+  "tags": ["Adoración", "Paz", "Gozo"],
 
   "idiomas": {
     "es": {
@@ -7578,7 +7578,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Alabanza", "Corito de Avivamiento"],
   "referencia_biblica": ["Apocalipsis 19:9"],
-  "tags": ["Cristiano", "Alabanza", "Fiesta", "Comunión", "Poderoso"],
+  "tags": ["Alabanza", "Fiesta", "Comunión", "Poderoso"],
 
   "idiomas": {
     "es": {
@@ -7624,7 +7624,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Alabanza", "Corito Infantil"],
   "referencia_biblica": ["Filipenses 4:4"],
-  "tags": ["Cristiano", "Alabanza", "Infantil", "Gozo", "Confianza"],
+  "tags": ["Alabanza", "Infantil", "Gozo", "Confianza"],
 
   "idiomas": {
     "es": {
@@ -7989,7 +7989,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Lucas 1:37"],
-  "tags": ["Alabanza", "Poder Divino", "Sanidad", "Milagros", "Victoria"],
+  "tags": ["Alabanza", "Poder de Dios", "Sanidad", "Milagros", "Victoria"],
 
   "idiomas": {
     "es": {
@@ -8901,7 +8901,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Himno", "Marcha"],
   "referencia_biblica": ["2 Timoteo 4:8", "Daniel 12:3"],
-  "tags": ["Cristiano", "Himno", "Guías Mayores", "Club de Guías Mayores", "Jóvenes", "Salvación", "Servicio"],
+  "tags": ["Himno", "Guías Mayores", "Scout", "Club", "Jóvenes", "Salvación", "Servicio"],
 
   "idiomas": {
     "es": {
@@ -10061,7 +10061,7 @@
   "compas": ["4/4"],
   "ritmo": [""],
   "referencia_biblica": ["Jonás 1"],
-  "tags": ["Obediencia", "Historia Bíblica", "Jonás", "Testimonio", "Infantil"],
+  "tags": ["Obediencia", "Historia Bíblica", "Testimonio", "Infantil"],
 
   "idiomas": {
     "es": {
@@ -10469,12 +10469,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Deuteronomio 7:9"],
-  "tags": [
-    
-    "Cristiano",
-    "Bendición",
-    "Adoración"
-  ],
+  "tags": ["Bendición", "Adoración"],
   "idiomas": {
     "es": {
       "titulo": ["La bendición"],
@@ -10575,12 +10570,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["1 San Juan 1:7"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Redención"
-  ],
+  "tags": ["Alabanza", "Redención"],
   "idiomas": {
     "es": {
       "titulo": ["La sangre de Cristo Jesús"],
@@ -10615,12 +10605,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Hechos 4:12"],
-  "tags": [
-    
-    "Cristiano",
-    "Salvación",
-    "Esperanza"
-  ],
+  "tags": ["Salvación", "Esperanza"],
   "idiomas": {
     "es": {
       "titulo": ["La única esperanza"],
@@ -10706,12 +10691,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Efesios 4:10"],
-  "tags": [
-    
-    "Cristiano",
-    "Adoración",
-    "Exaltación"
-  ],
+  "tags": ["Adoración", "Exaltación"],
   "idiomas": {
     "es": {
       "titulo": ["Levanto la cruz"],
@@ -10761,12 +10741,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Apocalipsis 22:12"],
-  "tags": [
-    
-    "Cristiano",
-    "Segunda Venida",
-    "Adoración"
-  ],
+  "tags": ["Segunda Venida", "Adoración"],
   "idiomas": {
     "es": {
       "titulo": ["Llegó la hora"],
@@ -10819,12 +10794,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Mateo 16:24"],
-  "tags": [
-    
-    "Cristiano",
-    "Adoración",
-    "Entrega"
-  ],
+  "tags": ["Adoración", "Entrega"],
   "idiomas": {
     "es": {
       "titulo": ["Llévame a la cruz"],
@@ -10918,12 +10888,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 19:1"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Exaltación"
-  ],
+  "tags": ["Alabanza", "Exaltación"],
   "idiomas": {
     "es": {
       "titulo": ["Majestuoso Dios"],
@@ -10963,12 +10928,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["1 Corintios 16:22"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Segunda Venida"
-  ],
+  "tags": ["Alabanza", "Segunda Venida"],
   "idiomas": {
     "es": {
       "titulo": ["Maranata"],
@@ -11015,12 +10975,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Juan 14:3"],
-  "tags": [
-    
-    "Cristiano",
-    "Segunda Venida",
-    "Himno"
-  ],
+  "tags": ["Segunda Venida", "Himno"],
   "idiomas": {
     "es": {
       "titulo": ["Maranatha"],
@@ -11082,12 +11037,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Éxodo 15:11"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Poder"
-  ],
+  "tags": ["Alabanza", "Poder"],
   "idiomas": {
     "es": {
       "titulo": ["Maravillas"],
@@ -11133,12 +11083,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 40:5"],
-  "tags": [
-    
-    "Cristiano",
-    "Adoración",
-    "Creador"
-  ],
+  "tags": ["Adoración", "Creador"],
   "idiomas": {
     "es": {
       "titulo": ["Maravilloso Dios"],
@@ -11196,12 +11141,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Josué 6:30"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Caminar"
-  ],
+  "tags": ["Alabanza", "Caminar"],
   "idiomas": {
     "es": {
       "titulo": ["Marchando voy"],
@@ -11255,12 +11195,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 71:23"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Gozo"
-  ],
+  "tags": ["Alabanza", "Gozo"],
   "idiomas": {
     "es": {
       "titulo": ["Me siento bien"],
@@ -11450,13 +11385,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Hechos 16:31"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Salvación"
-  ],
+  "tags": ["Alabanza", "Adoración", "Salvación"],
   "idiomas": {
     "es": {
       "titulo": ["Mi Dios puede salvar"],
@@ -11507,13 +11436,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Apocalipsis 19:16"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Poder",
-    "Victoria"
-  ],
+  "tags": ["Alabanza", "Poder", "Victoria"],
   "idiomas": {
     "es": {
       "titulo": ["Mi Dios, supremo Rey"],
@@ -11553,13 +11476,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Romanos 8:14"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Guía",
-    "Confianza"
-  ],
+  "tags": ["Alabanza", "Guía", "Confianza"],
   "idiomas": {
     "es": {
       "titulo": ["Mi farol"],
@@ -11618,13 +11535,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 23:1"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Protección"
-  ],
+  "tags": ["Alabanza", "Adoración", "Protección"],
   "idiomas": {
     "es": {
       "titulo": ["Mi pastor"],
@@ -11676,7 +11587,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Mateo 13:31-33", "San Mateo 17:20", "San Lucas 13:18-21"],
-  "tags": ["Alabanza", "Evangelismo", "Parábolas", "Clásico", "Crecimiento", "Semilla", "Mostaza", "Reino de Dios", "Levadura"],
+  "tags": ["Alabanza", "Evangelismo", "Parábolas", "Clásico", "Crecimiento Espiritual", "Semilla", "Reino de Dios", "Levadura", "Historia Bíblica"],
   "idiomas": {
     "es": {
       "titulo": ["Mi reino"],
@@ -11922,16 +11833,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 34:7"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Corito",
-    "Confianza",
-    "Protección",
-    "Amparo",
-    "Seguridad"
-  ],
+  "tags": ["Alabanza", "Confianza", "Protección", "Amparo", "Seguridad"],
   "idiomas": {
     "es": {
       "titulo": ["No me siento solo"],
@@ -11973,13 +11875,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Lucas 19:10"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Oración",
-    "Salvación"
-  ],
+  "tags": ["Alabanza", "Oración", "Salvación"],
   "idiomas": {
     "es": {
       "titulo": ["Nace en mí"],
@@ -12014,13 +11910,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Juan 15:5"],
-  "tags": [
-    
-    "Cristiano",
-    "Adoración",
-    "Necesidad",
-    "Modulación"
-  ],
+  "tags": ["Adoración", "Necesidad"],
   "idiomas": {
     "es": {
       "titulo": ["Necesario"],
@@ -12071,13 +11961,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 73:25"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Gratitud",
-    "Felicidad"
-  ],
+  "tags": ["Alabanza", "Gratitud", "Felicidad"],
   "idiomas": {
     "es": {
       "titulo": ["No existe bien para mi"],
@@ -12164,13 +12048,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Isaías 49:15"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Consuelo",
-    "Promesa"
-  ],
+  "tags": ["Alabanza", "Consuelo", "Promesa"],
   "idiomas": {
     "es": {
       "titulo": ["No me olvidé de ti"],
@@ -12213,13 +12091,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Deuteronomio 31:8"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Ánimo",
-    "Confianza"
-  ],
+  "tags": ["Alabanza", "Ánimo", "Confianza"],
   "idiomas": {
     "es": {
       "titulo": ["Nunca estés desanimado"],
@@ -12385,7 +12257,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Zacarías 4:6", "Éxodo 15:11", "Zacarías 4:6"],
-  "tags": ["Alabanza", "Poder", "Espíritu Santo", "Clásico", "Poder Divino", "Sanidad", "Salvación"],
+  "tags": ["Alabanza", "Poder", "Espíritu Santo", "Clásico", "Poder de Dios", "Sanidad", "Salvación"],
   "idiomas": {
     "es": {
       "titulo": ["No hay Dios tan grande como tú"],
@@ -12437,16 +12309,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 51:10"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Oración",
-    "Consagración",
-    "Entrega",
-    "Arrepentimiento"
-  ],
+  "tags": ["Alabanza", "Adoración", "Oración", "Consagración", "Entrega", "Arrepentimiento"],
   "idiomas": {
     "es": {
       "titulo": ["Oh Dios crea en mí"],
@@ -12544,14 +12407,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Mateo 14:28-31"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Confianza",
-    "Fe"
-  ],
+  "tags": ["Alabanza", "Adoración", "Confianza", "Fe"],
   "idiomas": {
     "es": {
       "titulo": ["Océanos"],
@@ -12703,13 +12559,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Lucas 11:2"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Oración"
-  ],
+  "tags": ["Alabanza", "Adoración", "Oración"],
   "idiomas": {
     "es": {
       "titulo": ["Padre nuestro"],
@@ -12748,13 +12598,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 96:9"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Trinidad"
-  ],
+  "tags": ["Alabanza", "Adoración", "Trinidad"],
   "idiomas": {
     "es": {
       "titulo": ["Padre, yo te adoro"],
@@ -12791,13 +12635,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 63:1"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Guía"
-  ],
+  "tags": ["Alabanza", "Adoración", "Guía"],
   "idiomas": {
     "es": {
       "titulo": ["Paso a paso"],
@@ -12842,14 +12680,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Lucas 8:24"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Consuelo",
-    "Confianza",
-    "Fe"
-  ],
+  "tags": ["Alabanza", "Consuelo", "Confianza", "Fe"],
   "idiomas": {
     "es": {
       "titulo": ["Paz en la tormenta"],
@@ -12892,11 +12723,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": [""],
-  "tags": [
-    
-    "Cristiano",
-    "Reflexión"
-  ],
+  "tags": ["Reflexión"],
   "idiomas": {
     "es": {
       "titulo": ["Paz"],
@@ -12927,13 +12754,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Juan 15:4"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Comunión"
-  ],
+  "tags": ["Alabanza", "Adoración", "Comunión"],
   "idiomas": {
     "es": {
       "titulo": ["Permanece en mi"],
@@ -12969,14 +12790,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Mateo 4:19"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Vocación",
-    "Llamado"
-  ],
+  "tags": ["Alabanza", "Adoración", "Vocación", "Llamado"],
   "idiomas": {
     "es": {
       "titulo": ["Pescador de hombres"],
@@ -13030,14 +12844,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["2 Corintios 5:14, 15"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Oración",
-    "Salvación",
-    "Entrega"
-  ],
+  "tags": ["Alabanza", "Oración", "Salvación", "Entrega"],
   "idiomas": {
     "es": {
       "titulo": ["Poema de salvación"],
@@ -13120,14 +12927,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["2 Crónicas 20:6"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Sacrificio",
-    "Amor de Dios"
-  ],
+  "tags": ["Alabanza", "Adoración", "Sacrificio", "Amor de Dios"],
   "idiomas": {
     "es": {
       "titulo": ["Por encima de todo"],
@@ -13168,13 +12968,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 71:8"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Júbilo",
-    "Gratitud"
-  ],
+  "tags": ["Alabanza", "Júbilo", "Gratitud"],
   "idiomas": {
     "es": {
       "titulo": ["Por eso alabamos"],
@@ -13269,14 +13063,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Efesios 2:8"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Gracia",
-    "Renovación"
-  ],
+  "tags": ["Alabanza", "Adoración", "Gracia", "Renovación"],
   "idiomas": {
     "es": {
       "titulo": ["Por tu gracia y amor"],
@@ -13621,13 +13408,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Josué 23:14"],
-  "tags": [
-    "Cristiano",
-    "Alabanza",
-    "Evangelismo",
-    "Promesa",
-    "Misión"
-  ],
+  "tags": ["Alabanza", "Evangelismo", "Promesa", "Misión"],
   "idiomas": {
     "es": {
       "titulo": ["Promesa"],
@@ -13713,15 +13494,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": [""],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Reflexión",
-    "Amor",
-    "Perspectiva",
-    "Comunidad"
-  ],
+  "tags": ["Alabanza", "Reflexión", "Amor", "Perspectiva", "Comunidad"],
   "idiomas": {
     "es": {
       "titulo": ["Que pena pensar"],
@@ -13792,14 +13565,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Juan 17:3"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Misión",
-    "Evangelismo",
-    "Testimonio"
-  ],
+  "tags": ["Alabanza", "Misión", "Evangelismo", "Testimonio"],
   "idiomas": {
     "es": {
       "titulo": ["Que el mundo te conozca"],
@@ -13843,13 +13609,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["1 San Juan 2:28"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Segunda Venida",
-    "Esperanza"
-  ],
+  "tags": ["Alabanza", "Segunda Venida", "Esperanza"],
   "idiomas": {
     "es": {
       "titulo": ["Queremos ver"],
@@ -13890,14 +13650,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Apocalipsis 22:20"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Segunda Venida",
-    "Victoria"
-  ],
+  "tags": ["Alabanza", "Adoración", "Segunda Venida", "Victoria"],
   "idiomas": {
     "es": {
       "titulo": ["Queremos ver a Cristo regresar"],
@@ -13946,14 +13699,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Isaías 43:1"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Identidad",
-    "Gracia"
-  ],
+  "tags": ["Alabanza", "Adoración", "Identidad", "Gracia"],
   "idiomas": {
     "es": {
       "titulo": ["Quien dices que soy"],
@@ -14095,14 +13841,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Juan 10:14"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Intimidad",
-    "Gracia"
-  ],
+  "tags": ["Alabanza", "Adoración", "Intimidad", "Gracia"],
   "idiomas": {
     "es": {
       "titulo": ["Quiero conocer a Jesús"],
@@ -14147,14 +13886,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 24:10"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Infantil",
-    "Júbilo",
-    "Soberanía"
-  ],
+  "tags": ["Alabanza", "Infantil", "Júbilo", "Soberanía"],
   "idiomas": {
     "es": {
       "titulo": ["Quien es el Rey de reyes"],
@@ -14187,15 +13919,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Lucas 22:19"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Santa Cena",
-    "Sacrificio",
-    "Gratitud"
-  ],
+  "tags": ["Alabanza", "Adoración", "Santa Cena", "Sacrificio", "Gratitud"],
   "idiomas": {
     "es": {
       "titulo": ["Recordaré"],
@@ -14255,7 +13979,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 29:1"],
-  "tags": ["Cristiano", "Alabanza", "Soberanía", "Poder", "Majestad"],
+  "tags": ["Alabanza", "Soberanía", "Poder", "Majestad"],
   "idiomas": {
     "es": {
       "titulo": ["Rendid a Yahvé"],
@@ -14320,15 +14044,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Isaías 43:4"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Sacrificio",
-    "Salvación",
-    "Gracia"
-  ],
+  "tags": ["Alabanza", "Adoración", "Sacrificio", "Salvación", "Gracia"],
   "idiomas": {
     "es": {
       "titulo": ["Rescate de amor"],
@@ -14415,14 +14131,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 14:7"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Restauración",
-    "Sanidad"
-  ],
+  "tags": ["Alabanza", "Adoración", "Restauración", "Sanidad"],
   "idiomas": {
     "es": {
       "titulo": ["Restaura"],
@@ -14515,15 +14224,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 1:1-3"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Salmos",
-    "Felicidad",
-    "Sabiduría"
-  ],
+  "tags": ["Alabanza", "Adoración", "Salmos", "Felicidad", "Sabiduría"],
   "idiomas": {
     "es": {
       "titulo": ["Salmo 1: Que alegría"],
@@ -14648,7 +14349,7 @@
   "compas": ["4/4"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmo 121"],
-  "tags": ["Música tradicional hebrea"],
+  "tags": [],
 
   "idiomas": {
     "es": {
@@ -14683,7 +14384,9 @@
         "desde ahora y para siempre,",
         "desde ahora y para siempre."
       ],
-      "nota": ["Basada en una melodía italiana del siglo XVII llamada \"La Mantovana\" por Bedřich Smetana"]
+      "nota": ["Basada en una melodía italiana del siglo XVII llamada \"La Mantovana\" por Bedřich Smetana",
+        "Música tradicional hebrea."
+      ]
     },
     "he": {
       "titulo": ["Hatikvah (הַתִּקְוָה)"],
@@ -14717,15 +14420,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Nehemías 8:10"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Soberanía",
-    "Grandeza",
-    "Majestad"
-  ],
+  "tags": ["Alabanza", "Adoración", "Soberanía", "Grandeza", "Majestad"],
   "idiomas": {
     "es": {
       "titulo": ["Santo es el Señor"],
@@ -14825,14 +14520,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["1 Pedro 1:15"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Santidad",
-    "Fidelidad"
-  ],
+  "tags": ["Alabanza", "Adoración", "Santidad", "Fidelidad"],
   "idiomas": {
     "es": {
       "titulo": ["Santo sólo es el Señor"],
@@ -14871,15 +14559,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Isaías 58:13, 14"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Sábado",
-    "Creación",
-    "Comunión"
-  ],
+  "tags": ["Alabanza", "Adoración", "Sábado", "Creación", "Comunión"],
   "idiomas": {
     "es": {
       "titulo": ["Santuario en el tiempo"],
@@ -14933,15 +14613,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 43:3"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Evangelismo",
-    "Testimonio",
-    "Luz"
-  ],
+  "tags": ["Alabanza", "Adoración", "Evangelismo", "Testimonio", "Luz"],
   "idiomas": {
     "es": {
       "titulo": ["Sé una luz"],
@@ -14983,7 +14655,7 @@
   "compas": ["4/4"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Juan 21:6", "San Lucas 5:4-6"],
-  "tags": ["Confianza", "Perseverancia", "Obediencia", "Vocación", "Llamado", "Alabanza", "Adoración", "Fe", "Pesca Milagrosa"],
+  "tags": ["Confianza", "Perseverancia", "Obediencia", "Vocación", "Llamado", "Alabanza", "Adoración", "Fe", "Pesca Milagrosa", "Historia Bíblica"],
   "idiomas": {
     "es": {
       "titulo": ["Sentado estaba en mi barca"],
@@ -15044,15 +14716,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Hebreos 11:6"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Fe",
-    "Humildad",
-    "Vida Cristiana"
-  ],
+  "tags": ["Alabanza", "Adoración", "Fe", "Humildad", "Vida Cristiana"],
   "idiomas": {
     "es": {
       "titulo": ["Sencilla"],
@@ -15113,15 +14777,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Habacuc 3:2"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Avivamiento",
-    "Entrega",
-    "Misión"
-  ],
+  "tags": ["Alabanza", "Adoración", "Avivamiento", "Entrega", "Misión"],
   "idiomas": {
     "es": {
       "titulo": ["Señor, aviva tu obra en mí"],
@@ -15167,15 +14823,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Marcos 6:7"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Misión",
-    "Evangelismo",
-    "Servicio"
-  ],
+  "tags": ["Alabanza", "Adoración", "Misión", "Evangelismo", "Servicio"],
   "idiomas": {
     "es": {
       "titulo": ["Señor, somos tu voz"],
@@ -15269,15 +14917,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["2 Reyes 18:39, 40"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Oración",
-    "Poder",
-    "Avivamiento"
-  ],
+  "tags": ["Alabanza", "Adoración", "Oración", "Poder", "Avivamiento"],
   "idiomas": {
     "es": {
       "titulo": ["Si comenzamos a orar"],
@@ -15406,15 +15046,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["1 Corintios 3:23"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Fidelidad",
-    "Testimonio",
-    "Comunión"
-  ],
+  "tags": ["Alabanza", "Adoración", "Fidelidad", "Testimonio", "Comunión"],
   "idiomas": {
     "es": {
       "titulo": ["Siempre de Jesús"],
@@ -15455,15 +15087,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Hechos 4:12"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Fe",
-    "Victoria",
-    "Gracia"
-  ],
+  "tags": ["Alabanza", "Adoración", "Fe", "Victoria", "Gracia"],
   "idiomas": {
     "es": {
       "titulo": ["Sólo en Jesús"],
@@ -15525,7 +15149,7 @@
   "compas": ["4/4"],
   "ritmo": ["Hebreo"],
   "referencia_biblica": ["2 Samuel 6:14", "Salmos 149:3"],
-  "tags": ["David", "Danza", "Gozo", "Avivamiento", "Espíritu Santo", "Alabanza", "Expresión", "Clásico"],
+  "tags": ["Danza", "Gozo", "Avivamiento", "Espíritu Santo", "Alabanza", "Expresión", "Clásico", "Historia Bíblica"],
 
   "idiomas": {
     "es": {
@@ -15575,15 +15199,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["1 Reyes 18:39"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Amor",
-    "Plenitud",
-    "Devoción"
-  ],
+  "tags": ["Alabanza", "Adoración", "Amor", "Plenitud", "Devoción"],
   "idiomas": {
     "es": {
       "titulo": ["Sólo en ti"],
@@ -15621,15 +15237,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Efesios 3:19"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Gratitud",
-    "Redención",
-    "Amor de Dios"
-  ],
+  "tags": ["Alabanza", "Adoración", "Gratitud", "Redención", "Amor de Dios"],
   "idiomas": {
     "es": {
       "titulo": ["Sólo tú"],
@@ -15678,15 +15286,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["1 San Juan 2:8-10"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Misión",
-    "Luz",
-    "Testimonio"
-  ],
+  "tags": ["Alabanza", "Adoración", "Misión", "Luz", "Testimonio"],
   "idiomas": {
     "es": {
       "titulo": ["Somos la luz"],
@@ -15734,15 +15334,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["1 San Juan 2:8-10"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Misión",
-    "Servicio",
-    "Testimonio"
-  ],
+  "tags": ["Alabanza", "Adoración", "Misión", "Servicio", "Testimonio"],
   "idiomas": {
     "es": {
       "titulo": ["Somos su voz"],
@@ -15787,15 +15379,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Gálatas 5:1"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Victoria",
-    "Fidelidad",
-    "Decisión"
-  ],
+  "tags": ["Alabanza", "Adoración", "Victoria", "Fidelidad", "Decisión"],
   "idiomas": {
     "es": {
       "titulo": ["Soy de Jesús"],
@@ -15996,7 +15580,7 @@
   "compas": ["4/4"],
   "ritmo": ["Marcha"],
   "referencia_biblica": ["2 Timoteo 2:3", "Efesios 6:11-13"],
-  "tags": ["Cristiano", "Alabanza", "Infantil", "Soldado de Jesús", "Fe", "Compromiso", "Fidelidad", "Marcha", "Clásico"],
+  "tags": ["Alabanza", "Infantil", "Soldado de Jesús", "Fe", "Compromiso", "Fidelidad", "Clásico"],
 
   "idiomas": {
     "es": {
@@ -16190,14 +15774,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Juan 6:37"],
-  "tags": [    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Entrega",
-    "Consagración",
-    "Rendición"
-  ],
+  "tags": ["Alabanza", "Adoración", "Entrega", "Consagración", "Rendición"],
   "idiomas": {
     "es": {
       "titulo": ["Tal como soy"],
@@ -16231,14 +15808,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 145:1"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Exaltación",
-    "Majestad"
-  ],
+  "tags": ["Alabanza", "Adoración", "Exaltación", "Majestad"],
   "idiomas": {
     "es": {
       "titulo": ["Te exaltaré"],
@@ -16274,16 +15844,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Deuteronomio 5:33"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Fe",
-    "Fidelidad",
-    "Consagración",
-    "Guía"
-  ],
+  "tags": ["Alabanza", "Adoración", "Fe", "Fidelidad", "Consagración", "Guía"],
   "idiomas": {
     "es": {
       "titulo": ["Te seguiré"],
@@ -16479,15 +16040,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Romanos 11:36"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Soberanía",
-    "Misión",
-    "Rendición"
-  ],
+  "tags": ["Alabanza", "Adoración", "Soberanía", "Misión", "Rendición"],
   "idiomas": {
     "es": {
       "titulo": ["Todo por Él"],
@@ -16546,15 +16099,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 21:13"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Declaración",
-    "Majestad",
-    "Poder"
-  ],
+  "tags": ["Alabanza", "Adoración", "Declaración", "Majestad", "Poder"],
   "idiomas": {
     "es": {
       "titulo": ["Todo poderoso"],
@@ -16595,16 +16140,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Proverbios 8:17"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Gracia",
-    "Rendición",
-    "Intimidad",
-    "Amor"
-  ],
+  "tags": ["Alabanza", "Adoración", "Gracia", "Rendición", "Intimidad", "Amor"],
   "idiomas": {
     "es": {
       "titulo": ["Tu amor me inundó"],
@@ -16653,15 +16189,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Jeremías 31:3"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Misericordia",
-    "Gratitud",
-    "Amor"
-  ],
+  "tags": ["Alabanza", "Adoración", "Misericordia", "Gratitud", "Amor"],
   "idiomas": {
     "es": {
       "titulo": ["Tu amor por mí"],
@@ -16700,16 +16228,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["2 Corintios 13:5"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Comunión",
-    "Arrepentimiento",
-    "Presencia",
-    "Santidad"
-  ],
+  "tags": ["Alabanza", "Adoración", "Comunión", "Arrepentimiento", "Presencia de Dios", "Santidad"],
   "idiomas": {
     "es": {
       "titulo": ["Tu morada"],
@@ -16758,15 +16277,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Isaías 25:1"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Soberanía",
-    "Declaración",
-    "Fidelidad"
-  ],
+  "tags": ["Alabanza", "Adoración", "Soberanía", "Declaración", "Fidelidad"],
   "idiomas": {
     "es": {
       "titulo": ["Tú eres Dios"],
@@ -16809,16 +16320,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 89:8"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Poder",
-    "Petición",
-    "Renovación",
-    "Esperanza"
-  ],
+  "tags": ["Alabanza", "Adoración", "Poder", "Petición", "Renovación", "Esperanza"],
   "idiomas": {
     "es": {
       "titulo": ["Tu poder"],
@@ -16861,15 +16363,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 99:3"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Soberanía",
-    "Eternidad",
-    "Humildad"
-  ],
+  "tags": ["Alabanza", "Adoración", "Soberanía", "Eternidad", "Humildad"],
   "idiomas": {
     "es": {
       "titulo": ["Tu santo nombre"],
@@ -16910,16 +16404,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["1 San Juan 4:6"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Consagración",
-    "Juventud",
-    "Misión",
-    "Entrega"
-  ],
+  "tags": ["Alabanza", "Adoración", "Consagración", "Juventud", "Misión", "Entrega"],
   "idiomas": {
     "es": {
       "titulo": ["Tuyo soy"],
@@ -16970,7 +16455,7 @@
     "compas": ["4/4"],
     "ritmo": ["Balada"],
     "referencia_biblica": ["Filipenses 4:7", "San Juan 14:27"],
-    "tags": ["Paz", "Confianza", "Contemporáneo"],
+    "tags": ["Paz", "Confianza"],
 
     "idiomas": {
       "es": {
@@ -17350,15 +16835,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Apocalipsis 21:5"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Fe",
-    "Renovación",
-    "Declaración"
-  ],
+  "tags": ["Alabanza", "Adoración", "Fe", "Renovación", "Declaración"],
   "idiomas": {
     "es": {
       "titulo": ["Un millón"],
@@ -17580,15 +17057,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 86:9"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Exaltación",
-    "Soberanía",
-    "Testimonio"
-  ],
+  "tags": ["Alabanza", "Adoración", "Exaltación", "Soberanía", "Testimonio"],
   "idiomas": {
     "es": {
       "titulo": ["Vamos a adorar"],
@@ -17824,16 +17293,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["2 Corintios 4:7"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Gracia",
-    "Restauración",
-    "Salvación",
-    "Libertad"
-  ],
+  "tags": ["Alabanza", "Adoración", "Gracia", "Restauración", "Salvación", "Libertad"],
   "idiomas": {
     "es": {
       "titulo": ["Vasijas rotas"],
@@ -17969,15 +17429,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Apocalipsis 17:17"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Convocatoria",
-    "Entrega",
-    "Soberanía"
-  ],
+  "tags": ["Alabanza", "Adoración", "Convocatoria", "Entrega", "Soberanía"],
   "idiomas": {
     "es": {
       "titulo": ["Ven, es tiempo de adorarle"],
@@ -18013,16 +17465,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Ezequiel 11:19"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Poder",
-    "Transformación",
-    "Consuelo",
-    "Frutos"
-  ],
+  "tags": ["Alabanza", "Adoración", "Poder", "Transformación", "Consuelo", "Frutos"],
   "idiomas": {
     "es": {
       "titulo": ["Ven, Espíritu Santo"],
@@ -18077,16 +17520,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Apocalipsis 1:7"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Escatología",
-    "Segunda Venida",
-    "Esperanza",
-    "Cielo"
-  ],
+  "tags": ["Alabanza", "Adoración", "Escatología", "Segunda Venida", "Esperanza", "Cielo"],
   "idiomas": {
     "es": {
       "titulo": ["Veré a Jesús"],
@@ -18129,16 +17563,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Gálatas 2:20"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Petición",
-    "Comunión",
-    "Santidad",
-    "Rendición"
-  ],
+  "tags": ["Alabanza", "Adoración", "Petición", "Comunión", "Santidad", "Rendición"],
   "idiomas": {
     "es": {
       "titulo": ["Vive en mí"],
@@ -18181,16 +17606,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 34:4"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Corito",
-    "Alegría",
-    "Confianza",
-    "Caminata Cristiana",
-    "Infantil"
-  ],
+  "tags": ["Alabanza", "Alegría", "Confianza", "Caminar", "Infantil"],
   "idiomas": {
     "es": {
       "titulo": ["Voy caminando"],
@@ -18349,7 +17765,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Efesios 2:4-5", "Gálatas 5:1", "Isaías 40:31"],
-  "tags": ["Alabanza", "Inglés", "Adoración", "Vida", "Esperanza"],
+  "tags": ["Alabanza", "Adoración", "Vida", "Esperanza"],
   "idiomas": {
     "es": {
       "titulo": ["Vivo estás"],
@@ -19005,15 +18421,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 68:4"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Gratitud",
-    "Identidad",
-    "Soberanía"
-  ],
+  "tags": ["Alabanza", "Adoración", "Gratitud", "Identidad", "Soberanía"],
   "idiomas": {
     "es": {
       "titulo": ["Yo canto a Dios"],
@@ -19054,16 +18462,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Mateo 28:19, 20"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Misionero",
-    "Comisión",
-    "Servicio",
-    "Esperanza"
-  ],
+  "tags": ["Alabanza", "Adoración", "Misionero", "Comisión", "Servicio", "Esperanza"],
   "idiomas": {
     "es": {
       "titulo": ["Yo iré"],
@@ -19124,7 +18523,7 @@
   "compas": ["4/4"],
   "ritmo": ["Balada"],
   "referencia_biblica": ["Jeremias 10:6", "Salmos 8:3-4", "Isaías 40:22", "Salmos 115:1"],
-  "tags": ["Humildad", "Creación", "Grandeza de Dios", "Reflexión", "Clásico", "Alabanza", "Soberanía"],
+  "tags": ["Humildad", "Creación", "Grandeza", "Reflexión", "Clásico", "Alabanza", "Soberanía"],
   "idiomas": {
     "es": {
       "titulo": ["Yo pensaba"],
@@ -19191,16 +18590,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Filipenses 4:13"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Fortaleza",
-    "Confianza",
-    "Victoria",
-    "Gratitud"
-  ],
+  "tags": ["Alabanza", "Adoración", "Fortaleza", "Confianza", "Victoria", "Gratitud"],
   "idiomas": {
     "es": {
       "titulo": ["Yo puedo todo"],
@@ -19257,16 +18647,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Números 13:30"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Jóvenes",
-    "Misionero",
-    "Consagración",
-    "Servicio"
-  ],
+  "tags": ["Alabanza", "Adoración", "Jóvenes", "Misionero", "Consagración", "Servicio"],
   "idiomas": {
     "es": {
       "titulo": ["Yo soy Caleb"],
@@ -19322,16 +18703,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 16:11"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Corito",
-    "Alegría",
-    "Amistad",
-    "Confianza",
-    "Infantil"
-  ],
+  "tags": ["Alabanza", "Alegría", "Amistad", "Confianza", "Infantil"],
   "idiomas": {
     "es": {
       "titulo": ["Yo soy feliz"],
@@ -19378,16 +18750,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["2 Corintios 3:2"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Misionero",
-    "Testimonio",
-    "Identidad",
-    "Jóvenes"
-  ],
+  "tags": ["Alabanza", "Adoración", "Misionero", "Testimonio", "Identidad", "Jóvenes"],
 
   "idiomas": {
     "es": {
@@ -19466,15 +18829,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Romanos 1:20"],
-  "tags": [
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Creación",
-    "Gracia",
-    "Redención",
-    "Entrega"
-  ],
+  "tags": ["Alabanza", "Adoración", "Creación", "Gracia", "Redención", "Entrega"],
 
   "idiomas": {
     "es": {
@@ -19556,15 +18911,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 9:1"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Adoración",
-    "Devoción",
-    "Honra",
-    "Gloria"
-  ],
+  "tags": ["Alabanza", "Adoración", "Devoción", "Honra", "Gloria"],
 
   "idiomas": {
     "es": {
@@ -19613,16 +18960,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Hechos 3:6"],
-  "tags": [
-    
-    "Cristiano",
-    "Alabanza",
-    "Corito",
-    "Infantil",
-    "Identidad",
-    "Alegría",
-    "Testimonio"
-  ],
+  "tags": ["Alabanza", "Infantil", "Identidad", "Alegría", "Testimonio"],
 
   "idiomas": {
     "es": {
@@ -19669,7 +19007,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Salmos 73:28"],
-  "tags": ["Cristiano", "Alabanza", "Adoración", "Esperanza", "Confianza", "Consuelo", "Fortaleza"],
+  "tags": ["Alabanza", "Adoración", "Esperanza", "Confianza", "Consuelo", "Fortaleza"],
 
   "idiomas": {
     "es": {
@@ -19725,7 +19063,7 @@
   "compas": ["Desconocido"],
   "ritmo": "Alabanza / Infantil",
   "referencia_biblica": ["Juan 15:13-15"],
-  "tags": ["Alabanza", "Infantil", "Amistad", "Amor de Jesús"],
+  "tags": ["Alabanza", "Infantil", "Amistad", "Amor de Dios"],
   "idiomas": {
     "es": {
       "titulo": ["Yo tengo un amigo que me ama"],
@@ -19790,7 +19128,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["Colosenses 3:2"],
-  "tags": ["Cristiano", "Alabanza", "Adoración", "Esperanza", "Segunda Venida", "Confianza", "Consuelo"],
+  "tags": ["Alabanza", "Adoración", "Esperanza", "Segunda Venida", "Confianza", "Consuelo"],
   "idiomas": {
     "es": {
       "titulo": ["Yo voy (Pés na terra)"],
@@ -19833,7 +19171,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
   "referencia_biblica": ["San Marcos 16:15"],
-  "tags": ["Cristiano", "Alabanza", "Adoración", "Misión", "Llamado", "Servicio", "Bautismo"],
+  "tags": ["Alabanza", "Adoración", "Misión", "Llamado", "Servicio", "Bautismo"],
 
   "idiomas": {
     "es": {
@@ -19949,7 +19287,7 @@
   "compas": ["Desconocido"],
   "ritmo": ["Alabanza", "Corito de Avivamiento"],
   "referencia_biblica": ["Juan 7:38"],
-  "tags": ["Cristiano", "Alabanza", "Avivamiento", "Gozo", "Ríos de agua viva"],
+  "tags": ["Alabanza", "Avivamiento", "Gozo"],
 
   "idiomas": {
     "es": {
@@ -19994,7 +19332,7 @@
   "compas": ["4/4"],
   "ritmo": ["Corito de Avivamiento / Alegre"],
   "referencia_biblica": ["1 Pedro 5:8", "Salmos 23:4", "Apocalipsis 12:12"],
-  "tags": ["Avivamiento", "Victoria", "Protección", "Gozo", "Guerra Espiritual", "Clásico"],
+  "tags": ["Avivamiento", "Victoria", "Protección", "Gozo", "Clásico"],
 
   "idiomas": {
     "es": {
