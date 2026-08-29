@@ -1004,9 +1004,7 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
    ============================================================ */
 .song-line {
   /* escala junto con la letra/tablatura (--font-scale) para que el alto de
-     renglón crezca en la misma proporción que el texto: si el texto crece
-     y el interlineado no, la tablatura (que "flota" arriba de la letra con
-     top:-Xem) termina invadiendo el renglón de arriba */
+     renglón crezca en la misma proporción que el texto */
   font-size: calc(1em * var(--font-scale, 1));
   line-height: 1.85;
   margin-bottom: 4px;
@@ -1019,22 +1017,34 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
 
 .song-lyrics .lyrics { font-size: calc(1.4rem * var(--font-scale, 1)); }
 
+/* acorde + la palabra que le sigue (ver renderChordLine en app.js) van
+   agrupados en un solo bloque que no se separa al saltar de línea: si no,
+   en pantallas angostas la palabra podía pasar al renglón siguiente y el
+   acorde quedarse "flotando" al final del anterior, amontonado con el
+   acorde de al lado (eso pasaba con position:absolute + salto de línea) */
+.chord-unit {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  vertical-align: bottom;
+}
+
 .chord-wrap {
   display: inline-block;
-  position: relative;
   /* en rem (no em) a propósito: si tomara "1em" de .song-line, que ahora
      también escala con --font-scale, la tablatura terminaría multiplicando
      la escala dos veces (cuadrático) en vez de una — por eso usa la misma
      base fija que .lyrics (1.4rem) y aplica --font-scale una sola vez,
      para crecer siempre en la misma proporción que la letra */
   font-size: calc(1.4rem * var(--font-scale, 1));
-  /*padding-top: 1.2em;*/
+  line-height: 1.15;
 }
 
 .chord {
-  position: absolute;
-  top: -2.8em; /*-2.5em;*/
-  left: 0;
+  /* ya no lleva position:absolute + "top: -Xem": ahora es contenido real
+     dentro de .chord-unit (flex, apilado arriba de la palabra), así el
+     renglón crece lo justo y necesario para no pisar al de arriba o al de
+     abajo, en vez de depender de un offset fijo por breakpoint */
   font-weight: 700;
   font-size: 0.85em;
   white-space: nowrap;
@@ -3274,13 +3284,10 @@ body.projector #contenido { font-size: 2.8rem; line-height: 1.15; }
    la misma proporción que .lyrics sin tener que repetir --font-scale */
 body.projector .song-line { font-size: calc(3rem * var(--font-scale, 1)); line-height: 1.6; }
 body.projector .lyrics    { font-size: calc(3rem * var(--font-scale, 1)); }
-body.projector .chord-wrap { font-size: calc(3rem * var(--font-scale, 1)); width: 0; }
+body.projector .chord-wrap { font-size: calc(3rem * var(--font-scale, 1)); }
 body.projector .song-title-text { font-size: 3rem; }
 
-body.projector .chord {
-  top: -2.2em;                        /*altura de la tablatura*/
-  font-weight: 500;                   /*ancho de la letra*/
-}
+body.projector .chord { font-weight: 500; }
 
 body.projector .song-break{ height: 40px; }
 body.light-mode.projector #menuBtn { color: #fff; }
@@ -3317,18 +3324,9 @@ body.projector .song-note {
   }
 
   /* misma base que .lyrics (1.6rem) para que la tablatura crezca en la
-     misma proporción que la letra; .chord ya no necesita font-size propio
-     acá — antes repetía --font-scale sobre un .chord-wrap que a su vez lo
-     heredaba (via em) del font-size ya escalado de .song-line, así que la
-     tablatura terminaba creciendo al cubo de la escala en vez de en línea
-     recta con la letra, y por eso a los pocos clics de A+ se despegaba e
-     invadía el renglón de arriba */
+     misma proporción que la letra */
   .chord-wrap {
     font-size: calc(1.6rem * var(--font-scale, 1));
-  }
-
-  .chord {
-    top: -3.0em; /*-3.6*/ /*Esto es la distancia ente el text y la tablatura: mas grande - mas alto*/
   }
 
   .alpha {

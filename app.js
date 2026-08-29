@@ -1311,13 +1311,21 @@ function renderChordLine(line) {
       output += `<span class="lyrics">${escapeHtml(text)}</span>`;
     }
 
-    // acorde asociado a la siguiente palabra (clickeable: lo toca sin abrir el modal)
-    output += `<span class="chord-wrap"><span class="chord" data-chord="${escapeHtml(chord)}" ${dataAction("playChordsFromLyrics", ["@el"])}>${chord}</span></span>`;
+    // el acorde queda pegado (mismo bloque .chord-unit, que no se separa
+    // al saltar de línea) a la palabra que le sigue inmediatamente, hasta
+    // el próximo espacio o acorde: si esa palabra pasa al renglón
+    // siguiente por falta de ancho (pantallas angostas), el acorde la
+    // acompaña en vez de quedar "flotando" al final del renglón anterior,
+    // amontonado con el acorde de al lado
+    const afterChord = regex.lastIndex;
+    const gluedMatch = line.slice(afterChord).match(/^[^\s\[]*/);
+    const glued = gluedMatch ? gluedMatch[0] : "";
 
-    lastIndex = regex.lastIndex;
+    output += `<span class="chord-unit"><span class="chord-wrap"><span class="chord" data-chord="${escapeHtml(chord)}" ${dataAction("playChordsFromLyrics", ["@el"])}>${chord}</span></span>${glued ? `<span class="lyrics">${escapeHtml(glued)}</span>` : ""}</span>`;
+
+    lastIndex = afterChord + glued.length;
+    regex.lastIndex = lastIndex;
   }
-
-
 
   // resto final
   const rest = line.slice(lastIndex).replace(regex, "");
