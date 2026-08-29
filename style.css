@@ -2358,17 +2358,23 @@ details[open] .sec-chevron { transform: rotate(90deg); }
   /* mismo enganche que ya usa el riel de letras: justo debajo de la barra
      de letras (que también es sticky), para no superponerse con ella */
   top: calc(var(--topbar-h, 56px) + var(--alfabeto-row-h, 48px));
-  /* el título y la estrellita se achican al scrollear (body.scrolled);
-     esta transición hace que la fila se reacomode (top) en el mismo
-     movimiento suave que el achique de las barras de arriba, en vez de
-     saltar de golpe */
-  transition: top 0.22s ease;
+  /* sin transition acá a propósito: animar "top" en un elemento sticky es
+     poco confiable en iOS Safari (Safari recalcula la posición sticky en
+     cada frame de scroll por fuera del motor de animación normal, y esa
+     pelea entre los dos es justamente lo que se veía como "saltitos"
+     continuos mientras se scrolleaba, no solo al cruzar el umbral) */
   z-index: 60;
   padding: 2px 0 6px;
 }
 
-.light-mode .song-title-row { background: var(--bg-night); background-attachment: fixed; }
-.dark-mode  .song-title-row { background: var(--bg-day);   background-attachment: fixed; }
+/* sin background-attachment:fixed acá a propósito (a diferencia de
+   .top-bar/.alfabeto-nav): combinado con position:sticky es una causa
+   conocida de parpadeo/vibración de scroll en iOS Safari, porque fuerza
+   un repintado en cada frame. No hace falta acá: el degradé de fondo
+   (--bg-day/--bg-night) es sólido en el primer ~28% de la pantalla,
+   donde vive esta fila, así que no se nota costura sin el "fixed" */
+.light-mode .song-title-row { background: var(--bg-night); }
+.dark-mode  .song-title-row { background: var(--bg-day);   }
 body.light-mode.projector .song-title-row { background: #000; }
 body.dark-mode.projector  .song-title-row { background: #fff; }
 
