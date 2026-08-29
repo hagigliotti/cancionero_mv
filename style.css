@@ -3326,9 +3326,11 @@ body.projector .song-note {
   }
 
   /* misma base que .lyrics (1.6rem) para que la tablatura crezca en la
-     misma proporción que la letra */
+     misma proporción que la letra, pero un poco más chica (0.75 en vez
+     de 0.85 como en desktop/proyector): en celular, al 85% se veía
+     casi del mismo tamaño que la letra */
   .chord {
-    font-size: calc(1.6rem * var(--font-scale, 1) * 0.85);
+    font-size: calc(1.6rem * var(--font-scale, 1) * 0.75);
   }
 
   .alpha {
