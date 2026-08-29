@@ -1017,16 +1017,16 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
 
 .song-lyrics .lyrics { font-size: calc(1.4rem * var(--font-scale, 1)); }
 
-/* acorde + la palabra que le sigue (ver renderChordLine en app.js) van
-   agrupados en un solo bloque que no se separa al saltar de línea: si no,
-   en pantallas angostas la palabra podía pasar al renglón siguiente y el
-   acorde quedarse "flotando" al final del anterior, amontonado con el
-   acorde de al lado (eso pasaba con position:absolute + salto de línea) */
+/* acorde + la palabra que le sigue (ver renderChordLine en app.js), como
+   <ruby>/<rt>: el mecanismo nativo de HTML para texto chico flotando
+   arriba de otro texto (pensado para furigana, pero es exactamente
+   nuestro caso). A diferencia de un position:absolute + offset a mano,
+   el navegador reserva él mismo el espacio vertical que hace falta —
+   sin esto, en algunos navegadores el acorde podía terminar superpuesto
+   con el renglón de arriba o con su propia palabra, según el tamaño */
 .chord-unit {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  vertical-align: bottom;
+  ruby-position: over;
+  ruby-align: start;
   /* separación mínima garantizada entre un acorde y el siguiente: sin
      esto, dos acordes seguidos sin ninguna palabra pegada entre ellos
      (ej. "[Dm][F7]") quedan tocándose ("DmF7"), porque cada bloque solo
@@ -1034,24 +1034,11 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
   margin-right: 0.2em;
 }
 
-.chord-wrap {
-  display: inline-block;
-  /* en rem (no em) a propósito: si tomara "1em" de .song-line, que ahora
-     también escala con --font-scale, la tablatura terminaría multiplicando
-     la escala dos veces (cuadrático) en vez de una — por eso usa la misma
-     base fija que .lyrics (1.4rem) y aplica --font-scale una sola vez,
-     para crecer siempre en la misma proporción que la letra */
-  font-size: calc(1.4rem * var(--font-scale, 1));
-  line-height: 1.15;
-}
-
 .chord {
-  /* ya no lleva position:absolute + "top: -Xem": ahora es contenido real
-     dentro de .chord-unit (flex, apilado arriba de la palabra), así el
-     renglón crece lo justo y necesario para no pisar al de arriba o al de
-     abajo, en vez de depender de un offset fijo por breakpoint */
   font-weight: 700;
-  font-size: 0.85em;
+  /* mismo cálculo que .lyrics (1.4rem * --font-scale) pero al 85%, para
+     que el acorde crezca siempre en la misma proporción que la letra */
+  font-size: calc(1.4rem * var(--font-scale, 1) * 0.85);
   white-space: nowrap;
   letter-spacing: 0.3px;
   cursor: pointer;
@@ -3290,15 +3277,11 @@ body.projector h1       { font-size: 2.8rem; text-align: center; }
 body.projector #contenido { font-size: 2.8rem; line-height: 1.15; }
 /* los A-/A/A+ (--font-scale) también valen en el proyector: antes estos
    tamaños estaban fijos en rem sin la variable, así que los botones no
-   tenían ningún efecto acá. .chord no necesita font-size propio: ya lo
-   hereda de .chord-wrap (0.85em, regla base más arriba), así que crece en
-   la misma proporción que .lyrics sin tener que repetir --font-scale */
+   tenían ningún efecto acá */
 body.projector .song-line { font-size: calc(3rem * var(--font-scale, 1)); line-height: 1.6; }
 body.projector .lyrics    { font-size: calc(3rem * var(--font-scale, 1)); }
-body.projector .chord-wrap { font-size: calc(3rem * var(--font-scale, 1)); }
+body.projector .chord     { font-size: calc(3rem * var(--font-scale, 1) * 0.85); font-weight: 500; }
 body.projector .song-title-text { font-size: 3rem; }
-
-body.projector .chord { font-weight: 500; }
 
 body.projector .song-break{ height: 40px; }
 body.light-mode.projector #menuBtn { color: #fff; }
@@ -3336,8 +3319,8 @@ body.projector .song-note {
 
   /* misma base que .lyrics (1.6rem) para que la tablatura crezca en la
      misma proporción que la letra */
-  .chord-wrap {
-    font-size: calc(1.6rem * var(--font-scale, 1));
+  .chord {
+    font-size: calc(1.6rem * var(--font-scale, 1) * 0.85);
   }
 
   .alpha {

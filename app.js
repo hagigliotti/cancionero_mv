@@ -815,7 +815,11 @@ function applyTablaturaState() {
   const btn = document.getElementById("tabBtn");
 
   chords.forEach(el => {
-    el.style.display = tablaturaVisible ? "inline-block" : "none";
+    // "" (no inline style) en vez de "inline-block": son <rt> dentro de
+    // <ruby>, que por defecto ya tienen display:ruby-text — forzar
+    // inline-block por JS pisa eso y rompe el posicionamiento nativo
+    // (el acorde deja de flotar arriba de la palabra)
+    el.style.display = tablaturaVisible ? "" : "none";
   });
 
   if (btn) {
@@ -1311,17 +1315,21 @@ function renderChordLine(line) {
       output += `<span class="lyrics">${escapeHtml(text)}</span>`;
     }
 
-    // el acorde queda pegado (mismo bloque .chord-unit, que no se separa
-    // al saltar de línea) a la palabra que le sigue inmediatamente, hasta
-    // el próximo espacio o acorde: si esa palabra pasa al renglón
-    // siguiente por falta de ancho (pantallas angostas), el acorde la
-    // acompaña en vez de quedar "flotando" al final del renglón anterior,
-    // amontonado con el acorde de al lado
+    // el acorde queda pegado (misma etiqueta <ruby>, que no se separa al
+    // saltar de línea) a la palabra que le sigue inmediatamente, hasta el
+    // próximo espacio o acorde. <ruby>/<rt> es el mecanismo nativo de HTML
+    // para "texto chico flotando arriba de otro texto" (pensado para furigana,
+    // pero es exactamente nuestro caso): el navegador reserva solo el
+    // espacio vertical necesario, en vez de depender de un position:absolute
+    // + offset a mano que en algunos navegadores (iOS Safari) no empuja
+    // bien el alto del renglón y termina superponiéndose con el de arriba
+    // o abajo
     const afterChord = regex.lastIndex;
     const gluedMatch = line.slice(afterChord).match(/^[^\s\[]*/);
     const glued = gluedMatch ? gluedMatch[0] : "";
+    const base = glued ? `<span class="lyrics">${escapeHtml(glued)}</span>` : "&#8203;";
 
-    output += `<span class="chord-unit"><span class="chord-wrap"><span class="chord" data-chord="${escapeHtml(chord)}" ${dataAction("playChordsFromLyrics", ["@el"])}>${chord}</span></span>${glued ? `<span class="lyrics">${escapeHtml(glued)}</span>` : ""}</span>`;
+    output += `<ruby class="chord-unit">${base}<rt class="chord-wrap chord" data-chord="${escapeHtml(chord)}" ${dataAction("playChordsFromLyrics", ["@el"])}>${chord}</rt></ruby>`;
 
     lastIndex = afterChord + glued.length;
     regex.lastIndex = lastIndex;
