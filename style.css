@@ -1027,6 +1027,11 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
   flex-direction: column;
   align-items: flex-start;
   vertical-align: bottom;
+  /* separación mínima garantizada entre un acorde y el siguiente: sin
+     esto, dos acordes seguidos sin ninguna palabra pegada entre ellos
+     (ej. "[Dm][F7]") quedan tocándose ("DmF7"), porque cada bloque solo
+     mide lo que ocupa su propio contenido, sin espacio de sobra */
+  margin-right: 0.2em;
 }
 
 .chord-wrap {
