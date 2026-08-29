@@ -496,37 +496,22 @@
     }
 
     // la barra de letras y la de arriba se achican con una transición CSS
-    // (no es instantáneo): medir el alto solo al principio y al final del
-    // achique (transitionend) deja al título de la canción (sticky, pegado
-    // "top: var(--topbar-h) + var(--alfabeto-row-h)") mal ubicado DURANTE
-    // esos ~0.22s — el texto ya se achicó pero el hueco de arriba todavía
-    // mide el alto viejo, y recién al final salta de golpe al alto correcto.
-    // Eso es la "vibración": dos saltos en vez de un solo movimiento fluido.
-    // Solución: mientras dura la transición, medir en cada frame (no solo
-    // al principio y al final) para que el título se mueva JUNTO con el
-    // achique real de las barras, no después.
-    let syncRafId = null;
-
-    function syncOffsetsDuringTransition() {
-      const start = performance.now();
-      const DURATION = 280; // un poco más que --trans (0.22s), por las dudas
-
-      if (syncRafId) cancelAnimationFrame(syncRafId);
-
-      function tick(now) {
-        syncOffsets();
-        syncRafId = (now - start < DURATION) ? requestAnimationFrame(tick) : null;
-      }
-
-      syncRafId = requestAnimationFrame(tick);
-    }
-
+    // (no es instantáneo). Antes, este script re-medía el alto en cada frame
+    // durante ~280ms con requestAnimationFrame para que el título no quedara
+    // mal ubicado mientras tanto — pero offsetHeight redondea a pixeles
+    // enteros en cada frame mientras la transición CSS interpola con
+    // subpixeles, y ese desajuste generaba los "saltitos" del título y la
+    // estrellita. Ahora: una sola medición, tomada en el mismo tick en que
+    // se cambia la clase "scrolled" (antes de que el navegador pinte nada,
+    // por eso ya da el alto FINAL post-achique, no el viejo). El resto del
+    // movimiento lo hace la propia transición CSS de "top" en
+    // .song-title-row, en sync con el achique de las barras de arriba.
     function onScroll() {
       const shouldBeScrolled = window.scrollY > 30;
       if (shouldBeScrolled !== scrolled) {
         scrolled = shouldBeScrolled;
         document.body.classList.toggle("scrolled", scrolled);
-        syncOffsetsDuringTransition();
+        syncOffsets();
       }
     }
 

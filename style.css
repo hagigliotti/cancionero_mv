@@ -1003,7 +1003,11 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
    LETRA Y ACORDES
    ============================================================ */
 .song-line {
-  font-size: 1em;
+  /* escala junto con la letra/tablatura (--font-scale) para que el alto de
+     renglón crezca en la misma proporción que el texto: si el texto crece
+     y el interlineado no, la tablatura (que "flota" arriba de la letra con
+     top:-Xem) termina invadiendo el renglón de arriba */
+  font-size: calc(1em * var(--font-scale, 1));
   line-height: 1.85;
   margin-bottom: 4px;
 }
@@ -1018,7 +1022,12 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
 .chord-wrap {
   display: inline-block;
   position: relative;
-  font-size: calc(1em * var(--font-scale, 1));
+  /* en rem (no em) a propósito: si tomara "1em" de .song-line, que ahora
+     también escala con --font-scale, la tablatura terminaría multiplicando
+     la escala dos veces (cuadrático) en vez de una — por eso usa la misma
+     base fija que .lyrics (1.4rem) y aplica --font-scale una sola vez,
+     para crecer siempre en la misma proporción que la letra */
+  font-size: calc(1.4rem * var(--font-scale, 1));
   /*padding-top: 1.2em;*/
 }
 
@@ -2339,6 +2348,11 @@ details[open] .sec-chevron { transform: rotate(90deg); }
   /* mismo enganche que ya usa el riel de letras: justo debajo de la barra
      de letras (que también es sticky), para no superponerse con ella */
   top: calc(var(--topbar-h, 56px) + var(--alfabeto-row-h, 48px));
+  /* el título y la estrellita se achican al scrollear (body.scrolled);
+     esta transición hace que la fila se reacomode (top) en el mismo
+     movimiento suave que el achique de las barras de arriba, en vez de
+     saltar de golpe */
+  transition: top 0.22s ease;
   z-index: 60;
   padding: 2px 0 6px;
 }
@@ -2355,6 +2369,10 @@ body.dark-mode.projector  .song-title-row { background: #fff; }
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.3;
+  /* el font-size se achica con una transición en vez de saltar de un
+     tamaño a otro de golpe (la estrellita de al lado ya tenía esta misma
+     transición vía --trans; por eso antes se movían desincronizados) */
+  transition: font-size 0.22s ease;
 }
 
 /* pegada arriba: título chico y truncado (con puntos suspensivos) en vez
@@ -3249,17 +3267,21 @@ body.dark-mode.projector  { background: #fff; color: var(--navy); }
 
 body.projector h1       { font-size: 2.8rem; text-align: center; }
 body.projector #contenido { font-size: 2.8rem; line-height: 1.15; }
-body.projector .song-line { font-size: 3rem; line-height: 1.6; }
-body.projector .lyrics    { font-size: 3rem; }
+/* los A-/A/A+ (--font-scale) también valen en el proyector: antes estos
+   tamaños estaban fijos en rem sin la variable, así que los botones no
+   tenían ningún efecto acá. .chord no necesita font-size propio: ya lo
+   hereda de .chord-wrap (0.85em, regla base más arriba), así que crece en
+   la misma proporción que .lyrics sin tener que repetir --font-scale */
+body.projector .song-line { font-size: calc(3rem * var(--font-scale, 1)); line-height: 1.6; }
+body.projector .lyrics    { font-size: calc(3rem * var(--font-scale, 1)); }
+body.projector .chord-wrap { font-size: calc(3rem * var(--font-scale, 1)); width: 0; }
 body.projector .song-title-text { font-size: 3rem; }
 
 body.projector .chord {
-  font-size: 2.5rem;                  /*tamano de la letra*/
   top: -2.2em;                        /*altura de la tablatura*/
   font-weight: 500;                   /*ancho de la letra*/
 }
 
-body.projector .chord-wrap{ width: 0; }
 body.projector .song-break{ height: 40px; }
 body.light-mode.projector #menuBtn { color: #fff; }
 
@@ -3294,8 +3316,18 @@ body.projector .song-note {
     font-size: calc(1.6rem * var(--font-scale, 1));
   }
 
+  /* misma base que .lyrics (1.6rem) para que la tablatura crezca en la
+     misma proporción que la letra; .chord ya no necesita font-size propio
+     acá — antes repetía --font-scale sobre un .chord-wrap que a su vez lo
+     heredaba (via em) del font-size ya escalado de .song-line, así que la
+     tablatura terminaba creciendo al cubo de la escala en vez de en línea
+     recta con la letra, y por eso a los pocos clics de A+ se despegaba e
+     invadía el renglón de arriba */
+  .chord-wrap {
+    font-size: calc(1.6rem * var(--font-scale, 1));
+  }
+
   .chord {
-    font-size: calc(1em * var(--font-scale, 1));
     top: -3.0em; /*-3.6*/ /*Esto es la distancia ente el text y la tablatura: mas grande - mas alto*/
   }
 
