@@ -865,7 +865,7 @@ function applyTeleprompterBarVisibility() {
 let fontSizeLevel = 0;
 
 function getMaxFontLevel() {
-  if (window.innerWidth < 480) return 4;     // móvil
+  if (window.innerWidth < 480) return 2;     // móvil (rango más corto: a partir de ±3 la tablatura queda muy apretada en pantallas chicas)
   if (window.innerWidth < 768) return 6;     // tablet
   if (window.innerWidth < 1024) return 8;    // laptop
   return 10;                                 // desktop/wide

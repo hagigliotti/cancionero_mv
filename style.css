@@ -1039,6 +1039,12 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
   /* mismo cálculo que .lyrics (1.4rem * --font-scale) pero al 85%, para
      que el acorde crezca siempre en la misma proporción que la letra */
   font-size: calc(1.4rem * var(--font-scale, 1) * 0.85);
+  /* line-height chico y explícito (no "normal"): así el espacio que el
+     navegador reserva arriba de la palabra es solo el que el acorde
+     necesita para el texto en sí, sin aire de sobra — "normal" varía
+     según navegador (en iOS Safari se veía bastante más separado que en
+     Chrome) */
+  line-height: 1.1;
   white-space: nowrap;
   letter-spacing: 0.3px;
   cursor: pointer;
@@ -1094,7 +1100,9 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 16px 0 6px;
+  /* el margen inferior escala con --font-scale: fijo en 6px, un acorde
+     agrandado con A+ terminaba chocando contra la insignia de arriba */
+  margin: 16px 0 calc(6px * var(--font-scale, 1));
   background: var(--sky);
   color: #fff;
   font-weight: 700;
