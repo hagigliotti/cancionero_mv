@@ -2073,7 +2073,6 @@ body.light-mode .toast {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255,255,255,0.08);
   opacity: 0.9;
   cursor: pointer;
   font-size: 15px;
@@ -2082,7 +2081,15 @@ body.light-mode .toast {
   transition: var(--trans);
 }
 
-.dark-mode .theme-toggle-btn { background: var(--gray-50); }
+/* modo nocturno = "encendido": circulo con el color del tema y brillo alrededor */
+.light-mode .theme-toggle-btn {
+  background: var(--sky);
+  box-shadow: 0 0 8px rgba(var(--sky-rgb), 0.7);
+}
+
+/* modo diurno = "apagado": circulo neutro, solo para que se distinga del fondo */
+.dark-mode .theme-toggle-btn { background: var(--gray-100); }
+
 .theme-toggle-btn:hover { opacity: 1; background: var(--sky); }
 
 .about-badge {
