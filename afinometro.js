@@ -1237,13 +1237,25 @@ function getInversionIntervals(baseIntervals, k) {
   });
 }
 
-const CHORD_DIAGRAM_PIANO_OCTAVAS = 2;
-
 function renderDiagramaPiano(root, quality, inversion) {
   const formula = CHORD_FORMULAS[quality] || CHORD_FORMULAS.mayor;
   const offsetsActivos = getInversionIntervals(formula.intervals, inversion);
 
-  const { teclas, raizOffset } = getPianoWindowKeys(root, CHORD_DIAGRAM_PIANO_OCTAVAS);
+  // el teclado muestra solo las octavas que hacen falta para las notas del
+  // acorde (mínimo 1) — antes siempre mostraba 2 octavas fijas, así que un
+  // acorde simple (3-4 notas, todas dentro de la primera octava) quedaba
+  // agrupado a la izquierda con un montón de teclas blancas sin tocar
+  // colgando a la derecha, descentrado
+  // cuando la raíz es sostenida (negra), la ventana del teclado arranca en
+  // la blanca ANTERIOR (ver getPianoWindowKeys), así que la raíz queda 1
+  // semitono más "adentro" que con una raíz blanca — sin compensar eso acá,
+  // una nota justo en el borde (ej. la propia raíz una octava arriba, típico
+  // en la 1ª inversión) quedaba recortada fuera del teclado
+  const maxOffset = Math.max(0, ...offsetsActivos);
+  const margenRaizSostenida = root.includes("#") ? 1 : 0;
+  const octavasNecesarias = Math.max(1, Math.ceil((maxOffset + margenRaizSostenida) / 12));
+
+  const { teclas, raizOffset } = getPianoWindowKeys(root, octavasNecesarias);
 
   const whiteW = 22, whiteH = 100, blackW = 14, blackH = 62;
   const nBlancas = teclas.filter(k => k.type === "white").length;
