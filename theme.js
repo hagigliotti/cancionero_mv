@@ -66,6 +66,42 @@ function updateThemeMenuText() {
 }
 
 
+// ===================== COLOR DE ACENTO =====================
+// independiente del tema claro/oscuro: se guarda como data-accent en
+// <body> y en cascada cambia --sky/--sky-dark/--sky-rgb (ver style.css,
+// bloques body[data-accent="..."]) — de ahí sale casi todo el celeste de
+// la app (botones, acordes, fondo con tinte, glow), así que cambiar estas
+// 3 variables alcanza para repintar todo sin tocar cada regla una por una.
+// "celeste" no lleva atributo — es el valor por defecto ya en :root.
+// El proyector en modo oscuro queda afuera a propósito (ver ese bloque en
+// style.css, con más especificidad): siempre celeste/negro, no acompaña
+// el acento elegido.
+const ACCENTS = ["celeste", "naranja", "rosa", "coral", "violeta", "lila", "turquesa", "verde", "amarillo"];
+
+function loadAccentColor() {
+  applyAccentColor(localStorage.getItem("accentColor") || "celeste", false);
+}
+
+function setAccentColor(id) {
+  applyAccentColor(id, true);
+}
+
+function applyAccentColor(id, guardar) {
+  if (!ACCENTS.includes(id)) id = "celeste";
+
+  if (id === "celeste") {
+    document.body.removeAttribute("data-accent");
+  } else {
+    document.body.setAttribute("data-accent", id);
+  }
+
+  if (guardar) localStorage.setItem("accentColor", id);
+
+  document.querySelectorAll("#accentPicker [data-accent-option]").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.accentOption === id);
+  });
+}
+
 // ===== ALERT ============================================================================
 function showToast(msg) {
   const toast = document.createElement("div");

@@ -10,7 +10,22 @@
   --navy-soft: #2a4a6b;
   --sky:       #38bdf8;
   --sky-dark:  #0ea5e9;
-  --sky-glow:  rgba(56, 189, 248, 0.18);
+  /* mismo azul que --sky, pero como lista "R, G, B" (sin envolver en
+     rgb()): así cualquier rgba(var(--sky-rgb), alpha) de acá abajo cambia
+     de color junto con --sky cuando se elige otro acento (ver los bloques
+     body[data-accent="..."] más abajo), en vez de quedar siempre celeste */
+  --sky-rgb:   56, 189, 248;
+  /* fondo del proyector en modo claro: blanco con un tinte suave del
+     acento elegido — el proyector en modo OSCURO se queda siempre negro
+     puro, sin importar el acento (ver body.light-mode.projector abajo).
+     OJO: --proj-tint, --bg-day y --bg-night se REDEFINEN enteros en cada
+     bloque body[data-accent="..."] de más abajo, no alcanza con que
+     --sky-rgb cambie solo — una variable CSS que usa var(--otra-variable)
+     adentro se resuelve con el valor de esa otra variable en el punto
+     donde SE DECLARÓ, no en el punto donde se USA, así que si --bg-day
+     solo estuviera acá en :root con var(--sky-rgb) adentro, quedaría
+     siempre celeste sin importar qué acento se elija */
+  --proj-tint: rgba(var(--sky-rgb), 0.10);
   --white:     #ffffff;
   --gray-50:   #f8fafc;
   --gray-100:  #e2e8f0;
@@ -32,9 +47,89 @@
      costura sin importar el scroll. Sólido (color de los logos Cancionero_*)
      hasta ~28% de la pantalla (logo + barra + alfabeto), recién ahí empieza
      a degradar hacia abajo */
-  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, #eaf6ff 62%, #cfe9fb 100%);
-  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(56,189,248,0.14), transparent 65%),
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(var(--sky-rgb),0.09) 62%, rgba(var(--sky-rgb),0.20) 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(var(--sky-rgb),0.14), transparent 65%),
               linear-gradient(180deg, #0d1e30 0%, #0d1e30 28%, #122033 62%, #1a2e45 100%);
+}
+
+/* ============================================================
+   COLOR DE ACENTO (elegible en el menú, ver #accentPicker)
+   ============================================================
+   Redefine --sky/--sky-dark/--sky-rgb (de ahí sale la mayoría del celeste:
+   botones, glow, sombras — todo lo que ya usaba rgba(var(--sky-rgb),...))
+   y también --bg-day/--bg-night/--proj-tint enteros, con el mismo color
+   pisado a mano adentro: una variable CSS que adentro usa var(--otra) se
+   resuelve con el valor de esa otra variable en el punto donde SE
+   DECLARÓ, no en el punto donde se USA — si --bg-day siguiera solo en
+   TOKENS con var(--sky-rgb) adentro, quedaría siempre celeste sin
+   importar el acento elegido acá, por eso hay que repetirlo completo en
+   cada bloque. "celeste" no necesita bloque propio: es el valor de TOKENS.
+   No aplica en el proyector en modo oscuro a propósito — se queda
+   siempre celeste/negro (ver body.light-mode.projector, más abajo, con
+   más especificidad que estos selectores por tener 2 clases en el body). */
+body[data-accent="naranja"] {
+  --sky: #fb923c; --sky-dark: #f97316; --sky-rgb: 251, 146, 60;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(251, 146, 60,0.09) 62%, rgba(251, 146, 60,0.20) 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(251, 146, 60,0.14), transparent 65%),
+              linear-gradient(180deg, #0d1e30 0%, #0d1e30 28%, #122033 62%, #1a2e45 100%);
+  --proj-tint: rgba(251, 146, 60,0.10);
+}
+body[data-accent="rosa"] {
+  --sky: #f472b6; --sky-dark: #ec4899; --sky-rgb: 244, 114, 182;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(244, 114, 182,0.09) 62%, rgba(244, 114, 182,0.20) 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(244, 114, 182,0.14), transparent 65%),
+              linear-gradient(180deg, #0d1e30 0%, #0d1e30 28%, #122033 62%, #1a2e45 100%);
+  --proj-tint: rgba(244, 114, 182,0.10);
+}
+body[data-accent="violeta"] {
+  --sky: #a78bfa; --sky-dark: #8b5cf6; --sky-rgb: 167, 139, 250;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(167, 139, 250,0.09) 62%, rgba(167, 139, 250,0.20) 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(167, 139, 250,0.14), transparent 65%),
+              linear-gradient(180deg, #0d1e30 0%, #0d1e30 28%, #122033 62%, #1a2e45 100%);
+  --proj-tint: rgba(167, 139, 250,0.10);
+}
+body[data-accent="lila"] {
+  --sky: #e0a3e8; --sky-dark: #c65fd4; --sky-rgb: 224, 163, 232;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(224, 163, 232,0.09) 62%, rgba(224, 163, 232,0.20) 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(224, 163, 232,0.14), transparent 65%),
+              linear-gradient(180deg, #0d1e30 0%, #0d1e30 28%, #122033 62%, #1a2e45 100%);
+  --proj-tint: rgba(224, 163, 232,0.10);
+}
+body[data-accent="verde"] {
+  --sky: #4ade80; --sky-dark: #22c55e; --sky-rgb: 74, 222, 128;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(74, 222, 128,0.09) 62%, rgba(74, 222, 128,0.20) 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(74, 222, 128,0.14), transparent 65%),
+              linear-gradient(180deg, #0d1e30 0%, #0d1e30 28%, #122033 62%, #1a2e45 100%);
+  --proj-tint: rgba(74, 222, 128,0.10);
+}
+body[data-accent="amarillo"] {
+  --sky: #fbbf24; --sky-dark: #f59e0b; --sky-rgb: 251, 191, 36;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(251, 191, 36,0.09) 62%, rgba(251, 191, 36,0.20) 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(251, 191, 36,0.14), transparent 65%),
+              linear-gradient(180deg, #0d1e30 0%, #0d1e30 28%, #122033 62%, #1a2e45 100%);
+  --proj-tint: rgba(251, 191, 36,0.10);
+}
+body[data-accent="turquesa"] {
+  --sky: #2dd4bf; --sky-dark: #14b8a6; --sky-rgb: 45, 212, 191;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(45, 212, 191,0.09) 62%, rgba(45, 212, 191,0.20) 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(45, 212, 191,0.14), transparent 65%),
+              linear-gradient(180deg, #0d1e30 0%, #0d1e30 28%, #122033 62%, #1a2e45 100%);
+  --proj-tint: rgba(45, 212, 191,0.10);
+}
+body[data-accent="coral"] {
+  --sky: #ff8a75; --sky-dark: #f2624a; --sky-rgb: 255, 138, 117;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(255, 138, 117,0.09) 62%, rgba(255, 138, 117,0.20) 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(255, 138, 117,0.14), transparent 65%),
+              linear-gradient(180deg, #0d1e30 0%, #0d1e30 28%, #122033 62%, #1a2e45 100%);
+  --proj-tint: rgba(255, 138, 117,0.10);
+}
+
+/* proyector en modo oscuro ("modo nocturno" = body.light-mode, ver el
+   comentario de más abajo sobre esa inversión de nombres): siempre el
+   celeste original, cualquiera sea el acento elegido — 2 clases en el
+   body le gana en especificidad a los body[data-accent] de arriba */
+body.light-mode.projector {
+  --sky: #38bdf8; --sky-dark: #0ea5e9; --sky-rgb: 56, 189, 248;
 }
 
 /* ============================================================
@@ -135,12 +230,12 @@ h1 { text-align: center; padding: 10px; margin: 0; }
   display: block;
   margin: 0 auto;
   border-radius: 14px;
-  /*filter: drop-shadow(0 4px 16px rgba(56, 189, 248, 0.25));*/
+  /*filter: drop-shadow(0 4px 16px rgba(var(--sky-rgb), 0.25));*/
   transition: filter 0.3s ease;
 }
 /*
 .logo-title img:hover {
-  filter: drop-shadow(0 6px 24px rgba(56, 189, 248, 0.45));
+  filter: drop-shadow(0 6px 24px rgba(var(--sky-rgb), 0.45));
 }
 */
 /* ============================================================
@@ -165,7 +260,7 @@ h1 { text-align: center; padding: 10px; margin: 0; }
 /* modo proyector: respeta el tema claro/oscuro elegido (ver comentario
    completo junto al resto de las reglas de MODO PROYECTOR) */
 body.light-mode.projector .top-bar { background: #000; }
-body.dark-mode.projector  .top-bar { background: #fff; }
+body.dark-mode.projector  .top-bar { background: var(--proj-tint); }
 
 .top-row {
   display: flex;
@@ -228,7 +323,7 @@ body.projector .clear-search-btn { background: rgba(255,255,255,0.15); color: #f
 
 .light-mode #buscador {
   background: rgba(255,255,255,0.08);
-  border-color: rgba(56,189,248,0.30);
+  border-color: rgba(var(--sky-rgb),0.30);
   color: #e8f4fd;
 }
 
@@ -245,7 +340,7 @@ body.projector .clear-search-btn { background: rgba(255,255,255,0.15); color: #f
 
 #buscador:focus {
   border-color: var(--sky) !important;
-  box-shadow: 0 0 0 4px var(--sky-glow) !important;
+  box-shadow: 0 0 0 4px rgba(var(--sky-rgb), 0.18) !important;
 }
 
 
@@ -398,7 +493,7 @@ a.menu-item {
   color: inherit;
 }
 
-.menu-item:hover { background: rgba(56,189,248,0.14); color: var(--sky); }
+.menu-item:hover { background: rgba(var(--sky-rgb),0.14); color: var(--sky); }
 .dark-mode .menu-item:hover { color: var(--sky-dark); }
 
 .menu-item small { opacity: 0.55; font-weight: 400; margin-left: 2px; }
@@ -439,7 +534,7 @@ a.menu-item {
 
 .light-mode .valores-search-input {
   background: rgba(255,255,255,0.08);
-  border-color: rgba(56,189,248,0.30);
+  border-color: rgba(var(--sky-rgb),0.30);
   color: #e8f4fd;
 }
 .light-mode .valores-search-input::placeholder { color: rgba(232,244,253,0.50); }
@@ -453,7 +548,7 @@ a.menu-item {
 
 .valores-search-input:focus {
   border-color: var(--sky) !important;
-  box-shadow: 0 0 0 4px var(--sky-glow) !important;
+  box-shadow: 0 0 0 4px rgba(var(--sky-rgb), 0.18) !important;
 }
 
 #valoresModalIdiomaRow,
@@ -533,6 +628,36 @@ a.menu-item {
   padding: 2px 12px;
 }
 
+/* selector de color de acento (menú > Ajustes) — un circulito lleno por
+   paleta, con un aro cuando es la elegida; el color de cada bolita es
+   literal (no --sky, que es justo lo que este control cambia) */
+.accent-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 2px 8px 12px 40px;
+}
+
+.accent-swatch {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: var(--sw);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12);
+  transition: var(--trans);
+}
+
+.accent-swatch:hover { transform: scale(1.12); }
+
+/* #16283e: mismo tono que el fondo del menú (.dropdown-menu), que es
+   siempre oscuro sin importar el tema — así el aro queda prolijo */
+.accent-swatch.active {
+  box-shadow: 0 0 0 2px #16283e, 0 0 0 4px var(--sw);
+}
+
 .menu-contact {
   padding: 14px 16px calc(16px + env(safe-area-inset-bottom, 0));
   border-top: 1px solid rgba(255,255,255,0.08);
@@ -610,7 +735,7 @@ a.menu-item {
 
 .light-mode #langBtn {
   background: rgba(255,255,255,0.10);
-  border-color: rgba(56,189,248,0.30);
+  border-color: rgba(var(--sky-rgb),0.30);
 }
 
 .dark-mode #langBtn {
@@ -658,7 +783,7 @@ a.menu-item {
 .light-mode .alfabeto-nav { background: var(--bg-night); background-attachment: fixed; }
 .dark-mode  .alfabeto-nav { background: var(--bg-day);   background-attachment: fixed; }
 body.light-mode.projector .alfabeto-nav { background: #000; }
-body.dark-mode.projector  .alfabeto-nav { background: #fff; }
+body.dark-mode.projector  .alfabeto-nav { background: var(--proj-tint); }
 
 #alfabeto,
 #himnoRangos {
@@ -789,13 +914,13 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
   background: var(--sky) !important;
   color: var(--white) !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(56,189,248,.35) !important;
+  box-shadow: 0 4px 12px rgba(var(--sky-rgb),.35) !important;
 }
 
 .alpha.active {
   background: var(--sky) !important;
   color: var(--white) !important;
-  box-shadow: 0 4px 14px rgba(56,189,248,.45) !important;
+  box-shadow: 0 4px 14px rgba(var(--sky-rgb),.45) !important;
   transform: translateY(-1px);
 }
 
@@ -904,7 +1029,7 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
 .light-mode #indice li {
   background: rgba(255,255,255,0.07);
   color: #e8f4fd;
-  border: 1px solid rgba(56,189,248,0.12);
+  border: 1px solid rgba(var(--sky-rgb),0.12);
 }
 
 .dark-mode #indice li {
@@ -920,7 +1045,7 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
 }
 
 .light-mode #indice li:hover {
-  background: rgba(56,189,248,0.12);
+  background: rgba(var(--sky-rgb),0.12);
 }
 
 .dark-mode #indice li:hover {
@@ -1060,7 +1185,7 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
   margin-top: 20px;
   padding: 10px 15px;
   border-left: 4px solid var(--sky);
-  background: rgba(56, 189, 248, 0.08);
+  background: rgba(var(--sky-rgb), 0.08);
   border-radius: 0 8px 8px 0;
   font-style: italic;
   font-size: 1rem;
@@ -1124,8 +1249,8 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
 }
 
 .song-meta {
-  background: rgba(56, 189, 248, 0.06);
-  border: 1px solid rgba(56, 189, 248, 0.15);
+  background: rgba(var(--sky-rgb), 0.06);
+  border: 1px solid rgba(var(--sky-rgb), 0.15);
   border-left: 4px solid var(--sky);
   border-radius: 0px; /*border-radius: 10px; redondea el contenedor*/
   padding: 12px 14px;
@@ -1150,8 +1275,8 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
   margin-left: auto;
   padding: 4px 8px;
   border-radius: var(--radius-xl);
-  background: rgba(56, 189, 248, 0.10);
-  border: 1px solid rgba(56, 189, 248, 0.25);
+  background: rgba(var(--sky-rgb), 0.10);
+  border: 1px solid rgba(var(--sky-rgb), 0.25);
   transition: var(--trans);
 }
 
@@ -1283,7 +1408,7 @@ body.dark-mode.projector .teleprompter-bar {
 .light-mode #projectorBtn {
   background: rgba(255,255,255,0.10);
   color: #e8f4fd;
-  border: 1px solid rgba(56,189,248,0.25);
+  border: 1px solid rgba(var(--sky-rgb),0.25);
 }
 
 .dark-mode #toggleLista,
@@ -1414,10 +1539,10 @@ body.dark-mode.projector .teleprompter-bar {
 /* Highlight */
 .highlight {
   transition: var(--trans);
-  box-shadow: 0 0 14px rgba(56,189,248,.50);
+  box-shadow: 0 0 14px rgba(var(--sky-rgb),.50);
   border-radius: 8px;
   transform: scale(1.03);
-  background: rgba(56,189,248,.12);
+  background: rgba(var(--sky-rgb),.12);
 }
 
 /* ============================================================
@@ -1497,7 +1622,7 @@ body.dark-mode.projector .teleprompter-bar {
   -webkit-appearance: none;
   background: var(--navy);
   color: white;
-  border: 1px solid rgba(56,189,248,0.30);
+  border: 1px solid rgba(var(--sky-rgb),0.30);
   border-radius: 8px;
   padding: 8px 28px 8px 12px;
   font-size: 13px;
@@ -1533,7 +1658,7 @@ body.dark-mode.projector .teleprompter-bar {
   -moz-appearance: none;
   background: var(--navy);
   color: white;
-  border: 1px solid rgba(56,189,248,0.30);
+  border: 1px solid rgba(var(--sky-rgb),0.30);
   font-size: 14px;
   cursor: pointer;
   padding: 8px 28px 8px 12px;
@@ -1833,7 +1958,7 @@ body.light-mode .toast {
   align-items: center;
   justify-content: center;
   font-size: 24px;
-  box-shadow: 0 8px 20px -6px var(--sky-glow);
+  box-shadow: 0 8px 20px -6px rgba(var(--sky-rgb), 0.18);
   margin-bottom: 12px;
 }
 
@@ -1963,7 +2088,7 @@ details.about-section summary::marker { content: ""; }
   width: 30px;
   height: 30px;
   border-radius: 9px;
-  background: rgba(56,189,248,0.12);
+  background: rgba(var(--sky-rgb),0.12);
   color: var(--sky);
   display: flex;
   align-items: center;
@@ -1972,7 +2097,7 @@ details.about-section summary::marker { content: ""; }
   flex-shrink: 0;
 }
 
-.dark-mode .sec-icon { background: var(--sky-glow); color: var(--sky-dark); }
+.dark-mode .sec-icon { background: rgba(var(--sky-rgb), 0.18); color: var(--sky-dark); }
 
 .sec-chevron {
   margin-left: auto;
@@ -1999,15 +2124,15 @@ details[open] .sec-chevron { transform: rotate(90deg); }
 .about-panel li:last-child { margin-bottom: 0; }
 
 .callout {
-  background: rgba(56,189,248,0.08);
-  border: 1px solid rgba(56,189,248,0.2);
+  background: rgba(var(--sky-rgb),0.08);
+  border: 1px solid rgba(var(--sky-rgb),0.2);
   border-radius: 10px;
   padding: 10px 12px;
   font-size: 12.5px;
   margin-top: 10px;
 }
 
-.dark-mode .callout { background: var(--sky-glow); border-color: rgba(56,189,248,0.3); }
+.dark-mode .callout { background: rgba(var(--sky-rgb), 0.18); border-color: rgba(var(--sky-rgb),0.3); }
 
 .legal-box {
   max-height: 130px;
@@ -2061,7 +2186,7 @@ details[open] .sec-chevron { transform: rotate(90deg); }
 }
 
 .dark-mode .contact-row a { background: var(--gray-50); }
-.contact-row a:hover { background: rgba(56,189,248,0.14); transform: translateX(2px); }
+.contact-row a:hover { background: rgba(var(--sky-rgb),0.14); transform: translateX(2px); }
 
 .contact-row .c-icon {
   width: 22px;
@@ -2113,7 +2238,7 @@ details[open] .sec-chevron { transform: rotate(90deg); }
 #bibliotecaSearch::placeholder { color: rgba(232,244,253,0.5); }
 .dark-mode #bibliotecaSearch::placeholder { color: var(--gray-500); }
 
-#bibliotecaSearch:focus { box-shadow: 0 0 0 3px var(--sky-glow); }
+#bibliotecaSearch:focus { box-shadow: 0 0 0 3px rgba(var(--sky-rgb), 0.18); }
 
 .biblio-list {
   display: flex;
@@ -2158,7 +2283,7 @@ details[open] .sec-chevron { transform: rotate(90deg); }
   width: 34px;
   height: 34px;
   border-radius: 10px;
-  background: rgba(56,189,248,0.12);
+  background: rgba(var(--sky-rgb),0.12);
   color: var(--sky);
   display: flex;
   align-items: center;
@@ -2167,7 +2292,7 @@ details[open] .sec-chevron { transform: rotate(90deg); }
   flex-shrink: 0;
 }
 
-.dark-mode .biblio-icon { background: var(--sky-glow); color: var(--sky-dark); }
+.dark-mode .biblio-icon { background: rgba(var(--sky-rgb), 0.18); color: var(--sky-dark); }
 
 .biblio-titulo {
   display: block;
@@ -2376,7 +2501,7 @@ details[open] .sec-chevron { transform: rotate(90deg); }
 .light-mode .song-title-row { background: var(--bg-night); }
 .dark-mode  .song-title-row { background: var(--bg-day);   }
 body.light-mode.projector .song-title-row { background: #000; }
-body.dark-mode.projector  .song-title-row { background: #fff; }
+body.dark-mode.projector  .song-title-row { background: var(--proj-tint); }
 
 .song-title-text {
   flex: 1 1 auto;
@@ -2459,14 +2584,14 @@ body.scrolled .fav-add-btn { font-size: 15px; }
 
 .dark-mode .song-row { background: var(--gray-50); border-color: var(--gray-100); }
 
-.song-row:hover { border-color: var(--sky); background: rgba(56,189,248,0.06); }
+.song-row:hover { border-color: var(--sky); background: rgba(var(--sky-rgb),0.06); }
 .dark-mode .song-row:hover { background: #f0f9ff; }
 
 .song-row-icon {
   width: 24px;
   height: 24px;
   border-radius: 7px;
-  background: rgba(56,189,248,0.12);
+  background: rgba(var(--sky-rgb),0.12);
   color: var(--sky);
   display: flex;
   align-items: center;
@@ -2475,7 +2600,7 @@ body.scrolled .fav-add-btn { font-size: 15px; }
   flex-shrink: 0;
 }
 
-.dark-mode .song-row-icon { background: var(--sky-glow); color: var(--sky-dark); }
+.dark-mode .song-row-icon { background: rgba(var(--sky-rgb), 0.18); color: var(--sky-dark); }
 
 .song-row-title {
   flex: 1;
@@ -2560,11 +2685,11 @@ body.scrolled .fav-add-btn { font-size: 15px; }
   transition: var(--trans);
 }
 
-#revisadoModalLista li:hover { background: rgba(56,189,248,.07); }
+#revisadoModalLista li:hover { background: rgba(var(--sky-rgb),.07); }
 
 /* Duplicados */
 .dup-title {
-  background: rgba(56,189,248,0.12);
+  background: rgba(var(--sky-rgb),0.12);
   padding: 2px 8px;
   border-radius: 6px;
   margin-right: 4px;
@@ -2653,8 +2778,8 @@ body.scrolled .fav-add-btn { font-size: 15px; }
 }
 
 .dark-mode .tap-tempo-btn { background: var(--gray-50); }
-.tap-tempo-btn:hover { background: rgba(56,189,248,0.16); }
-.dark-mode .tap-tempo-btn:hover { background: var(--sky-glow); }
+.tap-tempo-btn:hover { background: rgba(var(--sky-rgb),0.16); }
+.dark-mode .tap-tempo-btn:hover { background: rgba(var(--sky-rgb), 0.18); }
 
 .tap-tempo-btn.tap-flash {
   background: var(--sky) !important;
@@ -2840,7 +2965,7 @@ body.light-mode .chord-popover { background: #1e293b; color: #fff; }
 }
 
 .dark-mode .bandera-option { background: var(--gray-50); }
-.bandera-option:hover { background: rgba(56,189,248,0.12); }
+.bandera-option:hover { background: rgba(var(--sky-rgb),0.12); }
 
 .bandera-option.active {
   background: var(--sky);
@@ -2905,8 +3030,8 @@ body.light-mode .chord-popover { background: #1e293b; color: #fff; }
 
 .dark-mode .fifths-node { background: var(--gray-50); }
 
-.fifths-node:hover { background: rgba(56,189,248,0.16); }
-.dark-mode .fifths-node:hover { background: var(--sky-glow); }
+.fifths-node:hover { background: rgba(var(--sky-rgb),0.16); }
+.dark-mode .fifths-node:hover { background: rgba(var(--sky-rgb), 0.18); }
 
 .fifths-node.active { background: var(--sky); color: #06202e; }
 
@@ -2982,8 +3107,8 @@ body.light-mode .chord-popover { background: #1e293b; color: #fff; }
   margin-top: 2px;
 }
 
-.note-btn:hover { background: rgba(56,189,248,0.16); }
-.dark-mode .note-btn:hover { background: var(--sky-glow); }
+.note-btn:hover { background: rgba(var(--sky-rgb),0.16); }
+.dark-mode .note-btn:hover { background: rgba(var(--sky-rgb), 0.18); }
 
 .note-btn.active { background: var(--sky); color: #06202e; }
 .note-btn.active small { opacity: 0.85; }
@@ -3066,8 +3191,8 @@ body.light-mode .chord-popover { background: #1e293b; color: #fff; }
 
 .dark-mode .chip { background: var(--gray-50); }
 
-.chip:hover { background: rgba(56,189,248,0.16); }
-.dark-mode .chip:hover { background: var(--sky-glow); }
+.chip:hover { background: rgba(var(--sky-rgb),0.16); }
+.dark-mode .chip:hover { background: rgba(var(--sky-rgb), 0.18); }
 
 .chip.active { background: var(--sky); color: #06202e; }
 
@@ -3103,8 +3228,8 @@ body.light-mode .chord-popover { background: #1e293b; color: #fff; }
   margin-top: 2px;
 }
 
-.tuner-targets button:hover { background: rgba(56,189,248,0.16); }
-.dark-mode .tuner-targets button:hover { background: var(--sky-glow); }
+.tuner-targets button:hover { background: rgba(var(--sky-rgb),0.16); }
+.dark-mode .tuner-targets button:hover { background: rgba(var(--sky-rgb), 0.18); }
 
 .tuner-targets button.active { background: var(--sky); color: #06202e; }
 
@@ -3191,7 +3316,7 @@ body.light-mode .chord-popover { background: #1e293b; color: #fff; }
 
 .metro-bpm-box button:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 14px rgba(56,189,248,.45);
+  box-shadow: 0 4px 14px rgba(var(--sky-rgb),.45);
 }
 
 .metro-bpm-box input {
@@ -3222,7 +3347,7 @@ body.light-mode .chord-popover { background: #1e293b; color: #fff; }
 .metro-bpm-box input:focus {
   border-color: var(--sky) !important;
   outline: none;
-  box-shadow: 0 0 0 4px var(--sky-glow);
+  box-shadow: 0 0 0 4px rgba(var(--sky-rgb), 0.18);
 }
 
 .metro-label { text-align: center; margin-top: 2px; opacity: 0.6; font-size: 12.5px; letter-spacing: 1px; }
@@ -3279,7 +3404,7 @@ body.light-mode .chord-popover { background: #1e293b; color: #fff; }
    negro, ignorando el tema. .light-mode = tema oscuro ("modo nocturno"),
    .dark-mode = tema claro ("modo diurno"), ver comentarios más arriba */
 body.light-mode.projector { background: #000; color: #fff; }
-body.dark-mode.projector  { background: #fff; color: var(--navy); }
+body.dark-mode.projector  { background: var(--proj-tint); color: var(--navy); }
 
 body.projector h1       { font-size: 2.8rem; text-align: center; }
 body.projector #contenido { font-size: 2.8rem; line-height: 1.15; }
