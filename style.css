@@ -729,10 +729,13 @@ a.menu-item {
 
 .accent-picker::-webkit-scrollbar { display: none; }
 
+/* el <button> en sí queda invisible (sin fondo propio): en iOS Safari,
+   appearance:none no siempre alcanza para sacarle del todo el brillo/
+   relieve nativo a un <button> con su propio fondo — así que ese fondo
+   (el círculo bicolor de verdad) se movió a un <span> interno
+   (.accent-swatch-dot), que al no ser un control interactivo nunca recibe
+   ese estilo nativo, pase lo que pase con el botón que lo contiene */
 .accent-swatch {
-  /* sin esto, algunos navegadores le pintan el relieve/degradé nativo de
-     botón por encima del degradé propio (se veía como una esferita con
-     brillo en vez de un círculo plano de dos colores) */
   appearance: none;
   -webkit-appearance: none;
   width: 16px;
@@ -742,9 +745,18 @@ a.menu-item {
   border: none;
   padding: 0;
   cursor: pointer;
+  background: none;
+  transition: var(--trans);
+}
+
+.accent-swatch-dot {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   background: var(--sw);
   box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12);
-  transition: var(--trans);
+  pointer-events: none;
 }
 
 .accent-swatch:hover { transform: scale(1.12); }
