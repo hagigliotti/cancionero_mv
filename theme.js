@@ -76,7 +76,7 @@ function updateThemeMenuText() {
 // El proyector en modo oscuro queda afuera a propósito (ver ese bloque en
 // style.css, con más especificidad): siempre celeste/negro, no acompaña
 // el acento elegido.
-const ACCENTS = ["celeste", "naranja", "rosa", "coral", "violeta", "lila", "turquesa", "verde", "amarillo", "gris"];
+const ACCENTS = ["celeste", "naranja", "rosa", "coral", "violeta", "lila", "turquesa", "verde", "amarillo", "gris", "monocromo"];
 
 function loadAccentColor() {
   applyAccentColor(localStorage.getItem("accentColor") || "celeste", false);
@@ -209,14 +209,15 @@ function updateLogo() {
   // pero esa base ya no es siempre navy — cambia según el color del tema
   // (ver COLOR DE ACENTO en style.css). Por eso el logo también depende
   // del acento elegido: "celeste" sigue usando el azul (matchea con su
-  // propio navy), "gris" usa el negro (matchea con ese fondo casi negro),
-  // y el resto de las paletas usa el blanco — no hay un logo por cada
-  // color, pero el blanco "flota" razonablemente bien sobre cualquier
-  // fondo oscuro, y el difuminado de abajo (.logo-title img, ver CSS)
-  // disimula el borde en vez de cortar en seco
+  // propio navy), "gris"/"monocromo" usan el negro (matchean con esos
+  // fondos casi negros), y el resto de las paletas usa el blanco — no hay
+  // un logo por cada color, pero el blanco "flota" razonablemente bien
+  // sobre cualquier fondo oscuro, y el resplandor del color del tema
+  // alrededor (.logo-title img, ver CSS) hace que el borde se vea
+  // intencional en vez de una costura
   if (document.body.classList.contains("light-mode")) {
     const acento = document.body.getAttribute("data-accent") || "celeste";
-    if (acento === "gris") {
+    if (acento === "gris" || acento === "monocromo") {
       logo.src = "imagenes/Cancionero_black.png";
     } else if (acento === "celeste") {
       logo.src = "imagenes/Cancionero_blue.png";

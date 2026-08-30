@@ -136,6 +136,30 @@ body[data-accent="gris"] {
               linear-gradient(180deg, #131313 0%, #131313 28%, #191919 62%, #212121 100%);
   --proj-tint: rgba(100, 116, 139,0.10);
 }
+/* "gris" (arriba) usa slate — un gris con un dejo azulado. "monocromo"
+   es el pedido de blanco y negro "de verdad": mismos números en R, G y B
+   (sin ningún matiz de color), lo más parecido a blanco/negro/gris puro
+   que se puede llegar sin que el texto se vuelva illegible sobre fondo
+   claro (blanco puro sobre blanco sería invisible) */
+body[data-accent="monocromo"] {
+  --sky: #a3a3a3; --sky-dark: #404040; --sky-rgb: 163, 163, 163;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(163, 163, 163,0.09) 62%, rgba(163, 163, 163,0.20) 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(163, 163, 163,0.16), transparent 65%),
+              linear-gradient(180deg, #121212 0%, #121212 28%, #181818 62%, #202020 100%);
+  --proj-tint: rgba(163, 163, 163,0.10);
+}
+
+/* --sky-dark hace doble función: texto sobre fondo CLARO (necesita ser
+   oscuro) y texto/ícono sobre fondo OSCURO en modo nocturno (necesita ser
+   claro para resaltar). Con un color con matiz (naranja, verde, etc.) el
+   mismo tono sirve para las dos cosas porque el matiz en sí ya "resalta"
+   sobre cualquier fondo — un gris puro no tiene ese recurso, así que acá
+   sí hace falta un valor distinto para cada tema. "modo nocturno" en este
+   proyecto es la clase .light-mode (ver el porqué de ese nombre invertido
+   más arriba, junto a TOKENS) */
+body.light-mode[data-accent="monocromo"] {
+  --sky-dark: #d4d4d4;
+}
 
 /* proyector en modo oscuro ("modo nocturno" = body.light-mode, ver el
    comentario de más abajo sobre esa inversión de nombres): siempre el
@@ -249,13 +273,16 @@ h1 { text-align: center; padding: 10px; margin: 0; }
 
 /* tema nocturno: el logo (Cancionero_blue/black/white.png, ver updateLogo
    en theme.js) trae su propio fondo sólido pintado adentro de la imagen,
-   que ya no coincide exacto con el color de --bg-night de cada paleta —
-   en vez de perseguir el matching pixel a pixel (habría que hacer un logo
-   por color), se difumina el borde de abajo a transparente para que se
-   funda con el degradé de la página en vez de cortar en seco */
+   que ya no coincide exacto con el color de --bg-night de cada paleta.
+   Probé difuminar el borde de abajo a transparente (mask-image) para que
+   se disolviera en el fondo, pero mezclar un blanco/negro sólido con un
+   fondo de otro color a mitad de camino SIEMPRE pasa por un gris turbio
+   de por medio — es la propia óptica de mezclar colores tan distintos, no
+   algo que un difuminado más prolijo pueda evitar. En vez de esconder el
+   borde, se lo transforma en un resplandor a propósito, del color del
+   tema elegido — así se ve intencional en vez de una costura */
 body.light-mode .logo-title img {
-  mask-image: linear-gradient(to bottom, #000 65%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, #000 65%, transparent 100%);
+  filter: drop-shadow(0 6px 18px rgba(var(--sky-rgb), 0.55));
 }
 /*
 .logo-title img:hover {
@@ -656,12 +683,16 @@ a.menu-item {
    paleta, con un aro cuando es la elegida; el color de cada bolita es
    literal (no --sky, que es justo lo que este control cambia). Todos en
    un solo renglón (nowrap): con scroll horizontal de respaldo por si en
-   algún celular muy angosto no entran todos igual */
+   algún celular muy angosto no entran todos igual.
+   padding-top 8px a propósito: overflow-x:auto hace que el navegador
+   trate overflow-y como "auto" también (no "visible"), así que sin
+   padding de sobra el aro de .accent-swatch.active (box-shadow, se sale
+   4px del círculo) quedaba cortado arriba */
 .accent-picker {
   display: flex;
   flex-wrap: nowrap;
   gap: 5px;
-  padding: 2px 8px 12px 22px;
+  padding: 8px 8px 12px 22px;
   overflow-x: auto;
   scrollbar-width: none;
 }
@@ -728,7 +759,12 @@ a.menu-item {
 
 .menu-action-icon { font-size: 15px; line-height: 1; }
 
-.menu-action-btn.share-c   { background: linear-gradient(155deg, var(--sky) 0%, var(--sky-dark) 100%); }
+/* colores fijos a propósito, NO ligados a var(--sky): son 3 marcas
+   (compartir / donar / contacto) que tienen que verse siempre distintas
+   entre sí — si "Compartir" seguía el color del tema elegido, con
+   cualquier paleta anaranjada terminaba pisando el color de "Buy me a
+   coffee" (ambos naranja/amarillo a la vez) */
+.menu-action-btn.share-c   { background: linear-gradient(155deg, #38bdf8 0%, #0ea5e9 100%); }
 .menu-action-btn.donate-c  { background: linear-gradient(155deg, #f59e0b 0%, #d97706 100%); }
 .menu-action-btn.contact-c { background: linear-gradient(155deg, #10b981 0%, #059669 100%); }
 
@@ -752,6 +788,7 @@ a.menu-item {
 .lang-wrapper { position: relative; flex-shrink: 0; }
 
 #langBtn {
+  position: relative;
   width: 42px;
   height: 42px;
   border-radius: 50%;
@@ -778,6 +815,26 @@ a.menu-item {
 #langBtn:hover {
   transform: scale(1.12);
   border-color: var(--sky) !important;
+}
+
+/* triangulito que avisa "esto se puede tocar para cambiar" — mismo
+   círculo del color del tema que ya se usa en otros lados (badges,
+   botones), para que se lea como parte del mismo lenguaje visual de la
+   app en vez de un ícono nuevo que aprender */
+.tap-hint-badge {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--sky);
+  color: #06202e;
+  border: 1.5px solid var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6px;
 }
 
 /* select idioma oculto */
@@ -1415,7 +1472,7 @@ body.dark-mode.projector .teleprompter-bar {
 
 /*Titulo original "titulo_original": [""],*/
 .original-title {
-  color: #38bdf8;
+  color: var(--sky-dark);
   font-weight: 700;
 }
 
@@ -2129,6 +2186,17 @@ details.about-section summary::marker { content: ""; }
 }
 
 .dark-mode .sec-icon { background: rgba(var(--sky-rgb), 0.18); color: var(--sky-dark); }
+
+/* "Idioma de las canciones" ya tiene al lado un <select> nativo (con su
+   propia flechita) para elegir el idioma, pero el ícono 🌐 en sí es un
+   atajo APARTE (abre el selector visual de banderas por país) — sin nada
+   que lo distinga, se veía igual que el resto de los íconos decorativos
+   del menú (🅰️, 🎼, etc.), que no son clickeables. El triangulito avisa
+   que este sí lo es */
+#idiomaFlagIcon {
+  position: relative;
+  cursor: pointer;
+}
 
 .sec-chevron {
   margin-left: auto;

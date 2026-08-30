@@ -164,25 +164,26 @@ function setBanderaIdioma(lang, code) {
 // actualiza el ícono de bandera de la fila Idioma — solo queda "clickeable"
 // si el idioma activo tiene más de un país disponible
 function renderBanderaSelect() {
+  // el span interno #idiomaFlagIconEmoji (no #idiomaFlagIcon entero): ese
+  // ícono también tiene adentro el triangulito ".tap-hint-badge" que avisa
+  // que se puede tocar — escribir sobre el ícono entero lo borraría cada
+  // vez que cambia el idioma
   const icon = document.getElementById("idiomaFlagIcon");
+  const emojiEl = document.getElementById("idiomaFlagIconEmoji");
   const variants = FLAG_VARIANTS[idiomaActual];
 
   if (!variants) {
     // sin variantes de país (ej. italiano, guaraní): igual se muestra SU
     // bandera fija, solo que el ícono no abre ningún selector
-    if (icon) {
-      icon.textContent = getFlagEmoji(idiomaActual);
-      icon.classList.remove("flag-pick");
-    }
+    if (emojiEl) emojiEl.textContent = getFlagEmoji(idiomaActual);
+    if (icon) icon.classList.remove("flag-pick");
     return;
   }
 
   const current = banderaPorIdioma[idiomaActual] || FLAG_VARIANT_DEFAULT[idiomaActual];
 
-  if (icon) {
-    icon.textContent = variants[current]?.emoji || "🌐";
-    icon.classList.add("flag-pick");
-  }
+  if (emojiEl) emojiEl.textContent = variants[current]?.emoji || "🌐";
+  if (icon) icon.classList.add("flag-pick");
 }
 
 // popover con la lista de países del idioma activo (se dispara tocando la
@@ -315,10 +316,14 @@ function setIdioma(lang) {
 // ===============================================================================================
 // ===================== BOTÓN DE BANDERA =======================================================
 function updateLangFlag() {
-  const langBtn = document.getElementById("langBtn");
-  if (!langBtn) return;
+  // el span #langBtnFlag (no el <button> entero): el botón también tiene
+  // adentro el triangulito ".lang-btn-badge" que avisa que se puede tocar
+  // para cambiar — si esto escribiera sobre el botón entero (innerText),
+  // lo borraría cada vez que cambia el idioma
+  const flagEl = document.getElementById("langBtnFlag");
+  if (!flagEl) return;
 
-  langBtn.innerText = getFlagEmoji(idiomaActual);
+  flagEl.innerText = getFlagEmoji(idiomaActual);
 }
 
 
