@@ -1185,7 +1185,7 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
 }
 
 .dark-mode #indice li:hover {
-  background: #f0f9ff;
+  background: rgba(var(--sky-rgb),0.10);
   box-shadow: var(--shadow-md);
 }
 
@@ -1986,7 +1986,7 @@ body.light-mode .toast {
 }
 
 .social-links a:hover {
-  background: #f0f9ff;
+  background: rgba(var(--sky-rgb),0.10);
   color: var(--sky-dark);
 }
 
@@ -2738,7 +2738,7 @@ body.scrolled .fav-add-btn { font-size: 15px; }
 .dark-mode .song-row { background: var(--gray-50); border-color: var(--gray-100); }
 
 .song-row:hover { border-color: var(--sky); background: rgba(var(--sky-rgb),0.06); }
-.dark-mode .song-row:hover { background: #f0f9ff; }
+.dark-mode .song-row:hover { background: rgba(var(--sky-rgb),0.10); }
 
 .song-row-icon {
   width: 24px;
