@@ -76,7 +76,7 @@ function updateThemeMenuText() {
 // El proyector en modo oscuro queda afuera a propósito (ver ese bloque en
 // style.css, con más especificidad): siempre celeste/negro, no acompaña
 // el acento elegido.
-const ACCENTS = ["celeste", "naranja", "rosa", "coral", "violeta", "lila", "turquesa", "verde", "amarillo"];
+const ACCENTS = ["celeste", "naranja", "rosa", "coral", "violeta", "lila", "turquesa", "verde", "amarillo", "gris"];
 
 function loadAccentColor() {
   applyAccentColor(localStorage.getItem("accentColor") || "celeste", false);
@@ -100,6 +100,12 @@ function applyAccentColor(id, guardar) {
   document.querySelectorAll("#accentPicker [data-accent-option]").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.accentOption === id);
   });
+
+  // el logo "azul"/"negro"/"blanco" en modo nocturno depende de qué
+  // acento está elegido (ver updateLogo) — recalcularlo acá también, no
+  // solo al cambiar de tema, para que cambie en el momento al tocar un
+  // círculo de color, no recién la próxima vez que se recargue la página
+  if (typeof updateLogo === "function") updateLogo();
 }
 
 // ===== ALERT ============================================================================
@@ -198,13 +204,31 @@ function updateLogo() {
     return;
   }
 
-  // modo nocturno (fondo navy)
+  // modo nocturno: el logo "azul" (Cancionero_blue.png) tiene ese fondo
+  // pintado adentro de la imagen a propósito para el navy de --bg-night,
+  // pero esa base ya no es siempre navy — cambia según el color del tema
+  // (ver COLOR DE ACENTO en style.css). Por eso el logo también depende
+  // del acento elegido: "celeste" sigue usando el azul (matchea con su
+  // propio navy), "gris" usa el negro (matchea con ese fondo casi negro),
+  // y el resto de las paletas usa el blanco — no hay un logo por cada
+  // color, pero el blanco "flota" razonablemente bien sobre cualquier
+  // fondo oscuro, y el difuminado de abajo (.logo-title img, ver CSS)
+  // disimula el borde en vez de cortar en seco
   if (document.body.classList.contains("light-mode")) {
-    logo.src = "imagenes/Cancionero_blue.png";
+    const acento = document.body.getAttribute("data-accent") || "celeste";
+    if (acento === "gris") {
+      logo.src = "imagenes/Cancionero_black.png";
+    } else if (acento === "celeste") {
+      logo.src = "imagenes/Cancionero_blue.png";
+    } else {
+      logo.src = "imagenes/Cancionero_white.png";
+    }
     return;
   }
 
-  // modo diurno (fondo claro)
+  // modo diurno (fondo claro): el logo blanco ya matchea siempre, porque
+  // --bg-day también arranca en blanco puro arriba (donde vive el logo)
+  // sin importar el acento elegido — no hace falta ningún ajuste acá
   logo.src = "imagenes/Cancionero_white.png";
 }
 

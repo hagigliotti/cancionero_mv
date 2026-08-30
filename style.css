@@ -55,7 +55,7 @@
 /* ============================================================
    COLOR DE ACENTO (elegible en el menú, ver #accentPicker)
    ============================================================
-   Redefine --sky/--sky-dark/--sky-rgb (de ahí sale la mayoría del celeste:
+   Redefine --sky/--sky-dark/--sky-rgb (de ahí sale la mayoría del color:
    botones, glow, sombras — todo lo que ya usaba rgba(var(--sky-rgb),...))
    y también --bg-day/--bg-night/--proj-tint enteros, con el mismo color
    pisado a mano adentro: una variable CSS que adentro usa var(--otra) se
@@ -63,65 +63,78 @@
    DECLARÓ, no en el punto donde se USA — si --bg-day siguiera solo en
    TOKENS con var(--sky-rgb) adentro, quedaría siempre celeste sin
    importar el acento elegido acá, por eso hay que repetirlo completo en
-   cada bloque. "celeste" no necesita bloque propio: es el valor de TOKENS.
+   cada bloque. IMPORTANTE: --bg-night (fondo del tema oscuro/nocturno,
+   clase .light-mode — ver el porqué de ese nombre invertido más abajo) ya
+   NO es siempre el navy azulado de TOKENS — cada paleta tiene su propia
+   base oscura de fondo (un negro apenas teñido del mismo tono, ej. marrón
+   muy oscuro para Naranja) para que no quede "azul con brillo naranja"
+   quemando la vista; el navy azulado queda reservado solo para Celeste.
+   "celeste" no necesita bloque propio: es el valor de TOKENS.
    No aplica en el proyector en modo oscuro a propósito — se queda
    siempre celeste/negro (ver body.light-mode.projector, más abajo, con
    más especificidad que estos selectores por tener 2 clases en el body). */
 body[data-accent="naranja"] {
   --sky: #fb923c; --sky-dark: #f97316; --sky-rgb: 251, 146, 60;
   --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(251, 146, 60,0.09) 62%, rgba(251, 146, 60,0.20) 100%);
-  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(251, 146, 60,0.14), transparent 65%),
-              linear-gradient(180deg, #0d1e30 0%, #0d1e30 28%, #122033 62%, #1a2e45 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(251, 146, 60,0.16), transparent 65%),
+              linear-gradient(180deg, #1f150d 0%, #1f150d 28%, #241a10 62%, #2e2313 100%);
   --proj-tint: rgba(251, 146, 60,0.10);
 }
 body[data-accent="rosa"] {
   --sky: #f472b6; --sky-dark: #ec4899; --sky-rgb: 244, 114, 182;
   --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(244, 114, 182,0.09) 62%, rgba(244, 114, 182,0.20) 100%);
-  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(244, 114, 182,0.14), transparent 65%),
-              linear-gradient(180deg, #0d1e30 0%, #0d1e30 28%, #122033 62%, #1a2e45 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(244, 114, 182,0.16), transparent 65%),
+              linear-gradient(180deg, #1f0f18 0%, #1f0f18 28%, #24131c 62%, #2e1823 100%);
   --proj-tint: rgba(244, 114, 182,0.10);
+}
+body[data-accent="coral"] {
+  --sky: #ff8a75; --sky-dark: #f2624a; --sky-rgb: 255, 138, 117;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(255, 138, 117,0.09) 62%, rgba(255, 138, 117,0.20) 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(255, 138, 117,0.16), transparent 65%),
+              linear-gradient(180deg, #1f120d 0%, #1f120d 28%, #241610 62%, #2e1c13 100%);
+  --proj-tint: rgba(255, 138, 117,0.10);
 }
 body[data-accent="violeta"] {
   --sky: #a78bfa; --sky-dark: #8b5cf6; --sky-rgb: 167, 139, 250;
   --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(167, 139, 250,0.09) 62%, rgba(167, 139, 250,0.20) 100%);
-  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(167, 139, 250,0.14), transparent 65%),
-              linear-gradient(180deg, #0d1e30 0%, #0d1e30 28%, #122033 62%, #1a2e45 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(167, 139, 250,0.16), transparent 65%),
+              linear-gradient(180deg, #150f28 0%, #150f28 28%, #1a1330 62%, #221a3d 100%);
   --proj-tint: rgba(167, 139, 250,0.10);
 }
 body[data-accent="lila"] {
   --sky: #e0a3e8; --sky-dark: #c65fd4; --sky-rgb: 224, 163, 232;
   --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(224, 163, 232,0.09) 62%, rgba(224, 163, 232,0.20) 100%);
-  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(224, 163, 232,0.14), transparent 65%),
-              linear-gradient(180deg, #0d1e30 0%, #0d1e30 28%, #122033 62%, #1a2e45 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(224, 163, 232,0.16), transparent 65%),
+              linear-gradient(180deg, #1c1024 0%, #1c1024 28%, #21142b 62%, #2a1935 100%);
   --proj-tint: rgba(224, 163, 232,0.10);
+}
+body[data-accent="turquesa"] {
+  --sky: #2dd4bf; --sky-dark: #14b8a6; --sky-rgb: 45, 212, 191;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(45, 212, 191,0.09) 62%, rgba(45, 212, 191,0.20) 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(45, 212, 191,0.16), transparent 65%),
+              linear-gradient(180deg, #0d1f1d 0%, #0d1f1d 28%, #112423 62%, #162e2c 100%);
+  --proj-tint: rgba(45, 212, 191,0.10);
 }
 body[data-accent="verde"] {
   --sky: #4ade80; --sky-dark: #22c55e; --sky-rgb: 74, 222, 128;
   --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(74, 222, 128,0.09) 62%, rgba(74, 222, 128,0.20) 100%);
-  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(74, 222, 128,0.14), transparent 65%),
-              linear-gradient(180deg, #0d1e30 0%, #0d1e30 28%, #122033 62%, #1a2e45 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(74, 222, 128,0.16), transparent 65%),
+              linear-gradient(180deg, #0d1f16 0%, #0d1f16 28%, #11241a 62%, #162e21 100%);
   --proj-tint: rgba(74, 222, 128,0.10);
 }
 body[data-accent="amarillo"] {
   --sky: #fbbf24; --sky-dark: #f59e0b; --sky-rgb: 251, 191, 36;
   --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(251, 191, 36,0.09) 62%, rgba(251, 191, 36,0.20) 100%);
-  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(251, 191, 36,0.14), transparent 65%),
-              linear-gradient(180deg, #0d1e30 0%, #0d1e30 28%, #122033 62%, #1a2e45 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(251, 191, 36,0.16), transparent 65%),
+              linear-gradient(180deg, #1f1a0d 0%, #1f1a0d 28%, #241f10 62%, #2e2813 100%);
   --proj-tint: rgba(251, 191, 36,0.10);
 }
-body[data-accent="turquesa"] {
-  --sky: #2dd4bf; --sky-dark: #14b8a6; --sky-rgb: 45, 212, 191;
-  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(45, 212, 191,0.09) 62%, rgba(45, 212, 191,0.20) 100%);
-  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(45, 212, 191,0.14), transparent 65%),
-              linear-gradient(180deg, #0d1e30 0%, #0d1e30 28%, #122033 62%, #1a2e45 100%);
-  --proj-tint: rgba(45, 212, 191,0.10);
-}
-body[data-accent="coral"] {
-  --sky: #ff8a75; --sky-dark: #f2624a; --sky-rgb: 255, 138, 117;
-  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(255, 138, 117,0.09) 62%, rgba(255, 138, 117,0.20) 100%);
-  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(255, 138, 117,0.14), transparent 65%),
-              linear-gradient(180deg, #0d1e30 0%, #0d1e30 28%, #122033 62%, #1a2e45 100%);
-  --proj-tint: rgba(255, 138, 117,0.10);
+body[data-accent="gris"] {
+  --sky: #64748b; --sky-dark: #334155; --sky-rgb: 100, 116, 139;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(100, 116, 139,0.09) 62%, rgba(100, 116, 139,0.20) 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(100, 116, 139,0.16), transparent 65%),
+              linear-gradient(180deg, #131313 0%, #131313 28%, #191919 62%, #212121 100%);
+  --proj-tint: rgba(100, 116, 139,0.10);
 }
 
 /* proyector en modo oscuro ("modo nocturno" = body.light-mode, ver el
@@ -232,6 +245,17 @@ h1 { text-align: center; padding: 10px; margin: 0; }
   border-radius: 14px;
   /*filter: drop-shadow(0 4px 16px rgba(var(--sky-rgb), 0.25));*/
   transition: filter 0.3s ease;
+}
+
+/* tema nocturno: el logo (Cancionero_blue/black/white.png, ver updateLogo
+   en theme.js) trae su propio fondo sólido pintado adentro de la imagen,
+   que ya no coincide exacto con el color de --bg-night de cada paleta —
+   en vez de perseguir el matching pixel a pixel (habría que hacer un logo
+   por color), se difumina el borde de abajo a transparente para que se
+   funda con el degradé de la página en vez de cortar en seco */
+body.light-mode .logo-title img {
+  mask-image: linear-gradient(to bottom, #000 65%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 65%, transparent 100%);
 }
 /*
 .logo-title img:hover {
@@ -630,17 +654,24 @@ a.menu-item {
 
 /* selector de color de acento (menú > Ajustes) — un circulito lleno por
    paleta, con un aro cuando es la elegida; el color de cada bolita es
-   literal (no --sky, que es justo lo que este control cambia) */
+   literal (no --sky, que es justo lo que este control cambia). Todos en
+   un solo renglón (nowrap): con scroll horizontal de respaldo por si en
+   algún celular muy angosto no entran todos igual */
 .accent-picker {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 2px 8px 12px 40px;
+  flex-wrap: nowrap;
+  gap: 5px;
+  padding: 2px 8px 12px 22px;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
+.accent-picker::-webkit-scrollbar { display: none; }
+
 .accent-swatch {
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
   border-radius: 50%;
   border: none;
   padding: 0;
