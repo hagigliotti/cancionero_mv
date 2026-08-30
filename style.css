@@ -26,6 +26,15 @@
      solo estuviera acá en :root con var(--sky-rgb) adentro, quedaría
      siempre celeste sin importar qué acento se elija */
   --proj-tint: rgba(var(--sky-rgb), 0.10);
+  /* fondo del menú lateral y de los modales en tema nocturno (--modal-bg,
+     degradé; --modal-bg-solid, plano — este último para el aro del
+     circulito elegido en el selector de color, que necesita un color
+     sólido, no un degradé). Igual que con --bg-day/night, se REDEFINEN
+     enteros por paleta más abajo (mismo motivo: var(--otra-variable)
+     adentro de una variable se resuelve donde se DECLARA, no donde se
+     usa) */
+  --modal-bg:       linear-gradient(165deg, #101d2e 0%, #16283e 100%);
+  --modal-bg-solid: #16283e;
   --white:     #ffffff;
   --gray-50:   #f8fafc;
   --gray-100:  #e2e8f0;
@@ -79,6 +88,8 @@ body[data-accent="naranja"] {
   --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(251, 146, 60,0.16), transparent 65%),
               linear-gradient(180deg, #1f150d 0%, #1f150d 28%, #241a10 62%, #2e2313 100%);
   --proj-tint: rgba(251, 146, 60,0.10);
+  --modal-bg:       linear-gradient(165deg, #1f150d 0%, #2e2313 100%);
+  --modal-bg-solid: #1f150d;
 }
 body[data-accent="rosa"] {
   --sky: #f472b6; --sky-dark: #ec4899; --sky-rgb: 244, 114, 182;
@@ -86,6 +97,8 @@ body[data-accent="rosa"] {
   --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(244, 114, 182,0.16), transparent 65%),
               linear-gradient(180deg, #1f0f18 0%, #1f0f18 28%, #24131c 62%, #2e1823 100%);
   --proj-tint: rgba(244, 114, 182,0.10);
+  --modal-bg:       linear-gradient(165deg, #1f0f18 0%, #2e1823 100%);
+  --modal-bg-solid: #1f0f18;
 }
 body[data-accent="coral"] {
   --sky: #ff8a75; --sky-dark: #f2624a; --sky-rgb: 255, 138, 117;
@@ -93,6 +106,8 @@ body[data-accent="coral"] {
   --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(255, 138, 117,0.16), transparent 65%),
               linear-gradient(180deg, #1f120d 0%, #1f120d 28%, #241610 62%, #2e1c13 100%);
   --proj-tint: rgba(255, 138, 117,0.10);
+  --modal-bg:       linear-gradient(165deg, #1f120d 0%, #2e1c13 100%);
+  --modal-bg-solid: #1f120d;
 }
 body[data-accent="violeta"] {
   --sky: #a78bfa; --sky-dark: #8b5cf6; --sky-rgb: 167, 139, 250;
@@ -100,6 +115,8 @@ body[data-accent="violeta"] {
   --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(167, 139, 250,0.16), transparent 65%),
               linear-gradient(180deg, #150f28 0%, #150f28 28%, #1a1330 62%, #221a3d 100%);
   --proj-tint: rgba(167, 139, 250,0.10);
+  --modal-bg:       linear-gradient(165deg, #150f28 0%, #221a3d 100%);
+  --modal-bg-solid: #150f28;
 }
 body[data-accent="lila"] {
   --sky: #e0a3e8; --sky-dark: #c65fd4; --sky-rgb: 224, 163, 232;
@@ -107,6 +124,8 @@ body[data-accent="lila"] {
   --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(224, 163, 232,0.16), transparent 65%),
               linear-gradient(180deg, #1c1024 0%, #1c1024 28%, #21142b 62%, #2a1935 100%);
   --proj-tint: rgba(224, 163, 232,0.10);
+  --modal-bg:       linear-gradient(165deg, #1c1024 0%, #2a1935 100%);
+  --modal-bg-solid: #1c1024;
 }
 body[data-accent="turquesa"] {
   --sky: #2dd4bf; --sky-dark: #14b8a6; --sky-rgb: 45, 212, 191;
@@ -114,6 +133,8 @@ body[data-accent="turquesa"] {
   --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(45, 212, 191,0.16), transparent 65%),
               linear-gradient(180deg, #0d1f1d 0%, #0d1f1d 28%, #112423 62%, #162e2c 100%);
   --proj-tint: rgba(45, 212, 191,0.10);
+  --modal-bg:       linear-gradient(165deg, #0d1f1d 0%, #162e2c 100%);
+  --modal-bg-solid: #0d1f1d;
 }
 body[data-accent="verde"] {
   --sky: #4ade80; --sky-dark: #22c55e; --sky-rgb: 74, 222, 128;
@@ -121,6 +142,8 @@ body[data-accent="verde"] {
   --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(74, 222, 128,0.16), transparent 65%),
               linear-gradient(180deg, #0d1f16 0%, #0d1f16 28%, #11241a 62%, #162e21 100%);
   --proj-tint: rgba(74, 222, 128,0.10);
+  --modal-bg:       linear-gradient(165deg, #0d1f16 0%, #162e21 100%);
+  --modal-bg-solid: #0d1f16;
 }
 body[data-accent="amarillo"] {
   --sky: #fbbf24; --sky-dark: #f59e0b; --sky-rgb: 251, 191, 36;
@@ -128,6 +151,8 @@ body[data-accent="amarillo"] {
   --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(251, 191, 36,0.16), transparent 65%),
               linear-gradient(180deg, #1f1a0d 0%, #1f1a0d 28%, #241f10 62%, #2e2813 100%);
   --proj-tint: rgba(251, 191, 36,0.10);
+  --modal-bg:       linear-gradient(165deg, #1f1a0d 0%, #2e2813 100%);
+  --modal-bg-solid: #1f1a0d;
 }
 body[data-accent="gris"] {
   --sky: #64748b; --sky-dark: #334155; --sky-rgb: 100, 116, 139;
@@ -135,6 +160,8 @@ body[data-accent="gris"] {
   --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(100, 116, 139,0.16), transparent 65%),
               linear-gradient(180deg, #131313 0%, #131313 28%, #191919 62%, #212121 100%);
   --proj-tint: rgba(100, 116, 139,0.10);
+  --modal-bg:       linear-gradient(165deg, #131313 0%, #212121 100%);
+  --modal-bg-solid: #131313;
 }
 /* "gris" (arriba) usa slate — un gris con un dejo azulado. "monocromo"
    es el pedido de blanco y negro "de verdad": mismos números en R, G y B
@@ -147,6 +174,8 @@ body[data-accent="monocromo"] {
   --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(163, 163, 163,0.16), transparent 65%),
               linear-gradient(180deg, #121212 0%, #121212 28%, #181818 62%, #202020 100%);
   --proj-tint: rgba(163, 163, 163,0.10);
+  --modal-bg:       linear-gradient(165deg, #121212 0%, #202020 100%);
+  --modal-bg-solid: #121212;
 }
 
 /* --sky-dark hace doble función: texto sobre fondo CLARO (necesita ser
@@ -469,7 +498,7 @@ body.modal-open {
   width: min(300px, 85vw);
   display: flex;
   flex-direction: column;
-  background: linear-gradient(165deg, #101d2e 0%, #16283e 100%);
+  background: var(--modal-bg);
   color: #e8f4fd;
   border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
   box-shadow: var(--shadow-lg);
@@ -715,10 +744,11 @@ a.menu-item {
 
 .accent-swatch:hover { transform: scale(1.12); }
 
-/* #16283e: mismo tono que el fondo del menú (.dropdown-menu), que es
-   siempre oscuro sin importar el tema — así el aro queda prolijo */
+/* --modal-bg-solid: mismo tono que el fondo del menú (.dropdown-menu,
+   ahora varía según la paleta elegida — ver COLOR DE ACENTO más arriba),
+   así el aro queda prolijo sea cual sea el color */
 .accent-swatch.active {
-  box-shadow: 0 0 0 2px #16283e, 0 0 0 4px var(--sw);
+  box-shadow: 0 0 0 2px var(--modal-bg-solid), 0 0 0 4px var(--sw);
 }
 
 .menu-contact {
@@ -1957,7 +1987,7 @@ body.light-mode .toast {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: linear-gradient(165deg, #101d2e 0%, #16283e 100%);
+  background: var(--modal-bg);
   color: #e8f4fd;
   border: 1px solid rgba(255,255,255,0.08);
   animation: modalIn 0.22s ease;
@@ -2198,6 +2228,12 @@ details.about-section summary::marker { content: ""; }
   position: relative;
   cursor: pointer;
 }
+
+/* italiano y guaraní no tienen variantes de país (ver FLAG_VARIANTS en
+   lenguage.js) — ".flag-pick" es justo la clase que renderBanderaSelect()
+   saca cuando no hay nada para elegir ahí, así que el triangulito
+   tampoco corresponde en ese caso */
+#idiomaFlagIcon:not(.flag-pick) .tap-hint-badge { display: none; }
 
 .sec-chevron {
   margin-left: auto;
