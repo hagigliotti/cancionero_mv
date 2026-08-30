@@ -730,6 +730,11 @@ a.menu-item {
 .accent-picker::-webkit-scrollbar { display: none; }
 
 .accent-swatch {
+  /* sin esto, algunos navegadores le pintan el relieve/degradé nativo de
+     botón por encima del degradé propio (se veía como una esferita con
+     brillo en vez de un círculo plano de dos colores) */
+  appearance: none;
+  -webkit-appearance: none;
   width: 16px;
   height: 16px;
   flex-shrink: 0;

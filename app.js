@@ -445,16 +445,16 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=145",
-    "modals/revised.html?v=145",
-    "modals/people.html?v=145",
-    "modals/valores.html?v=145",
-    "modals/share.html?v=145",
-    "modals/contacto.html?v=145",
-    "modals/afinometro.html?v=145",
-    "modals/biblioteca.html?v=145",
-    "modals/listas.html?v=145",
-    "modals/notepad.html?v=145"
+    "modals/info.html?v=146",
+    "modals/revised.html?v=146",
+    "modals/people.html?v=146",
+    "modals/valores.html?v=146",
+    "modals/share.html?v=146",
+    "modals/contacto.html?v=146",
+    "modals/afinometro.html?v=146",
+    "modals/biblioteca.html?v=146",
+    "modals/listas.html?v=146",
+    "modals/notepad.html?v=146"
   ];
 
   for (const path of modales) {
