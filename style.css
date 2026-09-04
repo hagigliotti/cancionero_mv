@@ -778,10 +778,14 @@ a.menu-item {
 
 /* fila de 3 botones (Compartir / Donaciones / Contacto) en el menú, y los
    mismos botones reusados apilados (full width) en el pie del modal de
-   Información de la app — ver .about-contact-actions */
+   Información de la app — ver .about-contact-actions.
+   Estilo "chip": tarjeta neutra (sigue el tema claro/oscuro) con el ícono
+   en una insignia circular de color — así los 3 colores fijos identifican
+   cada acción sin pintar el botón entero, más prolijo y con más aire que
+   la versión anterior (franja de color sólida, texto muy chico). */
 .menu-actions-row {
   display: flex;
-  gap: 8px;
+  gap: 10px;
 }
 
 .menu-action-btn {
@@ -790,12 +794,13 @@ a.menu-item {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3px;
-  padding: 7px 6px;
-  border: none;
+  gap: 5px;
+  padding: 8px 6px 7px;
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--radius-md);
-  color: #fff;
-  font-size: 10.5px;
+  background: rgba(255,255,255,0.04);
+  color: inherit;
+  font-size: 11.5px;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
@@ -803,18 +808,38 @@ a.menu-item {
   transition: var(--trans);
 }
 
-.menu-action-btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
+.dark-mode .menu-action-btn { background: var(--gray-50); border-color: var(--gray-100); }
 
-.menu-action-icon { font-size: 15px; line-height: 1; }
+.menu-action-btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,0.2);
+  box-shadow: var(--shadow-sm);
+}
+
+.dark-mode .menu-action-btn:hover { border-color: var(--gray-200); }
+
+.menu-action-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 13px;
+  line-height: 1;
+  color: #fff;
+}
 
 /* colores fijos a propósito, NO ligados a var(--sky): son 3 marcas
    (compartir / donar / contacto) que tienen que verse siempre distintas
    entre sí — si "Compartir" seguía el color del tema elegido, con
    cualquier paleta anaranjada terminaba pisando el color de "Buy me a
-   coffee" (ambos naranja/amarillo a la vez) */
-.menu-action-btn.share-c   { background: linear-gradient(155deg, #38bdf8 0%, #0ea5e9 100%); }
-.menu-action-btn.donate-c  { background: linear-gradient(155deg, #f59e0b 0%, #d97706 100%); }
-.menu-action-btn.contact-c { background: linear-gradient(155deg, #10b981 0%, #059669 100%); }
+   coffee" (ambos naranja/amarillo a la vez). Ahora el color va solo en la
+   insignia del ícono, no en todo el botón. */
+.menu-action-btn.share-c   .menu-action-icon { background: linear-gradient(155deg, #38bdf8 0%, #0ea5e9 100%); }
+.menu-action-btn.donate-c  .menu-action-icon { background: linear-gradient(155deg, #f59e0b 0%, #d97706 100%); }
+.menu-action-btn.contact-c .menu-action-icon { background: linear-gradient(155deg, #10b981 0%, #059669 100%); }
 
 /* versión apilada (una debajo de otra, ancho completo) para el pie del
    modal de Información de la app — ver .about-contact en info.html */
@@ -826,9 +851,12 @@ a.menu-item {
 
 .about-contact-actions .menu-action-btn {
   flex-direction: row;
-  padding: 9px;
-  font-size: 12px;
+  gap: 10px;
+  padding: 9px 14px;
+  font-size: 12.5px;
 }
+
+.about-contact-actions .menu-action-icon { width: 30px; height: 30px; font-size: 14px; }
 
 /* ============================================================
    BOTÓN IDIOMA (bandera redonda)
