@@ -17,6 +17,17 @@
     "coritosPara": "cancionero"
   },
   {
+    "id": "innario",
+    "archivo": "innario_it.json",
+    "nombre": "Innario Avventista",
+    "icono": "",
+    "_comentario2": "\"icono\": \"🎵\"",
+    "numeroHimno": true,
+    "idiomaFijo": true,
+    "coritosPara": "cancionero",
+    "codigo": "29686085"
+  },
+  {
     "id": "campamento",
     "archivo": "campamento.json",
     "nombre": "Campamento",
