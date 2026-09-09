@@ -1,6 +1,6 @@
 {
-  "name": "Cancionero MV",
-  "short_name": "Cancionero MV",
+  "name": "Cancionero App",
+  "short_name": "Cancionero App",
   "description": "Cancionero para Voluntarios en el servicio misionero de la Iglesia Adventista del Séptimo Día.",
   "start_url": ".",
   "scope": ".",

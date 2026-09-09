@@ -682,7 +682,7 @@ function updateAppTitle() {
   const libro = getLibroDef(libroActual);
 
   // SOLO título navegador
-  document.title = libro ? `${libro.icono ? libro.icono + " " : ""}${libro.nombre}` : "🎶 Cancionero MV";
+  document.title = libro ? `${libro.icono ? libro.icono + " " : ""}${libro.nombre}` : "🎶 Cancionero App";
 }
 
 // ===================== DETECCION AUTOMATICA DE LIBRO =====================
@@ -2051,8 +2051,8 @@ function cerrarContactoModal() {
 // (en iPhone/Mac incluye AirDrop; en Android, Nearby Share + todas las apps)
 async function shareNative() {
   const shareData = {
-    title: "Cancionero MV",
-    text: "Mirá el Cancionero MV — cantos y acordes para el servicio misionero.",
+    title: "Cancionero App",
+    text: "Mirá el Cancionero App — cantos y acordes para el servicio misionero.",
     url: document.getElementById("shareLink")?.value || "http://bit.ly/cancionero_mv"
   };
 

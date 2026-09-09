@@ -1,4 +1,4 @@
-# Cancionero MV
+# Cancionero App
 
 Cancionero digital para Voluntarios en el servicio misionero de la Iglesia Adventista del Séptimo Día: cancionero, himnario adventista y cantos de campamento en un solo lugar, con acordes, tonalidad, tablatura y todo lo necesario para tocar o dirigir una canción.
 

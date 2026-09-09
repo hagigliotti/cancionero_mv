@@ -1,5 +1,5 @@
 // ===============================================================================================
-// SERVICE WORKER — Cancionero MV
+// SERVICE WORKER — Cancionero App
 // Permite que la app abra e funcione sin conexión: precachea el "app shell"
 // (HTML/CSS/JS/íconos) y guarda los datos (canciones, himnario, etc.) con
 // estrategia "red primero, caché de respaldo" para tener siempre lo más

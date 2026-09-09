@@ -1,6 +1,6 @@
 # Política de Seguridad
 
-Gracias por ayudar a mejorar Cancionero MV.
+Gracias por ayudar a mejorar Cancionero App.
 
 ## Reporte de vulnerabilidades de seguridad
 
@@ -27,4 +27,4 @@ Antes de crear un nuevo Issue, verifica si el problema ya ha sido reportado por 
 
 ## Alcance
 
-Cancionero MV es un proyecto comunitario y sin fines de lucro orientado a facilitar el acceso a letras, acordes e información musical en distintos idiomas. Agradecemos cualquier colaboración que contribuya a mejorar la estabilidad, seguridad y experiencia de uso de la aplicación.
+Cancionero App es un proyecto comunitario y sin fines de lucro orientado a facilitar el acceso a letras, acordes e información musical en distintos idiomas. Agradecemos cualquier colaboración que contribuya a mejorar la estabilidad, seguridad y experiencia de uso de la aplicación.
