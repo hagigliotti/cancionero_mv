@@ -10043,7 +10043,7 @@
     }
   },
   {
-    "id": "inno-198",
+    "id": "inno-199",
     "titulo_original": ["Lasciate i fanciulli"],
   "corito": "No",
   "autor": ["Desconocido"],
@@ -10059,7 +10059,7 @@
     "it": {
       "titulo": ["Lasciate i fanciulli"],
       "titulo2": [""],
-      "numero_himno": "",
+      "numero_himno": "199",
       "audio_url": "",
       "traductor": [""],
       "presentacion": [""],
@@ -20960,7 +20960,7 @@
     }
   },
   {
-    "id": "inno-247",
+    "id": "inno-427",
     "titulo_original": ["Sette volte amen"],
     "corito": "No",
     "autor": ["Desconocido"],
@@ -20976,7 +20976,7 @@
       "it": {
         "titulo": ["Sette volte amen"],
         "titulo2": [""],
-        "numero_himno": "247",
+        "numero_himno": "427",
         "audio_url": "",
         "traductor": [""],
         "presentacion": ["canciones/himnario_it/247.pps", "canciones/himnario_it/247.ppsx"],
