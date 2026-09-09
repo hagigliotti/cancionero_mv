@@ -25,7 +25,7 @@
     "numeroHimno": true,
     "idiomaFijo": true,
     "coritosPara": "cancionero",
-    "oculto": false,
+    "oculto": true,
     "codigo": "29686085"
   },
   {

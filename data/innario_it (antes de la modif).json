@@ -14,7 +14,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 96:1-4", "Salmo 98:1-4"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Adoración"],
     "idiomas": {
       "it": {
@@ -63,7 +63,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 96:1-4", "Salmo 150:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Adoración"],
     "idiomas": {
       "it": {
@@ -107,7 +107,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 96:1-4", "Salmo 150:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Adoración"],
     "idiomas": {
       "it": {
@@ -157,7 +157,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 96:1-4", "Salmo 150:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Gratitud"],
     "idiomas": {
       "it": {
@@ -210,7 +210,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 96:1-4", "Salmo 150:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza"],
     "idiomas": {
       "it": {
@@ -260,7 +260,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 96:1-4", "Salmo 150:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Trinidad"],
     "idiomas": {
       "it": {
@@ -319,7 +319,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 96:1-4", "Salmo 150:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Adoración"],
     "idiomas": {
       "it": {
@@ -368,7 +368,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 96:1-4", "Salmo 150:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Trinidad"],
     "idiomas": {
       "it": {
@@ -424,7 +424,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 96:1-4", "Salmo 150:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Gratitud"],
     "idiomas": {
       "it": {
@@ -485,7 +485,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 96:1-4", "Salmo 150:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza"],
     "idiomas": {
       "it": {
@@ -534,7 +534,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 96:1-4", "Salmo 98:1-4"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza"],
     "idiomas": {
       "it": {
@@ -593,7 +593,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 96:1-4", "Salmo 150:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Creación"],
     "idiomas": {
       "it": {
@@ -658,7 +658,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 96:1-4", "Salmo 150:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Adoración"],
     "idiomas": {
       "it": {
@@ -705,7 +705,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 96:1-4", "Salmo 150:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Adoración"],
     "idiomas": {
       "it": {
@@ -764,7 +764,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 96:1-4", "Salmo 150:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza"],
     "idiomas": {
       "it": {
@@ -814,7 +814,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 96:1-4", "Salmo 150:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza"],
     "idiomas": {
       "it": {
@@ -861,7 +861,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 96:1-4", "Salmo 150:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Trinidad"],
     "idiomas": {
       "it": {
@@ -917,7 +917,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 96:1-4", "Salmo 150:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Gratitud", "Trinidad"],
     "idiomas": {
       "it": {
@@ -970,7 +970,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 96:1-4", "Salmo 150:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Petición"],
     "idiomas": {
       "it": {
@@ -1019,7 +1019,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 96:1-4", "Salmo 150:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Adoración", "Trinidad"],
     "idiomas": {
       "it": {
@@ -1088,7 +1088,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Genesi 1:1-31", "Salmo 19:1-7"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Consuelo"],
     "idiomas": {
       "it": {
@@ -1149,7 +1149,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Genesi 1:1-31", "Salmo 19:1-7"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Esperanza"],
     "idiomas": {
       "it": {
@@ -1202,7 +1202,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Genesi 1:1-31", "Salmo 19:1-7"],
+    "referencia_biblica": [""],
     "tags": ["Creación", "Adoración"],
     "idiomas": {
       "it": {
@@ -1251,7 +1251,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Genesi 1:1-31", "Salmo 19:1-7"],
+    "referencia_biblica": [""],
     "tags": ["Creación", "Gratitud"],
     "idiomas": {
       "it": {
@@ -1298,7 +1298,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Genesi 1:1-31", "Salmo 19:1-7"],
+    "referencia_biblica": [""],
     "tags": ["Gratitud", "Alabanza"],
     "idiomas": {
       "it": {
@@ -1348,7 +1348,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Genesi 1:1-31"],
+    "referencia_biblica": [""],
     "tags": ["Creación", "Alabanza"],
     "idiomas": {
       "it": {
@@ -1395,7 +1395,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Genesi 1:1-31", "Salmo 19:1-7"],
+    "referencia_biblica": [""],
     "tags": ["Adoración", "Oración"],
     "idiomas": {
       "it": {
@@ -1454,7 +1454,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Genesi 1:1-31", "Salmo 19:1-7"],
+    "referencia_biblica": [""],
     "tags": ["Creación", "Alabanza"],
     "idiomas": {
       "it": {
@@ -1515,7 +1515,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Genesi 1:1-31", "Salmo 19:1-7"],
+    "referencia_biblica": [""],
     "tags": ["Adoración", "Presencia de Dios"],
     "idiomas": {
       "it": {
@@ -1564,7 +1564,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Genesi 1:1-31"],
+    "referencia_biblica": [""],
     "tags": ["Creación", "Redención"],
     "idiomas": {
       "it": {
@@ -1625,7 +1625,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Genesi 1:1-31", "Salmo 19:1-7"],
+    "referencia_biblica": [""],
     "tags": ["Gratitud", "Alabanza"],
     "idiomas": {
       "it": {
@@ -1672,7 +1672,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Genesi 1:1-31", "Salmo 19:1-7"],
+    "referencia_biblica": [""],
     "tags": ["Creación", "Redención"],
     "idiomas": {
       "it": {
@@ -1800,7 +1800,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Genesi 1:1-31", "Salmo 19:1-7"],
+    "referencia_biblica": [""],
     "tags": ["Esperanza", "Alabanza"],
     "idiomas": {
       "it": {
@@ -1849,7 +1849,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Genesi 1:1-31", "Apocalisse 4:11"],
+    "referencia_biblica": [""],
     "tags": ["Paz", "Consuelo"],
     "idiomas": {
       "it": {
@@ -1913,7 +1913,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 6:28-30", "Salmo 19:1-7"],
+    "referencia_biblica": [""],
     "tags": ["Creación", "Alabanza"],
     "idiomas": {
       "it": {
@@ -1954,7 +1954,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Romani 8:38-39"],
+    "referencia_biblica": [""],
     "tags": ["Amor de Dios", "Oración"],
     "idiomas": {
       "it": {
@@ -2025,7 +2025,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Romani 8:38-39"],
+    "referencia_biblica": [""],
     "tags": ["Salvación", "Gracia"],
     "idiomas": {
       "it": {
@@ -2084,7 +2084,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Romani 8:38-39"],
+    "referencia_biblica": [""],
     "tags": ["Guía", "Esperanza"],
     "idiomas": {
       "it": {
@@ -2143,7 +2143,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Romani 8:38-39"],
+    "referencia_biblica": [""],
     "tags": ["Guía", "Perdón"],
     "idiomas": {
       "it": {
@@ -2202,7 +2202,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Romani 8:38-39"],
+    "referencia_biblica": [""],
     "tags": ["Amor de Dios", "Redención", "Gratitud"],
     "idiomas": {
       "it": {
@@ -2258,7 +2258,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 11:25-26"],
+    "referencia_biblica": [""],
     "tags": ["Creación", "Esperanza", "Fe"],
     "idiomas": {
       "it": {
@@ -2306,7 +2306,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Romani 8:38-39"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Consagración", "Guía"],
     "idiomas": {
       "it": {
@@ -2359,7 +2359,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 119:105", "2 Timoteo 3:16-17"],
+    "referencia_biblica": [""],
     "tags": ["Palabra de Dios", "Biblia", "Guía"],
     "idiomas": {
       "it": {
@@ -2428,7 +2428,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Romani 8:38-39"],
+    "referencia_biblica": [""],
     "tags": ["Evangelio", "Salvación", "Palabra de Dios"],
     "idiomas": {
       "it": {
@@ -2529,7 +2529,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Jesús", "Alabanza", "Amor de Dios"],
     "idiomas": {
       "it": {
@@ -2588,7 +2588,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Devoción", "Oración", "Amor a Cristo"],
     "idiomas": {
       "it": {
@@ -2635,7 +2635,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Amor de Dios", "Consuelo", "Fidelidad"],
     "idiomas": {
       "it": {
@@ -2685,7 +2685,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 8:12"],
+    "referencia_biblica": [""],
     "tags": ["Luz", "Guía", "Jesús"],
     "idiomas": {
       "it": {
@@ -2734,7 +2734,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Amor a Cristo", "Redención", "Consagración"],
     "idiomas": {
       "it": {
@@ -2781,7 +2781,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Consagración", "Santidad", "Amor"],
     "idiomas": {
       "it": {
@@ -2840,7 +2840,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 43:2", "Salmo 46:1-4"],
+    "referencia_biblica": [""],
     "tags": ["Sacrificio", "Amor de Dios", "Redención"],
     "idiomas": {
       "it": {
@@ -2899,7 +2899,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Palabra de Dios", "Promesas", "Esperanza"],
     "idiomas": {
       "it": {
@@ -2944,7 +2944,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Luz", "Testimonio", "Amor de Dios"],
     "idiomas": {
       "it": {
@@ -3003,7 +3003,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Amor a Dios", "Amor Fraternal", "Vida Cristiana"],
     "idiomas": {
       "it": {
@@ -3052,7 +3052,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Amor de Dios", "Consuelo", "Esperanza"],
     "idiomas": {
       "it": {
@@ -3095,7 +3095,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Amor de Dios", "Gratitud", "Cruz"],
     "idiomas": {
       "it": {
@@ -3142,7 +3142,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Gratitud", "Salvação"],
     "idiomas": {
       "it": {
@@ -3191,7 +3191,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Amor de Dios", "Consuelo", "Llamado"],
     "idiomas": {
       "it": {
@@ -3238,7 +3238,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Luz", "Evangelio", "Santidad"],
     "idiomas": {
       "it": {
@@ -3280,7 +3280,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Testimonio", "Luz", "Salvación"],
     "idiomas": {
       "it": {
@@ -3329,7 +3329,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Sacrificio", "Amor de Dios", "Redención"],
     "idiomas": {
       "it": {
@@ -3378,7 +3378,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Consuelo", "Paz", "Gozo"],
     "idiomas": {
       "it": {
@@ -3437,7 +3437,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Amor de Dios", "Gracia", "Sacrificio"],
     "idiomas": {
       "it": {
@@ -3484,7 +3484,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Luz", "Paz", "Alabanza"],
     "idiomas": {
       "it": {
@@ -3543,7 +3543,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 15:13-15"],
+    "referencia_biblica": [""],
     "tags": ["Amistad", "Perdón", "Guía"],
     "idiomas": {
       "it": {
@@ -3596,7 +3596,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Devoción", "Agua Viviente", "Amor"],
     "idiomas": {
       "it": {
@@ -3705,7 +3705,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Resurrección", "Servicio", "Testimonio"],
     "idiomas": {
       "it": {
@@ -3773,7 +3773,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Consagración", "Fe", "Renovación"],
     "idiomas": {
       "it": {
@@ -3822,7 +3822,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Consagración", "Santidad"],
     "idiomas": {
       "it": {
@@ -3871,7 +3871,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Milicia Cristiana", "Fe", "Evangelización"],
     "idiomas": {
       "it": {
@@ -3931,7 +3931,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Comunión", "Fidelidad", "Gozo"],
     "idiomas": {
       "it": {
@@ -3990,7 +3990,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Consagración", "Servicio", "Ofrenda"],
     "idiomas": {
       "it": {
@@ -4047,7 +4047,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Consagración", "Luz", "Esperanza"],
     "idiomas": {
       "it": {
@@ -4096,7 +4096,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Devoción", "Servicio"],
     "idiomas": {
       "it": {
@@ -4145,7 +4145,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Consagración", "Alabanza", "Juventud"],
     "idiomas": {
       "it": {
@@ -4194,7 +4194,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Peregrinaje", "Cruz", "Evangelio"],
     "idiomas": {
       "it": {
@@ -4248,7 +4248,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Llamado", "Entrega", "Consagración"],
     "idiomas": {
       "it": {
@@ -4297,7 +4297,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 1:29", "Isaia 53:7"],
+    "referencia_biblica": [""],
     "tags": ["Perdón", "Oración", "Segunda Venida"],
     "idiomas": {
       "it": {
@@ -4346,7 +4346,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Llamado", "Consagración", "Redención"],
     "idiomas": {
       "it": {
@@ -4395,7 +4395,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Geremia 18:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Consagración", "Consuelo", "Servicio"],
     "idiomas": {
       "it": {
@@ -4448,7 +4448,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Cruz", "Redención", "Paz"],
     "idiomas": {
       "it": {
@@ -4503,7 +4503,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Gratitud", "Alabanza", "Consuelo"],
     "idiomas": {
       "it": {
@@ -4560,7 +4560,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Perdón", "Servicio", "Fortaleza"],
     "idiomas": {
       "it": {
@@ -4609,7 +4609,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Consagración", "Ofrenda", "Verdad"],
     "idiomas": {
       "it": {
@@ -4656,7 +4656,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 6:33"],
+    "referencia_biblica": [""],
     "tags": ["Reino de Dios", "Confianza", "Salvación"],
     "idiomas": {
       "it": {
@@ -4709,7 +4709,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Llamado", "Evangelización", "Salvación"],
     "idiomas": {
       "it": {
@@ -4762,7 +4762,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Obediencia", "Gozos y Paz", "Fidelidad"],
     "idiomas": {
       "it": {
@@ -4817,7 +4817,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Llamado", "Perdón", "Arrepentimiento"],
     "idiomas": {
       "it": {
@@ -4867,7 +4867,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Llamado", "Salvación", "Fe"],
     "idiomas": {
       "it": {
@@ -4916,7 +4916,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Gracia", "Amor", "Salvación"],
     "idiomas": {
       "it": {
@@ -4975,7 +4975,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Llamado", "Consuelo", "Gozos y Paz"],
     "idiomas": {
       "it": {
@@ -5022,7 +5022,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Confianza", "Paz", "Luz"],
     "idiomas": {
       "it": {
@@ -5061,7 +5061,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Seguimiento", "Paz", "Fortaleza"],
     "idiomas": {
       "it": {
@@ -5114,7 +5114,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 36:9", "Giovanni 4:13-14"],
+    "referencia_biblica": [""],
     "tags": ["Salvación", "Consagración", "Redención"],
     "idiomas": {
       "it": {
@@ -5155,7 +5155,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Llamado", "Perdón", "Paz"],
     "idiomas": {
       "it": {
@@ -5214,7 +5214,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Llamado", "Perdón", "Salvación"],
     "idiomas": {
       "it": {
@@ -5270,7 +5270,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Resurrección", "Llamado", "Consagración"],
     "idiomas": {
       "it": {
@@ -5331,7 +5331,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Llamado", "Perdón", "Salvación"],
     "idiomas": {
       "it": {
@@ -5380,7 +5380,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Adoración", "Salmo"],
     "idiomas": {
       "it": {
@@ -5423,7 +5423,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Gratitud", "Redención"],
     "idiomas": {
       "it": {
@@ -5479,7 +5479,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Aleluya", "Agradecimiento"],
     "idiomas": {
       "it": {
@@ -5526,7 +5526,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Aleluya", "Adoración"],
     "idiomas": {
       "it": {
@@ -5575,7 +5575,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Paz", "Protección"],
     "idiomas": {
       "it": {
@@ -5620,7 +5620,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Esperanza", "Salud y Salvación", "Aleluya"],
     "idiomas": {
       "it": {
@@ -5667,7 +5667,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Consuelo", "Espíritu Santo", "Paz"],
     "idiomas": {
       "it": {
@@ -5714,7 +5714,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Encarnación", "Sacrificio", "Intercesión"],
     "idiomas": {
       "it": {
@@ -5761,7 +5761,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Creación", "Luz", "Salvación"],
     "idiomas": {
       "it": {
@@ -5810,7 +5810,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Amor de Dios", "Redención", "Resurrección"],
     "idiomas": {
       "it": {
@@ -5851,7 +5851,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Evangelio", "Vida de Jesús", "Amor de Cristo"],
     "idiomas": {
       "it": {
@@ -5904,7 +5904,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Nacimiento", "Navidad", "Adoración"],
     "idiomas": {
       "it": {
@@ -5960,7 +5960,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Nacimiento", "Vida de Jesús", "Resurrección"],
     "idiomas": {
       "it": {
@@ -6021,7 +6021,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Evangelio", "Jesús", "Segunda Venida"],
     "idiomas": {
       "it": {
@@ -6068,7 +6068,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Natividad", "Sacrificio"],
     "idiomas": {
       "it": {
@@ -6115,7 +6115,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Soberanía", "Salvación", "Intercesión"],
     "idiomas": {
       "it": {
@@ -6159,7 +6159,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Iglesia", "Roca", "Oración"],
     "idiomas": {
       "it": {
@@ -6206,7 +6206,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Nacimiento", "Gozo"],
     "idiomas": {
       "it": {
@@ -6249,7 +6249,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Navidad", "Belén", "Paz"],
     "idiomas": {
       "it": {
@@ -6302,7 +6302,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Nacimiento", "Navidad", "Alabanza"],
     "idiomas": {
       "it": {
@@ -6351,7 +6351,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Navidad", "Nacimiento", "Paz"],
     "idiomas": {
       "it": {
@@ -6404,7 +6404,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Nacimiento", "Alabanza", "Paz"],
     "idiomas": {
       "it": {
@@ -6448,7 +6448,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Gozo", "Nacimiento", "Salvación"],
     "idiomas": {
       "it": {
@@ -6489,7 +6489,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Reyes Magos", "Navidad", "Adoración"],
     "idiomas": {
       "it": {
@@ -6536,7 +6536,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Reyes Magos", "Navidad", "Estrella de Belén"],
     "idiomas": {
       "it": {
@@ -6589,7 +6589,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Ángeles", "Nacimiento", "Paz"],
     "idiomas": {
       "it": {
@@ -6630,7 +6630,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Nacimiento", "Pastores", "Reyes Magos"],
     "idiomas": {
       "it": {
@@ -6683,7 +6683,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Navidad", "Alabanza", "Amor de Dios"],
     "idiomas": {
       "it": {
@@ -6744,7 +6744,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Nacimiento", "Ángeles", "Adoración"],
     "idiomas": {
       "it": {
@@ -6794,7 +6794,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Evangelización", "Navidad", "Testimonio"],
     "idiomas": {
       "it": {
@@ -6847,7 +6847,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Navidad", "Paz"],
     "idiomas": {
       "it": {
@@ -6888,7 +6888,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Nacimiento", "Navidad", "Entrega"],
     "idiomas": {
       "it": {
@@ -6935,7 +6935,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Gozo", "Navidad", "Alabanza"],
     "idiomas": {
       "it": {
@@ -6982,7 +6982,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Nacimiento", "Navidad", "Pastores"],
     "idiomas": {
       "it": {
@@ -7029,7 +7029,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Navidad", "Nacimiento", "Adoración"],
     "idiomas": {
       "it": {
@@ -7076,7 +7076,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Adoración", "Navidad", "Belén"],
     "idiomas": {
       "it": {
@@ -7115,7 +7115,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Ángeles", "Navidad", "Alabanza"],
     "idiomas": {
       "it": {
@@ -7164,7 +7164,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Gozo", "Speranza", "Salvación"],
     "idiomas": {
       "it": {
@@ -7211,7 +7211,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 2:1-20", "Matteo 1:18-23"],
+    "referencia_biblica": [""],
     "tags": ["Nacimiento", "Esperanza", "Perdón"],
     "idiomas": {
       "it": {
@@ -7252,7 +7252,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["1 Corinzi 15:3-4", "Matteo 28:5-7"],
+    "referencia_biblica": [""],
     "tags": ["Resurrección", "Pascua", "Alabanza"],
     "idiomas": {
       "it": {
@@ -7299,7 +7299,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["1 Corinzi 15:3-4", "Matteo 28:5-7"],
+    "referencia_biblica": [""],
     "tags": ["Victoria", "Resurrección", "Alabanza"],
     "idiomas": {
       "it": {
@@ -7352,7 +7352,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["1 Corinzi 15:3-4", "Matteo 28:5-7"],
+    "referencia_biblica": [""],
     "tags": ["Resurrección", "Victoria", "Testimonio"],
     "idiomas": {
       "it": {
@@ -7399,7 +7399,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["1 Corinzi 15:3-4", "Matteo 28:5-7"],
+    "referencia_biblica": [""],
     "tags": ["Resurrección", "Pascua", "Victoria"],
     "idiomas": {
       "it": {
@@ -7440,7 +7440,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["1 Corinzi 15:3-4", "Matteo 28:5-7"],
+    "referencia_biblica": [""],
     "tags": ["Resurrección", "Ascensión", "Alabanza"],
     "idiomas": {
       "it": {
@@ -7481,7 +7481,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["1 Corinzi 15:3-4", "Matteo 28:5-7"],
+    "referencia_biblica": [""],
     "tags": ["Ascensión", "Segunda Venida", "Evangelización"],
     "idiomas": {
       "it": {
@@ -7526,7 +7526,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:1-3", "1 Tessalonicesi 4:16-17"],
+    "referencia_biblica": [""],
     "tags": ["Segunda Venida", "Esperanza", "Eternidad"],
     "idiomas": {
       "it": {
@@ -7585,7 +7585,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:1-3", "1 Tessalonicesi 4:16-17"],
+    "referencia_biblica": [""],
     "tags": ["Segunda Venida", "Esperanza", "Preparación"],
     "idiomas": {
       "it": {
@@ -7656,7 +7656,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:1-3", "1 Tessalonicesi 4:16-17"],
+    "referencia_biblica": [""],
     "tags": ["Eternidad", "Gozo", "Esperanza"],
     "idiomas": {
       "it": {
@@ -7703,7 +7703,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:1-3", "1 Tessalonicesi 4:16-17"],
+    "referencia_biblica": [""],
     "tags": ["Anhelo Celestial", "Esperanza", "Segunda Venida"],
     "idiomas": {
       "it": {
@@ -7750,7 +7750,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:1-3", "1 Tessalonicesi 4:16-17"],
+    "referencia_biblica": [""],
     "tags": ["Segunda Venida", "Gozo", "Esperanza"],
     "idiomas": {
       "it": {
@@ -7809,7 +7809,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:1-3", "1 Tessalonicesi 4:16-17"],
+    "referencia_biblica": [""],
     "tags": ["Segunda Venida", "Esperanza", "Salvación"],
     "idiomas": {
       "it": {
@@ -7922,7 +7922,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:1-3", "1 Tessalonicesi 4:16-17"],
+    "referencia_biblica": [""],
     "tags": ["Segunda Venida", "Gozo", "Esperanza"],
     "idiomas": {
       "it": {
@@ -7978,7 +7978,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:1-3", "1 Tessalonicesi 4:16-17"],
+    "referencia_biblica": [""],
     "tags": ["Segunda Venida", "Esperanza", "Llamado"],
     "idiomas": {
       "it": {
@@ -8047,7 +8047,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:1-3", "1 Tessalonicesi 4:16-17"],
+    "referencia_biblica": [""],
     "tags": ["Victoria", "Reinado", "Eternidad"],
     "idiomas": {
       "it": {
@@ -8088,7 +8088,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:1-3", "1 Tessalonicesi 4:16-17"],
+    "referencia_biblica": [""],
     "tags": ["Segunda Venida", "Gozo", "Verdad"],
     "idiomas": {
       "it": {
@@ -8132,7 +8132,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:1-3", "1 Tessalonicesi 4:16-17"],
+    "referencia_biblica": [""],
     "tags": ["Promesa", "Segunda Venida", "Eternidad"],
     "idiomas": {
       "it": {
@@ -8194,7 +8194,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:1-3", "1 Tessalonicesi 4:16-17"],
+    "referencia_biblica": [""],
     "tags": ["Segunda Venida", "Alabanza", "Eternidad"],
     "idiomas": {
       "it": {
@@ -8253,7 +8253,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:1-3", "1 Tessalonicesi 4:16-17"],
+    "referencia_biblica": [""],
     "tags": ["Segunda Venida", "Evangelización", "Esperanza"],
     "idiomas": {
       "it": {
@@ -8302,7 +8302,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:1-3", "1 Tessalonicesi 4:16-17"],
+    "referencia_biblica": [""],
     "tags": ["Segunda Venida", "Gozo", "Alabanza"],
     "idiomas": {
       "it": {
@@ -8343,7 +8343,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:1-3", "1 Tessalonicesi 4:16-17"],
+    "referencia_biblica": [""],
     "tags": ["Segunda Venida", "Esperanza", "Promesa"],
     "idiomas": {
       "it": {
@@ -8396,7 +8396,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:1-3", "1 Tessalonicesi 4:16-17"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Adoración", "Gratitud"],
     "idiomas": {
       "it": {
@@ -8443,7 +8443,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:1-3", "1 Tessalonicesi 4:16-17"],
+    "referencia_biblica": [""],
     "tags": ["Esperanza", "Segunda Venida", "Fe"],
     "idiomas": {
       "it": {
@@ -8485,7 +8485,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "1 Pietro 2:24"],
+    "referencia_biblica": [""],
     "tags": ["Segunda Venida", "Gozo", "Eternidad"],
     "idiomas": {
       "it": {
@@ -8538,7 +8538,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "1 Pietro 2:24"],
+    "referencia_biblica": [""],
     "tags": ["Crucifixión", "Sacrificio", "Amor"],
     "idiomas": {
       "it": {
@@ -8591,7 +8591,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "1 Pietro 2:24"],
+    "referencia_biblica": [""],
     "tags": ["Crucifixión", "Resurrección", "Paz"],
     "idiomas": {
       "it": {
@@ -8650,7 +8650,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "1 Pietro 2:24"],
+    "referencia_biblica": [""],
     "tags": ["Sacrificio", "Amor", "Guía"],
     "idiomas": {
       "it": {
@@ -8691,7 +8691,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "1 Pietro 2:24"],
+    "referencia_biblica": [""],
     "tags": ["Amor Divine", "Salvación", "Gratitud"],
     "idiomas": {
       "it": {
@@ -8741,7 +8741,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "1 Pietro 2:24"],
+    "referencia_biblica": [""],
     "tags": ["Crucifixión", "Redención", "Perdón"],
     "idiomas": {
       "it": {
@@ -8794,7 +8794,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "1 Pietro 2:24"],
+    "referencia_biblica": [""],
     "tags": ["Crucifixión", "Redención", "Perdón"],
     "idiomas": {
       "it": {
@@ -8847,7 +8847,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 1:29", "Isaia 53:7"],
+    "referencia_biblica": [""],
     "tags": ["Sacrificio", "Redención", "Crucifixión"],
     "idiomas": {
       "it": {
@@ -8900,7 +8900,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 53:4-6", "1 Pietro 2:24"],
+    "referencia_biblica": [""],
     "tags": ["Crucifixión", "Amor", "Salvación"],
     "idiomas": {
       "it": {
@@ -8947,7 +8947,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:16-17", "Atti 2:1-4"],
+    "referencia_biblica": [""],
     "tags": ["Espíritu Santo", "Consolador", "Fe"],
     "idiomas": {
       "it": {
@@ -8986,7 +8986,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:16-17", "Atti 2:1-4"],
+    "referencia_biblica": [""],
     "tags": ["Petición", "Espíritu Santo", "Bendición"],
     "idiomas": {
       "it": {
@@ -9029,7 +9029,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:16-17", "Atti 2:1-4"],
+    "referencia_biblica": [""],
     "tags": ["Guía", "Espíritu Santo", "Victoria"],
     "idiomas": {
       "it": {
@@ -9073,7 +9073,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:16-17", "Atti 2:1-4"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Gracia", "Espíritu Santo"],
     "idiomas": {
       "it": {
@@ -9120,7 +9120,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:16-17", "Atti 2:1-4"],
+    "referencia_biblica": [""],
     "tags": ["Anhelo", "Gracia", "Espíritu Santo"],
     "idiomas": {
       "it": {
@@ -9167,7 +9167,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:16-17", "Atti 2:1-4"],
+    "referencia_biblica": [""],
     "tags": ["Espíritu Santo", "Petición", "Fortaleza"],
     "idiomas": {
       "it": {
@@ -9201,7 +9201,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:16-17", "Atti 2:1-4"],
+    "referencia_biblica": [""],
     "tags": ["Paz", "Espíritu Santo", "Testimonio"],
     "idiomas": {
       "it": {
@@ -9248,7 +9248,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:16-17", "Atti 2:1-4"],
+    "referencia_biblica": [""],
     "tags": ["Espíritu Santo", "Luz", "Consolador"],
     "idiomas": {
       "it": {
@@ -9292,7 +9292,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:16-17", "Atti 2:1-4"],
+    "referencia_biblica": [""],
     "tags": ["Espíritu Santo", "Consolador", "Fortaleza"],
     "idiomas": {
       "it": {
@@ -9339,7 +9339,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:16-17", "Atti 2:1-4"],
+    "referencia_biblica": [""],
     "tags": ["Espíritu Santo", "Fe", "Consolador"],
     "idiomas": {
       "it": {
@@ -9389,7 +9389,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:16-17", "Atti 2:1-4"],
+    "referencia_biblica": [""],
     "tags": ["Espíritu Santo", "Gracia", "Adoración"],
     "idiomas": {
       "it": {
@@ -9439,7 +9439,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:16-17", "Atti 2:1-4"],
+    "referencia_biblica": [""],
     "tags": ["Espíritu Santo", "Consagración", "Renovación"],
     "idiomas": {
       "it": {
@@ -9480,7 +9480,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:16-17", "Atti 2:1-4"],
+    "referencia_biblica": [""],
     "tags": ["Espíritu Santo", "Consolador", "Iglesia"],
     "idiomas": {
       "it": {
@@ -9524,7 +9524,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:16-17", "Atti 2:1-4"],
+    "referencia_biblica": [""],
     "tags": ["Espíritu Santo", "Consagración", "Entrega"],
     "idiomas": {
       "it": {
@@ -9617,7 +9617,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Luz", "Testimonio", "Amor fraternal"],
     "idiomas": {
       "it": {
@@ -9714,7 +9714,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Unidad", "Gracia"],
     "idiomas": {
       "it": {
@@ -9763,7 +9763,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Jesús", "Gozo", "Amor"],
     "idiomas": {
       "it": {
@@ -9804,7 +9804,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Bienvenida", "Comunión", "Fraternidad"],
     "idiomas": {
       "it": {
@@ -9851,7 +9851,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Genesi 15:5"],
+    "referencia_biblica": [""],
     "tags": ["Creación", "Niños", "Alabanza"],
     "idiomas": {
       "it": {
@@ -9907,7 +9907,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Pastor", "Protección", "Infantil"],
     "idiomas": {
       "it": {
@@ -9954,7 +9954,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Salvación", "Pastor", "Parábola"],
     "idiomas": {
       "it": {
@@ -10001,7 +10001,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Inocencia", "Consagración"],
     "idiomas": {
       "it": {
@@ -10054,7 +10054,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Pastor", "Guía", "Cuidado"],
     "idiomas": {
       "it": {
@@ -10103,7 +10103,7 @@
   "tempo_bpm": [""],
   "compas": [""],
   "ritmo": ["Inno"],
-  "referencia_biblica": ["Marco 10:13-16"],
+  "referencia_biblica": [""],
   "tags": ["Niños", "Padres", "Jesús"],
   "idiomas": {
     "it": {
@@ -10150,7 +10150,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 3:16"],
+    "referencia_biblica": [""],
     "tags": ["Amor", "Biblia", "Perdón", "Protección"],
     "idiomas": {
       "it": {
@@ -10198,7 +10198,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Niños", "Jesús", "Evangelio", "Luz"],
     "idiomas": {
       "it": {
@@ -10244,7 +10244,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Creación", "Protección", "Niños", "Gozo"],
     "idiomas": {
       "it": {
@@ -10297,7 +10297,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Frutos", "Eternidad", "Fe", "Testimonio"],
     "idiomas": {
       "it": {
@@ -10350,7 +10350,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Trabajo", "Sega", "Fidelidad", "Servicio"],
     "idiomas": {
       "it": {
@@ -10436,7 +10436,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Servicio", "Amor", "Consagración", "Fidelidad"],
     "idiomas": {
       "it": {
@@ -10483,7 +10483,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Llamado", "Seguimiento", "Evangelización", "Gracia"],
     "idiomas": {
       "it": {
@@ -10536,7 +10536,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Servicio", "Sacrificio", "Obediencia", "Consagración"],
     "idiomas": {
       "it": {
@@ -10595,7 +10595,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Servicio", "Compasión", "Obediencia"],
     "idiomas": {
       "it": {
@@ -10648,7 +10648,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Santidad", "Amor", "Paz", "Corazón"],
     "idiomas": {
       "it": {
@@ -10705,7 +10705,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Evangelio", "Espíritu Santo", "Salvación"],
     "idiomas": {
       "it": {
@@ -10758,7 +10758,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Evangelización", "Testimonio", "Salvación", "Fidelidad"],
     "idiomas": {
       "it": {
@@ -10807,7 +10807,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Embajadores", "Evangelio", "Colportor", "Misión"],
     "idiomas": {
       "it": {
@@ -10884,7 +10884,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Testimonio", "Perdón", "Esperanza", "Amor"],
     "idiomas": {
       "it": {
@@ -10933,7 +10933,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Misión", "Obreros", "Protección", "Sega"],
     "idiomas": {
       "it": {
@@ -10992,7 +10992,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Juventud", "Servicio", "Consagración", "Fidelidad"],
     "idiomas": {
       "it": {
@@ -11051,7 +11051,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Llamado", "Misiones", "Evangelización", "Servicio"],
     "idiomas": {
       "it": {
@@ -11128,7 +11128,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Compasión", "Amor", "Servicio", "Sufrimiento"],
     "idiomas": {
       "it": {
@@ -11175,7 +11175,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Trabajo", "Testimonio", "Gracia"],
     "idiomas": {
       "it": {
@@ -11219,7 +11219,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Llamado", "Consagración", "Misión", "Fidelidad"],
     "idiomas": {
       "it": {
@@ -11284,7 +11284,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Marco 10:13-16", "Matteo 28:19-20"],
+    "referencia_biblica": [""],
     "tags": ["Peregrino", "Cielo", "Esperanza", "Evangelio"],
     "idiomas": {
       "it": {
@@ -11349,7 +11349,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 28:19-20", "Marco 16:15"],
+    "referencia_biblica": [""],
     "tags": ["Luz", "Testimonio", "Fidelidad", "Evangelismo"],
     "idiomas": {
       "it": {
@@ -11396,7 +11396,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 28:19-20", "Marco 16:15"],
+    "referencia_biblica": [""],
     "tags": ["Esperanza", "Evangelio", "Consolación", "Salvación"],
     "idiomas": {
       "it": {
@@ -11506,7 +11506,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 14:1-3", "1 Tessalonicesi 4:16-17"],
+    "referencia_biblica": [""],
     "tags": ["Segunda Venida", "Misionero", "Oración", "Esperanza"],
     "idiomas": {
       "it": {
@@ -11565,7 +11565,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 28:19-20", "Marco 16:15"],
+    "referencia_biblica": [""],
     "tags": ["Testimonio", "Alabanza", "Paz", "Redención"],
     "idiomas": {
       "it": {
@@ -11618,7 +11618,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 28:19-20", "Marco 16:15"],
+    "referencia_biblica": [""],
     "tags": ["Cruz", "Libertad", "Evangelización", "Paz"],
     "idiomas": {
       "it": {
@@ -11669,7 +11669,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 28:19-20", "Marco 16:15"],
+    "referencia_biblica": [""],
     "tags": ["Misión", "Luz", "Confianza", "Testimonio"],
     "idiomas": {
       "it": {
@@ -11792,7 +11792,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Esodo 20:8-11", "Isaia 58:13-14"],
+    "referencia_biblica": [""],
     "tags": ["Sábado", "Reposó", "Adoración", "Consagración"],
     "idiomas": {
       "it": {
@@ -11851,7 +11851,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Esodo 20:8-11", "Isaia 58:13-14"],
+    "referencia_biblica": [""],
     "tags": ["Sábado", "Reposó", "Alabanza", "Iglesia"],
     "idiomas": {
       "it": {
@@ -11913,7 +11913,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Esodo 20:8-11", "Isaia 58:13-14"],
+    "referencia_biblica": [""],
     "tags": ["Sábado", "Paz", "Gracia", "Reposo"],
     "idiomas": {
       "it": {
@@ -11966,7 +11966,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Esodo 20:8-11", "Isaia 58:13-14"],
+    "referencia_biblica": [""],
     "tags": ["Adoración", "Sábado", "Gloria", "Alabanza"],
     "idiomas": {
       "it": {
@@ -12015,7 +12015,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Esodo 20:8-11", "Isaia 58:13-14"],
+    "referencia_biblica": [""],
     "tags": ["Sábado", "Creación", "Paz", "Reposo"],
     "idiomas": {
       "it": {
@@ -12065,7 +12065,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Esodo 20:8-11", "Isaia 58:13-14"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Sábado", "Noche", "Reposo"],
     "idiomas": {
       "it": {
@@ -12106,7 +12106,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Esodo 20:8-11", "Isaia 58:13-14"],
+    "referencia_biblica": [""],
     "tags": ["Sábado", "Reposo", "Paz", "Alabanza"],
     "idiomas": {
       "it": {
@@ -12165,7 +12165,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Esodo 20:8-11", "Isaia 58:13-14"],
+    "referencia_biblica": [""],
     "tags": ["Sábado", "Reposo", "Adoración", "Gratitud"],
     "idiomas": {
       "it": {
@@ -12218,7 +12218,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Esodo 20:8-11", "Isaia 58:13-14"],
+    "referencia_biblica": [""],
     "tags": ["Sábado", "Escuela Sabática", "Adoración", "Estudio"],
     "idiomas": {
       "it": {
@@ -12267,7 +12267,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Esodo 20:8-11", "Isaia 58:13-14"],
+    "referencia_biblica": [""],
     "tags": ["Sábado", "Oración", "Espíritu Santo", "Iglesia"],
     "idiomas": {
       "it": {
@@ -12320,7 +12320,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Esodo 20:8-11", "Isaia 58:13-14"],
+    "referencia_biblica": [""],
     "tags": ["Escuela Sabática", "Instrucción", "Protección", "Fidelidad"],
     "idiomas": {
       "it": {
@@ -12423,7 +12423,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Esodo 20:8-11", "Isaia 58:13-14"],
+    "referencia_biblica": [""],
     "tags": ["Escuela Sabática", "Gratitud", "Enseñanza", "Niños"],
     "idiomas": {
       "it": {
@@ -12492,7 +12492,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Esodo 20:8-11", "Isaia 58:13-14"],
+    "referencia_biblica": [""],
     "tags": ["Luz", "Sábado", "Gracia", "Reposo", "Perdón"],
     "idiomas": {
       "it": {
@@ -12531,7 +12531,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Esodo 20:8-11", "Isaia 58:13-14"],
+    "referencia_biblica": [""],
     "tags": ["Sábado", "Creación", "Adoración", "Reposo"],
     "idiomas": {
       "it": {
@@ -12581,7 +12581,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Esodo 20:8-11", "Isaia 58:13-14"],
+    "referencia_biblica": [""],
     "tags": ["Adoración", "Creación", "Salvación", "Paz"],
     "idiomas": {
       "it": {
@@ -12622,7 +12622,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 18:2", "1 Corinzi 10:4"],
+    "referencia_biblica": [""],
     "tags": ["Refugio", "Perdón", "Cruz", "Salvación"],
     "idiomas": {
       "it": {
@@ -12675,7 +12675,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Fe", "Consuelo", "Salvación", "Esperanza"],
     "idiomas": {
       "it": {
@@ -12828,7 +12828,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Perdón", "Luz", "Sostén"],
     "idiomas": {
       "it": {
@@ -12940,7 +12940,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Paz", "Presencia", "Luz", "Consuelo"],
     "idiomas": {
       "it": {
@@ -12995,7 +12995,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 11:28-30", "Giovanni 14:27"],
+    "referencia_biblica": [""],
     "tags": ["Consuelo", "Paz", "Esperanza", "Voz de Dios"],
     "idiomas": {
       "it": {
@@ -13048,7 +13048,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 11:28-30", "Giovanni 14:27"],
+    "referencia_biblica": [""],
     "tags": ["Socorro", "Paz", "Cruz", "Salvación"],
     "idiomas": {
       "it": {
@@ -13089,7 +13089,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 11:28-30", "Giovanni 14:27"],
+    "referencia_biblica": [""],
     "tags": ["Fe", "Oración", "Restauración", "Celo Santo"],
     "idiomas": {
       "it": {
@@ -13183,7 +13183,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 11:28-30", "Giovanni 14:27"],
+    "referencia_biblica": [""],
     "tags": ["Guía", "Verdad", "Fortaleza", "Luz"],
     "idiomas": {
       "it": {
@@ -13227,7 +13227,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 11:28-30", "Giovanni 14:27"],
+    "referencia_biblica": [""],
     "tags": ["Fe", "Santidad", "Paz", "Protección"],
     "idiomas": {
       "it": {
@@ -13319,7 +13319,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 11:28-30", "Giovanni 14:27"],
+    "referencia_biblica": [""],
     "tags": ["Consuelo", "Llamado", "Entrega", "Paz"],
     "idiomas": {
       "it": {
@@ -13473,7 +13473,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 11:28-30", "Giovanni 14:27"],
+    "referencia_biblica": [""],
     "tags": ["Consuelo", "Paz", "Esperanza", "Fe"],
     "idiomas": {
       "it": {
@@ -13517,7 +13517,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 11:28-30", "Giovanni 14:27"],
+    "referencia_biblica": [""],
     "tags": ["Confianza", "Paz", "Consuelo", "Amor"],
     "idiomas": {
       "it": {
@@ -13605,7 +13605,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 11:28-30", "Giovanni 14:27"],
+    "referencia_biblica": [""],
     "tags": ["Peregrinaje", "Compañía", "Gozo", "Cielo"],
     "idiomas": {
       "it": {
@@ -13646,7 +13646,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 11:28-30", "Giovanni 14:27"],
+    "referencia_biblica": [""],
     "tags": ["Perseverancia", "Cruz", "Animo", "Venida de Cristo"],
     "idiomas": {
       "it": {
@@ -13707,7 +13707,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 11:28-30", "Giovanni 14:27"],
+    "referencia_biblica": [""],
     "tags": ["Luz", "Búsqueda", "Verdad", "Salvación"],
     "idiomas": {
       "it": {
@@ -13809,7 +13809,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 11:28-30", "Giovanni 14:27"],
+    "referencia_biblica": [""],
     "tags": ["Luz", "Confianza", "Gozo", "Guía"],
     "idiomas": {
       "it": {
@@ -13899,7 +13899,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Salvación", "Perdón", "Paz", "Evangelismo"],
     "idiomas": {
       "it": {
@@ -13949,7 +13949,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9"],
+    "referencia_biblica": [""],
     "tags": ["Gracia", "Gozo", "Eternidad", "Venida de Cristo"],
     "idiomas": {
       "it": {
@@ -13998,7 +13998,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Consagración", "Paz", "Victoria", "Fidelidad"],
     "idiomas": {
       "it": {
@@ -14083,7 +14083,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Redención", "Gozo", "Alabanza", "Victoria"],
     "idiomas": {
       "it": {
@@ -14136,7 +14136,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Cruz", "Salvación", "Fe", "Esperanza"],
     "idiomas": {
       "it": {
@@ -14189,7 +14189,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Consuelo", "Paz", "Fe", "Testimonio"],
     "idiomas": {
       "it": {
@@ -14230,7 +14230,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Paz", "Consuelo", "Presencia de Dios"],
     "idiomas": {
       "it": {
@@ -14328,7 +14328,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Testimonio", "Evangelismo", "Amor de Dios", "Cruz"],
     "idiomas": {
       "it": {
@@ -14381,7 +14381,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Salvación", "Perdón", "Paz", "Protección"],
     "idiomas": {
       "it": {
@@ -14484,7 +14484,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Protección", "Fe", "Paz", "Perdón"],
     "idiomas": {
       "it": {
@@ -14531,7 +14531,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Evangelismo", "Esperanza", "Salvación", "Vida Eterna"],
     "idiomas": {
       "it": {
@@ -14623,7 +14623,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Gozo", "Alabanza", "Oración", "Esperanza"],
     "idiomas": {
       "it": {
@@ -14679,7 +14679,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Gozo", "Redención", "Consagración"],
     "idiomas": {
       "it": {
@@ -14732,7 +14732,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Agradecimiento", "Salvación", "Gozo"],
     "idiomas": {
       "it": {
@@ -14781,7 +14781,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Entrega", "Consagración", "Testimonio", "Salvación"],
     "idiomas": {
       "it": {
@@ -14834,7 +14834,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 23:4"],
+    "referencia_biblica": [""],
     "tags": ["Luz", "Gozo", "Alabanza", "Salvación"],
     "idiomas": {
       "it": {
@@ -14887,7 +14887,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Paz", "Gozo", "Comunión", "Iglesia"],
     "idiomas": {
       "it": {
@@ -14928,7 +14928,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Presencia de Dios", "Consagración", "Devoción"],
     "idiomas": {
       "it": {
@@ -14965,7 +14965,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Salvación", "Protección", "SANTIDAD"],
     "idiomas": {
       "it": {
@@ -15012,7 +15012,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Agradecimiento", "Alabanza", "Creación", "Gozo"],
     "idiomas": {
       "it": {
@@ -15059,7 +15059,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Juventud", "Llamado", "Consagración", "Entrega"],
     "idiomas": {
       "it": {
@@ -15106,7 +15106,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Gozo", "Salvación", "Misericordia", "Evangelismo"],
     "idiomas": {
       "it": {
@@ -15162,7 +15162,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Redención", "Gozo", "Testimonio", "Esperanza"],
     "idiomas": {
       "it": {
@@ -15215,7 +15215,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Paz", "Gozo", "Comunión", "Consuelo"],
     "idiomas": {
       "it": {
@@ -15263,7 +15263,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Perdón", "Oración", "Santidad", "Paz"],
     "idiomas": {
       "it": {
@@ -15304,7 +15304,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Efesini 2:8-9", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Perdón", "Oración", "Arrepentimiento", "Amor"],
     "idiomas": {
       "it": {
@@ -15348,7 +15348,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 15:11-32"],
+    "referencia_biblica": [""],
     "tags": ["Arrepentimiento", "Perdón", "Misericordia", "Paz"],
     "idiomas": {
       "it": {
@@ -15395,7 +15395,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 15:11-32", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Perdón", "Gracia", "Gólgota", "Rendición"],
     "idiomas": {
       "it": {
@@ -15442,7 +15442,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 15:11-32", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Consolación", "Piedad", "Perdón", "Esperanza"],
     "idiomas": {
       "it": {
@@ -15487,7 +15487,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 15:11-32", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Arrepentimiento", "Perdón", "Purificación", "Obediencia"],
     "idiomas": {
       "it": {
@@ -15534,7 +15534,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 6:37"],
+    "referencia_biblica": [""],
     "tags": ["Entrega", "Salvación", "Bautismo", "Fe"],
     "idiomas": {
       "it": {
@@ -15581,7 +15581,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 15:11-32", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Clamor", "Perdón", "Clemencia", "Restauración"],
     "idiomas": {
       "it": {
@@ -15622,7 +15622,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 15:11-32", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Llamado", "Cruz", "Paz", "Salvación"],
     "idiomas": {
       "it": {
@@ -15675,7 +15675,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 15:11-32", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Cruz", "Libertad", "Amor", "Eternidad"],
     "idiomas": {
       "it": {
@@ -15724,7 +15724,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 15:11-32", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Consuelo", "Perdón", "Paz", "Santidad"],
     "idiomas": {
       "it": {
@@ -15777,7 +15777,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 15:11-32", "1 Giovanni 1:9"],
+    "referencia_biblica": [""],
     "tags": ["Llamado", "Perdón", "Consagración", "Gozo"],
     "idiomas": {
       "it": {
@@ -15839,7 +15839,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Giovanni 6:37"],
+    "referencia_biblica": [""],
     "tags": ["Perdón", "Cruz", "Entrega", "Amor"],
     "idiomas": {
       "it": {
@@ -15892,7 +15892,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 121:1-8", "Salmo 4:8"],
+    "referencia_biblica": [""],
     "tags": ["Fe", "Fidelidad", "Iglesia", "Victoria"],
     "idiomas": {
       "it": {
@@ -15943,7 +15943,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 121:1-8", "Salmo 4:8"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Tarde", "Perdón", "Piedad"],
     "idiomas": {
       "it": {
@@ -15984,7 +15984,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 121:1-8", "Salmo 4:8"],
+    "referencia_biblica": [""],
     "tags": ["Tempestad", "Confianza", "Protección", "Fe"],
     "idiomas": {
       "it": {
@@ -16061,7 +16061,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 121:1-8", "Salmo 4:8"],
+    "referencia_biblica": [""],
     "tags": ["Esperanza", "Protección", "Consagración", "Paz"],
     "idiomas": {
       "it": {
@@ -16111,7 +16111,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Luca 24:29-32"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Guía", "Protección", "Noche"],
     "idiomas": {
       "it": {
@@ -16158,7 +16158,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 121:1-8", "Salmo 4:8"],
+    "referencia_biblica": [""],
     "tags": ["Ofrenda", "Oración", "Alabanza", "Tarde"],
     "idiomas": {
       "it": {
@@ -16209,7 +16209,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 121:1-8", "Salmo 4:8"],
+    "referencia_biblica": [""],
     "tags": ["Gratitud", "Alabanza", "Fe", "Paz"],
     "idiomas": {
       "it": {
@@ -16262,7 +16262,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 26:36-46"],
+    "referencia_biblica": [""],
     "tags": ["Comunión", "Paz", "Gozo", "Luz"],
     "idiomas": {
       "it": {
@@ -16315,7 +16315,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 121:1-8", "Salmo 4:8"],
+    "referencia_biblica": [""],
     "tags": ["Salvación", "Gracia", "Oración", "Devoción"],
     "idiomas": {
       "it": {
@@ -16362,7 +16362,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 121:1-8", "Salmo 4:8"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Esperanza", "Iglesia", "Advenimiento"],
     "idiomas": {
       "it": {
@@ -16403,7 +16403,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 121:1-8", "Salmo 4:8"],
+    "referencia_biblica": [""],
     "tags": ["Noche", "Protección", "Gratitud", "Paz"],
     "idiomas": {
       "it": {
@@ -16442,7 +16442,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 121:1-8", "Salmo 4:8"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Mañana", "Noche", "Guía"],
     "idiomas": {
       "it": {
@@ -16491,7 +16491,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 121:1-8", "Salmo 4:8"],
+    "referencia_biblica": [""],
     "tags": ["Gratitud", "Noche", "Perdón", "Paz"],
     "idiomas": {
       "it": {
@@ -16538,7 +16538,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 121:1-8", "Salmo 4:8"],
+    "referencia_biblica": [""],
     "tags": ["Noche", "Perdón", "Protección", "Descanso"],
     "idiomas": {
       "it": {
@@ -16579,7 +16579,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 121:1-8", "Salmo 4:8"],
+    "referencia_biblica": [""],
     "tags": ["Vigilancia", "Oración", "Protección", "Fidelidad"],
     "idiomas": {
       "it": {
@@ -16630,7 +16630,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 121:1-8", "Salmo 4:8"],
+    "referencia_biblica": [""],
     "tags": ["Devoción", "Gracia", "Amor", "Comunión"],
     "idiomas": {
       "it": {
@@ -16683,7 +16683,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Salmo 121:1-8", "Salmo 4:8"],
+    "referencia_biblica": [""],
     "tags": ["Dependencia", "Luz", "Fuerza", "Vida"],
     "idiomas": {
       "it": {
@@ -16730,7 +16730,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 6:9-13"],
+    "referencia_biblica": [""],
     "tags": ["Reino de Dios", "Paz", "Justicia", "Esperanza"],
     "idiomas": {
       "it": {
@@ -16783,7 +16783,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Filippesi 4:6-7", "Matteo 7:7-8"],
+    "referencia_biblica": [""],
     "tags": ["Misericordia", "Gracia", "Perdón", "Transformación"],
     "idiomas": {
       "it": {
@@ -16824,7 +16824,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["1 Pietro 1:18-19", "Apocalisse 1:5"],
+    "referencia_biblica": [""],
     "tags": ["Protección", "Consagración", "Redención", "Fe"],
     "idiomas": {
       "it": {
@@ -16871,7 +16871,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Filippesi 4:6-7", "Matteo 7:7-8"],
+    "referencia_biblica": [""],
     "tags": ["Fe", "Santidad", "Gracia", "Eternidad"],
     "idiomas": {
       "it": {
@@ -16912,7 +16912,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Filippesi 4:6-7", "Matteo 7:7-8"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Consuelo", "Fe", "Esperanza"],
     "idiomas": {
       "it": {
@@ -16961,7 +16961,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Filippesi 4:6-7", "Matteo 7:7-8"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Humildad", "Fe", "Fortaleza"],
     "idiomas": {
       "it": {
@@ -17005,7 +17005,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Filippesi 4:6-7", "Matteo 7:7-8"],
+    "referencia_biblica": [""],
     "tags": ["Seguimiento", "Amor", "Oración", "Ejemplo"],
     "idiomas": {
       "it": {
@@ -17050,7 +17050,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Filippesi 4:6-7", "Matteo 7:7-8"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Paz", "Comunión", "Devoción"],
     "idiomas": {
       "it": {
@@ -17099,7 +17099,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Filippesi 4:6-7", "Matteo 7:7-8"],
+    "referencia_biblica": [""],
     "tags": ["Paz", "Oración", "Multilingüe"],
     "idiomas": {
       "it": {
@@ -17153,7 +17153,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Filippesi 4:6-7", "Matteo 7:7-8"],
+    "referencia_biblica": [""],
     "tags": ["Salvación", "Gracia", "Consuelo", "Amor"],
     "idiomas": {
       "it": {
@@ -17239,7 +17239,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Genesi 28:10-22"],
+    "referencia_biblica": [""],
     "tags": ["Comunión", "Fe", "Paz", "Consuelo"],
     "idiomas": {
       "it": {
@@ -17327,7 +17327,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Filippesi 4:6-7", "Matteo 7:7-8"],
+    "referencia_biblica": [""],
     "tags": ["Amor", "Oración", "Devoción", "Presencia"],
     "idiomas": {
       "it": {
@@ -17368,7 +17368,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Filippesi 4:6-7", "Matteo 7:7-8"],
+    "referencia_biblica": [""],
     "tags": ["Cruz", "Evangelio", "Salvación", "Testimonio"],
     "idiomas": {
       "it": {
@@ -17413,7 +17413,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Filippesi 4:6-7", "Matteo 7:7-8"],
+    "referencia_biblica": [""],
     "tags": ["Santidad", "Fidelidad", "Servicio", "Consagración"],
     "idiomas": {
       "it": {
@@ -17454,7 +17454,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Filippesi 4:6-7", "Matteo 7:7-8"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Paz", "Esperanza", "Victoria"],
     "idiomas": {
       "it": {
@@ -17493,7 +17493,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Filippesi 4:6-7", "Matteo 7:7-8"],
+    "referencia_biblica": [""],
     "tags": ["Vigilancia", "Oración", "Victoria", "Fe"],
     "idiomas": {
       "it": {
@@ -17537,7 +17537,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Filippesi 4:6-7", "Matteo 7:7-8"],
+    "referencia_biblica": [""],
     "tags": ["Comunión", "Arrepentimiento", "Perdón", "Paz"],
     "idiomas": {
       "it": {
@@ -17581,7 +17581,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Filippesi 4:6-7", "Matteo 7:7-8"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Liberación", "Gratitud", "Alabanza"],
     "idiomas": {
       "it": {
@@ -17620,7 +17620,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Filippesi 4:6-7", "Matteo 7:7-8"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Comunión", "Alabanza", "Paz"],
     "idiomas": {
       "it": {
@@ -17657,7 +17657,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 21:1-4", "Apocalisse 22:20"],
+    "referencia_biblica": [""],
     "tags": ["Advenimiento", "Emanuel", "Esperanza", "Alabanza"],
     "idiomas": {
       "it": {
@@ -17697,7 +17697,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 18:20", "Efesini 4:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Creación", "Gratitud", "Amor", "Unidad"],
     "idiomas": {
       "it": {
@@ -17744,7 +17744,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 18:20", "Efesini 4:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Adoración", "Oración", "Esperanza"],
     "idiomas": {
       "it": {
@@ -17791,7 +17791,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 18:20", "Efesini 4:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Iglesia", "Espíritu Santo", "Evangelio", "Esperanza"],
     "idiomas": {
       "it": {
@@ -17838,7 +17838,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 18:20", "Efesini 4:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Perdón", "Consagración", "Gracia"],
     "idiomas": {
       "it": {
@@ -17879,7 +17879,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 18:20", "Efesini 4:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Alabanza", "Perdón", "Victoria"],
     "idiomas": {
       "it": {
@@ -17920,7 +17920,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 18:20", "Efesini 4:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Cruz", "Amor", "Servicio", "Compasión"],
     "idiomas": {
       "it": {
@@ -17961,7 +17961,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 18:20", "Efesini 4:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Devoción", "Consagración", "Protección", "Oración"],
     "idiomas": {
       "it": {
@@ -18002,7 +18002,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 18:20", "Efesini 4:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Reino de Dios", "Justicia", "Paz", "Servicio"],
     "idiomas": {
       "it": {
@@ -18049,7 +18049,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 18:20", "Efesini 4:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Entrega", "Oración", "Humildad", "Amor"],
     "idiomas": {
       "it": {
@@ -18141,7 +18141,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 18:20", "Efesini 4:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Peregrinaje", "Fidelidad", "Oración", "Testimonio"],
     "idiomas": {
       "it": {
@@ -18186,7 +18186,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 18:20", "Efesini 4:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Adoración", "Alabanza", "Palabra de Dios", "Comunión"],
     "idiomas": {
       "it": {
@@ -18230,7 +18230,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 18:20", "Efesini 4:1-6"],
+    "referencia_biblica": [""],
     "tags": ["Presencia", "Fortaleza", "Esperanza", "Provisión"],
     "idiomas": {
       "it": {
@@ -18321,7 +18321,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 21:1-4", "Filippesi 3:20-21"],
+    "referencia_biblica": [""],
     "tags": ["Jesús", "Devoción", "Consuelo", "Entrega"],
     "idiomas": {
       "it": {
@@ -18365,7 +18365,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 21:1-4", "Filippesi 3:20-21"],
+    "referencia_biblica": [""],
     "tags": ["Consuelo", "Reposo", "Paz", "Esperanza"],
     "idiomas": {
       "it": {
@@ -18402,7 +18402,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 21:1-4", "Filippesi 3:20-21"],
+    "referencia_biblica": [""],
     "tags": ["Patria Celestial", "Esperanza", "Evangelización", "Cielo"],
     "idiomas": {
       "it": {
@@ -18486,7 +18486,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 21:1-4", "Filippesi 3:20-21"],
+    "referencia_biblica": [""],
     "tags": ["Gloria", "Salvación", "Cielo", "Gozo"],
     "idiomas": {
       "it": {
@@ -18531,7 +18531,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 21:1-4", "Filippesi 3:20-21"],
+    "referencia_biblica": [""],
     "tags": ["Peregrinaje", "Esperanza", "Nueva Tierra", "Paz"],
     "idiomas": {
       "it": {
@@ -18579,7 +18579,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 21:1-4", "Filippesi 3:20-21"],
+    "referencia_biblica": [""],
     "tags": ["Peregrinaje", "Esperanza", "Victoria", "Patria Celestial"],
     "idiomas": {
       "it": {
@@ -18629,7 +18629,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 21:1-4", "Filippesi 3:20-21"],
+    "referencia_biblica": [""],
     "tags": ["Cielo", "Alabanza", "Redención", "Gozo"],
     "idiomas": {
       "it": {
@@ -18674,7 +18674,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 21:1-4", "Filippesi 3:20-21"],
+    "referencia_biblica": [""],
     "tags": ["Salvación", "Segunda Venida", "Gozo", "Esperanza"],
     "idiomas": {
       "it": {
@@ -18719,7 +18719,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 21:1-4", "Filippesi 3:20-21"],
+    "referencia_biblica": [""],
     "tags": ["Segunda Venida", "Esperanza", "Milenio", "Galardón"],
     "idiomas": {
       "it": {
@@ -18756,7 +18756,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 21:1-4", "Filippesi 3:20-21"],
+    "referencia_biblica": [""],
     "tags": ["Esperanza", "Segunda Venida", "Resurrección", "Alabanza"],
     "idiomas": {
       "it": {
@@ -18801,7 +18801,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 21:1-4", "Filippesi 3:20-21"],
+    "referencia_biblica": [""],
     "tags": ["Resurrección", "Esperanza", "Inmortalidad", "Redención"],
     "idiomas": {
       "it": {
@@ -18842,7 +18842,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 21:1-4", "Filippesi 3:20-21"],
+    "referencia_biblica": [""],
     "tags": ["Resurrección", "Segunda Venida", "Evangelización", "Reunion Celestial"],
     "idiomas": {
       "it": {
@@ -18887,7 +18887,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 21:1-4", "Filippesi 3:20-21"],
+    "referencia_biblica": [""],
     "tags": ["Vida Eterna", "Alabanza", "Cruz", "Cielo"],
     "idiomas": {
       "it": {
@@ -18926,7 +18926,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 21:1-4", "Filippesi 3:20-21"],
+    "referencia_biblica": [""],
     "tags": ["Llamado", "Evangelio", "Espíritu Santo", "Gracia"],
     "idiomas": {
       "it": {
@@ -18971,7 +18971,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 21:1-4", "Filippesi 3:20-21"],
+    "referencia_biblica": [""],
     "tags": ["Oración", "Fe", "Consuelo", "Amor de Dios"],
     "idiomas": {
       "it": {
@@ -19016,7 +19016,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 21:1-4", "Filippesi 3:20-21"],
+    "referencia_biblica": [""],
     "tags": ["Fortaleza", "Oración", "Fe", "Eternidad"],
     "idiomas": {
       "it": {
@@ -19107,7 +19107,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Esperanza", "Cielo", "Patria Celestial", "Salvación"],
     "idiomas": {
       "it": {
@@ -19152,7 +19152,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Cielo", "Padre", "Salvador", "Corona"],
     "idiomas": {
       "it": {
@@ -19208,7 +19208,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Fe", "Victoria", "Protección", "Ejemplo"],
     "idiomas": {
       "it": {
@@ -19249,7 +19249,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Cruz", "Amor de Dios", "Fe", "Salvación"],
     "idiomas": {
       "it": {
@@ -19290,7 +19290,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Confianza", "Pruebas", "Consuelo", "Amor de Dios"],
     "idiomas": {
       "it": {
@@ -19335,7 +19335,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Iglesia", "Esperanza", "Paz", "Luz"],
     "idiomas": {
       "it": {
@@ -19372,7 +19372,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Esperanza", "Vida Eterna", "Guía", "Consuelo"],
     "idiomas": {
       "it": {
@@ -19411,7 +19411,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Gloria", "Socorro", "Paz"],
     "idiomas": {
       "it": {
@@ -19450,7 +19450,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Salvación", "Gracia", "Amor de Dios"],
     "idiomas": {
       "it": {
@@ -19489,7 +19489,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Confianza", "Patria Celestial", "Fe", "Alabanza"],
     "idiomas": {
       "it": {
@@ -19534,7 +19534,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Descanso", "Paz", "Luz", "Consuelo"],
     "idiomas": {
       "it": {
@@ -19623,7 +19623,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Fidelidad", "Cruz", "Victoria", "Obediencia"],
     "idiomas": {
       "it": {
@@ -19668,7 +19668,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Esperanza", "Confianza", "Consuelo", "Alabanza"],
     "idiomas": {
       "it": {
@@ -19768,7 +19768,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Paz", "Confianza", "Consuelo", "Obediencia"],
     "idiomas": {
       "it": {
@@ -19809,7 +19809,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Creación", "Alabanza", "Adoración", "Perdón", "Salvación"],
     "idiomas": {
       "it": {
@@ -19873,7 +19873,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Protección", "Descanso", "Esperanza", "Paz"],
     "idiomas": {
       "it": {
@@ -19932,7 +19932,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Guía", "Protección", "Paz", "Confianza"],
     "idiomas": {
       "it": {
@@ -19979,7 +19979,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Presencia de Dios", "Oración", "Consuelo", "Paz"],
     "idiomas": {
       "it": {
@@ -20040,7 +20040,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Evangelio", "Amor de Dios", "Cruz", "Resurrección"],
     "idiomas": {
       "it": {
@@ -20099,7 +20099,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Llamado", "Paz", "Luz", "Salvación"],
     "idiomas": {
       "it": {
@@ -20146,7 +20146,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Iglesia", "Piedra Angular", "Espíritu Santo", "Esperanza"],
     "idiomas": {
       "it": {
@@ -20251,7 +20251,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Luz", "Salvación", "Alabanza", "Consagración"],
     "idiomas": {
       "it": {
@@ -20286,7 +20286,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Guía", "Fe", "Camino", "Cruz"],
     "idiomas": {
       "it": {
@@ -20333,7 +20333,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Adoración", "Gratitud", "Salvación"],
     "idiomas": {
       "it": {
@@ -20367,7 +20367,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Isaia 6:3", "Apocalisse 4:8"],
+    "referencia_biblica": [""],
     "tags": ["Santidad", "Trinidad", "Adoración", "Consolador"],
     "idiomas": {
       "it": {
@@ -20412,7 +20412,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 4:8", "Matteo 28:19"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Adoración", "Gratitud", "Fe"],
     "idiomas": {
       "it": {
@@ -20457,7 +20457,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 4:8", "Matteo 28:19"],
+    "referencia_biblica": [""],
     "tags": ["Alabanza", "Adoración", "Glorificación", "Luz"],
     "idiomas": {
       "it": {
@@ -20494,7 +20494,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 28:19", "2 Corinzi 13:13"],
+    "referencia_biblica": [""],
     "tags": ["Doxología", "Trinidad", "Alabanza"],
     "idiomas": {
       "it": {
@@ -20528,7 +20528,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 4:8", "Matteo 28:19"],
+    "referencia_biblica": [""],
     "tags": ["Despedida", "Protección", "Bendición", "Paz"],
     "idiomas": {
       "it": {
@@ -20581,7 +20581,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 28:19", "2 Corinzi 13:13"],
+    "referencia_biblica": [""],
     "tags": ["Doxología", "Trinidad", "Alabanza"],
     "idiomas": {
       "it": {
@@ -20647,7 +20647,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 4:8", "Matteo 28:19"],
+    "referencia_biblica": [""],
     "tags": ["Doxología", "Trinidad", "Alabanza"],
     "idiomas": {
       "it": {
@@ -20680,7 +20680,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Matteo 28:19", "2 Corinzi 13:13"],
+    "referencia_biblica": [""],
     "tags": ["Doxología", "Trinidad", "Alabanza"],
     "idiomas": {
       "it": {
@@ -20747,7 +20747,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Apocalisse 4:8", "Matteo 28:19"],
+    "referencia_biblica": [""],
     "tags": ["Santidad", "Adoración", "Alabanza"],
     "idiomas": {
       "it": {
@@ -22911,7 +22911,7 @@
     "tempo_bpm": [""],
     "compas": [""],
     "ritmo": ["Inno"],
-    "referencia_biblica": ["Ebrei 11:1", "Romani 5:1-5"],
+    "referencia_biblica": [""],
     "tags": ["Fede", "Testimonianza", "Speranza"],
     "idiomas": {
       "it": {
@@ -22940,8 +22940,8 @@
     "id": "inno-472",
     "titulo_original": ["All the time in the world"],
     "corito": "No",
-    "autor": ["Larnelle Harris"],
-    "compositor": ["Larnelle Harris"],
+    "autor": ["Desconocido"],
+    "compositor": ["Desconocido"],
     "year": ["Desconocido"],
     "tonalidad": [""],
     "tempo_bpm": [""],
@@ -22954,7 +22954,6 @@
         "titulo": ["All the time in the world"],
         "titulo2": [""],
         "numero_himno": "472",
-        "idioma_real": "en",
         "audio_url": "",
         "traductor": [""],
         "presentacion": ["canciones/himnario_it/472.pps", "canciones/himnario_it/472.ppsx"],
@@ -23089,7 +23088,6 @@
         "titulo": ["And you shall seek me"],
         "titulo2": [""],
         "numero_himno": "475",
-        "idioma_real": "en",
         "audio_url": "",
         "traductor": [""],
         "presentacion": ["canciones/himnario_it/475.pps", "canciones/himnario_it/475.ppsx"],
@@ -23835,7 +23833,6 @@
         "titulo": ["Fear not"],
         "titulo2": [""],
         "numero_himno": "493",
-        "idioma_real": "en",
         "audio_url": "",
         "traductor": [""],
         "presentacion": ["canciones/himnario_it/493.pps", "canciones/himnario_it/493.ppsx"],
@@ -23875,7 +23872,6 @@
         "titulo": ["From heaven you came"],
         "titulo2": [""],
         "numero_himno": "494",
-        "idioma_real": "en",
         "audio_url": "",
         "traductor": [""],
         "presentacion": ["canciones/himnario_it/494.pps", "canciones/himnario_it/494.ppsx"],
@@ -24223,7 +24219,6 @@
         "titulo": ["Hallowed be your name"],
         "titulo2": [""],
         "numero_himno": "503",
-        "idioma_real": "en",
         "audio_url": "",
         "traductor": [""],
         "presentacion": ["canciones/himnario_it/503.pps", "canciones/himnario_it/503.ppsx"],
@@ -24268,7 +24263,6 @@
         "titulo": ["I will build my church"],
         "titulo2": [""],
         "numero_himno": "504",
-        "idioma_real": "en",
         "audio_url": "",
         "traductor": [""],
         "presentacion": ["canciones/himnario_it/504.pps", "canciones/himnario_it/504.ppsx"],
@@ -24304,7 +24298,6 @@
         "titulo": ["I cast all my cares upon you"],
         "titulo2": [""],
         "numero_himno": "505",
-        "idioma_real": "en",
         "audio_url": "https://www.youtube.com/watch?v=Q0DdKoj406k",
         "traductor": [""],
         "presentacion": ["canciones/himnario_it/505.pps", "canciones/himnario_it/505.ppsx"],
@@ -24400,7 +24393,6 @@
         "titulo": ["I will follow him"],
         "titulo2": [""],
         "numero_himno": "507",
-        "idioma_real": "en",
         "audio_url": "",
         "traductor": [""],
         "presentacion": ["canciones/himnario_it/507.pps", "canciones/himnario_it/507.ppsx"],
@@ -25501,7 +25493,6 @@
         "titulo": ["Show your power, o Lord"],
         "titulo2": [""],
         "numero_himno": "532",
-        "idioma_real": "en",
         "audio_url": "",
         "traductor": [""],
         "presentacion": ["canciones/himnario_it/532.pps", "canciones/himnario_it/532.ppsx"],
@@ -25611,7 +25602,6 @@
         "titulo": ["King of kings"],
         "titulo2": [""],
         "numero_himno": "534",
-        "idioma_real": "en",
         "audio_url": "",
         "traductor": [""],
         "presentacion": ["canciones/himnario_it/534.pps", "canciones/himnario_it/534.ppsx"],
@@ -25688,7 +25678,6 @@
         "titulo": ["Side by side"],
         "titulo2": [""],
         "numero_himno": "536",
-        "idioma_real": "en",
         "audio_url": "",
         "traductor": [""],
         "presentacion": ["canciones/himnario_it/536.pps", "canciones/himnario_it/536.ppsx"],
@@ -25770,7 +25759,6 @@
         "titulo": ["Soon and very soon"],
         "titulo2": [""],
         "numero_himno": "538",
-        "idioma_real": "en",
         "audio_url": "",
         "traductor": [""],
         "presentacion": ["canciones/himnario_it/538.pps", "canciones/himnario_it/538.ppsx"],
@@ -25871,7 +25859,6 @@
         "titulo": ["Such love"],
         "titulo2": [""],
         "numero_himno": "540",
-        "idioma_real": "en",
         "audio_url": "",
         "traductor": [""],
         "presentacion": ["canciones/himnario_it/540.pps", "canciones/himnario_it/540.ppsx"],
@@ -25969,7 +25956,6 @@
         "titulo": ["The power & the glory"],
         "titulo2": [""],
         "numero_himno": "542",
-        "idioma_real": "en",
         "audio_url": "",
         "traductor": [""],
         "presentacion": ["canciones/himnario_it/542.pps", "canciones/himnario_it/542.ppsx"],
@@ -26309,7 +26295,6 @@
         "titulo": ["Have faith in God"],
         "titulo2": [""],
         "numero_himno": "550",
-        "idioma_real": "en",
         "audio_url": "",
         "traductor": [""],
         "presentacion": ["canciones/himnario_it/550.pps", "canciones/himnario_it/550.ppsx"],
