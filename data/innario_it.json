@@ -9654,6 +9654,56 @@
     }
   },
   {
+    "id": "inno-190",
+    "titulo_original": ["Gesù unisce la chiesa"],
+    "corito": "No",
+    "autor": ["Desconocido"],
+    "compositor": ["Desconocido"],
+    "year": ["Desconocido"],
+    "tonalidad": [""],
+    "tempo_bpm": [""],
+    "compas": [""],
+    "ritmo": ["Inno"],
+    "referencia_biblica": ["Efesini 4:3-6", "Giovanni 17:21-23"],
+    "tags": ["Unità", "Chiesa", "Amore", "Grazia", "Pace"],
+    "idiomas": {
+      "it": {
+        "titulo": ["Gesù unisce la chiesa"],
+        "titulo2": [""],
+        "numero_himno": "190",
+        "audio_url": "",
+        "traductor": [""],
+        "presentacion": ["canciones/himnario_it/190.pps", "canciones/himnario_it/190.ppsx"],
+        "mp3": ["canciones/himnario_it/190.mp3"],
+        "partitura": ["canciones/himnario_it/190.png"],
+        "revisado": ["No"],
+        "letra": [
+          "1",
+          "L’amore di Cristo Gesù",
+          "riunisce la chiesa quaggiù;",
+          "conduce alla vita",
+          "sua luce infinita,",
+          "rischiara il nostro cammin.",
+          "",
+          "2",
+          "La nostra preghiera, Signore,",
+          "porgiamo con fede a te solo;",
+          "chiediamo il perdono",
+          "e il dolce tuo dono",
+          "di grazia, di pace e d’amor.",
+          "",
+          "3",
+          "L’amore tuo santo, Signore,",
+          "rischiara le notti del cuore",
+          "e unisce i credenti",
+          "che pregan ferventi",
+          "te sol, divino Signor."
+        ],
+        "nota": [""]
+      }
+    }
+  },
+  {
     "id": "inno-191",
     "titulo_original": ["Il nome tuo, Signor, lodiamo"],
     "corito": "No",
