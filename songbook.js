@@ -629,6 +629,11 @@ function renderAlphabet() {
       rangosNav.classList.add("hidden");
       rangosCont.innerHTML = "";
     }
+
+    // la fila de rangos recién apareció/desapareció: si esperáramos al
+    // próximo scroll para remedirla, quedaba mal ubicada (pisando o
+    // cortada contra la fila de letras) hasta que el usuario scrolleara
+    window.syncHeaderOffsets?.();
   }
 
   const rail = document.getElementById("letterRail");

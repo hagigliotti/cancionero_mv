@@ -445,16 +445,16 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=154",
-    "modals/revised.html?v=154",
-    "modals/people.html?v=154",
-    "modals/valores.html?v=154",
-    "modals/share.html?v=154",
-    "modals/contacto.html?v=154",
-    "modals/afinometro.html?v=154",
-    "modals/biblioteca.html?v=154",
-    "modals/listas.html?v=154",
-    "modals/notepad.html?v=154"
+    "modals/info.html?v=160",
+    "modals/revised.html?v=160",
+    "modals/people.html?v=160",
+    "modals/valores.html?v=160",
+    "modals/share.html?v=160",
+    "modals/contacto.html?v=160",
+    "modals/afinometro.html?v=160",
+    "modals/biblioteca.html?v=160",
+    "modals/listas.html?v=160",
+    "modals/notepad.html?v=160"
   ];
 
   for (const path of modales) {
@@ -1679,9 +1679,18 @@ function getDistinctValues(tipo, filtroIdioma) {
   if (tipo === "idioma") {
     // caso especial: song.idiomas es un objeto { es: {...}, he: {...} },
     // no un array como autor/compositor/coautor/tags
+    //
+    // "idioma_real" (ver [[project-idioma-real-field]] / renderLanguageFlags
+    // en lenguage.js): en libros de idioma fijo (Himnario/Innario) puede
+    // haber himnos guardados bajo la clave del libro (ej. "it") cuya letra
+    // está en otro idioma sin traducir todavía. Contarlos acá bajo esa
+    // clave fija mentía en este resumen (ej. "Italiano: 550" cuando en
+    // realidad 15 de esos están en inglés) — así que agrupamos por
+    // idioma_real cuando está presente, no por la clave cruda
     data.forEach(song => {
       Object.keys(song.idiomas || {}).forEach(codigo => {
-        counts.set(codigo, (counts.get(codigo) || 0) + 1);
+        const codigoReal = song.idiomas[codigo]?.idioma_real || codigo;
+        counts.set(codigoReal, (counts.get(codigoReal) || 0) + 1);
       });
     });
 
@@ -1786,13 +1795,23 @@ function renderValoresModal(tipo, filtroIdioma) {
   renderModalLetterRail(cont, railEl, letrasVistas);
 }
 
+// dado un "codigo" de idioma MOSTRADO (el que puede venir de idioma_real,
+// ver getDistinctValues), busca la clave REAL dentro de song.idiomas que
+// corresponde a ese idioma mostrado — normalmente son la misma, salvo en
+// los himnos de idioma_real (ahí song.idiomas sólo tiene la clave fija del
+// libro, ej. "it", aunque el idioma mostrado sea "en")
+function claveIdiomaReal(song, codigoMostrado) {
+  return Object.keys(song.idiomas || {})
+    .find(k => (song.idiomas[k]?.idioma_real || k) === codigoMostrado);
+}
+
 // listado de canciones en un idioma puntual (elegido desde el chip
 // "Idiomas") — a diferencia de autor/compositor/etc., acá elegir una
 // canción la abre YA en ese idioma (changeLanguage), no en el idioma activo
 function abrirIdiomaSongsModal(codigo, nombreIdioma) {
   peopleModalOrigen = { tipo: "idioma" };
 
-  const filtradas = getDataActual().filter(song => !!(song.idiomas && song.idiomas[codigo]));
+  const filtradas = getDataActual().filter(song => !!claveIdiomaReal(song, codigo));
 
   renderPeopleModal({
     icon: getFlagEmoji(codigo),
@@ -1800,7 +1819,11 @@ function abrirIdiomaSongsModal(codigo, nombreIdioma) {
     list: filtradas,
     onSelect: song => () => {
       cerrarPeopleModal();
-      changeLanguage(codigo, song.id);
+      // ojo: NO siempre es "codigo" — en un himno con idioma_real, la
+      // clave real bajo la que vive la letra sigue siendo la del libro
+      // (ej. "it"), no el idioma mostrado ("en"); cambiar a un idioma que
+      // esa canción no tiene la dejaría sin letra
+      changeLanguage(claveIdiomaReal(song, codigo) || codigo, song.id);
     }
   });
 

@@ -55,8 +55,19 @@
      background-attachment:fixed en ambos) para que queden pegados sin
      costura sin importar el scroll. Sólido (color de los logos Cancionero_*)
      hasta ~28% de la pantalla (logo + barra + alfabeto), recién ahí empieza
-     a degradar hacia abajo */
-  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(var(--sky-rgb),0.09) 62%, rgba(var(--sky-rgb),0.20) 100%);
+     a degradar hacia abajo.
+     --bg-day lleva una 2da capa opaca (blanco liso, debajo del degradé con
+     transparencia) a propósito: sin ella, cualquier elemento que use esta
+     variable SIN background-attachment:fixed (ej. .song-title-row) pinta
+     el degradé completo (0%-100%) adentro de su propia caja, así que la
+     parte de abajo de esa caja cae en los tramos con alpha (rgba ...,0.20)
+     y deja ver lo que hay atrás (la letra de la canción, en ese caso) —
+     eso es lo que se veía como "franja transparente" al scrollear. Con la
+     capa blanca opaca detrás, el resultado final siempre es sólido, se
+     vea donde se vea, y el color no cambia (blanco + rgba sobre blanco =
+     mismo pastel de siempre). --bg-night no tenía este problema porque su
+     capa de abajo (el linear-gradient navy) ya era opaca de por sí */
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(var(--sky-rgb),0.09) 62%, rgba(var(--sky-rgb),0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
   --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(var(--sky-rgb),0.14), transparent 65%),
               linear-gradient(180deg, #0d1e30 0%, #0d1e30 28%, #122033 62%, #1a2e45 100%);
 }
@@ -84,7 +95,7 @@
    más especificidad que estos selectores por tener 2 clases en el body). */
 body[data-accent="naranja"] {
   --sky: #fb923c; --sky-dark: #f97316; --sky-rgb: 251, 146, 60;
-  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(251, 146, 60,0.09) 62%, rgba(251, 146, 60,0.20) 100%);
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(251, 146, 60,0.09) 62%, rgba(251, 146, 60,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
   --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(251, 146, 60,0.16), transparent 65%),
               linear-gradient(180deg, #1f150d 0%, #1f150d 28%, #241a10 62%, #2e2313 100%);
   --proj-tint: rgba(251, 146, 60,0.10);
@@ -93,7 +104,7 @@ body[data-accent="naranja"] {
 }
 body[data-accent="rosa"] {
   --sky: #f472b6; --sky-dark: #ec4899; --sky-rgb: 244, 114, 182;
-  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(244, 114, 182,0.09) 62%, rgba(244, 114, 182,0.20) 100%);
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(244, 114, 182,0.09) 62%, rgba(244, 114, 182,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
   --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(244, 114, 182,0.16), transparent 65%),
               linear-gradient(180deg, #1f0f18 0%, #1f0f18 28%, #24131c 62%, #2e1823 100%);
   --proj-tint: rgba(244, 114, 182,0.10);
@@ -102,7 +113,7 @@ body[data-accent="rosa"] {
 }
 body[data-accent="coral"] {
   --sky: #ff8a75; --sky-dark: #f2624a; --sky-rgb: 255, 138, 117;
-  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(255, 138, 117,0.09) 62%, rgba(255, 138, 117,0.20) 100%);
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(255, 138, 117,0.09) 62%, rgba(255, 138, 117,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
   --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(255, 138, 117,0.16), transparent 65%),
               linear-gradient(180deg, #1f120d 0%, #1f120d 28%, #241610 62%, #2e1c13 100%);
   --proj-tint: rgba(255, 138, 117,0.10);
@@ -111,7 +122,7 @@ body[data-accent="coral"] {
 }
 body[data-accent="violeta"] {
   --sky: #a78bfa; --sky-dark: #8b5cf6; --sky-rgb: 167, 139, 250;
-  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(167, 139, 250,0.09) 62%, rgba(167, 139, 250,0.20) 100%);
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(167, 139, 250,0.09) 62%, rgba(167, 139, 250,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
   --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(167, 139, 250,0.16), transparent 65%),
               linear-gradient(180deg, #150f28 0%, #150f28 28%, #1a1330 62%, #221a3d 100%);
   --proj-tint: rgba(167, 139, 250,0.10);
@@ -120,7 +131,7 @@ body[data-accent="violeta"] {
 }
 body[data-accent="lila"] {
   --sky: #e0a3e8; --sky-dark: #c65fd4; --sky-rgb: 224, 163, 232;
-  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(224, 163, 232,0.09) 62%, rgba(224, 163, 232,0.20) 100%);
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(224, 163, 232,0.09) 62%, rgba(224, 163, 232,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
   --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(224, 163, 232,0.16), transparent 65%),
               linear-gradient(180deg, #1c1024 0%, #1c1024 28%, #21142b 62%, #2a1935 100%);
   --proj-tint: rgba(224, 163, 232,0.10);
@@ -129,7 +140,7 @@ body[data-accent="lila"] {
 }
 body[data-accent="turquesa"] {
   --sky: #2dd4bf; --sky-dark: #14b8a6; --sky-rgb: 45, 212, 191;
-  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(45, 212, 191,0.09) 62%, rgba(45, 212, 191,0.20) 100%);
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(45, 212, 191,0.09) 62%, rgba(45, 212, 191,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
   --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(45, 212, 191,0.16), transparent 65%),
               linear-gradient(180deg, #0d1f1d 0%, #0d1f1d 28%, #112423 62%, #162e2c 100%);
   --proj-tint: rgba(45, 212, 191,0.10);
@@ -138,7 +149,7 @@ body[data-accent="turquesa"] {
 }
 body[data-accent="verde"] {
   --sky: #4ade80; --sky-dark: #22c55e; --sky-rgb: 74, 222, 128;
-  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(74, 222, 128,0.09) 62%, rgba(74, 222, 128,0.20) 100%);
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(74, 222, 128,0.09) 62%, rgba(74, 222, 128,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
   --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(74, 222, 128,0.16), transparent 65%),
               linear-gradient(180deg, #0d1f16 0%, #0d1f16 28%, #11241a 62%, #162e21 100%);
   --proj-tint: rgba(74, 222, 128,0.10);
@@ -147,7 +158,7 @@ body[data-accent="verde"] {
 }
 body[data-accent="amarillo"] {
   --sky: #fbbf24; --sky-dark: #f59e0b; --sky-rgb: 251, 191, 36;
-  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(251, 191, 36,0.09) 62%, rgba(251, 191, 36,0.20) 100%);
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(251, 191, 36,0.09) 62%, rgba(251, 191, 36,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
   --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(251, 191, 36,0.16), transparent 65%),
               linear-gradient(180deg, #1f1a0d 0%, #1f1a0d 28%, #241f10 62%, #2e2813 100%);
   --proj-tint: rgba(251, 191, 36,0.10);
@@ -156,7 +167,7 @@ body[data-accent="amarillo"] {
 }
 body[data-accent="gris"] {
   --sky: #64748b; --sky-dark: #334155; --sky-rgb: 100, 116, 139;
-  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(100, 116, 139,0.09) 62%, rgba(100, 116, 139,0.20) 100%);
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(100, 116, 139,0.09) 62%, rgba(100, 116, 139,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
   --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(100, 116, 139,0.16), transparent 65%),
               linear-gradient(180deg, #131313 0%, #131313 28%, #191919 62%, #212121 100%);
   --proj-tint: rgba(100, 116, 139,0.10);
@@ -170,7 +181,7 @@ body[data-accent="gris"] {
    claro (blanco puro sobre blanco sería invisible) */
 body[data-accent="monocromo"] {
   --sky: #a3a3a3; --sky-dark: #404040; --sky-rgb: 163, 163, 163;
-  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(163, 163, 163,0.09) 62%, rgba(163, 163, 163,0.20) 100%);
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(163, 163, 163,0.09) 62%, rgba(163, 163, 163,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
   --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(163, 163, 163,0.16), transparent 65%),
               linear-gradient(180deg, #121212 0%, #121212 28%, #181818 62%, #202020 100%);
   --proj-tint: rgba(163, 163, 163,0.10);
@@ -969,11 +980,17 @@ body.dark-mode.projector  .alfabeto-nav { background: var(--proj-tint); }
 #alfabeto::-webkit-scrollbar,
 #himnoRangos::-webkit-scrollbar { display: none; }
 
-/* segundo renglón (rangos de himnos): mismo look que el de letras, pegado
-   justo debajo del renglón de letras (alto real medido por JS) */
+/* segundo renglón (rangos de himnos): pegado justo debajo del renglón de
+   letras (alto real medido por JS), sin superponerse.
+   ANTES tenía margin-top:-10px + "- 10px" en el top, para that ambas filas
+   se vieran "pegadas" sin hueco — pero esos 10px de superposición comían
+   directo del propio contenido (botones) de la fila de letras, no de un
+   espacio vacío, así que en vez de verse "pegadas" se veían PISADAS una
+   con la otra (el bug reportado). Sin ese ajuste, el hueco natural entre
+   filas es chico de por sí (el padding de #alfabeto ya es finito) y no
+   hace falta forzarlo más */
 .alfabeto-nav + .alfabeto-nav {
-  margin-top: -10px;
-  top: calc(var(--topbar-h, 56px) + var(--alfabeto-row-h, 48px) - 10px);
+  top: calc(var(--topbar-h, 56px) + var(--alfabeto-row-h, 48px));
 }
 
 /* al scrollear, la barra de letras/números queda pegada (sticky) debajo del
@@ -1128,7 +1145,9 @@ body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
   flex-shrink: 0;
   width: 20px;
   position: sticky;
-  top: calc(var(--topbar-h, 56px) + var(--alfabeto-row-h, 48px));
+  /* + --alfabeto-row2-h: mismo ajuste que .song-title-row, para no quedar
+     tapado por la fila de rangos de himnos en Himnario/Innario */
+  top: calc(var(--topbar-h, 56px) + var(--alfabeto-row-h, 48px) + var(--alfabeto-row2-h, 0px));
   align-self: flex-start;
   display: flex;
   flex-direction: column;
@@ -2669,8 +2688,12 @@ details[open] .sec-chevron { transform: rotate(90deg); }
   gap: 10px;
   position: sticky;
   /* mismo enganche que ya usa el riel de letras: justo debajo de la barra
-     de letras (que también es sticky), para no superponerse con ella */
-  top: calc(var(--topbar-h, 56px) + var(--alfabeto-row-h, 48px));
+     de letras (que también es sticky), para no superponerse con ella.
+     --alfabeto-row2-h suma la fila de rangos de himnos ("1-50", "51-100"...)
+     cuando está visible (Himnario/Innario): sin sumarla, este título quedaba
+     con menos "top" del que hacía falta y terminaba pegado DEBAJO de esa
+     fila, tapado por ella (mayor z-index) en vez de debajo */
+  top: calc(var(--topbar-h, 56px) + var(--alfabeto-row-h, 48px) + var(--alfabeto-row2-h, 0px));
   /* sin transition acá a propósito: animar "top" en un elemento sticky es
      poco confiable en iOS Safari (Safari recalcula la posición sticky en
      cada frame de scroll por fuera del motor de animación normal, y esa
@@ -2683,9 +2706,10 @@ details[open] .sec-chevron { transform: rotate(90deg); }
 /* sin background-attachment:fixed acá a propósito (a diferencia de
    .top-bar/.alfabeto-nav): combinado con position:sticky es una causa
    conocida de parpadeo/vibración de scroll en iOS Safari, porque fuerza
-   un repintado en cada frame. No hace falta acá: el degradé de fondo
-   (--bg-day/--bg-night) es sólido en el primer ~28% de la pantalla,
-   donde vive esta fila, así que no se nota costura sin el "fixed" */
+   un repintado en cada frame. Tampoco hace falta acá: --bg-day/--bg-night
+   ya son opacos de punta a punta (ver el comentario junto a --bg-day en
+   TOKENS) así que esta fila queda sólida sin el "fixed", no se ve nada
+   detrás sea cual sea el scroll */
 .light-mode .song-title-row { background: var(--bg-night); }
 .dark-mode  .song-title-row { background: var(--bg-day);   }
 body.light-mode.projector .song-title-row { background: #000; }

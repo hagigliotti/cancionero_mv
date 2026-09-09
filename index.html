@@ -9,10 +9,10 @@
   <title>Cancionero App</title>
 
   <!-- PWA / APARIENCIA DE APP -->
-  <link rel="manifest" href="manifest.webmanifest?v=154">
-  <link rel="icon" href="imagenes/icons/favicon-32.png?v=154" sizes="32x32">
-  <link rel="icon" href="imagenes/icons/favicon-16.png?v=154" sizes="16x16">
-  <link rel="apple-touch-icon" href="imagenes/icons/apple-touch-icon.png?v=154">
+  <link rel="manifest" href="manifest.webmanifest?v=160">
+  <link rel="icon" href="imagenes/icons/favicon-32.png?v=160" sizes="32x32">
+  <link rel="icon" href="imagenes/icons/favicon-16.png?v=160" sizes="16x16">
+  <link rel="apple-touch-icon" href="imagenes/icons/apple-touch-icon.png?v=160">
 
   <meta name="theme-color" content="#122033">
   <meta name="mobile-web-app-capable" content="yes">
@@ -24,8 +24,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css?v=154">
-  <link rel="stylesheet" href="notepad.css?v=154">
+  <link rel="stylesheet" href="style.css?v=160">
+  <link rel="stylesheet" href="notepad.css?v=160">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XS6DM59CNT"></script>
@@ -311,14 +311,14 @@
 
 
 <!-- ======================================== JS ======================================== -->
-<script src="tag-translations.js?v=154"></script>
-<script src="lenguage.js?v=154"></script>
-<script src="utils.js?v=154"></script>
-<script src="theme.js?v=154"></script>
-<script src="afinometro.js?v=154"></script>
-<script src="app.js?v=154"></script>
-<script src="songbook.js?v=154"></script>
-<script src="notepad.js?v=154"></script>
+<script src="tag-translations.js?v=160"></script>
+<script src="lenguage.js?v=160"></script>
+<script src="utils.js?v=160"></script>
+<script src="theme.js?v=160"></script>
+<script src="afinometro.js?v=160"></script>
+<script src="app.js?v=160"></script>
+<script src="songbook.js?v=160"></script>
+<script src="notepad.js?v=160"></script>
 
 <!-- ======================================== PWA OFFLINE ======================================== -->
 <div id="updateBanner" class="update-banner">
@@ -511,29 +511,75 @@
     function syncOffsets() {
       const topBar = document.querySelector(".top-bar");
       const firstRow = document.querySelector(".alfabeto-nav");
+      // segunda fila (rangos de himnos: "1-50", "51-100", etc.), sólo visible
+      // en Himnario/Innario. Si está oculta (display:none) su offsetHeight
+      // da 0, así que no hace falta chequear la clase "hidden" a mano
+      const secondRow = document.getElementById("himnoRangosNav");
       const root = document.documentElement.style;
 
       if (topBar) root.setProperty("--topbar-h", topBar.offsetHeight + "px");
       if (firstRow) root.setProperty("--alfabeto-row-h", firstRow.offsetHeight + "px");
+      // alto de la fila de rangos de himnos, sin restarle nada (ya no se
+      // superpone con la de letras — ver ".alfabeto-nav + .alfabeto-nav" en
+      // style.css). Sin sumar esto, el título de la canción quedaba con un
+      // "top" sticky insuficiente en Himnario/Innario y terminaba pegado
+      // DEBAJO de esta fila (tapado por ella, que tiene mayor z-index)
+      const secondRowH = secondRow ? secondRow.offsetHeight : 0;
+      root.setProperty("--alfabeto-row2-h", secondRowH + "px");
     }
 
-    // la barra de letras y la de arriba se achican con una transición CSS
-    // (no es instantáneo). Antes, este script re-medía el alto en cada frame
-    // durante ~280ms con requestAnimationFrame para que el título no quedara
-    // mal ubicado mientras tanto — pero offsetHeight redondea a pixeles
-    // enteros en cada frame mientras la transición CSS interpola con
-    // subpixeles, y ese desajuste generaba los "saltitos" del título y la
-    // estrellita. Ahora: una sola medición, tomada en el mismo tick en que
-    // se cambia la clase "scrolled" (antes de que el navegador pinte nada,
-    // por eso ya da el alto FINAL post-achique, no el viejo). El resto del
-    // movimiento lo hace la propia transición CSS de "top" en
-    // .song-title-row, en sync con el achique de las barras de arriba.
+    // OJO — esto NO es instantáneo: los botones de letra (.alpha/.alpha-arrow,
+    // via --trans: all 0.22s ease) y el padding de #alfabeto/#himnoRangos
+    // (transition: padding 0.2s ease) se achican con una animación CSS de
+    // ~0.2-0.22s. Medir offsetHeight en el mismo tick en que se agrega la
+    // clase "scrolled" NO da el alto final ya achicado (a diferencia de lo
+    // que decía un comentario viejo acá) — da el alto VIEJO, sin achicar
+    // todavía, porque la transición recién arranca en ese instante y el
+    // navegador no "salta" al valor final antes de tiempo. Ese alto viejo
+    // quedaba grabado en --alfabeto-row-h para toda la sesión de scroll (no
+    // se volvía a medir hasta el próximo cruce de los 30px), así que el
+    // título/riel de letras quedaban con un "top" más grande de lo que
+    // hacía falta: un hueco fijo donde se veía la letra de la canción
+    // detrás, tapando o trasluciendo la barra del título — el bug reportado.
+    // Fix: además de la medición inmediata (deja todo bien mientras no haya
+    // transición corriendo, ej. al cargar la página), programamos una
+    // segunda medición correctiva una vez que la animación termina.
+    let resyncTimer = null;
+    const TRANSITION_MS = 260; // 220ms de --trans + margen
+
+    // dos umbrales en vez de uno solo (30px), separados a propósito por más
+    // de lo que puede achicarse el encabezado (medido: ~18px la fila de
+    // letras + ~18px la de rangos de himnos, si está + ~11px el título =
+    // hasta ~47px en Himnario/Innario). Por qué hace falta esto: al entrar
+    // en "scrolled" el encabezado se achica, así que la página entera mide
+    // unos cuantos px MENOS — si la canción es apenas más alta que la
+    // pantalla (poco margen para scrollear), ese achique hace que el
+    // navegador ya no pueda mantener el scroll donde estaba y lo empuje
+    // hacia arriba de golpe, cruzando el umbral otra vez de vuelta hacia
+    // abajo → se sale de "scrolled" → el encabezado vuelve a agrandarse →
+    // vuelve a haber margen para el scroll de antes → se puede volver a
+    // cruzar el umbral hacia adentro... y así en bucle: eso es el
+    // "titileo"/parpadeo constante que se ve en canciones cortas. Con un
+    // umbral para entrar y uno bien más bajo para salir (con más
+    // diferencia entre los dos que el achique máximo posible), una vez que
+    // se entra en "scrolled" el empujón hacia arriba de la página ya no
+    // alcanza para cruzar también el umbral de salida, así que no hay
+    // vuelta atrás y el ciclo no se repite
+    const ENTER_THRESHOLD = 60;
+    const EXIT_THRESHOLD = 10;
+
     function onScroll() {
-      const shouldBeScrolled = window.scrollY > 30;
+      const y = window.scrollY;
+      const shouldBeScrolled = scrolled
+        ? y > EXIT_THRESHOLD
+        : y > ENTER_THRESHOLD;
+
       if (shouldBeScrolled !== scrolled) {
         scrolled = shouldBeScrolled;
         document.body.classList.toggle("scrolled", scrolled);
         syncOffsets();
+        clearTimeout(resyncTimer);
+        resyncTimer = setTimeout(syncOffsets, TRANSITION_MS);
       }
     }
 
@@ -541,6 +587,13 @@
     window.addEventListener("resize", syncOffsets);
     window.addEventListener("load", syncOffsets);
     syncOffsets();
+
+    // expuesto para que songbook.js pueda pedir una remedición al mostrar u
+    // ocultar la fila de rangos de himnos (#himnoRangosNav) al cambiar de
+    // libro — sin esto, --alfabeto-row2-h podía quedar desactualizado hasta
+    // el próximo scroll, y la fila de rangos terminaba mal ubicada (pisando
+    // o cortada contra la fila de letras) apenas se abría un himnario
+    window.syncHeaderOffsets = syncOffsets;
   })();
 </script>
 

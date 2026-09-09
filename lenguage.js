@@ -388,13 +388,27 @@ function renderLanguageFlags(song, mostrarNotaAudio = false, singleRow = false) 
   // la bandera va en su propio span (.flag-emoji) separado de la nota de
   // audio: así el subrayado de "activo" (border-bottom) queda solo debajo
   // de la bandera, no estirado también debajo de la ♪
-  const flagHtml = lang => `
+  //
+  // "idioma_real": libros de idioma fijo (ej. Innario italiano, ver
+  // idiomaFijo en libros.json) guardan TODO bajo una sola clave ("it") sin
+  // importar el idioma real de la letra, porque esa clave es la que decide
+  // el número de himno / orden / filtros de todo el libro — cambiarla saca
+  // la canción del himnario. Pero hay himnos ahí adentro cuyo texto está en
+  // inglés sin traducir (ej. inno 505): para esos casos, "idioma_real"
+  // (dentro de idiomas.it) permite mostrar la bandera/nombre que corresponde
+  // al idioma real de la letra sin tocar la clave "it" de la que depende
+  // todo lo demás. getFlagEmoji ya respeta la variante de bandera elegida
+  // por el usuario (ej. EEUU/GB para "en"), así que no hace falta nada más.
+  const flagHtml = lang => {
+    const flagLang = idiomas[lang]?.idioma_real || lang;
+    return `
     <span class="flag ${lang === idiomaActual ? "active" : ""}"
           ${dataAction("changeLanguage", [lang, song.id])}
-          title="${IDIOMA_NOMBRES[lang] || lang}">
-      <span class="flag-emoji">${getFlagEmoji(lang)}</span>${mostrarNotaAudio ? audioNoteHtml(idiomas[lang]) : ""}
+          title="${IDIOMA_NOMBRES[flagLang] || flagLang}">
+      <span class="flag-emoji">${getFlagEmoji(flagLang)}</span>${mostrarNotaAudio ? audioNoteHtml(idiomas[lang]) : ""}
     </span>
   `;
+  };
 
   return singleRow ? langs.map(flagHtml).join("") : wrapFlagRows(langs, flagHtml);
 }
