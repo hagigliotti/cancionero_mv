@@ -8,7 +8,7 @@
 
 // 👉 Subir este número cada vez que cambie la lista de archivos de abajo
 // (o cuando quieras forzar que todos descarten la caché vieja).
-const CACHE_VERSION = "v160";
+const CACHE_VERSION = "v161";
 
 const APP_SHELL_CACHE = `cancionero-shell-${CACHE_VERSION}`;
 const DATA_CACHE = `cancionero-data-${CACHE_VERSION}`;
@@ -16,34 +16,34 @@ const DATA_CACHE = `cancionero-data-${CACHE_VERSION}`;
 const APP_SHELL_FILES = [
   "./",
   "index.html",
-  "style.css?v=160",
-  "notepad.css?v=160",
-  "manifest.webmanifest?v=160",
+  "style.css?v=161",
+  "notepad.css?v=161",
+  "manifest.webmanifest?v=161",
 
-  "tag-translations.js?v=160",
-  "lenguage.js?v=160",
-  "utils.js?v=160",
-  "theme.js?v=160",
-  "afinometro.js?v=160",
-  "app.js?v=160",
-  "songbook.js?v=160",
-  "notepad.js?v=160",
+  "tag-translations.js?v=161",
+  "lenguage.js?v=161",
+  "utils.js?v=161",
+  "theme.js?v=161",
+  "afinometro.js?v=161",
+  "app.js?v=161",
+  "songbook.js?v=161",
+  "notepad.js?v=161",
 
-  "modals/info.html?v=160",
-  "modals/revised.html?v=160",
-  "modals/people.html?v=160",
-  "modals/share.html?v=160",
-  "modals/contacto.html?v=160",
-  "modals/afinometro.html?v=160",
-  "modals/biblioteca.html?v=160",
-  "modals/listas.html?v=160",
-  "modals/notepad.html?v=160",
+  "modals/info.html?v=161",
+  "modals/revised.html?v=161",
+  "modals/people.html?v=161",
+  "modals/share.html?v=161",
+  "modals/contacto.html?v=161",
+  "modals/afinometro.html?v=161",
+  "modals/biblioteca.html?v=161",
+  "modals/listas.html?v=161",
+  "modals/notepad.html?v=161",
 
-  "imagenes/icons/favicon-16.png?v=160",
-  "imagenes/icons/favicon-32.png?v=160",
-  "imagenes/icons/apple-touch-icon.png?v=160",
-  "imagenes/icons/icon-192.png?v=160",
-  "imagenes/icons/icon-512.png?v=160",
+  "imagenes/icons/favicon-16.png?v=161",
+  "imagenes/icons/favicon-32.png?v=161",
+  "imagenes/icons/apple-touch-icon.png?v=161",
+  "imagenes/icons/icon-192.png?v=161",
+  "imagenes/icons/icon-512.png?v=161",
 
   "imagenes/Cancionero_blue.png",
   "imagenes/Cancionero_white.png",

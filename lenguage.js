@@ -159,6 +159,24 @@ function setBanderaIdioma(lang, code) {
 
   updateLangFlag();
   renderBanderaSelect();
+  refreshAllVisibleFlags();
+}
+
+// actualiza EN EL MOMENTO todas las banderitas por-canción que ya están
+// dibujadas en pantalla (listado por letra/número, rango de himnos,
+// resultados de búsqueda, la canción abierta) al cambiar de país — sin
+// esto, el cambio recién se veía en lo próximo que se renderizara (volver
+// a abrir la canción, cambiar de letra, etc.), no en lo que ya estaba
+// visible. En vez de tener que saber qué lista está mostrada ahora mismo
+// y volver a llamar a la función que corresponda (renderList,
+// renderHymnRange, search...), cada bandera por-canción se dibuja con
+// data-flag-lang="<idioma mostrado>" (ver renderLanguageFlags y
+// getAvailableFlags) y acá simplemente se recalcula el emoji de todas las
+// que haya en el DOM en este momento, sea cual sea la vista
+function refreshAllVisibleFlags() {
+  document.querySelectorAll("[data-flag-lang]").forEach(el => {
+    el.textContent = getFlagEmoji(el.dataset.flagLang);
+  });
 }
 
 // actualiza el ícono de bandera de la fila Idioma — solo queda "clickeable"
@@ -352,7 +370,8 @@ function audioNoteHtml(idiomaData) {
   return idiomaData?.audio_url ? `<span class="flag-audio-note">♪</span>` : "";
 }
 
-// Devuelve banderas disponibles (versión compacta para listas)
+// Devuelve banderas disponibles (versión compacta para listas — usada en
+// los resultados de búsqueda, ver search() en app.js)
 function getAvailableFlags(song) {
   const idiomas = song.idiomas || {};
 
@@ -360,13 +379,21 @@ function getAvailableFlags(song) {
     .filter(lang => idiomas[lang])
     .sort((a, b) => (FLAG_NAMES[a] || a).localeCompare(FLAG_NAMES[b] || b));
 
-  return wrapFlagRows(langs, lang => `
+  // "idioma_real": ver el mismo ajuste en renderLanguageFlags más arriba —
+  // sin esto, los himnos con letra sin traducir (ej. los ingleses del
+  // Innario italiano) mostraban la bandera del libro (🇮🇹) en los
+  // resultados de búsqueda en vez de la real (🇺🇸/🇬🇧)
+  return wrapFlagRows(langs, lang => {
+    const flagLang = idiomas[lang]?.idioma_real || lang;
+    return `
     <span ${dataAction("changeLanguage", [lang, song.id])}
-          title="${IDIOMA_NOMBRES[lang] || lang}"
-          style="cursor:pointer; margin-right:6px;">
-      ${getFlagEmoji(lang)}
+          title="${IDIOMA_NOMBRES[flagLang] || flagLang}"
+          style="cursor:pointer; margin-right:6px;"
+          data-flag-lang="${flagLang}">
+      ${getFlagEmoji(flagLang)}
     </span>
-  `);
+  `;
+  });
 }
 
 
@@ -405,7 +432,7 @@ function renderLanguageFlags(song, mostrarNotaAudio = false, singleRow = false) 
     <span class="flag ${lang === idiomaActual ? "active" : ""}"
           ${dataAction("changeLanguage", [lang, song.id])}
           title="${IDIOMA_NOMBRES[flagLang] || flagLang}">
-      <span class="flag-emoji">${getFlagEmoji(flagLang)}</span>${mostrarNotaAudio ? audioNoteHtml(idiomas[lang]) : ""}
+      <span class="flag-emoji" data-flag-lang="${flagLang}">${getFlagEmoji(flagLang)}</span>${mostrarNotaAudio ? audioNoteHtml(idiomas[lang]) : ""}
     </span>
   `;
   };
