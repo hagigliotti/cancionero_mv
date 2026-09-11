@@ -1,5 +1,5 @@
 # ===============================================================================================
-# bump-version.ps1 — Cancionero MV
+# bump-version.ps1 — Cancionero App
 #
 # Correr este script ANTES de publicar cambios (subir a GitHub / GitHub Pages).
 # Solo se encarga de la parte MECÁNICA (cache-busting): sube el número de
