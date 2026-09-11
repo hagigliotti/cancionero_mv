@@ -1207,7 +1207,7 @@ const SECTION_LABELS = [
   { type: "coro", regex: /^chorus:?$/i },        // inglés
   { type: "coro", regex: /^refrão:?$/i },        // portugués
   { type: "coro", regex: /^chœur:?$/i },         // francés 
-  { type: "coro", regex: /^Ritornello:?$/i },    // italiano Ritornello
+  { type: "coro", regex: /^ritornello:?$/i },    // italiano 
 
   { type: "voces", regex: /^voz 1:?$/i },
   { type: "voces", regex: /^voz 2:?$/i },
