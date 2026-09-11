@@ -2,7 +2,7 @@
   {
     "id": "cancionero",
     "archivo": "canciones.json",
-    "nombre": "Cancionero App",
+    "nombre": "Cancionero MV",
     "icono": "",
     "_comentario1": "\"icono\": \"🎶\""
   },
@@ -25,7 +25,7 @@
     "numeroHimno": true,
     "idiomaFijo": true,
     "coritosPara": "cancionero",
-    "oculto": true,
+    "oculto": false,
     "codigo": "29686085"
   },
   {
