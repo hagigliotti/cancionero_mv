@@ -1008,6 +1008,50 @@
     }
   }
 },
+{ "id": "alelu_aleluya",
+  "titulo_original": ["Alelú, aleluya"],
+  "autor": ["Anónimo"],
+  "compositor": ["Anónimo"],
+  "year": ["Desconocido"],
+  "tonalidad": ["Mi Mayor (E)"],
+  "tempo_bpm": ["95"],
+  "compas": ["4/4"],
+  "ritmo": ["Alegre"],
+  "referencia_biblica": ["Salmo 150:1-6", "Salmo 103:1", "Apocalipsis 19:1"],
+  "tags": ["Clásico", "Canon", "Gratitud", "Aleluya", "Alabanza"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["Alelú, aleluya"],
+      "titulo2": [""],
+      "audio_url": "",
+      "traductor": [""],
+      "partitura": "No",
+      "revisado": ["No"],      
+      "letra": [
+        "Coro",
+        "Voz 1", "[E]Alelú, alelú, [A]alelú, aleluya",
+        "Voz 2", "¡Gl[B7]oria a Dios![E]",
+        "Voz 1", "[E]Alelú, alelú, [A]alelú, aleluya",
+        "Voz 2", "¡Gl[B7]oria a Dios![E]",
+        "",
+        "1",
+        "Voz 1", "[E]¡Gloria a Dios![B7]", 
+        "Voz 2", "¡aleluya!",
+        "Voz 1", "¡Gloria a Dios![E]", 
+        "Voz 2", "¡aleluya!",
+        "Voz 1", "¡Gloria a Dios![A7]", 
+        "Voz 2", "¡aleluya!",
+        "Todos", "¡Glo[B7]ria a Dios![E]"
+      ],
+      "nota": ["Suele cantarse en canon y cada grupo se pone de pie al tener que cantar su voz y se sienta cuando le toca cantar al otro grupo.",
+              "Otros agregan una 2da y 3ra estroda:",
+              "2: Gracias Señor, ¡aleluya! / Gracias Señor, ¡aleluya! / Gracias Señor, ¡aleluya! / Gracias Señor",
+              "3: Gloria al Señor, nuestro Padre / Gloria al Señor, Jesucristo / Gloria al Espíritu Santo / Gloria al Señor."
+      ]
+    }
+  }
+},
 { "id": "alla_en_el_monte_horeb",
   "titulo_original": ["Al son del cocodrilo"],
   "autor": ["Desconocido"],
@@ -1024,7 +1068,7 @@
     "es": {
       "titulo": ["Allá en el monte Horeb"],
       "titulo2": [""],
-      "audio_url": "",
+      "audio_url": "https://www.youtube.com/watch?v=Sz3FRJsdN70&list=RDSz3FRJsdN70&start_radio=1",
       "traductor": [""],
       "partitura": "No",
       "revisado": ["No"],        
@@ -1038,9 +1082,9 @@
         "Oyó una voz del cielo que le de[G]cía:",
         "",
         "Coro",
-        "[C]Quita, quita las sandalias de tus [G]pies",
+        "[C]Quita, quita, quita las sandalias de tus [G]pies",
         "Que el [D7]lugar que pisas santo [G]es.",
-        "[C]Quita, quita las sandalias de tus [G]pies",
+        "[C]Quita, quita, quita las sandalias de tus [G]pies",
         "Que el [D7]lugar que pisas santo [G]es."
       ],
       "nota": [""]
