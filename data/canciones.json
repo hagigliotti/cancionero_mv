@@ -412,6 +412,10 @@
         "yo quiero [D]verte.",
         "",
         "Repite",
+        "[D]Abre mis ojos, oh Cristo,",
+        "[A]abre mis ojos, Señor,",
+        "yo quiero [G]verte,",
+        "yo quiero [D]verte.",        
         "",
         "Coro",
         "Quiero ve[A]r tu majest[Bm]ad",
@@ -555,6 +559,16 @@
         "Digno eres [G]tú, [C]digno eres [G]tú, [C]Amen.",
         "",
         "Repite",
+        "[G]Ale[C]lu[G]ya, ale[C]lu[Em]ya!",
+        "Te ala[D]bamos, Se[C]ñor, nuestro [G]Rey.",
+        "[G]Ale[C]lu[G]ya, ale[C]lu[Em]ya!",
+        "Te ala[D]bamos, Se[C]ñor, nuestro [G]Rey.",
+        "Ale[G]lu[C]ya![Em]",
+        "",
+        "[C]San[D]to, [D]San[G]to, El Se[C]ñor, Dios[G] podero[D]so.",
+        "Digno eres [G]tú, [C]digno eres [G]tú,",
+        "[C]San[D]to, [D]San[G]to, El Se[C]ñor, Dios[G] podero[D]so.",
+        "Digno eres [G]tú, [C]digno eres [G]tú, [C]Amen.",        
         "",
         "[C]San[D]to, [D]San[G]to, El Se[C]ñor, Dios[G] podero[D]so.",
         "Digno eres [G]tú, [C]digno eres [G]tú,",
@@ -669,6 +683,7 @@
           "el estar con mis hermanos",
           "en [D]este [D7]lindo lu[G]gar!",
           "",
+          "2",
           "[G]Enlacemos nuestras manos",
           "para juntos ala[C]bar",
           "el nombre de Jesu[G]cristo,",
@@ -1002,7 +1017,12 @@
         "",
         "2",
         "Eu sei que Jesús Cristo a esta terra muito breve voltará.",
-        "E logo sobre as nuvens dos céus todo o olho o verá."
+        "E logo sobre as nuvens dos céus todo o olho o verá.",
+        "",
+        "Coro",
+        "E alegre vou cantando, sim alegre vou cantando.",
+        "Com Jesús, meu Salvador, e assim eu viverei",
+        "Pela eternidade, sim, pela eternidade."
       ],
       "nota": [""]
     }
@@ -8321,6 +8341,51 @@
     }
   }
 },
+{ "id": "e_muito_bom",
+  "titulo_original": ["É Muito Bom"],
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": ["Desconocido"],
+  "tonalidad": ["Sol Mayor (G)"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["Desconocido"],
+  "ritmo": ["Desconocido"],
+  "referencia_biblica": ["1 San Juan 1:7", "Gálatas 2:20", "Efesios 3:17"],
+  "tags": ["Alabanza", "Comunión", "Alegría"],
+
+  "idiomas": {
+    "pt": {
+      "titulo": ["É Muito Bom"],
+      "titulo2": [""],
+      "audio_url": "https://www.youtube.com/watch?v=cNUsOdEZaWk&t=2s",
+      "traductor": [""],
+      "partitura": "No",
+      "revisado": ["No"],      
+      "letra": [
+        "1",
+        "É bom, é muito bom",
+        "É muito bom ter Jesus no coração",
+        "É bom, é muito bom",
+        "É muito bom ter Jesus no coração",
+        "",
+        "Coro",
+        "Andar com ele, juntinho dele",
+        "É muito bom ter Jesus no coração",
+        "Andar com ele, juntinho dele",
+        "É muito bom ter Jesus no coração",
+        "",
+        "1",
+        "É bom, é muito bom",
+        "É muito bom ter Jesus no coração",
+        "É bom, é muito bom",
+        "É muito bom ter Jesus no coração"
+      ],
+      "nota": [""]
+    }
+  }
+},
+
+
 
 { "_comment6": "LETRA F • -----------------------------------------------------------------------------------------------    LETRA F" },
 { "id": "fe_en_fuego",

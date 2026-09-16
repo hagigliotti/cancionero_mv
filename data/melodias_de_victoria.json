@@ -4,7 +4,7 @@
   "_commentC": "https://pdfcoffee.com/himnario-adventista-antiguo-1962-2-pdf-free.html" 
 },
 {
-  "id": "himno-001",
+  "id": "himno_mv-001",
   "titulo_original": ["My God Loves Me"],
   "corito": "No",
   "autor": [""],
@@ -61,7 +61,7 @@
   }
 },
 {
-  "id": "himno-002",
+  "id": "himno_mv-002",
   "titulo_original": ["Nearer, My God, to Thee"],
   "corito": "No",
   "autor": ["Sarah F. Adams"],
@@ -120,10 +120,10 @@
   }
 },
 {
-    "id": "himno-003",
+    "id": "himno_mv-003",
     "titulo_original": ["Give me the Bible"],
     "corito": "No",
-    "autor": ["E. S. L."],
+    "autor": ["Edmund Simon Lorenz"],
     "compositor": ["E. S. Lorenz"],
     "year": [""],
     "tonalidad": ["Ab"],
@@ -197,7 +197,7 @@
     }
   },
   {
-    "id": "himno-004",
+    "id": "himno_mv-004",
     "titulo_original": ["Blest Be the Tie That Binds"],
     "corito": "No",
     "autor": [""],
@@ -242,7 +242,7 @@
     }
   },
   {
-    "id": "himno-005",
+    "id": "himno_mv-005",
     "titulo_original": [""],
     "corito": "No",
     "autor": ["E. L. Maxwell"],
@@ -289,7 +289,7 @@
     }
   },
   {
-    "id": "himno-006",
+    "id": "himno_mv-006",
     "titulo_original": ["What a Friend"],
     "corito": "No",
     "autor": ["Morn"],
@@ -336,7 +336,7 @@
     }
   },
   {
-    "id": "himno-007",
+    "id": "himno_mv-007",
     "titulo_original": ["The Love of God"],
     "corito": "No",
     "autor": ["F. M. L."],
@@ -395,7 +395,7 @@
     }
   },
   {
-    "id": "himno-008",
+    "id": "himno_mv-008",
     "titulo_original": ["To Do Thy Will"],
     "corito": "No",
     "autor": ["W. H. Pike"],
@@ -448,7 +448,7 @@
     }
   },
   {
-    "id": "himno-009",
+    "id": "himno_mv-009",
     "titulo_original": ["God Understands"],
     "corito": "No",
     "autor": ["Oswald J. Smith"],
@@ -501,7 +501,7 @@
     }
   },
   {
-    "id": "himno-010",
+    "id": "himno_mv-010",
     "titulo_original": ["An Evening Prayer"],
     "corito": "No",
     "autor": ["C. M. Battersby"],
@@ -546,7 +546,7 @@
     }
   },
 {
-    "id": "himno-011",
+    "id": "himno_mv-011",
     "titulo_original": ["Keep Looking Up!"],
     "corito": "No",
     "autor": ["Virgil P. Brock"],
@@ -605,7 +605,7 @@
     }
   },
   {
-    "id": "himno-012",
+    "id": "himno_mv-012",
     "titulo_original": ["Lead, Kindly Light"],
     "corito": "No",
     "autor": ["Newman"],
@@ -652,7 +652,7 @@
     }
   },
   {
-    "id": "himno-013",
+    "id": "himno_mv-013",
     "titulo_original": [""],
     "corito": "No",
     "autor": ["H. M."],
@@ -721,7 +721,7 @@
     }
   },
   {
-    "id": "himno-014",
+    "id": "himno_mv-014",
     "titulo_original": ["Teach Me To Pray"],
     "corito": "No",
     "autor": ["Albert Simpson Reitz"],
@@ -790,7 +790,7 @@
     }
   },
   {
-    "id": "himno-015",
+    "id": "himno_mv-015",
     "titulo_original": ["My Daily Prayer"],
     "corito": "No",
     "autor": ["C. Lester Bond"],
@@ -859,7 +859,7 @@
     }
   },
   {
-    "id": "himno-016",
+    "id": "himno_mv-016",
     "titulo_original": ["Give of Your Best to the Master"],
     "corito": "No",
     "autor": [""],
@@ -918,7 +918,7 @@
     }
   },
   {
-    "id": "himno-017",
+    "id": "himno_mv-017",
     "titulo_original": ["Some Day He'll Make It Plain"],
     "corito": "No",
     "autor": ["Lida Shivers Leech"],
@@ -971,7 +971,7 @@
     }
   },
   {
-    "id": "himno-018",
+    "id": "himno_mv-018",
     "titulo_original": ["My Prayer"],
     "corito": "No",
     "autor": ["C. W. E. B."],
@@ -1030,7 +1030,7 @@
     }
   },
   {
-    "id": "himno-019",
+    "id": "himno_mv-019",
     "titulo_original": ["Just As I Am"],
     "corito": "No",
     "autor": [""],
@@ -1079,7 +1079,7 @@
     }
   },
   {
-    "id": "himno-020",
+    "id": "himno_mv-020",
     "titulo_original": ["I Belong to the King"],
     "corito": "No",
     "autor": [""],
@@ -1132,7 +1132,7 @@
     }
   },
   {
-    "id": "himno-021",
+    "id": "himno_mv-021",
     "titulo_original": ["Father, We Come to Thee"],
     "corito": "No",
     "autor": ["F. E. Belden"],
@@ -1181,7 +1181,7 @@
     }
   },
   {
-    "id": "himno-022",
+    "id": "himno_mv-022",
     "titulo_original": ["My King Divine"],
     "corito": "No",
     "autor": ["L. E. F."],
@@ -1240,7 +1240,7 @@
     }
   },
   {
-    "id": "himno-023",
+    "id": "himno_mv-023",
     "titulo_original": ["Everything to Jesus"],
     "corito": "No",
     "autor": ["James Rowe"],
@@ -1293,7 +1293,7 @@
     }
   },
   {
-    "id": "himno-024",
+    "id": "himno_mv-024",
     "titulo_original": ["I Would Be True"],
     "corito": "No",
     "autor": ["Harold Arnold Walters"],
@@ -1336,7 +1336,7 @@
     }
   },
   {
-    "id": "himno-025",
+    "id": "himno_mv-025",
     "titulo_original": ["I Would Be Like Jesus"],
     "corito": "No",
     "autor": ["H. C. Ball"],
@@ -1397,7 +1397,7 @@
     }
   },
   {
-    "id": "himno-026",
+    "id": "himno_mv-026",
     "titulo_original": ["More Like the Master"],
     "corito": "No",
     "autor": ["H. C. Ball"],
@@ -1465,7 +1465,7 @@
     }
   },
   {
-    "id": "himno-027",
+    "id": "himno_mv-027",
     "titulo_original": ["My Task"],
     "corito": "No",
     "autor": ["Maude Louise Ray", "F. H. Pickup"],
@@ -1515,7 +1515,7 @@
     }
   },
   {
-    "id": "himno-028",
+    "id": "himno_mv-028",
     "titulo_original": ["His Eye is on the Sparrow"],
     "corito": "No",
     "autor": ["V. Mendoza"],
@@ -1598,7 +1598,7 @@
     }
   },
   {
-    "id": "himno-029",
+    "id": "himno_mv-029",
     "titulo_original": ["Have Thine Own Way Lord"],
     "corito": "No",
     "autor": ["A. A. P."],
@@ -1651,7 +1651,7 @@
     }
   },
   {
-    "id": "himno-030",
+    "id": "himno_mv-030",
     "titulo_original": ["Saved, Saved"],
     "corito": "No",
     "autor": ["V. Mendoza"],
@@ -1728,7 +1728,7 @@
     }
   },
   {
-    "id": "himno-031",
+    "id": "himno_mv-031",
     "titulo_original": ["He Will Hold Me Fast"],
     "corito": "No",
     "autor": ["V. Mendoza"],
@@ -1793,7 +1793,7 @@
     }
   },
   {
-    "id": "himno-032",
+    "id": "himno_mv-032",
     "titulo_original": ["Take the Name of Jesus with You"],
     "corito": "No",
     "autor": ["T. M. Westrup"],
@@ -1852,7 +1852,7 @@
     }
   },
   {
-    "id": "himno-033",
+    "id": "himno_mv-033",
     "titulo_original": ["He Keeps Me Singing"],
     "corito": "No",
     "autor": ["L. B. B."],
@@ -1913,7 +1913,7 @@
     }
   },
   {
-    "id": "himno-034",
+    "id": "himno_mv-034",
     "titulo_original": ["Tell Me the Story of Jesus"],
     "corito": "No",
     "autor": ["Fanny J. Crosby"],
@@ -1984,7 +1984,7 @@
     }
   },
   {
-    "id": "himno-035",
+    "id": "himno_mv-035",
     "titulo_original": ["Rock of Ages"],
     "corito": "No",
     "autor": ["T. M. Westrup"],
@@ -2037,7 +2037,7 @@
     }
   },
   {
-    "id": "himno-036",
+    "id": "himno_mv-036",
     "titulo_original": ["Tell Me More About Jesus"],
     "corito": "No",
     "autor": ["V. Mendoza"],
@@ -2102,7 +2102,7 @@
     }
   },
   {
-    "id": "himno-037",
+    "id": "himno_mv-037",
     "titulo_original": ["Jesus, Lover of My Soul"],
     "corito": "No",
     "autor": ["T. M. Westrup"],
@@ -2161,7 +2161,7 @@
     }
   },
   {
-    "id": "himno-038",
+    "id": "himno_mv-038",
     "titulo_original": ["Why Should He Love Me So?"],
     "corito": "No",
     "autor": ["R. H."],
@@ -2226,7 +2226,7 @@
     }
   },
   {
-    "id": "himno-039",
+    "id": "himno_mv-039",
     "titulo_original": ["Jesus Paid It All"],
     "corito": "No",
     "autor": ["E. L. Maxwell"],
@@ -2303,7 +2303,7 @@
     }
   },
   {
-    "id": "himno-040",
+    "id": "himno_mv-040",
     "titulo_original": ["Alone"],
     "corito": "No",
     "autor": ["B. H. P."],
@@ -2368,7 +2368,7 @@
     }
   },
   {
-    "id": "himno-041",
+    "id": "himno_mv-041",
     "titulo_original": ["How Can I Help But Love Him?"],
     "corito": "No",
     "autor": ["S. D. Athans"],
@@ -2445,7 +2445,7 @@
     }
   },
   {
-    "id": "himno-042",
+    "id": "himno_mv-042",
     "titulo_original": ["How You Will Love Him"],
     "corito": "No",
     "autor": ["H. C. Ball"],
@@ -2522,7 +2522,7 @@
     }
   },
   {
-    "id": "himno-043",
+    "id": "himno_mv-043",
     "titulo_original": ["Precious Hiding Place"],
     "corito": "No",
     "autor": ["Avis B. Christiansen"],
@@ -2587,7 +2587,7 @@
     }
   },
   {
-    "id": "himno-044",
+    "id": "himno_mv-044",
     "titulo_original": ["Come Today"],
     "corito": "No",
     "autor": ["V. Mendoza"],
@@ -2662,7 +2662,7 @@
     }
   },
   {
-    "id": "himno-045",
+    "id": "himno_mv-045",
     "titulo_original": ["Pass Me Not"],
     "corito": "No",
     "autor": ["Francisca J. Crosby"],
@@ -2736,7 +2736,7 @@
     }
   },
   {
-    "id": "himno-046",
+    "id": "himno_mv-046",
     "titulo_original": ["My Lord and I"],
     "corito": "No",
     "autor": ["Sra. L. de Shorey"],
@@ -2805,7 +2805,7 @@
     }
   },
   {
-    "id": "himno-047",
+    "id": "himno_mv-047",
     "titulo_original": ["Finlandia"],
     "corito": "No",
     "autor": [""],
@@ -2850,7 +2850,7 @@
     }
   },
   {
-    "id": "himno-048",
+    "id": "himno_mv-048",
     "titulo_original": ["Altogether Lovely"],
     "corito": "No",
     "autor": ["María Wolf", "H. L. W. R. Adell"],
@@ -2927,7 +2927,7 @@
     }
   },
   {
-    "id": "himno-049",
+    "id": "himno_mv-049",
     "titulo_original": ["No One Ever Cared For Me Like Jesus"],
     "corito": "No",
     "autor": ["C. F. W."],
@@ -2992,7 +2992,7 @@
     }
   },
   {
-    "id": "himno-050",
+    "id": "himno_mv-050",
     "titulo_original": ["The Beauty of My Saviour's Face"],
     "corito": "No",
     "autor": ["A. H. A."],
@@ -3060,7 +3060,7 @@
     }
   },
   {
-    "id": "himno-051",
+    "id": "himno_mv-051",
     "titulo_original": ["Jesus Never Fails"],
     "corito": "No",
     "autor": ["A. A. L."],
@@ -3119,7 +3119,7 @@
     }
   },
   {
-    "id": "himno-052",
+    "id": "himno_mv-052",
     "titulo_original": ["Like Jesus"],
     "corito": "No",
     "autor": ["A. D. Ellington"],
@@ -3172,7 +3172,7 @@
     }
   },
   {
-    "id": "himno-053",
+    "id": "himno_mv-053",
     "titulo_original": ["In Jesus"],
     "corito": "No",
     "autor": ["A. M."],
@@ -3217,7 +3217,7 @@
     }
   },
   {
-    "id": "himno-054",
+    "id": "himno_mv-054",
     "titulo_original": ["Raise Me, Jesus, to Thy Bosom"],
     "corito": "No",
     "autor": ["Geo. Birdseye"],
@@ -3274,7 +3274,7 @@
     }
   },
   {
-    "id": "himno-055",
+    "id": "himno_mv-055",
     "titulo_original": ["Jesus, I Have Promised"],
     "corito": "No",
     "autor": ["J. B. Cabrera"],
@@ -3327,7 +3327,7 @@
     }
   },
   {
-    "id": "himno-056",
+    "id": "himno_mv-056",
     "titulo_original": ["He Lifted Me"],
     "corito": "No",
     "autor": ["V. Mendoza"],
@@ -3388,7 +3388,7 @@
     }
   },
   {
-    "id": "himno-057",
+    "id": "himno_mv-057",
     "titulo_original": ["Ivory Palaces"],
     "corito": "No",
     "autor": ["G. M. J. Lear"],
@@ -3441,7 +3441,7 @@
     }
   },
   {
-    "id": "himno-058",
+    "id": "himno_mv-058",
     "titulo_original": ["The Garden of My Heart"],
     "corito": "No",
     "autor": ["H. L."],
@@ -3513,7 +3513,7 @@
       }
     }
   },{
-    "id": "himno-059",
+    "id": "himno_mv-059",
     "titulo_original": ["Then Jesus Came"],
     "corito": "No",
     "autor": ["Oswald J. Smith"],
@@ -3574,7 +3574,7 @@
     }
   },
   {
-    "id": "himno-060",
+    "id": "himno_mv-060",
     "titulo_original": ["The Stranger of Galilee"],
     "corito": "No",
     "autor": ["Sra. C. H. Morris"],
@@ -3643,7 +3643,7 @@
     }
   },
   {
-    "id": "himno-061",
+    "id": "himno_mv-061",
     "titulo_original": ["The Prodigal Son"],
     "corito": "No",
     "autor": ["T. O. Chisholm"],
@@ -3702,7 +3702,7 @@
     }
   },
   {
-    "id": "himno-062",
+    "id": "himno_mv-062",
     "titulo_original": ["My Jesus, I Love Thee"],
     "corito": "No",
     "autor": [""],
@@ -3749,7 +3749,7 @@
     }
   },
   {
-    "id": "himno-063",
+    "id": "himno_mv-063",
     "titulo_original": ["Jesus Is Dearer than All"],
     "corito": "No",
     "autor": ["S. D. Athans"],
@@ -3796,7 +3796,7 @@
     }
   },
   {
-    "id": "himno-064",
+    "id": "himno_mv-064",
     "titulo_original": ["The Old Rugged Cross"],
     "corito": "No",
     "autor": [""],
@@ -3857,7 +3857,7 @@
     }
   },
   {
-    "id": "himno-065",
+    "id": "himno_mv-065",
     "titulo_original": ["I Walk With the King"],
     "corito": "No",
     "autor": ["H. C. Ball"],
@@ -3910,7 +3910,7 @@
     }
   },
   {
-    "id": "himno-066",
+    "id": "himno_mv-066",
     "titulo_original": ["I Need Jesus"],
     "corito": "No",
     "autor": [""],
