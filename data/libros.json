@@ -17,6 +17,16 @@
     "coritosPara": "cancionero"
   },
   {
+    "id": "melodias_de_victoria",
+    "archivo": "melodias_de_victoria.json",
+    "nombre": "Melodias de Victoria",
+    "icono": "",
+    "_comentario2": "\"icono\": \"🎵\"",
+    "numeroHimno": true,
+    "idiomaFijo": true,
+    "coritosPara": "cancionero"
+  },
+  {
     "id": "innario",
     "archivo": "innario_it.json",
     "nombre": "Innario Avventista",
@@ -35,6 +45,7 @@
     "icono": "",
     "_comentario3": "\"icono\": \"🏕️\""
   },
+
   {
     "id": "seleccion_argentina",
     "archivo": "seleccion_argentina.json",
