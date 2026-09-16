@@ -1212,22 +1212,33 @@ const SECTION_LABELS = [
   { type: "voces", regex: /^voz 1:?$/i },
   { type: "voces", regex: /^voz 2:?$/i },
   { type: "voces", regex: /^todos:?$/i },
+  { type: "voces", regex: /^unísono:?$/i },
+  { type: "voces", regex: /^a voces:?$/i },
   { type: "voces", regex: /^voz masculina:?$/i },
   { type: "voces", regex: /^voz femenina:?$/i },
 
   { type: "instruccion", regex: /^intro:?$/i },
+
   { type: "instruccion", regex: /^canon:?$/i },
+
   { type: "instruccion", regex: /^puente:?$/i },
+  { type: "instruccion", regex: /^bridge:?$/i },     // inglés (puente)
+  { type: "instruccion", regex: /^ponte:?$/i },      // italiano (puente)
+
   { type: "instruccion", regex: /^modula:?$/i },
   { type: "instruccion", regex: /^final:?$/i },
+
   { type: "instruccion", regex: /^interludio:?$/i },
+  { type: "instruccion", regex: /^interlude:?$/i },  // inglés (interludio)
+
   { type: "instruccion", regex: /^repite:?$/i },
   { type: "instruccion", regex: /^repite x2:?$/i },
   { type: "instruccion", regex: /^repite x3:?$/i },
+
   { type: "instruccion", regex: /^instrucción x3:?$/i },
-  { type: "instruccion", regex: /^bridge:?$/i },     // inglés (puente)
-  { type: "instruccion", regex: /^interlude:?$/i },  // inglés (interludio)
-  { type: "instruccion", regex: /^ponte:?$/i },      // italiano (puente)
+  
+  
+  
 ];
 
 function detectSectionLabel(clean) {
