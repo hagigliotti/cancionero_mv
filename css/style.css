@@ -2720,12 +2720,27 @@ details[open] .sec-chevron { transform: rotate(90deg); }
   flex-shrink: 0;
 }
 
+/* Mis Pedidos de Oración mete el panel de "nuevo pedido", "crear lista" y
+   exportar/importar DENTRO de .about-body (a diferencia de Mis Listas, que
+   los deja fijos afuera) para que TODO el modal scrollee junto — si no,
+   con muchos pedidos/listas el modal se quedaba sin espacio para mostrarlos
+   y no había forma de scrollear para verlos. Como esas clases ya traen su
+   propio padding lateral (pensado para ir pegadas al borde del modal),
+   quitamos ese padding acá para no duplicarlo con el de .about-body */
+#oracionModal .about-body > .oracion-nuevo-panel,
+#oracionModal .about-body > .nueva-lista-row,
+#oracionModal .about-body > .listas-io-row,
+#oracionModal .about-body > .listas-io-hint {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .oracion-nuevo-panel textarea {
   width: 100%;
   resize: vertical;
   min-height: 44px;
   padding: 10px 14px;
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-lg);
   border: none;
   outline: none;
   font: inherit;

@@ -72,6 +72,25 @@ function actualizarVersiculoInicio() {
   referenciaEl.textContent = v.referencia;
 }
 
+// Placeholder del buscador principal (#buscador) en cada idioma — mismo
+// patrón que VERSICULO_INICIO: el guaraní no tiene entrada propia acá y cae
+// al español (ver actualizarBuscadorPlaceholder()).
+const BUSCADOR_PLACEHOLDER = {
+  es: "🔎 Buscar por título, letra, autor, compositor, ritmo o tags",
+  en: "🔎 Search by title, lyrics, author, composer, rhythm or tags",
+  it: "🔎 Cerca per titolo, testo, autore, compositore, ritmo o tag",
+  pt: "🔎 Buscar por título, letra, autor, compositor, ritmo ou tags",
+  fr: "🔎 Rechercher par titre, paroles, auteur, compositeur, rythme ou tags",
+  de: "🔎 Suche nach Titel, Text, Autor, Komponist, Rhythmus oder Tags"
+};
+
+function actualizarBuscadorPlaceholder() {
+  const buscadorEl = document.getElementById("buscador");
+  if (!buscadorEl) return;
+
+  buscadorEl.placeholder = BUSCADOR_PLACEHOLDER[idiomaActual] || BUSCADOR_PLACEHOLDER.es;
+}
+
 // ===============================================================================================
 // ===================== TRADUCCIÓN DE TAGS ======================================================
 // El diccionario TAG_TRANSLATIONS y la función getTagDisplay() se movieron a
@@ -297,6 +316,7 @@ function initLanguage(defaultLang = "es") {
 
   updateLangFlag();
   actualizarVersiculoInicio();
+  actualizarBuscadorPlaceholder();
 }
 
 
@@ -349,6 +369,7 @@ function setIdioma(lang) {
   updateLangFlag();
   renderBanderaSelect();
   actualizarVersiculoInicio();
+  actualizarBuscadorPlaceholder();
 
   // refrescar UI dependiente del idioma
   renderAlphabet();
