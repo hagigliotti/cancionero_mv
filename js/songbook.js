@@ -314,7 +314,7 @@ function openSong(id) {
     <button type="button" class="fav-add-btn" ${dataAction("abrirMisListas", [song.id])} title="Agregar a una lista">⭐</button>
 
     <div class="teleprompter-bar" id="teleprompterBar" data-bpm="${normalizeMeta(song, "tempo_bpm") || ""}">
-      <span class="teleprompter-label">Teleprónter</span>
+      <span class="teleprompter-label">${t("teleprompter")}</span>
       <button type="button" class="teleprompter-play-btn" id="teleprompterPlayBtn" ${dataAction("toggleTeleprompter")} title="Teleprompter: scroll automático de la letra">▶</button>
       <div class="teleprompter-speed">
         <button type="button" ${dataAction("adjustTeleprompterSpeed", [-1])} title="Más lento">−</button>

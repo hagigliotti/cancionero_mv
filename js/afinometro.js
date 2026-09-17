@@ -1313,7 +1313,7 @@ function applyChordFollowsTransposeState() {
   const btn = document.getElementById("chordTransposeToggleBtn");
   if (!btn) return;
 
-  btn.innerText = chordFollowsTranspose ? "Activo" : "Inactivo";
+  btn.innerText = chordFollowsTranspose ? t("activo") : t("inactivo");
   btn.classList.remove("on", "off");
   btn.classList.add(chordFollowsTranspose ? "on" : "off");
 }

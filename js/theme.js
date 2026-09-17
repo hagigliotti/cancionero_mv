@@ -132,7 +132,7 @@ function showToast(msg) {
 function toggleProjectorMode() {
   // bloquear solo en celulares — tablets, PC y Mac sí pueden usarlo
   if (isSmartphone()) {
-    alert("📱 El modo proyector solo está disponible en tablets, PC o Mac.");
+    alert(t("proyector_solo_desktop"));
     return;
   }
 
@@ -168,12 +168,10 @@ function initProjectorToggleButton() {
 
   btn.addEventListener("click", toggleProjectorMode);
 
-  // el proyector no funciona en celulares: directamente se oculta el
-  // control entero (con su título "Modo iglesia") para no ofrecer algo
-  // que solo va a mostrar una alerta de bloqueo
-  if (isSmartphone()) {
-    document.getElementById("projectorToggleGroup")?.classList.add("hidden");
-  }
+  // el proyector no funciona en celulares, pero el control queda visible
+  // igual (antes se ocultaba entero) para que la gente sepa que existe —
+  // al tocarlo en un celular, toggleProjectorMode() ya se encarga de avisar
+  // con un alert() que es solo para PC/tablet, en el idioma activo
 }
 
 function updateProjectorMenuButton() {
@@ -182,7 +180,7 @@ function updateProjectorMenuButton() {
 
   const activo = document.body.classList.contains("projector");
 
-  btn.innerText = activo ? "Activo" : "Inactivo";
+  btn.innerText = activo ? t("activo") : t("inactivo");
   btn.classList.remove("on", "off");
   btn.classList.add(activo ? "on" : "off");
 }

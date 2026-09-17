@@ -445,17 +445,17 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=169",
-    "modals/revised.html?v=169",
-    "modals/people.html?v=169",
-    "modals/valores.html?v=169",
-    "modals/share.html?v=169",
-    "modals/contacto.html?v=169",
-    "modals/afinometro.html?v=169",
-    "modals/biblioteca.html?v=169",
-    "modals/listas.html?v=169",
-    "modals/notepad.html?v=169",
-    "modals/oracion.html?v=169"
+    "modals/info.html?v=170",
+    "modals/revised.html?v=170",
+    "modals/people.html?v=170",
+    "modals/valores.html?v=170",
+    "modals/share.html?v=170",
+    "modals/contacto.html?v=170",
+    "modals/afinometro.html?v=170",
+    "modals/biblioteca.html?v=170",
+    "modals/listas.html?v=170",
+    "modals/notepad.html?v=170",
+    "modals/oracion.html?v=170"
   ];
 
   for (const path of modales) {
@@ -586,7 +586,11 @@ async function init() {
   });
 
   document.getElementById("idioma").addEventListener("change", e => {
-      if (getLibroDef(libroActual)?.idiomaFijo) return;
+      if (getLibroDef(libroActual)?.idiomaFijo) {
+        e.target.value = idiomaActual; // el <select> ya había cambiado solo, se revierte
+        showToast(t("idioma_fijo_aviso"));
+        return;
+      }
 
       setIdioma(e.target.value);
       document.getElementById("menuIdioma").value = e.target.value;
@@ -596,7 +600,11 @@ async function init() {
     });
 
   document.getElementById("menuIdioma").addEventListener("change", e => {
-      if (getLibroDef(libroActual)?.idiomaFijo) return;
+      if (getLibroDef(libroActual)?.idiomaFijo) {
+        e.target.value = idiomaActual; // el <select> ya había cambiado solo, se revierte
+        showToast(t("idioma_fijo_aviso"));
+        return;
+      }
 
       setIdioma(e.target.value);
     });
@@ -827,7 +835,7 @@ function applyTablaturaState() {
   });
 
   if (btn) {
-    btn.innerText = tablaturaVisible ? "Ocultar" : "Mostrar";
+    btn.innerText = tablaturaVisible ? t("ocultar") : t("mostrar");
 
     btn.classList.remove("on", "off");
     btn.classList.add(tablaturaVisible ? "on" : "off");
@@ -857,7 +865,7 @@ function applyTeleprompterBarVisibility() {
   if (!teleprompterBarVisible) stopTeleprompter();
 
   if (btn) {
-    btn.innerText = teleprompterBarVisible ? "Ocultar" : "Mostrar";
+    btn.innerText = teleprompterBarVisible ? t("ocultar") : t("mostrar");
 
     btn.classList.remove("on", "off");
     btn.classList.add(teleprompterBarVisible ? "on" : "off");

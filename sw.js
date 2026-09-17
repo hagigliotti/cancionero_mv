@@ -8,7 +8,7 @@
 
 // 👉 Subir este número cada vez que cambie la lista de archivos de abajo
 // (o cuando quieras forzar que todos descarten la caché vieja).
-const CACHE_VERSION = "v169";
+const CACHE_VERSION = "v170";
 
 const APP_SHELL_CACHE = `cancionero-shell-${CACHE_VERSION}`;
 const DATA_CACHE = `cancionero-data-${CACHE_VERSION}`;
@@ -16,36 +16,36 @@ const DATA_CACHE = `cancionero-data-${CACHE_VERSION}`;
 const APP_SHELL_FILES = [
   "./",
   "index.html",
-  "css/style.css?v=169",
-  "css/notepad.css?v=169",
-  "manifest.webmanifest?v=169",
+  "css/style.css?v=170",
+  "css/notepad.css?v=170",
+  "manifest.webmanifest?v=170",
 
-  "js/tag-translations.js?v=169",
-  "js/lenguage.js?v=169",
-  "js/utils.js?v=169",
-  "js/theme.js?v=169",
-  "js/afinometro.js?v=169",
-  "js/app.js?v=169",
-  "js/songbook.js?v=169",
-  "js/notepad.js?v=169",
-  "js/oracion.js?v=169",
+  "js/tag-translations.js?v=170",
+  "js/lenguage.js?v=170",
+  "js/utils.js?v=170",
+  "js/theme.js?v=170",
+  "js/afinometro.js?v=170",
+  "js/app.js?v=170",
+  "js/songbook.js?v=170",
+  "js/notepad.js?v=170",
+  "js/oracion.js?v=170",
 
-  "modals/info.html?v=169",
-  "modals/revised.html?v=169",
-  "modals/people.html?v=169",
-  "modals/share.html?v=169",
-  "modals/contacto.html?v=169",
-  "modals/afinometro.html?v=169",
-  "modals/biblioteca.html?v=169",
-  "modals/listas.html?v=169",
-  "modals/notepad.html?v=169",
-  "modals/oracion.html?v=169",
+  "modals/info.html?v=170",
+  "modals/revised.html?v=170",
+  "modals/people.html?v=170",
+  "modals/share.html?v=170",
+  "modals/contacto.html?v=170",
+  "modals/afinometro.html?v=170",
+  "modals/biblioteca.html?v=170",
+  "modals/listas.html?v=170",
+  "modals/notepad.html?v=170",
+  "modals/oracion.html?v=170",
 
-  "imagenes/icons/favicon-16.png?v=169",
-  "imagenes/icons/favicon-32.png?v=169",
-  "imagenes/icons/apple-touch-icon.png?v=169",
-  "imagenes/icons/icon-192.png?v=169",
-  "imagenes/icons/icon-512.png?v=169",
+  "imagenes/icons/favicon-16.png?v=170",
+  "imagenes/icons/favicon-32.png?v=170",
+  "imagenes/icons/apple-touch-icon.png?v=170",
+  "imagenes/icons/icon-192.png?v=170",
+  "imagenes/icons/icon-512.png?v=170",
 
   "imagenes/Cancionero_blue.png",
   "imagenes/Cancionero_white.png",

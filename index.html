@@ -9,10 +9,10 @@
   <title>Cancionero App</title>
 
   <!-- PWA / APARIENCIA DE APP -->
-  <link rel="manifest" href="manifest.webmanifest?v=169">
-  <link rel="icon" href="imagenes/icons/favicon-32.png?v=169" sizes="32x32">
-  <link rel="icon" href="imagenes/icons/favicon-16.png?v=169" sizes="16x16">
-  <link rel="apple-touch-icon" href="imagenes/icons/apple-touch-icon.png?v=169">
+  <link rel="manifest" href="manifest.webmanifest?v=170">
+  <link rel="icon" href="imagenes/icons/favicon-32.png?v=170" sizes="32x32">
+  <link rel="icon" href="imagenes/icons/favicon-16.png?v=170" sizes="16x16">
+  <link rel="apple-touch-icon" href="imagenes/icons/apple-touch-icon.png?v=170">
 
   <meta name="theme-color" content="#122033">
   <meta name="mobile-web-app-capable" content="yes">
@@ -24,8 +24,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css?v=169">
-  <link rel="stylesheet" href="css/notepad.css?v=169">
+  <link rel="stylesheet" href="css/style.css?v=170">
+  <link rel="stylesheet" href="css/notepad.css?v=170">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XS6DM59CNT"></script>
@@ -73,50 +73,50 @@
               <button type="button" class="app-badge" title="Mis Pedidos de Oración" aria-label="Mis Pedidos de Oración" data-action="abrirPedidosOracion">🛐</button>
             </div>
             <h2>Cancionero App</h2>
-            <div class="about-meta">Menú</div>
+            <div class="about-meta" id="txtMenu">Menú</div>
           </div>
 
           <div class="menu-body">
 
             <div class="menu-group">
               <div class="menu-item" data-action="abrirInfoDesdeMenu">
-                <span class="sec-icon">ℹ️</span> Información de la app
+                <span class="sec-icon">ℹ️</span> <span id="txtInfoApp">Información de la app</span>
               </div>
             </div>
 
             <div class="menu-group">
-              <p class="contact-label">Recursos</p>
+              <p class="contact-label" id="txtRecursos">Recursos</p>
 
               <div class="menu-row">
                 <span class="sec-icon">📖</span>
-                <span class="menu-row-label">Libro</span>
+                <span class="menu-row-label" id="txtLibro">Libro</span>
                 <select id="menuLibro">
                   <!-- opciones generadas en app.js desde data/libros.json -->
                 </select>
               </div>
 
               <div class="menu-item" data-action="abrirBiblioteca">
-                <span class="sec-icon">📚</span> Biblioteca
+                <span class="sec-icon">📚</span> <span id="txtBiblioteca">Biblioteca</span>
               </div>
 
             </div>
 
             <div class="menu-group">
-              <p class="contact-label">Mi música</p>
+              <p class="contact-label" id="txtMiMusica">Mi música</p>
 
-              <div class="menu-item" data-action="abrirMisListas"><span class="sec-icon">⭐</span> Mis Listas</div>
+              <div class="menu-item" data-action="abrirMisListas"><span class="sec-icon">⭐</span> <span id="txtMisListas">Mis Listas</span></div>
 
               <div class="menu-item" data-action="abrirNotepad">
-                <span class="sec-icon">🎙️</span> Bloc musical
+                <span class="sec-icon">🎙️</span> <span id="txtBlocMusical">Bloc musical</span>
               </div>
             </div>
 
             <div class="menu-group">
-              <p class="contact-label">Herramientas</p>
+              <p class="contact-label" id="txtHerramientas">Herramientas</p>
 
               <div class="menu-row">
                 <span class="sec-icon">🅰️</span>
-                <span class="menu-row-label">Tamaño de letra</span>
+                <span class="menu-row-label" id="txtTamanoLetra">Tamaño de letra</span>
                 <div class="font-controls">
                   <button type="button" data-action="cambiarFuente" data-args="[-1]">A-</button>
                   <button type="button" data-action="resetFuente">A</button>
@@ -125,12 +125,12 @@
               </div>
 
               <div class="menu-item" data-action="abrirAfinometroModal">
-                <span class="sec-icon">📟</span> Metrónomo y Afinador
+                <span class="sec-icon">📟</span> <span id="txtMetronomoAfinador">Metrónomo y Afinador</span>
               </div>
 
               <div class="menu-row">
                 <span class="sec-icon">🎼</span>
-                <span class="menu-row-label">Transponer tonalidad</span>
+                <span class="menu-row-label" id="txtTransponerTonalidad">Transponer tonalidad</span>
                 <div class="font-controls transpose-controls">
                   <button type="button" data-action="transposeChords" data-args="[-1]" title="Medio tono abajo">♭</button>
                   <button type="button" data-action="resetTranspose" title="Tonalidad original">♮</button>
@@ -140,7 +140,7 @@
 
               <div class="menu-row">
                 <span class="sec-icon">🎹</span>
-                <span class="menu-row-label">Diagrama de acordes</span>
+                <span class="menu-row-label" id="txtDiagramaAcordes">Diagrama de acordes</span>
                 <select id="menuChordInstrument" class="chord-instrument-select">
                   <option value="ninguno">Ninguno</option>
                   <option value="piano">Piano</option>
@@ -152,29 +152,29 @@
 
               <div class="menu-row" id="tabToggle">
                 <span class="sec-icon">🎸</span>
-                <span class="menu-row-label">Tablatura</span>
+                <span class="menu-row-label" id="txtTablatura">Tablatura</span>
                 <button id="tabBtn" class="menu-toggle-btn" type="button">Mostrar</button>
               </div>
 
               <div class="menu-row" id="chordTransposeToggleRow">
                 <span class="sec-icon">🎚️</span>
-                <span class="menu-row-label">Trasporte</span>
+                <span class="menu-row-label" id="txtTrasporte">Trasporte</span>
                 <button id="chordTransposeToggleBtn" class="menu-toggle-btn" type="button">Activo</button>
               </div>
 
               <div class="menu-row" id="teleprompterToggleRow">
                 <span class="sec-icon">📜</span>
-                <span class="menu-row-label">Teleprónter</span>
+                <span class="menu-row-label" id="txtTeleprompterMenu">Teleprónter</span>
                 <button id="teleprompterToggleBtn" class="menu-toggle-btn" type="button">Ocultar</button>
               </div>
             </div>
 
             <div class="menu-group">
-              <p class="contact-label">Ajustes</p>
+              <p class="contact-label" id="txtAjustes">Ajustes</p>
 
               <div class="menu-row">
                 <span class="sec-icon" id="idiomaFlagIcon" data-action="abrirBanderaPicker" title="Tocá para elegir tu bandera"><span id="idiomaFlagIconEmoji">🌐</span><span class="tap-hint-badge" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span></span>
-                <span class="menu-row-label">Idioma de las canciones</span>
+                <span class="menu-row-label" id="txtIdiomaCanciones">Idioma de las canciones</span>
                 <select id="menuIdioma">
                   <option value="en">English</option>
                   <option value="es">Español</option>
@@ -186,7 +186,7 @@
 
               <div class="menu-row menu-row-accent">
                 <span class="sec-icon">🎨</span>
-                <span class="menu-row-label">Color del tema</span>
+                <span class="menu-row-label" id="txtColorTema">Color del tema</span>
               </div>
               <div class="accent-picker" id="accentPicker">
                 <button type="button" class="accent-swatch" data-accent-option="monocromo" title="Blanco y negro" aria-label="Blanco y negro" data-action="setAccentColor" data-args='["monocromo"]'><span class="accent-swatch-dot" style="--sw:#404040; background: linear-gradient(135deg, #fff 50%, #262626 50%);"></span></button>
@@ -204,10 +204,10 @@
             </div>
 
             <div class="menu-group" id="projectorToggleGroup">
-              <p class="contact-label">Modo iglesia</p>
+              <p class="contact-label" id="txtModoIglesia">Modo iglesia</p>
               <div class="menu-row" id="projectorToggleRow">
                 <span class="sec-icon">📽️</span>
-                <span class="menu-row-label">Proyector</span>
+                <span class="menu-row-label" id="txtProyector">Proyector</span>
                 <button id="projectorToggleBtn" class="menu-toggle-btn" type="button">Inactivo</button>
               </div>
             </div>
@@ -215,11 +215,11 @@
           </div>
 
           <div class="menu-contact">
-            <p class="contact-label">Feedback</p>
+            <p class="contact-label" id="txtFeedback">Feedback</p>
             <div class="menu-actions-row">
               <a href="#" class="menu-action-btn share-c" data-action="closeMenu,abrirShareModal">
                 <span class="menu-action-icon">🔗</span>
-                <span>Compartir</span>
+                <span id="txtCompartir">Compartir</span>
               </a>
               <a href="https://revolut.me/hagigliotti" target="_blank" rel="noopener noreferrer" class="menu-action-btn donate-c">
                 <span class="menu-action-icon">☕</span>
@@ -227,7 +227,7 @@
               </a>
               <a href="#" class="menu-action-btn contact-c" data-action="closeMenu,abrirContactoModal">
                 <span class="menu-action-icon">✉️</span>
-                <span>Contacto</span>
+                <span id="txtContacto">Contacto</span>
               </a>
             </div>
           </div>
@@ -314,15 +314,15 @@
 
 
 <!-- ======================================== JS ======================================== -->
-<script src="js/tag-translations.js?v=169"></script>
-<script src="js/lenguage.js?v=169"></script>
-<script src="js/utils.js?v=169"></script>
-<script src="js/theme.js?v=169"></script>
-<script src="js/afinometro.js?v=169"></script>
-<script src="js/app.js?v=169"></script>
-<script src="js/songbook.js?v=169"></script>
-<script src="js/notepad.js?v=169"></script>
-<script src="js/oracion.js?v=169"></script>
+<script src="js/tag-translations.js?v=170"></script>
+<script src="js/lenguage.js?v=170"></script>
+<script src="js/utils.js?v=170"></script>
+<script src="js/theme.js?v=170"></script>
+<script src="js/afinometro.js?v=170"></script>
+<script src="js/app.js?v=170"></script>
+<script src="js/songbook.js?v=170"></script>
+<script src="js/notepad.js?v=170"></script>
+<script src="js/oracion.js?v=170"></script>
 
 <!-- ======================================== PWA OFFLINE ======================================== -->
 <div id="updateBanner" class="update-banner">

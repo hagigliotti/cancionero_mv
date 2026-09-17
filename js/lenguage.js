@@ -67,7 +67,7 @@ function actualizarVersiculoInicio() {
   const referenciaEl = document.getElementById("referenciaInicio");
   if (!versiculoEl || !referenciaEl) return;
 
-  const v = VERSICULO_INICIO[idiomaActual] || VERSICULO_INICIO.es;
+  const v = conFallbackIdioma(VERSICULO_INICIO);
   versiculoEl.textContent = v.texto;
   referenciaEl.textContent = v.referencia;
 }
@@ -88,19 +88,87 @@ function actualizarBuscadorPlaceholder() {
   const buscadorEl = document.getElementById("buscador");
   if (!buscadorEl) return;
 
-  buscadorEl.placeholder = BUSCADOR_PLACEHOLDER[idiomaActual] || BUSCADOR_PLACEHOLDER.es;
+  buscadorEl.placeholder = conFallbackIdioma(BUSCADOR_PLACEHOLDER);
+}
+
+// traduce el texto fijo del menú (☰) — cada elemento tiene un id "txt..."
+// puesto a propósito en index.html para esto. Se llama junto con
+// actualizarVersiculoInicio()/actualizarBuscadorPlaceholder() cada vez que
+// se inicia o se cambia el idioma.
+function actualizarMenuIdioma() {
+  const setText = (id, key) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = t(key);
+  };
+
+  setText("txtMenu", "menu");
+  setText("txtInfoApp", "info_app");
+  setText("txtRecursos", "recursos");
+  setText("txtLibro", "libro");
+  setText("txtBiblioteca", "biblioteca");
+  setText("txtMiMusica", "mi_musica");
+  setText("txtMisListas", "mis_listas");
+  setText("txtBlocMusical", "bloc_musical");
+  setText("txtHerramientas", "herramientas");
+  setText("txtTamanoLetra", "tamano_letra");
+  setText("txtMetronomoAfinador", "metronomo_afinador");
+  setText("txtTransponerTonalidad", "transponer_tonalidad");
+  setText("txtDiagramaAcordes", "diagrama_acordes");
+  setText("txtTablatura", "tablatura");
+  setText("txtTrasporte", "trasporte");
+  setText("txtTeleprompterMenu", "teleprompter");
+  setText("txtAjustes", "ajustes");
+  setText("txtIdiomaCanciones", "idioma_canciones");
+  setText("txtColorTema", "color_tema");
+  setText("txtModoIglesia", "modo_iglesia");
+  setText("txtProyector", "proyector");
+  setText("txtFeedback", "feedback");
+  setText("txtCompartir", "compartir");
+  setText("txtContacto", "contacto");
+
+  // "Ninguno/Piano/Guitarra/Bajo/Ukelele" del diagrama de acordes: hay dos
+  // selects con las mismas opciones (menú y popover de acorde en la letra)
+  ["menuChordInstrument", "chordPopoverInstrument"].forEach(id => {
+    const sel = document.getElementById(id);
+    if (!sel) return;
+    Array.from(sel.options).forEach(opt => { opt.textContent = t(opt.value); });
+  });
+
+  // los botones "Mostrar/Ocultar"/"Activo/Inactivo" arman su propio texto
+  // según su estado actual (ver applyTablaturaState, etc.) — se refrescan
+  // llamando a esas mismas funciones en vez de traducir el botón a mano acá
+  if (typeof applyTablaturaState === "function") applyTablaturaState();
+  if (typeof applyTeleprompterBarVisibility === "function") applyTeleprompterBarVisibility();
+  if (typeof applyChordFollowsTransposeState === "function") applyChordFollowsTransposeState();
+  if (typeof updateProjectorMenuButton === "function") updateProjectorMenuButton();
 }
 
 // ===============================================================================================
-// ===================== ETIQUETAS FIJAS DE LA FICHA DE CANCIÓN =================================
-// Palabras fijas que arma songbook.js/utils.js/app.js al mostrar la ficha de
-// una canción (etiquetas como "Autor:", "Compositor:", "Revisado:") y
-// valores placeholder que vienen TAL CUAL guardados en data/*.json cuando el
-// dato real no se conoce ("Desconocido", "Anónimo" — ver autor/compositor/
-// año/etc. en los JSON). No confundir con TAG_TRANSLATIONS (tag-translations.js,
-// solo para tags) ni con nombres reales de persona, que nunca se traducen.
-// Guaraní cae al español, mismo patrón que el resto de este archivo.
+// ===================== REGLA GENERAL DE FALLBACK DE IDIOMA ====================================
+// es/gn → siempre español (gn no tiene traducciones propias en esta app: se
+// muestra todo en español a propósito). Cualquier otro idioma → su propia
+// traducción si el diccionario la tiene; si no, cae al inglés (no al
+// español) — así un idioma que todavía no tiene traducciones propias (ej.
+// hebreo, zulú, islandés, afrikáans, suajili) queda en inglés en vez de
+// español, y si ni el inglés está cargado, recién ahí cae al español como
+// último recurso. Todos los diccionarios de este archivo (UI_LABELS,
+// VERSICULO_INICIO, BUSCADOR_PLACEHOLDER) usan esta misma regla acá.
+function conFallbackIdioma(dict, lang = idiomaActual) {
+  if (!lang || lang === "es" || lang === "gn") return dict.es;
+  return dict[lang] || dict.en || dict.es;
+}
+
+// ===============================================================================================
+// ===================== ETIQUETAS FIJAS DE LA INTERFAZ ==========================================
+// Palabras fijas de la interfaz: la ficha de canción (etiquetas como
+// "Autor:", "Compositor:", "Revisado:"), valores placeholder que vienen TAL
+// CUAL guardados en data/*.json cuando el dato real no se conoce
+// ("Desconocido", "Anónimo") y el menú (☰). No confundir con
+// TAG_TRANSLATIONS (tag-translations.js, solo para tags) ni con nombres
+// reales de persona, que nunca se traducen. Sigue la regla de
+// conFallbackIdioma() de arriba.
 const UI_LABELS = {
+  // ficha de canción
   idiomas:            { es: "Idiomas",            en: "Languages",       it: "Lingue",              pt: "Idiomas",            fr: "Langues",            de: "Sprachen" },
   original:           { es: "Original",           en: "Original",        it: "Originale",           pt: "Original",           fr: "Original",           de: "Original" },
   otros_titulos:      { es: "Otros títulos",      en: "Other titles",    it: "Altri titoli",        pt: "Outros títulos",     fr: "Autres titres",      de: "Andere Titel" },
@@ -123,7 +191,64 @@ const UI_LABELS = {
   si:                 { es: "Si",                 en: "Yes",             it: "Sì",                  pt: "Sim",                fr: "Oui",                de: "Ja" },
   no:                 { es: "No",                 en: "No",              it: "No",                  pt: "Não",                fr: "Non",                de: "Nein" },
   desconocido:        { es: "Desconocido",        en: "Unknown",         it: "Sconosciuto",         pt: "Desconhecido",       fr: "Inconnu",            de: "Unbekannt" },
-  anonimo:            { es: "Anónimo",            en: "Anonymous",       it: "Anonimo",             pt: "Anônimo",            fr: "Anonyme",            de: "Anonym" }
+  anonimo:            { es: "Anónimo",            en: "Anonymous",       it: "Anonimo",             pt: "Anônimo",            fr: "Anonyme",            de: "Anonym" },
+  teleprompter:       { es: "Teleprónter",        en: "Teleprompter",    it: "Teleprompter",        pt: "Teleprompter",       fr: "Téléprompteur",      de: "Teleprompter" },
+
+  // menú (☰)
+  menu:                    { es: "Menú",                   en: "Menu",                  it: "Menu",                    pt: "Menu",                    fr: "Menu",                     de: "Menü" },
+  info_app:                { es: "Información de la app",  en: "App information",       it: "Informazioni sull'app",   pt: "Informações do app",      fr: "Informations sur l'app",   de: "App-Informationen" },
+  recursos:                { es: "Recursos",               en: "Resources",             it: "Risorse",                 pt: "Recursos",                fr: "Ressources",               de: "Ressourcen" },
+  libro:                   { es: "Libro",                  en: "Book",                  it: "Libro",                   pt: "Livro",                   fr: "Livre",                    de: "Buch" },
+  biblioteca:              { es: "Biblioteca",             en: "Library",               it: "Biblioteca",              pt: "Biblioteca",              fr: "Bibliothèque",             de: "Bibliothek" },
+  mi_musica:               { es: "Mi música",              en: "My music",              it: "La mia musica",           pt: "Minha música",            fr: "Ma musique",               de: "Meine Musik" },
+  mis_listas:              { es: "Mis Listas",             en: "My Setlists",           it: "Le mie scalette",         pt: "Minhas Listas",           fr: "Mes listes",               de: "Meine Listen" },
+  bloc_musical:            { es: "Bloc musical",           en: "Music notepad",         it: "Blocco musicale",        pt: "Bloco musical",           fr: "Bloc-notes musical",       de: "Musiknotizblock" },
+  herramientas:            { es: "Herramientas",           en: "Tools",                 it: "Strumenti",               pt: "Ferramentas",             fr: "Outils",                   de: "Werkzeuge" },
+  tamano_letra:            { es: "Tamaño de letra",        en: "Text size",             it: "Dimensione testo",        pt: "Tamanho da letra",        fr: "Taille du texte",          de: "Textgröße" },
+  metronomo_afinador:      { es: "Metrónomo y Afinador",   en: "Metronome & Tuner",     it: "Metronomo e Accordatore", pt: "Metrônomo e Afinador",    fr: "Métronome et Accordeur",   de: "Metronom und Stimmgerät" },
+  transponer_tonalidad:    { es: "Transponer tonalidad",   en: "Transpose key",         it: "Trasporta tonalità",      pt: "Transpor tom",            fr: "Transposer la tonalité",   de: "Tonart transponieren" },
+  diagrama_acordes:        { es: "Diagrama de acordes",    en: "Chord diagram",         it: "Diagramma accordi",       pt: "Diagrama de acordes",     fr: "Diagramme d'accords",      de: "Akkorddiagramm" },
+  tablatura:               { es: "Tablatura",              en: "Tablature",             it: "Tablatura",               pt: "Tablatura",               fr: "Tablature",                de: "Tabulatur" },
+  trasporte:               { es: "Trasporte",              en: "Chord transpose",       it: "Trasporto",               pt: "Transporte",              fr: "Transposition",            de: "Transponierung" },
+  ajustes:                 { es: "Ajustes",                en: "Settings",              it: "Impostazioni",            pt: "Ajustes",                 fr: "Paramètres",               de: "Einstellungen" },
+  idioma_canciones:        { es: "Idioma de las canciones",en: "Song language",         it: "Lingua dei canti",        pt: "Idioma das músicas",      fr: "Langue des chants",        de: "Liedsprache" },
+  color_tema:              { es: "Color del tema",         en: "Theme color",           it: "Colore del tema",         pt: "Cor do tema",             fr: "Couleur du thème",         de: "Themenfarbe" },
+  modo_iglesia:            { es: "Modo iglesia",           en: "Church mode",           it: "Modalità chiesa",         pt: "Modo igreja",             fr: "Mode église",              de: "Kirchenmodus" },
+  proyector:               { es: "Proyector",              en: "Projector",             it: "Proiettore",              pt: "Projetor",                fr: "Projecteur",               de: "Projektor" },
+  feedback:                { es: "Feedback",               en: "Feedback",              it: "Feedback",                pt: "Feedback",                fr: "Retours",                  de: "Feedback" },
+  compartir:               { es: "Compartir",              en: "Share",                 it: "Condividi",               pt: "Compartilhar",            fr: "Partager",                 de: "Teilen" },
+  contacto:                { es: "Contacto",               en: "Contact",               it: "Contatto",                pt: "Contato",                 fr: "Contact",                  de: "Kontakt" },
+
+  // botones de estado on/off del menú
+  mostrar:                 { es: "Mostrar",   en: "Show",     it: "Mostra",   pt: "Mostrar",  fr: "Afficher",  de: "Anzeigen" },
+  ocultar:                 { es: "Ocultar",   en: "Hide",     it: "Nascondi", pt: "Ocultar",  fr: "Masquer",   de: "Ausblenden" },
+  activo:                  { es: "Activo",    en: "On",       it: "Attivo",   pt: "Ativo",    fr: "Actif",     de: "Aktiv" },
+  inactivo:                { es: "Inactivo",  en: "Off",      it: "Inattivo", pt: "Inativo",  fr: "Inactif",   de: "Inaktiv" },
+
+  // instrumentos del diagrama de acordes
+  ninguno:                 { es: "Ninguno",  en: "None",    it: "Nessuno", pt: "Nenhum",  fr: "Aucun",   de: "Keine" },
+  piano:                   { es: "Piano",    en: "Piano",   it: "Piano",   pt: "Piano",   fr: "Piano",   de: "Piano" },
+  guitarra:                { es: "Guitarra", en: "Guitar",  it: "Chitarra",pt: "Violão",  fr: "Guitare", de: "Gitarre" },
+  bajo:                    { es: "Bajo",     en: "Bass",    it: "Basso",   pt: "Baixo",   fr: "Basse",   de: "Bass" },
+  ukelele:                 { es: "Ukelele",  en: "Ukulele", it: "Ukulele", pt: "Ukulele", fr: "Ukulélé", de: "Ukulele" },
+
+  // avisos
+  idioma_fijo_aviso:       {
+    es: "Este libro tiene un solo idioma — no se puede cambiar acá",
+    en: "This book only has one language — it can't be changed here",
+    it: "Questo libro ha una sola lingua — non si può cambiare qui",
+    pt: "Este livro tem apenas um idioma — não é possível mudar aqui",
+    fr: "Ce livre n'a qu'une seule langue — impossible de la changer ici",
+    de: "Dieses Buch hat nur eine Sprache — kann hier nicht geändert werden"
+  },
+  proyector_solo_desktop:  {
+    es: "📱 El modo proyector solo está disponible en tablets, PC o Mac.",
+    en: "📱 Projector mode is only available on tablets, PC or Mac.",
+    it: "📱 La modalità proiettore è disponibile solo su tablet, PC o Mac.",
+    pt: "📱 O modo projetor só está disponível em tablets, PC ou Mac.",
+    fr: "📱 Le mode projecteur n'est disponible que sur tablette, PC ou Mac.",
+    de: "📱 Der Projektormodus ist nur auf Tablets, PC oder Mac verfügbar."
+  }
 };
 
 // traduce una etiqueta fija (clave de UI_LABELS) al idioma actual
@@ -131,8 +256,7 @@ function t(key, lang = idiomaActual) {
   const entry = UI_LABELS[key];
   if (!entry) return key;
 
-  if (!lang || lang === "gn" || !entry[lang]) return entry.es;
-  return entry[lang];
+  return conFallbackIdioma(entry, lang);
 }
 
 // traduce un VALOR de dato (no una etiqueta) solo cuando ese valor es,
@@ -183,17 +307,42 @@ const FLAG_VARIANTS = {
     CU: { emoji: "🇨🇺", nombre: "Cuba" },
     PR: { emoji: "🇵🇷", nombre: "Puerto Rico" }
   },
+  // el nombre de cada país va en el idioma de ESE grupo (en/fr/de), no en
+  // español: este grupo solo se muestra mientras idiomaActual sea ese mismo
+  // idioma (ver abrirBanderaPicker: FLAG_VARIANTS[idiomaActual]), así que
+  // "United States" siempre aparece con la UI ya en inglés, nunca en español
   en: {
-    US: { emoji: "🇺🇸", nombre: "Estados Unidos" },
-    GB: { emoji: "🇬🇧", nombre: "Reino Unido" }
+    US: { emoji: "🇺🇸", nombre: "United States" },
+    GB: { emoji: "🇬🇧", nombre: "United Kingdom" }
   },
   pt: {
     BR: { emoji: "🇧🇷", nombre: "Brasil" },
     PT: { emoji: "🇵🇹", nombre: "Portugal" }
+  },
+  // fr/de: todavía no están activos en el selector de idioma (#idioma no
+  // los lista), pero quedan listos con sus variantes de país para cuando se
+  // activen — francés y alemán se hablan en varios países, no solo en
+  // Francia/Alemania
+  fr: {
+    FR: { emoji: "🇫🇷", nombre: "France" },
+    BE: { emoji: "🇧🇪", nombre: "Belgique" },
+    CH: { emoji: "🇨🇭", nombre: "Suisse" },
+    CA: { emoji: "🇨🇦", nombre: "Canada" },
+    CD: { emoji: "🇨🇩", nombre: "R. D. du Congo" },
+    CI: { emoji: "🇨🇮", nombre: "Côte d'Ivoire" },
+    SN: { emoji: "🇸🇳", nombre: "Sénégal" },
+    HT: { emoji: "🇭🇹", nombre: "Haïti" }
+  },
+  de: {
+    DE: { emoji: "🇩🇪", nombre: "Deutschland" },
+    AT: { emoji: "🇦🇹", nombre: "Österreich" },
+    CH: { emoji: "🇨🇭", nombre: "Schweiz" },
+    LI: { emoji: "🇱🇮", nombre: "Liechtenstein" },
+    LU: { emoji: "🇱🇺", nombre: "Luxemburg" }
   }
 };
 
-const FLAG_VARIANT_DEFAULT = { es: "AR", en: "US", pt: "BR" };
+const FLAG_VARIANT_DEFAULT = { es: "AR", en: "US", pt: "BR", fr: "FR", de: "DE" };
 
 let banderaPorIdioma = {};
 
@@ -374,6 +523,7 @@ function initLanguage(defaultLang = "es") {
   updateLangFlag();
   actualizarVersiculoInicio();
   actualizarBuscadorPlaceholder();
+  actualizarMenuIdioma();
 }
 
 
@@ -427,6 +577,7 @@ function setIdioma(lang) {
   renderBanderaSelect();
   actualizarVersiculoInicio();
   actualizarBuscadorPlaceholder();
+  actualizarMenuIdioma();
 
   // refrescar UI dependiente del idioma
   renderAlphabet();
@@ -556,6 +707,12 @@ function changeLanguage(lang, songId) {
 
   updateLangFlag();
   renderBanderaSelect();
+  actualizarVersiculoInicio();
+  actualizarBuscadorPlaceholder();
+  actualizarMenuIdioma();
+
+  const menuIdioma = document.getElementById("menuIdioma");
+  if (menuIdioma) menuIdioma.value = lang;
 
   renderAlphabet();
   openSong(songId);
