@@ -44,6 +44,11 @@ let oracionListasAbiertas = new Set();
 // acumulando memoria cada vez que se abre el modal o se edita un pedido
 let oracionFotoUrls = [];
 
+// URL de vista previa de la foto TODAVÍA sin guardar (oracionPendiente) —
+// aparte de oracionFotoUrls porque esta se genera directo del File elegido,
+// sin pasar por IndexedDB
+let oracionPendienteFotoUrl = null;
+
 // ===================== INDEXEDDB (fotos) =====================
 function orOpenDB() {
   return new Promise((resolve, reject) => {
@@ -247,12 +252,19 @@ function moverPedidoALista(pedidoId, listaId) {
 
 // ===================== ADJUNTOS DEL PEDIDO EN CONSTRUCCIÓN =====================
 function renderAdjuntoPreviewHtml(pendiente) {
+  if (oracionPendienteFotoUrl) {
+    URL.revokeObjectURL(oracionPendienteFotoUrl);
+    oracionPendienteFotoUrl = null;
+  }
+
   const partes = [];
 
   if (pendiente.fotoBlob) {
+    oracionPendienteFotoUrl = URL.createObjectURL(pendiente.fotoBlob);
+
     partes.push(`
       <div class="lista-song-row">
-        <span>📷 ${escapeHtml(pendiente.fotoNombre || "Foto elegida")}</span>
+        <img class="oracion-foto-preview" src="${oracionPendienteFotoUrl}" alt="Foto elegida">
         <button type="button" class="lista-remove-btn" data-action="oracionQuitarFotoPendiente" title="Quitar">✕</button>
       </div>
     `);
@@ -303,19 +315,33 @@ function oracionQuitarCantoPendiente() {
 }
 
 // ===================== FOTO (nueva o de un pedido ya guardado) — input de
-// archivo creado al vuelo, no hace falta uno fijo por tarjeta =====
+// archivo creado al vuelo, no hace falta uno fijo por tarjeta. Se agrega al
+// DOM (oculto) porque en iOS Safari un <input type="file"> nunca insertado
+// en el documento deja el foco "atascado" ahí después de elegir la foto: la
+// página vuelve a verse normal, pero los toques siguientes (ej. en "+
+// Agregar pedido") no le llegan a ningún botón hasta que algo le saca el
+// foco a ese input fantasma =====
 function oracionElegirFoto(pedidoId = null) {
   const input = document.createElement("input");
   input.type = "file";
   input.accept = "image/*";
+  input.style.position = "fixed";
+  input.style.top = "-9999px";
+  input.style.left = "-9999px";
+  document.body.appendChild(input);
+
+  const limpiar = () => {
+    input.blur();
+    input.remove();
+  };
 
   input.addEventListener("change", async () => {
     const file = input.files?.[0];
-    if (!file) return;
+    if (!file) { limpiar(); return; }
 
     if (pedidoId) {
       const p = findPedidoOracion(pedidoId);
-      if (!p) return;
+      if (!p) { limpiar(); return; }
 
       try {
         await orPutFoto(pedidoId, file);
@@ -331,6 +357,8 @@ function oracionElegirFoto(pedidoId = null) {
       oracionPendiente.fotoNombre = file.name;
       renderOracionAdjuntosPreview();
     }
+
+    limpiar();
   });
 
   input.click();
