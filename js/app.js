@@ -430,7 +430,7 @@ function renderBiblioteca(data) {
 // SOLO ESTADO CLICKABLE
 function formatRevisadoEstado(value) {
   const [estado] = normalizeRevisado(value);
-  return estado === "si" ? "Si" : "No";
+  return estado === "si" ? t("si") : t("no");
 }
 
 // PERSONAS (SIN CLICK EN EL MISMO SPAN)
@@ -445,17 +445,17 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=168",
-    "modals/revised.html?v=168",
-    "modals/people.html?v=168",
-    "modals/valores.html?v=168",
-    "modals/share.html?v=168",
-    "modals/contacto.html?v=168",
-    "modals/afinometro.html?v=168",
-    "modals/biblioteca.html?v=168",
-    "modals/listas.html?v=168",
-    "modals/notepad.html?v=168",
-    "modals/oracion.html?v=168"
+    "modals/info.html?v=169",
+    "modals/revised.html?v=169",
+    "modals/people.html?v=169",
+    "modals/valores.html?v=169",
+    "modals/share.html?v=169",
+    "modals/contacto.html?v=169",
+    "modals/afinometro.html?v=169",
+    "modals/biblioteca.html?v=169",
+    "modals/listas.html?v=169",
+    "modals/notepad.html?v=169",
+    "modals/oracion.html?v=169"
   ];
 
   for (const path of modales) {
@@ -1369,23 +1369,27 @@ function renderAudioLink(song, idiomaData) {
   if (!url) return "";
 
   let icon = "🎵";
-  let label = "Escuchar";
+  let label = t("escuchar");
+  let claseLabel = "escuchar";
 
   if (url.includes("spotify")) {
     icon = "🟢";
     label = "Spotify";
+    claseLabel = "spotify";
   } else if (url.includes("youtube") || url.includes("youtu.be")) {
     icon = "🔴";
     label = "YouTube";
+    claseLabel = "youtube";
   } else if (url.includes("apple")) {
     icon = "🍎";
     label = "Apple Music";
+    claseLabel = "applemusic";
   }
 
   return `
     <div class="audio">
-      <b>Audio:</b>
-      <a href="${url}" target="_blank" class="${label.toLowerCase().replace(/\s/g, "")}">
+      <b>${t("audio")}:</b>
+      <a href="${url}" target="_blank" class="${claseLabel}">
         ${icon} ${label}
       </a>
     </div>

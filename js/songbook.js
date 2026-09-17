@@ -119,7 +119,7 @@ function openSong(id) {
     .filter(t => t && t !== "-");
 
   const otrosTitulosHtml = otrosTitulos.length
-    ? ` | <b>Otros títulos:</b> ${otrosTitulos.join(", ")}`
+    ? ` | <b>${t("otros_titulos")}:</b> ${otrosTitulos.join(", ")}`
     : "";
     
   
@@ -146,11 +146,11 @@ function openSong(id) {
     <div class="song-meta">
 
       <div class="flags">
-        <b>Idiomas:</b> ${renderLanguageFlags(song, false, true)}
+        <b>${t("idiomas")}:</b> ${renderLanguageFlags(song, false, true)}
       </div>
-      
+
       <div>
-        <b>Original:</b>
+        <b>${t("original")}:</b>
           ${tituloOriginalFiltrado.length
             ? `
               <i><span class="original-title">"${tituloOriginalFiltrado.join(", ")}"</span></i>
@@ -172,11 +172,11 @@ function openSong(id) {
 
         ${traductorHtml}
 
-        <b>Año:</b> ${normalizeSimple(song.year)}
+        <b>${t("anio")}:</b> ${traducirValorFijo(normalizeSimple(song.year))}
       </div>
 
       <div>
-        <b>Referencia bíblica:</b>
+        <b>${t("referencia_biblica")}:</b>
         ${
           normalizeReferenciaBiblica(song.referencia_biblica).length
             ? normalizeReferenciaBiblica(song.referencia_biblica)
@@ -185,15 +185,15 @@ function openSong(id) {
                   return `<a href="${link}" target="_blank">${ref}</a>`;
                 })
                 .join(", ")
-            : "No"
+            : t("no")
         }
       </div>
 
       <div class="song-metro" ${dataAction("abrirMetronomoDesdeMenu")} style="cursor:pointer;">
-      
+
         ${normalizeMeta(song, "tonalidad") && normalize(normalizeMeta(song, "tonalidad")) !== "DESCONOCIDO"
           ? `
-            <b>Tonalidad:</b>
+            <b>${t("tonalidad")}:</b>
             <span class="meta-link tonalidad-link"
               data-tonalidad="${normalizeMeta(song, "tonalidad")}"
               data-bpm="${normalizeMeta(song, "tempo_bpm") || ""}"
@@ -203,14 +203,14 @@ function openSong(id) {
             </span> |
           `
           : `
-            <b>Tonalidad:</b>
-            <span class="meta-normal">Desconocido</span> |
+            <b>${t("tonalidad")}:</b>
+            <span class="meta-normal">${t("desconocido")}</span> |
           `
         }
 
         ${normalizeMeta(song, "tempo_bpm") && normalize(normalizeMeta(song, "tempo_bpm")) !== "DESCONOCIDO"
           ? `
-            <b>BPM:</b>
+            <b>${t("bpm")}:</b>
             <span class="meta-link bpm-link"
               data-tonalidad="${normalizeMeta(song, "tonalidad") || ""}"
               data-bpm="${normalizeMeta(song, "tempo_bpm")}"
@@ -220,14 +220,14 @@ function openSong(id) {
             </span> |
           `
           : `
-          <b>BPM:</b>
-          <span class="meta-unknown">Desconocido</span> |
+          <b>${t("bpm")}:</b>
+          <span class="meta-unknown">${t("desconocido")}</span> |
         `
         }
 
         ${normalizeMeta(song, "compas") && normalize(normalizeMeta(song, "compas")) !== "DESCONOCIDO"
           ? `
-            <b>Compás:</b>
+            <b>${t("compas")}:</b>
             <span class="meta-link compas-link"
               data-tonalidad="${normalizeMeta(song, "tonalidad") || ""}"
               data-bpm="${normalizeMeta(song, "tempo_bpm") || ""}"
@@ -237,23 +237,23 @@ function openSong(id) {
             </span> |
           `
           : `
-          <b>Compás:</b>
-          <span class="meta-unknown">Desconocido</span> |
+          <b>${t("compas")}:</b>
+          <span class="meta-unknown">${t("desconocido")}</span> |
         `
         }
 
-        <b>Ritmo:</b> ${formatRitmo(song.ritmo) || "Desconocido"} |
+        <b>${t("ritmo")}:</b> ${traducirValorFijo(formatRitmo(song.ritmo)) || t("desconocido")} |
 
-        <b>Partitura:</b> ${
+        <b>${t("partitura")}:</b> ${
           song.idiomas?.[idiomaActual]?.partitura &&
           song.idiomas[idiomaActual].partitura !== "No"
-            ? `<a href="${song.idiomas[idiomaActual].partitura}" target="_blank">Click aquí</a>`
-            : "No"
+            ? `<a href="${song.idiomas[idiomaActual].partitura}" target="_blank">${t("click_aqui")}</a>`
+            : t("no")
         }
       </div>
 
       <div>
-        <b class="temas-label-link" ${dataAction("abrirValoresModal", ["tags", null, { fromInfo: false }])} title="Ver todos los tags">Temas:</b>
+        <b class="temas-label-link" ${dataAction("abrirValoresModal", ["tags", null, { fromInfo: false }])} title="Ver todos los tags">${t("temas")}:</b>
         ${
           song.tags?.length
             ? [...song.tags]
@@ -270,10 +270,10 @@ function openSong(id) {
                   return `<span class="tag-link" ${dataAction("openPersonModal", [tag, "tags", { tipo: "tags", filtroIdioma: idiomaActual, fromInfo: false }])}>${mostrado}</span>`;
                 })
                 .join(", ")
-            : "Desconocido"
+            : t("desconocido")
         } |
 
-        <b>Revisado:</b>
+        <b>${t("revisado")}:</b>
           <span
             class="song-meta-revisado"
             data-revisado='${JSON.stringify(song.idiomas?.[idiomaActual]?.revisado)}'

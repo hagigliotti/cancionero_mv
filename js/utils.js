@@ -322,13 +322,15 @@ function renderPersonLinks(label, value) {
 
   if (!arr.length) return "";
 
+  const labelDisplay = t(label.toLowerCase());
+
   return `
     <span>
-      <b>${label}:</b>
+      <b>${labelDisplay}:</b>
       ${arr.map(p => `
         <span class="person-link"
           ${dataAction("openPersonModal", [p, label.toLowerCase()])}>
-          ${p}
+          ${traducirValorFijo(p)}
         </span>
       `).join(", ")}
     </span>

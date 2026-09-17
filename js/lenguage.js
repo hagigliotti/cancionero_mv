@@ -92,6 +92,63 @@ function actualizarBuscadorPlaceholder() {
 }
 
 // ===============================================================================================
+// ===================== ETIQUETAS FIJAS DE LA FICHA DE CANCIÓN =================================
+// Palabras fijas que arma songbook.js/utils.js/app.js al mostrar la ficha de
+// una canción (etiquetas como "Autor:", "Compositor:", "Revisado:") y
+// valores placeholder que vienen TAL CUAL guardados en data/*.json cuando el
+// dato real no se conoce ("Desconocido", "Anónimo" — ver autor/compositor/
+// año/etc. en los JSON). No confundir con TAG_TRANSLATIONS (tag-translations.js,
+// solo para tags) ni con nombres reales de persona, que nunca se traducen.
+// Guaraní cae al español, mismo patrón que el resto de este archivo.
+const UI_LABELS = {
+  idiomas:            { es: "Idiomas",            en: "Languages",       it: "Lingue",              pt: "Idiomas",            fr: "Langues",            de: "Sprachen" },
+  original:           { es: "Original",           en: "Original",        it: "Originale",           pt: "Original",           fr: "Original",           de: "Original" },
+  otros_titulos:      { es: "Otros títulos",      en: "Other titles",    it: "Altri titoli",        pt: "Outros títulos",     fr: "Autres titres",      de: "Andere Titel" },
+  autor:              { es: "Autor",              en: "Author",          it: "Autore",              pt: "Autor",              fr: "Auteur",             de: "Autor" },
+  coautor:            { es: "Coautor",            en: "Co-author",       it: "Coautore",            pt: "Coautor",            fr: "Coauteur",           de: "Koautor" },
+  compositor:         { es: "Compositor",         en: "Composer",        it: "Compositore",         pt: "Compositor",         fr: "Compositeur",        de: "Komponist" },
+  traductor:          { es: "Traductor",          en: "Translator",      it: "Traduttore",          pt: "Tradutor",           fr: "Traducteur",         de: "Übersetzer" },
+  anio:               { es: "Año",                en: "Year",            it: "Anno",                pt: "Ano",                fr: "Année",              de: "Jahr" },
+  referencia_biblica: { es: "Referencia bíblica", en: "Bible reference", it: "Riferimento biblico", pt: "Referência bíblica", fr: "Référence biblique", de: "Bibelstelle" },
+  tonalidad:          { es: "Tonalidad",          en: "Key",             it: "Tonalità",            pt: "Tom",                fr: "Tonalité",           de: "Tonart" },
+  bpm:                { es: "BPM",                en: "BPM",             it: "BPM",                 pt: "BPM",                fr: "BPM",                de: "BPM" },
+  compas:             { es: "Compás",             en: "Time signature",  it: "Tempo",               pt: "Compasso",           fr: "Mesure",             de: "Taktart" },
+  ritmo:              { es: "Ritmo",              en: "Rhythm",          it: "Ritmo",               pt: "Ritmo",              fr: "Rythme",             de: "Rhythmus" },
+  partitura:          { es: "Partitura",          en: "Sheet music",     it: "Spartito",            pt: "Partitura",          fr: "Partition",          de: "Notenblatt" },
+  click_aqui:         { es: "Click aquí",         en: "Click here",      it: "Clicca qui",          pt: "Clique aqui",        fr: "Cliquez ici",        de: "Hier klicken" },
+  temas:              { es: "Temas",              en: "Topics",          it: "Temi",                pt: "Temas",              fr: "Thèmes",             de: "Themen" },
+  revisado:           { es: "Revisado",           en: "Reviewed",        it: "Revisionato",         pt: "Revisado",           fr: "Vérifié",            de: "Geprüft" },
+  audio:              { es: "Audio",              en: "Audio",           it: "Audio",               pt: "Áudio",              fr: "Audio",              de: "Audio" },
+  escuchar:           { es: "Escuchar",           en: "Listen",          it: "Ascolta",             pt: "Ouvir",              fr: "Écouter",            de: "Anhören" },
+  si:                 { es: "Si",                 en: "Yes",             it: "Sì",                  pt: "Sim",                fr: "Oui",                de: "Ja" },
+  no:                 { es: "No",                 en: "No",              it: "No",                  pt: "Não",                fr: "Non",                de: "Nein" },
+  desconocido:        { es: "Desconocido",        en: "Unknown",         it: "Sconosciuto",         pt: "Desconhecido",       fr: "Inconnu",            de: "Unbekannt" },
+  anonimo:            { es: "Anónimo",            en: "Anonymous",       it: "Anonimo",             pt: "Anônimo",            fr: "Anonyme",            de: "Anonym" }
+};
+
+// traduce una etiqueta fija (clave de UI_LABELS) al idioma actual
+function t(key, lang = idiomaActual) {
+  const entry = UI_LABELS[key];
+  if (!entry) return key;
+
+  if (!lang || lang === "gn" || !entry[lang]) return entry.es;
+  return entry[lang];
+}
+
+// traduce un VALOR de dato (no una etiqueta) solo cuando ese valor es,
+// literalmente, uno de los placeholders "Desconocido"/"Anónimo" guardados en
+// data/*.json — cualquier otro valor (nombre real de autor, tonalidad real,
+// etc.) se devuelve intacto, sin tocar
+function traducirValorFijo(valor, lang = idiomaActual) {
+  if (!valor) return valor;
+
+  const texto = valor.toString().trim();
+  if (texto === "Desconocido") return t("desconocido", lang);
+  if (texto === "Anónimo") return t("anonimo", lang);
+  return valor;
+}
+
+// ===============================================================================================
 // ===================== TRADUCCIÓN DE TAGS ======================================================
 // El diccionario TAG_TRANSLATIONS y la función getTagDisplay() se movieron a
 // su propio archivo: tag-translations.js (cargado antes que este en
