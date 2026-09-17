@@ -9313,7 +9313,7 @@
       "titulo2": [""],
       "audio_url": "",
       "traductor": [""],
-      "partitura": "data/partituras/hablar_con_dios.pdf",
+      "partitura": "canciones/partituras/hablar_con_dios.pdf",
       "revisado": ["Si", "Rolando"],      
       "letra": [
         "1",
@@ -11759,7 +11759,7 @@
       "titulo2": [""],
       "audio_url": "",
       "traductor": [""],
-      "partitura": "data/partituras/mensajero.pdf",
+      "partitura": "canciones/partituras/mensajero.pdf",
       "revisado": ["No"],      
       "letra": [
         "1",

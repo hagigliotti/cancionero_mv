@@ -16,15 +16,15 @@ Español, Inglés, Guaraní, Italiano y Portugués, con banderas para cambiar el
 
 ## Contribuir
 
-¿Encontraste un error, tenés un canto para sumar o una sugerencia? Mirá la [Guía de Contribución](CONTRIBUTING.md).
+¿Encontraste un error, tenés un canto para sumar o una sugerencia? Mirá la [Guía de Contribución](.github/CONTRIBUTING.md).
 
 ## Seguridad
 
-Para reportar una vulnerabilidad de seguridad, ver la [Política de Seguridad](SECURITY.md).
+Para reportar una vulnerabilidad de seguridad, ver la [Política de Seguridad](.github/SECURITY.md).
 
 ## Código de Conducta
 
-Este proyecto sigue un [Código de Conducta](CODE_OF_CONDUCT.md) para mantener un ambiente respetuoso y colaborativo.
+Este proyecto sigue un [Código de Conducta](.github/CODE_OF_CONDUCT.md) para mantener un ambiente respetuoso y colaborativo.
 
 ## Licencia
 

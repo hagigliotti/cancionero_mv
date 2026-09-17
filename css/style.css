@@ -1,0 +1,4053 @@
+/* ============================================================
+   CANCIONERO App — NUEVO DISEÑO
+   Paleta: Navy #122033 · Sky #38bdf8 · Blanco #fff · Gris #e2e8f0
+   ============================================================ */
+
+/* ---------- TOKENS ---------- */
+:root {
+  --navy:      #122033;
+  --navy-mid:  #1e3a55;
+  --navy-soft: #2a4a6b;
+  --sky:       #38bdf8;
+  --sky-dark:  #0ea5e9;
+  /* mismo azul que --sky, pero como lista "R, G, B" (sin envolver en
+     rgb()): así cualquier rgba(var(--sky-rgb), alpha) de acá abajo cambia
+     de color junto con --sky cuando se elige otro acento (ver los bloques
+     body[data-accent="..."] más abajo), en vez de quedar siempre celeste */
+  --sky-rgb:   56, 189, 248;
+  /* fondo del proyector en modo claro: blanco con un tinte suave del
+     acento elegido — el proyector en modo OSCURO se queda siempre negro
+     puro, sin importar el acento (ver body.light-mode.projector abajo).
+     OJO: --proj-tint, --bg-day y --bg-night se REDEFINEN enteros en cada
+     bloque body[data-accent="..."] de más abajo, no alcanza con que
+     --sky-rgb cambie solo — una variable CSS que usa var(--otra-variable)
+     adentro se resuelve con el valor de esa otra variable en el punto
+     donde SE DECLARÓ, no en el punto donde se USA, así que si --bg-day
+     solo estuviera acá en :root con var(--sky-rgb) adentro, quedaría
+     siempre celeste sin importar qué acento se elija */
+  --proj-tint: rgba(var(--sky-rgb), 0.10);
+  /* fondo del menú lateral y de los modales en tema nocturno (--modal-bg,
+     degradé; --modal-bg-solid, plano — este último para el aro del
+     circulito elegido en el selector de color, que necesita un color
+     sólido, no un degradé). Igual que con --bg-day/night, se REDEFINEN
+     enteros por paleta más abajo (mismo motivo: var(--otra-variable)
+     adentro de una variable se resuelve donde se DECLARA, no donde se
+     usa) */
+  --modal-bg:       linear-gradient(165deg, #101d2e 0%, #16283e 100%);
+  --modal-bg-solid: #16283e;
+  --white:     #ffffff;
+  --gray-50:   #f8fafc;
+  --gray-100:  #e2e8f0;
+  --gray-200:  #cbd5e1; /*cbd5e1*/
+  --gray-500:  #64748b;
+  --green:     #22c55e;
+  --red:       #ef4444;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 999px;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,.12);
+  --shadow-md: 0 4px 20px rgba(0,0,0,.18);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,.25);
+  --trans:     all 0.22s ease;
+
+  /* fondos de página: mismo degradé para el body y para el .top-bar (con
+     background-attachment:fixed en ambos) para que queden pegados sin
+     costura sin importar el scroll. Sólido (color de los logos Cancionero_*)
+     hasta ~28% de la pantalla (logo + barra + alfabeto), recién ahí empieza
+     a degradar hacia abajo.
+     --bg-day lleva una 2da capa opaca (blanco liso, debajo del degradé con
+     transparencia) a propósito: sin ella, cualquier elemento que use esta
+     variable SIN background-attachment:fixed (ej. .song-title-row) pinta
+     el degradé completo (0%-100%) adentro de su propia caja, así que la
+     parte de abajo de esa caja cae en los tramos con alpha (rgba ...,0.20)
+     y deja ver lo que hay atrás (la letra de la canción, en ese caso) —
+     eso es lo que se veía como "franja transparente" al scrollear. Con la
+     capa blanca opaca detrás, el resultado final siempre es sólido, se
+     vea donde se vea, y el color no cambia (blanco + rgba sobre blanco =
+     mismo pastel de siempre). --bg-night no tenía este problema porque su
+     capa de abajo (el linear-gradient navy) ya era opaca de por sí */
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(var(--sky-rgb),0.09) 62%, rgba(var(--sky-rgb),0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(var(--sky-rgb),0.14), transparent 65%),
+              linear-gradient(180deg, #0d1e30 0%, #0d1e30 28%, #122033 62%, #1a2e45 100%);
+}
+
+/* ============================================================
+   COLOR DE ACENTO (elegible en el menú, ver #accentPicker)
+   ============================================================
+   Redefine --sky/--sky-dark/--sky-rgb (de ahí sale la mayoría del color:
+   botones, glow, sombras — todo lo que ya usaba rgba(var(--sky-rgb),...))
+   y también --bg-day/--bg-night/--proj-tint enteros, con el mismo color
+   pisado a mano adentro: una variable CSS que adentro usa var(--otra) se
+   resuelve con el valor de esa otra variable en el punto donde SE
+   DECLARÓ, no en el punto donde se USA — si --bg-day siguiera solo en
+   TOKENS con var(--sky-rgb) adentro, quedaría siempre celeste sin
+   importar el acento elegido acá, por eso hay que repetirlo completo en
+   cada bloque. IMPORTANTE: --bg-night (fondo del tema oscuro/nocturno,
+   clase .light-mode — ver el porqué de ese nombre invertido más abajo) ya
+   NO es siempre el navy azulado de TOKENS — cada paleta tiene su propia
+   base oscura de fondo (un negro apenas teñido del mismo tono, ej. marrón
+   muy oscuro para Naranja) para que no quede "azul con brillo naranja"
+   quemando la vista; el navy azulado queda reservado solo para Celeste.
+   "celeste" no necesita bloque propio: es el valor de TOKENS.
+   No aplica en el proyector en modo oscuro a propósito — se queda
+   siempre celeste/negro (ver body.light-mode.projector, más abajo, con
+   más especificidad que estos selectores por tener 2 clases en el body). */
+body[data-accent="naranja"] {
+  --sky: #fb923c; --sky-dark: #f97316; --sky-rgb: 251, 146, 60;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(251, 146, 60,0.09) 62%, rgba(251, 146, 60,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(251, 146, 60,0.16), transparent 65%),
+              linear-gradient(180deg, #1f150d 0%, #1f150d 28%, #241a10 62%, #2e2313 100%);
+  --proj-tint: rgba(251, 146, 60,0.10);
+  --modal-bg:       linear-gradient(165deg, #1f150d 0%, #2e2313 100%);
+  --modal-bg-solid: #1f150d;
+}
+body[data-accent="rosa"] {
+  --sky: #f472b6; --sky-dark: #ec4899; --sky-rgb: 244, 114, 182;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(244, 114, 182,0.09) 62%, rgba(244, 114, 182,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(244, 114, 182,0.16), transparent 65%),
+              linear-gradient(180deg, #1f0f18 0%, #1f0f18 28%, #24131c 62%, #2e1823 100%);
+  --proj-tint: rgba(244, 114, 182,0.10);
+  --modal-bg:       linear-gradient(165deg, #1f0f18 0%, #2e1823 100%);
+  --modal-bg-solid: #1f0f18;
+}
+body[data-accent="coral"] {
+  --sky: #ff8a75; --sky-dark: #f2624a; --sky-rgb: 255, 138, 117;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(255, 138, 117,0.09) 62%, rgba(255, 138, 117,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(255, 138, 117,0.16), transparent 65%),
+              linear-gradient(180deg, #1f120d 0%, #1f120d 28%, #241610 62%, #2e1c13 100%);
+  --proj-tint: rgba(255, 138, 117,0.10);
+  --modal-bg:       linear-gradient(165deg, #1f120d 0%, #2e1c13 100%);
+  --modal-bg-solid: #1f120d;
+}
+body[data-accent="violeta"] {
+  --sky: #a78bfa; --sky-dark: #8b5cf6; --sky-rgb: 167, 139, 250;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(167, 139, 250,0.09) 62%, rgba(167, 139, 250,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(167, 139, 250,0.16), transparent 65%),
+              linear-gradient(180deg, #150f28 0%, #150f28 28%, #1a1330 62%, #221a3d 100%);
+  --proj-tint: rgba(167, 139, 250,0.10);
+  --modal-bg:       linear-gradient(165deg, #150f28 0%, #221a3d 100%);
+  --modal-bg-solid: #150f28;
+}
+body[data-accent="lila"] {
+  --sky: #e0a3e8; --sky-dark: #c65fd4; --sky-rgb: 224, 163, 232;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(224, 163, 232,0.09) 62%, rgba(224, 163, 232,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(224, 163, 232,0.16), transparent 65%),
+              linear-gradient(180deg, #1c1024 0%, #1c1024 28%, #21142b 62%, #2a1935 100%);
+  --proj-tint: rgba(224, 163, 232,0.10);
+  --modal-bg:       linear-gradient(165deg, #1c1024 0%, #2a1935 100%);
+  --modal-bg-solid: #1c1024;
+}
+body[data-accent="turquesa"] {
+  --sky: #2dd4bf; --sky-dark: #14b8a6; --sky-rgb: 45, 212, 191;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(45, 212, 191,0.09) 62%, rgba(45, 212, 191,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(45, 212, 191,0.16), transparent 65%),
+              linear-gradient(180deg, #0d1f1d 0%, #0d1f1d 28%, #112423 62%, #162e2c 100%);
+  --proj-tint: rgba(45, 212, 191,0.10);
+  --modal-bg:       linear-gradient(165deg, #0d1f1d 0%, #162e2c 100%);
+  --modal-bg-solid: #0d1f1d;
+}
+body[data-accent="verde"] {
+  --sky: #4ade80; --sky-dark: #22c55e; --sky-rgb: 74, 222, 128;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(74, 222, 128,0.09) 62%, rgba(74, 222, 128,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(74, 222, 128,0.16), transparent 65%),
+              linear-gradient(180deg, #0d1f16 0%, #0d1f16 28%, #11241a 62%, #162e21 100%);
+  --proj-tint: rgba(74, 222, 128,0.10);
+  --modal-bg:       linear-gradient(165deg, #0d1f16 0%, #162e21 100%);
+  --modal-bg-solid: #0d1f16;
+}
+body[data-accent="amarillo"] {
+  --sky: #fbbf24; --sky-dark: #f59e0b; --sky-rgb: 251, 191, 36;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(251, 191, 36,0.09) 62%, rgba(251, 191, 36,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(251, 191, 36,0.16), transparent 65%),
+              linear-gradient(180deg, #1f1a0d 0%, #1f1a0d 28%, #241f10 62%, #2e2813 100%);
+  --proj-tint: rgba(251, 191, 36,0.10);
+  --modal-bg:       linear-gradient(165deg, #1f1a0d 0%, #2e2813 100%);
+  --modal-bg-solid: #1f1a0d;
+}
+body[data-accent="gris"] {
+  --sky: #64748b; --sky-dark: #334155; --sky-rgb: 100, 116, 139;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(100, 116, 139,0.09) 62%, rgba(100, 116, 139,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(100, 116, 139,0.16), transparent 65%),
+              linear-gradient(180deg, #131313 0%, #131313 28%, #191919 62%, #212121 100%);
+  --proj-tint: rgba(100, 116, 139,0.10);
+  --modal-bg:       linear-gradient(165deg, #131313 0%, #212121 100%);
+  --modal-bg-solid: #131313;
+}
+/* "gris" (arriba) usa slate — un gris con un dejo azulado. "monocromo"
+   es el pedido de blanco y negro "de verdad": mismos números en R, G y B
+   (sin ningún matiz de color), lo más parecido a blanco/negro/gris puro
+   que se puede llegar sin que el texto se vuelva illegible sobre fondo
+   claro (blanco puro sobre blanco sería invisible) */
+body[data-accent="monocromo"] {
+  --sky: #a3a3a3; --sky-dark: #404040; --sky-rgb: 163, 163, 163;
+  --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(163, 163, 163,0.09) 62%, rgba(163, 163, 163,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(163, 163, 163,0.16), transparent 65%),
+              linear-gradient(180deg, #121212 0%, #121212 28%, #181818 62%, #202020 100%);
+  --proj-tint: rgba(163, 163, 163,0.10);
+  --modal-bg:       linear-gradient(165deg, #121212 0%, #202020 100%);
+  --modal-bg-solid: #121212;
+}
+
+/* --sky-dark hace doble función: texto sobre fondo CLARO (necesita ser
+   oscuro) y texto/ícono sobre fondo OSCURO en modo nocturno (necesita ser
+   claro para resaltar). Con un color con matiz (naranja, verde, etc.) el
+   mismo tono sirve para las dos cosas porque el matiz en sí ya "resalta"
+   sobre cualquier fondo — un gris puro no tiene ese recurso, así que acá
+   sí hace falta un valor distinto para cada tema. "modo nocturno" en este
+   proyecto es la clase .light-mode (ver el porqué de ese nombre invertido
+   más arriba, junto a TOKENS) */
+body.light-mode[data-accent="monocromo"] {
+  --sky-dark: #d4d4d4;
+}
+
+/* proyector en modo oscuro ("modo nocturno" = body.light-mode, ver el
+   comentario de más abajo sobre esa inversión de nombres): siempre el
+   celeste original, cualquiera sea el acento elegido — 2 clases en el
+   body le gana en especificidad a los body[data-accent] de arriba */
+body.light-mode.projector {
+  --sky: #38bdf8; --sky-dark: #0ea5e9; --sky-rgb: 56, 189, 248;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: clip;
+  overscroll-behavior-y: contain;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  transition: background 0.35s ease, color 0.35s ease;
+  line-height: 1.6;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* botones y controles de navegación: que no se comporten como texto de página web */
+button, select, .menu-item, .alpha, .lang-wrapper, #menuBtn, #langBtn {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+h1 { text-align: center; padding: 10px; margin: 0; }
+
+/* app wrapper */
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+#contenido:empty { min-height: 5vh; }
+
+/* ============================================================
+   FOOTER 
+   ============================================================ */
+.app-footer {
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.5;
+  padding: 2px 10px calc(4px + env(safe-area-inset-bottom, 0));
+  margin-top: 0;
+  padding-top: 0;
+  line-height: 1;
+}
+
+.app {
+  padding-bottom: 0px;
+  /* despega el logo del notch/Dynamic Island en iPhone (sobre todo instalada
+     como app, sin la barra del navegador que antes daba ese margen gratis) */
+  padding-top: calc(14px + env(safe-area-inset-top, 0));
+}
+
+/* ============================================================
+   MODOS DE COLOR
+   NOTA: "light-mode" = fondo oscuro (night)
+         "dark-mode"  = fondo claro  (day)
+   ============================================================ */
+
+/* ----- MODO NOCTURNO (light-mode) ----- */
+.light-mode {
+  background: var(--bg-night);
+  background-attachment: fixed;
+  color: #e8f4fd;
+  min-height: 100vh;
+}
+
+/* ----- MODO DIURNO (dark-mode) ----- */
+.dark-mode {
+  background: var(--bg-day);
+  background-attachment: fixed;
+  color: #122033;
+  min-height: 100vh;
+}
+
+/* ============================================================
+   LOGO
+   ============================================================ */
+.logo-title {
+  text-align: center;
+  margin: 20px 0 10px;
+  padding: 0 16px;
+}
+
+.logo-title img {
+  max-width: 280px;
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 14px;
+  /*filter: drop-shadow(0 4px 16px rgba(var(--sky-rgb), 0.25));*/
+  transition: filter 0.3s ease;
+}
+
+/* tema nocturno: el logo (Cancionero_blue/black/white.png, ver updateLogo
+   en theme.js) trae su propio fondo sólido pintado adentro de la imagen,
+   que ya no coincide exacto con el color de --bg-night de cada paleta.
+   Probé difuminar el borde de abajo a transparente (mask-image) para que
+   se disolviera en el fondo, pero mezclar un blanco/negro sólido con un
+   fondo de otro color a mitad de camino SIEMPRE pasa por un gris turbio
+   de por medio — es la propia óptica de mezclar colores tan distintos, no
+   algo que un difuminado más prolijo pueda evitar. En vez de esconder el
+   borde, se lo transforma en un resplandor a propósito, del color del
+   tema elegido — así se ve intencional en vez de una costura */
+body.light-mode .logo-title img {
+  filter: drop-shadow(0 6px 18px rgba(var(--sky-rgb), 0.55));
+}
+/*
+.logo-title img:hover {
+  filter: drop-shadow(0 6px 24px rgba(var(--sky-rgb), 0.45));
+}
+*/
+/* ============================================================
+   TOP BAR
+   ============================================================ */
+.top-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  padding: env(safe-area-inset-top, 0) 12px 4px;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+
+/* mismo degradé que el fondo de la página (misma variable + fixed) para que
+   quede pegado sin costura, se note el mismo color al toque */
+.light-mode .top-bar { background: var(--bg-night); background-attachment: fixed; }
+.dark-mode  .top-bar { background: var(--bg-day);   background-attachment: fixed; }
+
+/* modo proyector: respeta el tema claro/oscuro elegido (ver comentario
+   completo junto al resto de las reglas de MODO PROYECTOR) */
+body.light-mode.projector .top-bar { background: #000; }
+body.dark-mode.projector  .top-bar { background: var(--proj-tint); }
+
+.top-row {
+  display: flex;
+  gap: 8px;
+  padding: 0;
+}
+
+.top-inline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  min-width: 0;
+}
+
+/* ============================================================
+   BUSCADOR
+   ============================================================ */
+.buscador-container { flex: 1; min-width: 0; position: relative; display: flex; align-items: center; }
+
+#buscador {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 40px 11px 18px;
+  border-radius: var(--radius-xl);
+  border: 2px solid transparent;
+  font-size: 15px;
+  outline: none;
+  transition: var(--trans);
+  background: rgba(255,255,255,0.10);
+  color: inherit;
+  backdrop-filter: blur(6px);
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 6px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 1;
+  cursor: pointer;
+  background: rgba(0,0,0,0.12);
+  color: inherit;
+  opacity: 0.75;
+  transition: var(--trans);
+}
+
+.clear-search-btn:hover { opacity: 1; background: var(--sky); color: #fff; }
+
+.light-mode .clear-search-btn { background: rgba(255,255,255,0.18); color: #e8f4fd; }
+.dark-mode .clear-search-btn  { background: var(--gray-100); color: var(--navy); }
+
+body.projector .clear-search-btn { background: rgba(255,255,255,0.15); color: #fff; }
+
+.light-mode #buscador {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(var(--sky-rgb),0.30);
+  color: #e8f4fd;
+}
+
+.light-mode #buscador::placeholder { color: rgba(232,244,253,0.50); }
+
+.dark-mode #buscador {
+  background: #ffffff;
+  border-color: var(--gray-200);
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
+}
+
+.dark-mode #buscador::placeholder { color: var(--gray-500); }
+
+#buscador:focus {
+  border-color: var(--sky) !important;
+  box-shadow: 0 0 0 4px rgba(var(--sky-rgb), 0.18) !important;
+}
+
+
+/* ============================================================
+   BOTÓN MENÚ (☰)
+   ============================================================ */
+.menu-wrapper { position: relative; }
+
+#menuBtn {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--trans);
+  flex-shrink: 0;
+}
+
+.light-mode #menuBtn {
+  background: rgba(255,255,255,0.10);
+  color: #e8f4fd;
+}
+
+.dark-mode #menuBtn {
+  background: var(--white);
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
+}
+
+#menuBtn:hover {
+  transform: scale(1.08);
+  background: var(--sky) !important;
+  color: var(--white) !important;
+}
+
+/* ============================================================
+   MENÚ LATERAL (drawer)
+   ============================================================ */
+.menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.28s ease;
+  z-index: 900;
+}
+
+body.menu-open .menu-backdrop {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+/* mientras hay un modal abierto (info, afinador, biblioteca, etc.), la
+   página de fondo no debe poder scrollear: si no, un toque cerca del borde
+   del modal a veces termina moviendo el fondo y el scroll interno del
+   modal queda en un estado raro (no sube ni baja más) */
+body.modal-open {
+  overflow: hidden;
+}
+
+.dropdown-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: min(300px, 85vw);
+  display: flex;
+  flex-direction: column;
+  background: var(--modal-bg);
+  color: #e8f4fd;
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+  overflow: hidden;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  transform: translateX(-105%);
+  pointer-events: none;
+  transition: transform 0.28s cubic-bezier(.4, 0, .2, 1);
+}
+
+.dark-mode .dropdown-menu {
+  background: #ffffff;
+  color: var(--navy);
+  border-color: var(--gray-100);
+}
+
+.dropdown-menu.active {
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.menu-head {
+  position: relative;
+  padding: calc(18px + env(safe-area-inset-top, 0)) 20px 16px;
+  flex-shrink: 0;
+}
+
+.menu-head h2 {
+  margin: 0 0 4px;
+  padding: 0;
+  font-size: 17px;
+  text-align: left;
+  letter-spacing: -0.01em;
+}
+
+.menu-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  padding: 0 12px 6px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.dark-mode .menu-body { border-color: var(--gray-100); }
+
+.menu-group {
+  padding: 10px 4px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.dark-mode .menu-group { border-color: var(--gray-100); }
+.menu-group:last-child { border-bottom: none; }
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.menu-item a,
+a.menu-item {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-item:hover { background: rgba(var(--sky-rgb),0.14); color: var(--sky); }
+.dark-mode .menu-item:hover { color: var(--sky-dark); }
+
+.menu-item small { opacity: 0.55; font-weight: 400; margin-left: 2px; }
+
+.menu-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 8px;
+}
+
+.menu-row-label {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* fila "Idioma" del listado de Tags: alinea el ícono 🌐 con los íconos de
+   la lista de abajo (misma indentación que .about-body, 14px) y el select
+   pegado al label en vez de estirado al borde derecho */
+/* margin, no padding: para que el "✕" (position:absolute, right:6px)
+   quede referenciado al borde REAL del input, no al borde del wrap con
+   su padding de más (si no, el botón queda pisando el borde/afuera) */
+.valores-search-wrap { position: relative; display: flex; align-items: center; margin: 0 22px 10px; flex-shrink: 0; }
+
+.valores-search-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px 40px 9px 16px;
+  border-radius: var(--radius-xl);
+  border: 2px solid transparent;
+  font-size: 14px;
+  outline: none;
+  transition: var(--trans);
+  background: rgba(255,255,255,0.10);
+  color: inherit;
+}
+
+.light-mode .valores-search-input {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(var(--sky-rgb),0.30);
+  color: #e8f4fd;
+}
+.light-mode .valores-search-input::placeholder { color: rgba(232,244,253,0.50); }
+
+.dark-mode .valores-search-input {
+  background: var(--gray-50);
+  border-color: var(--gray-100);
+  color: var(--navy);
+}
+.dark-mode .valores-search-input::placeholder { color: var(--gray-500); }
+
+.valores-search-input:focus {
+  border-color: var(--sky) !important;
+  box-shadow: 0 0 0 4px rgba(var(--sky-rgb), 0.18) !important;
+}
+
+#valoresModalIdiomaRow,
+#peopleModalIdiomaRow {
+  padding-left: 24px;
+  padding-right: 14px;
+}
+
+#peopleModalIdiomaRow .sec-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  font-size: 12px;
+}
+
+#peopleModalIdiomaRow .menu-row-label { flex: 0 0 auto; }
+
+#valoresModalIdiomaRow .sec-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  font-size: 12px;
+}
+
+#valoresModalIdiomaRow .menu-row-label {
+  flex: 0 0 auto;
+}
+
+/* ícono de bandera dentro de la fila Idioma: clickeable, abre el país oculto detrás */
+.sec-icon.flag-pick { cursor: pointer; }
+.sec-icon.flag-pick:active { transform: scale(0.88); }
+
+/* selects dentro del menú — SIEMPRE fondo claro + texto oscuro, sin
+   depender del tema: el desplegable nativo del navegador (con las opciones)
+   no se puede re-estilar del todo por CSS, y con texto claro quedaba
+   invisible al abrirlo o pasar el mouse por una opción (fondo de hover
+   nativo, casi siempre claro) */
+.dropdown-menu select,
+.chord-instrument-select {
+  border: none;
+  border-radius: var(--radius-xl);
+  padding: 6px 10px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--navy);
+  background: var(--gray-50);
+  cursor: pointer;
+  outline: none;
+  max-width: 130px;
+}
+
+/* botones A+ A A- dentro del menú */
+.font-controls { display: flex; gap: 4px; }
+
+.font-controls button {
+  padding: 4px 10px;
+  border-radius: var(--radius-xl);
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--trans);
+}
+
+.dark-mode .font-controls button { background: var(--gray-50); color: var(--navy); }
+
+.font-controls button:hover {
+  background: var(--sky);
+  color: #06202e;
+}
+
+/* ♭ ♮ ♯ son símbolos musicales finitos, se leen chicos al mismo tamaño que "A-/A/A+" */
+.transpose-controls button {
+  font-size: 18px;
+  padding: 2px 12px;
+}
+
+/* selector de color de acento (menú > Ajustes) — un circulito lleno por
+   paleta, con un aro cuando es la elegida; el color de cada bolita es
+   literal (no --sky, que es justo lo que este control cambia). Todos en
+   un solo renglón (nowrap): con scroll horizontal de respaldo por si en
+   algún celular muy angosto no entran todos igual.
+   padding-top 8px a propósito: overflow-x:auto hace que el navegador
+   trate overflow-y como "auto" también (no "visible"), así que sin
+   padding de sobra el aro de .accent-swatch.active (box-shadow, se sale
+   4px del círculo) quedaba cortado arriba */
+.accent-picker {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px 8px 12px 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.accent-picker::-webkit-scrollbar { display: none; }
+
+/* el <button> en sí queda invisible (sin fondo propio): en iOS Safari,
+   appearance:none no siempre alcanza para sacarle del todo el brillo/
+   relieve nativo a un <button> con su propio fondo — así que ese fondo
+   (el círculo bicolor de verdad) se movió a un <span> interno
+   (.accent-swatch-dot), que al no ser un control interactivo nunca recibe
+   ese estilo nativo, pase lo que pase con el botón que lo contiene */
+.accent-swatch {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  transition: var(--trans);
+}
+
+.accent-swatch-dot {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--sw);
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.12);
+  pointer-events: none;
+}
+
+.accent-swatch:hover { transform: scale(1.12); }
+
+/* --modal-bg-solid: mismo tono que el fondo del menú (.dropdown-menu,
+   ahora varía según la paleta elegida — ver COLOR DE ACENTO más arriba),
+   así el aro queda prolijo sea cual sea el color */
+.accent-swatch.active {
+  box-shadow: 0 0 0 2px var(--modal-bg-solid), 0 0 0 4px var(--sw);
+}
+
+.menu-contact {
+  padding: 14px 16px calc(16px + env(safe-area-inset-bottom, 0));
+  border-top: 1px solid rgba(255,255,255,0.08);
+  flex-shrink: 0;
+}
+
+.dark-mode .menu-contact { border-color: var(--gray-100); }
+
+/* fila de 3 botones (Compartir / Donaciones / Contacto) en el menú, y los
+   mismos botones reusados apilados (full width) en el pie del modal de
+   Información de la app — ver .about-contact-actions.
+   Estilo "chip": tarjeta neutra (sigue el tema claro/oscuro) con el ícono
+   en una insignia circular de color — así los 3 colores fijos identifican
+   cada acción sin pintar el botón entero, más prolijo y con más aire que
+   la versión anterior (franja de color sólida, texto muy chico). */
+.menu-actions-row {
+  display: flex;
+  gap: 10px;
+}
+
+.menu-action-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px 6px 7px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.04);
+  color: inherit;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--trans);
+}
+
+.dark-mode .menu-action-btn { background: var(--gray-50); border-color: var(--gray-100); }
+
+.menu-action-btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,0.2);
+  box-shadow: var(--shadow-sm);
+}
+
+.dark-mode .menu-action-btn:hover { border-color: var(--gray-200); }
+
+.menu-action-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 13px;
+  line-height: 1;
+  color: #fff;
+}
+
+/* colores fijos a propósito, NO ligados a var(--sky): son 3 marcas
+   (compartir / donar / contacto) que tienen que verse siempre distintas
+   entre sí — si "Compartir" seguía el color del tema elegido, con
+   cualquier paleta anaranjada terminaba pisando el color de "Buy me a
+   coffee" (ambos naranja/amarillo a la vez). Ahora el color va solo en la
+   insignia del ícono, no en todo el botón. */
+.menu-action-btn.share-c   .menu-action-icon { background: linear-gradient(155deg, #38bdf8 0%, #0ea5e9 100%); }
+.menu-action-btn.donate-c  .menu-action-icon { background: linear-gradient(155deg, #f59e0b 0%, #d97706 100%); }
+.menu-action-btn.contact-c .menu-action-icon { background: linear-gradient(155deg, #10b981 0%, #059669 100%); }
+
+/* versión apilada (una debajo de otra, ancho completo) para el pie del
+   modal de Información de la app — ver .about-contact en info.html */
+.about-contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about-contact-actions .menu-action-btn {
+  flex-direction: row;
+  gap: 10px;
+  padding: 9px 14px;
+  font-size: 12.5px;
+}
+
+.about-contact-actions .menu-action-icon { width: 30px; height: 30px; font-size: 14px; }
+
+/* ============================================================
+   BOTÓN IDIOMA (bandera redonda)
+   ============================================================ */
+.lang-wrapper { position: relative; flex-shrink: 0; }
+
+#langBtn {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  font-size: 20px;
+  cursor: pointer;
+  transition: var(--trans);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.light-mode #langBtn {
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(var(--sky-rgb),0.30);
+}
+
+.dark-mode #langBtn {
+  background: var(--white);
+  border-color: var(--gray-200);
+  box-shadow: var(--shadow-sm);
+}
+
+#langBtn:hover {
+  transform: scale(1.12);
+  border-color: var(--sky) !important;
+}
+
+/* triangulito que avisa "esto se puede tocar para cambiar" — mismo
+   círculo del color del tema que ya se usa en otros lados (badges,
+   botones), para que se lea como parte del mismo lenguaje visual de la
+   app en vez de un ícono nuevo que aprender */
+.tap-hint-badge {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--sky);
+  color: #06202e;
+  border: 1.5px solid var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6px;
+}
+
+/* select idioma oculto */
+#idioma {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+#idioma.hidden {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ============================================================
+   ALFABETO
+   ============================================================ */
+.alfabeto-nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  position: sticky;
+  /* --topbar-h lo mide JS con el alto real de la barra de búsqueda (incluye
+     el safe-area del notch): así no queda ni con hueco ni tapada por ella */
+  top: var(--topbar-h, calc(56px + env(safe-area-inset-top, 0px)));
+  z-index: 499;
+}
+
+/* mismo fondo que .top-bar para que, al quedar pegada debajo, no se vea
+   la letra tapándose con la letra de la canción al scrollear */
+.light-mode .alfabeto-nav { background: var(--bg-night); background-attachment: fixed; }
+.dark-mode  .alfabeto-nav { background: var(--bg-day);   background-attachment: fixed; }
+body.light-mode.projector .alfabeto-nav { background: #000; }
+body.dark-mode.projector  .alfabeto-nav { background: var(--proj-tint); }
+
+#alfabeto,
+#himnoRangos {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  /* centra cuando entra todo (ej. idiomas con pocos cantos); si no entra,
+     se comporta como flex-start para que el scroll llegue a todo */
+  justify-content: safe center;
+  gap: 6px;
+  padding: 6px 14px 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  transition: padding 0.2s ease;
+}
+
+#alfabeto::-webkit-scrollbar,
+#himnoRangos::-webkit-scrollbar { display: none; }
+
+/* segundo renglón (rangos de himnos): pegado justo debajo del renglón de
+   letras (alto real medido por JS), sin superponerse.
+   ANTES tenía margin-top:-10px + "- 10px" en el top, para that ambas filas
+   se vieran "pegadas" sin hueco — pero esos 10px de superposición comían
+   directo del propio contenido (botones) de la fila de letras, no de un
+   espacio vacío, así que en vez de verse "pegadas" se veían PISADAS una
+   con la otra (el bug reportado). Sin ese ajuste, el hueco natural entre
+   filas es chico de por sí (el padding de #alfabeto ya es finito) y no
+   hace falta forzarlo más */
+.alfabeto-nav + .alfabeto-nav {
+  top: calc(var(--topbar-h, 56px) + var(--alfabeto-row-h, 48px));
+}
+
+/* al scrollear, la barra de letras/números queda pegada (sticky) debajo del
+   buscador: ahí se achica un poco más para ocupar menos pantalla mientras
+   se lee la canción */
+body.scrolled #alfabeto,
+body.scrolled #himnoRangos {
+  padding: 2px 14px 4px;
+}
+
+body.scrolled .alfabeto-nav .alpha-row .alpha {
+  min-width: 24px;
+  height: 24px;
+  font-size: 10px;
+  padding: 2px 5px;
+}
+
+body.scrolled .alfabeto-nav .alpha-arrow {
+  width: 22px;
+  height: 22px;
+  font-size: 10px;
+}
+
+/* flechitas: solo para dispositivos con mouse/trackpad (PC, Mac, proyector) */
+.alpha-arrow {
+  display: none;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  align-items: center;
+  justify-content: center;
+  transition: var(--trans);
+}
+
+/* celeste, distinto de los botones de letra, para que se lean como navegación y no como una letra más */
+.alpha-arrow {
+  background: var(--sky);
+  color: #06202e;
+}
+
+.dark-mode .alpha-arrow {
+  box-shadow: 0 1px 4px rgba(0,0,0,.10);
+}
+
+.alpha-arrow:hover {
+  background: var(--sky-dark) !important;
+  color: #06202e !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .alpha-arrow { display: flex; }
+  #alfabeto, #himnoRangos { cursor: grab; }
+  #alfabeto:active, #himnoRangos:active { cursor: grabbing; }
+}
+
+/* en PC, que las flechitas queden centradas justo debajo del botón de menú
+   (izquierda) y de la banderita de idioma (derecha), como el resto de la
+   barra superior: mismos 12px de margen del borde + la mitad de lo que le
+   sobra al botón de 42px sobre la flecha */
+.alfabeto-nav .alpha-arrow:first-child { margin-left: 18px; }
+.alfabeto-nav .alpha-arrow:last-child { margin-right: 18px; }
+
+body.scrolled .alfabeto-nav .alpha-arrow:first-child { margin-left: 22px; }
+body.scrolled .alfabeto-nav .alpha-arrow:last-child { margin-right: 22px; }
+
+.alpha-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.alpha {
+  flex-shrink: 0;
+  min-width: 34px;
+  height: 34px;
+  border-radius: var(--radius-xl);
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--trans);
+  letter-spacing: 0.2px;
+}
+
+.light-mode .alpha {
+  background: rgba(255,255,255,0.10);
+  color: #e8f4fd;
+}
+
+.dark-mode .alpha {
+  background: var(--white);
+  color: var(--navy);
+  box-shadow: 0 1px 4px rgba(0,0,0,.10);
+}
+
+.alpha:hover {
+  background: var(--sky) !important;
+  color: var(--white) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(var(--sky-rgb),.35) !important;
+}
+
+.alpha.active {
+  background: var(--sky) !important;
+  color: var(--white) !important;
+  box-shadow: 0 4px 14px rgba(var(--sky-rgb),.45) !important;
+  transform: translateY(-1px);
+}
+
+.hymn-ranges .alpha {
+  font-size: 10px;
+  padding: 3px 5px;
+  color: var(--sky);
+}
+
+.alpha-row .alpha {
+  font-size: 12px;
+  padding: 4px 7px;
+}
+
+/* ============================================================
+   ÍNDICE (lista de canciones) + RIEL LATERAL DE LETRAS
+   ============================================================ */
+.indice-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 2px;
+  width: 92%;
+  margin: 2px auto;
+}
+
+#indice {
+  flex: 1;
+  min-width: 0;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* riel estilo "Contactos": arrastrás el dedo y salta de letra */
+.letter-rail {
+  flex-shrink: 0;
+  width: 20px;
+  position: sticky;
+  /* + --alfabeto-row2-h: mismo ajuste que .song-title-row, para no quedar
+     tapado por la fila de rangos de himnos en Himnario/Innario */
+  top: calc(var(--topbar-h, 56px) + var(--alfabeto-row-h, 48px) + var(--alfabeto-row2-h, 0px));
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  padding: 4px 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  max-height: calc(100dvh - 160px);
+}
+
+.letter-rail span {
+  font-size: 9.5px;
+  font-weight: 700;
+  line-height: 1.45;
+  opacity: 0.5;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.letter-rail span.active {
+  opacity: 1;
+  color: var(--sky-dark);
+}
+
+.light-mode .letter-rail span.active { color: var(--sky); }
+
+/* burbuja flotante con la letra activa, sigue el dedo */
+.rail-bubble {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50% 50% 4px 50%;
+  background: var(--sky);
+  color: #0d1e30;
+  font-weight: 800;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  z-index: 1200;
+  pointer-events: none;
+  transform: translate(-100%, -50%) scale(0);
+  transition: transform 0.08s ease;
+}
+
+.rail-bubble.show {
+  transform: translate(-100%, -50%) scale(1);
+}
+
+#indice li {
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--trans);
+  font-size: 15px;
+}
+
+.light-mode #indice li {
+  background: rgba(255,255,255,0.07);
+  color: #e8f4fd;
+  border: 1px solid rgba(var(--sky-rgb),0.12);
+}
+
+.dark-mode #indice li {
+  background: var(--white);
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-100);
+}
+
+#indice li:hover {
+  transform: translateX(4px);
+  border-color: var(--sky) !important;
+}
+
+.light-mode #indice li:hover {
+  background: rgba(var(--sky-rgb),0.12);
+}
+
+.dark-mode #indice li:hover {
+  background: rgba(var(--sky-rgb),0.10);
+  box-shadow: var(--shadow-md);
+}
+
+/* sin resultados de búsqueda */
+#indice li.search-empty {
+  text-align: center;
+  cursor: default;
+  padding: 28px 18px;
+  line-height: 1.5;
+}
+
+#indice li.search-empty:hover {
+  transform: none;
+  border-color: inherit !important;
+  background: inherit !important;
+  box-shadow: none !important;
+}
+
+.search-empty-icon {
+  font-size: 26px;
+  margin-bottom: 6px;
+  opacity: 0.8;
+}
+
+.search-empty-sub {
+  font-size: 13px;
+  opacity: 0.55;
+  margin-top: 4px;
+}
+
+/* ============================================================
+   CONTENIDO (letra de canción)
+   ============================================================ */
+#contenido {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 16px;
+  font-size: 16px;
+  box-sizing: border-box;
+  /* "clip" y no "hidden": con hidden, el navegador promueve overflow-y a
+     "auto" (regla del spec cuando un eje no es "visible"), y eso convierte
+     a #contenido en su propio contenedor de scroll — rompiendo el
+     position:sticky del título a medida que avanza la canción */
+  overflow-x: clip;
+}
+
+.meta {
+  font-size: 13px;
+  opacity: 0.75;
+  margin-bottom: 2em; /*margin-bottom: 30px;*/
+}
+
+.meta a {
+  color: var(--sky);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.meta a,
+.meta a:visited,
+.meta a:active {
+  color: var(--sky);
+  text-decoration: none;
+}
+
+.meta a:hover {
+  color: var(--sky-dark);
+  text-decoration: underline; /* opcional */
+}
+
+.meta a:visited { color: var(--sky); }
+.meta a:hover { opacity: 0.8; }
+
+/* ============================================================
+   LETRA Y ACORDES
+   ============================================================ */
+.song-line {
+  /* escala junto con la letra/tablatura (--font-scale) para que el alto de
+     renglón crezca en la misma proporción que el texto */
+  font-size: calc(1em * var(--font-scale, 1));
+  line-height: 1.85;
+  margin-bottom: 4px;
+}
+
+.lyrics {
+  font-size: calc(1.4rem * var(--font-scale, 1));
+  line-height: 1.8;
+}
+
+.song-lyrics .lyrics { font-size: calc(1.4rem * var(--font-scale, 1)); }
+
+/* acorde + la palabra que le sigue (ver renderChordLine en app.js), como
+   <ruby>/<rt>: el mecanismo nativo de HTML para texto chico flotando
+   arriba de otro texto (pensado para furigana, pero es exactamente
+   nuestro caso). A diferencia de un position:absolute + offset a mano,
+   el navegador reserva él mismo el espacio vertical que hace falta —
+   sin esto, en algunos navegadores el acorde podía terminar superpuesto
+   con el renglón de arriba o con su propia palabra, según el tamaño */
+.chord-unit {
+  ruby-position: over;
+  ruby-align: start;
+  /* separación mínima garantizada entre un acorde y el siguiente: sin
+     esto, dos acordes seguidos sin ninguna palabra pegada entre ellos
+     (ej. "[Dm][F7]") quedan tocándose ("DmF7"), porque cada bloque solo
+     mide lo que ocupa su propio contenido, sin espacio de sobra */
+  margin-right: 0.2em;
+}
+
+.chord {
+  font-weight: 700;
+  /* mismo cálculo que .lyrics (1.4rem * --font-scale) pero al 85%, para
+     que el acorde crezca siempre en la misma proporción que la letra */
+  font-size: calc(1.4rem * var(--font-scale, 1) * 0.85);
+  /* line-height chico y explícito (no "normal"): así el espacio que el
+     navegador reserva arriba de la palabra es solo el que el acorde
+     necesita para el texto en sí, sin aire de sobra — "normal" varía
+     según navegador (en iOS Safari se veía bastante más separado que en
+     Chrome) */
+  line-height: 1.1;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dark-mode .chord  { color: var(--sky-dark); }
+.light-mode .chord { color: var(--sky-dark); } /*{ color: #e7540f; }*/
+
+.song-break { height: calc(1.5em * var(--font-scale, 1)); } /*10px;*/
+
+.song-note {
+  margin-top: 20px;
+  padding: 10px 15px;
+  border-left: 4px solid var(--sky);
+  background: rgba(var(--sky-rgb), 0.08);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+/* Canon */
+.canon {
+  margin-left: 60px;
+  opacity: 0.8;
+}
+
+.lyric-line { white-space: pre-wrap; }
+
+/* Instrucciones estructurales: Repite, Puente, Modula, Interludio, etc. */
+.titulo-seccion {
+  font-size: 0.68em;
+  font-weight: 700;
+  opacity: 0.55;
+  margin-top: 14px;
+  margin-bottom: 4px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+/* Voces/canon: etiqueta chica pegada a la letra que sigue en el mismo renglón */
+.voces-tag {
+  font-size: 0.62em;
+  font-weight: 700;
+  opacity: 0.55;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Número de estrofa y Coro: placas destacadas */
+.lyric-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* el margen inferior escala con --font-scale: fijo en 6px, un acorde
+     agrandado con A+ terminaba chocando contra la insignia de arriba */
+  margin: 16px 0 calc(6px * var(--font-scale, 1));
+  background: var(--sky);
+  color: #fff;
+  font-weight: 700;
+}
+
+.lyric-badge-numero {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
+.lyric-badge-coro {
+  padding: 3px 14px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.song-meta {
+  background: rgba(var(--sky-rgb), 0.06);
+  border: 1px solid rgba(var(--sky-rgb), 0.15);
+  border-left: 4px solid var(--sky);
+  border-radius: 0px; /*border-radius: 10px; redondea el contenedor*/
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--gray-500);
+}
+
+/* ============================================================
+   TELEPROMPTER (scroll automático de la letra)
+   ============================================================ */
+.teleprompter-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  /* vive dentro de .song-title-row (que es la sticky), siempre pegado a la
+     derecha, compartiendo renglón con el título y la estrella */
+  flex: 0 0 auto;
+  margin-left: auto;
+  padding: 4px 8px;
+  border-radius: var(--radius-xl);
+  background: rgba(var(--sky-rgb), 0.10);
+  border: 1px solid rgba(var(--sky-rgb), 0.25);
+  transition: var(--trans);
+}
+
+/* verde mientras está reproduciendo (el rojo se reserva para "grabando",
+   que acá no aplica) */
+.teleprompter-bar.active {
+  background: rgba(34, 197, 94, 0.12);
+  border-color: rgba(34, 197, 94, 0.4);
+}
+
+.teleprompter-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gray-500);
+  white-space: nowrap;
+}
+
+.teleprompter-play-btn {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--sky);
+  color: #06202e;
+  transition: var(--trans);
+}
+
+.teleprompter-play-btn:hover { background: var(--sky-dark); }
+
+.teleprompter-play-btn.active {
+  background: var(--green);
+  color: #fff;
+}
+
+.teleprompter-speed {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gray-500);
+}
+
+.teleprompter-speed button {
+  /* chico en el conjunto, pero sigue siendo un tap cómodo para quien
+     está tocando y necesita ajustar la velocidad rápido */
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  background: rgba(255,255,255,0.10);
+  color: inherit;
+  transition: var(--trans);
+}
+
+.dark-mode .teleprompter-speed button { background: var(--gray-100); }
+
+.teleprompter-speed button:hover { background: var(--sky); color: #06202e; }
+
+#teleprompterSpeedLabel { min-width: 26px; text-align: center; }
+
+body.light-mode.projector .teleprompter-bar {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.25);
+}
+
+body.dark-mode.projector .teleprompter-bar {
+  background: rgba(18,32,51,0.06);
+  border-color: rgba(18,32,51,0.25);
+}
+
+.song-meta a {
+  all: unset;
+  color: var(--sky);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.song-meta a,
+.song-meta a:visited,
+.song-meta a:active,
+.song-meta a:link {
+  color: var(--sky);
+  text-decoration: none !important;
+  font-weight: 700;
+}
+
+.song-meta a:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+.audio a {
+  color: var(--gray-500);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/*Titulo original "titulo_original": [""],*/
+.original-title {
+  color: var(--sky-dark);
+  font-weight: 700;
+}
+
+/* ============================================================
+   BOTONES GENERALES (toggleLista, etc.)
+   ============================================================ */
+#toggleLista,
+#fontSizeBtn,
+#projectorBtn {
+  margin: 6px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--radius-xl);
+  font-size: 15px;
+  cursor: pointer;
+  transition: var(--trans);
+}
+
+.light-mode #toggleLista,
+.light-mode #fontSizeBtn,
+.light-mode #projectorBtn {
+  background: rgba(255,255,255,0.10);
+  color: #e8f4fd;
+  border: 1px solid rgba(var(--sky-rgb),0.25);
+}
+
+.dark-mode #toggleLista,
+.dark-mode #fontSizeBtn,
+.dark-mode #projectorBtn {
+  background: var(--white);
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
+}
+
+#toggleLista:hover,
+#fontSizeBtn:hover,
+#projectorBtn:hover {
+  background: var(--sky) !important;
+  color: var(--white) !important;
+  transform: scale(1.05);
+}
+
+#toggleLista { display: none; }
+
+
+
+
+/* ============================================================
+   TAB BTN
+   ============================================================ */
+.tab-btn {
+  margin-left: 8px;
+  padding: 3px 12px;
+  border-radius: var(--radius-xl);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid var(--gray-200);
+  transition: var(--trans);
+  display: inline-block;
+}
+
+.tab-btn.on  { background: var(--green);  color: #fff; border-color: var(--green); }
+.tab-btn.off { background: var(--red);    color: #fff; border-color: var(--red); }
+
+.menu-toggle-btn {
+  margin-left: 8px;
+  padding: 4px 14px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--gray-200);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  touch-action: manipulation;
+  background: var(--gray-50);
+  color: var(--navy);
+  transition: var(--trans);
+  /* ancho fijo (el de "Inactivo", la más larga de todas: Mostrar/Ocultar,
+     Activo/Inactivo) para que el botón no cambie de tamaño ni mueva el
+     resto del renglón según qué palabra le toque mostrar */
+  min-width: 76px;
+  text-align: center;
+}
+
+/* ============================================================
+   LINKS DE META
+   ============================================================ */
+.person-link {
+  color: var(--sky);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.person-link:hover { color: var(--sky-dark); text-decoration: underline; }
+
+.tag-link {
+  font-weight: 700;
+  color: var(--sky);
+  cursor: pointer;
+}
+
+.tag-link:hover { opacity: 0.8; text-decoration: underline; }
+
+/* la etiqueta "Temas:" (a diferencia de los tags en sí) queda del mismo
+   gris que el resto de los títulos de sección (Autor:, Compositor:...),
+   pero subrayada para dar la pista de que se puede tocar */
+.temas-label-link {
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.temas-label-link:hover { opacity: 0.8; }
+
+.tonalidad-link {
+  cursor: pointer;
+  color: var(--sky);
+  font-weight: 700;
+}
+
+.tonalidad-link:hover { text-decoration: underline; }
+
+.meta-link {
+  color: var(--sky);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.meta-link:hover { opacity: 0.8; }
+
+.meta-normal {
+  color: inherit;
+  font-weight: normal;
+}
+
+/* Song meta revisado */
+.song-meta-revisado {
+  font-weight: 700;
+  color: var(--sky);
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.song-meta-revisado:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+/* Highlight */
+.highlight {
+  transition: var(--trans);
+  box-shadow: 0 0 14px rgba(var(--sky-rgb),.50);
+  border-radius: 8px;
+  transform: scale(1.03);
+  background: rgba(var(--sky-rgb),.12);
+}
+
+/* ============================================================
+   AVISO DE ACTUALIZACIÓN (service worker)
+   ============================================================ */
+.update-banner {
+  position: fixed;
+  left: 50%;
+  bottom: -100px;
+  transform: translateX(-50%);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  max-width: calc(100vw - 32px);
+  padding: 10px 10px 10px 16px;
+  border-radius: var(--radius-xl);
+  background: var(--navy);
+  color: #fff;
+  box-shadow: var(--shadow-lg);
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: bottom 0.25s ease;
+}
+
+.update-banner.show {
+  bottom: calc(70px + env(safe-area-inset-bottom, 0));
+}
+
+.update-banner button {
+  flex-shrink: 0;
+  border: none;
+  border-radius: var(--radius-xl);
+  padding: 7px 14px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--sky);
+  color: #06202e;
+  transition: var(--trans);
+}
+
+.update-banner button:hover { background: var(--sky-dark); }
+
+.update-banner-close {
+  background: rgba(255,255,255,0.12) !important;
+  color: #fff !important;
+  width: 26px;
+  height: 26px;
+  padding: 0 !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+
+/* ============================================================
+   AUDIO LINKS
+   ============================================================ */
+.audio a             { text-decoration: none; font-weight: 700; }
+.audio a.spotify     { color: #1DB954; }
+.audio a.apple       { color: #ff2d55; }
+.audio a.youtube     { color: #ff0000; }
+.audio a.applemusic  { color: #ff2d55; }
+.audio a:visited,
+.audio a:active,
+.audio a:hover       { opacity: 0.85; }
+
+/* ============================================================
+   SELECTOR LIBRO / IDIOMA (en menú)
+   ============================================================ */
+#libro {
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--navy);
+  color: white;
+  border: 1px solid rgba(var(--sky-rgb),0.30);
+  border-radius: 8px;
+  padding: 8px 28px 8px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='white' d='M5.5 7l4.5 5 4.5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 14px;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.dark-mode #libro {
+  background-color: var(--gray-100);
+  color: var(--navy);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%23122033' d='M5.5 7l4.5 5 4.5-5z'/%3E%3C/svg%3E");
+}
+
+/* Idioma select en header — el select en sí es invisible (se abre
+   programáticamente desde la bandera), pero su lista nativa de opciones sí
+   se ve: texto oscuro fijo para que no quede ilegible según el tema */
+#idioma {
+  margin: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  color: var(--navy);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: var(--navy);
+  color: white;
+  border: 1px solid rgba(var(--sky-rgb),0.30);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 28px 8px 12px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='white' d='M5.5 7l4.5 5 4.5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 14px;
+}
+
+/* ============================================================
+   FLAGS / BANDERAS
+   ============================================================ */
+.flags {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.flags b { margin-right: 5px; font-size: 0.8em; }
+
+.flag {
+  font-size: 20px;
+  margin-right: 8px;
+  cursor: pointer;
+  opacity: 0.55;
+  transition: var(--trans);
+}
+
+.flag:hover { opacity: 1; transform: scale(1.2); }
+
+.flag.active { opacity: 1; }
+
+/* el subrayado de "idioma activo" va solo debajo de la bandera en sí, no
+   debajo de la notita de audio (♪) que puede ir pegada al lado) */
+.flag.active .flag-emoji {
+  border-bottom: 2px solid var(--sky);
+}
+
+/* cuando una canción tiene muchos idiomas, las banderas se agrupan en más
+   de una fila (ver chunkFlagRows en lenguage.js) — cada fila es su propio
+   bloque, así se apilan en vez de amontonarse en una sola línea larga */
+.flags-row {
+  display: flex;
+  align-items: center;
+}
+
+.flags .flags-row { flex-basis: 100%; }
+
+/* nota (♪) chica pegada a una bandera puntual: indica que ESE idioma en
+   particular tiene audio propio (audio_url), no toda la canción */
+.flag-audio-note {
+  font-size: 0.5em;
+  vertical-align: super;
+  margin-left: 1px;
+  opacity: 0.85;
+}
+
+.lang-flags-list {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.lang-flags-list .lang-flag {
+  font-size: 14px;
+  transform: scale(0.8);
+  line-height: 1;
+}
+
+.flags-list {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  gap: 2px 4px;
+  justify-content: end;
+}
+
+/* ============================================================
+   MODALES
+   ============================================================ */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+  background: rgba(10, 20, 35, 0.72);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 28px;
+  width: 92%;
+  max-width: 500px;
+  border-radius: var(--radius-lg);
+  max-height: 82vh;
+  max-height: 82dvh; /* dvh = alto real visible, sin contar la barra del navegador que aparece/desaparece en Android/iPhone */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  box-shadow: var(--shadow-lg);
+  color: var(--navy);
+  animation: modalIn 0.22s ease;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0)   scale(1); }
+}
+
+.close {
+  float: right;
+  font-size: 26px;
+  cursor: pointer;
+  opacity: 0.45;
+  line-height: 1;
+  transition: var(--trans);
+}
+
+.close:hover { opacity: 1; color: var(--red); }
+
+body.dark .modal-content {
+  background: #1e293b;
+  color: #fff;
+}
+
+/* ===== TOAST (mensaje flotante centrado, se abre y se cierra solo) ===== */
+.toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 3000;
+  max-width: 85vw;
+  padding: 16px 22px;
+  border-radius: var(--radius-md);
+  background: #fff;
+  color: var(--navy);
+  box-shadow: var(--shadow-lg);
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.4;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.92);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+body.light-mode .toast {
+  background: #1e293b;
+  color: #fff;
+}
+
+/* Social links */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: var(--gray-50);
+  transition: var(--trans);
+}
+
+.social-links a:hover {
+  background: rgba(var(--sky-rgb),0.10);
+  color: var(--sky-dark);
+}
+
+.icon { font-size: 18px; }
+
+/* ============================================================
+   BASE "FICHA" DE MODAL — compartida por Acerca de, Biblioteca
+   y Compartir
+   ============================================================ */
+.about-modal {
+  max-width: 440px;
+  max-height: 90vh;
+  max-height: 90dvh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--modal-bg);
+  color: #e8f4fd;
+  border: 1px solid rgba(255,255,255,0.08);
+  animation: modalIn 0.22s ease;
+}
+
+.dark-mode .about-modal {
+  background: #ffffff;
+  color: var(--navy);
+  border-color: var(--gray-100);
+}
+
+.about-head {
+  position: relative;
+  padding: 22px 22px 18px;
+  flex-shrink: 0;
+}
+
+.about-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+  opacity: 0.75;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  transition: var(--trans);
+}
+
+.dark-mode .about-close { background: var(--gray-50); }
+.about-close:hover { opacity: 1; background: var(--sky); color: #fff; }
+
+/* volver al modal de Información de la app — solo en los listados que se
+   abren DESDE ahí (Autores/Compositores/Coautores/Tags/Idiomas): a
+   diferencia de .about-close (cierra sin más), esto reabre Info detrás.
+   En flujo normal (no absoluta) arriba del badge, para no pisarlo */
+.about-back {
+  display: block;
+  border: none;
+  background: none;
+  color: inherit;
+  opacity: 0.65;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.about-back:hover { opacity: 1; }
+
+.theme-toggle-btn {
+  position: absolute;
+  top: 52px;
+  right: 14px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  border: none;
+  transition: var(--trans);
+}
+
+/* modo nocturno = "encendido": circulo con el color del tema y brillo alrededor */
+.light-mode .theme-toggle-btn {
+  background: var(--sky);
+  box-shadow: 0 0 8px rgba(var(--sky-rgb), 0.7);
+}
+
+/* modo diurno = "apagado": circulo neutro, solo para que se distinga del fondo */
+.dark-mode .theme-toggle-btn { background: var(--gray-100); }
+
+.theme-toggle-btn:hover { opacity: 1; background: var(--sky); }
+
+.about-badge,
+.app-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: linear-gradient(155deg, var(--sky) 0%, var(--sky-dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 8px 20px -6px rgba(var(--sky-rgb), 0.18);
+}
+
+.about-badge { margin-bottom: 12px; }
+
+/* fila de "apps" en la cabecera del menú (☰): 🎶 Cancionero (siempre activo,
+   estamos acá) + 🛐 Oración — mismo tamaño/estilo que .about-badge, pero
+   como botones clickeables. El que no está activo se ve apagado (opacity)
+   hasta que se lo toca */
+.app-badges {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.app-badge {
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: var(--trans);
+}
+
+.app-badge.active { opacity: 1; }
+.app-badge:hover { opacity: 1; }
+
+.about-head h2 {
+  margin: 0 0 4px;
+  padding: 0;
+  font-size: 18px;
+  text-align: left;
+  letter-spacing: -0.01em;
+}
+
+.about-meta {
+  font-size: 12.5px;
+  color: rgba(232,244,253,0.6);
+  font-weight: 600;
+}
+
+.dark-mode .about-meta { color: var(--gray-500); }
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 0 22px 18px;
+  flex-shrink: 0;
+}
+
+.stat-chip {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-md);
+  padding: 10px 8px;
+  text-align: center;
+}
+
+.dark-mode .stat-chip { background: var(--gray-50); border-color: var(--gray-100); }
+
+.stat-chip b {
+  display: block;
+  font-size: 18px;
+  color: var(--sky);
+  line-height: 1.1;
+}
+
+.dark-mode .stat-chip b { color: var(--sky-dark); }
+
+.stat-chip span {
+  font-size: 10.5px;
+  color: rgba(232,244,253,0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+
+.dark-mode .stat-chip span { color: var(--gray-500); }
+
+#statIdiomasChip { cursor: pointer; }
+#statIdiomasChip:hover { background: rgba(255,255,255,0.09); }
+.dark-mode #statIdiomasChip:hover { background: var(--gray-100); }
+
+/* fila de filtros chicos (Autores/Compositores/Coautores/Tags) — más finos
+   y angostos que los .stat-chip de arriba, a propósito: son navegación, no
+   estadísticas */
+.about-mini-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 22px 18px;
+  flex-shrink: 0;
+}
+
+.mini-stat-chip {
+  flex: 1 1 auto;
+  padding: 5px 10px;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.05);
+  color: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  touch-action: manipulation;
+}
+
+.dark-mode .mini-stat-chip { background: var(--gray-50); border-color: var(--gray-100); }
+.mini-stat-chip:hover { background: rgba(255,255,255,0.09); }
+.dark-mode .mini-stat-chip:hover { background: var(--gray-100); }
+
+.about-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  padding: 4px 14px 10px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.dark-mode .about-body { border-color: var(--gray-100); }
+
+details.about-section {
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.dark-mode details.about-section { border-color: var(--gray-100); }
+details.about-section:last-of-type { border-bottom: none; }
+
+details.about-section summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+details.about-section summary::-webkit-details-marker { display: none; }
+details.about-section summary::marker { content: ""; }
+
+.sec-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: rgba(var(--sky-rgb),0.12);
+  color: var(--sky);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.dark-mode .sec-icon { background: rgba(var(--sky-rgb), 0.18); color: var(--sky-dark); }
+
+/* "Idioma de las canciones" ya tiene al lado un <select> nativo (con su
+   propia flechita) para elegir el idioma, pero el ícono 🌐 en sí es un
+   atajo APARTE (abre el selector visual de banderas por país) — sin nada
+   que lo distinga, se veía igual que el resto de los íconos decorativos
+   del menú (🅰️, 🎼, etc.), que no son clickeables. El triangulito avisa
+   que este sí lo es */
+#idiomaFlagIcon {
+  position: relative;
+  cursor: pointer;
+}
+
+/* italiano y guaraní no tienen variantes de país (ver FLAG_VARIANTS en
+   lenguage.js) — ".flag-pick" es justo la clase que renderBanderaSelect()
+   saca cuando no hay nada para elegir ahí, así que el triangulito
+   tampoco corresponde en ese caso */
+#idiomaFlagIcon:not(.flag-pick) .tap-hint-badge { display: none; }
+
+.sec-chevron {
+  margin-left: auto;
+  opacity: 0.5;
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+details[open] .sec-chevron { transform: rotate(90deg); }
+
+.about-panel {
+  padding: 0 8px 18px 50px;
+  font-size: 13.5px;
+  color: rgba(232,244,253,0.82);
+  text-align: left;
+}
+
+.dark-mode .about-panel { color: #33475a; }
+
+.about-panel p { margin: 0 0 10px; }
+.about-panel p:last-child { margin-bottom: 0; }
+.about-panel ul { margin: 0; padding-left: 18px; }
+.about-panel li { margin-bottom: 6px; }
+.about-panel li:last-child { margin-bottom: 0; }
+
+.callout {
+  background: rgba(var(--sky-rgb),0.08);
+  border: 1px solid rgba(var(--sky-rgb),0.2);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 12.5px;
+  margin-top: 10px;
+}
+
+.dark-mode .callout { background: rgba(var(--sky-rgb), 0.18); border-color: rgba(var(--sky-rgb),0.3); }
+
+.legal-box {
+  max-height: 130px;
+  overflow-y: auto;
+  background: rgba(0,0,0,0.18);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 12px;
+  line-height: 1.55;
+  color: rgba(232,244,253,0.7);
+}
+
+.dark-mode .legal-box { background: var(--gray-50); color: var(--gray-500); }
+.legal-box p { margin: 0 0 8px; }
+.legal-box p:last-child { margin-bottom: 0; }
+
+.about-contact {
+  padding: 12px 16px 14px;
+  flex-shrink: 0;
+}
+
+.contact-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(232,244,253,0.5);
+  margin: 0 0 10px 4px;
+}
+
+.dark-mode .contact-label { color: var(--gray-500); }
+
+.contact-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-row a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  color: inherit;
+  text-decoration: none;
+  font-size: 12.5px;
+  font-weight: 600;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.dark-mode .contact-row a { background: var(--gray-50); }
+.contact-row a:hover { background: rgba(var(--sky-rgb),0.14); transform: translateX(2px); }
+
+.contact-row .c-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.c-icon.ig { background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af); }
+.c-icon.yt { background: #ff0000; }
+.c-icon.gh { background: #24292e; }
+.c-icon.mail-c { background: var(--navy-soft); }
+
+.contact-row small {
+  display: block;
+  font-weight: 400;
+  opacity: 0.6;
+  font-size: 11px;
+}
+
+/* ============================================================
+   MODAL BIBLIOTECA — reusa la ficha ".about-modal"
+   ============================================================ */
+.biblio-search-wrap {
+  padding: 0 22px 14px;
+  flex-shrink: 0;
+}
+
+#bibliotecaSearch {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 16px;
+  border-radius: var(--radius-xl);
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+  transition: var(--trans);
+}
+
+.dark-mode #bibliotecaSearch { background: var(--gray-50); color: var(--navy); }
+
+#bibliotecaSearch::placeholder { color: rgba(232,244,253,0.5); }
+.dark-mode #bibliotecaSearch::placeholder { color: var(--gray-500); }
+
+#bibliotecaSearch:focus { box-shadow: 0 0 0 3px rgba(var(--sky-rgb), 0.18); }
+
+.biblio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 14px;
+}
+
+.dark-mode .biblio-list { border-color: var(--gray-100); }
+
+.biblio-empty {
+  text-align: center;
+  opacity: 0.6;
+  font-size: 13.5px;
+  padding: 30px 0;
+}
+
+/* si el estado vacío trae un botón (ej. "volver a Tags" cuando un tag no
+   tiene canciones en el idioma elegido), que no quede apagado como el texto */
+.biblio-empty .chip {
+  opacity: 1;
+  margin-top: 12px;
+}
+
+.biblio-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-md);
+  padding: 14px;
+}
+
+.dark-mode .biblio-card { background: var(--gray-50); border-color: var(--gray-100); }
+
+.biblio-card-head {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.biblio-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: rgba(var(--sky-rgb),0.12);
+  color: var(--sky);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.dark-mode .biblio-icon { background: rgba(var(--sky-rgb), 0.18); color: var(--sky-dark); }
+
+.biblio-titulo {
+  display: block;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.biblio-meta-line {
+  font-size: 12px;
+  opacity: 0.65;
+  margin-top: 3px;
+}
+
+.biblio-derechos {
+  font-size: 12px;
+  opacity: 0.85;
+  margin-bottom: 12px;
+}
+
+.biblio-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.biblio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: var(--radius-xl);
+  background: var(--sky);
+  color: #06202e;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--trans);
+}
+
+.biblio-btn:hover { background: var(--sky-dark); }
+
+.biblio-btn.ghost {
+  background: rgba(255,255,255,0.07);
+  color: inherit;
+}
+
+.dark-mode .biblio-btn.ghost { background: var(--gray-100); color: var(--navy); }
+
+/* ============================================================
+   MIS LISTAS
+   ============================================================ */
+.nueva-lista-row {
+  display: flex;
+  gap: 8px;
+  padding: 0 22px 14px;
+  flex-shrink: 0;
+}
+
+.nueva-lista-row input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 14px;
+  border-radius: var(--radius-xl);
+  border: none;
+  outline: none;
+  font-size: 13px;
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+}
+
+.dark-mode .nueva-lista-row input { background: var(--gray-50); color: var(--navy); }
+.nueva-lista-row input::placeholder { color: rgba(232,244,253,0.5); }
+.dark-mode .nueva-lista-row input::placeholder { color: var(--gray-500); }
+
+.listas-io-row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 22px 6px;
+  flex-shrink: 0;
+}
+
+.listas-import-btn {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.listas-io-hint {
+  font-size: 11px;
+  opacity: 0.55;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 22px 14px;
+  flex-shrink: 0;
+}
+
+.lista-check {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.lista-check input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--sky);
+  cursor: pointer;
+}
+
+.lista-manage-btns {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.lista-edit-btn,
+.lista-delete-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: var(--trans);
+}
+
+.dark-mode .lista-edit-btn,
+.dark-mode .lista-delete-btn { background: var(--gray-50); }
+
+.lista-edit-btn:hover { background: var(--sky); color: #06202e; }
+.lista-delete-btn:hover { background: var(--red); color: #fff; }
+
+.lista-song-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 13px;
+}
+
+.dark-mode .lista-song-row { border-color: var(--gray-100); }
+.lista-song-row:last-child { border-bottom: none; }
+
+.lista-song-row span {
+  cursor: pointer;
+  flex: 1;
+  min-width: 0;
+}
+
+.lista-song-row span:hover { color: var(--sky); }
+.dark-mode .lista-song-row span:hover { color: var(--sky-dark); }
+
+.lista-remove-btn {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  transition: var(--trans);
+}
+
+.dark-mode .lista-remove-btn { background: var(--gray-50); }
+.lista-remove-btn:hover { background: var(--red); color: #fff; }
+
+/* enlace del versículo (Mis Pedidos de Oración) dentro de .lista-song-row,
+   que hasta acá solo tenía estilos para <span> */
+.lista-song-row a {
+  color: inherit;
+  text-decoration: none;
+  flex: 1;
+  min-width: 0;
+}
+
+.lista-song-row a:hover { color: var(--sky); text-decoration: underline; }
+.dark-mode .lista-song-row a:hover { color: var(--sky-dark); }
+
+/* ==========================================================
+   MIS PEDIDOS DE ORACIÓN
+========================================================== */
+
+.oracion-nuevo-panel {
+  padding: 0 22px 10px;
+  flex-shrink: 0;
+}
+
+.oracion-nuevo-panel textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 44px;
+  padding: 10px 14px;
+  border-radius: var(--radius-xl);
+  border: none;
+  outline: none;
+  font: inherit;
+  font-size: 13px;
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+  margin-bottom: 8px;
+}
+
+.dark-mode .oracion-nuevo-panel textarea { background: var(--gray-50); color: var(--navy); }
+.oracion-nuevo-panel textarea::placeholder { color: rgba(232,244,253,0.5); }
+.dark-mode .oracion-nuevo-panel textarea::placeholder { color: var(--gray-500); }
+
+.oracion-adjuntos-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.oracion-adjuntos-preview:not(:empty) { margin-bottom: 8px; }
+
+.oracion-add-chip {
+  font-size: 12px;
+  opacity: 0.8;
+  margin: 4px 0;
+}
+
+.oracion-song-picker {
+  background: rgba(255,255,255,0.06);
+  border-radius: var(--radius-xl);
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.dark-mode .oracion-song-picker { background: var(--gray-50); }
+
+.oracion-song-picker-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.oracion-song-picker input {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 12px;
+  border-radius: var(--radius-xl);
+  border: none;
+  outline: none;
+  font-size: 13px;
+  background: rgba(255,255,255,0.1);
+  color: inherit;
+}
+
+.dark-mode .oracion-song-picker input { background: #ffffff; color: var(--navy); }
+
+.oracion-song-picker-results { max-height: 160px; overflow-y: auto; }
+
+.oracion-foto-preview {
+  max-width: 100%;
+  max-height: 220px;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  flex: 1;
+}
+
+.oracion-lista-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+  font-size: 13px;
+}
+
+.oracion-fechas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 11.5px;
+  opacity: 0.65;
+  margin: 10px 0;
+}
+
+.oracion-respondido-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.oracion-respondido-toggle input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--sky);
+  cursor: pointer;
+}
+
+/* pedido ya tachado/respondido: texto apagado, sin resaltar */
+.oracion-respondido .menu-row-label { opacity: 0.5; text-decoration: line-through; }
+.oracion-respondido .sec-icon { opacity: 0.6; }
+
+/* botón ⭐ junto al título de la canción, para agregarla a una lista */
+/* grande y normal mientras no scrolleaste; en cuanto bajás un poco
+   (body.scrolled, mismo umbral que ya achica la barra de letras) se achica
+   y pasa a un solo renglón con el teleprompter */
+.song-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  position: sticky;
+  /* mismo enganche que ya usa el riel de letras: justo debajo de la barra
+     de letras (que también es sticky), para no superponerse con ella.
+     --alfabeto-row2-h suma la fila de rangos de himnos ("1-50", "51-100"...)
+     cuando está visible (Himnario/Innario): sin sumarla, este título quedaba
+     con menos "top" del que hacía falta y terminaba pegado DEBAJO de esa
+     fila, tapado por ella (mayor z-index) en vez de debajo */
+  top: calc(var(--topbar-h, 56px) + var(--alfabeto-row-h, 48px) + var(--alfabeto-row2-h, 0px));
+  /* sin transition acá a propósito: animar "top" en un elemento sticky es
+     poco confiable en iOS Safari (Safari recalcula la posición sticky en
+     cada frame de scroll por fuera del motor de animación normal, y esa
+     pelea entre los dos es justamente lo que se veía como "saltitos"
+     continuos mientras se scrolleaba, no solo al cruzar el umbral) */
+  z-index: 60;
+  padding: 2px 0 6px;
+}
+
+/* sin background-attachment:fixed acá a propósito (a diferencia de
+   .top-bar/.alfabeto-nav): combinado con position:sticky es una causa
+   conocida de parpadeo/vibración de scroll en iOS Safari, porque fuerza
+   un repintado en cada frame. Tampoco hace falta acá: --bg-day/--bg-night
+   ya son opacos de punta a punta (ver el comentario junto a --bg-day en
+   TOKENS) así que esta fila queda sólida sin el "fixed", no se ve nada
+   detrás sea cual sea el scroll */
+.light-mode .song-title-row { background: var(--bg-night); }
+.dark-mode  .song-title-row { background: var(--bg-day);   }
+body.light-mode.projector .song-title-row { background: #000; }
+body.dark-mode.projector  .song-title-row { background: var(--proj-tint); }
+
+.song-title-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  /* el font-size se achica con una transición en vez de saltar de un
+     tamaño a otro de golpe (la estrellita de al lado ya tenía esta misma
+     transición vía --trans; por eso antes se movían desincronizados) */
+  transition: font-size 0.22s ease;
+}
+
+/* pegada arriba: título chico y truncado (con puntos suspensivos) en vez
+   de partir el renglón en dos líneas */
+body.scrolled .song-title-row { flex-wrap: nowrap; }
+
+body.scrolled .song-title-text {
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* sin el teleprónter compitiendo por lugar en el renglón, el título achicado
+   puede quedar un poco más grande */
+body.scrolled.teleprompter-hidden .song-title-text {
+  font-size: 18px;
+}
+
+.fav-add-btn {
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: var(--trans);
+  flex-shrink: 0;
+}
+
+.fav-add-btn:hover { opacity: 1; transform: scale(1.15); }
+
+body.scrolled .fav-add-btn { font-size: 15px; }
+
+/* Modal revisado / tags / autor-compositor: misma ficha ".about-modal" que Biblioteca */
+.revisado-toggle-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 0 22px 14px;
+  flex-shrink: 0;
+}
+
+/* envuelve la lista + el riel de letras para que el riel no se mueva al scrollear */
+.modal-body-wrap {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+
+.modal-body-wrap .about-body {
+  flex: 1;
+  min-width: 0;
+}
+
+/* lista de canciones más angosta que las tarjetas de Biblioteca (un renglón c/u) */
+.song-list { gap: 6px; }
+
+.song-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  cursor: pointer;
+  transition: var(--trans);
+}
+
+.dark-mode .song-row { background: var(--gray-50); border-color: var(--gray-100); }
+
+.song-row:hover { border-color: var(--sky); background: rgba(var(--sky-rgb),0.06); }
+.dark-mode .song-row:hover { background: rgba(var(--sky-rgb),0.10); }
+
+.song-row-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  background: rgba(var(--sky-rgb),0.12);
+  color: var(--sky);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.dark-mode .song-row-icon { background: rgba(var(--sky-rgb), 0.18); color: var(--sky-dark); }
+
+.song-row-title {
+  flex: 1;
+  min-width: 0;
+  font-size: 13.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.song-row .fav-add-btn { font-size: 15px; }
+
+.valor-count {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0.55;
+  padding: 2px 7px;
+  border-radius: var(--radius-xl);
+  background: rgba(255,255,255,0.06);
+}
+
+.dark-mode .valor-count { background: var(--gray-100); }
+
+/* riel de letras propio de estos modales: siempre visible al costado de la
+   lista (no hace falta position:sticky, la lista scrollea sola, el riel no) */
+.modal-letter-rail {
+  flex-shrink: 0;
+  width: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  padding: 4px 2px 4px 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.modal-letter-rail span {
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.4;
+  opacity: 0.5;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.modal-letter-rail span:hover { opacity: 1; color: var(--sky-dark); }
+.light-mode .modal-letter-rail span:hover { color: var(--sky); }
+
+/* Modal header genérico */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.modal-toggle-btn {
+  margin-left: auto;
+  padding: 6px 14px;
+  border-radius: var(--radius-xl);
+  border: none;
+  cursor: pointer;
+  background: var(--sky);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  transition: var(--trans);
+}
+
+.modal-toggle-btn:hover { opacity: 0.85; transform: scale(1.05); }
+
+/* Revisado lista */
+#revisadoModalLista li {
+  list-style: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--gray-100);
+  transition: var(--trans);
+}
+
+#revisadoModalLista li:hover { background: rgba(var(--sky-rgb),.07); }
+
+/* Duplicados */
+.dup-title {
+  background: rgba(var(--sky-rgb),0.12);
+  padding: 2px 8px;
+  border-radius: 6px;
+  margin-right: 4px;
+  display: inline-block;
+}
+
+/* ============================================================
+   METRÓNOMO Y AFINADOR — misma ficha ".about-modal"
+   ============================================================ */
+.metro-modal { max-width: 480px; }
+.metro-body { text-align: left; }
+
+/* nav fija: siempre visible arriba del modal, salta a cada sección */
+.metro-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 8px 14px;
+  margin: -4px -14px 4px;
+  background: rgba(16, 29, 46, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  scrollbar-width: none;
+}
+
+.metro-tabs::-webkit-scrollbar { display: none; }
+
+@media (hover: hover) and (pointer: fine) {
+  .metro-tabs { cursor: grab; }
+  .metro-tabs:active { cursor: grabbing; }
+}
+
+/* deja lugar para la nav fija al saltar a una sección con scrollIntoView() */
+#metroModal .menu-group[id] { scroll-margin-top: 54px; }
+
+.dark-mode .metro-tabs {
+  background: rgba(255,255,255,0.94);
+  border-color: var(--gray-100);
+}
+
+.metro-tab {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  border-radius: var(--radius-xl);
+  border: none;
+  font-size: 11.5px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+  opacity: 0.7;
+  transition: var(--trans);
+}
+
+.dark-mode .metro-tab { background: var(--gray-50); }
+
+.metro-tab:hover { opacity: 1; }
+
+.metro-tab.active {
+  opacity: 1;
+  background: var(--sky);
+  color: #06202e;
+}
+
+.tuner-hz { font-size: 12px; opacity: 0.55; margin-top: 1px; font-weight: 600; }
+
+/* tap tempo */
+.tap-tempo-btn {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  margin: 8px auto 4px;
+  padding: 10px;
+  border-radius: var(--radius-xl);
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: var(--trans);
+}
+
+.dark-mode .tap-tempo-btn { background: var(--gray-50); }
+.tap-tempo-btn:hover { background: rgba(var(--sky-rgb),0.16); }
+.dark-mode .tap-tempo-btn:hover { background: rgba(var(--sky-rgb), 0.18); }
+
+.tap-tempo-btn.tap-flash {
+  background: var(--sky) !important;
+  color: #06202e !important;
+  transform: scale(0.96);
+}
+
+/* ---- grilla de notas (reproducir tono de referencia) ---- */
+.note-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+/* separa la grilla de notas de acordes del selector de instrumento que
+   queda justo arriba (#afinometroChordInstrument) — sin esto quedan pegados */
+#chordRootGrid { margin-top: 14px; }
+
+.chord-quality-row { margin-top: 12px; }
+
+.chord-notes-display {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 10px;
+  opacity: 0.85;
+  min-height: 1.2em;
+}
+
+/* ============================================================
+   DIAGRAMAS DE ACORDES (mástil y piano) — SVG generado en afinometro.js
+   ============================================================ */
+.chord-diagram-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.chord-fret-svg,
+.chord-piano-svg {
+  display: block;
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+}
+
+.chord-piano-svg { max-width: 320px; }
+
+.chord-fret-nut     { fill: var(--gray-500); }
+.chord-fret-line    { stroke: rgba(148,163,184,0.55); stroke-width: 1.5; }
+.chord-string-line  { stroke: rgba(148,163,184,0.55); stroke-width: 1.5; }
+.chord-fret-marker  { font-size: 11px; font-weight: 700; fill: var(--gray-500); }
+.chord-fret-basefret{ font-size: 10px; font-weight: 700; fill: var(--gray-500); }
+.chord-fret-dot     { fill: var(--sky); }
+
+.chord-inversion-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.chord-piano-svg {
+  background: rgba(148,163,184,0.16);
+  border-radius: 8px;
+  padding: 6px 4px 2px;
+}
+
+.chord-piano-white { fill: #fdfdfd; stroke: var(--navy); stroke-width: 1.5; }
+.chord-piano-black { fill: #1e293b; stroke: var(--navy); stroke-width: 1; }
+.chord-piano-white.active { fill: var(--sky); }
+.chord-piano-black.active { fill: var(--sky-dark); }
+.chord-piano-white.root,
+.chord-piano-black.root { fill: var(--green); }
+
+.chord-piano-clickable { cursor: pointer; }
+.chord-piano-clickable:hover.chord-piano-white { fill: var(--gray-100); }
+.chord-piano-clickable:hover.chord-piano-black { fill: #334155; }
+
+/* ---- popover de acorde (al tocar uno en la letra) ---- */
+.chord-popover-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2500;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.chord-popover-backdrop.hidden { display: none; }
+
+.chord-popover {
+  position: relative;
+  background: #fff;
+  color: var(--navy);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 24px 22px 18px;
+  width: 100%;
+  max-width: 340px;
+  text-align: center;
+  animation: modalIn 0.22s ease;
+}
+
+body.light-mode .chord-popover { background: #1e293b; color: #fff; }
+
+.chord-popover-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chord-popover-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  opacity: 0.5;
+  cursor: pointer;
+  color: inherit;
+}
+
+.chord-popover-close:hover { opacity: 1; }
+
+.chord-popover-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.chord-popover-name {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.chord-popover-play {
+  margin-top: 14px;
+  border: none;
+  border-radius: var(--radius-xl);
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--sky);
+  color: #06202e;
+  cursor: pointer;
+}
+
+/* popover de "elegí tu bandera" (país por idioma) */
+.bandera-popover-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 14px;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.bandera-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 8px 10px;
+  background: rgba(255,255,255,0.05);
+  color: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  touch-action: manipulation;
+}
+
+.dark-mode .bandera-option { background: var(--gray-50); }
+.bandera-option:hover { background: rgba(var(--sky-rgb),0.12); }
+
+.bandera-option.active {
+  background: var(--sky);
+  color: #06202e;
+}
+
+.bandera-option-emoji { font-size: 20px; }
+
+/* ---- círculo de quintas ---- */
+.fifths-circle {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  max-width: 100%;
+  margin: 14px auto 6px;
+}
+
+.fifths-circle::before {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  border-radius: 50%;
+  border: 1px dashed rgba(255,255,255,0.15);
+}
+
+.dark-mode .fifths-circle::before { border-color: var(--gray-200); }
+
+.fifths-legend {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 220px;
+  margin: 0 auto;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  opacity: 0.5;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.fifths-legend small {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.fifths-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.06);
+  color: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--trans);
+}
+
+.dark-mode .fifths-node { background: var(--gray-50); }
+
+.fifths-node:hover { background: rgba(var(--sky-rgb),0.16); }
+.dark-mode .fifths-node:hover { background: rgba(var(--sky-rgb), 0.18); }
+
+.fifths-node.active { background: var(--sky); color: #06202e; }
+
+.fifths-node.minor {
+  width: 30px;
+  height: 30px;
+  font-size: 10px;
+  opacity: 0.85;
+  background: rgba(255,255,255,0.03);
+}
+
+.dark-mode .fifths-node.minor { background: rgba(0,0,0,0.04); }
+
+.fifths-node.minor.active { background: var(--sky-dark); color: #06202e; opacity: 1; }
+
+.diatonic-row { margin-top: 10px; }
+
+.scale-full-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+/* escala a la izquierda, botón de play siempre a la derecha (sin importar
+   si el texto de la escala ocupa una o dos líneas) */
+.scale-full-row .chord-notes-display {
+  text-align: left;
+  flex: 1;
+  margin-top: 0;
+}
+
+.scale-full-label { opacity: 0.65; font-size: 12px; }
+
+.scale-mini-play {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: none;
+  background: var(--sky);
+  color: #06202e;
+  font-size: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--trans);
+}
+
+.scale-mini-play:hover { background: var(--sky-dark); }
+
+.note-btn {
+  padding: 8px 4px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: rgba(255,255,255,0.06);
+  color: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--trans);
+}
+
+.dark-mode .note-btn { background: var(--gray-50); }
+
+.note-btn small {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  opacity: 0.65;
+  margin-top: 2px;
+}
+
+.note-btn:hover { background: rgba(var(--sky-rgb),0.16); }
+.dark-mode .note-btn:hover { background: rgba(var(--sky-rgb), 0.18); }
+
+.note-btn.active { background: var(--sky); color: #06202e; }
+.note-btn.active small { opacity: 0.85; }
+
+.octave-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.ref-freq-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--sky-dark);
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.06);
+  border-radius: var(--radius-xl);
+  padding: 4px 10px;
+}
+
+.dark-mode .stepper { background: var(--gray-50); }
+
+.stepper button {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.12);
+  color: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dark-mode .stepper button { background: var(--gray-100); color: var(--navy); }
+
+.stepper span { min-width: 14px; text-align: center; font-weight: 700; font-size: 13px; }
+
+.play-btn {
+  margin-left: auto;
+  padding: 8px 16px;
+  border-radius: var(--radius-xl);
+  border: none;
+  background: var(--sky);
+  color: #06202e;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: var(--trans);
+}
+
+.play-btn:hover { background: var(--sky-dark); }
+
+/* ---- chips genéricos: instrumento / compás / subdivisión / acento ---- */
+.instrument-chips,
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+
+.chip {
+  padding: 6px 12px;
+  border-radius: var(--radius-xl);
+  border: none;
+  background: rgba(255,255,255,0.06);
+  color: inherit;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--trans);
+}
+
+.dark-mode .chip { background: var(--gray-50); }
+
+.chip:hover { background: rgba(var(--sky-rgb),0.16); }
+.dark-mode .chip:hover { background: rgba(var(--sky-rgb), 0.18); }
+
+.chip.active { background: var(--sky); color: #06202e; }
+
+/* ---- afinador: notas / cuerdas objetivo ---- */
+.tuner-targets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.tuner-targets button {
+  min-width: 46px;
+  padding: 6px 8px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: rgba(255,255,255,0.06);
+  color: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--trans);
+}
+
+.dark-mode .tuner-targets button { background: var(--gray-50); }
+
+.tuner-targets button small {
+  display: block;
+  font-size: 9.5px;
+  font-weight: 400;
+  opacity: 0.6;
+  margin-top: 2px;
+}
+
+.tuner-targets button:hover { background: rgba(var(--sky-rgb),0.16); }
+.dark-mode .tuner-targets button:hover { background: rgba(var(--sky-rgb), 0.18); }
+
+.tuner-targets button.active { background: var(--sky); color: #06202e; }
+
+.mic-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border-radius: var(--radius-xl);
+  border: none;
+  background: var(--navy-soft);
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: var(--trans);
+}
+
+.mic-btn:hover { background: var(--sky-dark); }
+
+.tuner-display { text-align: center; margin-top: 14px; }
+
+#tunerNote { font-size: 34px; font-weight: 800; line-height: 1.1; }
+
+.tuner-cents { font-size: 12.5px; opacity: 0.7; margin-top: 2px; font-weight: 600; }
+
+.tuner-meter {
+  width: 100%;
+  max-width: 260px;
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  margin: 14px auto 6px;
+  position: relative;
+  border-radius: 4px;
+}
+
+.dark-mode .tuner-meter { background: var(--gray-100); }
+
+.tuner-meter-center {
+  position: absolute;
+  left: 50%;
+  top: -4px;
+  width: 2px;
+  height: 14px;
+  background: rgba(255,255,255,0.25);
+  transform: translateX(-50%);
+}
+
+.dark-mode .tuner-meter-center { background: var(--gray-200); }
+
+#tunerNeedle {
+  width: 4px;
+  height: 22px;
+  background: var(--red);
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: left 0.1s ease, background 0.15s ease;
+  border-radius: 2px;
+}
+
+/* ---- metrónomo ---- */
+.metro-bpm-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.metro-bpm-box button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  background: var(--sky);
+  color: #06202e;
+  font-weight: 700;
+  transition: var(--trans);
+}
+
+.metro-bpm-box button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 14px rgba(var(--sky-rgb),.45);
+}
+
+.metro-bpm-box input {
+  box-sizing: border-box;
+  width: 110px;
+  padding: 2px 8px;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 800;
+  border: 2px solid transparent;
+  border-radius: var(--radius-lg);
+  color: inherit;
+  transition: var(--trans);
+}
+
+.light-mode .metro-bpm-box input {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.20);
+}
+
+.dark-mode .metro-bpm-box input {
+  background: var(--gray-50);
+  border-color: var(--gray-200);
+}
+
+.metro-bpm-box input:hover { border-color: var(--sky); }
+
+.metro-bpm-box input:focus {
+  border-color: var(--sky) !important;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(var(--sky-rgb), 0.18);
+}
+
+.metro-label { text-align: center; margin-top: 2px; opacity: 0.6; font-size: 12.5px; letter-spacing: 1px; }
+
+.metro-beat {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin: 16px auto;
+  background: rgba(255,255,255,0.1);
+  transition: transform 0.08s ease, background 0.08s ease;
+}
+
+.dark-mode .metro-beat { background: var(--gray-100); }
+
+.metro-beat.active { transform: scale(1.28); background: var(--sky); }
+.metro-beat.active.strong { background: var(--green); }
+
+.metro-sub-row { margin-top: 12px; }
+
+.metro-sub-row .menu-row-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 0.7;
+  margin-bottom: 6px;
+}
+
+.metro-controls {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.metro-controls button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  background: var(--navy-soft);
+  color: white;
+  transition: var(--trans);
+}
+
+.metro-controls button:hover { background: var(--sky); color: #06202e; }
+
+/* ============================================================
+   MODO PROYECTOR
+   ============================================================ */
+/* el fondo respeta el tema claro/oscuro elegido — antes siempre forzaba
+   negro, ignorando el tema. .light-mode = tema oscuro ("modo nocturno"),
+   .dark-mode = tema claro ("modo diurno"), ver comentarios más arriba */
+body.light-mode.projector { background: #000; color: #fff; }
+body.dark-mode.projector  { background: var(--proj-tint); color: var(--navy); }
+
+body.projector h1       { font-size: 2.8rem; text-align: center; }
+body.projector #contenido { font-size: 2.8rem; line-height: 1.15; }
+/* los A-/A/A+ (--font-scale) también valen en el proyector: antes estos
+   tamaños estaban fijos en rem sin la variable, así que los botones no
+   tenían ningún efecto acá */
+body.projector .song-line { font-size: calc(3rem * var(--font-scale, 1)); line-height: 1.6; }
+body.projector .lyrics    { font-size: calc(3rem * var(--font-scale, 1)); }
+body.projector .chord     { font-size: calc(3rem * var(--font-scale, 1) * 0.85); font-weight: 500; }
+body.projector .song-title-text { font-size: 3rem; }
+
+body.projector .song-break{ height: 40px; }
+body.light-mode.projector #menuBtn { color: #fff; }
+
+body.projector .song-note {
+  font-size: 1.0rem;  /* más chico */
+}
+
+/* ============================================================
+   ANIMACIONES
+   ============================================================ */
+.fade-in {
+  animation: fadeIn 0.22s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hidden { display: none !important; }
+
+/* ============================================================
+   RESPONSIVE — MÓVIL PEQUEÑO (< 460px)
+   ============================================================ */
+@media (max-width: 460px) {
+  .song-line {
+    font-size: calc(16px * var(--font-scale, 1)) !important;
+    line-height: 2.0;
+  }
+
+  .lyrics {
+    font-size: calc(1.6rem * var(--font-scale, 1));
+  }
+
+  /* misma base que .lyrics (1.6rem) para que la tablatura crezca en la
+     misma proporción que la letra, pero un poco más chica (0.75 en vez
+     de 0.85 como en desktop/proyector): en celular, al 85% se veía
+     casi del mismo tamaño que la letra */
+  .chord {
+    font-size: calc(1.6rem * var(--font-scale, 1) * 0.75);
+  }
+
+  .alpha {
+    min-width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  #contenido { font-size: 15px; padding: 0 10px; }
+}
+
+/* ============================================================
+   RESPONSIVE — MÓVIL GRANDE (>= 480px)
+   ============================================================ */
+@media (min-width: 480px) {
+  #contenido  { font-size: 17px; }
+  .song-line  { font-size: 15px; }
+  #alfabeto, #himnoRangos { gap: 6px; }
+  .alpha      { min-width: 34px; height: 34px; font-size: 15px; }
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET (>= 768px)
+   ============================================================ */
+@media (min-width: 768px) {
+  .top-inline { gap: 14px; }
+  #contenido  { font-size: 18px; padding: 20px; }
+  .song-line  { font-size: 16px; }
+  .indice-wrap { width: 80%; }
+  #buscador   { font-size: 17px; }
+  .alpha      { min-width: 38px; height: 38px; font-size: 16px; }
+}
+
+/* ============================================================
+   RESPONSIVE — DESKTOP (>= 1024px)
+   ============================================================ */
+@media (min-width: 1024px) {
+  #contenido { font-size: 20px; padding: 30px; }
+  .song-line { font-size: 18px; }
+  .indice-wrap { width: 70%; }
+  #buscador  { font-size: 18px; }
+  .alpha     { min-width: 40px; height: 40px; }
+}
+
+/* ============================================================
+   RESPONSIVE — PANTALLA GRANDE (>= 1280px)
+   ============================================================ */
+@media (min-width: 1280px) {
+  .indice-wrap { width: 60%; }
+  #contenido { max-width: 1000px; margin: 0 auto; }
+}
+
+
+/* BIBLIOTECA */
+.biblioteca-link {
+  color: var(--sky);   /* tu turquesa */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.biblioteca-link:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+
+
+/* TEXTO BIBLICO DE PRESENTACION */
+/* ==========================================================
+   MENSAJE INICIAL
+   Se muestra cuando no hay ninguna canción seleccionada.
+========================================================== */
+
+.mensaje-inicio {
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--color-texto);
+}
+
+.mensaje-inicio .versiculo {
+    font-family: "Great Vibes", cursive;
+    font-size: 2.4rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.mensaje-inicio .referencia {
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    opacity: .8;
+}
+
+/* imagen qrcode para proyector */
+.qr-proyector {
+    display: none;
+    margin: 25px auto 0;
+    width: 180px;
+    height: auto;
+}
+
+/* SOLO en modo proyector */
+body.projector .qr-proyector {
+    display: block;
+}
+
+/* ==========================================================
+   FUENTE GREAT VIBES
+========================================================== */
+
+@font-face {
+    font-family: "Great Vibes";
+    src: url("../fonts/great-vibes/GreatVibes-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* ============================================================
+   MODAL COMPARTIR — reusa la ficha ".about-modal"
+   ============================================================ */
+
+.share-body { display: flex; flex-direction: column; gap: 12px; }
+
+/* -------- HERO IMAGE -------- */
+.share-hero { text-align: center; }
+
+.share-hero img {
+    width: 100%;
+    max-width: 170px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* -------- COMPARTIR NATIVO (AirDrop / Mensajes / Nearby Share / etc.) -------- */
+.share-native-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border-radius: var(--radius-xl);
+    border: none;
+    background: var(--sky);
+    color: #06202e;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: var(--trans);
+}
+
+.share-native-btn:hover { background: var(--sky-dark); }
+
+.share-native-hint {
+    margin: -10px 0 0;
+    text-align: center;
+    font-size: 11.5px;
+    opacity: 0.6;
+}
+
+/* -------- CARD STYLE -------- */
+.share-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-md);
+    padding: 14px;
+}
+
+.dark-mode .share-card { background: var(--gray-50); border-color: var(--gray-100); }
+
+.share-card label {
+    font-size: 12.5px;
+    font-weight: 700;
+    opacity: 0.75;
+}
+
+/* -------- INPUT + BOTÓN COPIAR -------- */
+.share-input-group {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.share-input-group input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 12px;
+    border-radius: var(--radius-xl);
+    border: none;
+    outline: none;
+    font-size: 13px;
+    background: rgba(255,255,255,0.08);
+    color: inherit;
+}
+
+.dark-mode .share-input-group input { background: #fff; color: var(--navy); box-shadow: var(--shadow-sm); }
+
+.share-input-group button {
+    padding: 8px 14px;
+    border-radius: var(--radius-xl);
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 12.5px;
+    background: var(--sky);
+    color: #06202e;
+    transition: var(--trans);
+    white-space: nowrap;
+}
+
+.share-input-group button:hover { background: var(--sky-dark); }
+
+body.projector .qr-proyector {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* -------- QR -------- */
+.qr-card { text-align: center; }
+
+.qr-big {
+    width: 150px;
+    margin-top: 8px;
+    border-radius: 12px;
+    background: white;
+    padding: 8px;
+    box-shadow: var(--shadow-sm);
+}
+

@@ -1,0 +1,26 @@
+{
+    "name": "Cancionero App",
+    "version": "2.41.0",
+    "build": 165,
+    "updated": "17/09/2026",
+    "_versionado": "version/updated los edita Claude a mano (no un script), formato X.Y.Z: Z (patch, 2.6.0->2.6.1) = arreglo de bug o prolijidad interna, no se nota en la app; Y (minor, 2.6->2.7) = funcionalidad nueva o mejora visible; X (major, 2.x->3.0) = rediseno grande o cambio de fondo en como funciona la app. updated es la fecha del dia en que se hizo el cambio, formato DD/MM/AAAA. build SI sigue siendo automatico (bump-version.ps1), es solo para el cache-busting y no se muestra al usuario.",
+    "author": "Hernando Gigliotti",
+    "ayudantes": "Elisa Vilaltella",
+    "description": "Cancionero para Voluntarios en el servicio misionero de la Iglesia Adventista del Séptimo Día.",
+    "links": "https://hagigliotti.github.io/cancionero/index.html",
+    "page1": "https://github.com/Claudio-Osorio/himnario-adventista/tree/main",
+
+    "_comment1": "https://www.recursos-biblicos.com/2013/07/50-coritos-adventistas-muy-conocidos-parte-1.html",
+    "_comment2": "https://ministeriovarsa.com/himnos-en-guarani/",
+    "_comment3": "https://www.hymnal.pro/coritario.html",
+    "_comment4": "https://downloads.adventistas.org/es/kits/cantos/",
+    "_comment5": "https://downloads.adventistas.org/es/kits/cantos/",
+
+
+
+    "_commentA": "https://eunice.fustero.es/libros/todosPDF/Himnario2010ConAcordesParaGuitarra.pdf",
+    "_commentB": "https://partituriazs.com/wp-content/uploads/2021/07/Himnario-Adventista-2009-con-Mu%CC%81sica.pdf",
+    "_commentC": "https://pdfcoffee.com/himnario-adventista-antiguo-1962-2-pdf-free.html" 
+}
+
+
