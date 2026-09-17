@@ -11889,6 +11889,35 @@
         ""
       ],
       "nota": [""]
+    },
+    "gn": {
+      "titulo": ["Tupā Ñandejara"],
+      "titulo2": [""],
+      "audio_url": "",
+      "traductor": ["Lidio Vargas Riquelme"],
+      "partitura": "No",
+      "revisado": ["No"],      
+      "letra": [
+        "1",
+        "Tupā Ñandejara, ipo mbaretégui",
+        "Ndaipóri ndaipu´akaiha.",
+        "Tupā Ñandejara, ipo mbaretégui",
+        "Ndaipóri ndaipu´akaiha.",
+        "",
+        "Coro",
+        "Yvyty, yvype,",
+        "mokoivéva imba´e.",
+        "Yvyty, yvype,",
+        "mokoivéva imba´e.",
+        "Mbyja kuéra ha yvoty ave.",
+        "",
+        "Repite",
+        "Tupā Ñandejara, ipo mbaretégui",
+        "Ndaipóri ndaipu´akaiha.",
+        "Tupā Ñandejara, ipo mbaretégui",
+        "Ndaipóri ndaipu´akaiha."
+      ],
+      "nota": [""]
     }
   }
 },
