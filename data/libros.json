@@ -4,7 +4,8 @@
     "archivo": "canciones.json",
     "nombre": "Cancionero MV",
     "icono": "",
-    "_comentario1": "\"icono\": \"🎶\""
+    "_comentario1": "\"icono\": \"🎶\"",
+    "idiomaDefault": "es"
   },
   {
     "id": "himnario",
@@ -14,6 +15,7 @@
     "_comentario2": "\"icono\": \"🎵\"",
     "numeroHimno": true,
     "idiomaFijo": true,
+    "idiomaDefault": "es",
     "coritosPara": "cancionero"
   },
   {
@@ -24,6 +26,7 @@
     "_comentario2": "\"icono\": \"🎵\"",
     "numeroHimno": true,
     "idiomaFijo": true,
+    "idiomaDefault": "es",
     "coritosPara": "cancionero"
   },
   {
@@ -34,6 +37,7 @@
     "_comentario2": "\"icono\": \"🎵\"",
     "numeroHimno": true,
     "idiomaFijo": true,
+    "idiomaDefault": "it",
     "coritosPara": "cancionero",
     "oculto": false,
     "codigo": "29686085"
@@ -43,7 +47,8 @@
     "archivo": "campamento.json",
     "nombre": "Campamento",
     "icono": "",
-    "_comentario3": "\"icono\": \"🏕️\""
+    "_comentario3": "\"icono\": \"🏕️\"",
+    "idiomaDefault": "es"
   },
 
   {
@@ -52,6 +57,7 @@
     "nombre": "Selección Argentina",
     "icono": "",
     "_comentario4": "\"icono\": \"⚽\"",
+    "idiomaDefault": "es",
     "oculto": true,
     "codigo": "29686085"
   },
@@ -61,6 +67,7 @@
     "nombre": "Rey de Copas",
     "icono": "",
     "_comentario5": "\"icono\": \"😈\"",
+    "idiomaDefault": "es",
     "oculto": true,
     "codigo": "29686085"
   }
