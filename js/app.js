@@ -446,17 +446,17 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=178",
-    "modals/revised.html?v=178",
-    "modals/people.html?v=178",
-    "modals/valores.html?v=178",
-    "modals/share.html?v=178",
-    "modals/contacto.html?v=178",
-    "modals/afinometro.html?v=178",
-    "modals/biblioteca.html?v=178",
-    "modals/listas.html?v=178",
-    "modals/notepad.html?v=178",
-    "modals/oracion.html?v=178"
+    "modals/info.html?v=179",
+    "modals/revised.html?v=179",
+    "modals/people.html?v=179",
+    "modals/valores.html?v=179",
+    "modals/share.html?v=179",
+    "modals/contacto.html?v=179",
+    "modals/afinometro.html?v=179",
+    "modals/biblioteca.html?v=179",
+    "modals/listas.html?v=179",
+    "modals/notepad.html?v=179",
+    "modals/oracion.html?v=179"
   ];
 
   for (const path of modales) {
@@ -552,6 +552,7 @@ async function init() {
   const libroInicial = getLibroDef(libroActual);
   if (libroInicial?.idiomaFijo && libroInicial.idiomaDefault) {
     idiomaActual = libroInicial.idiomaDefault;
+    asegurarOpcionIdioma(idiomaActual);
   }
 
   cargarBanderasStorage();
@@ -609,6 +610,38 @@ async function init() {
   });
 }
 
+// nombre NATIVO de cada idioma (como se ve en el propio idioma, igual que
+// las opciones que ya existen en los <select> — "English", "Português",
+// nunca traducido al idioma activo) — cubre además los que todavía no
+// están en el selector (fr/de) para poder agregarlos solos si hace falta
+const NOMBRE_NATIVO_IDIOMA = {
+  es: "Español", en: "English", gn: "Guaraní", it: "Italiano", pt: "Português",
+  fr: "Français", de: "Deutsch"
+};
+
+// si un libro trae idiomaDefault en un idioma que #idioma/#menuIdioma
+// todavía no ofrecen (hoy: fr/de, comentados a propósito porque el
+// Cancionero MV no tiene canciones en esos idiomas) le agrega la opción
+// que falte sola, así el selector queda bien marcado en vez de en blanco.
+// No hace nada con los libros de hoy (es/it/pt/en/gn ya están); empieza a
+// actuar automáticamente el día que se agregue un libro en francés o
+// alemán — no hace falta tocar el HTML a mano para eso
+function asegurarOpcionIdioma(lang) {
+  const nombre = NOMBRE_NATIVO_IDIOMA[lang];
+  if (!nombre) return;
+
+  ["idioma", "menuIdioma"].forEach(selId => {
+    const sel = document.getElementById(selId);
+    if (!sel) return;
+    if (Array.from(sel.options).some(o => o.value === lang)) return;
+
+    const opt = document.createElement("option");
+    opt.value = lang;
+    opt.textContent = nombre;
+    sel.appendChild(opt);
+  });
+}
+
 // cambia el libro activo y refresca toda la UI que depende de él — usado
 // tanto al elegirlo del menú como cuando un libro se vuelve a ocultar
 // (tryUnlockLibros) mientras se lo estaba viendo
@@ -637,7 +670,10 @@ function cambiarLibroActivo(id) {
   // Cancionero MV) es solo el punto de partida: se puede seguir cambiando
   // el idioma con el selector después, como siempre.
   const idiomaDefault = getLibroDef(id)?.idiomaDefault;
-  if (idiomaDefault) setIdioma(idiomaDefault);
+  if (idiomaDefault) {
+    asegurarOpcionIdioma(idiomaDefault);
+    setIdioma(idiomaDefault);
+  }
 
   renderMenuLibroOptions();
   renderAlphabet();
