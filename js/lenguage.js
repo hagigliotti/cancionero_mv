@@ -313,7 +313,9 @@ const FLAG_VARIANTS = {
   // "United States" siempre aparece con la UI ya en inglés, nunca en español
   en: {
     US: { emoji: "🇺🇸", nombre: "United States" },
-    GB: { emoji: "🇬🇧", nombre: "United Kingdom" }
+    GB: { emoji: "🇬🇧", nombre: "United Kingdom" },
+    CA: { emoji: "🇨🇦", nombre: "Canada" },
+    AU: { emoji: "🇦🇺", nombre: "Australia" }
   },
   pt: {
     BR: { emoji: "🇧🇷", nombre: "Brasil" },

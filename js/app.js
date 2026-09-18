@@ -445,17 +445,17 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=170",
-    "modals/revised.html?v=170",
-    "modals/people.html?v=170",
-    "modals/valores.html?v=170",
-    "modals/share.html?v=170",
-    "modals/contacto.html?v=170",
-    "modals/afinometro.html?v=170",
-    "modals/biblioteca.html?v=170",
-    "modals/listas.html?v=170",
-    "modals/notepad.html?v=170",
-    "modals/oracion.html?v=170"
+    "modals/info.html?v=172",
+    "modals/revised.html?v=172",
+    "modals/people.html?v=172",
+    "modals/valores.html?v=172",
+    "modals/share.html?v=172",
+    "modals/contacto.html?v=172",
+    "modals/afinometro.html?v=172",
+    "modals/biblioteca.html?v=172",
+    "modals/listas.html?v=172",
+    "modals/notepad.html?v=172",
+    "modals/oracion.html?v=172"
   ];
 
   for (const path of modales) {
@@ -542,6 +542,17 @@ async function init() {
   }
 
   idiomaActual = localStorage.getItem("idioma") || "es";
+
+  // si el libro guardado es de idioma fijo (ver cambiarLibroActivo), el
+  // idioma guardado tiene que coincidir sí o sí con el suyo — si quedó
+  // desincronizado (ej. localStorage viejo de antes de idiomaDefault, o se
+  // guardó a mano), se corrige acá para no abrir el libro con canciones que
+  // no existen en ese idioma
+  const libroInicial = getLibroDef(libroActual);
+  if (libroInicial?.idiomaFijo && libroInicial.idiomaDefault) {
+    idiomaActual = libroInicial.idiomaDefault;
+  }
+
   cargarBanderasStorage();
   setIdioma(idiomaActual);
   updateLangFlag();
@@ -631,6 +642,19 @@ function cambiarLibroActivo(id) {
   document.getElementById("indice").innerHTML = "";
 
   document.getElementById("idioma").disabled = false;
+
+  // cada libro puede declarar su propio idioma "de fábrica" en libros.json
+  // ("idiomaDefault") — al entrar, el idioma salta directo a ese (ej.
+  // Innario Avventista abre en italiano). En los libros de idioma fijo
+  // (idiomaFijo: true) esto además es obligatorio: sus canciones guardan
+  // TODO bajo esa única clave, así que el idioma tiene que coincidir sí o sí
+  // para que el libro se pueda mostrar (ver el guard de idiomaFijo en el
+  // listener de #idioma/#menuIdioma, que además impide cambiarlo mientras
+  // este libro siga activo). En los que no son de idioma fijo (ej.
+  // Cancionero MV) es solo el punto de partida: se puede seguir cambiando
+  // el idioma con el selector después, como siempre.
+  const idiomaDefault = getLibroDef(id)?.idiomaDefault;
+  if (idiomaDefault) setIdioma(idiomaDefault);
 
   renderMenuLibroOptions();
   renderAlphabet();
