@@ -161,7 +161,7 @@ async function startMetronomo() {
   subStep = 0;
   currentBeat = 0;
 
-  document.getElementById("metroPlayBtn").innerText = "⏹ Stop";
+  document.getElementById("metroPlayBtn").innerText = tAfino("stop");
 
   metroAudioCtx =
     metroAudioCtx || new (window.AudioContext || window.webkitAudioContext)();
@@ -184,7 +184,7 @@ function stopMetronomo() {
   clearInterval(metroInterval);
 
   document.getElementById("metroPlayBtn").innerText =
-    "▶️ Play";
+    tAfino("play");
 }
 
 function playBeat(baseInterval) {
@@ -242,8 +242,8 @@ function toggleMetroSound() {
 
   document.getElementById("metroSoundBtn").innerText =
     metroSoundEnabled
-      ? "🔊 Sonido"
-      : "🔇 Mudo";
+      ? tAfino("sonido")
+      : tAfino("mudo");
 }
 
 function changeBpm(delta) {
@@ -335,10 +335,40 @@ const NOTE_STRINGS = [
   "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"
 ];
 
-const NOTE_LABELS = {
-  C: "Do", "C#": "Do#/Reb", D: "Re", "D#": "Re#/Mib", E: "Mi", F: "Fa",
-  "F#": "Fa#/Solb", G: "Sol", "G#": "Sol#/Lab", A: "La", "A#": "La#/Sib", B: "Si"
+// ===================== TRADUCCIÓN DEL AFINÓMETRO =====================
+// Ojo acá: esto no es texto de interfaz cualquiera, son nombres reales de
+// nota/tonalidad/acorde — un error acá es un error musical, no solo de
+// idioma. Reglas seguidas (y por qué):
+//
+// - El nombre "internacional" de la nota (C, C#, D... el que ya usan los
+//   acordes de las canciones, [C]/[Am], en CUALQUIER idioma) nunca se
+//   toca — es universal, no se traduce.
+// - NOTE_LABELS es el nombre "hablado" de esa nota, la sub-etiqueta chica
+//   debajo del botón (o la etiqueta principal en el modo por-instrumento
+//   del afinador). En es/it/pt/fr/en esto es solfeo (Do-Re-Mi-Fa-Sol-La-
+//   Si), que es literalmente cómo un músico de esos idiomas NOMBRA la
+//   nota al hablar (en inglés/iglesia angloparlante el solfeo también se
+//   usa — Kodály, "Do-Re-Mi" — con Ti en vez de Si para la 7ª, que es la
+//   convención inglesa real, no un invento).
+// - El alemán NO usa solfeo: nombra las notas con letras, pero con dos
+//   diferencias clave frente al sistema internacional que hay que
+//   respetar sí o sí (es la razón por la que a un músico alemán se le
+//   confunde este sistema, no un detalle cosmético):
+//     • lo que acá es "B" (7ª nota) en alemán es "H"
+//     • lo que acá es "A#"/"Bb" en alemán es simplemente "B"
+const NOTE_LABELS_IDIOMA = {
+  es: { C: "Do", "C#": "Do#/Reb", D: "Re", "D#": "Re#/Mib", E: "Mi", F: "Fa", "F#": "Fa#/Solb", G: "Sol", "G#": "Sol#/Lab", A: "La", "A#": "La#/Sib", B: "Si" },
+  it: { C: "Do", "C#": "Do#/Reb", D: "Re", "D#": "Re#/Mib", E: "Mi", F: "Fa", "F#": "Fa#/Solb", G: "Sol", "G#": "Sol#/Lab", A: "La", "A#": "La#/Sib", B: "Si" },
+  pt: { C: "Dó", "C#": "Dó#/Réb", D: "Ré", "D#": "Ré#/Mib", E: "Mi", F: "Fá", "F#": "Fá#/Solb", G: "Sol", "G#": "Sol#/Láb", A: "Lá", "A#": "Lá#/Sib", B: "Si" },
+  fr: { C: "Do", "C#": "Do#/Réb", D: "Ré", "D#": "Ré#/Mib", E: "Mi", F: "Fa", "F#": "Fa#/Solb", G: "Sol", "G#": "Sol#/Lab", A: "La", "A#": "La#/Sib", B: "Si" },
+  en: { C: "Do", "C#": "Do#/Reb", D: "Re", "D#": "Re#/Mib", E: "Mi", F: "Fa", "F#": "Fa#/Solb", G: "Sol", "G#": "Sol#/Lab", A: "La", "A#": "La#/Tib", B: "Ti" },
+  de: { C: "C", "C#": "Cis/Des", D: "D", "D#": "Dis/Es", E: "E", F: "F", "F#": "Fis/Ges", G: "G", "G#": "Gis/As", A: "A", "A#": "Ais/B", B: "H" }
 };
+
+// let (no const): se reasigna entero cada vez que cambia el idioma — todo
+// el resto del archivo lee NOTE_LABELS[nota] al vuelo, así que el cambio
+// se propaga solo a cada grilla/acorde/escala sin tocar esos lugares
+let NOTE_LABELS = { ...NOTE_LABELS_IDIOMA.es };
 
 const FLAT_TO_SHARP = { Db: "C#", Eb: "D#", Gb: "F#", Ab: "G#", Bb: "A#" };
 
@@ -346,7 +376,23 @@ function normalizeNoteName(note) {
   return FLAT_TO_SHARP[note] || note || "C";
 }
 
-// afinaciones estándar (nota + octava real de cada cuerda)
+// ordinal de cuerda ("6ª", "6th", "6."...) por idioma — índice 0 = "1ª"
+const ORDINALES_CUERDA = {
+  es: ["1ª", "2ª", "3ª", "4ª", "5ª", "6ª"],
+  it: ["1ª", "2ª", "3ª", "4ª", "5ª", "6ª"],
+  pt: ["1ª", "2ª", "3ª", "4ª", "5ª", "6ª"],
+  fr: ["1re", "2e", "3e", "4e", "5e", "6e"],
+  en: ["1st", "2nd", "3rd", "4th", "5th", "6th"],
+  de: ["1.", "2.", "3.", "4.", "5.", "6."]
+};
+
+// afinaciones estándar (nota + octava real de cada cuerda) — note/octave
+// son datos físicos, universales, nunca cambian con el idioma; label se
+// reconstruye en actualizarAfinometroIdioma() vía MUTACIÓN de cada objeto
+// (nunca se reemplaza el array/objeto entero: CHORD_DIAGRAM_INSTRUMENTOS
+// más abajo guarda una referencia directa a estos mismos arrays para los
+// diagramas de acorde, y reemplazarlos dejaría esa referencia vieja
+// apuntando a datos en español)
 const INSTRUMENT_PRESETS = {
   guitarra: [
     { label: "6ª · Mi", note: "E", octave: 2 },
@@ -375,6 +421,109 @@ const INSTRUMENT_PRESETS = {
     { label: "1ª · La", note: "A", octave: 4 }
   ]
 };
+
+// Mayor/menor: la única parte realmente "traducible" de CHORD_FORMULAS y
+// PENTATONIC_FORMULAS — el resto de las calidades (Maj7, min7, sus2, sus4,
+// dim, dim7, m7b5, aug, 6, m6, 7) ya son notación internacional, se usan
+// igual en cualquier idioma. El alemán es un caso aparte: "Dur"/"moll" es
+// lo que corresponde ahí, no una traducción de "Mayor"/"menor" palabra por
+// palabra (ver también el círculo de quintas, donde si usa Dur/Moll con
+// mayúscula inicial como corresponde en alemán).
+const CALIDAD_IDIOMA = {
+  es: { mayor: "Mayor", menor: "menor" },
+  it: { mayor: "Maggiore", menor: "minore" },
+  pt: { mayor: "Maior", menor: "menor" },
+  fr: { mayor: "Majeur", menor: "mineur" },
+  en: { mayor: "Major", menor: "minor" },
+  de: { mayor: "Dur", menor: "moll" }
+};
+
+// nombres de inversión de acorde (Fundamental/1ª inversión/...) — términos
+// reales de teoría musical en cada idioma, no traducción literal
+const INVERSION_NOMBRES_IDIOMA = {
+  es: ["Fundamental", "1ª inversión", "2ª inversión", "3ª inversión"],
+  it: ["Stato fondamentale", "1° rivolto", "2° rivolto", "3° rivolto"],
+  pt: ["Estado fundamental", "1ª inversão", "2ª inversão", "3ª inversão"],
+  fr: ["État fondamental", "1er renversement", "2e renversement", "3e renversement"],
+  en: ["Root position", "1st inversion", "2nd inversion", "3rd inversion"],
+  de: ["Grundstellung", "1. Umkehrung", "2. Umkehrung", "3. Umkehrung"]
+};
+
+// plantilla para una inversión más allá de la 3ª (rarísimo, pero la
+// función original ya lo contemplaba con `${k+1}ª inversión`)
+const INVERSION_EXTRA_IDIOMA = {
+  es: n => `${n}ª inversión`,
+  it: n => `${n}° rivolto`,
+  pt: n => `${n}ª inversão`,
+  fr: n => `${n}e renversement`,
+  en: n => `${n}th inversion`,
+  de: n => `${n}. Umkehrung`
+};
+
+let INVERSION_NOMBRES = [...INVERSION_NOMBRES_IDIOMA.es];
+
+// ===================== ETIQUETAS FIJAS DEL AFINÓMETRO =====================
+const AFINOMETRO_LABELS = {
+  subtitulo:            { es: "Herramientas para ensayar", en: "Tools for rehearsing", it: "Strumenti per le prove", pt: "Ferramentas para ensaiar", fr: "Outils pour répéter", de: "Werkzeuge für die Probe" },
+  tab_afinador:          { es: "🎯 Afinador", en: "🎯 Tuner", it: "🎯 Accordatore", pt: "🎯 Afinador", fr: "🎯 Accordeur", de: "🎯 Stimmgerät" },
+  tab_metronomo:         { es: "🥁 Metrónomo", en: "🥁 Metronome", it: "🥁 Metronomo", pt: "🥁 Metrônomo", fr: "🥁 Métronome", de: "🥁 Metronom" },
+  tab_notas:             { es: "🎵 Notas", en: "🎵 Notes", it: "🎵 Note", pt: "🎵 Notas", fr: "🎵 Notes", de: "🎵 Noten" },
+  tab_acordes:           { es: "🎶 Acordes", en: "🎶 Chords", it: "🎶 Accordi", pt: "🎶 Acordes", fr: "🎶 Accords", de: "🎶 Akkorde" },
+  tab_escalas:           { es: "🎼 Escalas", en: "🎼 Scales", it: "🎼 Scale", pt: "🎼 Escalas", fr: "🎼 Gammes", de: "🎼 Tonleitern" },
+  tab_quintas:           { es: "🔵 Quintas", en: "🔵 Fifths", it: "🔵 Quinte", pt: "🔵 Quintas", fr: "🔵 Quintes", de: "🔵 Quinten" },
+  sec_afinador:          { es: "🎯 Afinador", en: "🎯 Tuner", it: "🎯 Accordatore", pt: "🎯 Afinador", fr: "🎯 Accordeur", de: "🎯 Stimmgerät" },
+  instr_general:         { es: "🎼 General", en: "🎼 General", it: "🎼 Generale", pt: "🎼 Geral", fr: "🎼 Général", de: "🎼 Allgemein" },
+  instr_guitarra:        { es: "🎸 Guitarra", en: "🎸 Guitar", it: "🎸 Chitarra", pt: "🎸 Violão", fr: "🎸 Guitare", de: "🎸 Gitarre" },
+  instr_bajo:            { es: "🎸 Bajo", en: "🎸 Bass", it: "🎸 Basso", pt: "🎸 Baixo", fr: "🎸 Basse", de: "🎸 Bass" },
+  instr_violin:          { es: "🎻 Violín", en: "🎻 Violin", it: "🎻 Violino", pt: "🎻 Violino", fr: "🎻 Violon", de: "🎻 Violine" },
+  instr_ukelele:         { es: "🪕 Ukelele", en: "🪕 Ukulele", it: "🪕 Ukulele", pt: "🪕 Ukulele", fr: "🪕 Ukulélé", de: "🪕 Ukulele" },
+  a4_afinacion:          { es: "La4 (afinación)", en: "A4 (tuning)", it: "La4 (accordatura)", pt: "Lá4 (afinação)", fr: "La4 (accordage)", de: "A4 (Stimmung)" },
+  activar_mic:           { es: "🎤 Activar micrófono", en: "🎤 Enable microphone", it: "🎤 Attiva microfono", pt: "🎤 Ativar microfone", fr: "🎤 Activer le microphone", de: "🎤 Mikrofon aktivieren" },
+  desactivar_mic:        { es: "🎤 Desactivar micrófono", en: "🎤 Disable microphone", it: "🎤 Disattiva microfono", pt: "🎤 Desativar microfone", fr: "🎤 Désactiver le microphone", de: "🎤 Mikrofon deaktivieren" },
+  mic_no_disponible:     { es: "Micrófono no disponible o bloqueado", en: "Microphone unavailable or blocked", it: "Microfono non disponibile o bloccato", pt: "Microfone indisponível ou bloqueado", fr: "Microphone indisponible ou bloqué", de: "Mikrofon nicht verfügbar oder blockiert" },
+  muy_alto:              { es: "Muy alto ↓", en: "Too high ↓", it: "Troppo alto ↓", pt: "Muito alto ↓", fr: "Trop haut ↓", de: "Zu hoch ↓" },
+  muy_bajo:              { es: "Muy bajo ↑", en: "Too low ↑", it: "Troppo basso ↑", pt: "Muito baixo ↑", fr: "Trop bas ↑", de: "Zu tief ↑" },
+  sec_metronomo:         { es: "🥁 Metrónomo", en: "🥁 Metronome", it: "🥁 Metronomo", pt: "🥁 Metrônomo", fr: "🥁 Métronome", de: "🥁 Metronom" },
+  bpm:                   { es: "BPM", en: "BPM", it: "BPM", pt: "BPM", fr: "BPM", de: "BPM" },
+  tap_tempo:             { es: "👆 Tap tempo", en: "👆 Tap tempo", it: "👆 Tap tempo", pt: "👆 Tap tempo", fr: "👆 Tap tempo", de: "👆 Tap-Tempo" },
+  compas:                { es: "Compás", en: "Time signature", it: "Tempo (misura)", pt: "Compasso", fr: "Mesure", de: "Taktart" },
+  subdivision:           { es: "Subdivisión", en: "Subdivision", it: "Suddivisione", pt: "Subdivisão", fr: "Subdivision", de: "Unterteilung" },
+  acento_tiempo:         { es: "Acento en el tiempo", en: "Beat accent", it: "Accento sul tempo", pt: "Acento no tempo", fr: "Accent sur le temps", de: "Betonung im Takt" },
+  play:                  { es: "▶️ Play", en: "▶️ Play", it: "▶️ Play", pt: "▶️ Play", fr: "▶️ Lecture", de: "▶️ Play" },
+  stop:                  { es: "⏹ Stop", en: "⏹ Stop", it: "⏹ Stop", pt: "⏹ Stop", fr: "⏹ Stop", de: "⏹ Stopp" },
+  sonido:                { es: "🔊 Sonido", en: "🔊 Sound", it: "🔊 Suono", pt: "🔊 Som", fr: "🔊 Son", de: "🔊 Ton" },
+  mudo:                  { es: "🔇 Mudo", en: "🔇 Muted", it: "🔇 Muto", pt: "🔇 Mudo", fr: "🔇 Muet", de: "🔇 Stumm" },
+  subdiv_negra:          { es: "Negra (1 golpe por tiempo)", en: "Quarter note (1 hit per beat)", it: "Semiminima (1 colpo per tempo)", pt: "Semínima (1 toque por tempo)", fr: "Noire (1 coup par temps)", de: "Viertelnote (1 Schlag pro Zählzeit)" },
+  subdiv_corcheas:       { es: "Corcheas (2 subdivisiones por tiempo)", en: "Eighth notes (2 subdivisions per beat)", it: "Crome (2 suddivisioni per tempo)", pt: "Colcheias (2 subdivisões por tempo)", fr: "Croches (2 subdivisions par temps)", de: "Achtelnoten (2 Unterteilungen pro Zählzeit)" },
+  subdiv_tresillo:       { es: "Tresillo (3 subdivisiones por tiempo)", en: "Triplet (3 subdivisions per beat)", it: "Terzina (3 suddivisioni per tempo)", pt: "Tercina (3 subdivisões por tempo)", fr: "Triolet (3 subdivisions par temps)", de: "Triole (3 Unterteilungen pro Zählzeit)" },
+  subdiv_semicorcheas:   { es: "Semicorcheas (4 subdivisiones por tiempo)", en: "Sixteenth notes (4 subdivisions per beat)", it: "Semicrome (4 suddivisioni per tempo)", pt: "Semicolcheias (4 subdivisões por tempo)", fr: "Doubles croches (4 subdivisions par temps)", de: "Sechzehntelnoten (4 Unterteilungen pro Zählzeit)" },
+  sec_notas:             { es: "🎵 Reproducir nota", en: "🎵 Play a note", it: "🎵 Riproduci nota", pt: "🎵 Tocar nota", fr: "🎵 Jouer une note", de: "🎵 Ton abspielen" },
+  octava:                { es: "Octava", en: "Octave", it: "Ottava", pt: "Oitava", fr: "Octave", de: "Oktave" },
+  piano_elegir_nota:     { es: "Piano para elegir nota", en: "Piano to pick a note", it: "Piano per scegliere la nota", pt: "Piano para escolher a nota", fr: "Piano pour choisir une note", de: "Klaviatur zur Tonauswahl" },
+  sec_acordes:           { es: "🎶 Reproducir acorde", en: "🎶 Play a chord", it: "🎶 Riproduci accordo", pt: "🎶 Tocar acorde", fr: "🎶 Jouer un accord", de: "🎶 Akkord abspielen" },
+  diagrama_acordes:      { es: "Diagrama de acordes", en: "Chord diagram", it: "Diagramma accordi", pt: "Diagrama de acordes", fr: "Diagramme d'accords", de: "Akkorddiagramm" },
+  diagrama_acorde_alt:   { es: "Diagrama de acorde", en: "Chord diagram", it: "Diagramma dell'accordo", pt: "Diagrama do acorde", fr: "Diagramme de l'accord", de: "Akkorddiagramm" },
+  diagrama_acorde_piano_alt: { es: "Diagrama de acorde en piano", en: "Piano chord diagram", it: "Diagramma dell'accordo al piano", pt: "Diagrama do acorde no piano", fr: "Diagramme de l'accord au piano", de: "Klavier-Akkorddiagramm" },
+  sec_escalas:           { es: "🎼 Escalas", en: "🎼 Scales", it: "🎼 Scale", pt: "🎼 Escalas", fr: "🎼 Gammes", de: "🎼 Tonleitern" },
+  tocar_escala_completa: { es: "Tocar escala completa", en: "Play the full scale", it: "Suona la scala completa", pt: "Tocar escala completa", fr: "Jouer la gamme complète", de: "Ganze Tonleiter abspielen" },
+  tocar_pentatonica:     { es: "Tocar pentatónica", en: "Play the pentatonic scale", it: "Suona la pentatonica", pt: "Tocar a pentatônica", fr: "Jouer la gamme pentatonique", de: "Pentatonik abspielen" },
+  tocar_cromatica:       { es: "Tocar cromática", en: "Play the chromatic scale", it: "Suona la cromatica", pt: "Tocar a cromática", fr: "Jouer la gamme chromatique", de: "Chromatische Tonleiter abspielen" },
+  tocar_menor_armonica:  { es: "Tocar menor armónica", en: "Play the harmonic minor scale", it: "Suona la minore armonica", pt: "Tocar a menor harmônica", fr: "Jouer la gamme mineure harmonique", de: "Harmonisch Moll abspielen" },
+  escala_diatonica:      { es: "Escala diatónica:", en: "Diatonic scale:", it: "Scala diatonica:", pt: "Escala diatônica:", fr: "Gamme diatonique :", de: "Diatonische Tonleiter:" },
+  escala_pentatonica:    { es: "Escala pentatónica:", en: "Pentatonic scale:", it: "Scala pentatonica:", pt: "Escala pentatônica:", fr: "Gamme pentatonique :", de: "Pentatonische Tonleiter:" },
+  escala_cromatica:      { es: "Escala cromática:", en: "Chromatic scale:", it: "Scala cromatica:", pt: "Escala cromática:", fr: "Gamme chromatique :", de: "Chromatische Tonleiter:" },
+  escala_menor_armonica: { es: "Escala menor armónica:", en: "Harmonic minor scale:", it: "Scala minore armonica:", pt: "Escala menor harmônica:", fr: "Gamme mineure harmonique :", de: "Harmonisch-Moll-Tonleiter:" },
+  sec_quintas:           { es: "🔵 Círculo de cuartas y quintas", en: "🔵 Circle of fourths and fifths", it: "🔵 Circolo delle quarte e quinte", pt: "🔵 Círculo de quartas e quintas", fr: "🔵 Cycle des quartes et quintes", de: "🔵 Quarten-Quinten-Zirkel" },
+  quintas_leyenda_4tas:  { es: "↺ 4tas", en: "↺ 4ths", it: "↺ 4e", pt: "↺ 4as", fr: "↺ 4tes", de: "↺ 4." },
+  quintas_leyenda_5tas:  { es: "5tas ↻", en: "5ths ↻", it: "5e ↻", pt: "5as ↻", fr: "5tes ↻", de: "5. ↻" },
+  quintas_tocar:         { es: "Tocá una tonalidad para escucharla", en: "Tap a key to hear it", it: "Tocca una tonalità per ascoltarla", pt: "Toque em uma tonalidade para ouvi-la", fr: "Touchez une tonalité pour l'écouter", de: "Tippe auf eine Tonart, um sie zu hören" }
+};
+
+function tAfino(key, lang = idiomaActual) {
+  const entry = AFINOMETRO_LABELS[key];
+  if (!entry) return key;
+  return conFallbackIdioma(entry, lang);
+}
 
 async function toggleMic() {
   if (micEnabled) {
@@ -411,7 +560,7 @@ async function toggleMic() {
     micEnabled = true;
 
     const btn = document.getElementById("micBtn");
-    if (btn) btn.innerText = "🎤 Desactivar micrófono";
+    if (btn) btn.innerText = tAfino("desactivar_mic");
 
     detectPitch();
 
@@ -419,7 +568,7 @@ async function toggleMic() {
 
     console.error(err);
 
-    alert("Micrófono no disponible o bloqueado");
+    alert(tAfino("mic_no_disponible"));
   }
 }
 
@@ -427,7 +576,7 @@ function stopMic() {
   micEnabled = false;
 
   const btn = document.getElementById("micBtn");
-  if (btn) btn.innerText = "🎤 Activar micrófono";
+  if (btn) btn.innerText = tAfino("activar_mic");
 
   if (micStream) {
     micStream.getTracks().forEach(t => t.stop());
@@ -564,7 +713,7 @@ function updateTunerUI(freq) {
 
     needle.style.left = `${50 + pos}%`;
 
-    if (centsEl) centsEl.innerText = diff > 0 ? "Muy alto ↓" : "Muy bajo ↑";
+    if (centsEl) centsEl.innerText = diff > 0 ? tAfino("muy_alto") : tAfino("muy_bajo");
 
     tunerLocked = false;
 
@@ -708,7 +857,7 @@ function renderRefNotePiano() {
   const w = 7 * whiteW + 10;
   const h = whiteH + 10;
 
-  let svg = `<svg viewBox="0 0 ${w} ${h}" class="chord-piano-svg" role="img" aria-label="Piano para elegir nota">`;
+  let svg = `<svg viewBox="0 0 ${w} ${h}" class="chord-piano-svg" role="img" aria-label="${tAfino("piano_elegir_nota")}">`;
 
   PIANO_OCTAVE_LAYOUT.filter(k => k.type === "white").forEach(k => {
     const x = 5 + k.x * whiteW;
@@ -1130,7 +1279,7 @@ function renderDiagramaMastil(cuerdas, root, quality) {
   const w = padL + (nCuerdas - 1) * pasoCuerda + padR;
   const h = padT + nTrastes * pasoTraste + padB;
 
-  let svg = `<svg viewBox="0 0 ${w} ${h}" class="chord-fret-svg" role="img" aria-label="Diagrama de acorde">`;
+  let svg = `<svg viewBox="0 0 ${w} ${h}" class="chord-fret-svg" role="img" aria-label="${tAfino("diagrama_acorde_alt")}">`;
 
   if (baseFret === 0) {
     svg += `<rect x="${padL - 1.5}" y="${padT - 3}" width="${(nCuerdas - 1) * pasoCuerda + 3}" height="4" class="chord-fret-nut" />`;
@@ -1262,7 +1411,7 @@ function renderDiagramaPiano(root, quality, inversion) {
   const w = nBlancas * whiteW + 10;
   const h = whiteH + 10;
 
-  let svg = `<svg viewBox="0 0 ${w} ${h}" class="chord-piano-svg" role="img" aria-label="Diagrama de acorde en piano">`;
+  let svg = `<svg viewBox="0 0 ${w} ${h}" class="chord-piano-svg" role="img" aria-label="${tAfino("diagrama_acorde_piano_alt")}">`;
 
   teclas.filter(k => k.type === "white").forEach(k => {
     const x = 5 + k.x * whiteW;
@@ -1330,7 +1479,9 @@ function initChordTransposeToggleButton() {
 // y en el tab Acordes del Afinómetro (para que no se pisen entre sí)
 let chordInversionState = { popover: 0, acordes: 0 };
 
-const INVERSION_NOMBRES = ["Fundamental", "1ª inversión", "2ª inversión", "3ª inversión"];
+// INVERSION_NOMBRES (Fundamental/1ª inversión/...) se declara más arriba,
+// junto con INVERSION_NOMBRES_IDIOMA — es un `let` porque se reasigna según
+// el idioma en actualizarAfinometroIdioma(), no una constante fija acá
 
 function renderChordDiagram(root, quality, instrumento, contexto = "popover") {
   const def = CHORD_DIAGRAM_INSTRUMENTOS[instrumento];
@@ -1353,7 +1504,7 @@ function renderChordDiagram(root, quality, instrumento, contexto = "popover") {
     const bajoOffset = getInversionIntervals(formula.intervals, k)[0];
     const bajoLabel = NOTE_LABELS[NOTE_STRINGS[(rootIdx + bajoOffset) % 12]].split("/")[0];
     const activa = k === inversion ? " active" : "";
-    const titulo = INVERSION_NOMBRES[k] || `${k + 1}ª inversión`;
+    const titulo = INVERSION_NOMBRES[k] || conFallbackIdioma(INVERSION_EXTRA_IDIOMA)(k + 1);
 
     return `<button type="button" class="chip${activa}" ${dataAction("setChordInversion", [contexto, k])} title="${titulo}">${bajoLabel}</button>`;
   }).join("");
@@ -1490,6 +1641,117 @@ const CIRCLE_OF_FIFTHS = [
   { note: "F",  label: "Fa",  minorNote: "D",  minorLabel: "Re",  sig: "1 bemol (Bb)" }
 ];
 
+// label/minorLabel/sig de arriba son SOLO la versión en español (quedan
+// ahí porque el resto del código que no depende del idioma, como
+// getDiatonicChords, sigue usando note/minorNote — universales, nunca se
+// tocan). Para mostrar el círculo en otro idioma, selectFifthsKey/
+// selectFifthsMinor usan esta tabla paralela en vez de key.label/
+// key.minorLabel/key.sig — mismo orden de tonalidades (C, G, D, A, E, B,
+// F#, Db, Ab, Eb, Bb, F), armadura preservada nota por nota (F#, C#, G#,
+// D#, Bb siempre en notación internacional, nunca traducida: son las
+// mismas letras que ya usan los acordes de las canciones). Ver también
+// NOTE_LABELS_IDIOMA más arriba para la nota "hablada" de cada idioma.
+const CIRCLE_OF_FIFTHS_LABELS_IDIOMA = {
+  es: [
+    { label: "Do",  minorLabel: "La",   sig: "Sin alteraciones" },
+    { label: "Sol", minorLabel: "Mi",   sig: "1 sostenido (F#)" },
+    { label: "Re",  minorLabel: "Si",   sig: "2 sostenidos (F#, C#)" },
+    { label: "La",  minorLabel: "Fa#",  sig: "3 sostenidos (F#, C#, G#)" },
+    { label: "Mi",  minorLabel: "Do#",  sig: "4 sostenidos (F#, C#, G#, D#)" },
+    { label: "Si",  minorLabel: "Sol#", sig: "5 sostenidos" },
+    { label: "Fa#", minorLabel: "Re#",  sig: "6 sostenidos" },
+    { label: "Reb", minorLabel: "Sib",  sig: "5 bemoles" },
+    { label: "Lab", minorLabel: "Fa",   sig: "4 bemoles" },
+    { label: "Mib", minorLabel: "Do",   sig: "3 bemoles" },
+    { label: "Sib", minorLabel: "Sol",  sig: "2 bemoles" },
+    { label: "Fa",  minorLabel: "Re",   sig: "1 bemol (Bb)" }
+  ],
+  it: [
+    { label: "Do",  minorLabel: "La",   sig: "Nessuna alterazione" },
+    { label: "Sol", minorLabel: "Mi",   sig: "1 diesis (F#)" },
+    { label: "Re",  minorLabel: "Si",   sig: "2 diesis (F#, C#)" },
+    { label: "La",  minorLabel: "Fa#",  sig: "3 diesis (F#, C#, G#)" },
+    { label: "Mi",  minorLabel: "Do#",  sig: "4 diesis (F#, C#, G#, D#)" },
+    { label: "Si",  minorLabel: "Sol#", sig: "5 diesis" },
+    { label: "Fa#", minorLabel: "Re#",  sig: "6 diesis" },
+    { label: "Reb", minorLabel: "Sib",  sig: "5 bemolli" },
+    { label: "Lab", minorLabel: "Fa",   sig: "4 bemolli" },
+    { label: "Mib", minorLabel: "Do",   sig: "3 bemolli" },
+    { label: "Sib", minorLabel: "Sol",  sig: "2 bemolli" },
+    { label: "Fa",  minorLabel: "Re",   sig: "1 bemolle (Bb)" }
+  ],
+  pt: [
+    { label: "Dó",  minorLabel: "Lá",   sig: "Sem alterações" },
+    { label: "Sol", minorLabel: "Mi",   sig: "1 sustenido (F#)" },
+    { label: "Ré",  minorLabel: "Si",   sig: "2 sustenidos (F#, C#)" },
+    { label: "Lá",  minorLabel: "Fá#",  sig: "3 sustenidos (F#, C#, G#)" },
+    { label: "Mi",  minorLabel: "Dó#",  sig: "4 sustenidos (F#, C#, G#, D#)" },
+    { label: "Si",  minorLabel: "Sol#", sig: "5 sustenidos" },
+    { label: "Fá#", minorLabel: "Ré#",  sig: "6 sustenidos" },
+    { label: "Réb", minorLabel: "Sib",  sig: "5 bemóis" },
+    { label: "Láb", minorLabel: "Fá",   sig: "4 bemóis" },
+    { label: "Mib", minorLabel: "Dó",   sig: "3 bemóis" },
+    { label: "Sib", minorLabel: "Sol",  sig: "2 bemóis" },
+    { label: "Fá",  minorLabel: "Ré",   sig: "1 bemol (Bb)" }
+  ],
+  fr: [
+    { label: "Do",  minorLabel: "La",   sig: "Aucune altération" },
+    { label: "Sol", minorLabel: "Mi",   sig: "1 dièse (F#)" },
+    { label: "Ré",  minorLabel: "Si",   sig: "2 dièses (F#, C#)" },
+    { label: "La",  minorLabel: "Fa#",  sig: "3 dièses (F#, C#, G#)" },
+    { label: "Mi",  minorLabel: "Do#",  sig: "4 dièses (F#, C#, G#, D#)" },
+    { label: "Si",  minorLabel: "Sol#", sig: "5 dièses" },
+    { label: "Fa#", minorLabel: "Ré#",  sig: "6 dièses" },
+    { label: "Réb", minorLabel: "Sib",  sig: "5 bémols" },
+    { label: "Lab", minorLabel: "Fa",   sig: "4 bémols" },
+    { label: "Mib", minorLabel: "Do",   sig: "3 bémols" },
+    { label: "Sib", minorLabel: "Sol",  sig: "2 bémols" },
+    { label: "Fa",  minorLabel: "Ré",   sig: "1 bémol (Bb)" }
+  ],
+  en: [
+    { label: "Do",  minorLabel: "La",   sig: "No sharps or flats" },
+    { label: "Sol", minorLabel: "Mi",   sig: "1 sharp (F#)" },
+    { label: "Re",  minorLabel: "Ti",   sig: "2 sharps (F#, C#)" },
+    { label: "La",  minorLabel: "Fa#",  sig: "3 sharps (F#, C#, G#)" },
+    { label: "Mi",  minorLabel: "Do#",  sig: "4 sharps (F#, C#, G#, D#)" },
+    { label: "Ti",  minorLabel: "Sol#", sig: "5 sharps" },
+    { label: "Fa#", minorLabel: "Re#",  sig: "6 sharps" },
+    { label: "Reb", minorLabel: "Tib",  sig: "5 flats" },
+    { label: "Lab", minorLabel: "Fa",   sig: "4 flats" },
+    { label: "Mib", minorLabel: "Do",   sig: "3 flats" },
+    { label: "Tib", minorLabel: "Sol",  sig: "2 flats" },
+    { label: "Fa",  minorLabel: "Re",   sig: "1 flat (Bb)" }
+  ],
+  // alemán: letras propias, no solfeo (ver NOTE_LABELS_IDIOMA.de) — "B" es
+  // la 7ma bemol (lo que acá es Bb), "H" es la 7ma natural (lo que acá es B)
+  de: [
+    { label: "C",   minorLabel: "A",   sig: "Keine Vorzeichen" },
+    { label: "G",   minorLabel: "E",   sig: "1 Kreuz (Fis)" },
+    { label: "D",   minorLabel: "H",   sig: "2 Kreuze (Fis, Cis)" },
+    { label: "A",   minorLabel: "Fis", sig: "3 Kreuze (Fis, Cis, Gis)" },
+    { label: "E",   minorLabel: "Cis", sig: "4 Kreuze (Fis, Cis, Gis, Dis)" },
+    { label: "H",   minorLabel: "Gis", sig: "5 Kreuze" },
+    { label: "Fis", minorLabel: "Dis", sig: "6 Kreuze" },
+    { label: "Des", minorLabel: "B",   sig: "5 b" },
+    { label: "As",  minorLabel: "F",   sig: "4 b" },
+    { label: "Es",  minorLabel: "C",   sig: "3 b" },
+    { label: "B",   minorLabel: "G",   sig: "2 b" },
+    { label: "F",   minorLabel: "D",   sig: "1 b (B)" }
+  ]
+};
+
+// plantilla del texto de #fifthsInfo al tocar una tonalidad mayor/menor —
+// alemán aparte porque su convención real es "Do-Dur"/"la-Moll" pegado con
+// guion, no "Do Mayor" con la palabra suelta
+const FIFTHS_INFO_TEMPLATE_IDIOMA = {
+  es: { mayor: (l, sig, ml) => `${l} Mayor — ${sig} · relativa menor: ${ml} m`, menor: (l, sig, ml) => `${ml} menor — relativa de ${l} Mayor · ${sig}` },
+  it: { mayor: (l, sig, ml) => `${l} Maggiore — ${sig} · relativa minore: ${ml} m`, menor: (l, sig, ml) => `${ml} minore — relativa di ${l} Maggiore · ${sig}` },
+  pt: { mayor: (l, sig, ml) => `${l} Maior — ${sig} · relativa menor: ${ml} m`, menor: (l, sig, ml) => `${ml} menor — relativa de ${l} Maior · ${sig}` },
+  fr: { mayor: (l, sig, ml) => `${l} Majeur — ${sig} · relatif mineur : ${ml} m`, menor: (l, sig, ml) => `${ml} mineur — relatif de ${l} Majeur · ${sig}` },
+  en: { mayor: (l, sig, ml) => `${l} Major — ${sig} · relative minor: ${ml} m`, menor: (l, sig, ml) => `${ml} minor — relative of ${l} Major · ${sig}` },
+  de: { mayor: (l, sig, ml) => `${l}-Dur — ${sig} · Molltonparallele: ${ml}-Moll`, menor: (l, sig, ml) => `${ml}-Moll — Dur-Parallele: ${l}-Dur · ${sig}` }
+};
+
 function renderFifthsCircle() {
   const cont = document.getElementById("fifthsCircle");
   if (!cont) return;
@@ -1529,7 +1791,12 @@ function selectFifthsKey(index, btnEl) {
   btnEl?.classList.add("active");
 
   const info = document.getElementById("fifthsInfo");
-  if (info) info.innerText = `${key.label} Mayor — ${key.sig} · relativa menor: ${key.minorLabel} m`;
+  if (info) {
+    const l = conFallbackIdioma(CIRCLE_OF_FIFTHS_LABELS_IDIOMA);
+    const tabla = conFallbackIdioma(FIFTHS_INFO_TEMPLATE_IDIOMA);
+    const { label, minorLabel, sig } = l[index];
+    info.innerText = tabla.mayor(label, sig, minorLabel);
+  }
 
   updateFifthsDiatonic(key.note, false);
   playChordSymbol(normalizeNoteName(key.note), "mayor");
@@ -1543,7 +1810,12 @@ function selectFifthsMinor(index, btnEl) {
   btnEl?.classList.add("active");
 
   const info = document.getElementById("fifthsInfo");
-  if (info) info.innerText = `${key.minorLabel} menor — relativa de ${key.label} Mayor · ${key.sig}`;
+  if (info) {
+    const l = conFallbackIdioma(CIRCLE_OF_FIFTHS_LABELS_IDIOMA);
+    const tabla = conFallbackIdioma(FIFTHS_INFO_TEMPLATE_IDIOMA);
+    const { label, minorLabel, sig } = l[index];
+    info.innerText = tabla.menor(label, sig, minorLabel);
+  }
 
   updateFifthsDiatonic(key.minorNote, true);
   playChordSymbol(normalizeNoteName(key.minorNote), "menor");
@@ -1670,11 +1942,11 @@ function updateScaleFullDisplay() {
 
   const intervals = selectedPentaType === "menor" ? MINOR_SCALE_INTERVALS : MAJOR_SCALE_INTERVALS;
   const rootLabel = NOTE_LABELS[selectedPentaRoot].split("/")[0];
-  const typeLabel = selectedPentaType === "menor" ? "menor" : "Mayor";
+  const typeLabel = conFallbackIdioma(CALIDAD_IDIOMA)[selectedPentaType === "menor" ? "menor" : "mayor"];
 
   const notes = spellScale(selectedPentaRoot, intervals);
 
-  el.innerText = `Escala diatónica: ${rootLabel} ${typeLabel} — ${notes.join(" · ")}`;
+  el.innerText = `${tAfino("escala_diatonica")} ${rootLabel} ${typeLabel} — ${notes.join(" · ")}`;
 }
 
 // toca una lista de intervalos (semitonos desde la raíz elegida en Escalas),
@@ -1735,7 +2007,7 @@ function updatePentaNotesDisplay() {
   const rootLabel = NOTE_LABELS[selectedPentaRoot].split("/")[0];
   const names = getPentaNoteNames(selectedPentaRoot, selectedPentaType);
 
-  el.innerText = `Escala pentatónica: ${rootLabel} ${formula.label} — ${names.join(" · ")}`;
+  el.innerText = `${tAfino("escala_pentatonica")} ${rootLabel} ${formula.label} — ${names.join(" · ")}`;
 }
 
 // ===== ESCALA CROMÁTICA (los 12 semitonos desde la raíz) — no depende de
@@ -1756,7 +2028,7 @@ function updateChromaticScaleDisplay() {
   const rootLabel = NOTE_LABELS[selectedPentaRoot].split("/")[0];
   const names = getChromaticNoteNames(selectedPentaRoot);
 
-  el.innerText = `Escala cromática: ${rootLabel} — ${names.join(" · ")}`;
+  el.innerText = `${tAfino("escala_cromatica")} ${rootLabel} — ${names.join(" · ")}`;
 }
 
 async function playChromaticScale() {
@@ -1776,7 +2048,7 @@ function updateHarmonicMinorDisplay() {
   const rootLabel = NOTE_LABELS[selectedPentaRoot].split("/")[0];
   const notes = spellScale(selectedPentaRoot, HARMONIC_MINOR_INTERVALS);
 
-  el.innerText = `Escala menor armónica: ${rootLabel} — ${notes.join(" · ")}`;
+  el.innerText = `${tAfino("escala_menor_armonica")} ${rootLabel} — ${notes.join(" · ")}`;
 }
 
 async function playHarmonicMinorScale() {
@@ -1965,4 +2237,122 @@ function highlightElement(el) {
   setTimeout(() => {
     el.classList.remove("highlight");
   }, 800);
+}
+
+// ===================== CAMBIO DE IDIOMA DEL AFINÓMETRO =====================
+// Actualiza toda la parte "de datos" (nombres de nota hablados, etiquetas
+// de instrumento, Mayor/menor, nombres de inversión, círculo de quintas) y
+// vuelve a dibujar cada grilla/display para que se vea en el idioma nuevo.
+// Se llama al abrir el modal (ver abrirAfinometroModal en app.js) y cada
+// vez que cambia el idioma de la app (ver actualizarMenuIdioma() en
+// lenguage.js), esté el modal abierto o no — por eso cada paso chequea que
+// el elemento exista antes de tocarlo.
+function actualizarAfinometroIdioma() {
+  // ---- datos: nota hablada, instrumentos, Mayor/menor, inversiones ----
+  NOTE_LABELS = conFallbackIdioma(NOTE_LABELS_IDIOMA);
+
+  const ord = conFallbackIdioma(ORDINALES_CUERDA);
+  Object.keys(INSTRUMENT_PRESETS).forEach(instr => {
+    const cuerdas = INSTRUMENT_PRESETS[instr];
+    const n = cuerdas.length;
+    cuerdas.forEach((s, i) => { s.label = `${ord[n - i - 1]} · ${NOTE_LABELS[s.note]}`; });
+  });
+
+  const calidad = conFallbackIdioma(CALIDAD_IDIOMA);
+  if (typeof CHORD_FORMULAS !== "undefined") {
+    CHORD_FORMULAS.mayor.label = calidad.mayor;
+    CHORD_FORMULAS.menor.label = calidad.menor;
+  }
+  if (typeof PENTATONIC_FORMULAS !== "undefined") {
+    PENTATONIC_FORMULAS.mayor.label = calidad.mayor;
+    PENTATONIC_FORMULAS.menor.label = calidad.menor;
+  }
+
+  INVERSION_NOMBRES = [...conFallbackIdioma(INVERSION_NOMBRES_IDIOMA)];
+
+  // ---- texto fijo (pestañas, secciones, chips, botones) ----
+  const setText = (id, key) => { const el = document.getElementById(id); if (el) el.textContent = tAfino(key); };
+
+  const metroTitleEl = document.getElementById("metroTitle");
+  if (metroTitleEl && typeof t === "function") metroTitleEl.textContent = t("metronomo_afinador");
+
+  const metroSubtitulo = document.querySelector("#metroModal .about-meta");
+  if (metroSubtitulo) metroSubtitulo.textContent = tAfino("subtitulo");
+
+  const tabs = document.querySelectorAll("#metroTabs .metro-tab");
+  const tabKeys = ["tab_afinador", "tab_metronomo", "tab_notas", "tab_acordes", "tab_escalas", "tab_quintas"];
+  tabs.forEach((tab, i) => { if (tabKeys[i]) tab.textContent = tAfino(tabKeys[i]); });
+
+  setText("txtSecAfinador", "sec_afinador");
+  setText("instrChipGeneral", "instr_general");
+  setText("instrChipGuitarra", "instr_guitarra");
+  setText("instrChipBajo", "instr_bajo");
+  setText("instrChipViolin", "instr_violin");
+  setText("instrChipUkelele", "instr_ukelele");
+  setText("txtA4Label", "a4_afinacion");
+
+  const micBtn = document.getElementById("micBtn");
+  if (micBtn) micBtn.textContent = micEnabled ? tAfino("desactivar_mic") : tAfino("activar_mic");
+
+  setText("txtSecMetronomo", "sec_metronomo");
+  setText("txtMetroLabelBpm", "bpm");
+  setText("tapTempoBtn", "tap_tempo");
+  setText("txtCompasLabel", "compas");
+  setText("txtSubdivisionLabel", "subdivision");
+  setText("txtAcentoLabel", "acento_tiempo");
+
+  const metroPlayBtn = document.getElementById("metroPlayBtn");
+  if (metroPlayBtn) metroPlayBtn.textContent = metroRunning ? tAfino("stop") : tAfino("play");
+
+  const metroSoundBtn = document.getElementById("metroSoundBtn");
+  if (metroSoundBtn) metroSoundBtn.textContent = metroSoundEnabled ? tAfino("sonido") : tAfino("mudo");
+
+  const subTitles = { 1: "subdiv_negra", 2: "subdiv_corcheas", 3: "subdiv_tresillo", 4: "subdiv_semicorcheas" };
+  document.querySelectorAll("#subdivisionSelector [data-subdivision]").forEach(btn => {
+    const key = subTitles[btn.dataset.subdivision];
+    if (key) btn.title = tAfino(key);
+  });
+
+  setText("txtSecNotas", "sec_notas");
+  document.querySelectorAll("#sec-notas .octave-row .menu-row-label, #sec-acordes .octave-row .menu-row-label").forEach(el => { el.textContent = tAfino("octava"); });
+
+  setText("txtSecAcordes", "sec_acordes");
+  setText("txtDiagramaAcordesLabel", "diagrama_acordes");
+  const qualityChips = { mayor: calidad.mayor, menor: calidad.menor };
+  Object.keys(qualityChips).forEach(q => {
+    const btn = document.querySelector(`#chordQualityChips [data-quality="${q}"]`);
+    if (btn) btn.textContent = qualityChips[q];
+  });
+
+  setText("txtSecEscalas", "sec_escalas");
+  document.querySelectorAll("#pentaTypeChips [data-type]").forEach(btn => {
+    btn.textContent = btn.dataset.type === "mayor" ? calidad.mayor : calidad.menor;
+  });
+  const escBtns = [
+    ['[data-action="playFullScale"]', "tocar_escala_completa"],
+    ['[data-action="playPentaScale"]', "tocar_pentatonica"],
+    ['[data-action="playChromaticScale"]', "tocar_cromatica"],
+    ['[data-action="playHarmonicMinorScale"]', "tocar_menor_armonica"]
+  ];
+  escBtns.forEach(([sel, key]) => { const el = document.querySelector(sel); if (el) el.title = tAfino(key); });
+
+  setText("txtSecQuintas", "sec_quintas");
+  setText("txtQuintas4tas", "quintas_leyenda_4tas");
+  setText("txtQuintas5tas", "quintas_leyenda_5tas");
+
+  // ---- re-renderizar todo lo dinámico con los datos ya traducidos ----
+  // renderFifthsCircle() reconstruye el círculo entero y ahí se pierde qué
+  // tonalidad estaba marcada como activa, así que el texto de abajo
+  // siempre vuelve al aviso genérico ("Tocá una tonalidad...") en vez de
+  // quedar mostrando una selección que ya no se ve marcada en el círculo
+  const fifthsInfo = document.getElementById("fifthsInfo");
+  if (fifthsInfo) fifthsInfo.textContent = tAfino("quintas_tocar");
+
+  if (document.getElementById("metroModal")) {
+    renderRefNoteGrid();
+    renderChordRootGrid();
+    renderFifthsCircle();
+    renderPentaRootGrid();
+    renderTunerTargets(currentTunerMode || "general");
+  }
 }

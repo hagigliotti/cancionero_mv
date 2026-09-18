@@ -22,18 +22,18 @@
 
       <!-- ===================== 1. AFINADOR ===================== -->
       <div class="menu-group" id="sec-afinador">
-        <p class="contact-label">🎯 Afinador</p>
+        <p class="contact-label" id="txtSecAfinador">🎯 Afinador</p>
 
         <div class="instrument-chips" id="instrumentChips">
-          <button type="button" class="chip active" data-instrument="general" data-action="setTunerInstrument" data-args='["general"]'>🎼 General</button>
-          <button type="button" class="chip" data-instrument="guitarra" data-action="setTunerInstrument" data-args='["guitarra"]'>🎸 Guitarra</button>
-          <button type="button" class="chip" data-instrument="bajo" data-action="setTunerInstrument" data-args='["bajo"]'>🎸 Bajo</button>
-          <button type="button" class="chip" data-instrument="violin" data-action="setTunerInstrument" data-args='["violin"]'>🎻 Violín</button>
-          <button type="button" class="chip" data-instrument="ukelele" data-action="setTunerInstrument" data-args='["ukelele"]'>🪕 Ukelele</button>
+          <button type="button" class="chip active" id="instrChipGeneral" data-instrument="general" data-action="setTunerInstrument" data-args='["general"]'>🎼 General</button>
+          <button type="button" class="chip" id="instrChipGuitarra" data-instrument="guitarra" data-action="setTunerInstrument" data-args='["guitarra"]'>🎸 Guitarra</button>
+          <button type="button" class="chip" id="instrChipBajo" data-instrument="bajo" data-action="setTunerInstrument" data-args='["bajo"]'>🎸 Bajo</button>
+          <button type="button" class="chip" id="instrChipViolin" data-instrument="violin" data-action="setTunerInstrument" data-args='["violin"]'>🎻 Violín</button>
+          <button type="button" class="chip" id="instrChipUkelele" data-instrument="ukelele" data-action="setTunerInstrument" data-args='["ukelele"]'>🪕 Ukelele</button>
         </div>
 
         <div class="octave-row a4-row">
-          <span class="menu-row-label">La4 (afinación)</span>
+          <span class="menu-row-label" id="txtA4Label">La4 (afinación)</span>
           <div class="stepper">
             <button type="button" data-action="changeA4" data-args="[-1]">−</button>
             <span id="a4Value">440 Hz</span>
@@ -59,21 +59,21 @@
 
       <!-- ===================== 2. METRÓNOMO ===================== -->
       <div class="menu-group" id="sec-metronomo">
-        <p class="contact-label">🥁 Metrónomo</p>
+        <p class="contact-label" id="txtSecMetronomo">🥁 Metrónomo</p>
 
         <div class="metro-bpm-box">
           <button type="button" data-action="changeBpm" data-args="[-1]">−</button>
           <input type="number" id="metroBpm" value="90" min="20" max="300" />
           <button type="button" data-action="changeBpm" data-args="[1]">+</button>
         </div>
-        <div class="metro-label">BPM</div>
+        <div class="metro-label" id="txtMetroLabelBpm">BPM</div>
 
         <button type="button" id="tapTempoBtn" class="tap-tempo-btn" data-action="tapTempo">👆 Tap tempo</button>
 
         <div id="metroBeat" class="metro-beat"></div>
 
         <div class="metro-sub-row">
-          <span class="menu-row-label">Compás</span>
+          <span class="menu-row-label" id="txtCompasLabel">Compás</span>
           <div class="chip-row" id="compasSelector">
             <button type="button" class="chip" data-compas="1/4" data-action="setCompas" data-args='["1/4"]'>1/4</button>
             <button type="button" class="chip" data-compas="2/4" data-action="setCompas" data-args='["2/4"]'>2/4</button>
@@ -93,7 +93,7 @@
         </div>
 
         <div class="metro-sub-row">
-          <span class="menu-row-label">Subdivisión</span>
+          <span class="menu-row-label" id="txtSubdivisionLabel">Subdivisión</span>
           <div class="chip-row" id="subdivisionSelector">
             <button type="button" class="chip active" data-subdivision="1" data-action="setSubdivision" data-args="[1]" title="Negra (1 golpe por tiempo)">♩</button>
             <button type="button" class="chip" data-subdivision="2" data-action="setSubdivision" data-args="[2]" title="Corcheas (2 subdivisiones por tiempo)">♪</button>
@@ -103,7 +103,7 @@
         </div>
 
         <div class="metro-sub-row">
-          <span class="menu-row-label">Acento en el tiempo</span>
+          <span class="menu-row-label" id="txtAcentoLabel">Acento en el tiempo</span>
           <div class="chip-row" id="accentBeatSelector"></div>
         </div>
 
@@ -115,7 +115,7 @@
 
       <!-- ===================== 3. REPRODUCIR NOTA ===================== -->
       <div class="menu-group" id="sec-notas">
-        <p class="contact-label">🎵 Reproducir nota</p>
+        <p class="contact-label" id="txtSecNotas">🎵 Reproducir nota</p>
 
         <div class="note-grid" id="refNoteGrid"></div>
 
@@ -135,10 +135,10 @@
 
       <!-- ===================== 4. REPRODUCIR ACORDE ===================== -->
       <div class="menu-group" id="sec-acordes">
-        <p class="contact-label">🎶 Reproducir acorde</p>
+        <p class="contact-label" id="txtSecAcordes">🎶 Reproducir acorde</p>
 
         <div class="octave-row">
-          <span class="menu-row-label">Diagrama de acordes</span>
+          <span class="menu-row-label" id="txtDiagramaAcordesLabel">Diagrama de acordes</span>
           <select id="afinometroChordInstrument" class="chord-instrument-select">
             <option value="ninguno">Ninguno</option>
             <option value="piano">Piano</option>
@@ -183,7 +183,7 @@
 
       <!-- ===================== 5. ESCALAS ===================== -->
       <div class="menu-group" id="sec-escalas">
-        <p class="contact-label">🎼 Escalas</p>
+        <p class="contact-label" id="txtSecEscalas">🎼 Escalas</p>
 
         <div class="note-grid" id="pentaRootGrid"></div>
 
@@ -215,11 +215,11 @@
 
       <!-- ===================== 6. CÍRCULO DE CUARTAS Y QUINTAS ===================== -->
       <div class="menu-group" id="sec-quintas">
-        <p class="contact-label">🔵 Círculo de cuartas y quintas</p>
+        <p class="contact-label" id="txtSecQuintas">🔵 Círculo de cuartas y quintas</p>
 
         <div class="fifths-legend">
-          <span>↺ 4tas<br><small>+1♭</small></span>
-          <span>5tas ↻<br><small>+1♯</small></span>
+          <span><span id="txtQuintas4tas">↺ 4tas</span><br><small>+1♭</small></span>
+          <span><span id="txtQuintas5tas">5tas ↻</span><br><small>+1♯</small></span>
         </div>
 
         <div class="fifths-circle" id="fifthsCircle"></div>

@@ -6,6 +6,97 @@
 // No hay detección automática de tonalidad/ritmo — se completan a mano.
 // ===============================================================================================
 
+// ===================== TRADUCCIÓN DEL MODAL =====================
+// Mismo mecanismo que UI_LABELS/t() (lenguage.js) y ORACION_LABELS/tOracion()
+// (oracion.js), pero acá adentro para no romper el aislamiento del Bloc
+// musical. conFallbackIdioma() es la función genérica de lenguage.js:
+// es/gn siempre en español, cualquier otro idioma cae a inglés si no tiene
+// traducción propia acá.
+const NOTEPAD_LABELS = {
+  titulo:                 { es: "Bloc musical",     en: "Music Notepad",     it: "Blocco musicale",      pt: "Bloco musical",         fr: "Bloc-notes musical",     de: "Musiknotizblock" },
+  subtitulo:               { es: "Grabá una idea y no te la olvides más", en: "Record an idea and never forget it", it: "Registra un'idea e non dimenticarla più", pt: "Grave uma ideia e nunca mais a esqueça", fr: "Enregistrez une idée et ne l'oubliez plus", de: "Nimm eine Idee auf und vergiss sie nie wieder" },
+  placeholder_nombre:      { es: "Nombre de la nueva canción...", en: "Name of the new song...", it: "Nome del nuovo canto...", pt: "Nome da nova música...", fr: "Nom du nouveau chant...", de: "Name des neuen Lieds..." },
+  btn_nueva:               { es: "+ Nueva", en: "+ New", it: "+ Nuovo", pt: "+ Nova", fr: "+ Nouveau", de: "+ Neu" },
+  organizar:               { es: "Organizar y respaldar", en: "Organize & back up", it: "Organizza e backup", pt: "Organizar e fazer backup", fr: "Organiser et sauvegarder", de: "Organisieren und sichern" },
+  exportar:                { es: "⬆️ Exportar", en: "⬆️ Export", it: "⬆️ Esporta", pt: "⬆️ Exportar", fr: "⬆️ Exporter", de: "⬆️ Exportieren" },
+  importar:                { es: "⬇️ Importar", en: "⬇️ Import", it: "⬇️ Importa", pt: "⬇️ Importar", fr: "⬇️ Importer", de: "⬇️ Importieren" },
+  aviso_export:            { es: "Para ver las mismas grabaciones en otro navegador o dispositivo: exportá acá y luego importá ese archivo allá.", en: "To see the same recordings on another browser or device: export here and then import that file there.", it: "Per vedere le stesse registrazioni su un altro browser o dispositivo: esporta qui e poi importa quel file lì.", pt: "Para ver as mesmas gravações em outro navegador ou dispositivo: exporte aqui e depois importe esse arquivo lá.", fr: "Pour voir les mêmes enregistrements sur un autre navigateur ou appareil : exportez ici puis importez ce fichier là-bas.", de: "Um dieselben Aufnahmen in einem anderen Browser oder Gerät zu sehen: hier exportieren und die Datei dort importieren." },
+  vacio:                   { es: "Todavía no grabaste ninguna idea.<br>Ponele un nombre arriba y arrancá.", en: "You haven't recorded any idea yet.<br>Give it a name above and get started.", it: "Non hai ancora registrato nessuna idea.<br>Dalle un nome sopra e inizia.", pt: "Você ainda não gravou nenhuma ideia.<br>Dê um nome acima e comece.", fr: "Vous n'avez encore enregistré aucune idée.<br>Donnez-lui un nom ci-dessus et lancez-vous.", de: "Du hast noch keine Idee aufgenommen.<br>Gib ihr oben einen Namen und leg los." },
+  renombrar:               { es: "Renombrar", en: "Rename", it: "Rinomina", pt: "Renomear", fr: "Renommer", de: "Umbenennen" },
+  eliminar:                { es: "Eliminar", en: "Delete", it: "Elimina", pt: "Excluir", fr: "Supprimer", de: "Löschen" },
+  volver:                  { es: "← Volver", en: "← Back", it: "← Indietro", pt: "← Voltar", fr: "← Retour", de: "← Zurück" },
+  placeholder_letra:       { es: "Letra y acordes de esta grabación... ej: [Am]Alabaré a Jehová [C]en mi vida", en: "Lyrics and chords for this recording... e.g: [Am]I will praise the Lord [C]all my life", it: "Testo e accordi di questa registrazione... es: [Am]Loderò il Signore [C]nella mia vita", pt: "Letra e cifras desta gravação... ex: [Am]Louvarei ao Senhor [C]em minha vida", fr: "Paroles et accords de cet enregistrement... ex : [Am]Je louerai l'Éternel [C]toute ma vie", de: "Text und Akkorde dieser Aufnahme... z. B.: [Am]Ich will den Herrn loben [C]mein Leben lang" },
+  placeholder_tonalidad:   { es: "Tonalidad", en: "Key", it: "Tonalità", pt: "Tom", fr: "Tonalité", de: "Tonart" },
+  placeholder_ritmo:       { es: "Ritmo", en: "Rhythm", it: "Ritmo", pt: "Ritmo", fr: "Rythme", de: "Rhythmus" },
+  tocar_para_grabar:       { es: "Tocá para grabar", en: "Tap to record", it: "Tocca per registrare", pt: "Toque para gravar", fr: "Touchez pour enregistrer", de: "Tippen zum Aufnehmen" },
+  tocar_para_regrabar:     { es: "Tocá para volver a grabar", en: "Tap to record again", it: "Tocca per registrare di nuovo", pt: "Toque para gravar novamente", fr: "Touchez pour réenregistrer", de: "Tippen, um erneut aufzunehmen" },
+  grabando:                { es: "Grabando... tocá para detener", en: "Recording... tap to stop", it: "Registrazione in corso... tocca per fermare", pt: "Gravando... toque para parar", fr: "Enregistrement... touchez pour arrêter", de: "Aufnahme läuft... zum Stoppen tippen" },
+  mic_nota:                { es: "🎤 El micrófono se usa solo para grabar esta canción. Queda guardado local, en tu celular — no se sube a ningún lado. Vos decidís qué grabar acá.", en: "🎤 The microphone is only used to record this song. It's saved locally, on your phone — it's never uploaded anywhere. You decide what to record here.", it: "🎤 Il microfono si usa solo per registrare questo canto. Resta salvato in locale, sul tuo cellulare — non si carica da nessuna parte. Decidi tu cosa registrare qui.", pt: "🎤 O microfone é usado apenas para gravar esta música. Fica salvo localmente, no seu celular — não é enviado para lugar nenhum. Você decide o que gravar aqui.", fr: "🎤 Le microphone n'est utilisé que pour enregistrer ce chant. Il reste enregistré localement, sur votre téléphone — il n'est jamais envoyé où que ce soit. C'est vous qui décidez quoi enregistrer ici.", de: "🎤 Das Mikrofon wird nur verwendet, um dieses Lied aufzunehmen. Es wird lokal auf deinem Handy gespeichert — es wird nirgendwohin hochgeladen. Du entscheidest, was hier aufgenommen wird." },
+  descargar:               { es: "⬇️ Descargar", en: "⬇️ Download", it: "⬇️ Scarica", pt: "⬇️ Baixar", fr: "⬇️ Télécharger", de: "⬇️ Herunterladen" },
+  eliminar_btn:            { es: "🗑️ Eliminar", en: "🗑️ Delete", it: "🗑️ Elimina", pt: "🗑️ Excluir", fr: "🗑️ Supprimer", de: "🗑️ Löschen" },
+  prompt_nuevo_nombre:     { es: "Nuevo nombre:", en: "New name:", it: "Nuovo nome:", pt: "Novo nome:", fr: "Nouveau nom :", de: "Neuer Name:" },
+  confirm_eliminar:        { es: "¿Eliminar esta grabación? No se puede deshacer.", en: "Delete this recording? This can't be undone.", it: "Eliminare questa registrazione? Non si può annullare.", pt: "Excluir esta gravação? Isso não pode ser desfeito.", fr: "Supprimer cet enregistrement ? Cette action est irréversible.", de: "Diese Aufnahme löschen? Das kann nicht rückgängig gemacht werden." },
+  alert_no_audio_support:  { es: "Este navegador no permite grabar audio.", en: "This browser doesn't support audio recording.", it: "Questo browser non consente di registrare audio.", pt: "Este navegador não permite gravar áudio.", fr: "Ce navigateur ne permet pas d'enregistrer de l'audio.", de: "Dieser Browser unterstützt keine Audioaufnahme." },
+  alert_no_mic:            { es: "No se pudo acceder al micrófono. Revisá los permisos de la app.", en: "Couldn't access the microphone. Check the app's permissions.", it: "Non è stato possibile accedere al microfono. Controlla i permessi dell'app.", pt: "Não foi possível acessar o microfone. Verifique as permissões do app.", fr: "Impossible d'accéder au microphone. Vérifiez les autorisations de l'app.", de: "Zugriff auf das Mikrofon nicht möglich. Überprüfe die App-Berechtigungen." },
+  alert_nada_grabado:      { es: "Todavía no grabaste nada acá.", en: "You haven't recorded anything here yet.", it: "Non hai ancora registrato nulla qui.", pt: "Você ainda não gravou nada aqui.", fr: "Vous n'avez encore rien enregistré ici.", de: "Du hast hier noch nichts aufgenommen." },
+  alert_nada_exportar:     { es: "Todavía no tenés ninguna grabación para exportar.", en: "You don't have any recordings to export yet.", it: "Non hai ancora nessuna registrazione da esportare.", pt: "Você ainda não tem nenhuma gravação para exportar.", fr: "Vous n'avez encore aucun enregistrement à exporter.", de: "Du hast noch keine Aufnahmen zum Exportieren." },
+  alert_formato_invalido:  { es: "El archivo no tiene grabaciones del Bloc musical.", en: "The file doesn't have any Music Notepad recordings.", it: "Il file non contiene registrazioni del Blocco musicale.", pt: "O arquivo não tem gravações do Bloco musical.", fr: "Le fichier ne contient aucun enregistrement du Bloc-notes musical.", de: "Die Datei enthält keine Aufnahmen aus dem Musiknotizblock." },
+  alert_import_ok:         { es: "✅ Grabaciones importadas con éxito.", en: "✅ Recordings imported successfully.", it: "✅ Registrazioni importate con successo.", pt: "✅ Gravações importadas com sucesso.", fr: "✅ Enregistrements importés avec succès.", de: "✅ Aufnahmen erfolgreich importiert." },
+  alert_import_error:      { es: "No se pudo leer el archivo. ¿Es un export del Bloc musical?", en: "Couldn't read the file. Is it an export from the Music Notepad?", it: "Non è stato possibile leggere il file. È un export del Blocco musicale?", pt: "Não foi possível ler o arquivo. É um export do Bloco musical?", fr: "Impossible de lire le fichier. Est-ce bien un export du Bloc-notes musical ?", de: "Datei konnte nicht gelesen werden. Ist es ein Export aus dem Musiknotizblock?" },
+  nueva_cancion_default:   { es: "Nueva canción", en: "New song", it: "Nuovo canto", pt: "Nova música", fr: "Nouveau chant", de: "Neues Lied" },
+  sin_nombre_default:      { es: "Sin nombre", en: "Untitled", it: "Senza nome", pt: "Sem nome", fr: "Sans titre", de: "Ohne Namen" },
+  grabacion_importada_default: { es: "Grabación importada", en: "Imported recording", it: "Registrazione importata", pt: "Gravação importada", fr: "Enregistrement importé", de: "Importierte Aufnahme" }
+};
+
+// traduce una etiqueta fija del Bloc musical (clave de NOTEPAD_LABELS)
+function tNotepad(key, lang = idiomaActual) {
+  const entry = NOTEPAD_LABELS[key];
+  if (!entry) return key;
+  return conFallbackIdioma(entry, lang);
+}
+
+// aplica la traducción a todo lo fijo del modal (títulos, botones,
+// placeholders, avisos) y vuelve a dibujar la lista para que también quede
+// en el idioma nuevo. Se llama al abrir el modal y cada vez que cambia el
+// idioma de la app (ver actualizarMenuIdioma() en lenguage.js)
+function actualizarNotepadIdioma() {
+  const setText = (id, key) => { const el = document.getElementById(id); if (el) el.textContent = tNotepad(key); };
+  const setPlaceholder = (id, key) => { const el = document.getElementById(id); if (el) el.placeholder = tNotepad(key); };
+
+  setText("npTitle", "titulo");
+  setText("npSubtitulo", "subtitulo");
+  setPlaceholder("npNewName", "placeholder_nombre");
+  setText("npBtnNueva", "btn_nueva");
+  setText("npLabelOrganizar", "organizar");
+  setText("npBtnExportar", "exportar");
+  setText("npBtnImportar", "importar");
+  setText("npAvisoExport", "aviso_export");
+  setText("npBtnVolver", "volver");
+  setPlaceholder("npLetra", "placeholder_letra");
+  setPlaceholder("npTonalidad", "placeholder_tonalidad");
+  setPlaceholder("npRitmo", "placeholder_ritmo");
+  setText("npMicNota", "mic_nota");
+  setText("npBtnDescargar", "descargar");
+  setText("npBtnEliminar", "eliminar_btn");
+
+  // el estado "Tocá para grabar"/"Tocá para volver a grabar"/"Grabando..."
+  // depende de si hay una grabación en curso o si esta idea ya tiene audio
+  // — se recalcula acá en vez de pisarlo siempre con "Tocá para grabar"
+  const recStatus = document.getElementById("npRecStatus");
+  if (recStatus) {
+    const grabandoAhora = npMediaRecorder && npMediaRecorder.state === "recording";
+    const yaTieneAudio = document.getElementById("npDuration")?.textContent !== "0:00";
+
+    recStatus.textContent = grabandoAhora
+      ? tNotepad("grabando")
+      : (yaTieneAudio ? tNotepad("tocar_para_regrabar") : tNotepad("tocar_para_grabar"));
+  }
+
+  if (document.getElementById("npListView") && !document.getElementById("npListView").classList.contains("hidden")) {
+    npMostrarLista();
+  }
+}
+
 const NP_DB_NAME = "notepadDB";
 const NP_STORE = "recordings";
 
@@ -106,6 +197,7 @@ function abrirNotepad() {
 
   modal.style.display = "block";
   npMostrarLista();
+  actualizarNotepadIdioma();
 }
 
 function cerrarNotepad() {
@@ -130,7 +222,7 @@ async function npMostrarLista() {
   if (!cont) return;
 
   if (!npRecordings.length) {
-    cont.innerHTML = `<p class="np-empty">Todavía no grabaste ninguna idea.<br>Ponele un nombre arriba y arrancá.</p>`;
+    cont.innerHTML = `<p class="np-empty">${tNotepad("vacio")}</p>`;
     rail?.classList.add("hidden");
     return;
   }
@@ -148,8 +240,8 @@ async function npMostrarLista() {
           <b>${npEscapeHtml(r.nombre)}</b>
           <span class="np-row-sub">${npFormatDuration(r.duration)}${r.tonalidad ? " · " + npEscapeHtml(r.tonalidad) : ""}${r.bpm ? " · " + npEscapeHtml(String(r.bpm)) + " BPM" : ""}</span>
         </div>
-        <button type="button" class="np-row-btn" ${dataAction("npRenombrarRapido", [r.id])} title="Renombrar" aria-label="Renombrar">✏️</button>
-        <button type="button" class="np-row-btn np-row-btn-danger" ${dataAction("npEliminarRapido", [r.id])} title="Eliminar" aria-label="Eliminar">🗑️</button>
+        <button type="button" class="np-row-btn" ${dataAction("npRenombrarRapido", [r.id])} title="${tNotepad("renombrar")}" aria-label="${tNotepad("renombrar")}">✏️</button>
+        <button type="button" class="np-row-btn np-row-btn-danger" ${dataAction("npEliminarRapido", [r.id])} title="${tNotepad("eliminar")}" aria-label="${tNotepad("eliminar")}">🗑️</button>
       </div>
     `;
   }).join("");
@@ -186,7 +278,7 @@ function npRenderListRail(letras) {
 
 async function crearGrabacion() {
   const input = document.getElementById("npNewName");
-  const nombre = (input?.value || "").trim() || "Nueva canción";
+  const nombre = (input?.value || "").trim() || tNotepad("nueva_cancion_default");
 
   const record = {
     id: "np_" + Date.now(),
@@ -212,7 +304,7 @@ async function npRenombrarRapido(id) {
   const record = all.find(r => r.id === id);
   if (!record) return;
 
-  const nuevo = prompt("Nuevo nombre:", record.nombre);
+  const nuevo = prompt(tNotepad("prompt_nuevo_nombre"), record.nombre);
   if (nuevo === null) return;
 
   record.nombre = nuevo.trim() || record.nombre;
@@ -221,7 +313,7 @@ async function npRenombrarRapido(id) {
 }
 
 async function npEliminarRapido(id) {
-  if (!confirm("¿Eliminar esta grabación? No se puede deshacer.")) return;
+  if (!confirm(tNotepad("confirm_eliminar"))) return;
 
   if (id === npCurrentId) {
     npDetenerGrabacionSiActiva();
@@ -255,7 +347,7 @@ async function abrirGrabacion(id) {
   document.getElementById("npPlayBtn").textContent = "▶️";
 
   document.getElementById("npRecBtn")?.classList.remove("np-recording");
-  document.getElementById("npRecStatus").textContent = record.blob ? "Tocá para volver a grabar" : "Tocá para grabar";
+  document.getElementById("npRecStatus").textContent = record.blob ? tNotepad("tocar_para_regrabar") : tNotepad("tocar_para_grabar");
 
   npDibujarWaveform(record.blob);
 }
@@ -273,7 +365,7 @@ async function npGuardarCampos() {
   const record = all.find(r => r.id === npCurrentId);
   if (!record) return;
 
-  record.nombre = document.getElementById("npDetailName").value.trim() || "Sin nombre";
+  record.nombre = document.getElementById("npDetailName").value.trim() || tNotepad("sin_nombre_default");
   record.tonalidad = document.getElementById("npTonalidad").value.trim();
   record.ritmo = document.getElementById("npRitmo").value.trim();
   record.bpm = document.getElementById("npBpm").value.trim();
@@ -284,7 +376,7 @@ async function npGuardarCampos() {
 
 async function eliminarGrabacionActual() {
   if (!npCurrentId) return;
-  if (!confirm("¿Eliminar esta grabación? No se puede deshacer.")) return;
+  if (!confirm(tNotepad("confirm_eliminar"))) return;
 
   npDetenerGrabacionSiActiva();
   npPausarPlayback();
@@ -302,14 +394,14 @@ async function toggleGrabacion() {
   }
 
   if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === "undefined") {
-    alert("Este navegador no permite grabar audio.");
+    alert(tNotepad("alert_no_audio_support"));
     return;
   }
 
   try {
     npMediaStream = await navigator.mediaDevices.getUserMedia({ audio: true });
   } catch (e) {
-    alert("No se pudo acceder al micrófono. Revisá los permisos de la app.");
+    alert(tNotepad("alert_no_mic"));
     return;
   }
 
@@ -326,12 +418,12 @@ async function toggleGrabacion() {
     await npGuardarAudio(blob);
 
     document.getElementById("npRecBtn")?.classList.remove("np-recording");
-    document.getElementById("npRecStatus").textContent = "Tocá para volver a grabar";
+    document.getElementById("npRecStatus").textContent = tNotepad("tocar_para_regrabar");
   };
 
   npMediaRecorder.start();
   document.getElementById("npRecBtn")?.classList.add("np-recording");
-  document.getElementById("npRecStatus").textContent = "Grabando... tocá para detener";
+  document.getElementById("npRecStatus").textContent = tNotepad("grabando");
 }
 
 function npDetenerGrabacionSiActiva() {
@@ -444,7 +536,7 @@ async function togglePlayback() {
   const record = all.find(r => r.id === npCurrentId);
 
   if (!record || !record.blob) {
-    alert("Todavía no grabaste nada acá.");
+    alert(tNotepad("alert_nada_grabado"));
     return;
   }
 
@@ -472,7 +564,7 @@ async function descargarGrabacion() {
   const record = all.find(r => r.id === npCurrentId);
 
   if (!record || !record.blob) {
-    alert("Todavía no grabaste nada acá.");
+    alert(tNotepad("alert_nada_grabado"));
     return;
   }
 
@@ -512,7 +604,7 @@ async function exportarGrabaciones() {
   const all = await npGetAll();
 
   if (!all.length) {
-    alert("Todavía no tenés ninguna grabación para exportar.");
+    alert(tNotepad("alert_nada_exportar"));
     return;
   }
 
@@ -557,14 +649,14 @@ function importarGrabaciones(event) {
       const grabaciones = data.grabaciones;
 
       if (!Array.isArray(grabaciones) || !grabaciones.length) {
-        alert("El archivo no tiene grabaciones del Bloc musical.");
+        alert(tNotepad("alert_formato_invalido"));
         return;
       }
 
       for (const g of grabaciones) {
         const record = {
           id: g.id || ("np_" + Date.now() + "_" + Math.random().toString(36).slice(2)),
-          nombre: g.nombre || "Grabación importada",
+          nombre: g.nombre || tNotepad("grabacion_importada_default"),
           createdAt: g.createdAt || Date.now(),
           blob: g.audioBase64 ? npBase64ToBlob(g.audioBase64, g.audioType) : null,
           duration: g.duration || 0,
@@ -578,10 +670,10 @@ function importarGrabaciones(event) {
       }
 
       npMostrarLista();
-      alert("✅ Grabaciones importadas con éxito.");
+      alert(tNotepad("alert_import_ok"));
     } catch (e) {
       console.error("Error importando grabaciones:", e);
-      alert("No se pudo leer el archivo. ¿Es un export del Bloc musical?");
+      alert(tNotepad("alert_import_error"));
     }
   };
 

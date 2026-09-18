@@ -8,22 +8,34 @@
       <div class="about-meta" id="listasContextLabel">Armá tus propios repertorios</div>
     </div>
 
-    <div class="nueva-lista-row">
-      <input id="nuevaListaInput" type="text" placeholder="Nombre de la lista (ej. Retiro enero)" onkeydown="if(event.key==='Enter') crearListaDesdeInput();">
-      <button type="button" class="play-btn" data-action="crearListaDesdeInput">+ Crear</button>
-    </div>
-
-    <div class="listas-io-row">
-      <button type="button" class="chip" data-action="exportarMisListas">⬆️ Exportar</button>
-      <label class="chip listas-import-btn">
-        ⬇️ Importar
-        <input type="file" accept=".json,application/json" onchange="importarMisListas(event)" hidden>
-      </label>
-    </div>
-    <p class="listas-io-hint">Para ver las mismas listas en otro navegador o dispositivo: exportá acá y luego importá ese archivo allá.</p>
-
     <div class="about-body">
+
+      <div class="nueva-lista-row">
+        <input id="nuevaListaInput" type="text" placeholder="Nombre de la lista (ej. Retiro enero)" onkeydown="if(event.key==='Enter') crearListaDesdeInput();">
+        <button type="button" class="play-btn" id="listasBtnCrear" data-action="crearListaDesdeInput">+ Crear</button>
+      </div>
+
+      <p class="contact-label" id="listasLabelTus">⭐ Tus listas</p>
       <div id="listasContainer"></div>
+
+      <details class="about-section modal-organizar">
+        <summary>
+          <span class="sec-icon">⚙️</span>
+          <span class="menu-row-label" id="listasLabelOrganizar">Organizar y respaldar</span>
+          <span class="sec-chevron">▸</span>
+        </summary>
+        <div class="about-panel">
+          <div class="listas-io-row">
+            <button type="button" class="chip" id="listasBtnExportar" data-action="exportarMisListas">⬆️ Exportar</button>
+            <label class="chip listas-import-btn">
+              <span id="listasBtnImportar">⬇️ Importar</span>
+              <input type="file" accept=".json,application/json" onchange="importarMisListas(event)" hidden>
+            </label>
+          </div>
+          <p class="listas-io-hint" id="listasAvisoExport">Para ver las mismas listas en otro navegador o dispositivo: exportá acá y luego importá ese archivo allá.</p>
+        </div>
+      </details>
+
     </div>
 
   </div>

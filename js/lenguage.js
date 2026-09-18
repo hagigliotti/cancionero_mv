@@ -128,7 +128,7 @@ function actualizarMenuIdioma() {
 
   // "Ninguno/Piano/Guitarra/Bajo/Ukelele" del diagrama de acordes: hay dos
   // selects con las mismas opciones (menú y popover de acorde en la letra)
-  ["menuChordInstrument", "chordPopoverInstrument"].forEach(id => {
+  ["menuChordInstrument", "chordPopoverInstrument", "afinometroChordInstrument"].forEach(id => {
     const sel = document.getElementById(id);
     if (!sel) return;
     Array.from(sel.options).forEach(opt => { opt.textContent = t(opt.value); });
@@ -141,6 +141,23 @@ function actualizarMenuIdioma() {
   if (typeof applyTeleprompterBarVisibility === "function") applyTeleprompterBarVisibility();
   if (typeof applyChordFollowsTransposeState === "function") applyChordFollowsTransposeState();
   if (typeof updateProjectorMenuButton === "function") updateProjectorMenuButton();
+
+  // Mis Pedidos de Oración vive en su propio archivo (oracion.js) y tiene
+  // su propio diccionario (ORACION_LABELS/tOracion) — se refresca acá para
+  // que también cambie de idioma en vivo, esté el modal abierto o no
+  if (typeof actualizarOracionIdioma === "function") actualizarOracionIdioma();
+
+  // Biblioteca, Mis Listas, Contacto y Compartir (app.js)
+  if (typeof actualizarModalesSecundariosIdioma === "function") actualizarModalesSecundariosIdioma();
+
+  // Bloc musical vive en su propio archivo (notepad.js) y tiene su propio
+  // diccionario (NOTEPAD_LABELS/tNotepad)
+  if (typeof actualizarNotepadIdioma === "function") actualizarNotepadIdioma();
+
+  // Metrónomo y Afinador (afinometro.js) — acá además del texto fijo se
+  // traducen datos reales (nombres de nota, Mayor/menor, círculo de
+  // quintas), no solo etiquetas de interfaz
+  if (typeof actualizarAfinometroIdioma === "function") actualizarAfinometroIdioma();
 }
 
 // ===============================================================================================
@@ -248,7 +265,54 @@ const UI_LABELS = {
     pt: "📱 O modo projetor só está disponível em tablets, PC ou Mac.",
     fr: "📱 Le mode projecteur n'est disponible que sur tablette, PC ou Mac.",
     de: "📱 Der Projektormodus ist nur auf Tablets, PC oder Mac verfügbar."
-  }
+  },
+
+  // ===================== BIBLIOTECA =====================
+  biblioteca_subtitulo:    { es: "recurso(s) disponible(s)", en: "resource(s) available", it: "risorsa/e disponibile/i", pt: "recurso(s) disponível(is)", fr: "ressource(s) disponible(s)", de: "verfügbare(r) Inhalt(e)" },
+  biblioteca_buscar:       { es: "🔎 Buscar título o autor...", en: "🔎 Search title or author...", it: "🔎 Cerca titolo o autore...", pt: "🔎 Buscar título ou autor...", fr: "🔎 Rechercher titre ou auteur...", de: "🔎 Titel oder Autor suchen..." },
+  biblioteca_sin_resultados: { es: "No hay resultados", en: "No results", it: "Nessun risultato", pt: "Nenhum resultado", fr: "Aucun résultat", de: "Keine Ergebnisse" },
+  biblioteca_derechos:     { es: "📜 Derechos:", en: "📜 Rights:", it: "📜 Diritti:", pt: "📜 Direitos:", fr: "📜 Droits :", de: "📜 Rechte:" },
+  biblioteca_descargar:    { es: "⏬ Descargar", en: "⏬ Download", it: "⏬ Scarica", pt: "⏬ Baixar", fr: "⏬ Télécharger", de: "⏬ Herunterladen" },
+  biblioteca_permiso:      { es: "📄 Permiso", en: "📄 Permission", it: "📄 Permesso", pt: "📄 Permissão", fr: "📄 Autorisation", de: "📄 Genehmigung" },
+
+  // ===================== MIS LISTAS =====================
+  listas_subtitulo_normal:   { es: "Armá tus propios repertorios", en: "Build your own setlists", it: "Crea le tue scalette", pt: "Monte seus próprios repertórios", fr: "Créez vos propres répertoires", de: "Erstelle deine eigenen Setlisten" },
+  listas_subtitulo_contexto: { es: "Tocá una lista para agregar o sacar esta canción", en: "Tap a list to add or remove this song", it: "Tocca un elenco per aggiungere o togliere questo canto", pt: "Toque em uma lista para adicionar ou remover esta música", fr: "Touchez une liste pour ajouter ou retirer ce chant", de: "Tippe auf eine Liste, um dieses Lied hinzuzufügen oder zu entfernen" },
+  listas_placeholder:        { es: "Nombre de la lista (ej. Retiro enero)", en: "List name (e.g. January retreat)", it: "Nome dell'elenco (es. Ritiro di gennaio)", pt: "Nome da lista (ex. Retiro de janeiro)", fr: "Nom de la liste (ex. Retraite de janvier)", de: "Name der Liste (z. B. Freizeit im Januar)" },
+  listas_crear:               { es: "+ Crear", en: "+ Create", it: "+ Crea", pt: "+ Criar", fr: "+ Créer", de: "+ Erstellen" },
+  listas_tus_listas:          { es: "⭐ Tus listas", en: "⭐ Your setlists", it: "⭐ Le tue scalette", pt: "⭐ Suas listas", fr: "⭐ Vos listes", de: "⭐ Deine Listen" },
+  listas_organizar:           { es: "Organizar y respaldar", en: "Organize & back up", it: "Organizza e backup", pt: "Organizar e fazer backup", fr: "Organiser et sauvegarder", de: "Organisieren und sichern" },
+  listas_exportar:            { es: "⬆️ Exportar", en: "⬆️ Export", it: "⬆️ Esporta", pt: "⬆️ Exportar", fr: "⬆️ Exporter", de: "⬆️ Exportieren" },
+  listas_importar:            { es: "⬇️ Importar", en: "⬇️ Import", it: "⬇️ Importa", pt: "⬇️ Importar", fr: "⬇️ Importer", de: "⬇️ Importieren" },
+  listas_aviso_export:        { es: "Para ver las mismas listas en otro navegador o dispositivo: exportá acá y luego importá ese archivo allá.", en: "To see the same setlists on another browser or device: export here and then import that file there.", it: "Per vedere le stesse scalette su un altro browser o dispositivo: esporta qui e poi importa quel file lì.", pt: "Para ver as mesmas listas em outro navegador ou dispositivo: exporte aqui e depois importe esse arquivo lá.", fr: "Pour voir les mêmes listes sur un autre navigateur ou appareil : exportez ici puis importez ce fichier là-bas.", de: "Um dieselben Listen in einem anderen Browser oder Gerät zu sehen: hier exportieren und die Datei dort importieren." },
+  listas_vacio:                { es: 'Todavía no creaste ninguna lista — escribí un nombre arriba y tocá "+ Crear".', en: 'You haven\'t created any list yet — write a name above and tap "+ Create".', it: 'Non hai ancora creato nessun elenco — scrivi un nome sopra e tocca "+ Crea".', pt: 'Você ainda não criou nenhuma lista — escreva um nome acima e toque em "+ Criar".', fr: "Vous n'avez encore créé aucune liste — écrivez un nom ci-dessus et touchez « + Créer ».", de: 'Du hast noch keine Liste erstellt — schreib oben einen Namen und tippe auf "+ Erstellen".' },
+  listas_sin_canciones:        { es: "Todavía no tiene canciones", en: "No songs yet", it: "Non ha ancora canti", pt: "Ainda não tem músicas", fr: "Pas encore de chants", de: "Noch keine Lieder" },
+  listas_cancion_no_disponible:{ es: "(canción no disponible)", en: "(song not available)", it: "(canto non disponibile)", pt: "(música não disponível)", fr: "(chant non disponible)", de: "(Lied nicht verfügbar)" },
+  listas_quitar_de_lista:      { es: "Quitar de la lista", en: "Remove from list", it: "Rimuovi dall'elenco", pt: "Remover da lista", fr: "Retirer de la liste", de: "Von der Liste entfernen" },
+  listas_cambiar_nombre:       { es: "Cambiar nombre", en: "Rename", it: "Rinomina", pt: "Renomear", fr: "Renommer", de: "Umbenennen" },
+  listas_eliminar_lista:       { es: "Eliminar lista", en: "Delete list", it: "Elimina elenco", pt: "Excluir lista", fr: "Supprimer la liste", de: "Liste löschen" },
+  listas_prompt_nombre:        { es: "Nuevo nombre de la lista:", en: "New name for the list:", it: "Nuovo nome dell'elenco:", pt: "Novo nome da lista:", fr: "Nouveau nom de la liste :", de: "Neuer Name der Liste:" },
+  listas_confirm_eliminar:     { es: '¿Eliminar la lista "{nombre}"?', en: 'Delete the list "{nombre}"?', it: 'Eliminare l\'elenco "{nombre}"?', pt: 'Excluir a lista "{nombre}"?', fr: 'Supprimer la liste « {nombre} » ?', de: 'Liste "{nombre}" löschen?' },
+  listas_alert_formato:        { es: "El archivo no tiene el formato esperado de Mis Listas.", en: "The file doesn't have the expected format for My Setlists.", it: "Il file non ha il formato previsto per Le Mie Scalette.", pt: "O arquivo não tem o formato esperado de Minhas Listas.", fr: "Le fichier n'a pas le format attendu pour Mes Listes.", de: "Die Datei hat nicht das erwartete Format für Meine Listen." },
+  listas_alert_import_ok:      { es: "✅ Listas importadas con éxito.", en: "✅ Setlists imported successfully.", it: "✅ Scalette importate con successo.", pt: "✅ Listas importadas com sucesso.", fr: "✅ Listes importées avec succès.", de: "✅ Listen erfolgreich importiert." },
+  listas_alert_import_error:   { es: "No se pudo leer el archivo. ¿Es un export de Mis Listas?", en: "Couldn't read the file. Is it an export of My Setlists?", it: "Non è stato possibile leggere il file. È un export de Le Mie Scalette?", pt: "Não foi possível ler o arquivo. É um export de Minhas Listas?", fr: "Impossible de lire le fichier. Est-ce bien un export de Mes Listes ?", de: "Datei konnte nicht gelesen werden. Ist es ein Export von Meine Listen?" },
+
+  // ===================== CONTACTO =====================
+  contacto_subtitulo:      { es: "Escribime o seguime", en: "Write to me or follow me", it: "Scrivimi o seguimi", pt: "Escreva-me ou me siga", fr: "Écrivez-moi ou suivez-moi", de: "Schreib mir oder folge mir" },
+  contacto_email:          { es: "Escribime por un error o sugerencia", en: "Email me about a bug or suggestion", it: "Scrivimi per un errore o un suggerimento", pt: "Escreva-me sobre um erro ou sugestão", fr: "Écrivez-moi pour un bug ou une suggestion", de: "Schreib mir bei einem Fehler oder Vorschlag" },
+  contacto_reporte:        { es: "Reporte", en: "Report an issue", it: "Segnalazione", pt: "Relatar", fr: "Signaler", de: "Meldung" },
+  contacto_requiere_sesion:{ es: "requiere sesión", en: "sign-in required", it: "richiede accesso", pt: "requer login", fr: "connexion requise", de: "Anmeldung erforderlich" },
+
+  // ===================== COMPARTIR =====================
+  compartir_titulo:        { es: "Compartir Cancionero MV", en: "Share Cancionero MV", it: "Condividi Cancionero MV", pt: "Compartilhar Cancionero MV", fr: "Partager Cancionero MV", de: "Cancionero MV teilen" },
+  compartir_subtitulo:     { es: "Invitá a otros a sumarse", en: "Invite others to join", it: "Invita altri a unirsi", pt: "Convide outros a participar", fr: "Invitez d'autres personnes à nous rejoindre", de: "Lade andere ein mitzumachen" },
+  compartir_boton:         { es: "📤 Compartir", en: "📤 Share", it: "📤 Condividi", pt: "📤 Compartilhar", fr: "📤 Partager", de: "📤 Teilen" },
+  compartir_hint:          { es: "Incluye AirDrop, Mensajes, Mail y todo lo que tengas instalado", en: "Includes AirDrop, Messages, Mail and anything else you have installed", it: "Include AirDrop, Messaggi, Mail e tutto ciò che hai installato", pt: "Inclui AirDrop, Mensagens, Mail e tudo o que você tiver instalado", fr: "Inclut AirDrop, Messages, Mail et tout ce que vous avez installé", de: "Beinhaltet AirDrop, Nachrichten, Mail und alles, was du installiert hast" },
+  compartir_enlace:        { es: "📌 Enlace", en: "📌 Link", it: "📌 Link", pt: "📌 Link", fr: "📌 Lien", de: "📌 Link" },
+  compartir_copiar:        { es: "📋 Copiar", en: "📋 Copy", it: "📋 Copia", pt: "📋 Copiar", fr: "📋 Copier", de: "📋 Kopieren" },
+  compartir_qr:            { es: "📱 Escanear QR Code con otro dispositivo", en: "📱 Scan the QR code with another device", it: "📱 Scansiona il codice QR con un altro dispositivo", pt: "📱 Escaneie o QR Code com outro dispositivo", fr: "📱 Scannez le QR code avec un autre appareil", de: "📱 QR-Code mit einem anderen Gerät scannen" },
+  compartir_link_copiado:  { es: "Link copiado 📋", en: "Link copied 📋", it: "Link copiato 📋", pt: "Link copiado 📋", fr: "Lien copié 📋", de: "Link kopiert 📋" },
+  compartir_share_texto:   { es: "Mirá el Cancionero App — cantos y acordes para el servicio misionero.", en: "Check out Cancionero App — songs and chords for missionary service.", it: "Guarda Cancionero App — canti e accordi per il servizio missionario.", pt: "Confira o Cancionero App — cânticos e cifras para o serviço missionário.", fr: "Découvrez Cancionero App — chants et accords pour le service missionnaire.", de: "Schau dir die Cancionero App an — Lieder und Akkorde für den Missionsdienst." }
 };
 
 // traduce una etiqueta fija (clave de UI_LABELS) al idioma actual
@@ -257,6 +321,15 @@ function t(key, lang = idiomaActual) {
   if (!entry) return key;
 
   return conFallbackIdioma(entry, lang);
+}
+
+// igual que t(), pero reemplaza placeholders {var} — para los pocos textos
+// que necesitan un dato adentro (ej. el nombre de una lista al confirmar
+// que se borre)
+function tFmt(key, vars = {}, lang = idiomaActual) {
+  let texto = t(key, lang);
+  Object.keys(vars).forEach(k => { texto = texto.split(`{${k}}`).join(vars[k]); });
+  return texto;
 }
 
 // traduce un VALOR de dato (no una etiqueta) solo cuando ese valor es,
@@ -723,10 +796,30 @@ function changeLanguage(lang, songId) {
 
 // ===============================================================================================
 // ===================== UI DE BOTÓN DE IDIOMA ===================================================
-function initLanguageUI() {
+// intenta cambiar el idioma desde cualquiera de los tres controles que
+// tiene el usuario para hacerlo (el botón de bandera langBtn con su
+// long-press, el select #idioma que ese botón esconde detrás, y el select
+// #menuIdioma del menú ☰) — centraliza acá el guard de idiomaFijo para que
+// los tres se comporten siempre igual. Antes había código duplicado (uno
+// adentro de init(), otro suelto más abajo en app.js) que hacía que el
+// botón de bandera cambiara el idioma SIN chequear idiomaFijo, aunque el
+// selector de al lado sí lo bloqueaba — confuso e inconsistente. Devuelve
+// true si el cambio se aplicó, false si se bloqueó (y ya avisó por qué).
+function intentarCambiarIdioma(lang) {
+  if (getLibroDef(libroActual)?.idiomaFijo) {
+    showToast(t("idioma_fijo_aviso"));
+    return false;
+  }
 
+  setIdioma(lang);
+  return true;
+}
+
+// wiring de los tres controles — se llama una sola vez desde init()
+function initLanguageUI() {
   const langBtn = document.getElementById("langBtn");
   const idiomaSelect = document.getElementById("idioma");
+  const menuIdioma = document.getElementById("menuIdioma");
 
   let pressTimer;
 
@@ -735,10 +828,10 @@ function initLanguageUI() {
     const options = Array.from(idiomaSelect.options);
     const currentIndex = options.findIndex(o => o.value === idiomaActual);
     const nextIndex = (currentIndex + 1) % options.length;
-    setIdioma(options[nextIndex].value);
+    intentarCambiarIdioma(options[nextIndex].value);
   });
 
-  // LONG PRESS: abre selector manual
+  // LONG PRESS: abre el selector nativo (normalmente invisible detrás del botón)
   langBtn?.addEventListener("mousedown", () => {
     pressTimer = setTimeout(() => {
       idiomaSelect.style.pointerEvents = "auto";
@@ -751,12 +844,22 @@ function initLanguageUI() {
   langBtn?.addEventListener("mouseup", () => clearTimeout(pressTimer));
   langBtn?.addEventListener("mouseleave", () => clearTimeout(pressTimer));
 
-  // cambio desde select
+  // cambio desde el select que el long-press deja visible
   idiomaSelect?.addEventListener("change", () => {
-    setIdioma(idiomaSelect.value);
+    if (!intentarCambiarIdioma(idiomaSelect.value)) {
+      idiomaSelect.value = idiomaActual; // el <select> ya había cambiado solo, se revierte
+    }
 
+    // se esconde de nuevo apenas se elige algo, se haya aplicado o no
     idiomaSelect.style.opacity = "0";
     idiomaSelect.style.pointerEvents = "none";
+  });
+
+  // cambio desde el select del menú ☰
+  menuIdioma?.addEventListener("change", () => {
+    if (!intentarCambiarIdioma(menuIdioma.value)) {
+      menuIdioma.value = idiomaActual;
+    }
   });
 }
 

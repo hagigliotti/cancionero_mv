@@ -5,50 +5,60 @@
       <button type="button" class="about-close" data-action="cerrarPedidosOracion" aria-label="Cerrar">✕</button>
       <div class="about-badge">🛐</div>
       <h2 id="oracionTitle">Mis Pedidos de Oración</h2>
-      <div class="about-meta">Anotá un pedido y, si querés, agregalo a una lista</div>
+      <div class="about-meta" id="oracionSubtitulo">Anotá un pedido y, si querés, agregalo a una lista</div>
     </div>
 
     <div class="about-body">
 
+      <p class="contact-label" id="oracionLabelNuevo">✍️ Nuevo pedido de oración</p>
       <div class="oracion-nuevo-panel">
         <textarea id="oracionTextoInput" rows="2" placeholder="Escribí el pedido de oración..."></textarea>
 
         <div class="oracion-adjuntos-row">
-          <button type="button" class="chip" data-action="oracionElegirFoto">📷 Foto</button>
-          <button type="button" class="chip" data-action="oracionPedirVersiculo">📖 Versículo</button>
-          <button type="button" class="chip" data-action="oracionAbrirBuscadorCanto">🎵 Canto</button>
+          <button type="button" class="chip" id="oracionChipFoto" data-action="oracionElegirFoto">📷 Foto</button>
+          <button type="button" class="chip" id="oracionChipVersiculo" data-action="oracionPedirVersiculo">📖 Versículo</button>
+          <button type="button" class="chip" id="oracionChipCanto" data-action="oracionAbrirBuscadorCanto">🎵 Canto</button>
         </div>
 
         <div id="oracionAdjuntosPreview" class="oracion-adjuntos-preview"></div>
 
-        <button type="button" class="play-btn" data-action="crearPedidoOracionDesdeInput">+ Agregar pedido</button>
-      </div>
-
-      <p class="listas-io-hint">📷 Si agregás una foto, queda guardada solo en este dispositivo — no se sube a internet.</p>
-
-      <div class="nueva-lista-row">
-        <input id="oracionNuevaListaInput" type="text" placeholder="Nombre de una lista (ej. Familia)" onkeydown="if(event.key==='Enter') crearListaOracionDesdeInput();">
-        <button type="button" class="chip" data-action="crearListaOracionDesdeInput">+ Crear lista</button>
+        <button type="button" class="play-btn" id="oracionBtnAgregar" data-action="crearPedidoOracionDesdeInput">+ Agregar pedido</button>
+        <p class="listas-io-hint" id="oracionAvisoFoto">📷 Si agregás una foto, queda guardada solo en este dispositivo — no se sube a internet.</p>
       </div>
 
       <div id="oracionSongPickerBox" class="oracion-song-picker hidden">
         <div class="oracion-song-picker-head">
           <input type="text" id="oracionSongPickerInput" placeholder="Buscar canto o himno por título...">
-          <button type="button" class="lista-remove-btn" data-action="oracionCerrarBuscadorCanto" title="Cancelar">✕</button>
+          <button type="button" class="lista-remove-btn" id="oracionBtnCancelarBuscador" data-action="oracionCerrarBuscadorCanto" title="Cancelar">✕</button>
         </div>
         <div id="oracionSongPickerResults" class="oracion-song-picker-results"></div>
       </div>
 
-      <div class="listas-io-row">
-        <button type="button" class="chip" data-action="exportarPedidosOracion">⬆️ Exportar</button>
-        <label class="chip listas-import-btn">
-          ⬇️ Importar
-          <input type="file" accept=".json,application/json" onchange="importarPedidosOracion(event)" hidden>
-        </label>
-      </div>
-      <p class="listas-io-hint">Para ver los mismos pedidos en otro navegador o dispositivo: exportá acá y luego importá ese archivo allá (listas, pedidos y fotos van incluidos).</p>
-
+      <p class="contact-label" id="oracionLabelTus">🛐 Tus pedidos</p>
       <div id="oracionListasContainer"></div>
+
+      <details class="about-section modal-organizar">
+        <summary>
+          <span class="sec-icon">⚙️</span>
+          <span class="menu-row-label" id="oracionLabelOrganizar">Organizar y respaldar</span>
+          <span class="sec-chevron">▸</span>
+        </summary>
+        <div class="about-panel">
+          <div class="nueva-lista-row">
+            <input id="oracionNuevaListaInput" type="text" placeholder="Nombre de una lista (ej. Familia)" onkeydown="if(event.key==='Enter') crearListaOracionDesdeInput();">
+            <button type="button" class="chip" id="oracionBtnCrearLista" data-action="crearListaOracionDesdeInput">+ Crear lista</button>
+          </div>
+
+          <div class="listas-io-row">
+            <button type="button" class="chip" id="oracionBtnExportar" data-action="exportarPedidosOracion">⬆️ Exportar</button>
+            <label class="chip listas-import-btn">
+              <span id="oracionBtnImportar">⬇️ Importar</span>
+              <input type="file" accept=".json,application/json" onchange="importarPedidosOracion(event)" hidden>
+            </label>
+          </div>
+          <p class="listas-io-hint" id="oracionAvisoExport">Para ver los mismos pedidos en otro navegador o dispositivo: exportá acá y luego importá ese archivo allá (listas, pedidos y fotos van incluidos).</p>
+        </div>
+      </details>
 
     </div>
 

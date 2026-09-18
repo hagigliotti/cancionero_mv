@@ -170,6 +170,7 @@ function abrirAfinometroModal() {
 
   closeMenu();
   modal.style.display = "block";
+  if (typeof actualizarAfinometroIdioma === "function") actualizarAfinometroIdioma();
   initAfinadorUI();
 }
 
@@ -390,7 +391,7 @@ function renderBiblioteca(data) {
   cont.innerHTML = "";
 
   if (!data.length) {
-    cont.innerHTML = `<p class="biblio-empty">No hay resultados</p>`;
+    cont.innerHTML = `<p class="biblio-empty">${t("biblioteca_sin_resultados")}</p>`;
     return;
   }
 
@@ -413,13 +414,13 @@ function renderBiblioteca(data) {
 
       ${nombreDerechos ? `
         <div class="biblio-derechos">
-          📜 Derechos: <a class="biblioteca-link" href="${linkDerechos}" target="_blank" rel="noopener noreferrer">${nombreDerechos}</a>
+          ${t("biblioteca_derechos")} <a class="biblioteca-link" href="${linkDerechos}" target="_blank" rel="noopener noreferrer">${nombreDerechos}</a>
         </div>
       ` : ""}
 
       <div class="biblio-actions">
-        <a class="biblio-btn" href="${item.descarga}" target="_blank" rel="noopener noreferrer">⏬ Descargar</a>
-        ${item.permiso ? `<a class="biblio-btn ghost" href="${item.permiso}" target="_blank" rel="noopener noreferrer">📄 Permiso</a>` : ""}
+        <a class="biblio-btn" href="${item.descarga}" target="_blank" rel="noopener noreferrer">${t("biblioteca_descargar")}</a>
+        ${item.permiso ? `<a class="biblio-btn ghost" href="${item.permiso}" target="_blank" rel="noopener noreferrer">${t("biblioteca_permiso")}</a>` : ""}
       </div>
     `;
 
@@ -445,17 +446,17 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=172",
-    "modals/revised.html?v=172",
-    "modals/people.html?v=172",
-    "modals/valores.html?v=172",
-    "modals/share.html?v=172",
-    "modals/contacto.html?v=172",
-    "modals/afinometro.html?v=172",
-    "modals/biblioteca.html?v=172",
-    "modals/listas.html?v=172",
-    "modals/notepad.html?v=172",
-    "modals/oracion.html?v=172"
+    "modals/info.html?v=178",
+    "modals/revised.html?v=178",
+    "modals/people.html?v=178",
+    "modals/valores.html?v=178",
+    "modals/share.html?v=178",
+    "modals/contacto.html?v=178",
+    "modals/afinometro.html?v=178",
+    "modals/biblioteca.html?v=178",
+    "modals/listas.html?v=178",
+    "modals/notepad.html?v=178",
+    "modals/oracion.html?v=178"
   ];
 
   for (const path of modales) {
@@ -596,29 +597,11 @@ async function init() {
     renderBiblioteca(filtered);
   });
 
-  document.getElementById("idioma").addEventListener("change", e => {
-      if (getLibroDef(libroActual)?.idiomaFijo) {
-        e.target.value = idiomaActual; // el <select> ya había cambiado solo, se revierte
-        showToast(t("idioma_fijo_aviso"));
-        return;
-      }
-
-      setIdioma(e.target.value);
-      document.getElementById("menuIdioma").value = e.target.value;
-
-      renderAlphabet();
-      renderList(letraActiva);
-    });
-
-  document.getElementById("menuIdioma").addEventListener("change", e => {
-      if (getLibroDef(libroActual)?.idiomaFijo) {
-        e.target.value = idiomaActual; // el <select> ya había cambiado solo, se revierte
-        showToast(t("idioma_fijo_aviso"));
-        return;
-      }
-
-      setIdioma(e.target.value);
-    });
+  // el botón de bandera (langBtn), el select #idioma que esconde detrás y
+  // el select #menuIdioma del menú ☰ se manejan todos juntos, en un solo
+  // lugar, desde initLanguageUI() (lenguage.js) — así los tres respetan el
+  // mismo guard de idiomaFijo sin código duplicado
+  initLanguageUI();
 
   document.getElementById("menuLibro").addEventListener("change", e => {
     cambiarLibroActivo(e.target.value);
@@ -1124,66 +1107,6 @@ function selectSong(id) {
   openSong(id);       // luego abre canción
 }
 
-// ===== BOTON IDIOMA INTELIGENTE =================================================================
-const langBtn = document.getElementById("langBtn");
-const idiomaSelect = document.getElementById("idioma");
-
-let pressTimer;
-
-
-updateLangFlag();
-
-// CLICK → cambiar idioma rápido
-langBtn.addEventListener("click", () => {
-  const options = Array.from(idiomaSelect.options);
-
-  const currentIndex = options.findIndex(o => o.value === idiomaActual);
-
-  const nextIndex = (currentIndex + 1) % options.length;
-  const newLang = options[nextIndex].value;
-
-  setIdioma(newLang);
-});
-
-
-
-// HOLD → abrir selector real
-langBtn.addEventListener("mousedown", () => {
-  pressTimer = setTimeout(() => {
-    idiomaSelect.style.pointerEvents = "auto";
-    idiomaSelect.style.opacity = "1";
-    idiomaSelect.focus();
-    idiomaSelect.click();
-  }, 500);
-});
-
-langBtn.addEventListener("mouseup", () => {
-  clearTimeout(pressTimer);
-});
-
-langBtn.addEventListener("mouseleave", () => {
-  clearTimeout(pressTimer);
-});
-
-// cuando cambia idioma
-idiomaSelect.addEventListener("change", () => {
-  updateLangFlag();
-
-  idiomaActual = idiomaSelect.value;
-  localStorage.setItem("idioma", idiomaActual);
-
-  // ESTA ES LA LÍNEA CLAVE
-  document.getElementById("menuIdioma").value = idiomaSelect.value;
-
-  renderAlphabet();
-  renderList(letraActiva);
-
-  idiomaSelect.style.opacity = "0";
-  idiomaSelect.style.pointerEvents = "none";
-});
-
-
-
 // ==================================================================================================================================
 // ===================== OPEN / CLOSE LISTA DE CANCIONES =====================
 function openList() {
@@ -1472,8 +1395,8 @@ function abrirMisListas(songId = null) {
   const label = document.getElementById("listasContextLabel");
   if (label) {
     label.textContent = listasContextSongId
-      ? "Tocá una lista para agregar o sacar esta canción"
-      : "Armá tus propios repertorios";
+      ? t("listas_subtitulo_contexto")
+      : t("listas_subtitulo_normal");
   }
 
   renderMisListas();
@@ -1506,7 +1429,7 @@ function eliminarLista(id) {
   const lista = misListas[id];
   if (!lista) return;
 
-  if (!confirm(`¿Eliminar la lista "${lista.name}"?`)) return;
+  if (!confirm(tFmt("listas_confirm_eliminar", { nombre: lista.name }))) return;
 
   delete misListas[id];
   guardarListas();
@@ -1517,7 +1440,7 @@ function editarNombreLista(id) {
   const lista = misListas[id];
   if (!lista) return;
 
-  const nuevoNombre = prompt("Nuevo nombre de la lista:", lista.name);
+  const nuevoNombre = prompt(t("listas_prompt_nombre"), lista.name);
   if (nuevoNombre === null) return; // canceló
 
   const limpio = nuevoNombre.trim();
@@ -1561,16 +1484,16 @@ function importarMisListas(event) {
       const nuevas = data.misListas || data;
 
       if (!nuevas || typeof nuevas !== "object" || Array.isArray(nuevas)) {
-        alert("El archivo no tiene el formato esperado de Mis Listas.");
+        alert(t("listas_alert_formato"));
         return;
       }
 
       Object.assign(misListas, nuevas);
       guardarListas();
       renderMisListas();
-      alert("✅ Listas importadas con éxito.");
+      alert(t("listas_alert_import_ok"));
     } catch (e) {
-      alert("No se pudo leer el archivo. ¿Es un export de Mis Listas?");
+      alert(t("listas_alert_import_error"));
     }
   };
 
@@ -1602,7 +1525,7 @@ function renderMisListas() {
     .sort((a, b) => misListas[a].name.localeCompare(misListas[b].name, "es", { sensitivity: "base" }));
 
   if (!ids.length) {
-    cont.innerHTML = `<p class="biblio-empty">Todavía no creaste ninguna lista — escribí un nombre arriba y tocá "+ Crear".</p>`;
+    cont.innerHTML = `<p class="biblio-empty">${t("listas_vacio")}</p>`;
     return;
   }
 
@@ -1613,16 +1536,16 @@ function renderMisListas() {
     const songsHtml = lista.songIds.length
       ? lista.songIds.map(songId => {
           const song = findSongById(songId);
-          const titulo = song ? getSongTitle(song) : "(canción no disponible)";
+          const titulo = song ? getSongTitle(song) : t("listas_cancion_no_disponible");
 
           return `
             <div class="lista-song-row">
               <span ${dataAction("cerrarMisListas,openSong", [songId])}>🎵 ${titulo}</span>
-              <button type="button" class="lista-remove-btn" ${dataAction("toggleSongInLista", [id, songId])} title="Quitar de la lista">✕</button>
+              <button type="button" class="lista-remove-btn" ${dataAction("toggleSongInLista", [id, songId])} title="${t("listas_quitar_de_lista")}">✕</button>
             </div>
           `;
         }).join("")
-      : `<p class="biblio-empty">Todavía no tiene canciones</p>`;
+      : `<p class="biblio-empty">${t("listas_sin_canciones")}</p>`;
 
     return `
       <details class="about-section lista-card">
@@ -1635,8 +1558,8 @@ function renderMisListas() {
             </label>
           ` : `
             <div class="lista-manage-btns" data-stop>
-              <button type="button" class="lista-edit-btn" ${dataAction("editarNombreLista", [id])} title="Cambiar nombre">✏️</button>
-              <button type="button" class="lista-delete-btn" ${dataAction("eliminarLista", [id])} title="Eliminar lista">🗑️</button>
+              <button type="button" class="lista-edit-btn" ${dataAction("editarNombreLista", [id])} title="${t("listas_cambiar_nombre")}">✏️</button>
+              <button type="button" class="lista-delete-btn" ${dataAction("eliminarLista", [id])} title="${t("listas_eliminar_lista")}">🗑️</button>
             </div>
           `}
           <span class="sec-chevron">▸</span>
@@ -1647,6 +1570,52 @@ function renderMisListas() {
       </details>
     `;
   }).join("");
+}
+
+// traduce el texto fijo de Biblioteca, Mis Listas, Contacto y Compartir —
+// se llama cada vez que cambia el idioma de la app (ver actualizarMenuIdioma()
+// en lenguage.js), estén esos modales abiertos o no
+function actualizarModalesSecundariosIdioma() {
+  const setText = (id, key) => { const el = document.getElementById(id); if (el) el.textContent = t(key); };
+  const setPlaceholder = (id, key) => { const el = document.getElementById(id); if (el) el.placeholder = t(key); };
+
+  // Biblioteca
+  setText("bibliotecaTitle", "biblioteca");
+  setText("bibliotecaSubtitulo", "biblioteca_subtitulo");
+  setPlaceholder("bibliotecaSearch", "biblioteca_buscar");
+  if (document.getElementById("bibliotecaLista")) renderBiblioteca(biblioteca);
+
+  // Mis Listas
+  setText("listasTitle", "mis_listas");
+  setPlaceholder("nuevaListaInput", "listas_placeholder");
+  setText("listasBtnCrear", "listas_crear");
+  setText("listasLabelTus", "listas_tus_listas");
+  setText("listasLabelOrganizar", "listas_organizar");
+  setText("listasBtnExportar", "listas_exportar");
+  setText("listasBtnImportar", "listas_importar");
+  setText("listasAvisoExport", "listas_aviso_export");
+
+  const labelContexto = document.getElementById("listasContextLabel");
+  if (labelContexto) {
+    labelContexto.textContent = listasContextSongId ? t("listas_subtitulo_contexto") : t("listas_subtitulo_normal");
+  }
+  if (document.getElementById("listasContainer")) renderMisListas();
+
+  // Contacto
+  setText("contactoTitle", "contacto");
+  setText("contactoSubtitulo", "contacto_subtitulo");
+  setText("contactoEmailTexto", "contacto_email");
+  setText("contactoReporte", "contacto_reporte");
+  setText("contactoRequiereSesion", "contacto_requiere_sesion");
+
+  // Compartir
+  setText("shareTitle", "compartir_titulo");
+  setText("shareSubtitulo", "compartir_subtitulo");
+  setText("shareBtnNativo", "compartir_boton");
+  setText("shareNativeHint", "compartir_hint");
+  setText("shareLabelEnlace", "compartir_enlace");
+  setText("shareBtnCopiar", "compartir_copiar");
+  setText("shareLabelQr", "compartir_qr");
 }
 
 // de dónde se abrió el peopleModal actual — null si no hay "para dónde
@@ -2126,7 +2095,7 @@ function cerrarContactoModal() {
 async function shareNative() {
   const shareData = {
     title: "Cancionero App",
-    text: "Mirá el Cancionero App — cantos y acordes para el servicio misionero.",
+    text: t("compartir_share_texto"),
     url: document.getElementById("shareLink")?.value || "http://bit.ly/cancionero_mv"
   };
 
@@ -2145,7 +2114,7 @@ function copyShareLink() {
 
   navigator.clipboard.writeText(input.value);
 
-  showToast("Link copiado 📋");
+  showToast(t("compartir_link_copiado"));
 }
 
 

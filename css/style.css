@@ -2573,6 +2573,16 @@ details[open] .sec-chevron { transform: rotate(90deg); }
 /* ============================================================
    MIS LISTAS
    ============================================================ */
+/* .nueva-lista-row (y el resto de Organizar y respaldar) ahora vive DENTRO
+   de .about-body en vez de fijo afuera — mismo motivo que Mis Pedidos de
+   Oración (ver ahí): que todo el modal scrollee junto. Ya trae su propio
+   padding lateral de 22px, así que se anula el de .about-body para no
+   duplicarlo */
+#listasModal .about-body > .nueva-lista-row {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .nueva-lista-row {
   display: flex;
   gap: 8px;
@@ -2720,19 +2730,44 @@ details[open] .sec-chevron { transform: rotate(90deg); }
   flex-shrink: 0;
 }
 
-/* Mis Pedidos de Oración mete el panel de "nuevo pedido", "crear lista" y
-   exportar/importar DENTRO de .about-body (a diferencia de Mis Listas, que
-   los deja fijos afuera) para que TODO el modal scrollee junto — si no,
-   con muchos pedidos/listas el modal se quedaba sin espacio para mostrarlos
-   y no había forma de scrollear para verlos. Como esas clases ya traen su
-   propio padding lateral (pensado para ir pegadas al borde del modal),
-   quitamos ese padding acá para no duplicarlo con el de .about-body */
-#oracionModal .about-body > .oracion-nuevo-panel,
-#oracionModal .about-body > .nueva-lista-row,
-#oracionModal .about-body > .listas-io-row,
-#oracionModal .about-body > .listas-io-hint {
+/* Mis Pedidos de Oración mete el panel de "nuevo pedido" y el acordeón de
+   "Organizar y respaldar" DENTRO de .about-body (a diferencia de Mis
+   Listas, que los deja fijos afuera) para que TODO el modal scrollee junto
+   — si no, con muchos pedidos/listas el modal se quedaba sin espacio para
+   mostrarlos y no había forma de scrollear para verlos. .oracion-nuevo-panel
+   ya trae su propio padding lateral (pensado para ir pegado al borde del
+   modal), así que se quita el de .about-body para no duplicarlo */
+#oracionModal .about-body > .oracion-nuevo-panel {
   padding-left: 0;
   padding-right: 0;
+}
+
+/* el aviso de la foto vive ahora DENTRO de .oracion-nuevo-panel (justo bajo
+   el botón "+ Agregar pedido", pegado a lo que explica) — sin este reset
+   heredaría además su propio padding lateral de 22px, sumando 44px */
+#oracionModal .oracion-nuevo-panel .listas-io-hint {
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 6px;
+}
+
+/* "Organizar y respaldar" (crear lista, exportar/importar) va en un
+   acordeón colapsado al final a propósito, tanto en Mis Pedidos de Oración
+   como en Mis Listas: son acciones de mantenimiento, no lo primero que
+   alguien necesita ver al abrir el modal — antes estaban todas sueltas
+   arriba, antes incluso de llegar a ver el contenido propio, y eso era lo
+   que lo hacía sentir desordenado. .nueva-lista-row/.listas-io-row/
+   .listas-io-hint ya traen su propio padding lateral de 22px (pensado para
+   ir pegados al borde del modal), así que acá adentro se anula el padding
+   de .about-panel (pensado para texto normal, indentado bajo el ícono del
+   acordeón) para no duplicarlo. Clase genérica .modal-organizar, no atada
+   a un modal en particular, para poder reusarla en cualquiera */
+.modal-organizar > .about-panel {
+  padding: 0;
+}
+
+.modal-organizar {
+  margin-top: 8px;
 }
 
 .oracion-nuevo-panel textarea {

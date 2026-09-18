@@ -180,6 +180,40 @@
   flex-shrink: 0;
 }
 
+/* "Organizar y respaldar" (exportar/importar) colapsado al final, después
+   de la lista — son acciones de mantenimiento, no lo primero que hace
+   falta ver al abrir el bloc. Antes estaban sueltas arriba, antes incluso
+   de ver las propias grabaciones. */
+.np-organizar {
+  flex-shrink: 0;
+  margin-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 10px;
+}
+
+.dark-mode .np-organizar { border-color: var(--gray-100); }
+
+.np-organizar summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 0.75;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.np-organizar summary::-webkit-details-marker { display: none; }
+.np-organizar summary::marker { content: ""; }
+
+.np-organizar-chevron { margin-left: auto; opacity: 0.6; font-size: 11px; transition: transform 0.2s ease; }
+.np-organizar[open] .np-organizar-chevron { transform: rotate(90deg); }
+
+.np-organizar-panel { padding-top: 10px; }
+
 /* lista + riel de letras: el riel queda fijo, solo la lista scrollea */
 .np-list-wrap {
   flex: 1;
