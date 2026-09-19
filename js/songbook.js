@@ -68,7 +68,7 @@ function normalizePersonField(field) {
 // tiene su equivalente en otro libro (ej. un himno del Innario italiano con su
 // versión en español del Himnario). Una bandera por idioma, apuntando al libro
 // más importante que lo tenga; al tocarla se abre ese canto en su libro.
-function renderBanderasEquivalentes(song) {
+function renderBanderasEquivalentes(song, mostrarNota = false) {
   const propios = new Set(Object.keys(song.idiomas || {}).map(l => song.idiomas[l]?.idioma_real || l));
   const ORDEN = ["himnario", "himnario_1962", "melodias_de_victoria", "cancionero", "innario"];
   const porIdioma = new Map();
@@ -86,7 +86,7 @@ function renderBanderasEquivalentes(song) {
 
       const rank = ORDEN.indexOf(eq.libro);
       const actual = porIdioma.get(real);
-      if (!actual || rank < actual.rank) porIdioma.set(real, { eq, lang, rank });
+      if (!actual || rank < actual.rank) porIdioma.set(real, { eq, lang, rank, audio: !!datos.audio_url });
     });
   });
 
@@ -94,10 +94,14 @@ function renderBanderasEquivalentes(song) {
     .sort((a, b) => (FLAG_NAMES[a[0]] || a[0]).localeCompare(FLAG_NAMES[b[0]] || b[0]))
     .map(([real, x]) => {
       const libro = getLibroDef(x.eq.libro);
-      const marca = libro?.marca ? ` <small class="libro-marca">${escapeHtml(libro.marca)}</small>` : "";
+      // al costado de la bandera, en dos renglones: arriba la ♪ (si ese idioma
+      // tiene audio, solo en los listados) y abajo la marca del libro
+      const nota = mostrarNota && x.audio ? `<span class="flag-audio-note">♪</span>` : "";
+      const marca = libro?.marca ? `<small class="libro-marca">${escapeHtml(libro.marca)}</small>` : "";
+      const lateral = nota || marca ? `<span class="flag-side">${nota}${marca}</span>` : "";
       const detalle = `${IDIOMA_NOMBRES[real] || real} — ${libro?.nombre || x.eq.libro}${x.eq.numero ? " #" + x.eq.numero : ""}`;
 
-      return `<span class="flag flag-equiv" ${dataAction("abrirEquivalente", [x.eq.id, x.lang])} title="${escapeHtml(detalle)}"><span class="flag-emoji" data-flag-lang="${real}">${getFlagEmoji(real)}</span>${marca}</span>`;
+      return `<span class="flag flag-equiv" ${dataAction("abrirEquivalente", [x.eq.id, x.lang])} title="${escapeHtml(detalle)}"><span class="flag-emoji" data-flag-lang="${real}">${getFlagEmoji(real)}</span>${lateral}</span>`;
     })
     .join("");
 }
@@ -520,7 +524,7 @@ function renderList(letter) {
       <div style="display:flex; justify-content:space-between; align-items:center;">
         <span>${item.displayTitle}${getMarcaLibroHtml(item.song)}</span>
         <span style="opacity:0.7; font-size:14px;">
-          ${renderLanguageFlags(item.song, true)}${renderBanderasEquivalentes(item.song)}
+          ${renderLanguageFlags(item.song, true)}${renderBanderasEquivalentes(item.song, true)}
         </span>
       </div>
     </li>
