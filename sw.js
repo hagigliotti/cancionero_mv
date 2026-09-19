@@ -8,7 +8,7 @@
 
 // 👉 Subir este número cada vez que cambie la lista de archivos de abajo
 // (o cuando quieras forzar que todos descarten la caché vieja).
-const CACHE_VERSION = "v190";
+const CACHE_VERSION = "v193";
 
 const APP_SHELL_CACHE = `cancionero-shell-${CACHE_VERSION}`;
 const DATA_CACHE = `cancionero-data-${CACHE_VERSION}`;
@@ -16,39 +16,43 @@ const DATA_CACHE = `cancionero-data-${CACHE_VERSION}`;
 const APP_SHELL_FILES = [
   "./",
   "index.html",
-  "css/style.css?v=190",
-  "css/notepad.css?v=190",
-  "manifest.webmanifest?v=190",
+  "css/style.css?v=193",
+  "css/notepad.css?v=193",
+  "css/fontawesome-min.css?v=193",
+  "fonts/fontawesome/fa-solid-900.woff2",
+  "fonts/fontawesome/fa-brands-400.woff2",
+  "manifest.webmanifest?v=193",
 
-  "js/tag-translations.js?v=190",
-  "js/lenguage.js?v=190",
-  "js/info-textos.js?v=190",
-  "js/utils.js?v=190",
-  "js/theme.js?v=190",
-  "js/tv.js?v=190",
-  "js/afinometro.js?v=190",
-  "js/app.js?v=190",
-  "js/songbook.js?v=190",
-  "js/notepad.js?v=190",
-  "js/oracion.js?v=190",
+  "js/tag-translations.js?v=193",
+  "js/lenguage.js?v=193",
+  "js/info-textos.js?v=193",
+  "js/utils.js?v=193",
+  "js/theme.js?v=193",
+  "js/tv.js?v=193",
+  "js/offline.js?v=193",
+  "js/afinometro.js?v=193",
+  "js/app.js?v=193",
+  "js/songbook.js?v=193",
+  "js/notepad.js?v=193",
+  "js/oracion.js?v=193",
 
-  "modals/info.html?v=190",
-  "modals/revised.html?v=190",
-  "modals/people.html?v=190",
-  "modals/share.html?v=190",
-  "modals/contacto.html?v=190",
-  "modals/afinometro.html?v=190",
-  "modals/biblioteca.html?v=190",
-  "modals/listas.html?v=190",
-  "modals/notepad.html?v=190",
-  "modals/oracion.html?v=190",
-  "modals/equivalencias.html?v=190",
+  "modals/info.html?v=193",
+  "modals/revised.html?v=193",
+  "modals/people.html?v=193",
+  "modals/share.html?v=193",
+  "modals/contacto.html?v=193",
+  "modals/afinometro.html?v=193",
+  "modals/biblioteca.html?v=193",
+  "modals/listas.html?v=193",
+  "modals/notepad.html?v=193",
+  "modals/oracion.html?v=193",
+  "modals/equivalencias.html?v=193",
 
-  "imagenes/icons/favicon-16.png?v=190",
-  "imagenes/icons/favicon-32.png?v=190",
-  "imagenes/icons/apple-touch-icon.png?v=190",
-  "imagenes/icons/icon-192.png?v=190",
-  "imagenes/icons/icon-512.png?v=190",
+  "imagenes/icons/favicon-16.png?v=193",
+  "imagenes/icons/favicon-32.png?v=193",
+  "imagenes/icons/apple-touch-icon.png?v=193",
+  "imagenes/icons/icon-192.png?v=193",
+  "imagenes/icons/icon-512.png?v=193",
 
   "imagenes/Cancionero_blue.png",
   "imagenes/Cancionero_white.png",
@@ -66,7 +70,8 @@ const APP_SHELL_FILES = [
 const EXTRA_DATA_FILES = [
   "data/libros.json",
   "data/biblioteca.json",
-  "data/equivalencias.json"
+  "data/equivalencias.json",
+  "version.json"
 ];
 
 self.addEventListener("install", (event) => {
@@ -147,7 +152,8 @@ self.addEventListener("fetch", (event) => {
 
   // cualquier .json bajo /data/ (libros.json, cada libro, biblioteca.json) —
   // así un libro nuevo queda con la misma estrategia sin tocar este archivo
-  const isData = /\/data\/.*\.json$/i.test(url.pathname);
+  // (version.json también: así el "Acerca de" muestra la versión sin conexión y siempre trae la última con internet)
+  const isData = /\/data\/.*\.json$/i.test(url.pathname) || /\/version\.json$/i.test(url.pathname);
 
   if (isData) {
     // "no-store": evita que el caché HTTP del navegador (una capa por
@@ -172,7 +178,13 @@ self.addEventListener("fetch", (event) => {
   // no terminó de borrar el caché de la versión anterior, podía devolver
   // esa versión vieja en vez de la nueva recién instalada (el motivo de
   // que a veces "Actualizar" no trajera los cambios).
+  // Al abrir la app (navegación) con algo extra en la dirección (?utm=..., ?tv=1, #...),
+  // sin conexión igual se sirve el index.html guardado (ignoreSearch).
+  const esNavegacion = req.mode === "navigate";
+
   event.respondWith(
-    caches.match(req, { cacheName: APP_SHELL_CACHE }).then((cached) => cached || fetch(req))
+    caches.match(req, { cacheName: APP_SHELL_CACHE, ignoreSearch: esNavegacion })
+      .then((cached) => cached || fetch(req))
+      .catch(() => esNavegacion ? caches.match("index.html", { cacheName: APP_SHELL_CACHE }) : Response.error())
   );
 });

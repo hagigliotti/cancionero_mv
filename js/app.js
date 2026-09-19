@@ -173,6 +173,8 @@ function getPersonLabel(tipo) {
 
 // ===================== AFINÓMETRO ==========================================================
 function abrirAfinometroModal() {
+  if (herramientasMusicalesOcultas()) return;
+
   const modal = document.getElementById("metroModal");
 
   if (!modal) {
@@ -662,18 +664,18 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=190",
-    "modals/revised.html?v=190",
-    "modals/people.html?v=190",
-    "modals/valores.html?v=190",
-    "modals/share.html?v=190",
-    "modals/contacto.html?v=190",
-    "modals/afinometro.html?v=190",
-    "modals/biblioteca.html?v=190",
-    "modals/listas.html?v=190",
-    "modals/notepad.html?v=190",
-    "modals/oracion.html?v=190",
-    "modals/equivalencias.html?v=190"
+    "modals/info.html?v=193",
+    "modals/revised.html?v=193",
+    "modals/people.html?v=193",
+    "modals/valores.html?v=193",
+    "modals/share.html?v=193",
+    "modals/contacto.html?v=193",
+    "modals/afinometro.html?v=193",
+    "modals/biblioteca.html?v=193",
+    "modals/listas.html?v=193",
+    "modals/notepad.html?v=193",
+    "modals/oracion.html?v=193",
+    "modals/equivalencias.html?v=193"
   ];
 
   for (const path of modales) {

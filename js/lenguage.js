@@ -143,6 +143,7 @@ function actualizarMenuIdioma() {
   if (typeof applyChordFollowsTransposeState === "function") applyChordFollowsTransposeState();
   if (typeof updateProjectorMenuButton === "function") updateProjectorMenuButton();
   if (typeof updateTvModeMenuButton === "function") updateTvModeMenuButton();
+  if (typeof actualizarOfflineBadge === "function") actualizarOfflineBadge();
 
   // Mis Pedidos de Oración vive en su propio archivo (oracion.js) y tiene
   // su propio diccionario (ORACION_LABELS/tOracion) — se refresca acá para
@@ -271,6 +272,15 @@ const UI_LABELS = {
   idioma_canciones:        { es: "Idioma de las canciones",en: "Song language",         it: "Lingua dei canti",        pt: "Idioma das músicas",      fr: "Langue des chants",        de: "Liedsprache" },
   color_tema:              { es: "Color del tema",         en: "Theme color",           it: "Colore del tema",         pt: "Cor do tema",             fr: "Couleur du thème",         de: "Themenfarbe" },
   modo_tv:                 { es: "Modo TV (control remoto)", en: "TV mode (remote control)", it: "Modalità TV (telecomando)", pt: "Modo TV (controle remoto)", fr: "Mode TV (télécommande)", de: "TV-Modus (Fernbedienung)" },
+  sin_conexion:            { es: "Sin conexión", en: "Offline", it: "Offline", pt: "Sem conexão", fr: "Hors ligne", de: "Offline" },
+  sin_conexion_tip:        {
+    es: "Estás sin internet: se usa la copia guardada en este dispositivo. Cuando vuelva la conexión se actualiza sola.",
+    en: "You're offline: the copy saved on this device is being used. It updates on its own when the connection returns.",
+    it: "Sei offline: si usa la copia salvata su questo dispositivo. Si aggiorna da sola quando torna la connessione.",
+    pt: "Você está sem internet: está usando a cópia salva neste dispositivo. Ela se atualiza sozinha quando a conexão voltar.",
+    fr: "Vous êtes hors ligne : la copie enregistrée sur cet appareil est utilisée. Elle se met à jour toute seule au retour de la connexion.",
+    de: "Du bist offline: Es wird die auf diesem Gerät gespeicherte Kopie verwendet. Sie aktualisiert sich von selbst, sobald die Verbindung zurück ist."
+  },
   tv_subir:                { es: "Subir", en: "Scroll up", it: "Su", pt: "Subir", fr: "Monter", de: "Nach oben" },
   tv_bajar:                { es: "Bajar", en: "Scroll down", it: "Giù", pt: "Descer", fr: "Descendre", de: "Nach unten" },
   modo_iglesia:            { es: "Modo iglesia",           en: "Church mode",           it: "Modalità chiesa",         pt: "Modo igreja",             fr: "Mode église",              de: "Kirchenmodus" },

@@ -190,6 +190,7 @@ function npLetraInicial(nombre) {
 
 // ===================== ABRIR / CERRAR MODAL =====================
 function abrirNotepad() {
+  if (herramientasMusicalesOcultas()) return;
   if (typeof closeMenu === "function") closeMenu();
 
   const modal = document.getElementById("notepadModal");

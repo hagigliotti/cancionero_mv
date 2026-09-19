@@ -115,6 +115,7 @@ function abrirMetronomoDesdeMenu() {
 }
 
 function abrirMetronomo(song = null) {
+  if (herramientasMusicalesOcultas()) return;
 
   let bpm = 90;
   let tonalidad = "A";
@@ -1181,6 +1182,9 @@ async function playChordSymbol(root, quality, whenOffset = 0) {
 async function playChordsFromLyrics(el) {
   if (!el) return;
 
+  // en el proyector y en el modo TV los acordes de la letra no suenan ni abren diagrama
+  if (herramientasMusicalesOcultas()) return;
+
   const raw = el.dataset.chord || el.textContent || "";
   const tokens = raw.split(/\s*-\s*/).map(t => t.trim()).filter(Boolean);
 
@@ -2206,6 +2210,7 @@ function abrirAfinadorDesdeCancion(tonalidad, bpm) {
 }
 
 function abrirAfinadorDesdeElemento(tipo, el) {
+  if (herramientasMusicalesOcultas()) return;
 
   const tonalidad = el.dataset.tonalidad;
   const bpm = el.dataset.bpm;

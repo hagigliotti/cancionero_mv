@@ -125,23 +125,43 @@
   function enfocables(raiz) {
     // los botones flotantes ▲ ▼ quedan afuera: son para quien usa un cursor, con el control
     // remoto ya se scrollea con las flechas
-    return Array.from(raiz.querySelectorAll(SEL_FOCO)).filter(esVisible);
+    // los acordes de la letra no son paradas del foco (con ↓ se iría de acorde en acorde)
+    return Array.from(raiz.querySelectorAll(SEL_FOCO)).filter(el => !el.matches(".chord") && esVisible(el));
   }
 
   // los <li>, <div>, <span> con data-action no reciben el foco solos: se les da tabindex
   function volverEnfocables(raiz) {
-    raiz.querySelectorAll("[data-action]:not(button):not(a):not(input):not(select):not(textarea):not([tabindex])").forEach(el => {
+    raiz.querySelectorAll("[data-action]:not(button):not(a):not(input):not(select):not(textarea):not([tabindex]):not(.chord)").forEach(el => {
       el.tabIndex = 0;
       if (!el.getAttribute("role")) el.setAttribute("role", "button");
     });
   }
 
+  // en la pantalla principal quedan barras fijas arriba (buscador, letras, título de la canción):
+  // lo que pasa por debajo de ellas no se ve. Devuelve hasta dónde llegan (0 si no hay ninguna)
+  const CABECERA = ".top-bar, .alfabeto-nav, .song-title-row";
+
+  function bordeSuperior(raiz) {
+    if (raiz !== document.body) return 0;
+
+    let borde = 0;
+    document.querySelectorAll(CABECERA).forEach(el => {
+      const pos = getComputedStyle(el).position;
+      if (pos !== "sticky" && pos !== "fixed") return;
+
+      const r = el.getBoundingClientRect();
+      if (r.height > 0 && r.top <= 8) borde = Math.max(borde, r.bottom);
+    });
+    return borde;
+  }
+
   // ¿el elemento está dentro de lo que se ve ahora en pantalla (y de su scroll)?
-  function enVista(el, raiz) {
+  function enVista(el, raiz, borde) {
     const r = el.getBoundingClientRect();
     const cy = r.top + r.height / 2;
     const cx = r.left + r.width / 2;
     if (cy < 0 || cy > innerHeight || cx < 0 || cx > innerWidth) return false;
+    if (borde && cy < borde + 2 && !el.closest(CABECERA)) return false;
 
     const sc = scrolleableAncestro(el, raiz);
     if (sc) {
@@ -182,9 +202,18 @@
   }
 
   function enfocar(el) {
-    try { el.focus(); } catch (e) { return; }
-    // por si el navegador no llevó el elemento a la vista (o quedó tapado por la barra fija)
-    el.scrollIntoView({ block: "nearest", inline: "nearest" });
+    const borde = bordeSuperior(alcance());
+    const enCabecera = borde && el.closest(CABECERA);
+
+    try { el.focus({ preventScroll: !!enCabecera }); } catch (e) { return; }
+    // por si el navegador no llevó el elemento a la vista (o quedó tapado por la barra fija);
+    // lo que está en las barras fijas de arriba ya se ve siempre: no hay que scrollear por eso
+    if (!enCabecera) el.scrollIntoView({ block: "nearest", inline: "nearest" });
+
+    if (borde && !enCabecera) {
+      const top = el.getBoundingClientRect().top;
+      if (top < borde + 8) window.scrollBy(0, top - borde - 12);
+    }
   }
 
   function scrollearHorizontal(el, dir) {
@@ -205,16 +234,20 @@
       : sc.scrollTop > 2;
   }
 
-  function scrollearVertical(sc, dir) {
+  // fraccion: cuánto de la pantalla se salta. Con las flechas el salto es CHICO (~30%, entre 80 y 140 px)
+  // para que el contenido no quede cortado ni desfasado; PageUp/PageDown y los botones ▲ ▼ saltan más
+  function scrollearVertical(sc, dir, fraccion) {
     if (!sc) return;
     const alto = sc === document.scrollingElement ? innerHeight : sc.clientHeight;
+    const paso = fraccion ? alto * fraccion : Math.max(80, Math.min(alto * 0.3, 140));
     // instantáneo (no "smooth"): una animación en curso se cancelaba con cada scrollIntoView de la app
-    sc.scrollBy({ top: (dir === "down" ? 1 : -1) * alto * 0.7, behavior: "auto" });
+    sc.scrollBy({ top: (dir === "down" ? 1 : -1) * paso, behavior: "auto" });
   }
 
   function navegar(dir) {
     const raiz = alcance();
     const lista = enfocables(raiz);
+    const borde = bordeSuperior(raiz);
     let actual = document.activeElement;
 
     const valido = actual && actual !== document.body && actual !== document.documentElement &&
@@ -222,7 +255,7 @@
 
     if (!valido) {
       // primer elemento a la vista (en un modal/menú, salteando el botón ✕ si hay algo más)
-      const enPantalla = lista.filter(el => enVista(el, raiz));
+      const enPantalla = lista.filter(el => enVista(el, raiz, borde));
       const sinCerrar = enPantalla.filter(el => !el.matches(".about-close, .np-close, .chord-popover-close"));
       const primero = (sinCerrar.length ? sinCerrar : enPantalla)
         .sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top || a.getBoundingClientRect().left - b.getBoundingClientRect().left)[0];
@@ -230,6 +263,13 @@
       if (primero) enfocar(primero);
       else if (dir === "up" || dir === "down") scrollearVertical(scrolleableDe(document.body, raiz), dir);
       return;
+    }
+
+    // el foco quedó fuera de pantalla (se estuvo scrolleando, ej. leyendo una letra larga): la flecha
+    // sigue scrolleando en vez de saltar a las barras fijas de arriba; recién al llegar al borde se mueve el foco
+    if ((dir === "up" || dir === "down") && !enVista(actual, raiz, borde)) {
+      const sc0 = scrolleableDe(actual, raiz);
+      if (puedeScrollear(sc0, dir)) { scrollearVertical(sc0, dir); return; }
     }
 
     const cr = actual.getBoundingClientRect();
@@ -250,10 +290,15 @@
     // pantalla se scrollea para descubrirlo (así los elementos fijos, como un aviso abajo de
     // todo, no le "roban" el foco a la fila que sigue); recién al llegar al borde se salta
     const mejor = cands[0];
-    if (mejor && enVista(mejor.el, raiz)) { enfocar(mejor.el); return; }
+    if (mejor && enVista(mejor.el, raiz, borde)) { enfocar(mejor.el); return; }
 
     const sc = scrolleableDe(actual, raiz);
     if (puedeScrollear(sc, dir)) { scrollearVertical(sc, dir); return; }
+
+    // ya no se puede scrollear más: si el foco había quedado fuera de pantalla, se pasa al elemento
+    // más cercano que SÍ se ve (ej. los botones del final) y no a uno lejano que haría saltar la pantalla
+    const cercanoVisible = enVista(actual, raiz, borde) ? null : cands.find(x => enVista(x.el, raiz, borde) && !(borde && x.el.closest(CABECERA)));
+    if (cercanoVisible) { enfocar(cercanoVisible.el); return; }
 
     if (mejor) enfocar(mejor.el);
   }
@@ -329,7 +374,7 @@
       const sube = e.key === "PageUp" || e.key === "ChannelUp" || e.keyCode === 33 || e.keyCode === 427;
       e.preventDefault();
       e.stopPropagation();
-      scrollearVertical(scrolleableDe(document.body, alcance()), sube ? "up" : "down");
+      scrollearVertical(scrolleableDe(document.body, alcance()), sube ? "up" : "down", 0.8);
       return;
     }
 
@@ -395,7 +440,7 @@
       const b = e.target.closest("button[data-tv-scroll]");
       if (!b) return;
       e.stopPropagation();
-      scrollearVertical(scrolleableDe(document.body, alcance()), b.dataset.tvScroll);
+      scrollearVertical(scrolleableDe(document.body, alcance()), b.dataset.tvScroll, 0.6);
     });
 
     document.body.appendChild(scrollBtns);

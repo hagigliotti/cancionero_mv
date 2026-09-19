@@ -476,5 +476,8 @@ function cerrarListModal() {
   document.getElementById("listModal").style.display = "none";
 }
 
-
-
+// En el proyector y en el Modo TV se ocultan las herramientas de instrumento que no tienen
+// sentido ahí (afinador/metrónomo con micrófono, bloc musical para grabar y escribir).
+function herramientasMusicalesOcultas() {
+  return document.body.classList.contains("projector") || document.body.classList.contains("tv");
+}

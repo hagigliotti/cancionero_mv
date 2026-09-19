@@ -4199,15 +4199,13 @@ body.projector .qr-proyector {
    MODO TV (Android TV / Smart TV, control remoto) — ver js/tv.js
    ============================================================ */
 
-/* las flechitas ◀ ▶ de la barra de letras/números se ven siempre, y más grandes */
+/* las flechitas ◀ ▶ de la barra de letras/números se ven siempre */
 body.tv .alpha-arrow {
   display: flex;
-  width: 46px;
-  height: 46px;
-  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
 }
-
-body.tv #alfabeto, body.tv #himnoRangos { scroll-behavior: smooth; }
 
 /* contorno bien visible del elemento enfocado con el control remoto */
 body.tv :focus {
@@ -4218,13 +4216,26 @@ body.tv :focus {
   z-index: 2;
 }
 
+/* en las barras de letras/números el aro va ADENTRO del botón: las filas están
+   pegadas una sobre otra y la tira recorta lo que sobresale (si no, el aro se
+   cortaba arriba y pisaba a la otra fila) */
 body.tv .alpha:focus,
-body.tv .alpha-arrow:focus,
-body.tv .menu-toggle-btn:focus {
-  transform: scale(1.12);
+body.tv .alpha-arrow:focus {
+  outline: 3px solid var(--sky, #38bdf8) !important;
+  outline-offset: -3px;
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.85) !important;
+  transform: none;
 }
 
-/* al enfocar, que la barra fija de arriba no tape el elemento */
+body.tv .alpha-arrow:focus {
+  background: #fff !important;
+  color: #06202e !important;
+  outline-color: #0369a1 !important;
+  box-shadow: none !important;
+}
+
+/* al enfocar con las flechas, que la barra fija de arriba no tape el elemento (solo en la
+   pantalla principal: dentro de menú/modales la barra de arriba no interviene) */
 body.tv [tabindex],
 body.tv button,
 body.tv a,
@@ -4234,11 +4245,24 @@ body.tv select {
   scroll-margin-bottom: 56px;
 }
 
+body.tv .modal [tabindex], body.tv .modal button, body.tv .modal a, body.tv .modal input, body.tv .modal select,
+body.tv .np-modal [tabindex], body.tv .np-modal button, body.tv .np-modal a, body.tv .np-modal input, body.tv .np-modal select,
+body.tv .dropdown-menu [tabindex], body.tv .dropdown-menu button, body.tv .dropdown-menu a, body.tv .dropdown-menu input, body.tv .dropdown-menu select,
+body.tv .chord-popover [tabindex], body.tv .chord-popover button, body.tv .chord-popover select {
+  scroll-margin-top: 12px;
+  scroll-margin-bottom: 12px;
+}
+
+/* el Metrónomo y Afinador tiene pestañas fijas arriba (~46px) que no tienen que tapar lo enfocado */
+body.tv #metroModal [tabindex], body.tv #metroModal button:not(.metro-tab), body.tv #metroModal input, body.tv #metroModal select {
+  scroll-margin-top: 60px;
+}
+
 /* botones flotantes ▲ ▼ para scrollear (pantalla, menú o modal abierto) */
 #tvScroll {
   position: fixed;
-  right: 3vw;
-  bottom: 6vh;
+  right: 4vw;
+  bottom: 9vh;
   z-index: 3000;
   display: flex;
   flex-direction: column;
@@ -4262,3 +4286,62 @@ body.tv select {
 }
 
 #tvScroll button.off { opacity: 0.35; }
+#tvModeToggleRow[hidden] { display: none !important; }
+
+/* ============================================================
+   PROYECTOR / MODO TV: se ocultan las herramientas de instrumento
+   (afinador y metrónomo con micrófono, bloc musical para grabar y escribir)
+   ============================================================ */
+body.projector [data-action="abrirAfinometroModal"],
+body.tv [data-action="abrirAfinometroModal"],
+body.projector [data-action="abrirNotepad"],
+body.tv [data-action="abrirNotepad"],
+body.projector #chordDiagramRow,
+body.tv #chordDiagramRow,
+body.projector #chordTransposeToggleRow,
+body.tv #chordTransposeToggleRow {
+  display: none !important;
+}
+
+/* los acordes de la letra se siguen viendo, pero no son tocables (no suenan ni abren diagrama) */
+body.projector .chord[data-action],
+body.tv .chord[data-action] {
+  cursor: default;
+  pointer-events: none;
+}
+
+/* los datos de tonalidad / compás / BPM de la canción se siguen viendo, pero ya no abren el afinador */
+body.projector .song-metro,
+body.tv .song-metro,
+body.projector .song-metro .meta-link,
+body.tv .song-metro .meta-link {
+  cursor: default !important;
+  pointer-events: none;
+}
+
+/* ============================================================
+   AVISO "SIN CONEXIÓN" — ver js/offline.js
+   ============================================================ */
+.offline-badge {
+  position: fixed;
+  top: calc(env(safe-area-inset-top, 0px) + 8px);
+  right: 10px;
+  z-index: 900;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 11px 4px 8px;
+  border: none;
+  border-radius: 999px;
+  background: #b45309;
+  color: #fff;
+  font: 700 12px/1.2 inherit;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.offline-badge[hidden] { display: none !important; }
+
+/* en la pantalla proyectada no distrae al público */
+body.projector .offline-badge { display: none !important; }

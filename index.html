@@ -9,10 +9,10 @@
   <title>Cancionero App</title>
 
   <!-- PWA / APARIENCIA DE APP -->
-  <link rel="manifest" href="manifest.webmanifest?v=190">
-  <link rel="icon" href="imagenes/icons/favicon-32.png?v=190" sizes="32x32">
-  <link rel="icon" href="imagenes/icons/favicon-16.png?v=190" sizes="16x16">
-  <link rel="apple-touch-icon" href="imagenes/icons/apple-touch-icon.png?v=190">
+  <link rel="manifest" href="manifest.webmanifest?v=193">
+  <link rel="icon" href="imagenes/icons/favicon-32.png?v=193" sizes="32x32">
+  <link rel="icon" href="imagenes/icons/favicon-16.png?v=193" sizes="16x16">
+  <link rel="apple-touch-icon" href="imagenes/icons/apple-touch-icon.png?v=193">
 
   <meta name="theme-color" content="#122033">
   <meta name="mobile-web-app-capable" content="yes">
@@ -20,12 +20,12 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Cancionero App">
 
-  <!-- ICONOS (font-awesome) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- ICONOS (font-awesome, copia local mínima: se ven también sin internet) -->
+  <link rel="stylesheet" href="css/fontawesome-min.css?v=193">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css?v=190">
-  <link rel="stylesheet" href="css/notepad.css?v=190">
+  <link rel="stylesheet" href="css/style.css?v=193">
+  <link rel="stylesheet" href="css/notepad.css?v=193">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XS6DM59CNT"></script>
@@ -40,6 +40,11 @@
 
 <!-- ======================================== BODY ======================================== -->
 <body>
+
+<!-- aviso "sin conexión" (ver js/offline.js) -->
+<button type="button" id="offlineBadge" class="offline-badge" hidden>
+  <span aria-hidden="true">📴</span><span id="offlineBadgeTxt">Sin conexión</span>
+</button>
 
 <div class="app">
 
@@ -138,7 +143,7 @@
                 </div>
               </div>
 
-              <div class="menu-row">
+              <div class="menu-row" id="chordDiagramRow">
                 <span class="sec-icon">🎹</span>
                 <span class="menu-row-label" id="txtDiagramaAcordes">Diagrama de acordes</span>
                 <select id="menuChordInstrument" class="chord-instrument-select">
@@ -319,17 +324,18 @@
 
 
 <!-- ======================================== JS ======================================== -->
-<script src="js/tag-translations.js?v=190"></script>
-<script src="js/lenguage.js?v=190"></script>
-<script src="js/info-textos.js?v=190"></script>
-<script src="js/utils.js?v=190"></script>
-<script src="js/theme.js?v=190"></script>
-<script src="js/tv.js?v=190"></script>
-<script src="js/afinometro.js?v=190"></script>
-<script src="js/app.js?v=190"></script>
-<script src="js/songbook.js?v=190"></script>
-<script src="js/notepad.js?v=190"></script>
-<script src="js/oracion.js?v=190"></script>
+<script src="js/tag-translations.js?v=193"></script>
+<script src="js/lenguage.js?v=193"></script>
+<script src="js/info-textos.js?v=193"></script>
+<script src="js/utils.js?v=193"></script>
+<script src="js/theme.js?v=193"></script>
+<script src="js/tv.js?v=193"></script>
+<script src="js/offline.js?v=193"></script>
+<script src="js/afinometro.js?v=193"></script>
+<script src="js/app.js?v=193"></script>
+<script src="js/songbook.js?v=193"></script>
+<script src="js/notepad.js?v=193"></script>
+<script src="js/oracion.js?v=193"></script>
 
 <!-- ======================================== PWA OFFLINE ======================================== -->
 <div id="updateBanner" class="update-banner">
@@ -686,6 +692,7 @@
 
     document.addEventListener("keydown", (e) => {
       if (!TECLAS.includes(e.key)) return;
+      if (e.defaultPrevented) return;   // ya lo manejó otro (ej. el modo TV): no scrollear dos veces
 
       // no pisar el uso normal de las flechas en un input/select/textarea
       const tag = document.activeElement?.tagName;
