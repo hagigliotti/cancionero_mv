@@ -43,11 +43,21 @@ function getTodasLasCanciones() {
   return LIBROS.filter(isLibroVisible).flatMap(l => getLibroSongs(l.id));
 }
 
+// libros visibles para mostrar en listas/menús: el primero de libros.json (el
+// libro por defecto, Cancionero MV) siempre arriba y el resto en orden alfabético
+// por nombre. El orden de LIBROS en sí no se toca: LIBROS[0] es el libro por defecto
+function getLibrosVisiblesOrdenados() {
+  const [porDefecto, ...resto] = LIBROS;
+  const alfabetico = resto.filter(isLibroVisible)
+    .sort((a, b) => a.nombre.localeCompare(b.nombre, undefined, { sensitivity: "base", numeric: true }));
+  return (porDefecto && isLibroVisible(porDefecto) ? [porDefecto] : []).concat(alfabetico);
+}
+
 function renderMenuLibroOptions() {
   const select = document.getElementById("menuLibro");
   if (!select) return;
 
-  select.innerHTML = LIBROS.filter(isLibroVisible).map(l =>
+  select.innerHTML = getLibrosVisiblesOrdenados().map(l =>
     `<option value="${l.id}">${l.icono ? l.icono + " " : ""}${l.nombre}</option>`
   ).join("");
   select.value = libroActual;
@@ -652,18 +662,18 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=187",
-    "modals/revised.html?v=187",
-    "modals/people.html?v=187",
-    "modals/valores.html?v=187",
-    "modals/share.html?v=187",
-    "modals/contacto.html?v=187",
-    "modals/afinometro.html?v=187",
-    "modals/biblioteca.html?v=187",
-    "modals/listas.html?v=187",
-    "modals/notepad.html?v=187",
-    "modals/oracion.html?v=187",
-    "modals/equivalencias.html?v=187"
+    "modals/info.html?v=188",
+    "modals/revised.html?v=188",
+    "modals/people.html?v=188",
+    "modals/valores.html?v=188",
+    "modals/share.html?v=188",
+    "modals/contacto.html?v=188",
+    "modals/afinometro.html?v=188",
+    "modals/biblioteca.html?v=188",
+    "modals/listas.html?v=188",
+    "modals/notepad.html?v=188",
+    "modals/oracion.html?v=188",
+    "modals/equivalencias.html?v=188"
   ];
 
   for (const path of modales) {
@@ -2077,7 +2087,7 @@ function renderValoresModal(tipo, filtroIdioma) {
       librosEl.classList.add("hidden");
       librosEl.innerHTML = "";
     } else {
-      const porLibro = LIBROS.filter(isLibroVisible)
+      const porLibro = getLibrosVisiblesOrdenados()
         .map(l => ({ id: l.id, nombre: l.nombre, n: getDistinctValues(tipo, filtroIdioma, l.id).length }))
         .filter(x => x.n > 0);
 
