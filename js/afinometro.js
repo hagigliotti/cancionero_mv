@@ -2104,8 +2104,16 @@ function setActiveMetroTab(id) {
   });
 
   // la nav de pestañas scrollea horizontal: si la sección activa cambia
-  // scrolleando a mano, que la pestaña correspondiente quede siempre visible
-  activeTab?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+  // scrolleando a mano, que la pestaña correspondiente quede siempre visible.
+  // Se mueve SOLO la nav (scrollTo horizontal) y no con activeTab.scrollIntoView():
+  // esa llamada también scrolleaba el modal en vertical y cancelaba el salto
+  // suave a la sección que se acababa de pedir (el toque en la pestaña no iba a ningún lado)
+  const nav = activeTab?.parentElement;
+  if (nav && nav.scrollWidth > nav.clientWidth) {
+    const t = activeTab.getBoundingClientRect();
+    const n = nav.getBoundingClientRect();
+    nav.scrollTo({ left: nav.scrollLeft + (t.left + t.width / 2) - (n.left + n.width / 2), behavior: "smooth" });
+  }
 }
 
 // mantiene la pestaña activa sincronizada mientras se scrollea a mano

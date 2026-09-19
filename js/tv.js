@@ -26,13 +26,29 @@
     try { localStorage.setItem("tvMode", v); } catch (e) { /* sin storage: solo dura la sesión */ }
   }
 
-  function detectarTV() {
+  // celulares y tablets táctiles: el modo TV no existe ahí (ni el interruptor del menú)
+  function esDispositivoTactil(ua) {
+    return /Mobi|iPhone|iPod|iPad|Tablet/i.test(ua) ||
+           (/Android/i.test(ua) && navigator.maxTouchPoints > 0) ||
+           (/Macintosh/i.test(ua) && navigator.maxTouchPoints > 1);     // iPad que se identifica como Mac
+  }
+
+  // solo TV y PC. ?tv=1 en la URL lo fuerza (por si una TV se identifica raro) y queda guardado
+  function permitido() {
+    const ua = navigator.userAgent || "";
     try {
       const q = new URLSearchParams(location.search).get("tv");
-      if (q === "1" || q === "on") guardarPref("on");
+      if (q === "1" || q === "on") { guardarPref("on"); localStorage.setItem("tvForzado", "1"); }
       else if (q === "0" || q === "off") guardarPref("off");
     } catch (e) { /* URL rara: se ignora */ }
 
+    let forzado = false;
+    try { forzado = localStorage.getItem("tvForzado") === "1"; } catch (e) { /* sin storage */ }
+
+    return UA_TV.test(ua) || forzado || !esDispositivoTactil(ua);
+  }
+
+  function detectarTV() {
     const pref = leerPref();
     if (pref === "on") return true;
     if (pref === "off") return false;
@@ -107,12 +123,9 @@
   }
 
   function enfocables(raiz) {
-    const lista = Array.from(raiz.querySelectorAll(SEL_FOCO)).filter(esVisible);
-
-    if (scrollBtns && !scrollBtns.hidden) {
-      scrollBtns.querySelectorAll("button").forEach(b => { if (esVisible(b)) lista.push(b); });
-    }
-    return lista;
+    // los botones flotantes ▲ ▼ quedan afuera: son para quien usa un cursor, con el control
+    // remoto ya se scrollea con las flechas
+    return Array.from(raiz.querySelectorAll(SEL_FOCO)).filter(esVisible);
   }
 
   // los <li>, <div>, <span> con data-action no reciben el foco solos: se les da tabindex
@@ -178,7 +191,7 @@
     for (let n = el; n && n !== document.body; n = n.parentElement) {
       const cs = getComputedStyle(n);
       if ((cs.overflowX === "auto" || cs.overflowX === "scroll") && n.scrollWidth > n.clientWidth + 4) {
-        n.scrollBy({ left: (dir === "right" ? 1 : -1) * Math.max(160, n.clientWidth * 0.6), behavior: "smooth" });
+        n.scrollBy({ left: (dir === "right" ? 1 : -1) * Math.max(160, n.clientWidth * 0.6), behavior: "auto" });
         return true;
       }
     }
@@ -195,7 +208,8 @@
   function scrollearVertical(sc, dir) {
     if (!sc) return;
     const alto = sc === document.scrollingElement ? innerHeight : sc.clientHeight;
-    sc.scrollBy({ top: (dir === "down" ? 1 : -1) * alto * 0.7, behavior: "smooth" });
+    // instantáneo (no "smooth"): una animación en curso se cancelaba con cada scrollIntoView de la app
+    sc.scrollBy({ top: (dir === "down" ? 1 : -1) * alto * 0.7, behavior: "auto" });
   }
 
   function navegar(dir) {
@@ -204,7 +218,7 @@
     let actual = document.activeElement;
 
     const valido = actual && actual !== document.body && actual !== document.documentElement &&
-      (raiz.contains(actual) || (scrollBtns && scrollBtns.contains(actual))) && esVisible(actual);
+      raiz.contains(actual) && esVisible(actual);
 
     if (!valido) {
       // primer elemento a la vista (en un modal/menú, salteando el botón ✕ si hay algo más)
@@ -465,7 +479,14 @@
 
   window.isTvMode = () => activo;
 
-  document.getElementById("tvModeToggleBtn")?.addEventListener("click", window.toggleTvMode);
-  aplicar(detectarTV());
-  updateTvModeMenuButton();
+  // en celulares/tablets: sin modo TV y sin la fila del menú
+  const puede = permitido();
+  const fila = document.getElementById("tvModeToggleRow");
+  if (fila) fila.hidden = !puede;
+
+  if (puede) {
+    document.getElementById("tvModeToggleBtn")?.addEventListener("click", window.toggleTvMode);
+    aplicar(detectarTV());
+    updateTvModeMenuButton();
+  }
 })();
