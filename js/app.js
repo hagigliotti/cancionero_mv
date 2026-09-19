@@ -662,18 +662,18 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=188",
-    "modals/revised.html?v=188",
-    "modals/people.html?v=188",
-    "modals/valores.html?v=188",
-    "modals/share.html?v=188",
-    "modals/contacto.html?v=188",
-    "modals/afinometro.html?v=188",
-    "modals/biblioteca.html?v=188",
-    "modals/listas.html?v=188",
-    "modals/notepad.html?v=188",
-    "modals/oracion.html?v=188",
-    "modals/equivalencias.html?v=188"
+    "modals/info.html?v=189",
+    "modals/revised.html?v=189",
+    "modals/people.html?v=189",
+    "modals/valores.html?v=189",
+    "modals/share.html?v=189",
+    "modals/contacto.html?v=189",
+    "modals/afinometro.html?v=189",
+    "modals/biblioteca.html?v=189",
+    "modals/listas.html?v=189",
+    "modals/notepad.html?v=189",
+    "modals/oracion.html?v=189",
+    "modals/equivalencias.html?v=189"
   ];
 
   for (const path of modales) {
@@ -2546,12 +2546,18 @@ function copyShareLink() {
 
 // ==================================================================================================================================
 // ===== FLECHITAS DE LA TIRA DE LETRAS (PC / Mac / proyector) =====
+function scrollTira(id, dir) {
+  const el = document.getElementById(id);
+  // en TV se avanza más por vez (con el control remoto cada toque cuenta): ~60% de lo visible
+  if (el) el.scrollBy({ left: dir * Math.max(160, document.body.classList.contains("tv") ? el.clientWidth * 0.6 : 0), behavior: "smooth" });
+}
+
 function scrollAlfabeto(dir) {
-  document.getElementById("alfabeto")?.scrollBy({ left: dir * 160, behavior: "smooth" });
+  scrollTira("alfabeto", dir);
 }
 
 function scrollHimnoRangos(dir) {
-  document.getElementById("himnoRangos")?.scrollBy({ left: dir * 160, behavior: "smooth" });
+  scrollTira("himnoRangos", dir);
 }
 
 // ===== ARRASTRAR CON EL MOUSE PARA MOVER LA TIRA (click + drag) =====

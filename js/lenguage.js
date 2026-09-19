@@ -122,6 +122,7 @@ function actualizarMenuIdioma() {
   setText("txtColorTema", "color_tema");
   setText("txtModoIglesia", "modo_iglesia");
   setText("txtProyector", "proyector");
+  setText("txtModoTV", "modo_tv");
   setText("txtFeedback", "feedback");
   setText("txtCompartir", "compartir");
   setText("txtContacto", "contacto");
@@ -141,6 +142,7 @@ function actualizarMenuIdioma() {
   if (typeof applyTeleprompterBarVisibility === "function") applyTeleprompterBarVisibility();
   if (typeof applyChordFollowsTransposeState === "function") applyChordFollowsTransposeState();
   if (typeof updateProjectorMenuButton === "function") updateProjectorMenuButton();
+  if (typeof updateTvModeMenuButton === "function") updateTvModeMenuButton();
 
   // Mis Pedidos de Oración vive en su propio archivo (oracion.js) y tiene
   // su propio diccionario (ORACION_LABELS/tOracion) — se refresca acá para
@@ -268,6 +270,9 @@ const UI_LABELS = {
   ajustes:                 { es: "Ajustes",                en: "Settings",              it: "Impostazioni",            pt: "Ajustes",                 fr: "Paramètres",               de: "Einstellungen" },
   idioma_canciones:        { es: "Idioma de las canciones",en: "Song language",         it: "Lingua dei canti",        pt: "Idioma das músicas",      fr: "Langue des chants",        de: "Liedsprache" },
   color_tema:              { es: "Color del tema",         en: "Theme color",           it: "Colore del tema",         pt: "Cor do tema",             fr: "Couleur du thème",         de: "Themenfarbe" },
+  modo_tv:                 { es: "Modo TV (control remoto)", en: "TV mode (remote control)", it: "Modalità TV (telecomando)", pt: "Modo TV (controle remoto)", fr: "Mode TV (télécommande)", de: "TV-Modus (Fernbedienung)" },
+  tv_subir:                { es: "Subir", en: "Scroll up", it: "Su", pt: "Subir", fr: "Monter", de: "Nach oben" },
+  tv_bajar:                { es: "Bajar", en: "Scroll down", it: "Giù", pt: "Descer", fr: "Descendre", de: "Nach unten" },
   modo_iglesia:            { es: "Modo iglesia",           en: "Church mode",           it: "Modalità chiesa",         pt: "Modo igreja",             fr: "Mode église",              de: "Kirchenmodus" },
   proyector:               { es: "Proyector",              en: "Projector",             it: "Proiettore",              pt: "Projetor",                fr: "Projecteur",               de: "Projektor" },
   feedback:                { es: "Feedback",               en: "Feedback",              it: "Feedback",                pt: "Feedback",                fr: "Retours",                  de: "Feedback" },

@@ -131,7 +131,7 @@ function showToast(msg) {
 // ===== PROYECTOR ============================================================================
 function toggleProjectorMode() {
   // bloquear solo en celulares — tablets, PC y Mac sí pueden usarlo
-  if (isSmartphone()) {
+  if (isSmartphone() && !document.body.classList.contains("tv")) {
     alert(t("proyector_solo_desktop"));
     return;
   }

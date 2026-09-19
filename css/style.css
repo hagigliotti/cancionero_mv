@@ -3082,6 +3082,36 @@ body.scrolled .fav-add-btn { font-size: 15px; }
   vertical-align: baseline;
 }
 
+/* bandera de otro libro: el renglón es el de la bandera y al costado se parte en
+   dos — arriba la ♪ (si ese idioma tiene audio) y abajo la marca ('09, '62, MV, IA, C) */
+.flag-equiv {
+  display: inline-flex;
+  align-items: stretch;
+}
+
+.flag-equiv .flag-emoji { line-height: 1.15; }
+
+.flag-side {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 1px;
+  line-height: 1;
+  padding: 1px 0;
+}
+
+.flag-side .flag-audio-note {
+  font-size: 9px;
+  vertical-align: baseline;
+  margin-left: 0;
+}
+
+.flag-side .libro-marca {
+  margin-left: 0;
+  line-height: 1;
+}
+
 /* enlaces de "También en:" — como person-link pero en letra regular */
 .equiv-link {
   color: var(--sky);
@@ -4165,3 +4195,70 @@ body.projector .qr-proyector {
     box-shadow: var(--shadow-sm);
 }
 
+/* ============================================================
+   MODO TV (Android TV / Smart TV, control remoto) — ver js/tv.js
+   ============================================================ */
+
+/* las flechitas ◀ ▶ de la barra de letras/números se ven siempre, y más grandes */
+body.tv .alpha-arrow {
+  display: flex;
+  width: 46px;
+  height: 46px;
+  font-size: 18px;
+}
+
+body.tv #alfabeto, body.tv #himnoRangos { scroll-behavior: smooth; }
+
+/* contorno bien visible del elemento enfocado con el control remoto */
+body.tv :focus {
+  outline: 4px solid var(--sky, #38bdf8) !important;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 7px rgba(56, 189, 248, 0.28) !important;
+  position: relative;
+  z-index: 2;
+}
+
+body.tv .alpha:focus,
+body.tv .alpha-arrow:focus,
+body.tv .menu-toggle-btn:focus {
+  transform: scale(1.12);
+}
+
+/* al enfocar, que la barra fija de arriba no tape el elemento */
+body.tv [tabindex],
+body.tv button,
+body.tv a,
+body.tv input,
+body.tv select {
+  scroll-margin-top: calc(var(--topbar-h, 56px) + var(--alfabeto-row-h, 48px) + var(--alfabeto-row2-h, 0px) + 16px);
+  scroll-margin-bottom: 56px;
+}
+
+/* botones flotantes ▲ ▼ para scrollear (pantalla, menú o modal abierto) */
+#tvScroll {
+  position: fixed;
+  right: 3vw;
+  bottom: 6vh;
+  z-index: 3000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#tvScroll[hidden] { display: none !important; }
+
+#tvScroll button {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  background: var(--sky, #38bdf8);
+  color: #06202e;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: opacity .2s, transform .15s;
+}
+
+#tvScroll button.off { opacity: 0.35; }
