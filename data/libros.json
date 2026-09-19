@@ -11,7 +11,7 @@
   {
     "id": "himnario",
     "archivo": "himnario_ar.json",
-    "nombre": "Himnario Adventista",
+    "nombre": "Himnario Adventista 2009",
     "marca": "'09",
     "icono": "",
     "_comentario2": "\"icono\": \"🎵\"",
@@ -55,8 +55,7 @@
     "numeroHimno": true,
     "idiomaFijo": true,
     "idiomaDefault": "es",
-    "oculto": true,
-    "codigo": "19620528"
+    "oculto": false
   },
   {
     "id": "campamento",
