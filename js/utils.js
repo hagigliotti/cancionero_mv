@@ -9,7 +9,8 @@ const tipoMap = {
   autor: "autor",
   coautor: "coautor",
   compositor: "compositor",
-  traductor: "traductor"
+  traductor: "traductor",
+  arreglo: "arreglo"
 };
 
 
@@ -81,6 +82,8 @@ function buildSearchText(song) {
     if (lang?.titulo) textos.push(lang.titulo);
     if (lang?.titulo2) textos.push(lang.titulo2);
     if (lang?.traductor) textos.push(lang.traductor);
+    // el arreglo (antes pegado al compositor como "(arr. Nombre)") también se busca
+    if (lang?.arreglo) textos.push(lang.arreglo);
     // la letra puede traer tablatura ("ha[B]blar") — se quita antes de unir
     // las palabras, si no la búsqueda de "hablar" no la encontraría
     if (lang?.letra) textos.push(stripChordsDeep(lang.letra));
@@ -127,7 +130,7 @@ function dataAction(name, args = []) {
 function formatRevisadoLabel(value) {
   const [estado, personas] = normalizeRevisado(value);
 
-  const label = estado.toLowerCase() === "si" ? "Si" : "No";
+  const label = estado.toLowerCase() === "si" ? "Si" : estado.toLowerCase() === "dudoso" ? "Dudoso" : "No";
 
   const extra = personas.length
     ? ` - ${personas.join(", ")}`
@@ -166,7 +169,7 @@ function getRevisadoEstado(value) {
 function formatRevisadoDisplay(value) {
   const [estado, personas] = normalizeRevisado(value);
 
-  const label = estado === "si" ? "Si" : "No";
+  const label = estado === "si" ? "Si" : estado === "dudoso" ? "Dudoso" : "No";
 
   if (personas.length) {
     return `${label} - ${personas.join(", ")}`;
@@ -362,8 +365,18 @@ function normalizeMeta(song, field) {
 // ===================== MODAL REVISADO =====================
 // cerrarListModal: ver la versión más abajo
 
+// estados del modal de revisadas: "si" | "no" | "dudoso" (el botón los recorre
+// en ese orden; su texto dice a cuál pasa al tocarlo)
+const REVISADO_ESTADOS = {
+  si:     { icon: "✅", titulo: () => t("rev_titulo_si"),     boton: () => t("rev_boton_si") },
+  no:     { icon: "❌", titulo: () => t("rev_titulo_no"),     boton: () => t("rev_boton_no") },
+  dudoso: { icon: "⚠️", titulo: () => t("rev_titulo_dudoso"), boton: () => t("rev_boton_dudoso") }
+};
+const REVISADO_ORDEN = ["si", "no", "dudoso"];
+
 function toggleRevisadoEstado() {
-  revisadoEstadoActual = (revisadoEstadoActual === "si") ? "no" : "si";
+  const i = REVISADO_ORDEN.indexOf(revisadoEstadoActual);
+  revisadoEstadoActual = REVISADO_ORDEN[(i + 1) % REVISADO_ORDEN.length];
   renderRevisadoModal();
 }
 
@@ -373,34 +386,28 @@ function renderRevisadoModal() {
   const filtered = data.filter(song => {
     const [estado] = normalizeRevisado(song.idiomas?.[idiomaActual]?.revisado);
 
-    if (revisadoEstadoActual === "si") {
-      return estado === "si";
-    } else {
-      return estado !== "si";
-    }
+    if (revisadoEstadoActual === "si") return estado === "si";
+    if (revisadoEstadoActual === "dudoso") return estado === "dudoso";
+    return estado !== "si" && estado !== "dudoso";
   });
 
   document.getElementById("revisadoToggleWrap")?.classList.remove("hidden");
 
+  const actual = REVISADO_ESTADOS[revisadoEstadoActual] || REVISADO_ESTADOS.no;
+  const siguiente = REVISADO_ESTADOS[
+    REVISADO_ORDEN[(REVISADO_ORDEN.indexOf(revisadoEstadoActual) + 1) % REVISADO_ORDEN.length]
+  ];
+
   const btn = document.getElementById("toggleRevisadoBtn");
 
   if (btn) {
-    btn.innerText =
-      revisadoEstadoActual === "si"
-        ? "❌ Ver no revisadas"
-        : "✔️ Ver revisadas";
+    btn.style.display = ""; // el modal de personas lo esconde; acá tiene que verse
+    btn.innerText = siguiente.boton();
   }
 
-  const icon = revisadoEstadoActual === "si" ? "✅" : "❌";
-
-  const title =
-    revisadoEstadoActual === "si"
-      ? "Canciones revisadas"
-      : "Canciones no revisadas";
-
   renderListModal({
-    title,
-    icon,
+    title: actual.titulo(),
+    icon: actual.icon,
     list: filtered
   });
 
@@ -410,7 +417,7 @@ function renderRevisadoModal() {
 function openRevisadoList(el) {
   const valor = JSON.parse(el.dataset.revisado);
   const [estado] = normalizeRevisado(valor);
-  revisadoEstadoActual = (estado === "si") ? "si" : "no";
+  revisadoEstadoActual = (estado === "si" || estado === "dudoso") ? estado : "no";
   renderRevisadoModal();
 }
 
@@ -422,7 +429,8 @@ const personIcons = {
   autor: "👤",
   coautor: "👥",
   compositor: "🎼",
-  traductor: "🌐"
+  traductor: "🌐",
+  arreglo: "🎹"
 };
 
 function renderPersonModal() {

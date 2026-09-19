@@ -142,15 +142,17 @@ function initTeleprompterToggleButton() {
 function getPersonLabel(tipo) {
   switch (tipo) {
     case "autor":
-      return "👤 Autor";
+      return `👤 ${t("autor")}`;
     case "coautor":
-      return "👥 Coautor";
+      return `👥 ${t("coautor")}`;
     case "compositor":
-      return "✍🏼 Compositor";
+      return `✍🏼 ${t("compositor")}`;
     case "traductor":
-      return "🌎 Traductor";
+      return `🌎 ${t("traductor")}`;
+    case "arreglo":
+      return `🎹 ${t("arreglo")}`;
     case "tags":
-      return "🏷️ Tag";
+      return `🏷️ ${t("tema")}`;
     default:
       return "🎭 Persona";
   }
@@ -187,11 +189,206 @@ function cerrarAfinometroModal() {
 
 
 // ===================== REVISADOS ==========================================================
-let revisadoFiltroActual = "si"; // "si" | "no"
+let revisadoFiltroActual = "si"; // "si" | "no" | "dudoso"
+
+// ===================== EQUIVALENCIAS ENTRE LIBROS =====================
+// data/equivalencias.json dice qué cantos de distintos libros son el mismo
+// (ej. "Tal como soy" del Himnario 2009, del 1962 y de Melodías de Victoria).
+// Solo hay vínculos ENTRE libros, nunca dentro de un mismo libro. Se arma un
+// índice "libro|id" → lista de equivalentes para mostrar "También en:" en la ficha.
+let equivalenciasIdx = new Map();
+
+function construirIndiceEquivalencias(data) {
+  const idx = new Map();
+  const peor = (a, b) => ({ alta: 0, media: 1, baja: 2 }[a] >= { alta: 0, media: 1, baja: 2 }[b] ? a : b);
+
+  (data?.grupos || []).forEach(g => {
+    const miembros = g.miembros || [];
+
+    miembros.forEach(m => {
+      const otros = miembros
+        .filter(o => o !== m && o.libro !== m.libro)
+        .map(o => ({
+          libro: o.libro,
+          id: o.id,
+          numero: o.numero,
+          titulo: o.titulo,
+          tipo: (o.vinculo?.tipo === "parcial" || m.vinculo?.tipo === "parcial") ? "parcial" : "igual",
+          confianza: peor(o.vinculo?.confianza || "alta", m.vinculo?.confianza || "alta"),
+          nota: o.vinculo?.nota || m.vinculo?.nota || ""
+        }));
+
+      const key = `${m.libro}|${m.id}`;
+      idx.set(key, (idx.get(key) || []).concat(otros));
+    });
+  });
+
+  equivalenciasIdx = idx;
+}
+
+// equivalentes de un canto en OTROS libros que estén visibles (un libro oculto
+// no se revela por acá) y cuyo canto exista realmente cargado
+// abre el canto equivalente en su propio libro: si es de otro libro, pasa a ese
+// libro primero (con su idioma de fábrica), y si se pidió un idioma puntual que
+// el canto tiene, lo abre en ese idioma
+function abrirEquivalente(songId, lang) {
+  const song = findSongById(songId);
+  if (!song) return;
+
+  const libroId = getLibroIdDeSong(song);
+  if (libroId && libroId !== libroActual) cambiarLibroActivo(libroId);
+
+  if (lang && song.idiomas?.[lang] && lang !== idiomaActual) changeLanguage(lang, songId);
+  else openSong(songId);
+}
+
+function getEquivalenciasDe(song) {
+  const libroId = getLibroIdDeSong(song);
+  const otros = equivalenciasIdx.get(`${libroId}|${song?.id}`) || [];
+  const vistos = new Set();
+
+  return otros.filter(o => {
+    if (vistos.has(o.id)) return false;
+    vistos.add(o.id);
+
+    const libro = LIBROS.find(l => l.id === o.libro);
+    return libro && isLibroVisible(libro) && !!getSongPorIdRapido(o.id);
+  });
+}
+
+// ===================== MODAL EQUIVALENCIAS =====================
+// Lista los cantos del libro que se está mirando que también están en otros
+// libros visibles, con la marca de esos libros al lado ('62, MV, IA...). Se
+// puede filtrar por un libro puntual.
+let equivFiltroLibro = "";
+
+function abrirEquivalenciasModal() {
+  cerrarInfo();
+  equivFiltroLibro = "";
+  renderEquivalenciasModal();
+  document.getElementById("equivModal").style.display = "block";
+}
+
+function cerrarEquivModal() {
+  document.getElementById("equivModal").style.display = "none";
+}
+
+function setEquivFiltro(libroId) {
+  equivFiltroLibro = libroId || "";
+  renderEquivalenciasModal();
+}
+
+function renderEquivalenciasModal() {
+  const cont = document.getElementById("equivModalLista");
+  const filtrosEl = document.getElementById("equivModalFiltros");
+  const metaEl = document.getElementById("equivModalMeta");
+  if (!cont) return;
+
+  const libro = getLibroDef(libroActual);
+  const propias = getLibroSongs(libroActual);
+
+  const items = propias
+    .map(song => ({ song, eq: getEquivalenciasDe(song) }))
+    .filter(x => x.eq.length);
+
+  // cuántos cantos de este libro tienen equivalente en cada otro libro
+  const conteo = new Map();
+  items.forEach(x => new Set(x.eq.map(o => o.libro)).forEach(l => conteo.set(l, (conteo.get(l) || 0) + 1)));
+
+  if (equivFiltroLibro && !conteo.has(equivFiltroLibro)) equivFiltroLibro = "";
+
+  if (metaEl) metaEl.textContent = tFmt("equiv_resumen", { n: items.length, total: propias.length, libro: libro?.nombre || "" });
+
+  if (filtrosEl) {
+    const chip = (id, texto) =>
+      `<button type="button" class="mini-stat-chip${equivFiltroLibro === id ? " activo" : ""}" ${dataAction("setEquivFiltro", [id])}>${escapeHtml(texto)}</button>`;
+
+    filtrosEl.innerHTML = conteo.size
+      ? chip("", `${t("equiv_todos")} (${items.length})`) +
+        [...conteo.entries()].map(([id, n]) => chip(id, `${getLibroDef(id)?.nombre || id} (${n})`)).join("")
+      : "";
+  }
+
+  const lista = equivFiltroLibro ? items.filter(x => x.eq.some(o => o.libro === equivFiltroLibro)) : items;
+
+  cont.innerHTML = "";
+
+  if (!lista.length) {
+    cont.innerHTML = `<p class="biblio-empty">${t("equiv_vacio")}</p>`;
+    return;
+  }
+
+  const numerado = !!libro?.numeroHimno;
+  lista.sort((a, b) => numerado
+    ? (parseInt(getNumeroHimno(a.song), 10) || 0) - (parseInt(getNumeroHimno(b.song), 10) || 0)
+    : getSongTitle(a.song).localeCompare(getSongTitle(b.song), undefined, { sensitivity: "base" }));
+
+  lista.forEach(({ song, eq }) => {
+    const titulo = getSongTitle(song);
+    const row = buildSongRow(song, titulo, getNumeroHimno(song), getIndexLetter(titulo), () => {
+      cerrarEquivModal();
+      openSong(song.id);
+    });
+
+    // marcas de los libros donde está el equivalente (sin repetir, y solo el filtrado si hay uno)
+    const libros = [...new Set(eq.filter(o => !equivFiltroLibro || o.libro === equivFiltroLibro).map(o => o.libro))];
+    const marcas = libros
+      .map(id => { const l = getLibroDef(id); return `<small class="libro-marca">${escapeHtml(l?.marca || l?.nombre || id)}</small>`; })
+      .join(" ");
+
+    row.querySelector(".song-row-title")?.insertAdjacentHTML("beforeend", ` ${marcas}`);
+    cont.appendChild(row);
+  });
+}
+
+// ===================== MARCA DE LIBRO EN LAS LISTAS =====================
+// Los libros que declaran "marca" en data/libros.json (ej. "'62" para el
+// Himnario 1962, "'09", "MV", "IA", "C") muestran esa marca chiquita después del título en la
+// búsqueda y en listas que mezclan libros (ej. Mis Listas), para saber de qué
+// libro es cada canto cuando hay himnos con el mismo nombre en varios libros.
+let _libroPorSongId = null;
+let _songPorId = null;
+let _libroPorSongIdTotal = -1;
+
+function asegurarIndiceSongs() {
+  const total = LIBROS.reduce((n, l) => n + getLibroSongs(l.id).length, 0);
+
+  if (!_libroPorSongId || _libroPorSongIdTotal !== total) {
+    _libroPorSongId = new Map();
+    _songPorId = new Map();
+    LIBROS.forEach(l => getLibroSongs(l.id).forEach(s => {
+      if (!_libroPorSongId.has(s.id)) { _libroPorSongId.set(s.id, l.id); _songPorId.set(s.id, s); }
+    }));
+    _libroPorSongIdTotal = total;
+  }
+}
+
+function getLibroIdDeSong(song) {
+  asegurarIndiceSongs();
+  return _libroPorSongId.get(song?.id);
+}
+
+// canto por id, sin recorrer todos los libros cada vez (se usa en listas largas)
+function getSongPorIdRapido(id) {
+  asegurarIndiceSongs();
+  return _songPorId.get(id);
+}
+
+// Solo se muestra si el canto es de OTRO libro que el que se está mirando: si ya
+// estás dentro de ese libro (listando por letra o por número) sería redundante.
+// forzar = true: se muestra igual aunque el canto sea del libro actual (listados que
+// mezclan libros a propósito, ej. todos los cantos de un autor)
+function getMarcaLibroHtml(song, forzar = false) {
+  const libroId = getLibroIdDeSong(song);
+  if (!forzar && libroId === libroActual) return "";
+
+  const libro = LIBROS.find(l => l.id === libroId);
+  return libro?.marca ? ` <small class="libro-marca">${escapeHtml(libro.marca)}</small>` : "";
+}
 
 // arma un renglón angosto de canción clickeable, con estrella para
 // agregar/sacar de una lista (Mis Listas) sin tener que abrir la canción
-function buildSongRow(song, titulo, num, letra, onSelect) {
+function buildSongRow(song, titulo, num, letra, onSelect, forzarMarca = false) {
   const div = document.createElement("div");
   div.className = "song-row";
   div.dataset.letter = letra;
@@ -200,7 +397,7 @@ function buildSongRow(song, titulo, num, letra, onSelect) {
 
   div.innerHTML = `
     <span class="song-row-icon">🎵</span>
-    <span class="song-row-title">${baseTitle}</span>
+    <span class="song-row-title">${baseTitle}${getMarcaLibroHtml(song, forzarMarca)}</span>
     <button type="button" class="fav-add-btn" title="Agregar a una lista">⭐</button>
   `;
 
@@ -241,11 +438,11 @@ function renderModalLetterRail(scrollEl, railEl, letras) {
 
 // arma las filas + el riel a partir de una lista ya ordenada alfabéticamente.
 // lang opcional: por defecto el idioma activo — ver getNumeroHimno
-function renderSongRows(sorted, cont, scrollEl, railEl, onSelectFactory, lang = idiomaActual) {
+function renderSongRows(sorted, cont, scrollEl, railEl, onSelectFactory, lang = idiomaActual, marcasTodas = false) {
   cont.innerHTML = "";
 
   if (!sorted.length) {
-    cont.innerHTML = `<p class="biblio-empty">No hay resultados</p>`;
+    cont.innerHTML = `<p class="biblio-empty">${t("sin_resultados")}</p>`;
     railEl?.classList.add("hidden");
     return;
   }
@@ -254,12 +451,19 @@ function renderSongRows(sorted, cont, scrollEl, railEl, onSelectFactory, lang = 
 
   sorted.forEach(song => {
     const titulo = getSongTitle(song, lang);
-    const num = getNumeroHimno(song, lang);
+    let num = getNumeroHimno(song, lang);
+
+    // en un listado que mezcla libros, un canto puede no tener este idioma: se usa su propio número
+    if (!num && marcasTodas) {
+      const otro = Object.values(song.idiomas || {}).find(l => l?.numero_himno);
+      num = otro?.numero_himno || "";
+    }
+
     const letra = getIndexLetter(titulo);
 
     if (!letrasVistas.includes(letra)) letrasVistas.push(letra);
 
-    cont.appendChild(buildSongRow(song, titulo, num, letra, onSelectFactory(song)));
+    cont.appendChild(buildSongRow(song, titulo, num, letra, onSelectFactory(song), marcasTodas));
   });
 
   renderModalLetterRail(scrollEl, railEl, letrasVistas);
@@ -274,8 +478,8 @@ function sortSongsByTitle(list, lang = idiomaActual) {
 
   return [...unique.values()]
     .sort((a, b) =>
-      (a.idiomas?.[lang]?.titulo || "").localeCompare(
-        b.idiomas?.[lang]?.titulo || "",
+      getSongTitle(a, lang).localeCompare(
+        getSongTitle(b, lang),
         undefined,
         { sensitivity: "base" }
       )
@@ -317,7 +521,7 @@ let peopleModalTagContext = null;
 // tagIdiomaContext (opcional): { nombre, filtroIdioma } — solo presente
 // cuando esto es el listado de canciones de un tag; habilita el selector
 // de idioma propio y el estado vacío con "volver a Tags"
-function renderPeopleModal({ title, list, icon, onSelect, idiomaMostrar, tagIdiomaContext }) {
+function renderPeopleModal({ title, list, icon, onSelect, idiomaMostrar, tagIdiomaContext, marcasTodas = false }) {
   const cont = document.getElementById("peopleModalLista");
   const titleEl = document.getElementById("peopleModalTitle");
   const badgeEl = document.getElementById("peopleModalBadge");
@@ -336,7 +540,7 @@ function renderPeopleModal({ title, list, icon, onSelect, idiomaMostrar, tagIdio
   // volver, así que queda oculto (ver openPersonModal / peopleModalOrigen)
   if (backBtn) {
     if (peopleModalOrigen) {
-      backBtn.textContent = `← ${VALORES_TITULO_PLURAL[peopleModalOrigen.tipo] || "Volver"}`;
+      backBtn.textContent = `← ${getValoresTituloPlural(peopleModalOrigen.tipo) || "Volver"}`;
       backBtn.classList.remove("hidden");
     } else {
       backBtn.classList.add("hidden");
@@ -360,8 +564,8 @@ function renderPeopleModal({ title, list, icon, onSelect, idiomaMostrar, tagIdio
 
     cont.innerHTML = `
       <div class="biblio-empty">
-        <p>${idiomaLabel ? `No se encontraron canciones con este tag en ${idiomaLabel}.` : "No se encontraron canciones con este tag."}</p>
-        <button type="button" class="chip" ${dataAction("volverAValoresDesdePeople")}>← Volver a Tags</button>
+        <p>${idiomaLabel ? tFmt("tema_sin_canciones_idioma", { idioma: idiomaLabel }) : t("tema_sin_canciones")}</p>
+        <button type="button" class="chip" ${dataAction("volverAValoresDesdePeople")}>${t("volver_temas")}</button>
       </div>
     `;
     railEl?.classList.add("hidden");
@@ -370,8 +574,8 @@ function renderPeopleModal({ title, list, icon, onSelect, idiomaMostrar, tagIdio
 
   renderSongRows(sorted, cont, cont, railEl, onSelect || (song => () => {
     cerrarPeopleModal();
-    openSong(song.id);
-  }), lang);
+    abrirEquivalente(song.id); // el canto puede ser de otro libro: se abre en el suyo
+  }), lang, marcasTodas);
 }
 
 // Biblioteca modal
@@ -431,7 +635,9 @@ function renderBiblioteca(data) {
 // SOLO ESTADO CLICKABLE
 function formatRevisadoEstado(value) {
   const [estado] = normalizeRevisado(value);
-  return estado === "si" ? t("si") : t("no");
+  if (estado === "si") return t("si");
+  if (estado === "dudoso") return t("dudoso");
+  return t("no");
 }
 
 // PERSONAS (SIN CLICK EN EL MISMO SPAN)
@@ -446,17 +652,18 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=179",
-    "modals/revised.html?v=179",
-    "modals/people.html?v=179",
-    "modals/valores.html?v=179",
-    "modals/share.html?v=179",
-    "modals/contacto.html?v=179",
-    "modals/afinometro.html?v=179",
-    "modals/biblioteca.html?v=179",
-    "modals/listas.html?v=179",
-    "modals/notepad.html?v=179",
-    "modals/oracion.html?v=179"
+    "modals/info.html?v=186",
+    "modals/revised.html?v=186",
+    "modals/people.html?v=186",
+    "modals/valores.html?v=186",
+    "modals/share.html?v=186",
+    "modals/contacto.html?v=186",
+    "modals/afinometro.html?v=186",
+    "modals/biblioteca.html?v=186",
+    "modals/listas.html?v=186",
+    "modals/notepad.html?v=186",
+    "modals/oracion.html?v=186",
+    "modals/equivalencias.html?v=186"
   ];
 
   for (const path of modales) {
@@ -521,6 +728,14 @@ async function init() {
       const res = await fetch(`data/${libro.archivo}`, { cache: "no-store" });
       librosData[libro.id] = (await res.json()).map(normalizeSong);
     }));
+
+    // equivalencias entre libros: si falla no debe impedir que la app funcione
+    try {
+      const resEq = await fetch("data/equivalencias.json", { cache: "no-store" });
+      construirIndiceEquivalencias(await resEq.json());
+    } catch (errEq) {
+      console.warn("No se pudieron cargar las equivalencias entre libros:", errEq);
+    }
 
     const resBiblioteca = await fetch("data/biblioteca.json", { cache: "no-store" });
     biblioteca = await resBiblioteca.json();
@@ -687,6 +902,8 @@ function cambiarLibroActivo(id) {
   // disparando la función varias veces de una
   applyTablaturaState();
   applyTeleprompterBarVisibility();
+
+  actualizarEstadisticas();
 }
 
 init();
@@ -844,6 +1061,7 @@ function closeMenu() {
 
 // ===== BOTON ACERCA DE.... =================================================================
 function info() {
+  actualizarEstadisticas(); // los totales del "libro actual" dependen del libro que se esté mirando
   document.getElementById("infoModal").style.display = "block";
 }
 
@@ -1111,8 +1329,8 @@ function search(q) {
     list.innerHTML = `
       <li class="search-empty">
         <div class="search-empty-icon">🔎</div>
-        <div>No encontramos canciones para "<b>${escapeHtml(q.trim())}</b>"</div>
-        <div class="search-empty-sub">Probá con otra palabra o menos texto</div>
+        <div>${tFmt("busq_sin_canciones", { q: `<b>${escapeHtml(q.trim())}</b>` })}</div>
+        <div class="search-empty-sub">${t("busq_sugerencia")}</div>
       </li>
     `;
     return;
@@ -1128,8 +1346,8 @@ function search(q) {
     return `
       <li ${dataAction("selectSong", [c.id])}>
         <div style="display:flex; justify-content:space-between; gap:10px;">
-          <span>${baseTitle}</span>
-          <span style="opacity:0.7; font-size:14px;">${flags}</span>
+          <span>${baseTitle}${getMarcaLibroHtml(c)}</span>
+          <span style="opacity:0.7; font-size:14px;">${flags}${renderBanderasEquivalentes(c)}</span>
         </div>
       </li>
     `;
@@ -1576,7 +1794,7 @@ function renderMisListas() {
 
           return `
             <div class="lista-song-row">
-              <span ${dataAction("cerrarMisListas,openSong", [songId])}>🎵 ${titulo}</span>
+              <span ${dataAction("cerrarMisListas,openSong", [songId])}>🎵 ${titulo}${song ? getMarcaLibroHtml(song) : ""}</span>
               <button type="button" class="lista-remove-btn" ${dataAction("toggleSongInLista", [id, songId])} title="${t("listas_quitar_de_lista")}">✕</button>
             </div>
           `;
@@ -1612,6 +1830,8 @@ function renderMisListas() {
 // se llama cada vez que cambia el idioma de la app (ver actualizarMenuIdioma()
 // en lenguage.js), estén esos modales abiertos o no
 function actualizarModalesSecundariosIdioma() {
+  actualizarInfoIdioma();
+
   const setText = (id, key) => { const el = document.getElementById(id); if (el) el.textContent = t(key); };
   const setPlaceholder = (id, key) => { const el = document.getElementById(id); if (el) el.placeholder = t(key); };
 
@@ -1663,10 +1883,23 @@ let peopleModalOrigen = null;
 // renderValoresModal (viene de Autores/Compositores/Coautores/Tags en Info
 // de la app). Cuando se llama desde el link de autor/compositor DENTRO de
 // una canción no se pasa nada, así que no queda "para dónde volver"
+// valores de un campo de personas de una canción. Autor/coautor/compositor/
+// tags están a nivel canción; traductor y arreglo viven dentro de cada idioma
+// (song.idiomas[lang]) — se juntan los de todos los idiomas cargados
+function getCamposPersona(song, tipo) {
+  if (tipo === "traductor" || tipo === "arreglo") {
+    return Object.values(song.idiomas || {}).flatMap(l => normalizeArrayField(l?.[tipo]));
+  }
+  return normalizeArrayField(song[tipo]);
+}
+
 function openPersonModal(nombre, tipo, origen) {
   peopleModalOrigen = origen || null;
 
-  const data = getDataActual();
+  // autores/compositores/etc. se buscan en TODOS los libros visibles (o en uno solo si
+  // se llegó desde el listado con un libro elegido); las marcas de libro se muestran siempre
+  const filtroLibro = origen?.filtroLibro || "";
+  const data = filtroLibro ? getLibroSongs(filtroLibro) : getTodasLasCanciones();
 
   // match EXACTO (recortando espacios de más, nada más) — antes usaba
   // normalize() + includes(), que ignora mayúsculas/acentos y hace substring:
@@ -1676,7 +1909,7 @@ function openPersonModal(nombre, tipo, origen) {
   const buscado = nombre.trim();
 
   let filtradas = data.filter(song => {
-    const campos = normalizeArrayField(song[tipo]);
+    const campos = getCamposPersona(song, tipo);
     return campos.some(p => (p || "").toString().trim() === buscado);
   });
 
@@ -1703,6 +1936,7 @@ function openPersonModal(nombre, tipo, origen) {
     list: filtradas,
     idiomaMostrar: filtroIdioma || idiomaActual,
     tagIdiomaContext: tipo === "tags" ? { nombre, filtroIdioma } : null,
+    marcasTodas: !filtroLibro,
     onSelect: filtroIdioma
       ? song => () => {
           cerrarPeopleModal();
@@ -1723,8 +1957,12 @@ function openPersonModal(nombre, tipo, origen) {
 // canción (no por idioma, la data no los separa así), así que "tags en
 // español" en realidad significa "tags de canciones que tienen español" —
 // deja afuera las canciones que no tengan esa traducción
-function getDistinctValues(tipo, filtroIdioma) {
-  let data = getDataActual();
+function getDistinctValues(tipo, filtroIdioma, filtroLibro = "") {
+  // "idioma" sigue siendo del libro actual; el resto (autores, compositores, traductores,
+  // arregladores, temas) mira TODOS los libros visibles o, si se eligió uno, solo ese
+  let data = tipo === "idioma"
+    ? getDataActual()
+    : (filtroLibro ? getLibroSongs(filtroLibro) : getTodasLasCanciones());
 
   if (tipo === "tags" && filtroIdioma) {
     data = data.filter(song => !!song.idiomas?.[filtroIdioma]?.titulo);
@@ -1755,11 +1993,17 @@ function getDistinctValues(tipo, filtroIdioma) {
       .sort((a, b) => a.nombre.localeCompare(b.nombre, "es", { sensitivity: "base" }));
   }
 
+  const librosDe = new Map();   // valor -> libros donde aparece
+
   data.forEach(song => {
-    normalizeArrayField(song[tipo]).forEach(valor => {
+    const libroId = getLibroIdDeSong(song);
+
+    getCamposPersona(song, tipo).forEach(valor => {
       const limpio = (valor || "").toString().trim();
-      if (!limpio) return;
+      if (!limpio || limpio === "-") return;
       counts.set(limpio, (counts.get(limpio) || 0) + 1);
+      if (!librosDe.has(limpio)) librosDe.set(limpio, new Set());
+      if (libroId) librosDe.get(limpio).add(libroId);
     });
   });
 
@@ -1770,19 +2014,37 @@ function getDistinctValues(tipo, filtroIdioma) {
     .map(([raw, count]) => ({
       nombre: tipo === "tags" ? getTagDisplay(raw, filtroIdioma) : raw,
       raw,
-      count
+      count,
+      libros: [...(librosDe.get(raw) || [])]
     }))
     .sort((a, b) => a.nombre.localeCompare(b.nombre, "es", { sensitivity: "base" }));
 }
 
-const VALORES_TITULO_PLURAL = { autor: "Autores", coautor: "Coautores", compositor: "Compositores", tags: "Tags", idioma: "Idiomas" };
+const VALORES_TITULO_KEY = { autor: "pl_autores", coautor: "pl_coautores", compositor: "pl_compositores", arreglo: "pl_arregladores", traductor: "pl_traductores", tags: "temas", idioma: "idiomas" };
+
+function getValoresTituloPlural(tipo) {
+  return VALORES_TITULO_KEY[tipo] ? t(VALORES_TITULO_KEY[tipo]) : "";
+}
 
 // si el valoresModal actual se abrió desde Información de la app (chips de
 // arriba) o desde otro lado (ej. tocando "Temas:" dentro de una canción) —
 // controla si se muestra "← Información de la app" (ver abrirValoresModal)
 let valoresModalFromInfo = true;
 
+// libro elegido en el listado de valores ("" = todos los libros visibles) y qué listado está abierto
+let valoresFiltroLibro = "";
+let valoresTipoActual = "";
+let valoresIdiomaActual;
+
+function setValoresFiltroLibro(libroId) {
+  valoresFiltroLibro = libroId || "";
+  renderValoresModal(valoresTipoActual, valoresIdiomaActual);
+}
+
 function renderValoresModal(tipo, filtroIdioma) {
+  valoresTipoActual = tipo;
+  valoresIdiomaActual = filtroIdioma;
+
   const cont = document.getElementById("valoresModalLista");
   const titleEl = document.getElementById("valoresModalTitle");
   const badgeEl = document.getElementById("valoresModalBadge");
@@ -1805,34 +2067,61 @@ function renderValoresModal(tipo, filtroIdioma) {
 
   const icon = tipo === "idioma" ? "🌐" : getPersonLabel(tipo).split(" ")[0];
 
-  titleEl.innerText = VALORES_TITULO_PLURAL[tipo] || "Listado";
+  titleEl.innerText = getValoresTituloPlural(tipo) || t("listado");
   if (badgeEl) badgeEl.textContent = icon;
 
-  const valores = getDistinctValues(tipo, filtroIdioma);
+  // chips de libros (no aplica al listado de idiomas)
+  const librosEl = document.getElementById("valoresModalLibros");
+  if (librosEl) {
+    if (tipo === "idioma") {
+      librosEl.classList.add("hidden");
+      librosEl.innerHTML = "";
+    } else {
+      const porLibro = LIBROS.filter(isLibroVisible)
+        .map(l => ({ id: l.id, nombre: l.nombre, n: getDistinctValues(tipo, filtroIdioma, l.id).length }))
+        .filter(x => x.n > 0);
+
+      if (valoresFiltroLibro && !porLibro.some(x => x.id === valoresFiltroLibro)) valoresFiltroLibro = "";
+
+      const chip = (id, texto) =>
+        `<button type="button" class="mini-stat-chip${valoresFiltroLibro === id ? " activo" : ""}" ${dataAction("setValoresFiltroLibro", [id])}>${escapeHtml(texto)}</button>`;
+
+      librosEl.innerHTML = chip("", t("equiv_todos")) + porLibro.map(x => chip(x.id, `${x.nombre} (${x.n})`)).join("");
+      librosEl.classList.remove("hidden");
+    }
+  }
+
+  const valores = getDistinctValues(tipo, filtroIdioma, tipo === "idioma" ? "" : valoresFiltroLibro);
   if (countEl) countEl.textContent = valores.length;
 
   cont.innerHTML = "";
 
   if (!valores.length) {
-    cont.innerHTML = `<p class="biblio-empty">No hay datos para mostrar</p>`;
+    cont.innerHTML = `<p class="biblio-empty">${t("sin_datos")}</p>`;
     railEl?.classList.add("hidden");
     return;
   }
 
   const letrasVistas = [];
 
-  valores.forEach(({ nombre, raw, codigo, count }) => {
+  valores.forEach(({ nombre, raw, codigo, count, libros }) => {
     const letra = getIndexLetter(nombre);
     if (!letrasVistas.includes(letra)) letrasVistas.push(letra);
 
     const filaIcon = tipo === "idioma" ? getFlagEmoji(codigo) : icon;
+
+    // marcas de los libros donde aparece (solo cuando se está mirando todos los libros)
+    const marcas = (tipo !== "idioma" && !valoresFiltroLibro && libros?.length)
+      ? LIBROS.filter(l => libros.includes(l.id))
+          .map(l => `<small class="libro-marca">${escapeHtml(l.marca || l.nombre)}</small>`).join(" ")
+      : "";
 
     const div = document.createElement("div");
     div.className = "song-row";
     div.dataset.letter = letra;
     div.innerHTML = `
       <span class="song-row-icon">${filaIcon}</span>
-      <span class="song-row-title">${escapeHtml(nombre)}</span>
+      <span class="song-row-title">${escapeHtml(nombre)}${marcas ? " " + marcas : ""}</span>
       <span class="valor-count">${count}</span>
     `;
     div.addEventListener("click", () => {
@@ -1842,7 +2131,7 @@ function renderValoresModal(tipo, filtroIdioma) {
       } else {
         // "raw" es el valor en español (con el que hay que buscar); "nombre"
         // acá puede venir ya traducido (Tags), solo sirve para mostrarlo
-        openPersonModal(raw, tipo, { tipo, filtroIdioma, fromInfo: valoresModalFromInfo });
+        openPersonModal(raw, tipo, { tipo, filtroIdioma, filtroLibro: valoresFiltroLibro, fromInfo: valoresModalFromInfo });
       }
     });
     cont.appendChild(div);
@@ -1899,6 +2188,7 @@ function abrirIdiomaSongsModal(codigo, nombreIdioma) {
 function abrirValoresModal(tipo, filtroIdioma, opts = {}) {
   const fromInfo = opts.fromInfo !== false;
   valoresModalFromInfo = fromInfo;
+  valoresFiltroLibro = opts.filtroLibro || "";
 
   if (fromInfo) cerrarInfo();
 
@@ -1917,7 +2207,7 @@ function volverAValoresDesdePeople() {
   if (!peopleModalOrigen) return;
 
   cerrarPeopleModal();
-  abrirValoresModal(peopleModalOrigen.tipo, peopleModalOrigen.filtroIdioma, { fromInfo: peopleModalOrigen.fromInfo });
+  abrirValoresModal(peopleModalOrigen.tipo, peopleModalOrigen.filtroIdioma, { fromInfo: peopleModalOrigen.fromInfo, filtroLibro: peopleModalOrigen.filtroLibro });
 }
 
 // selector de idioma DENTRO del listado de canciones de un tag — por si te
@@ -1931,6 +2221,7 @@ function initPeopleModal() {
     openPersonModal(peopleModalTagContext.nombre, "tags", {
       tipo: "tags",
       filtroIdioma: idiomaSelect.value,
+      filtroLibro: peopleModalOrigen?.filtroLibro,
       fromInfo: peopleModalOrigen?.fromInfo
     });
   });
@@ -1979,7 +2270,7 @@ function filtrarValoresModal(termino) {
       sinResultados.className = "biblio-empty valores-no-results";
       cont.appendChild(sinResultados);
     }
-    sinResultados.textContent = `No se encontraron resultados para "${termino.trim()}"`;
+    sinResultados.textContent = tFmt("valores_sin_res", { q: termino.trim() });
   } else if (sinResultados) {
     sinResultados.remove();
   }
@@ -2041,6 +2332,95 @@ function actualizarEstadisticas() {
   document.getElementById("totalCanciones").textContent = totalCanciones;
   document.getElementById("totalTraducidas").textContent = traducidas;
   document.getElementById("totalIdiomas").textContent = idiomas.size;
+
+  // debajo de cada total: cuántas hay en el libro que se está mirando (con su nombre)
+  const propias = getLibroSongs(libroActual);
+  const idiomasLibro = new Set();
+  let traducidasLibro = 0;
+
+  propias.forEach(song => {
+    const langs = Object.keys(song.idiomas || {});
+    langs.forEach(lang => idiomasLibro.add(lang));
+    if (langs.length > 1) traducidasLibro++;
+  });
+
+  const nombreLibro = getLibroDef(libroActual)?.nombre || "";
+  const setLinea = (id, n) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = nombreLibro ? `${nombreLibro}: ${n}` : "";
+  };
+
+  setLinea("libroCanciones", propias.length);
+  setLinea("libroTraducidas", traducidasLibro);
+  setLinea("libroIdiomas", idiomasLibro.size);
+}
+
+// cuerpo y títulos de las secciones del modal de Información (ver js/info-textos.js).
+// El español es el texto original del HTML (se guarda en data-es la primera vez);
+// es/gn lo muestran tal cual; otro idioma usa su traducción o, si no la tiene, el inglés.
+function aplicarInfoTextos() {
+  if (typeof INFO_TEXTOS === "undefined") return;
+
+  const lang = idiomaActual;
+  const dict = (!lang || lang === "es" || lang === "gn") ? null : (INFO_TEXTOS[lang] || INFO_TEXTOS.en);
+
+  const poner = (id, key) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (el.dataset.es === undefined) el.dataset.es = el.innerHTML;
+    el.innerHTML = dict && dict[key] !== undefined ? dict[key] : el.dataset.es;
+  };
+
+  poner("infoLblVersion", "version");
+  poner("infoLblActualizado", "actualizado");
+
+  ["queEs", "func", "instalar", "copy", "creditos", "fuentes"].forEach(k => {
+    poner(`infoTitulo_${k}`, `${k}_t`);
+    poner(`infoCuerpo_${k}`, `${k}_b`);
+  });
+}
+
+// textos fijos del modal de Información que este código toca (chips de totales,
+// botones de personas/temas/equivalencias) — se llama al cambiar de idioma
+function actualizarInfoIdioma() {
+  const setText = (id, key) => { const el = document.getElementById(id); if (el) el.textContent = t(key); };
+
+  setText("infoLblCanciones", "stat_canciones");
+  setText("infoLblTraducidas", "stat_traducidas");
+  setText("infoLblIdiomas", "idiomas");
+  setText("infoBtnAutores", "pl_autores");
+  setText("infoBtnCompositores", "pl_compositores");
+  setText("infoBtnCoautores", "pl_coautores");
+  setText("infoBtnTraductores", "pl_traductores");
+  setText("infoBtnArregladores", "pl_arregladores");
+  setText("infoBtnTemas", "temas");
+  setText("infoBtnEquivalencias", "equivalencias");
+
+  const chipIdiomas = document.getElementById("statIdiomasChip");
+  if (chipIdiomas) chipIdiomas.title = t("stat_idiomas_tip");
+
+  // botones de cerrar (accesibilidad) y textos fijos de los listados
+  document.querySelectorAll(".about-close").forEach(b => b.setAttribute("aria-label", t("cerrar")));
+  const backValores = document.getElementById("valoresModalBack");
+  if (backValores) backValores.textContent = `← ${t("info_app")}`;
+  setText("valoresModalMetaTxt", "valores_meta");
+  setText("valoresModalIdiomaLbl", "idioma_lbl");
+  setText("peopleModalIdiomaLbl", "idioma_lbl");
+  setText("peopleModalCountTxt", "cancion_es");
+  setText("listModalCountTxt", "cancion_es");
+  setText("infoBtnContacto", "contacto");
+  const buscaValores = document.getElementById("valoresModalSearch");
+  if (buscaValores) buscaValores.placeholder = t("buscar_ph");
+  ["valoresModalIdioma", "peopleModalIdioma"].forEach(id => {
+    const opt = document.getElementById(id)?.options?.[0];
+    if (opt && opt.value === "") opt.textContent = t("equiv_todos");
+  });
+
+  aplicarInfoTextos();
+
+  // modal de Equivalencias (si está abierto se vuelve a dibujar en el idioma nuevo)
+  setText("equivModalTitle", "equivalencias");
+  if (document.getElementById("equivModal")?.style.display === "block") renderEquivalenciasModal();
 }
 
 // versión y fecha del modal "Acerca de" salen de version.json, para que no se

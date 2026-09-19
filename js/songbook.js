@@ -64,6 +64,65 @@ function normalizePersonField(field) {
     .filter(v => v && v !== "-");
 }
 
+// Banderitas extra en la ficha: idiomas que este canto NO tiene, pero que sí
+// tiene su equivalente en otro libro (ej. un himno del Innario italiano con su
+// versión en español del Himnario). Una bandera por idioma, apuntando al libro
+// más importante que lo tenga; al tocarla se abre ese canto en su libro.
+function renderBanderasEquivalentes(song) {
+  const propios = new Set(Object.keys(song.idiomas || {}).map(l => song.idiomas[l]?.idioma_real || l));
+  const ORDEN = ["himnario", "himnario_1962", "melodias_de_victoria", "cancionero", "innario"];
+  const porIdioma = new Map();
+
+  getEquivalenciasDe(song).forEach(eq => {
+    const otro = getSongPorIdRapido(eq.id);
+    if (!otro) return;
+
+    Object.keys(otro.idiomas || {}).forEach(lang => {
+      const datos = otro.idiomas[lang];
+      if (!datos?.titulo) return;
+
+      const real = datos.idioma_real || lang;
+      if (propios.has(real)) return;
+
+      const rank = ORDEN.indexOf(eq.libro);
+      const actual = porIdioma.get(real);
+      if (!actual || rank < actual.rank) porIdioma.set(real, { eq, lang, rank });
+    });
+  });
+
+  return [...porIdioma.entries()]
+    .sort((a, b) => (FLAG_NAMES[a[0]] || a[0]).localeCompare(FLAG_NAMES[b[0]] || b[0]))
+    .map(([real, x]) => {
+      const libro = getLibroDef(x.eq.libro);
+      const marca = libro?.marca ? ` <small class="libro-marca">${escapeHtml(libro.marca)}</small>` : "";
+      const detalle = `${IDIOMA_NOMBRES[real] || real} — ${libro?.nombre || x.eq.libro}${x.eq.numero ? " #" + x.eq.numero : ""}`;
+
+      return `<span class="flag flag-equiv" ${dataAction("abrirEquivalente", [x.eq.id, x.lang])} title="${escapeHtml(detalle)}"><span class="flag-emoji" data-flag-lang="${real}">${getFlagEmoji(real)}</span>${marca}</span>`;
+    })
+    .join("");
+}
+
+// "También en:" — enlaces al mismo canto en otros libros (ver getEquivalenciasDe)
+function renderEquivalenciasHtml(song) {
+  const otros = getEquivalenciasDe(song);
+  if (!otros.length) return "";
+
+  const links = otros.map(o => {
+    const nombreLibro = getLibroDef(o.libro)?.nombre || o.libro;
+    const etiqueta = o.numero ? `${nombreLibro} #${o.numero}` : `${nombreLibro}: ${o.titulo}`;
+
+    const detalle = [
+      o.tipo === "parcial" ? "Letra o música con diferencias, u otra traducción" : "Mismo canto",
+      o.confianza === "baja" ? "a confirmar" : "",
+      o.nota || ""
+    ].filter(Boolean).join(" · ");
+
+    return `<span class="equiv-link" ${dataAction("abrirEquivalente", [o.id])} title="${escapeHtml(detalle)}">${escapeHtml(etiqueta)}</span>`;
+  }).join(", ");
+
+  return `<div><b>${t("tambien_en")}:</b> ${links}</div>`;
+}
+
 // ===================== OPEN SONG =====================
 function openSong(id) {
   mostrarCancionActual(); // por si se venía de una lista que la había ocultado
@@ -72,7 +131,7 @@ function openSong(id) {
 
   if (!song) {
     document.getElementById("contenido").innerHTML =
-      "<p>⚠️ Canción no disponible en este libro o idioma.</p>";
+      `<p>${t("cancion_no_disp_libro")}</p>`;
     updateClearSearchBtn();
     return;
   }
@@ -96,7 +155,7 @@ function openSong(id) {
 
   if (!s) {
     document.getElementById("contenido").innerHTML =
-      "<p>⚠️ Canción no disponible en este idioma.</p>";
+      `<p>${t("cancion_no_disp_idioma")}</p>`;
     updateClearSearchBtn();
     return;
   }
@@ -141,12 +200,21 @@ function openSong(id) {
     ? `${renderPersonLinks("Traductor", traductorLimpio)} | `
     : "";
 
+  // PARA ARREGLO (quien arregló la música; antes venía pegado al compositor
+  // como "(arr. Nombre)"). Vive dentro del idioma, igual que el traductor,
+  // y abre el mismo modal de personas que autor/compositor.
+  const arregloLimpio = normalizePersonField(s.arreglo);
+
+  const arregloHtml = arregloLimpio.length
+    ? `${renderPersonLinks("Arreglo", arregloLimpio)} | `
+    : "";
+
   // ===================== META ENRIQUECIDO =====================
   const meta = `
     <div class="song-meta">
 
       <div class="flags">
-        <b>${t("idiomas")}:</b> ${renderLanguageFlags(song, false, true)}
+        <b>${t("idiomas")}:</b> ${renderLanguageFlags(song, false, true)}${renderBanderasEquivalentes(song)}
       </div>
 
       <div>
@@ -169,6 +237,8 @@ function openSong(id) {
 
         ${renderPersonLinks("Compositor", song.compositor)}
         ${song.compositor ? " | " : ""}
+
+        ${arregloHtml}
 
         ${traductorHtml}
 
@@ -290,6 +360,8 @@ function openSong(id) {
         ${renderAudioLink(song, s)}
         <br>
       </div>
+
+      ${renderEquivalenciasHtml(song)}
 
     </div>
 
@@ -446,9 +518,9 @@ function renderList(letter) {
   list.innerHTML = expanded.map(item => `
     <li ${dataAction("openSong", [item.song.id])}>
       <div style="display:flex; justify-content:space-between; align-items:center;">
-        <span>${item.displayTitle}</span>
+        <span>${item.displayTitle}${getMarcaLibroHtml(item.song)}</span>
         <span style="opacity:0.7; font-size:14px;">
-          ${renderLanguageFlags(item.song, true)}
+          ${renderLanguageFlags(item.song, true)}${renderBanderasEquivalentes(item.song)}
         </span>
       </div>
     </li>
@@ -494,7 +566,8 @@ function buildHymnRanges(lang) {
   const ranges = [];
 
   for (let start = Math.floor(min / step) * step + 1; start <= max; start += step) {
-    const end = start + step - 1;
+    // el último rango termina en el último himno real (601-614, no 601-650)
+    const end = Math.min(start + step - 1, max);
 
     const hasData = numbers.some(n => n >= start && n <= end);
 
@@ -721,9 +794,9 @@ function renderHymnRange(start, end) {
     return `
       <li ${dataAction("openSong", [item.song.id])}>
         <div style="display:flex; justify-content:space-between;">
-          <span>${label}</span>
+          <span>${label}${getMarcaLibroHtml(item.song)}</span>
           <span class="lang-flags-list">
-            ${renderLanguageFlags(item.song)}
+            ${renderLanguageFlags(item.song)}${renderBanderasEquivalentes(item.song)}
           </span>
         </div>
       </li>

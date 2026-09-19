@@ -5,20 +5,26 @@
       <button type="button" class="about-close" data-action="cerrarInfo" aria-label="Cerrar">✕</button>
       <div class="about-badge">📖</div>
       <h2 id="modalTitle">Cancionero MV (Digital)</h2>
-      <div class="about-meta">Versión <span id="appVersion">…</span> · Actualizado <span id="appUpdated">…</span></div>
+      <div class="about-meta"><span id="infoLblVersion">Versión</span> <span id="appVersion">…</span> · <span id="infoLblActualizado">Actualizado</span> <span id="appUpdated">…</span></div>
     </div>
 
     <div class="about-stats">
-      <div class="stat-chip"><b id="totalCanciones">...</b><span>Canciones</span></div>
-      <div class="stat-chip"><b id="totalTraducidas">...</b><span>Traducidas</span></div>
-      <div class="stat-chip" id="statIdiomasChip" data-action="abrirValoresModal" data-args='["idioma"]' title="Tocá para ver cuáles y explorar canciones"><b id="totalIdiomas">...</b><span>Idiomas</span></div>
+      <div class="stat-chip"><b id="totalCanciones">...</b><span id="infoLblCanciones">Canciones</span><small class="stat-libro" id="libroCanciones"></small></div>
+      <div class="stat-chip"><b id="totalTraducidas">...</b><span id="infoLblTraducidas">Traducidas</span><small class="stat-libro" id="libroTraducidas"></small></div>
+      <div class="stat-chip" id="statIdiomasChip" data-action="abrirValoresModal" data-args='["idioma"]' title="Tocá para ver cuáles y explorar canciones"><b id="totalIdiomas">...</b><span id="infoLblIdiomas">Idiomas</span><small class="stat-libro" id="libroIdiomas"></small></div>
     </div>
 
-    <div class="about-mini-stats">
-      <button type="button" class="mini-stat-chip" data-action="abrirValoresModal" data-args='["autor"]'>Autores</button>
-      <button type="button" class="mini-stat-chip" data-action="abrirValoresModal" data-args='["compositor"]'>Compositores</button>
-      <button type="button" class="mini-stat-chip" data-action="abrirValoresModal" data-args='["coautor"]'>Coautores</button>
-      <button type="button" class="mini-stat-chip" data-action="abrirValoresModal" data-args='["tags"]'>Tags</button>
+    <div class="about-mini-stats mini-personas">
+      <button type="button" class="mini-stat-chip" id="infoBtnAutores" data-action="abrirValoresModal" data-args='["autor"]'>Autores</button>
+      <button type="button" class="mini-stat-chip" id="infoBtnCompositores" data-action="abrirValoresModal" data-args='["compositor"]'>Compositores</button>
+      <button type="button" class="mini-stat-chip" id="infoBtnCoautores" data-action="abrirValoresModal" data-args='["coautor"]'>Coautores</button>
+      <button type="button" class="mini-stat-chip" id="infoBtnTraductores" data-action="abrirValoresModal" data-args='["traductor"]'>Traductores</button>
+      <button type="button" class="mini-stat-chip" id="infoBtnArregladores" data-action="abrirValoresModal" data-args='["arreglo"]'>Arregladores</button>
+    </div>
+
+    <div class="about-mini-stats mini-temas">
+      <button type="button" class="mini-stat-chip" id="infoBtnTemas" data-action="abrirValoresModal" data-args='["tags"]'>Temas</button>
+      <button type="button" class="mini-stat-chip" id="infoBtnEquivalencias" data-action="abrirEquivalenciasModal">Equivalencias</button>
     </div>
 
     <div class="about-body">
@@ -26,10 +32,10 @@
       <details class="about-section">
         <summary>
           <span class="sec-icon">🎶</span>
-          Qué es el Cancionero MV
+          <span id="infoTitulo_queEs">Qué es el Cancionero MV</span>
           <span class="sec-chevron">▸</span>
         </summary>
-        <div class="about-panel">
+        <div class="about-panel" id="infoCuerpo_queEs">
           <p>El <strong>Cancionero MV</strong> es una aplicación web pensada para músicos, equipos de alabanza y directores de canto: reúne cancionero, himnario y cantos de campamento en un solo lugar, con acordes, tonalidad, tiempo y todo lo necesario para tocar o dirigir una canción sin depender de varios PDFs o cuadernos sueltos.</p>
           <p>Sirve tanto para el uso personal — practicar, afinar el instrumento, transportar una canción a otra tonalidad — como para el momento en vivo: en el atril, en el ensayo, o proyectada en la pantalla durante el servicio.</p>
         </div>
@@ -38,10 +44,10 @@
       <details class="about-section">
         <summary>
           <span class="sec-icon">✨</span>
-          Funcionalidades — guía completa
+          <span id="infoTitulo_func">Funcionalidades — guía completa</span>
           <span class="sec-chevron">▸</span>
         </summary>
-        <div class="about-panel">
+        <div class="about-panel" id="infoCuerpo_func">
 
           <p><strong>📖 Buscar y elegir una canción</strong></p>
           <ul>
@@ -137,10 +143,10 @@
       <details class="about-section">
         <summary>
           <span class="sec-icon">📲</span>
-          Cómo instalar la app
+          <span id="infoTitulo_instalar">Cómo instalar la app</span>
           <span class="sec-chevron">▸</span>
         </summary>
-        <div class="about-panel">
+        <div class="about-panel" id="infoCuerpo_instalar">
           <p><strong>No hace falta instalar nada</strong> — el Cancionero funciona directo desde el navegador, online, con solo abrir el link. Instalarlo es opcional: sirve para abrirlo sin la barra del navegador y para que ande sin internet.</p>
 
           <div class="callout">
@@ -171,10 +177,10 @@
       <details class="about-section">
         <summary>
           <span class="sec-icon">⚖️</span>
-          Copyright y licencia
+          <span id="infoTitulo_copy">Copyright y licencia</span>
           <span class="sec-chevron">▸</span>
         </summary>
-        <div class="about-panel">
+        <div class="about-panel" id="infoCuerpo_copy">
           <p>El <strong>“Cancionero MV”</strong> fue desarrollado por Hernando Gigliotti y editado en colaboración con Elisa Vilaltella y Rolando Gigliotti.</p>
           <p>Este material sin fines de lucro es una recopilación con fines religiosos, comunitarios y educativos. Las canciones y sus correspondientes derechos pertenecen a sus respectivos autores y editoriales.</p>
           <p>El código fuente, la estructura de la base de datos, arreglos y contenidos desarrollados específicamente para este proyecto son propiedad intelectual de sus autores y están protegidos por las leyes de derecho de autor.</p>
@@ -200,10 +206,10 @@
       <details class="about-section">
         <summary>
           <span class="sec-icon">👥</span>
-          Créditos
+          <span id="infoTitulo_creditos">Créditos</span>
           <span class="sec-chevron">▸</span>
         </summary>
-        <div class="about-panel">
+        <div class="about-panel" id="infoCuerpo_creditos">
           <p><strong>Creator, Lead Software Engineer (Full-Stack):</strong> Hernando Gigliotti</p>
           <p><strong>Developer Back-end / Colaboración:</strong> Elisa Vilaltella</p>
           <p><strong>Digital Music Encoding:</strong> Rolando Gigliotti, Hernando Gigliotti, Mauricio Iakmiu</p>
@@ -213,10 +219,10 @@
       <details class="about-section">
         <summary>
           <span class="sec-icon">📚</span>
-          Fuentes del contenido
+          <span id="infoTitulo_fuentes">Fuentes del contenido</span>
           <span class="sec-chevron">▸</span>
         </summary>
-        <div class="about-panel">
+        <div class="about-panel" id="infoCuerpo_fuentes">
           <ul>
             <li>Cancionero "V Encuentro GM".</li>
             <li>Cancionero Hosanna 2023.</li>
@@ -233,7 +239,7 @@
       <div class="about-contact-actions">
         <a href="#" class="menu-action-btn contact-c" data-action="abrirContactoModal">
           <span class="menu-action-icon">✉️</span>
-          <span>Contacto</span>
+          <span id="infoBtnContacto">Contacto</span>
         </a>
         <a href="https://www.paypal.com/" target="_blank" rel="noopener noreferrer" class="menu-action-btn donate-c">
           <span class="menu-action-icon">☕</span>

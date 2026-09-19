@@ -11,7 +11,7 @@
       <button type="button" class="about-close" data-action="cerrarValoresModal" aria-label="Cerrar">✕</button>
       <div class="about-badge" id="valoresModalBadge">👤</div>
       <h2 id="valoresModalTitle">Listado</h2>
-      <div class="about-meta"><span id="valoresModalCount">0</span> en total — tocá uno para ver sus canciones</div>
+      <div class="about-meta"><span id="valoresModalCount">0</span> <span id="valoresModalMetaTxt">en total — tocá uno para ver sus canciones</span></div>
     </div>
 
     <div class="valores-search-wrap">
@@ -19,9 +19,11 @@
       <button type="button" id="valoresModalSearchClear" class="clear-search-btn hidden" aria-label="Borrar búsqueda">✕</button>
     </div>
 
+    <div class="about-mini-stats hidden" id="valoresModalLibros"></div>
+
     <div class="menu-row hidden" id="valoresModalIdiomaRow">
       <span class="sec-icon">🌐</span>
-      <span class="menu-row-label">Idioma</span>
+      <span class="menu-row-label" id="valoresModalIdiomaLbl">Idioma</span>
       <select id="valoresModalIdioma" class="chord-instrument-select">
         <option value="">Todos</option>
         <option value="en">English</option>

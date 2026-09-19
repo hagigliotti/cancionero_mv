@@ -8,7 +8,7 @@
 
 // 👉 Subir este número cada vez que cambie la lista de archivos de abajo
 // (o cuando quieras forzar que todos descarten la caché vieja).
-const CACHE_VERSION = "v179";
+const CACHE_VERSION = "v186";
 
 const APP_SHELL_CACHE = `cancionero-shell-${CACHE_VERSION}`;
 const DATA_CACHE = `cancionero-data-${CACHE_VERSION}`;
@@ -16,36 +16,38 @@ const DATA_CACHE = `cancionero-data-${CACHE_VERSION}`;
 const APP_SHELL_FILES = [
   "./",
   "index.html",
-  "css/style.css?v=179",
-  "css/notepad.css?v=179",
-  "manifest.webmanifest?v=179",
+  "css/style.css?v=186",
+  "css/notepad.css?v=186",
+  "manifest.webmanifest?v=186",
 
-  "js/tag-translations.js?v=179",
-  "js/lenguage.js?v=179",
-  "js/utils.js?v=179",
-  "js/theme.js?v=179",
-  "js/afinometro.js?v=179",
-  "js/app.js?v=179",
-  "js/songbook.js?v=179",
-  "js/notepad.js?v=179",
-  "js/oracion.js?v=179",
+  "js/tag-translations.js?v=186",
+  "js/lenguage.js?v=186",
+  "js/info-textos.js?v=186",
+  "js/utils.js?v=186",
+  "js/theme.js?v=186",
+  "js/afinometro.js?v=186",
+  "js/app.js?v=186",
+  "js/songbook.js?v=186",
+  "js/notepad.js?v=186",
+  "js/oracion.js?v=186",
 
-  "modals/info.html?v=179",
-  "modals/revised.html?v=179",
-  "modals/people.html?v=179",
-  "modals/share.html?v=179",
-  "modals/contacto.html?v=179",
-  "modals/afinometro.html?v=179",
-  "modals/biblioteca.html?v=179",
-  "modals/listas.html?v=179",
-  "modals/notepad.html?v=179",
-  "modals/oracion.html?v=179",
+  "modals/info.html?v=186",
+  "modals/revised.html?v=186",
+  "modals/people.html?v=186",
+  "modals/share.html?v=186",
+  "modals/contacto.html?v=186",
+  "modals/afinometro.html?v=186",
+  "modals/biblioteca.html?v=186",
+  "modals/listas.html?v=186",
+  "modals/notepad.html?v=186",
+  "modals/oracion.html?v=186",
+  "modals/equivalencias.html?v=186",
 
-  "imagenes/icons/favicon-16.png?v=179",
-  "imagenes/icons/favicon-32.png?v=179",
-  "imagenes/icons/apple-touch-icon.png?v=179",
-  "imagenes/icons/icon-192.png?v=179",
-  "imagenes/icons/icon-512.png?v=179",
+  "imagenes/icons/favicon-16.png?v=186",
+  "imagenes/icons/favicon-32.png?v=186",
+  "imagenes/icons/apple-touch-icon.png?v=186",
+  "imagenes/icons/icon-192.png?v=186",
+  "imagenes/icons/icon-512.png?v=186",
 
   "imagenes/Cancionero_blue.png",
   "imagenes/Cancionero_white.png",
@@ -62,7 +64,8 @@ const APP_SHELL_FILES = [
 // también los .json de cada libro que liste.
 const EXTRA_DATA_FILES = [
   "data/libros.json",
-  "data/biblioteca.json"
+  "data/biblioteca.json",
+  "data/equivalencias.json"
 ];
 
 self.addEventListener("install", (event) => {
