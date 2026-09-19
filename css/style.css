@@ -2227,6 +2227,45 @@ body.light-mode .toast {
 
 .dark-mode .stat-chip span { color: var(--gray-500); }
 
+/* línea chiquita bajo cada total: cuántas hay en el libro que se está mirando */
+.stat-chip small.stat-libro {
+  display: block;
+  margin-top: 4px;
+  font-size: 10px;
+  line-height: 1.25;
+  font-weight: 600;
+  color: rgba(232,244,253,0.5);
+  overflow-wrap: anywhere;
+}
+
+.dark-mode .stat-chip small.stat-libro { color: var(--gray-500); }
+
+.about-mini-stats + .about-mini-stats { margin-top: -10px; }
+
+/* Autores / Compositores / Coautores / Traductores / Arregladores: cinco botones iguales en una sola fila */
+.about-mini-stats.mini-personas {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.about-mini-stats.mini-personas .mini-stat-chip {
+  padding: 6px 2px;
+  font-size: clamp(9px, 2.6vw, 11px);
+  white-space: nowrap;
+  text-align: center;
+}
+
+.about-mini-stats.mini-temas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.mini-stat-chip.activo {
+  background: var(--sky);
+  border-color: var(--sky);
+  color: #fff;
+}
+
 #statIdiomasChip { cursor: pointer; }
 #statIdiomasChip:hover { background: rgba(255,255,255,0.09); }
 .dark-mode #statIdiomasChip:hover { background: var(--gray-100); }
@@ -3026,6 +3065,31 @@ body.scrolled .fav-add-btn { font-size: 15px; }
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* marca del libro ('62, '09, MV, IA, C) chiquita después del título — ver getMarcaLibroHtml */
+.libro-marca {
+  font-size: 0.6em;
+  font-weight: 400;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+/* dentro de una banderita (ficha y listas) la marca del libro tiene que pasar casi inadvertida */
+.flag .libro-marca {
+  font-size: 7px;
+  opacity: 0.5;
+  margin-left: 1px;
+  vertical-align: baseline;
+}
+
+/* enlaces de "También en:" — como person-link pero en letra regular */
+.equiv-link {
+  color: var(--sky);
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.equiv-link:hover { color: var(--sky-dark); text-decoration: underline; }
 
 .song-row .fav-add-btn { font-size: 15px; }
 

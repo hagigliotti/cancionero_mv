@@ -491,7 +491,7 @@
 { "id": "adentro_afuera_arriba_abajo",
   "titulo_original": ["I'm Inright, Outright, Upright, Downright Happy"],
   "autor": ["Desconocido"],
-  "compositor": ["Desconocido"],
+  "compositor": [""],
   "year": ["Desconocido"],
   "tonalidad": ["Re Mayor (D)"],
   "tempo_bpm": ["Desconocido"],
@@ -1910,10 +1910,6 @@
   "referencia_biblica": ["Salmos 51:10"],
   "tags": [""],
 
-  "year": ["Desconocido"],
-  "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
   "idiomas": {
     "es": {
       "titulo": ["Blanqueado"],
@@ -2008,7 +2004,7 @@
   "tempo_bpm": ["108"],
   "compas": ["4/4"],
   "ritmo": ["Himno"],
-  "referencia_biblica": ["Malaquías 4:2; 2 Corintios 4:6; Salmo 139:23-24; 1 Juan 1:7, San Mateo 8:12", "Juan 8:12"],
+  "referencia_biblica": ["Malaquías 4:2; 2 Corintios 4:6; Salmo 139:23-24; 1 Juan 1:7, San Mateo 8:12"],
   "tags": ["Clásico", "Alabanza", "Luz", "Petición", "Misericordia", "Purificación"],
 
   "idiomas": {
@@ -2087,10 +2083,6 @@
   "referencia_biblica": ["San Mateo 5:16"],
   "tags": ["Luz"],
 
-  "year": ["Desconocido"],
-  "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
   "idiomas": {
     "es": {
       "titulo": ["Brillar por ti"],
@@ -2149,10 +2141,6 @@
   "referencia_biblica": ["San Mateo 6:33", "San Mateo 7:7", "San Mateo 4:4"],
   "tags": ["Clásico", "Meditación", "Confianza", "Adoración", "Providencia", "Reflexión"],
 
-  "year": ["1972"],
-  "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
   "idiomas": {
     "es": {
       "titulo": ["Buscad primero"],
@@ -2192,10 +2180,6 @@
   "referencia_biblica": ["Jeremías 29:13"],
   "tags": ["Clásico", "Oración", "Paz", "Invitación"],
 
-  "year": ["Desconocido"],
-  "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
   "idiomas": {
     "es": {
       "titulo": ["Búscale hoy"],
@@ -2228,10 +2212,6 @@
   "tonalidad": ["Do Mayor (C)"],
   "referencia_biblica": ["San Mateo 9:38"],
 
-  "year": ["Desconocido"],
-  "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
   "idiomas": {
     "es": {
       "titulo": ["Buscas"],
@@ -2639,10 +2619,6 @@
   "tonalidad": ["Re Mayor (D) / Mi Mayor (E)"],
   "referencia_biblica": ["Salmos 145:2"],
 
-  "year": ["Desconocido"],
-  "tempo_bpm": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
   "idiomas": {
     "es": {
       "titulo": ["Cada nuevo día"],
@@ -3047,9 +3023,9 @@
   "compositor": ["Flavio Regis", "Jamir"],
   "year": ["Desconocido"],  
   "tonalidad": ["Mi Mayor (E)", "Mi menor (Em)"],
-  "tempo_bpm": ["Desconocido"],
+  "tempo_bpm": [""],
   "compas": ["4/4"],
-  "ritmo": ["Desconocido"],
+  "ritmo": [""],
   "referencia_biblica": ["Salmos 150:4-6", "Salmos 148:1-12", "Salmos 96:11-12"],
   "tags": ["Alabanza", "Creación", "Adoración", "Instrumentos"],
 
@@ -3113,9 +3089,9 @@
   "compositor": ["Paul Field"],  
   "year": ["Desconocido"],
   "tonalidad": ["Sol Mayor (G)", "La Mayor (A)"],
-  "tempo_bpm": ["Desconocido"],
+  "tempo_bpm": [""],
   "compas": ["4/4"],
-  "ritmo": ["Desconocido"],
+  "ritmo": [""],
   "referencia_biblica": ["San Mateo 10:32", "Salmos 19:1-2", "Salmos 104:24", "Salmos 145:10"],
   "tags": ["Alabanza", "Creación", "Gratitud", "Amor de Dios"],
 
@@ -3181,7 +3157,7 @@
   "tonalidad": ["Re Mayor (D)"],
   "referencia_biblica": ["Salmos 75:9", "Salmos 89:1", "Salmos 107:1"],
   "year": ["1994"],  
-  "tempo_bpm": ["Desconocido"],
+  "tempo_bpm": [""],
   "compas": ["4/4"],
   "ritmo": ["Worship"],
   "tags": ["Adoración", "Amor de Dios", "Misericordia"],
@@ -3240,9 +3216,9 @@
   "tonalidad": ["La Mayor (A)"],
   "referencia_biblica": ["Romanos 9:9-10", "Salmos 92:1-2", "Salmos 5:3", "Isaías 40:31"],
   "year": ["Desconocido"],  
-  "tempo_bpm": ["Desconocido"],
+  "tempo_bpm": [""],
   "compas": ["4/4"],
-  "ritmo": ["Desconocido"],
+  "ritmo": [""],
   "tags": ["Alabanza", "Gozo", "Confianza", "Fortaleza"],
 
   "idiomas": {
@@ -3277,7 +3253,7 @@
   "tonalidad": ["Sol Mayor (G)"],
   "referencia_biblica": ["Salmos 32:11", "Salmos 96:1-2", "Deuteronomio 31:6"],
   "year": ["Desconocido"],  
-  "tempo_bpm": ["Desconocido"],
+  "tempo_bpm": [""],
   "compas": ["4/4"],
   "ritmo": ["Alegre"],
   "tags": ["Alabanza", "Gozo", "Alegre", "Evangelismo", "Clásico"],
@@ -3387,9 +3363,9 @@
   "tonalidad": ["Do Mayor (C)", "Re Mayor (D)"],
   "referencia_biblica": ["Salmos 118:24", "Romanos 5:1", "1 Tesalonicenses 4:16-17", "Salmos 13:5"],
   "year": ["Desconocido"],  
-  "tempo_bpm": ["Desconocido"],
+  "tempo_bpm": [""],
   "compas": ["4/4"],
-  "ritmo": ["Desconocido"],
+  "ritmo": [""],
   "tags": ["Alabanza", "Salvación", "Justificación", "Segunda Venida", "Gozo"],
 
   "idiomas": {
@@ -3471,7 +3447,7 @@
   "tonalidad": ["Sol Mayor (G)"],
   "referencia_biblica": ["Salmos 145:18", "Salmos 73:28", "Santiago 4:8", "San Juan 15:4"],
   "year": ["1994"],  
-  "tempo_bpm": ["Desconocido"],
+  "tempo_bpm": [""],
   "compas": ["4/4"],
   "ritmo": ["Worship"],
   "tags": ["Adoración", "Comunión", "Intimidad", "Entrega"],
@@ -3530,14 +3506,14 @@
 },
 { "id": "como_el_ciervo",
   "titulo_original": ["As the deer"],
-  "autor": ["Martin Nystrom"], 
-  "compositor": ["Martin Nystrom"],
+  "autor": ["Marty Nystrom"], 
+  "compositor": ["Marty Nystrom"],
   "tonalidad": ["Do Mayor (C)"],
-  "referencia_biblica": ["Salmos 42:1", "Salmos 42:1-5"],
+  "referencia_biblica": ["Salmos 42:1"],
   "year": ["1984"],  
-  "tempo_bpm": ["Desconocido"],
+  "tempo_bpm": [""],
   "compas": ["4/4"],
-  "ritmo": ["Desconocido"],
+  "ritmo": [""],
   "tags": ["Adoración", "Intimidad", "Anhelo", "Clásico"],
 
   "idiomas": {
@@ -4193,7 +4169,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Alabanza", "Worship", "Suave"],
-  "referencia_biblica": ["Efesios 5:2", "San Mateo 19:14", "San Mateo 19:14", "San Marcos 10:14", "San Juan 15:15", "Juan 3:16"],
+  "referencia_biblica": ["Efesios 5:2", "San Mateo 19:14", "San Mateo 19:14", "San Marcos 10:14", "San Juan 15:15"],
   "tags": ["Alabanza", "Crecimiento Espiritual", "Ánimo", "Avivamiento", "Clásico", "Amor", "Confianza"],
 
   "idiomas": {
@@ -4230,7 +4206,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Alabanza", "Infantil", "We will rock you"],
-  "referencia_biblica": ["Efesios 5:2", "San Mateo 19:14", "San Mateo 19:14", "San Marcos 10:14", "San Juan 15:15", "Juan 3:16"],
+  "referencia_biblica": ["Efesios 5:2", "San Mateo 19:14", "San Mateo 19:14", "San Marcos 10:14", "San Juan 15:15"],
   "tags": ["Alabanza", "Crecimiento Espiritual", "Ánimo", "Avivamiento", "Clásico", "Amor", "Confianza"],
 
   "idiomas": {
@@ -5275,14 +5251,14 @@
 },
 { "id": "dame_a_cristo",
   "titulo_original": ["Give me Jesús"],
-  "autor": ["Spiritual"],
-  "compositor": ["Spiritual"],
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
   "year": ["Desconocido"],
   "tonalidad": ["La Mayor (A)"],
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Salmos 73:25", "Mateo 16:26"],
+  "referencia_biblica": ["Salmos 73:25"],
   "tags": ["Espiritual"],
 
   "idiomas": {
@@ -5668,7 +5644,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["1 Corintios 2:9", "Josué 3:14-17"],
+  "referencia_biblica": ["1 Corintios 2:9"],
   "tags": ["Esperanza"],
   "idiomas": {
     "es": {
@@ -5845,7 +5821,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Nahum 1:7", "Salmos 145:9", "Salmos 34:8"],
+  "referencia_biblica": ["Nahum 1:7", "Salmos 145:9"],
   "tags": ["Bondad", "Gratitud", "Segunda Venida"],
 
   "idiomas": {
@@ -6324,13 +6300,13 @@
 { "id": "dulce_oracion",
   "titulo_original": ["Sweet Hour of Prayer"],
   "autor": ["William W. Walford"],
-  "compositor": ["William B. Bradbury"],
-  "year": ["1842"],
+  "compositor": ["William Batchelder Bradbury"],
+  "year": ["Desconocido"],
   "tonalidad": ["Do Mayor (C)"],
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["1 Tesalonicenses 5:17", "Efesios 6:18", "Filipenses 4:6-7", "Mateo 7:7-8"],
+  "referencia_biblica": ["1 Tesalonicenses 5:17"],
   "tags": ["Adoración", "Oración", "Consuelo", "Paz", "Devocional"],
 
   "idiomas": {
@@ -6388,7 +6364,7 @@
     "tempo_bpm": ["96"],
     "compas": ["4/4"],
     "ritmo": ["Himno"],
-    "referencia_biblica": ["Juan 3:3-5; Tito 3:5; 2 Corintios 4:6; Efesios 2:4-7; Juan 14:1-3", "2 Timoteo 1:9"],
+    "referencia_biblica": ["Juan 3:3-5; Tito 3:5; 2 Corintios 4:6; Efesios 2:4-7; Juan 14:1-3"],
     "tags": ["Conversión", "Gracia", "Espíritu Santo", "Gozo", "Esperanza"],
     "idiomas": {
       "es": {
@@ -6567,9 +6543,6 @@
   "tonalidad": ["Sol Mayor (G)"],
   "tempo_bpm": ["65"],
 
-  "year": ["Desconocido"],
-  "compas": ["Desconocido"],
-  "ritmo": ["Desconocido"],
   "idiomas": {
       "es": {
         "titulo": ["Enciende una luz"],
@@ -7164,14 +7137,14 @@
 },
 { "id": "en_momentos_asi",
   "titulo_original": ["En momentos así"],
-  "autor": ["David Graham"],
-  "compositor": ["David Graham"],
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
   "year": ["Desconocido"],
   "tonalidad": ["Re Mayor (D)"],
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["1 Crónicas 16:11", "Salmos 25:1"],
+  "referencia_biblica": ["1 Crónicas 16:11"],
   "tags": ["Adoración"],
 
   "idiomas": {
@@ -8329,14 +8302,14 @@
 },
 { "id": "el_puede",
   "titulo_original": ["Él puede"],
-  "autor": ["Paul E. Paino"],
-  "compositor": ["Paul E. Paino"],
-  "year": ["1958"],
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
+  "year": ["Desconocido"],
   "tonalidad": ["Sol Mayor (G)"],
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["San Lucas 1:37", "Hebreos 7:25"],
+  "referencia_biblica": ["San Lucas 1:37"],
   "tags": ["Alabanza", "Poder de Dios", "Sanidad", "Milagros", "Victoria"],
 
   "idiomas": {
@@ -9532,7 +9505,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["4/4"],
   "ritmo": ["Melodía popular de la India"],
-  "referencia_biblica": ["San Lucas 9:62", "Gálatas 2:20", "Lucas 9:62", "Gálatas 6:14", "Filipenses 3:13", "Lucas 9:57, 62"],
+  "referencia_biblica": ["San Lucas 9:62", "Gálatas 2:20", "Lucas 9:62", "Gálatas 6:14", "Filipenses 3:13"],
   "tags": ["Consagración", "Himno", "Decisión", "Compromiso", "Testimonio", "Clásico", "Fidelidad"],
 
   "idiomas": {
@@ -10111,13 +10084,13 @@
 { "id": "Jesús_es_mi_vida",
   "titulo_original": ["Jesús es mi vida"],
   "autor": ["Lucio Maier", "Lorena Finis"],
-  "compositor": ["Lucio A. D. Maier"],
+  "compositor": ["Lucio Maier"],
   "year": ["1990"],
   "tonalidad": ["La Mayor (A)"],
   "tempo_bpm": ["78"],
   "compas": ["4/4"],
-  "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Salmos 19:1", "San Mateo 6:28-30", "San Juan 14:6", "Salmos 27:1", "Salmos 8:3-4", "Juan 10:10"],
+  "ritmo": [""],
+  "referencia_biblica": ["Salmos 19:1", "San Mateo 6:28-30", "San Juan 14:6", "Salmos 27:1", "Salmos 8:3-4"],
   "tags": ["Creación", "Confianza", "Amor de Dios", "Guía", "Consuelo", "Adoración", "Vida Eterna"],
   
   "idiomas": {
@@ -10209,7 +10182,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Salmos 23", "Salmos 56:3", "2 Corintios 12:9", "Salmos 32:6, 7"],
+  "referencia_biblica": ["Salmos 23", "Salmos 56:3", "2 Corintios 12:9"],
   "tags": ["Confianza", "Buen Pastor", "Protección", "Fortaleza", "Clásico", "Adoración"],
   "idiomas": {
     "es": {
@@ -10238,8 +10211,8 @@
 },
 { "id": "Jesús_te_ama",
   "titulo_original": ["Jesús te ama"],
-  "autor": ["Patricia J. Miguel"],
-  "compositor": ["Patricia J. Miguel"],
+  "autor": ["Patricia Miguel"],
+  "compositor": ["Patricia Miguel"],
   "year": ["1990"],
   "tonalidad": ["Re Mayor (D)"],
   "tempo_bpm": ["Desconocido"],
@@ -10286,14 +10259,14 @@
 },
 { "id": "Jesús_tu_eres_mi_alegria",
   "titulo_original": ["Jesús, tú eres mi alegría"],
-  "autor": ["Williams S. Costa Junior"],
-  "compositor": ["Williams S. Costa Junior"],
+  "autor": ["Williams S. Costa Jr."],
+  "compositor": ["Williams S. Costa Jr."],
   "year": ["1990"],
   "tonalidad": ["Sol Mayor (G)"],
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Habacuc 3:18", "Juan 14:6"],
+  "referencia_biblica": ["Habacuc 3:18"],
   "tags": ["Alabanza","Gozo"],
   "idiomas": {
     "es": {
@@ -10486,7 +10459,7 @@
   "tonalidad": ["Sol Mayor (G)"],
   "tempo_bpm": ["Desconocido"],
   "compas": ["4/4"],
-  "ritmo": ["Desconocido"],
+  "ritmo": [""],
   "referencia_biblica": ["Jonás 1"],
   "tags": ["Obediencia", "Historia Bíblica", "Testimonio", "Infantil"],
 
@@ -13111,7 +13084,7 @@
   "tempo_bpm": ["86"],
   "compas": ["3/4"],
   "ritmo": ["Himno"],
-  "referencia_biblica": ["Efesios 3:18-19", "1 Juan 4:8"],
+  "referencia_biblica": ["Efesios 3:18-19"],
   "tags": ["Amor de Dios", "Himno", "Salvación", "Gracia", "Adoración"],
 
   "idiomas": {
@@ -13762,14 +13735,14 @@
 },
 { "id": "por_eso_le_amo",
   "titulo_original": ["Por eso lo amo"],
-  "autor": ["Daniel O. Plenc"],
-  "compositor": ["Daniel O. Plenc"],
+  "autor": ["José María Armengol"],
+  "compositor": ["José María Armengol"],
   "year": ["1990"],
   "tonalidad": ["Re Mayor (D)"],
   "tempo_bpm": ["84"],
   "compas": ["4/4"],
   "ritmo": ["Balada"],
-  "referencia_biblica": ["Apocalipsis 1:7", "1 Juan 4:19"],
+  "referencia_biblica": ["Apocalipsis 1:7"],
   "tags": ["Segunda Venida", "Amor de Dios", "Salvación", "Entrega", "Esperanza"],
 
   "idiomas": {
@@ -15201,7 +15174,6 @@
   "referencia_biblica": ["Salmo 121"],
   "tags": [],
 
-  "year": ["Desconocido"],
   "idiomas": {
     "es": {
       "titulo": ["Salmo 121: Alzaré mis ojos"],
@@ -15330,12 +15302,12 @@
   "titulo_original": ["Give me oil in my lamp"],
   "autor": ["A. Sevison"],
   "compositor": ["A. Sevison"],
-  "year": ["1953"],
+  "year": ["Desconocido"],
   "tonalidad": ["Do Mayor (C)"],
   "tempo_bpm": ["Desconocido"],
   "compas": ["4/4"],
   "ritmo": ["Alegre"],
-  "referencia_biblica": ["San Juan 14:17", "San Mateo 25:1-13", "San Mateo 5:16", "San Marcos 16:15", "Hechos 1:8"],
+  "referencia_biblica": ["San Juan 14:17", "San Mateo 25:1-13", "San Mateo 5:16", "San Marcos 16:15"],
   "tags": ["Espíritu Santo", "Misión", "Segunda Venida", "Fidelidad", "Clásico", "Alabanza", "Adoración", "Evangelismo", "Testimonio"],
   "idiomas": {
     "es": {
@@ -16691,7 +16663,7 @@
   "tonalidad": ["Do Mayor (C)"],
   "tempo_bpm": ["110"],
   "compas": ["4/4"],
-  "ritmo": ["Desconocido"],
+  "ritmo": [""],
   "referencia_biblica": ["1 Corintios 12:12-27", "Efesios 4:3-6"],
   "tags": ["Unidad", "Comunidad", "Servicio", "Música", "Alabanza"],
 
@@ -18765,7 +18737,7 @@
   "tempo_bpm": ["Desconocido"],
   "compas": ["Desconocido"],
   "ritmo": ["Desconocido"],
-  "referencia_biblica": ["Salmos 34:4", "Mateo 28:20"],
+  "referencia_biblica": ["Salmos 34:4"],
   "tags": ["Alabanza", "Alegría", "Confianza", "Caminar", "Infantil"],
   "idiomas": {
     "es": {
@@ -19272,14 +19244,14 @@
 },
 { "id": "si_lo_veremos",
   "titulo_original": ["Si, lo veremos"],
-  "autor": ["Mariane Scriven", "James Bingham"],
-  "compositor": ["Wintley Phipps"],
+  "autor": ["Desconocido"],
+  "compositor": ["Desconocido"],
   "year": ["Desconocido"],
   "tonalidad": ["Do Mayor (C)"],
   "tempo_bpm": ["Desconocido"],
   "compas": ["4/4"],
   "ritmo": ["Himno"],
-  "referencia_biblica": ["Apocalipsis 1:7", "Mateo 24:30", "Filipenses 2:10-11", "Isaías 25:9"],
+  "referencia_biblica": ["Apocalipsis 1:7", "Mateo 24:30", "Filipenses 2:10-11"],
   "tags": ["Segunda Venida", "Esperanza", "Adoración", "Alabanza", "Glorificación", "Victoria"],
   "idiomas": {
     "es": {
@@ -20347,13 +20319,13 @@
 { "id": "yo_tengo_gozo",
   "titulo_original": ["I've Got the Joy, Joy, Joy, Joy"],
   "autor": ["George Willis Cooke"],
-  "compositor": ["George W. Cooke"],
+  "compositor": ["George Willis Cooke"],
   "year": ["1926"],
   "tonalidad": ["Sol Mayor (G)"],
   "tempo_bpm": ["Desconocido"],
   "compas": ["4/4"],
   "ritmo": ["Alegre"],
-  "referencia_biblica": ["Filipenses 4:4, 7", "Juan 3:16", "Gálatas 5:22", "Romanos 15:13"],
+  "referencia_biblica": ["Filipenses 4:4, 7", "Juan 3:16", "Gálatas 5:22"],
   "tags": ["Gozo", "Clásico", "Alabanza", "Paz", "Corazón", "Alegría"],
 
   "idiomas": {

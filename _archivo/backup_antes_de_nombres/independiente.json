@@ -1,0 +1,610 @@
+[
+
+{ "_comment1": "LETRA  • -----------------------------------------------------------------------------------------------    LETRA Z" },
+{ "_comment2": "Moliendo cafe (Hugo Blanco) - Let the sunshine in (Quinta dimensión)"},
+
+{
+  "id": "soy_hincha_de_la_seleccion",
+  "titulo_original": ["No me arrepiento de este amor (Gilda)"],
+  "autor": ["Hinchada Argentina"],
+  "compositor": ["Desconocido"],
+  "year": ["2026"],
+  "tonalidad": ["Mi menor (Em)"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Cumbia", "Murga"],
+  "referencia_biblica": ["-"],
+  "tags": ["Fútbol", "Argentina", "Hinchada", "Copa América", "World Cup"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["Soy hincha de la selección"],
+      "titulo2": [""],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": ["Si", "Rolando"],      
+      "letra": [
+        "Soy hincha [Em]de la selección",
+        "la aliento [G]con el corazón,",
+        "ganamos la ter[D]cera con Lionel,",
+        "queremos ser cam[Em]peones otra vez.",
+        "",
+        "Y 3[Em]2 años después,",
+        "la Scalo[G]neta va a vengar",
+        "la copa que le [D]robaron al diez",
+        "la que no nos dejaron [Em]levantar.",
+        "",
+        "Quiero [G]ver la cuarta estrella",
+        "brillar [D]en la camiseta",
+        "soy ar[C]gento de la cuna",
+        "hasta el ca[G]jón. [D]",
+        "",
+        "Por Mal[G]vinas, por el Diego,",
+        "por la [D]última de Leo,",
+        "Argen[C]tina quiero verte bicam[B7]peón"
+      ],
+      "nota": [""]
+    }
+  }
+},
+{
+  "id": "vamos_argentina_sabes_que_yo_te_quiero",
+  "titulo_original": ["Desconocido"],
+  "autor": ["Hinchada Argentina"],
+  "compositor": ["Desconocido"],
+  "year": ["2022"],
+  "tonalidad": ["Desconocido"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Murga", "Cumbia", "Hinchada"],
+  "referencia_biblica": ["-"],
+  "tags": ["Fútbol", "Argentina", "Hinchada", "Mundial", "World Cup"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["Vamos Argentina, sabés Que Yo Te Quiero"],
+      "titulo2": [""],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": ["No"],      
+      "letra": [
+        "Ponga huevo vaya al frente Argentina",
+        "Ponga huevo vaya al frente jugadores",
+        "Este año tenemos que dar la vuelta",
+        "Nos vinimos todos a Doha a ser campeones",
+        "",
+        "Vamos Argentina",
+        "Sabes que yo te quiero",
+        "Hoy hay que ganar y ser primero",
+        "Esta hinchada loca, deja todo por la copa",
+        "La que tiene a Messi y Maradona"
+      ],
+      "nota": [""]
+    }
+  }
+},
+{
+  "id": "soy_argentino_es_un_sentimiento",
+  "titulo_original": ["Desconocido"],
+  "autor": ["Hinchada Argentina"],
+  "compositor": ["Desconocido"],
+  "year": ["Desconocido"],
+  "tonalidad": ["Desconocido"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Murga", "Cumbia", "Hinchada"],
+  "referencia_biblica": ["-"],
+  "tags": ["Fútbol", "Argentina", "Hinchada", "Clásico"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["Soy Argentino, es Un Sentimiento"],
+      "titulo2": [""],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": ["No"],      
+      "letra": [
+        "Ole, ole, ole, ole, ole, ole, ola",
+        "Ole, ole, ole, cada día te quiero más",
+        "Soy Argentino, es un sentimiento",
+        "No puedo parar."
+      ],
+      "nota": [""]
+    }
+  }
+},
+{
+  "id": "que_te_pasa_brazuca",
+  "titulo_original": ["Para no olvidar (Andres Calamaro)"],
+  "autor": ["Hinchada Argentina"],
+  "compositor": ["Desconocido"],
+  "year": ["2021"],
+  "tonalidad": ["Desconocido"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Murga", "Cumbia", "Hinchada"],
+  "referencia_biblica": ["-"],
+  "tags": ["Fútbol", "Argentina", "Hinchada", "Copa América"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["¿Qué Te Pasa Brazuca?"],
+      "titulo2": ["Esta copa es de Argentina"],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": ["No"],      
+      "letra": [
+        "¿Qué te pasa brazuca? Todavía seguís esperando",
+        "¿Qué te pasa brazuca? En la favela están todos llorando",
+        "Van pasando los años, te acordás del Mundial del 50",
+        "Están todos cagados, tenés miedo que pase de vuelta",
+        "",
+        "Porque Messi tiene puesta la corona, oh, oh",
+        "Y la magia de su zurda que enamora, oh, oh",
+        "Para colmo te acordás de Maradona",
+        "Sé que te duele, que te lastima",
+        "Pero esta Copa es de Argentina"
+      ],
+      "nota": [""]
+    }
+  }
+},
+{
+  "id": "de_la_mano_de",
+  "titulo_original": ["Vení, vení (Los Gedes)"],
+  "autor": ["Hinchada Argentina"],
+  "compositor": ["Desconocido"],
+  "year": ["Desconocido"],
+  "tonalidad": ["Desconocido"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Murga", "Cumbia", "Hinchada"],
+  "referencia_biblica": ["-"],
+  "tags": ["Fútbol", "Argentina", "Hinchada", "Clásico"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["De la mano de..."],
+      "titulo2": [""],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": ["No"],      
+      "letra": [
+        "Vení, vení, cantá conmigo",
+        "Que un amigo vas a encontrar",
+        "Que de la mano de Leo Messi",
+        "Todos la vuelta vamos a dar"
+      ],
+      "nota": ["Se cambio a Maradona por Leo Messi o por algun otro lider de la Seleccion Nacional"]
+    }
+  }
+},
+{
+  "id": "esta_es_la_banda_loca_de_la_argentina",
+  "titulo_original": ["Esta el la banda loca de la Argentina"],
+  "autor": ["Hinchada Argentina"],
+  "compositor": ["Desconocido"],
+  "year": ["Desconocido"],
+  "tonalidad": ["Desconocido"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Murga", "Cumbia", "Hinchada"],
+  "referencia_biblica": ["-"],
+  "tags": ["Fútbol", "Argentina", "Hinchada", "Malvinas"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["Esta Es La Banda Loca de La Argentina"],
+      "titulo2": ["Yo te quiero dar (La Mosca Tse-Tse)"],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": ["No"],      
+      "letra": [
+        "Esta es la banda loca de la Argentina",
+        "La que de Las Malvinas nunca se olvida",
+        "La que deja la vida por dos colores",
+        "La que le pide huevo a los jugadores",
+        "Para ser campeones"
+      ],
+      "nota": [""]
+    }
+  }
+},
+{
+  "id": "brasileiro_no_sabes_lo_que_te_espera",
+  "titulo_original": ["Desconocido"],
+  "autor": ["Hinchada Argentina"],
+  "compositor": ["Desconocido"],
+  "year": ["Desconocido"],
+  "tonalidad": ["Desconocido"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Murga", "Cumbia", "Hinchada"],
+  "referencia_biblica": ["-"],
+  "tags": ["Fútbol", "Argentina", "Hinchada", "Malvinas", "Bombonera"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["Brasileiro No Sabés Lo Que Te Espera"],
+      "titulo2": ["Y vamos, vamos, vamos selección"],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": ["No"],      
+      "letra": [
+        "A los ingleses los corrimos en todos lados",
+        "Los alemanes tienen miedo de cruzarnos",
+        "Ay, brasilero, no sabés lo que te espera",
+        "Cuando vengas a jugar a La Bombonera",
+        "",
+        "Por los colores de mi patria doy la vida",
+        "Como lo hicieron los soldados en Malvinas",
+        "",
+        "Cuando me muera no quiero nada de flores",
+        "Yo quiero un trapo que tenga estos colores",
+        "Y vamos, vamos, vamos, vamos selección"
+      ],
+      "nota": [""]
+    }
+  }
+},
+{
+  "id": "muchachos_ahora_nos_volvimos_a_ilusionar",
+  "titulo_original": ["Muchachos, esta noche me emborracho (La Mosca Tse-Tse)"],
+  "autor": ["Hinchada Argentina"],
+  "compositor": ["Guillermo Novellis", "Sergio Cairat", "Fernando Romero"],
+  "year": ["2022"],
+  "tonalidad": ["Desconocido"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Murga", "Ska"],
+  "referencia_biblica": ["-"],
+  "tags": ["Fútbol", "Argentina", "Hinchada", "Mundial 2022", "Copa América 2021"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["Muchachos, ahora nos volvimos a ilusionar"],
+      "titulo2": ["Muchachos"],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": ["No"],      
+      "letra": [
+        "En Argentina nací, tierra del Diego y Lionel",
+        "De los pibes de Malvinas que jamás olvidaré",
+        "No te lo puedo explicar, porque no vas a entender",
+        "Las finales que perdimos, cuántos años las lloré",
+        "",
+        "Pero eso se terminó, porque en el Maracaná",
+        "La final con los brazucas, la volvió a ganar papá",
+        "",
+        "Muchachos, ahora nos volvimos a ilusionar",
+        "Quiero ganar la tercera",
+        "Quiero ser campeón mundial",
+        "",
+        "Y al Diego, desde el cielo lo podemos ver",
+        "Con Don Diego y La Tota",
+        "Alentándolo a Lionel"
+      ],
+      "nota": [""]
+    }
+  }
+},
+{
+  "id": "brasil_decime_que_se_siente",
+  "titulo_original": ["Bad Moon Rising (Creedence Clearwater Revival)"],
+  "autor": ["Hinchada Argentina"],
+  "compositor": ["Creedence Clearwater Revival"],
+  "year": ["2014"],
+  "tonalidad": ["Desconocido"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Murga", "Cumbia", "Hinchada"],
+  "referencia_biblica": ["-"],
+  "tags": ["Fútbol", "Argentina", "Hinchada", "Mundial", "Clásico", "World Cup"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["Brasil, decime que se siente"],
+      "titulo2": [""],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": ["No"],      
+      "letra": [
+        "Brasil, decime qué se siente",
+        "Tener en casa a tu papá",
+        "Te juro que aunque pasen los años",
+        "Nunca nos vamos a olvidar",
+        "",
+        "Que el Diego los gambeteó",
+        "Que Cani los vacunó",
+        "Que estás llorando desde Italia hasta hoy",
+        "",
+        "A Messi lo vas a ver",
+        "La copa nos va a traer",
+        "Maradona es más grande que Pelé"
+      ],
+      "nota": [""]
+    }
+  }
+},
+{
+  "id": "todos_los_brazucas_se_pondran_a_llorar",
+  "titulo_original": ["Todos Los Brazucas Se Pondrán a Llorar"],
+  "autor": ["Hinchada Argentina"],
+  "compositor": ["Desconocido"],
+  "year": ["2018"],
+  "tonalidad": ["Desconocido"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Murga", "Cumbia", "Hinchada"],
+  "referencia_biblica": ["-"],
+  "tags": ["Fútbol", "Argentina", "Hinchada", "Mundial 2018", "Malvinas"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["Todos Los Brazucas Se Pondrán a Llorar"],
+      "titulo2": ["La Plaza Roja vamos a copar"],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": ["No"],      
+      "letra": [
+        "Vinimos todos juntos a Rusia a alentar a Argentina",
+        "Dejando muchas cosas de lado para verte a vos",
+        "La banda nunca se olvidará de las Islas Malvinas",
+        "Y ya le demostró al mundo entero lo que es la pasión",
+        "",
+        "Ganar la Copa del Mundo es lo que imagino",
+        "Los jugadores dejando la vida en cada partido",
+        "No importa donde sea el Mundial, igual te seguimos",
+        "",
+        "Y todos juntos vamos a festejar",
+        "La Plaza Roja vamos a copar",
+        "Todos los brazucas se pondrán a llorar",
+        "Porque este año la copa se la lleva papá"
+      ],
+      "nota": [""]
+    }
+  }
+},
+{
+  "id": "volveremos_volveremos",
+  "titulo_original": ["Zapatos rotos (Los Náufragos)"],
+  "autor": ["Hinchada Argentina"],
+  "compositor": ["Hinchada Argentina"],
+  "year": ["Desconocido"],
+  "tonalidad": ["Desconocido"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Murga", "Cumbia", "Hinchada"],
+  "referencia_biblica": ["-"],
+  "tags": ["Fútbol", "Argentina", "Hinchada", "Clásico", "Tradicional"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["Volveremos... Volveremos..."],
+      "titulo2": ["Volveremos a ser campeones"],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": ["No"],      
+      "letra": [
+        "Volveremos... Volveremos...",
+        "Volveremos... Volveremos...",
+        "Volveremos otra vez...",
+        "Volveremos a ser Campeones...",
+        "Como en el '86"
+      ],
+      "nota": [""]
+    }
+  }
+},
+{
+  "id": "vamos_vamos_argentina",
+  "titulo_original": ["Vamos, Vamos Argentina"],
+  "autor": ["Hinchada Argentina"],
+  "compositor": ["Fernando Sustaita", "Héctor Ayala"],
+  "year": ["1978"],
+  "tonalidad": ["Desconocido"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Murga", "Cumbia", "Hinchada"],
+  "referencia_biblica": ["-"],
+  "tags": ["Fútbol", "Argentina", "Hinchada", "Mundial 1978", "Clásico", "Himno"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["Vamos, Vamos Argentina"],
+      "titulo2": ["Esta banda quilombera"],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": ["No"],      
+      "letra": [
+        "Coro:",
+        "Vamos, vamos Argentina,",
+        "vamos, vamos a ganar,",
+        "que esta banda quilombera",
+        "no te deja, no te deja de alentar.",
+        "",
+        "1",
+        "El equipo está en la cancha,",
+        "el partido ya empezó,",
+        "y el estadio se estremece",
+        "cada vez que la Argentina hace un gol.",
+        "",
+        "Coro",
+        "Vamos, vamos Argentina,",
+        "vamos, vamos a ganar,",
+        "que esta banda quilombera",
+        "no te deja, no te deja de alentar."
+      ],
+      "nota": ["Dependiendo de quién la cante, en el estribillo a veces se usa la palabra \"barra\" en lugar de \"banda\" y \"no te deja de alentar\" para acortar el ritmo."]
+    }
+  }
+},
+{
+  "id": "hoy_te_vinimos_a_alentar",
+  "titulo_original": ["Vamo' vamos selección"],
+  "autor": ["Hinchada Argentina"],
+  "compositor": ["Hinchada Argentina"],
+  "year": ["Desconocido"],
+  "tonalidad": ["Desconocido"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Murga", "Cumbia", "Hinchada"],
+  "referencia_biblica": ["-"],
+  "tags": ["Fútbol", "Argentina", "Hinchada", "Clásico"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["Vamos Vamos Selección"],
+      "titulo2": ["Hoy hay que ganar"],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": ["No"],      
+      "letra": [
+        "Vamos vamos Selección",
+        "Hoy te vinimos a alentar",
+        "Para ser campeón",
+        "Hoy hay que ganar"
+      ],
+      "nota": [""]
+    }
+  }
+},
+{
+  "id": "el_que_no_salta_es_un_ingles",
+  "titulo_original": ["Y ya lo ve, el que no salta es un inglés"],
+  "autor": ["Hinchada Argentina"],
+  "compositor": ["Hinchada Argentina"],
+  "year": ["Desconocido"],
+  "tonalidad": ["Desconocido"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Murga", "Cumbia", "Hinchada"],
+  "referencia_biblica": ["-"],
+  "tags": ["Fútbol", "Argentina", "Hinchada", "Clásico", "Malvinas"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["Y ya lo ve, el que no salta es un inglés"],
+      "titulo2": [""],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": ["No"],      
+      "letra": [
+        "Y ya lo ve,",
+        "Y ya lo ve,",
+        "El que no salta,",
+        "Es un inglés…"
+      ],
+      "nota": [""]
+    }
+  }
+},
+{
+  "id": "palo_palo_bonito_somos_campeones_otra_vez",
+  "titulo_original": ["¡Palo, Palo, Palo, Palo Bonito, Palo Eh!"],
+  "autor": ["Hinchada Argentina"],
+  "compositor": ["Hinchada Argentina"],
+  "year": ["Desconocido"],
+  "tonalidad": ["Desconocido"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Murga", "Cumbia", "Hinchada"],
+  "referencia_biblica": ["-"],
+  "tags": ["Fútbol", "Argentina", "Hinchada", "Festejo", "Clásico"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["¡Palo, Palo, Palo, Palo Bonito, Palo Eh!"],
+      "titulo2": ["Somos campeones otra vez"],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": ["No"],        
+      "letra": [
+        "¡Palo, palo, palo, ",
+        "palo bonito, palo eh!",
+        "¡Eh, eh, eh!",
+        "¡Somos campeones otra vez!"
+      ],
+      "nota": [""]
+    }
+  }
+},
+{
+  "id": "vamos_vamos_argentina_yo_te_sigo_a_todas_partes",
+  "titulo_original": ["El negro Jse"],
+  "autor": ["Hinchada Argentina"],
+  "compositor": ["Hinchada Argentina"],
+  "year": ["Desconocido"],
+  "tonalidad": ["Desconocido"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Murga", "Cumbia", "Hinchada"],
+  "referencia_biblica": ["-"],
+  "tags": ["Fútbol", "Argentina", "Hinchada", "Clásico"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["Vamos, Vamos Argentina, Vamo' a ganar"],
+      "titulo2": ["Yo te sigo a todas partes"],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": ["No"],      
+      "letra": [
+        "Vamo', vamos Argentina, Vamo' a ganar,",
+        "Vamo' vamos Argentina Vamo' a ganar,",
+        "Yo te sigo a todas partes a donde vas,",
+        "Cada vez te quiero mas..."
+      ],
+      "nota": [""]
+    }
+  }
+},
+{
+  "id": "que_nacieron_hijos_nuestros_moriran",
+  "titulo_original": ["Pican, pican los mosquitos (Anonimo)"],
+  "autor": ["Hinchada Argentina"],
+  "compositor": ["Hinchada Argentina"],
+  "year": ["Desconocido"],
+  "tonalidad": ["Desconocido"],
+  "tempo_bpm": ["Desconocido"],
+  "compas": ["4/4"],
+  "ritmo": ["Murga", "Hinchada"],
+  "referencia_biblica": ["-"],
+  "tags": ["Fútbol", "Argentina", "Hinchada", "Clásico"],
+
+  "idiomas": {
+    "es": {
+      "titulo": ["Que Nacieron Hijos Nuestros"],
+      "titulo2": [""],
+      "audio_url": "",
+      "traductor": ["-"],
+      "partitura": "No",
+      "revisado": ["No"],      
+      "letra": [
+        "Vamos, vamos Argentina",
+        "Vamos, vamos a ganar",
+        "Que nacieron hijos nuestros",
+        "Hijos nuestros morirán"
+      ],
+      "nota": [""]
+    }
+  }
+}
+  
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "titulo": "La musica",
+    "autor": "Ellen G. White",
+    "tipo": "Libro",
+    "creditos": ["Ellen G. White Estate, Inc.", "https://ellenwhiteaudio.org/"],
+    "descarga": "https://ellenwhiteaudio.org/audio/sp/mu/La%20Mu%CC%81sica.pdf",
+    "permiso": "canciones/permisos/La_musica_EGWhite_permission.pdf"
+  }
+]
