@@ -68,9 +68,11 @@ function normalizePersonField(field) {
 // tiene su equivalente en otro libro (ej. un himno del Innario italiano con su
 // versión en español del Himnario). Una bandera por idioma, apuntando al libro
 // más importante que lo tenga; al tocarla se abre ese canto en su libro.
-function renderBanderasEquivalentes(song, mostrarNota = false) {
+const ORDEN_LIBROS_EQUIV = ["himnario", "himnario_1962", "melodias_de_victoria", "cancionero", "innario"];
+
+function calcularBanderasEquivalentes(song) {
   const propios = new Set(Object.keys(song.idiomas || {}).map(l => song.idiomas[l]?.idioma_real || l));
-  const ORDEN = ["himnario", "himnario_1962", "melodias_de_victoria", "cancionero", "innario"];
+  const ORDEN = ORDEN_LIBROS_EQUIV;
   const porIdioma = new Map();
 
   getEquivalenciasDe(song).forEach(eq => {
@@ -90,20 +92,86 @@ function renderBanderasEquivalentes(song, mostrarNota = false) {
     });
   });
 
+  return porIdioma;
+}
+
+function renderBanderasEquivalentes(song, mostrarNota = false) {
+  const porIdioma = calcularBanderasEquivalentes(song);
+  const marcasPorIdioma = marcasEquivalentesPorIdioma(song);
+
   return [...porIdioma.entries()]
     .sort((a, b) => (FLAG_NAMES[a[0]] || a[0]).localeCompare(FLAG_NAMES[b[0]] || b[0]))
     .map(([real, x]) => {
       const libro = getLibroDef(x.eq.libro);
       // al costado de la bandera, en dos renglones: arriba la ♪ (si ese idioma
-      // tiene audio, solo en los listados) y abajo la marca del libro
-      const nota = mostrarNota && x.audio ? `<span class="flag-audio-note">♪</span>` : "";
-      const marca = libro?.marca ? `<small class="libro-marca">${escapeHtml(libro.marca)}</small>` : "";
-      const lateral = nota || marca ? `<span class="flag-side">${nota}${marca}</span>` : "";
+      // tiene audio, solo en los listados) y abajo las marcas de los libros que lo tienen
+      const lateral = ladoBanderaHtml(mostrarNota && x.audio, marcasLibrosHtml(marcasPorIdioma.get(real)));
       const detalle = `${IDIOMA_NOMBRES[real] || real} — ${libro?.nombre || x.eq.libro}${x.eq.numero ? " #" + x.eq.numero : ""}`;
 
-      return `<span class="flag flag-equiv" ${dataAction("abrirEquivalente", [x.eq.id, x.lang])} title="${escapeHtml(detalle)}"><span class="flag-emoji" data-flag-lang="${real}">${getFlagEmoji(real)}</span>${lateral}</span>`;
+      return `<span class="flag flag-lado" ${dataAction("abrirEquivalente", [x.eq.id, x.lang])} title="${escapeHtml(detalle)}"><span class="flag-emoji" data-flag-lang="${real}">${getFlagEmoji(real)}</span>${lateral}</span>`;
     })
     .join("");
+}
+
+// Marcas de los OTROS libros donde está este mismo canto, agrupadas por idioma: al costado de la
+// bandera de cada idioma va la marca ('62, MV, '09, IA, C) de los libros que lo tienen en ESE idioma
+// (ej. el himno 1 del 2009 en español → "'62"). Sirve para las listas por letra/número, los rangos y
+// la búsqueda. Si un libro tiene varios cantos iguales a este (repetidos en ese libro) se junta en una sola
+// marca con todos los números en el tooltip; al tocarla se abre el primero.
+//
+// Solo se marca el idioma PROPIO del libro (2009/62/MV/Cancionero → español, Innario → italiano): una
+// traducción suelta (guaraní 🇵🇾, inglés, portugués...) no es "un himnario de ese país", así que su
+// bandera no lleva la marca del libro donde está esa traducción.
+function marcasEquivalentesPorIdioma(song) {
+  const mapa = new Map();   // idioma real -> [{ eq, lang, numeros }]
+
+  getEquivalenciasDe(song).forEach(eq => {
+    const otro = getSongPorIdRapido(eq.id);
+    if (!otro) return;
+
+    const idiomaPropio = getLibroDef(eq.libro)?.idiomaDefault || "es";
+
+    Object.keys(otro.idiomas || {}).forEach(lang => {
+      const datos = otro.idiomas[lang];
+      if (!datos?.titulo) return;
+
+      const real = datos.idioma_real || lang;
+      if (real !== idiomaPropio) return;
+
+      const lista = mapa.get(real) || [];
+      const previo = lista.find(x => x.eq.libro === eq.libro);
+
+      if (previo) {
+        if (eq.numero) previo.numeros.push(eq.numero);
+      } else {
+        lista.push({ eq, lang, numeros: eq.numero ? [eq.numero] : [] });
+      }
+      mapa.set(real, lista);
+    });
+  });
+
+  mapa.forEach(lista => lista.sort((a, b) => ORDEN_LIBROS_EQUIV.indexOf(a.eq.libro) - ORDEN_LIBROS_EQUIV.indexOf(b.eq.libro)));
+  return mapa;
+}
+
+function marcasLibrosHtml(lista) {
+  if (!lista?.length) return "";
+
+  // cada marca es una celda suelta del bloque .flag-side (ver ladoBanderaHtml y style.css)
+  return lista.map(x => {
+    const libro = getLibroDef(x.eq.libro);
+    if (!libro?.marca) return "";
+
+    const detalle = `${libro.nombre}${x.numeros.length ? " #" + x.numeros.join(", #") : ""}`;
+    return `<small class="libro-marca marca-equiv" ${dataAction("abrirEquivalente", [x.eq.id, x.lang])} title="${escapeHtml(detalle)}">${escapeHtml(libro.marca)}</small>`;
+  }).join("");
+}
+
+// bloque al costado de una bandera: 2 renglones que se llenan hacia abajo y luego hacia la derecha
+// (♪ si ese idioma tiene audio, después las marcas de los otros libros). Vacío si no hay nada.
+function ladoBanderaHtml(conNota, marcas) {
+  const nota = conNota ? `<span class="flag-audio-note">♪</span>` : "";
+  return nota || marcas ? `<span class="flag-side">${nota}${marcas}</span>` : "";
 }
 
 // "También en:" — enlaces al mismo canto en otros libros (ver getEquivalenciasDe)
@@ -524,7 +592,7 @@ function renderList(letter) {
       <div style="display:flex; justify-content:space-between; align-items:center;">
         <span>${item.displayTitle}${getMarcaLibroHtml(item.song)}</span>
         <span style="opacity:0.7; font-size:14px;">
-          ${renderLanguageFlags(item.song, true)}${renderBanderasEquivalentes(item.song, true)}
+          ${renderLanguageFlags(item.song, true, false, true)}${renderBanderasEquivalentes(item.song, true)}
         </span>
       </div>
     </li>
@@ -800,7 +868,7 @@ function renderHymnRange(start, end) {
         <div style="display:flex; justify-content:space-between;">
           <span>${label}${getMarcaLibroHtml(item.song)}</span>
           <span class="lang-flags-list">
-            ${renderLanguageFlags(item.song)}${renderBanderasEquivalentes(item.song)}
+            ${renderLanguageFlags(item.song, true, false, true)}${renderBanderasEquivalentes(item.song, true)}
           </span>
         </div>
       </li>

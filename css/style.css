@@ -3084,27 +3084,40 @@ body.scrolled .fav-add-btn { font-size: 15px; }
 
 /* bandera de otro libro: el renglón es el de la bandera y al costado se parte en
    dos — arriba la ♪ (si ese idioma tiene audio) y abajo la marca ('09, '62, MV, IA, C) */
-.flag-equiv {
+.flag,
+.flag-equiv,
+.flag-lado {
   display: inline-flex;
   align-items: stretch;
 }
 
-.flag-equiv .flag-emoji { line-height: 1.15; }
+/* mismo alto de renglón con o sin bloque al costado (si no, las filas sin marcas quedaban más altas) */
+.flag .flag-emoji,
+.flag-equiv .flag-emoji,
+.flag-lado .flag-emoji,
+.flag-lado > [data-flag-lang] { line-height: 1.15; }
 
+/* Bloque al costado de la bandera: 2 renglones que se llenan hacia ABAJO y después hacia la
+   DERECHA. Celdas en orden: ♪ (si ese idioma tiene audio), '09, '62, MV, IA, C.
+   Ej.: ♪ / '09 en la 1ª columna, '62 / MV en la 2ª, IA en la 3ª. Sin ♪ arrancan las marcas. */
 .flag-side {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-left: 1px;
+  display: inline-grid;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  column-gap: 5px;
+  row-gap: 1px;
+  align-items: center;
+  margin-left: 3px;
   line-height: 1;
-  padding: 1px 0;
 }
 
 .flag-side .flag-audio-note {
-  font-size: 9px;
+  font-size: 10px;
   vertical-align: baseline;
   margin-left: 0;
+  opacity: 0.9;
+  line-height: 1;
 }
 
 .flag-side .libro-marca {
@@ -4294,6 +4307,8 @@ body.projector [data-action="abrirAfinometroModal"],
 body.tv [data-action="abrirAfinometroModal"],
 body.projector [data-action="abrirNotepad"],
 body.tv [data-action="abrirNotepad"],
+body.projector [data-action="abrirBiblioteca"],
+body.tv [data-action="abrirBiblioteca"],
 body.projector #chordDiagramRow,
 body.tv #chordDiagramRow,
 body.projector #chordTransposeToggleRow,
@@ -4370,4 +4385,24 @@ body.tv .mensaje-inicio .referencia {
 body.projector .qr-proyector {
   width: min(180px, 24vh);
   margin-top: 8px;
+}
+
+/* en el proyector no se elige el color del tema (se elige antes, fuera del modo proyector) */
+body.projector .menu-row-accent,
+body.projector #accentPicker {
+  display: none !important;
+}
+
+/* marcas de otros libros en las listas por letra/número: tocables (abren el canto en ese libro) */
+.libro-marca.marca-equiv {
+  cursor: pointer;
+}
+
+.libro-marca.marca-equiv:hover { opacity: 1; text-decoration: underline; }
+
+/* marcas al costado de las banderas en los listados: chicas pero legibles */
+.flag-side .libro-marca,
+.flag .flag-side .libro-marca {
+  font-size: 8px;
+  opacity: 0.6;
 }

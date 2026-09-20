@@ -269,7 +269,7 @@ const UI_LABELS = {
   tablatura:               { es: "Tablatura",              en: "Tablature",             it: "Tablatura",               pt: "Tablatura",               fr: "Tablature",                de: "Tabulatur" },
   trasporte:               { es: "Trasporte",              en: "Chord transpose",       it: "Trasporto",               pt: "Transporte",              fr: "Transposition",            de: "Transponierung" },
   ajustes:                 { es: "Ajustes",                en: "Settings",              it: "Impostazioni",            pt: "Ajustes",                 fr: "Paramètres",               de: "Einstellungen" },
-  idioma_canciones:        { es: "Idioma de las canciones",en: "Song language",         it: "Lingua dei canti",        pt: "Idioma das músicas",      fr: "Langue des chants",        de: "Liedsprache" },
+  idioma_canciones:        { es: "Idioma",                 en: "Language",              it: "Lingua",                  pt: "Idioma",                  fr: "Langue",                   de: "Sprache" },
   color_tema:              { es: "Color del tema",         en: "Theme color",           it: "Colore del tema",         pt: "Cor do tema",             fr: "Couleur du thème",         de: "Themenfarbe" },
   modo_tv:                 { es: "Modo TV (control remoto)", en: "TV mode (remote control)", it: "Modalità TV (telecomando)", pt: "Modo TV (controle remoto)", fr: "Mode TV (télécommande)", de: "TV-Modus (Fernbedienung)" },
   sin_conexion:            { es: "Sin conexión", en: "Offline", it: "Offline", pt: "Sem conexão", fr: "Hors ligne", de: "Offline" },
@@ -754,8 +754,9 @@ function audioNoteHtml(idiomaData) {
 
 // Devuelve banderas disponibles (versión compacta para listas — usada en
 // los resultados de búsqueda, ver search() en app.js)
-function getAvailableFlags(song) {
+function getAvailableFlags(song, conMarcas = false) {
   const idiomas = song.idiomas || {};
+  const marcasPorIdioma = conMarcas && typeof marcasEquivalentesPorIdioma === "function" ? marcasEquivalentesPorIdioma(song) : null;
 
   const langs = Object.keys(idiomas)
     .filter(lang => idiomas[lang])
@@ -767,12 +768,15 @@ function getAvailableFlags(song) {
   // resultados de búsqueda en vez de la real (🇺🇸/🇬🇧)
   return wrapFlagRows(langs, lang => {
     const flagLang = idiomas[lang]?.idioma_real || lang;
+    const lado = marcasPorIdioma
+      ? ladoBanderaHtml(idiomas[lang]?.audio_url, marcasLibrosHtml(marcasPorIdioma.get(flagLang)))
+      : "";
+
     return `
-    <span ${dataAction("changeLanguage", [lang, song.id])}
+    <span class="flag-lado" ${dataAction("changeLanguage", [lang, song.id])}
           title="${IDIOMA_NOMBRES[flagLang] || flagLang}"
-          style="cursor:pointer; margin-right:6px;"
-          data-flag-lang="${flagLang}">
-      ${getFlagEmoji(flagLang)}
+          style="cursor:pointer; margin-right:6px;">
+      <span data-flag-lang="${flagLang}">${getFlagEmoji(flagLang)}</span>${lado}
     </span>
   `;
   });
@@ -787,8 +791,10 @@ function getAvailableFlags(song) {
 // abierta (.song-meta) hay mucho más ancho disponible, así que ahí no se
 // pre-agrupan — se dejan sueltas y el flex-wrap del contenedor las acomoda
 // solo, entrando todas en una fila si entran
-function renderLanguageFlags(song, mostrarNotaAudio = false, singleRow = false) {
+function renderLanguageFlags(song, mostrarNotaAudio = false, singleRow = false, conMarcas = false) {
   const idiomas = song.idiomas || {};
+  // conMarcas (listados): al costado de cada bandera van la ♪ y las marcas de los otros libros que lo tienen en ese idioma
+  const marcasPorIdioma = conMarcas && typeof marcasEquivalentesPorIdioma === "function" ? marcasEquivalentesPorIdioma(song) : null;
 
   const langs = Object.keys(idiomas)
     .filter(lang => idiomas[lang]?.titulo)
@@ -810,11 +816,15 @@ function renderLanguageFlags(song, mostrarNotaAudio = false, singleRow = false) 
   // por el usuario (ej. EEUU/GB para "en"), así que no hace falta nada más.
   const flagHtml = lang => {
     const flagLang = idiomas[lang]?.idioma_real || lang;
+    const lado = marcasPorIdioma
+      ? ladoBanderaHtml(mostrarNotaAudio && idiomas[lang]?.audio_url, marcasLibrosHtml(marcasPorIdioma.get(flagLang)))
+      : "";
+
     return `
-    <span class="flag ${lang === idiomaActual ? "active" : ""}"
+    <span class="flag ${lang === idiomaActual ? "active" : ""}${lado ? " flag-lado" : ""}"
           ${dataAction("changeLanguage", [lang, song.id])}
           title="${IDIOMA_NOMBRES[flagLang] || flagLang}">
-      <span class="flag-emoji" data-flag-lang="${flagLang}">${getFlagEmoji(flagLang)}</span>${mostrarNotaAudio ? audioNoteHtml(idiomas[lang]) : ""}
+      <span class="flag-emoji" data-flag-lang="${flagLang}">${getFlagEmoji(flagLang)}</span>${marcasPorIdioma ? lado : (mostrarNotaAudio ? audioNoteHtml(idiomas[lang]) : "")}
     </span>
   `;
   };

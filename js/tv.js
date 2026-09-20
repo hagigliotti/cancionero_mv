@@ -126,12 +126,12 @@
     // los botones flotantes ▲ ▼ quedan afuera: son para quien usa un cursor, con el control
     // remoto ya se scrollea con las flechas
     // los acordes de la letra no son paradas del foco (con ↓ se iría de acorde en acorde)
-    return Array.from(raiz.querySelectorAll(SEL_FOCO)).filter(el => !el.matches(".chord") && esVisible(el));
+    return Array.from(raiz.querySelectorAll(SEL_FOCO)).filter(el => !el.matches(".chord, .libro-marca") && esVisible(el));
   }
 
   // los <li>, <div>, <span> con data-action no reciben el foco solos: se les da tabindex
   function volverEnfocables(raiz) {
-    raiz.querySelectorAll("[data-action]:not(button):not(a):not(input):not(select):not(textarea):not([tabindex]):not(.chord)").forEach(el => {
+    raiz.querySelectorAll("[data-action]:not(button):not(a):not(input):not(select):not(textarea):not([tabindex]):not(.chord):not(.libro-marca)").forEach(el => {
       el.tabIndex = 0;
       if (!el.getAttribute("role")) el.setAttribute("role", "button");
     });

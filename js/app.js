@@ -173,7 +173,7 @@ function getPersonLabel(tipo) {
 
 // ===================== AFINÓMETRO ==========================================================
 function abrirAfinometroModal() {
-  if (herramientasMusicalesOcultas()) return;
+  if (modoPantallaGrande()) return;
 
   const modal = document.getElementById("metroModal");
 
@@ -664,18 +664,18 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=194",
-    "modals/revised.html?v=194",
-    "modals/people.html?v=194",
-    "modals/valores.html?v=194",
-    "modals/share.html?v=194",
-    "modals/contacto.html?v=194",
-    "modals/afinometro.html?v=194",
-    "modals/biblioteca.html?v=194",
-    "modals/listas.html?v=194",
-    "modals/notepad.html?v=194",
-    "modals/oracion.html?v=194",
-    "modals/equivalencias.html?v=194"
+    "modals/info.html?v=199",
+    "modals/revised.html?v=199",
+    "modals/people.html?v=199",
+    "modals/valores.html?v=199",
+    "modals/share.html?v=199",
+    "modals/contacto.html?v=199",
+    "modals/afinometro.html?v=199",
+    "modals/biblioteca.html?v=199",
+    "modals/listas.html?v=199",
+    "modals/notepad.html?v=199",
+    "modals/oracion.html?v=199",
+    "modals/equivalencias.html?v=199"
   ];
 
   for (const path of modales) {
@@ -1351,7 +1351,7 @@ function search(q) {
   list.innerHTML = sorted.map(c => {
     const titulo = getSongTitle(c);
     const num = getNumeroHimno(c);
-    const flags = getAvailableFlags(c);
+    const flags = getAvailableFlags(c, true);
 
     const baseTitle = num ? `${num} - ${titulo}` : titulo;
 
@@ -1359,7 +1359,7 @@ function search(q) {
       <li ${dataAction("selectSong", [c.id])}>
         <div style="display:flex; justify-content:space-between; gap:10px;">
           <span>${baseTitle}${getMarcaLibroHtml(c)}</span>
-          <span style="opacity:0.7; font-size:14px;">${flags}${renderBanderasEquivalentes(c)}</span>
+          <span style="opacity:0.7; font-size:14px;">${flags}${renderBanderasEquivalentes(c, true)}</span>
         </div>
       </li>
     `;
@@ -1621,6 +1621,8 @@ function renderAudioLink(song, idiomaData) {
 
 // ============= MODAL BIBLIOTECA  para descargar
 function abrirBiblioteca() {
+  if (modoPantallaGrande()) return;
+
   closeMenu();
   document.getElementById("bibliotecaModal").style.display = "block";
   renderBiblioteca(biblioteca);

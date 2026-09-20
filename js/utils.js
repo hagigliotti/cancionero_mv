@@ -476,8 +476,10 @@ function cerrarListModal() {
   document.getElementById("listModal").style.display = "none";
 }
 
-// En el proyector y en el Modo TV se ocultan las herramientas de instrumento que no tienen
-// sentido ahí (afinador/metrónomo con micrófono, bloc musical para grabar y escribir).
-function herramientasMusicalesOcultas() {
+// En el proyector y en el Modo TV (pantalla grande, sin teclado ni micrófono a mano) se ocultan
+// las funciones que no tienen sentido ahí: afinador/metrónomo, bloc musical, biblioteca de
+// descargas y el sonido/diagrama de los acordes. El CSS de esos modos oculta los botones y
+// esta función hace que tampoco se puedan abrir por otro camino.
+function modoPantallaGrande() {
   return document.body.classList.contains("projector") || document.body.classList.contains("tv");
 }
