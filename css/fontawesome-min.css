@@ -1,16 +1,17 @@
 /*!
  * Font Awesome Free 6.5.0 (https://fontawesome.com) — License: https://fontawesome.com/license/free
  * (Iconos: CC BY 4.0 · Fuentes: SIL OFL 1.1 · Código: MIT)
- * Copia LOCAL y mínima: solo los íconos que usa la app, para que se vean también sin internet
- * (antes venía de un CDN y sin conexión el botón ☰ del menú quedaba en blanco).
- * Si se usa un ícono nuevo, agregar acá su clase con el código de all.min.css.
+ * Copia LOCAL y mínima: solo los 7 íconos que usa la app, con las fuentes RECORTADAS e incrustadas
+ * en este mismo archivo (data:), así se ven siempre —también sin internet— y no dependen de que
+ * haya que subir otros archivos junto con este.
+ * Si se usa un ícono nuevo hay que volver a generar las fuentes con ese glifo (ver la nota del final).
  */
 @font-face {
   font-family: "Font Awesome 6 Free";
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("../fonts/fontawesome/fa-solid-900.woff2") format("woff2");
+  src: url("data:font/woff2;base64,d09GMgABAAAAAAI4AAoAAAAABGgAAAHyAwUBAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAARMqEUgE2AiQDFMsMBCAFBgcgG7UDIC4OzNO6TqRooXTjypsFPfxcOS9Z+sfMioQukjGnCqgI4ktky5rtRqNN2fssbJ1fsQgl0bK29TUb8JmMZz5wTl0Wbjbd6QgniE6KKI00ONDp+OYf9OaOOlgJl9pYe/WewGPZ9km8oDFtA4OU/5PMybqFsSEfxX/SvTg7ztFfs/TMvQ16xiggAHXrFpAFgAXYQBw2AuLwUAUECGDBr7m4LvyanbORNyMvRLYi8LEXXEdH5eAjnDhSqYfGxpSF6EUfmoqUiY/0WnvwEPByBJjdsIiIPZJUzK6+n1j/rhSisLSyfHSZqH1leSW4wiPitMY1tQwq+NnXchq+4D/anORXGDxRXu6t9CV9IHA/C+2TDo2+uRqTCBat6Kx5HhByy33saWqMcULCw0OMuXrVGAScT8NoU1euXDLGQXS5n9UVlspPUEvTat+R89wlEg/Uc3FaifjsuqqaRZZ+yhIaE/Sh4gV10KvRJD4Oa/9B1hR/7CZsADk6SgLl9EF03S8ANKC88yRArv7iG8wnQjz5zbbWyyxDeR6hoxHGqGhweeuknMOgtmhUNtvHb0Bge8Whjb1YkW3/A6EWAF/O338I8PP967VnB34uQgCPpOC5m3aAzytY7V4dBXW1cpcFWSEeg2kOcJHXKkaAl368bS1Zcx82AA==") format("woff2");
 }
 
 @font-face {
@@ -18,7 +19,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("../fonts/fontawesome/fa-brands-400.woff2") format("woff2");
+  src: url("data:font/woff2;base64,d09GMgABAAAAAAQMAAoAAAAABwAAAAPEAwUBAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAARMqJbgE2AiQDEMsKBCAFBgcgG0sGAIzDuLEb3SJ+NDFmz+vMZt5HR5JR4PUyep2NAsiHFVB9JQG2VxG3BB1wHWztwbndDLc5+BwaidBMQglUjtZW3TioNUs0EiFTAikcg+2BD2JW8ZBolEajkUn/n0RD/Pr9oyoMr/x7ES+A5j98BAbgXl4FYMdnvYgu3LEQGIXPo4wbN504sg+fn3n+7I38uvMu8AB2l0GI0ma+w2kAHASgIMY8SqbRWOAeMfzCmefPXn32xk7HtV+6qvh88SkQ8G4DdD7nLfwcFhFidGPJQW7jnPJa1oLyc4rzzninwqHXbZ2mxcZybuyMt7M0KBU5NA9yQku1jQ+A8Z/l9KlbTkHrd8ep0+3/GRVjDsTFiC5p+8/06rtoun3hEz9nxJAmy9ESV7LPwFcAD3R+5hm+D48KGrgZ9+BRPIfXgTwaBtpI0RmPsjQ3lMR5lKQtowlsWNfkkUszVI8rPQSxHSdUMJGRNWGplrCTJQ/SIKUFnqnPF32iLpdyYh2a0yxONDY3UkITftG58aYjmfmG6PW3qC21YT+NoUkzRn9Bs/n6rVuFc3P7qpRKNY6996FYV2EUBdUkDXU4MzjzrAlFpFCtd0nf4LQ/CsvlsCCiQudYrjQavWWyundu1uUg2B9OT4hSIkpUoBSplAx6SisqLaEEj1Qr0MpfFOlMKqFWH8ybZevW645tPPYZ6SDLhMamUow8nSWNrnbb+jKJa9vjKApttdpQxUgVCvTeOtXwc7FhFMULnfR5Egzj3shEbGw8nk+5nfaz/Xbxgmn3IhT7sK+VWIuiFZ+lBRCUAGm6t2A1NgHs5hSAqIwcxIkyzdwW5Y4LaSwojenuES61ljrNWMaK0fqiWC59xQX7d+qOhkYJKcqEnWl/+fDD3Bp3Oevrr2eUrM7q2WhAecChvw+EAitmv74OmUOHVxP/U/2Tr6CKUSw6l+AJYCqGpg5vyRTnJnphEDatkkduIqaluIbZckogMsBiq81sEvunFrWzBrM214wpLY2tdBjIKZFqJbdG01mU8k4a6EFfuv0/m9NBl4PTpl09TRJjkgy873FV7xLvwsA77h2lpjk6gnBtBRulCP2ktqGOV9B7c6HUFw+BYcG5Qs/QrNUXOZJ0IcpkUAqaTBZCx1bZQZ789A5S/tWbli4xdj7oyYsJVoJQ0wcBqyFtjhz+V5kY5BEPPQ4goAwx9v+t9a2svegDAbf9dd8HH6H9/8/fX7onSqTZBTyiVAnsxSQbvU5I0yGgpHlLvOgZFS2l3wQOcRvflJviOzTegD9KgPcWCgAAAA==") format("woff2");
 }
 
 .fa-solid, .fa-brands {
@@ -41,3 +42,7 @@
 .fa-youtube:before       { content: "\f167"; }
 .fa-instagram:before     { content: "\f16d"; }
 .fa-github:before        { content: "\f09b"; }
+
+/* Nota: glifos incluidos = f0c9 f053 f054 f078 (solid) y f167 f16d f09b (brands). Para sumar otro:
+   bajar fa-solid-900.woff2 / fa-brands-400.woff2 de cdnjs (font-awesome 6.5.0), recortar con
+   pyftsubset --unicodes=... --flavor=woff2 y volver a pegar el base64 acá. */

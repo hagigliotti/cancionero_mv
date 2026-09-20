@@ -4212,8 +4212,6 @@ body.tv :focus {
   outline: 4px solid var(--sky, #38bdf8) !important;
   outline-offset: 3px;
   box-shadow: 0 0 0 7px rgba(56, 189, 248, 0.28) !important;
-  position: relative;
-  z-index: 2;
 }
 
 /* en las barras de letras/números el aro va ADENTRO del botón: las filas están
@@ -4345,3 +4343,31 @@ body.tv .song-metro .meta-link {
 
 /* en la pantalla proyectada no distrae al público */
 body.projector .offline-badge { display: none !important; }
+
+/* ============================================================
+   PROYECTOR / MODO TV en pantallas bajas (una TV suele dar ~540px de alto):
+   el versículo de inicio y el QR tienen que entrar enteros sin cortarse abajo
+   ============================================================ */
+body.projector .mensaje-inicio,
+body.tv .mensaje-inicio {
+  padding-top: 4px;
+  padding-bottom: 12px;
+}
+
+body.projector .mensaje-inicio .versiculo,
+body.tv .mensaje-inicio .versiculo {
+  font-size: clamp(1.5rem, 5.2vh, 2.4rem);
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+body.projector .mensaje-inicio .referencia,
+body.tv .mensaje-inicio .referencia {
+  font-size: clamp(0.85rem, 2.6vh, 1rem);
+}
+
+body.projector .qr-proyector {
+  width: min(180px, 24vh);
+  margin-top: 8px;
+}
