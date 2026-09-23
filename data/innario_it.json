@@ -20958,13 +20958,11 @@
           "",
           "4",
           "Shalom a voi, shalom a voi. Shalom, shalom.",
-          "Dal ciel io verrà, sarete con me! Shalom, shalom.",
-          "",
-          "Versione alternativa",
-          "Shalom pace a voi, shalom pace a voi. Shalom, shalom.",
-          "Io dono a voi la pace del cuor. Shalom, shalom."
+          "Dal ciel io verrà, sarete con me! Shalom, shalom."
         ],
-        "nota": [""]
+        "nota": ["Versione alternativa:",
+                "Shalom pace a voi, shalom pace a voi. Shalom, shalom.",
+                "Io dono a voi la pace del cuor. Shalom, shalom."]
       }
     }
   },
