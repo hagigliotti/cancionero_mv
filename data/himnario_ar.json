@@ -26,7 +26,7 @@
         "traductor": ["Tomás J. González Carvajal"],
         "presentacion": ["canciones/himnario_ar/001.pps", "canciones/himnario_ar/001.ppsx"],
         "mp3": ["canciones/himnario_ar/001.mp3"],
-        "partitura": ["canciones/himnario_ar/001.png"],
+        "partitura": ["https://raw.githubusercontent.com/hagigliotti/cancionero_media/main/himnario_ar/partituras/001.pdf"],
         "revisado": ["No"],
         "letra": [
           "1",
@@ -72,7 +72,7 @@
         "audio_url": "https://www.youtube.com/watch?v=Dj1UnjnBbrM&list=PLgp3jS3mSB4YZVCTiPt0YVvo6qoVyAPAs&index=2",
         "arreglo": [""],
         "traductor": ["Edgar L. Maxwell"],
-        "partitura": "No",
+        "partitura": ["https://raw.githubusercontent.com/hagigliotti/cancionero_media/main/himnario_ar/partituras/002.pdf"],
         "revisado": ["No"],
         "letra": [
           "1",
@@ -125,7 +125,7 @@
         "audio_url": "",
         "arreglo": [""],
         "traductor": ["Juan B. Cabrera"],
-        "partitura": "No",
+        "partitura": ["https://raw.githubusercontent.com/hagigliotti/cancionero_media/main/himnario_ar/partituras/003.pdf"],
         "revisado": ["No"],
         "letra": [
           "1",
@@ -171,7 +171,7 @@
         "audio_url": "",
         "arreglo": [""],
         "traductor": ["G. A. Sherwell"],
-        "partitura": "No",
+        "partitura": ["https://raw.githubusercontent.com/hagigliotti/cancionero_media/main/himnario_ar/partituras/004.pdf"],
         "revisado": ["No"],
         "letra": [
           "1",
@@ -217,7 +217,7 @@
         "audio_url": "",
         "arreglo": [""],
         "traductor": ["Walton J. Brown"],
-        "partitura": "No",
+        "partitura": ["https://raw.githubusercontent.com/hagigliotti/cancionero_media/main/himnario_ar/partituras/005.pdf"],
         "revisado": ["No"],
         "letra": [
           "1",
@@ -263,7 +263,7 @@
         "audio_url": "",
         "arreglo": [""],
         "traductor": ["Anónimo"],
-        "partitura": "No",
+        "partitura": ["https://raw.githubusercontent.com/hagigliotti/cancionero_media/main/himnario_ar/partituras/006.pdf"],
         "revisado": ["No"],
         "letra": [
           "¡Hosanna! ¡Hosanna! ¡Hosanna!",
