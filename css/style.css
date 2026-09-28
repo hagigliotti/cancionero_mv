@@ -214,6 +214,15 @@ body.light-mode.projector {
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; }
 
+/* barras de scroll con el color de acento del tema. --scroll-thumb lo
+   copia applyAccentColor() (theme.js) sobre <html>: los acentos se definen
+   en body[data-accent], y la barra de la página es del <html>, que no
+   hereda variables de su hijo <body>. scrollbar-color se hereda solo a
+   todo lo scrolleable de adentro (menú, modales, listas).
+   iPhone/iPad: iOS no deja colorear su indicador de scroll (es del
+   sistema, gris) — esto se ve en compu y en Android */
+html { scrollbar-color: var(--scroll-thumb, #38bdf8) transparent; }
+
 html, body {
   margin: 0;
   padding: 0;
@@ -1771,7 +1780,9 @@ body.dark-mode.projector .teleprompter-bar {
   max-width: calc(100vw - 32px);
   padding: 10px 10px 10px 16px;
   border-radius: var(--radius-xl);
-  background: var(--navy);
+  /* fondo oscuro del tema elegido (el mismo del menú/modales nocturnos),
+     no navy fijo — con acento amarillo/verde/etc. queda en su tono */
+  background: var(--modal-bg, var(--navy));
   color: #fff;
   box-shadow: var(--shadow-lg);
   font-size: 13px;
@@ -1792,16 +1803,20 @@ body.dark-mode.projector .teleprompter-bar {
   font-size: 12.5px;
   font-weight: 700;
   cursor: pointer;
-  /* navy claro (no --sky): el aviso ya es oscuro (var(--navy)) y --sky es
-     el color de acento elegible (celeste por defecto, pero puede ser
-     cualquier otro) — un botón celeste bien saturado ahí adentro quedaba
-     fuera de tono con el resto, siempre "azul" sin importar el tema */
-  background: var(--navy-soft);
-  color: #fff;
+  /* color de acento del tema (Actualizar / Instalar) — antes era un navy
+     fijo y se veía siempre azul aunque el tema fuera amarillo, rosa, etc.
+     Texto en --navy (única variable que no cambia por tema, siempre
+     oscura): mismo criterio que .mini-stat-chip.activo, contraste
+     garantizado con cualquier acento claro */
+  background: var(--sky);
+  color: var(--navy);
   transition: var(--trans);
 }
 
-.update-banner button:hover { background: var(--navy-mid); }
+.update-banner button:hover { filter: brightness(1.1); }
+
+/* gris (slate) es el único acento medio-oscuro: ahí el navy no contrasta */
+body[data-accent="gris"] .update-banner button:not(.update-banner-close) { color: #fff; }
 
 .update-banner-close {
   background: rgba(255,255,255,0.12) !important;

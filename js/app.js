@@ -673,20 +673,20 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=209",
-    "modals/revised.html?v=209",
-    "modals/people.html?v=209",
-    "modals/valores.html?v=209",
-    "modals/share.html?v=209",
-    "modals/contacto.html?v=209",
-    "modals/afinometro.html?v=209",
-    "modals/biblioteca.html?v=209",
-    "modals/listas.html?v=209",
-    "modals/notepad.html?v=209",
-    "modals/oracion.html?v=209",
-    "modals/equivalencias.html?v=209",
-    "modals/visor.html?v=209",
-    "modals/donar.html?v=209"
+    "modals/info.html?v=211",
+    "modals/revised.html?v=211",
+    "modals/people.html?v=211",
+    "modals/valores.html?v=211",
+    "modals/share.html?v=211",
+    "modals/contacto.html?v=211",
+    "modals/afinometro.html?v=211",
+    "modals/biblioteca.html?v=211",
+    "modals/listas.html?v=211",
+    "modals/notepad.html?v=211",
+    "modals/oracion.html?v=211",
+    "modals/equivalencias.html?v=211",
+    "modals/visor.html?v=211",
+    "modals/donar.html?v=211"
   ];
 
   for (const path of modales) {
@@ -1054,15 +1054,17 @@ function closeMenu() {
     if (e.touches.length !== 1) return;
 
     const isOpen = document.getElementById("dropdownMenu")?.classList.contains("active");
-    const startedInMenuBody = !!e.target.closest(".menu-body");
 
     startX = e.touches[0].clientX;
     startY = e.touches[0].clientY;
     fromEdge = startX <= EDGE_ZONE;
 
-    // si el toque arranca dentro de la lista scrolleable del menú, no lo
-    // tratamos como gesto de cerrar — así el scroll nativo nunca se interrumpe
-    tracking = (isOpen && !startedInMenuBody) || fromEdge;
+    // con el menú abierto se sigue el gesto desde CUALQUIER lado, incluida la
+    // lista scrolleable (.menu-body, casi todo el panel) — antes se excluía
+    // y en la práctica deslizar sobre el menú no lo cerraba nunca. No rompe
+    // el scroll: los listeners son passive (no frenan nada) y en touchend
+    // los gestos mayormente verticales se descartan como scroll
+    tracking = isOpen || fromEdge;
   }, { passive: true });
 
   document.addEventListener("touchend", (e) => {

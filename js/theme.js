@@ -95,6 +95,10 @@ function applyAccentColor(id, guardar) {
     document.body.setAttribute("data-accent", id);
   }
 
+  // barras de scroll del color del acento (ver "scrollbar-color" en style.css)
+  document.documentElement.style.setProperty("--scroll-thumb",
+    getComputedStyle(document.body).getPropertyValue("--sky").trim());
+
   if (guardar) localStorage.setItem("accentColor", id);
 
   document.querySelectorAll("#accentPicker [data-accent-option]").forEach(btn => {
