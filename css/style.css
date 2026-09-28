@@ -353,6 +353,16 @@ body.light-mode .logo-title img {
 body.light-mode.projector .top-bar { background: #000; }
 body.dark-mode.projector  .top-bar { background: var(--proj-tint); }
 
+/* arriba de todo (sin scrollear) la barra todavía no tapa nada, así que va
+   transparente: el resplandor del logo (drop-shadow, ver .logo-title img)
+   pasa por detrás del buscador y se desvanece solo, en vez de cortarse en
+   seco con una línea recta donde empezaba el fondo opaco de la barra (que
+   en iPhone arranca incluso más arriba, por el padding del safe-area).
+   Vuelve a ser opaca con body.scrolled (lo pone el script de index.html
+   pasados los 60px), bastante antes de que la barra quede pegada arriba y
+   pase contenido por debajo */
+body:not(.scrolled):not(.projector) .top-bar { background: transparent; }
+
 .top-row {
   display: flex;
   gap: 8px;
@@ -540,11 +550,20 @@ body.modal-open {
   pointer-events: auto;
 }
 
+/* la cabecera del menú arranca debajo del safe-area con margen extra: en
+   iOS 26 la barra de estado tiene un difuminado propio que baja unos
+   ~20px más allá del safe-area y desenfocaba lo que quedaba ahí (badges,
+   🕶️). ✕ y 🕶️ son position:absolute con top fijo (pensado para modales
+   centrados), así que acá también se corren por el safe-area — si no, el
+   ✕ quedaba escondido detrás de la hora/batería */
 .menu-head {
   position: relative;
-  padding: calc(18px + env(safe-area-inset-top, 0)) 20px 16px;
+  padding: calc(30px + env(safe-area-inset-top, 0)) 20px 16px;
   flex-shrink: 0;
 }
+
+.menu-head .about-close       { top: calc(26px + env(safe-area-inset-top, 0)); }
+.menu-head .theme-toggle-btn  { top: calc(64px + env(safe-area-inset-top, 0)); }
 
 .menu-head h2 {
   margin: 0 0 4px;
