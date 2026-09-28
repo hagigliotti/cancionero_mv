@@ -232,6 +232,18 @@
             "confianza": "alta",
             "fuente": "tabla oficial de correlación 1962-2009"
           }
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-075",
+          "numero": 75,
+          "titulo": "Suenen Dulces Himnos",
+          "vinculo": {
+            "con": "himnario#8",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
+          }
         }
       ],
       "nota": ""
@@ -1506,6 +1518,18 @@
             "tipo": "igual",
             "confianza": "alta",
             "fuente": "tabla oficial de correlación 1962-2009"
+          }
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-074",
+          "numero": 74,
+          "titulo": "Noche de Paz",
+          "vinculo": {
+            "con": "himnario#81",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
           }
         }
       ],
@@ -3414,6 +3438,18 @@
             "confianza": "alta",
             "fuente": "tabla oficial de correlación 1962-2009"
           }
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-090",
+          "numero": 90,
+          "titulo": "¿Has Oído el Mensaje?",
+          "vinculo": {
+            "con": "himnario#171",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
+          }
         }
       ],
       "nota": ""
@@ -4299,6 +4335,18 @@
             "confianza": "alta",
             "fuente": "tabla oficial de correlación 1962-2009"
           }
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-152",
+          "numero": 152,
+          "titulo": "Abre tu Corazón",
+          "vinculo": {
+            "con": "himnario#230",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
+          }
         }
       ],
       "nota": ""
@@ -4544,6 +4592,18 @@
             "tipo": "igual",
             "confianza": "alta",
             "fuente": "tabla oficial de correlación 1962-2009"
+          }
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-108",
+          "numero": 108,
+          "titulo": "Yo Te Seguiré",
+          "vinculo": {
+            "con": "himnario#247",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
           }
         }
       ],
@@ -5116,6 +5176,18 @@
             "confianza": "alta",
             "fuente": "tabla oficial de correlación 1962-2009"
           }
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-068",
+          "numero": 68,
+          "titulo": "Vivo por Cristo",
+          "vinculo": {
+            "con": "himnario#266",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
+          }
         }
       ],
       "nota": ""
@@ -5169,6 +5241,18 @@
             "confianza": "alta",
             "fuente": "tabla oficial de correlación 1962-2009",
             "nota": "La tabla oficial lo marca entre paréntesis: la letra o la música cambian de forma significativa entre ediciones."
+          }
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-079",
+          "numero": 79,
+          "titulo": "Puedo Oír tu Voz Llamando",
+          "vinculo": {
+            "con": "himnario#268",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
           }
         }
       ],
@@ -6783,6 +6867,18 @@
             "confianza": "media",
             "fuente": "letra (búsqueda de duplicados)"
           }
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-145",
+          "numero": 145,
+          "titulo": "Yo Tengo Gozo",
+          "vinculo": {
+            "con": "himnario#351",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
+          }
         }
       ],
       "nota": ""
@@ -7627,6 +7723,18 @@
             "tipo": "igual",
             "confianza": "alta",
             "fuente": "tabla oficial de correlación 1962-2009"
+          }
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-078",
+          "numero": 78,
+          "titulo": "Eterna Roca es mi Jesús",
+          "vinculo": {
+            "con": "himnario#401",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
           }
         }
       ],
@@ -9341,6 +9449,18 @@
             "confianza": "alta",
             "fuente": "tabla oficial de correlación 1962-2009"
           }
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-120",
+          "numero": 120,
+          "titulo": "¡De Pie, de Pie, Cristianos!",
+          "vinculo": {
+            "con": "himnario#506",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
+          }
         }
       ],
       "nota": ""
@@ -9497,6 +9617,18 @@
             "confianza": "alta",
             "fuente": "tabla oficial de correlación 1962-2009"
           }
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-112",
+          "numero": 112,
+          "titulo": "Honra al Hombre de Valor",
+          "vinculo": {
+            "con": "himnario#513",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
+          }
         }
       ],
       "nota": ""
@@ -9574,6 +9706,18 @@
             "tipo": "igual",
             "confianza": "alta",
             "fuente": "tabla oficial de correlación 1962-2009"
+          }
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-119",
+          "numero": 119,
+          "titulo": "¡Firmes y Adelante!",
+          "vinculo": {
+            "con": "himnario#516",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
           }
         }
       ],
@@ -10941,6 +11085,18 @@
             "fuente": "título/melodía reconocidos (la letra italiana es otra traducción)",
             "nota": "Home, sweet home."
           }
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-194",
+          "numero": 194,
+          "titulo": "Hogar de Mis Recuerdos",
+          "vinculo": {
+            "con": "himnario#593",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
+          }
         }
       ],
       "nota": ""
@@ -11188,6 +11344,18 @@
             "tipo": "igual",
             "confianza": "alta",
             "fuente": "tabla oficial de correlación 1962-2009"
+          }
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-104",
+          "numero": 104,
+          "titulo": "¡Oh, Jóvenes, Venid!",
+          "vinculo": {
+            "con": "himnario#609",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
           }
         }
       ],
@@ -11957,6 +12125,370 @@
             "confianza": "media",
             "fuente": "letra (búsqueda de duplicados)",
             "nota": "Misma base de letra con retoques entre ediciones."
+          }
+        }
+      ],
+      "nota": ""
+    },
+    {
+      "id": "eq-0431",
+      "titulo": "Todo en el altar",
+      "confianza": "alta",
+      "miembros": [
+        {
+          "libro": "himnario",
+          "id": "himno-231",
+          "numero": 231,
+          "titulo": "Todo en el altar"
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-083",
+          "numero": 83,
+          "titulo": "Todo en el Altar",
+          "vinculo": {
+            "con": "himnario#231",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto, variante)"
+          }
+        }
+      ],
+      "nota": ""
+    },
+    {
+      "id": "eq-0432",
+      "titulo": "Mi hogar celestial",
+      "confianza": "alta",
+      "miembros": [
+        {
+          "libro": "himnario",
+          "id": "himno-335",
+          "numero": 335,
+          "titulo": "Mi hogar celestial"
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-092",
+          "numero": 92,
+          "titulo": "Mi Hogar Celestial",
+          "vinculo": {
+            "con": "himnario#335",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
+          }
+        }
+      ],
+      "nota": ""
+    },
+    {
+      "id": "eq-0433",
+      "titulo": "Nítido rayo por Cristo",
+      "confianza": "alta",
+      "miembros": [
+        {
+          "libro": "himnario",
+          "id": "himno-607",
+          "numero": 607,
+          "titulo": "Nítido rayo por Cristo"
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-113",
+          "numero": 113,
+          "titulo": "Nítido Rayo por Cristo",
+          "vinculo": {
+            "con": "himnario#607",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
+          }
+        }
+      ],
+      "nota": ""
+    },
+    {
+      "id": "eq-0434",
+      "titulo": "¡Firmes! ¡Fuertes!",
+      "confianza": "alta",
+      "miembros": [
+        {
+          "libro": "himnario",
+          "id": "himno-509",
+          "numero": 509,
+          "titulo": "¡Firmes! ¡Fuertes!"
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-118",
+          "numero": 118,
+          "titulo": "¡Firmes! ¡Fuertes!",
+          "vinculo": {
+            "con": "himnario#509",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
+          }
+        }
+      ],
+      "nota": ""
+    },
+    {
+      "id": "eq-0435",
+      "titulo": "¡Adelante! manda el Señor",
+      "confianza": "alta",
+      "miembros": [
+        {
+          "libro": "himnario",
+          "id": "himno-520",
+          "numero": 520,
+          "titulo": "¡Adelante! manda el Señor"
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-124",
+          "numero": 124,
+          "titulo": "Adelante, Manda el Señor",
+          "vinculo": {
+            "con": "himnario#520",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
+          }
+        }
+      ],
+      "nota": ""
+    },
+    {
+      "id": "eq-0436",
+      "titulo": "¡El salvavidas!",
+      "confianza": "alta",
+      "miembros": [
+        {
+          "libro": "himnario_1962",
+          "id": "himno_62-358",
+          "numero": 358,
+          "titulo": "¡El salvavidas!"
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-132",
+          "numero": 132,
+          "titulo": "El Salvavidas",
+          "vinculo": {
+            "con": "himnario_1962#358",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
+          }
+        }
+      ],
+      "nota": ""
+    },
+    {
+      "id": "eq-0437",
+      "titulo": "De heladas cordilleras",
+      "confianza": "alta",
+      "miembros": [
+        {
+          "libro": "himnario_1962",
+          "id": "himno_62-446",
+          "numero": 446,
+          "titulo": "De heladas cordilleras"
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-135",
+          "numero": 135,
+          "titulo": "De Heladas Cordilleras",
+          "vinculo": {
+            "con": "himnario_1962#446",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
+          }
+        }
+      ],
+      "nota": ""
+    },
+    {
+      "id": "eq-0438",
+      "titulo": "Id y predicad el evangelio",
+      "confianza": "alta",
+      "miembros": [
+        {
+          "libro": "himnario",
+          "id": "himno-569",
+          "numero": 569,
+          "titulo": "Id y predicad el evangelio"
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-136",
+          "numero": 136,
+          "titulo": "Id y Predicad el Evangelio",
+          "vinculo": {
+            "con": "himnario#569",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
+          }
+        }
+      ],
+      "nota": ""
+    },
+    {
+      "id": "eq-0439",
+      "titulo": "Mi Salvador",
+      "confianza": "alta",
+      "miembros": [
+        {
+          "libro": "himnario",
+          "id": "himno-144",
+          "numero": 144,
+          "titulo": "Mi Salvador"
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-150",
+          "numero": 150,
+          "titulo": "Mi Salvador",
+          "vinculo": {
+            "con": "himnario#144",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
+          }
+        }
+      ],
+      "nota": ""
+    },
+    {
+      "id": "eq-0440",
+      "titulo": "Hablando con Jesús",
+      "confianza": "alta",
+      "miembros": [
+        {
+          "libro": "himnario",
+          "id": "himno-385",
+          "numero": 385,
+          "titulo": "Hablando con Jesús"
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-155",
+          "numero": 155,
+          "titulo": "Hablando con Jesús",
+          "vinculo": {
+            "con": "himnario#385",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
+          }
+        }
+      ],
+      "nota": ""
+    },
+    {
+      "id": "eq-0441",
+      "titulo": "¡Oh, cuán grande amor!",
+      "confianza": "alta",
+      "miembros": [
+        {
+          "libro": "himnario",
+          "id": "himno-115",
+          "numero": 115,
+          "titulo": "¡Oh, cuán grande amor!"
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-156",
+          "numero": 156,
+          "titulo": "¡Oh, Cuán Grande Amor!",
+          "vinculo": {
+            "con": "himnario#115",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
+          }
+        }
+      ],
+      "nota": ""
+    },
+    {
+      "id": "eq-0442",
+      "titulo": "Llena mi ser",
+      "confianza": "alta",
+      "miembros": [
+        {
+          "libro": "himnario",
+          "id": "himno-192",
+          "numero": 192,
+          "titulo": "Llena mi ser"
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-158",
+          "numero": 158,
+          "titulo": "Llena mi Ser",
+          "vinculo": {
+            "con": "himnario#192",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
+          }
+        }
+      ],
+      "nota": ""
+    },
+    {
+      "id": "eq-0443",
+      "titulo": "¿Estamos tristes?",
+      "confianza": "alta",
+      "miembros": [
+        {
+          "libro": "cancionero",
+          "id": "estamos_tristes",
+          "numero": null,
+          "titulo": "¿Estamos tristes?"
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-160",
+          "numero": 160,
+          "titulo": "¿Estamos Tristes?",
+          "vinculo": {
+            "con": "cancionero#None",
+            "tipo": "igual",
+            "confianza": "alta",
+            "fuente": "letra (mismo texto)"
+          }
+        }
+      ],
+      "nota": ""
+    },
+    {
+      "id": "eq-0444",
+      "titulo": "Pescadores de hombres",
+      "confianza": "media",
+      "miembros": [
+        {
+          "libro": "himnario",
+          "id": "himno-572",
+          "numero": 572,
+          "titulo": "Pescadores de hombres"
+        },
+        {
+          "libro": "melodias_de_victoria",
+          "id": "himno_mv-175",
+          "numero": 175,
+          "titulo": "Pescadores de Hombres",
+          "vinculo": {
+            "con": "himnario#572",
+            "tipo": "parcial",
+            "confianza": "media",
+            "fuente": "letra (mismo canto, otra traducción: \"yo os haré\" / \"de hombres seréis\")"
           }
         }
       ],

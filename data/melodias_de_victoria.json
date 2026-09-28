@@ -9023,7 +9023,7 @@
     "id": "himno_mv-159",
     "titulo_original": ["God Is Love"],
     "corito": "No",
-    "autor": ["B. D. A."],
+    "autor": ["B. D. Ackley"],
     "compositor": ["B. D. Ackley"],
     "year": ["1938"],
     "tonalidad": ["SIb"],
@@ -9092,7 +9092,7 @@
     "id": "himno_mv-161",
     "titulo_original": ["In My Heart There Rings a Melody"],
     "corito": "No",
-    "autor": ["E. M. R."],
+    "autor": ["Elton M. Roth"],
     "compositor": ["Elton M. Roth"],
     "year": ["1924"],
     "tonalidad": ["LAb"],
@@ -9127,7 +9127,7 @@
     "id": "himno_mv-162",
     "titulo_original": ["He Brought Me Out"],
     "corito": "No",
-    "autor": ["H. L. G."],
+    "autor": ["H. L. Gilmour"],
     "compositor": ["H. L. Gilmour"],
     "year": ["Desconocido"],
     "tonalidad": ["LAb"],
@@ -9195,8 +9195,8 @@
     "id": "himno_mv-164",
     "titulo_original": ["He Lifted Me Up—Yes, Up"],
     "corito": "No",
-    "autor": ["Sra. D. T. Yaxley"],
-    "compositor": ["Sra. D. T. Yaxley", "Sra. A. E. Eisenhart"],
+    "autor": ["Mrs. D. T. Yaxley"],
+    "compositor": ["Mrs. D. T. Yaxley", "Sra. A. E. Eisenhart"],
     "year": ["Desconocido"],
     "tonalidad": ["Sol"],
     "tempo_bpm": ["Desconocido"],
@@ -9230,7 +9230,7 @@
     "id": "himno_mv-165",
     "titulo_original": ["Lord, Keep Me Shining"],
     "corito": "No",
-    "autor": ["C. A. G."],
+    "autor": ["Chalvar A. Gabriel"],
     "compositor": ["Chalvar A. Gabriel"],
     "year": ["1926"],
     "tonalidad": ["FA"],
@@ -9298,7 +9298,7 @@
     "id": "himno_mv-167",
     "titulo_original": ["Goodbye Chorus"],
     "corito": "No",
-    "autor": ["W. P. L."],
+    "autor": ["Wendell P. Loveless"],
     "compositor": ["Wendell P. Loveless"],
     "year": ["1938"],
     "tonalidad": ["FA"],
@@ -9368,7 +9368,7 @@
     "id": "himno_mv-169",
     "titulo_original": ["V Is for Victory"],
     "corito": "No",
-    "autor": ["W. P. L."],
+    "autor": ["Wendell P. Loveless"],
     "compositor": ["Wendell P. Loveless"],
     "year": ["Desconocido"],
     "tonalidad": ["FA"],
@@ -9788,7 +9788,7 @@
   },
   {
     "id": "himno_mv-180",
-    "titulo_original": ["Canto de Paseo"],
+    "titulo_original": ["The Hiker's Song"],
     "corito": "No",
     "autor": ["Dorothy Lehman Sumerau"],
     "compositor": ["J. Lincoln Hall"],
@@ -9802,7 +9802,7 @@
     "idiomas": {
       "es": {
         "titulo": ["Canto de Paseo"],
-        "titulo2": ["The Hiker's Song"],
+        "titulo2": [""],
         "numero_himno": "180",
         "audio_url": "",
         "traductor": ["E. B. de García"],
@@ -9837,7 +9837,7 @@
   },
   {
     "id": "himno_mv-181",
-    "titulo_original": ["Ven a la Fogata"],
+    "titulo_original": ["The Camp Fire"],
     "corito": "No",
     "autor": ["Louella Leonard"],
     "compositor": ["M. Isabella Ritter"],
@@ -9851,7 +9851,7 @@
     "idiomas": {
       "es": {
         "titulo": ["Ven a la Fogata"],
-        "titulo2": ["The Camp Fire"],
+        "titulo2": [""],
         "numero_himno": "181",
         "audio_url": "",
         "traductor": ["C. Taylor"],
@@ -9887,7 +9887,7 @@
   },
   {
     "id": "himno_mv-182",
-    "titulo_original": ["Toque de Queda"],
+    "titulo_original": ["Taps"],
     "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Tradicional"],
@@ -9901,7 +9901,7 @@
     "idiomas": {
       "es": {
         "titulo": ["Toque de Queda"],
-        "titulo2": ["Taps"],
+        "titulo2": [""],
         "numero_himno": "182",
         "audio_url": "",
         "traductor": ["W. C. de Wild"],
@@ -9924,8 +9924,8 @@
   },
   {
     "id": "himno_mv-183",
-    "titulo_original": ["Sonreíd"],
-    "corito": "No",
+    "titulo_original": ["Smile, Smile, Smile"],
+    "corito": "Si",
     "autor": ["Carolyn R. Freeman"],
     "compositor": ["Carolyn R. Freeman"],
     "year": ["1920"],
@@ -9938,7 +9938,7 @@
     "idiomas": {
       "es": {
         "titulo": ["Sonreíd"],
-        "titulo2": ["Smile, Smile, Smile"],
+        "titulo2": [""],
         "numero_himno": "183",
         "audio_url": "",
         "traductor": ["A. H. Roth"],
@@ -9965,11 +9965,23 @@
           "¿Deseáis a esta gente las cargas aliviar?",
           "Hacedlos optimistas y ponedlos a cantar.",
           "",
+          "Coro",
+          "Sonreíd, y continuad sonriendo;",
+          "Sonreíd, las nubes pasarán.",
+          "Sonreíd, buscad el sol luciente,",
+          "Y pronto las tristezas se alejarán.",
+          "",
           "3",
           "Alegres y contentos debemos siempre estar,",
           "El genio malo desterrar, el gozo retener.",
           "¿Os duele ver tristeza, miseria y mepesart?",
-          "Mediante una sonrisa fácil os será vencer."
+          "Mediante una sonrisa fácil os será vencer.",
+          "",
+          "Coro",
+          "Sonreíd, y continuad sonriendo;",
+          "Sonreíd, las nubes pasarán.",
+          "Sonreíd, buscad el sol luciente,",
+          "Y pronto las tristezas se alejarán."
         ],
         "nota": [""]
       }
@@ -9977,8 +9989,8 @@
   },
   {
     "id": "himno_mv-184",
-    "titulo_original": ["¡Haló!"],
-    "corito": "Si",
+    "titulo_original": ["Hello! Hello!"],
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -9991,7 +10003,7 @@
     "idiomas": {
       "es": {
         "titulo": ["¡Haló!"],
-        "titulo2": ["Hello! Hello! / Saludo Armonioso / Harmony greeting"],
+        "titulo2": [""],
         "numero_himno": "184",
         "audio_url": "",
         "traductor": ["A. H. Roth"],
@@ -10005,16 +10017,14 @@
           "Nos alegra veros, Todos bienvenidos.",
           "¡Haló! ¡Haló! ¡Haló! ¡Haló!"
         ],
-        "nota": [
-          "Este saludo se cantará con cuatro grupos, haciendo sonar las notas en acorde diatónico. El primer grupo comienza y sostiene su 'Haló' hasta que todos los grupos hayan cantado sus 'Haloes.' Así se obtendrá una linda armonía. Cuanto más grandes los grupos, mejor. Sosténgase la última serie de 'Haloes' permitiendo que la armonía desaparezca gradualmente."
-        ]
+        "nota": ["Este saludo se cantará con cuatro grupos, haciendo sonar las notas en acorde diatónico. El primer grupo comienza y sostiene su 'Haló' hasta que todos los grupos hayan cantado sus 'Haloes.' Así se obtendrá una linda armonía. Cuanto más grandes los grupos, mejor. Sosténgase la última serie de 'Haloes' permitiendo que la armonía desaparezca gradualmente."]
       }
     }
   },
   {
     "id": "himno_mv-185",
-    "titulo_original": ["Bella es la Noche"],
-    "corito": "Si",
+    "titulo_original": ["Lovely Evening"],
+    "corito": "No",
     "autor": ["E. O. Harbin"],
     "compositor": ["Desconocido"],
     "year": ["1921"],
@@ -10027,7 +10037,7 @@
     "idiomas": {
       "es": {
         "titulo": ["Bella es la Noche"],
-        "titulo2": ["Lovely Evening / Ronda de tres partes"],
+        "titulo2": [""],
         "numero_himno": "185",
         "audio_url": "",
         "traductor": ["A. H. Roth"],
@@ -10048,7 +10058,7 @@
   {
     "id": "himno_mv-186",
     "titulo_original": ["Nace el Día"],
-    "corito": "Si",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -10061,7 +10071,7 @@
     "idiomas": {
       "es": {
         "titulo": ["Nace el Día"],
-        "titulo2": ["Ronda de cuatro partes"],
+        "titulo2": [""],
         "numero_himno": "186",
         "audio_url": "",
         "traductor": ["A. H. Roth"],
@@ -10081,7 +10091,7 @@
   {
     "id": "himno_mv-187",
     "titulo_original": ["Reumatismo"],
-    "corito": "Si",
+    "corito": "No",
     "autor": ["A. H. Roth"],
     "compositor": ["A. H. Roth"],
     "year": ["Desconocido"],
@@ -10094,7 +10104,7 @@
     "idiomas": {
       "es": {
         "titulo": ["Reumatismo"],
-        "titulo2": ["Ronda de cuatro partes"],
+        "titulo2": [""],
         "numero_himno": "187",
         "audio_url": "",
         "traductor": ["A. H. Roth"],
@@ -10116,7 +10126,7 @@
   {
     "id": "himno_mv-188",
     "titulo_original": ["Arde Londres"],
-    "corito": "Si",
+    "corito": "No",
     "autor": ["Desconocido"],
     "compositor": ["Desconocido"],
     "year": ["Desconocido"],
@@ -10129,7 +10139,7 @@
     "idiomas": {
       "es": {
         "titulo": ["Arde Londres"],
-        "titulo2": ["Ronda de cuatro partes"],
+        "titulo2": [""],
         "numero_himno": "188",
         "audio_url": "",
         "traductor": ["A. H. Roth"],
@@ -10202,7 +10212,7 @@
   },
   {
     "id": "himno_mv-190",
-    "titulo_original": ["La Vieja y Dulce Canción de Amor"],
+    "titulo_original": ["Love's Old Sweet Song"],
     "corito": "No",
     "autor": ["A. Clifton Bingham"],
     "compositor": ["J. L. Molloy"],
@@ -10216,7 +10226,7 @@
     "idiomas": {
       "es": {
         "titulo": ["La Vieja y Dulce Canción de Amor"],
-        "titulo2": ["Love's Old Sweet Song"],
+        "titulo2": [""],
         "numero_himno": "190",
         "audio_url": "",
         "traductor": ["G. Bustamante"],
@@ -10339,7 +10349,7 @@
   },
   {
     "id": "himno_mv-193",
-    "titulo_original": ["La Ultima Rosa del Verano"],
+    "titulo_original": ["The Last Rose of Summer"],
     "corito": "No",
     "autor": ["Thomas Moore"],
     "compositor": ["Tradicional Irlandés"],
@@ -10353,7 +10363,7 @@
     "idiomas": {
       "es": {
         "titulo": ["La Ultima Rosa del Verano"],
-        "titulo2": ["The Last Rose of Summer"],
+        "titulo2": [""],
         "numero_himno": "193",
         "audio_url": "",
         "traductor": [""],
@@ -10386,7 +10396,7 @@
   },
   {
     "id": "himno_mv-194",
-    "titulo_original": ["Hogar de Mis Recuerdos"],
+    "titulo_original": ["Home, Sweet Home"],
     "corito": "No",
     "autor": ["John Howard Payne"],
     "compositor": ["H. R. Bishop"],
@@ -10400,7 +10410,7 @@
     "idiomas": {
       "es": {
         "titulo": ["Hogar de Mis Recuerdos"],
-        "titulo2": ["Home, Sweet Home"],
+        "titulo2": [""],
         "numero_himno": "194",
         "audio_url": "",
         "traductor": [""],
@@ -10721,7 +10731,7 @@
   },
   {
     "id": "himno_mv-201",
-    "titulo_original": ["Mi Patria"],
+    "titulo_original": ["America the Beautiful"],
     "corito": "No",
     "autor": ["G. Báez Camargo"],
     "compositor": ["Samuel A. Ward"],
@@ -10735,7 +10745,7 @@
     "idiomas": {
       "es": {
         "titulo": ["Mi Patria"],
-        "titulo2": ["America the Beautiful"],
+        "titulo2": [""],
         "numero_himno": "201",
         "audio_url": "",
         "traductor": [""],

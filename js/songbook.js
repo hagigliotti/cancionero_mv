@@ -281,6 +281,14 @@ function openSong(id) {
     ? `${renderPersonLinks("Arreglo", arregloLimpio)} | `
     : "";
 
+  // PARA PARTITURA (PDF) — se abre en un visor adentro de la app, nunca se
+  // descarga (ver abrirPartituraModal en app.js)
+  const partituraLista = normalizeArrayField(s.partitura).filter(u => u && u !== "No");
+
+  const partituraHtml = partituraLista.length
+    ? `<a href="#" ${dataAction("abrirPartituraModal", [partituraLista[0]])}>${t("click_aqui")}</a>`
+    : t("no");
+
   // ===================== META ENRIQUECIDO =====================
   const meta = `
     <div class="song-meta">
@@ -386,12 +394,7 @@ function openSong(id) {
 
         <b>${t("ritmo")}:</b> ${traducirValorFijo(formatRitmo(song.ritmo)) || t("desconocido")} |
 
-        <b>${t("partitura")}:</b> ${
-          song.idiomas?.[idiomaActual]?.partitura &&
-          song.idiomas[idiomaActual].partitura !== "No"
-            ? `<a href="${song.idiomas[idiomaActual].partitura}" target="_blank">${t("click_aqui")}</a>`
-            : t("no")
-        }
+        <b>${t("partitura")}:</b> ${partituraHtml}
       </div>
 
       <div>

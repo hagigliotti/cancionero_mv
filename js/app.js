@@ -409,7 +409,9 @@ function buildSongRow(song, titulo, num, letra, onSelect, forzarMarca = false) {
 
   div.innerHTML = `
     <span class="song-row-icon">🎵</span>
-    <span class="song-row-title">${baseTitle}${getMarcaLibroHtml(song, forzarMarca)}</span>
+    <span class="song-row-title">
+      <span class="song-row-title-text">${baseTitle}</span>${getMarcaLibroHtml(song, forzarMarca)}
+    </span>
     <button type="button" class="fav-add-btn" title="Agregar a una lista">⭐</button>
   `;
 
@@ -664,18 +666,19 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=199",
-    "modals/revised.html?v=199",
-    "modals/people.html?v=199",
-    "modals/valores.html?v=199",
-    "modals/share.html?v=199",
-    "modals/contacto.html?v=199",
-    "modals/afinometro.html?v=199",
-    "modals/biblioteca.html?v=199",
-    "modals/listas.html?v=199",
-    "modals/notepad.html?v=199",
-    "modals/oracion.html?v=199",
-    "modals/equivalencias.html?v=199"
+    "modals/info.html?v=201",
+    "modals/revised.html?v=201",
+    "modals/people.html?v=201",
+    "modals/valores.html?v=201",
+    "modals/share.html?v=201",
+    "modals/contacto.html?v=201",
+    "modals/afinometro.html?v=201",
+    "modals/biblioteca.html?v=201",
+    "modals/listas.html?v=201",
+    "modals/notepad.html?v=201",
+    "modals/oracion.html?v=201",
+    "modals/equivalencias.html?v=201",
+    "modals/visor.html?v=201"
   ];
 
   for (const path of modales) {
@@ -1585,36 +1588,185 @@ function renderChordLine(line) {
 
 
 // ===================== AUDIO =====================
+// Junta, en la misma línea "Audio:", el link externo (YouTube/Spotify/Apple
+// Music) con los accesos que se abren en un visor DENTRO de la app —el mp3
+// en un reproductor, y las presentaciones PPS/PPSX en pantalla completa—
+// para que nada de esto se descargue solo (ver abrirMp3Modal /
+// abrirPresentacionModal en este mismo archivo)
 function renderAudioLink(song, idiomaData) {
+  const enlaces = [];
+
   const url = idiomaData?.audio_url || song.audio || "";
-  if (!url) return "";
+  if (url) {
+    let icon = "🎵";
+    let label = t("escuchar");
+    let claseLabel = "escuchar";
 
-  let icon = "🎵";
-  let label = t("escuchar");
-  let claseLabel = "escuchar";
+    if (url.includes("spotify")) {
+      icon = "🟢";
+      label = "Spotify";
+      claseLabel = "spotify";
+    } else if (url.includes("youtube") || url.includes("youtu.be")) {
+      icon = "🔴";
+      label = "YouTube";
+      claseLabel = "youtube";
+    } else if (url.includes("apple")) {
+      icon = "🍎";
+      label = "Apple Music";
+      claseLabel = "applemusic";
+    }
 
-  if (url.includes("spotify")) {
-    icon = "🟢";
-    label = "Spotify";
-    claseLabel = "spotify";
-  } else if (url.includes("youtube") || url.includes("youtu.be")) {
-    icon = "🔴";
-    label = "YouTube";
-    claseLabel = "youtube";
-  } else if (url.includes("apple")) {
-    icon = "🍎";
-    label = "Apple Music";
-    claseLabel = "applemusic";
+    enlaces.push(`<a href="${url}" target="_blank" rel="noopener noreferrer" class="${claseLabel}">${icon} ${label}</a>`);
   }
+
+  const mp3Url = normalizeArrayField(idiomaData?.mp3).find(Boolean);
+  if (mp3Url) {
+    enlaces.push(`<a href="#" class="mp3" ${dataAction("abrirMp3Modal", [mp3Url])}>🎧 mp3</a>`);
+  }
+
+  const presentaciones = normalizeArrayField(idiomaData?.presentacion).filter(Boolean);
+  const ppsxUrl = presentaciones.find(u => /\.ppsx$/i.test(u));
+  const ppsUrl = presentaciones.find(u => /\.pps$/i.test(u) && !/\.ppsx$/i.test(u));
+
+  if (ppsxUrl) {
+    enlaces.push(`<a href="#" class="ppsx" ${dataAction("abrirPresentacionModal", [ppsxUrl, "PPSX"])}>📽️ PPSX</a>`);
+  }
+  if (ppsUrl) {
+    enlaces.push(`<a href="#" class="pps" ${dataAction("abrirPresentacionModal", [ppsUrl, "PPS"])}>📊 PPS</a>`);
+  }
+
+  if (!enlaces.length) return "";
 
   return `
     <div class="audio">
       <b>${t("audio")}:</b>
-      <a href="${url}" target="_blank" class="${claseLabel}">
-        ${icon} ${label}
-      </a>
+      ${enlaces.join(" ")}
     </div>
   `;
+}
+
+// ===================== VISOR (mp3 / PPS-PPSX / partitura) =====================
+// Un solo modal reutilizado para las tres cosas, para no tener que armar y
+// mantener 3 modales casi iguales. cerrarVisorModal vacía el body: además de
+// limpiar, eso corta la reproducción del audio y descarta el iframe/canvas
+// al cerrar (si no, el mp3 seguiría sonando de fondo).
+function abrirVisorModal(titulo) {
+  const modal = document.getElementById("visorModal");
+  const body = document.getElementById("visorModalBody");
+  const tituloEl = document.getElementById("visorModalTitulo");
+  if (!modal || !body) return null;
+
+  if (tituloEl) tituloEl.textContent = titulo;
+  modal.style.display = "block";
+  return body;
+}
+
+function cerrarVisorModal() {
+  const modal = document.getElementById("visorModal");
+  if (modal) modal.style.display = "none";
+
+  const body = document.getElementById("visorModalBody");
+  if (body) body.innerHTML = "";
+}
+
+function abrirMp3Modal(url) {
+  if (!url) return;
+
+  const body = abrirVisorModal("🎧 mp3");
+  if (!body) return;
+
+  body.innerHTML = `<audio class="visor-audio" controls autoplay src="${escapeHtml(url)}"></audio>`;
+}
+
+// PPS/PPSX no se pueden mostrar solos en el navegador (son binarios de
+// PowerPoint): se embeben con el visor de Office Online, que los renderiza
+// en su servidor y nos devuelve un iframe listo para ver, sin que el
+// archivo se descargue en el dispositivo
+function abrirPresentacionModal(url, tipo) {
+  if (!url) return;
+
+  const body = abrirVisorModal(tipo || t("presentacion"));
+  if (!body) return;
+
+  const viewerUrl = `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(url)}`;
+  body.innerHTML = `<iframe class="visor-iframe" src="${viewerUrl}" title="${escapeHtml(tipo || "")}" allowfullscreen></iframe>`;
+}
+
+// PARTITURA (PDF) — se renderiza página por página con pdf.js adentro del
+// modal (canvas), en vez de linkear el PDF directo: raw.githubusercontent.com
+// sirve los PDF con Content-Type: application/octet-stream y X-Frame-Options:
+// deny, así que un <a>/<iframe> directo termina descargándolos en vez de
+// mostrarlos. pdf.js los pide por fetch (permitido, el repo tiene CORS
+// abierto) y los dibuja en canvas: nunca se descargan.
+let pdfJsLoadPromise = null;
+
+function cargarPdfJs() {
+  if (window.pdfjsLib) return Promise.resolve();
+  if (pdfJsLoadPromise) return pdfJsLoadPromise;
+
+  pdfJsLoadPromise = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
+    script.onload = () => {
+      window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+      resolve();
+    };
+    script.onerror = () => {
+      pdfJsLoadPromise = null;
+      reject(new Error("No se pudo cargar pdf.js"));
+    };
+    document.head.appendChild(script);
+  });
+
+  return pdfJsLoadPromise;
+}
+
+async function abrirPartituraModal(url) {
+  if (!url) return;
+
+  const body = abrirVisorModal(t("partitura"));
+  if (!body) return;
+
+  // algunos libros (ej. Innario Avventista) guardan la partitura como imagen
+  // (.png/.jpg) en vez de PDF escaneado — ahí alcanza con mostrarla, no hace
+  // falta pdf.js
+  if (/\.(png|jpe?g|gif|webp)$/i.test(url)) {
+    body.innerHTML = `<img class="visor-pdf-page" src="${escapeHtml(url)}" alt="${escapeHtml(t("partitura"))}">`;
+    return;
+  }
+
+  body.innerHTML = `<p class="visor-status">${t("cargando")}</p>`;
+
+  try {
+    await cargarPdfJs();
+
+    const pdf = await pdfjsLib.getDocument(url).promise;
+
+    // el modal pudo haberse cerrado (u otro visor pudo haberse abierto)
+    // mientras el PDF cargaba
+    if (document.getElementById("visorModal")?.style.display !== "block") return;
+
+    body.innerHTML = "";
+
+    for (let n = 1; n <= pdf.numPages; n++) {
+      const page = await pdf.getPage(n);
+      const viewportBase = page.getViewport({ scale: 1 });
+      const escala = (body.clientWidth || 320) / viewportBase.width;
+      const viewport = page.getViewport({ scale: escala * (window.devicePixelRatio || 1) });
+
+      const canvas = document.createElement("canvas");
+      canvas.className = "visor-pdf-page";
+      canvas.width = viewport.width;
+      canvas.height = viewport.height;
+      body.appendChild(canvas);
+
+      await page.render({ canvasContext: canvas.getContext("2d"), viewport }).promise;
+    }
+  } catch (err) {
+    console.warn("No se pudo cargar la partitura:", err);
+    body.innerHTML = `<p class="visor-status">${t("error_visor")}</p>`;
+  }
 }
 
 

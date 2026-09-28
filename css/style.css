@@ -1793,9 +1793,66 @@ body.dark-mode.projector .teleprompter-bar {
 .audio a.apple       { color: #ff2d55; }
 .audio a.youtube     { color: #ff0000; }
 .audio a.applemusic  { color: #ff2d55; }
+.audio a.mp3         { color: var(--sky-dark); }
+.audio a.ppsx,
+.audio a.pps         { color: #d24726; }
 .audio a:visited,
 .audio a:active,
 .audio a:hover       { opacity: 0.85; }
+
+/* ===== VISOR (mp3 / PPS-PPSX / partitura) — un mismo modal reutilizado ===== */
+.visor-modal-content {
+  width: 94%;
+  max-width: 900px;
+  max-height: 90vh;
+  max-height: 90dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.visor-modal-title {
+  margin: 0 0 14px;
+  padding-right: 30px;
+  font-size: 18px;
+}
+
+.visor-modal-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.visor-status {
+  padding: 40px 0;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.visor-pdf-page {
+  max-width: 100%;
+  height: auto;
+  box-shadow: var(--shadow-lg);
+  border-radius: 4px;
+}
+
+.visor-iframe {
+  width: 100%;
+  height: 70vh;
+  height: 70dvh;
+  border: none;
+  border-radius: var(--radius-md);
+}
+
+.visor-audio {
+  width: 100%;
+  margin-top: 24px;
+}
 
 /* ============================================================
    SELECTOR LIBRO / IDIOMA (en menú)
@@ -3056,14 +3113,31 @@ body.scrolled .fav-add-btn { font-size: 15px; }
 
 .dark-mode .song-row-icon { background: rgba(var(--sky-rgb), 0.18); color: var(--sky-dark); }
 
+/* el título se trunca con "…" adentro de .song-row-title-text; la marca del
+   libro (.libro-marca) queda AFUERA de esa truncación, como flex-item propio
+   con flex-shrink:0, para no quedar recortada/invisible en títulos largos
+   (pasaba con "443 - Hay un lugar do quiero estar, cerca de ti '62": el '62
+   terminaba fuera del recorte, invisible) */
 .song-row-title {
   flex: 1;
   min-width: 0;
   font-size: 13.5px;
   font-weight: 600;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  overflow: hidden;
+}
+
+.song-row-title-text {
+  min-width: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.song-row-title .libro-marca {
+  flex-shrink: 0;
 }
 
 /* marca del libro ('62, '09, MV, IA, C) chiquita después del título — ver getMarcaLibroHtml */
