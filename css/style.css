@@ -1794,8 +1794,7 @@ body.dark-mode.projector .teleprompter-bar {
 .audio a.youtube     { color: #ff0000; }
 .audio a.applemusic  { color: #ff2d55; }
 .audio a.mp3         { color: var(--sky-dark); }
-.audio a.ppsx,
-.audio a.pps         { color: #d24726; }
+.audio a.presentacion { color: #d24726; }
 .audio a:visited,
 .audio a:active,
 .audio a:hover       { opacity: 0.85; }
@@ -1964,6 +1963,27 @@ body.dark-mode.projector .teleprompter-bar {
   display: flex;
   gap: 2px;
   align-items: center;
+  flex-shrink: 0;
+}
+
+/* filas de #indice (por letra, por rango de himno, resultados de búsqueda):
+   título a la izquierda + banderas/marcas a la derecha en un mismo renglón
+   flex. Sin esto, ambos lados se repartían el ancho por flex-shrink automático
+   —el título podía "ganarle" espacio a las banderas— y con 2+ banderas estas
+   terminaban apiladas en una sola columna angosta, dejando un hueco vacío al
+   costado (el ancho que el layout les había reservado de más) en vez de ir
+   una al lado de la otra. El título absorbe el achique (y usa el ellipsis o
+   el wrap que ya tenía); las banderas nunca se achican por debajo de lo que
+   necesitan para entrar todas en su fila. */
+.list-row-title {
+  flex: 1;
+  min-width: 0;
+}
+
+.list-row-flags {
+  opacity: 0.7;
+  font-size: 14px;
+  flex-shrink: 0;
 }
 
 .lang-flags-list .lang-flag {
@@ -2299,16 +2319,21 @@ body.light-mode .toast {
 
 .about-mini-stats + .about-mini-stats { margin-top: -10px; }
 
-/* Autores / Compositores / Coautores / Traductores / Arregladores: cinco botones iguales en una sola fila */
+/* Autores / Compositores / Traductores / Arregladores: cuatro botones
+   iguales en una sola fila (Coautores se fusionó adentro de Autores, ver
+   getPersonaRoles/soloCoautor en app.js). white-space:normal (en vez de
+   nowrap con font-size encogido) para que una palabra larga como
+   "Compositores" envuelva a 2 líneas en vez de salirse del botón */
 .about-mini-stats.mini-personas {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .about-mini-stats.mini-personas .mini-stat-chip {
-  padding: 6px 2px;
-  font-size: clamp(9px, 2.6vw, 11px);
-  white-space: nowrap;
+  padding: 6px 4px;
+  font-size: clamp(9.5px, 2.8vw, 11.5px);
+  white-space: normal;
+  line-height: 1.15;
   text-align: center;
 }
 
@@ -2317,26 +2342,73 @@ body.light-mode .toast {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+/* color oscuro fijo (no #fff): --sky/--sky-dark cambian de tono según el
+   accento elegido y varios son claros (amarillo, verde, celeste...) — texto
+   blanco ahí casi no se distinguía ("no se ve cuando seleccionas Todos") */
 .mini-stat-chip.activo {
   background: var(--sky);
   border-color: var(--sky);
-  color: #fff;
+  color: var(--navy);
+  font-weight: 800;
 }
 
 #statIdiomasChip { cursor: pointer; }
 #statIdiomasChip:hover { background: rgba(255,255,255,0.09); }
 .dark-mode #statIdiomasChip:hover { background: var(--gray-100); }
 
-/* fila de filtros chicos (Autores/Compositores/Coautores/Tags) — más finos
+/* fila de filtros chicos (libros: Cancionero MV/Himnarios/etc.) — más finos
    y angostos que los .stat-chip de arriba, a propósito: son navegación, no
-   estadísticas */
+   estadísticas. UNA sola fila que scrollea de costado en vez de envolver:
+   con nombres de libro largos, envolver los amontonaba en varias filas
+   completas y la parte fija del modal (que no scrollea) se comía casi toda
+   la pantalla, dejando la lista de abajo (la que sí importa recorrer) en un
+   huequito chico */
 .about-mini-stats {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   gap: 6px;
   padding: 0 22px 18px;
   flex-shrink: 0;
 }
+
+.about-mini-stats:not(.mini-personas):not(.mini-temas) .mini-stat-chip {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+/* envoltura con flechitas a los costados de .about-mini-stats (Equivalencias,
+   Valores) — mismo botón .alpha-arrow que ya usa la tira de letras/rangos de
+   himnos, así en desktop se ve y se usa exactamente igual (arrastrar
+   también funciona, ver initDragScroll en app.js, pero las flechitas son
+   más fáciles de descubrir con mouse). Solo aparecen con mouse real
+   (:hover) — en touch el scroll nativo de dedo ya alcanza */
+.mini-stats-nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.mini-stats-nav .about-mini-stats {
+  flex: 1;
+  min-width: 0;
+}
+
+/* con mouse real aparecen las flechitas (.alpha-arrow, display:none salvo
+   acá) y les ceden el espacio de borde que en touch usa el propio padding
+   de la tira (22px, igual que el resto del modal) */
+@media (hover: hover) and (pointer: fine) {
+  .mini-stats-nav .about-mini-stats {
+    padding-left: 4px;
+    padding-right: 4px;
+    cursor: grab;
+  }
+  .mini-stats-nav .about-mini-stats:active { cursor: grabbing; }
+}
+
+.mini-stats-nav .alpha-arrow:first-child { margin-left: 10px; }
+.mini-stats-nav .alpha-arrow:last-child { margin-right: 10px; }
 
 .mini-stat-chip {
   flex: 1 1 auto;
@@ -2344,7 +2416,12 @@ body.light-mode .toast {
   border-radius: var(--radius-xl);
   border: 1px solid rgba(255,255,255,0.08);
   background: rgba(255,255,255,0.05);
-  color: inherit;
+  /* color fijo, no "inherit": con 10 temas de acento distintos (cada uno
+     con su propio --modal-bg oscuro) depender de la cascada para el color
+     de texto es frágil — si algo en el medio lo pisa (foco, alguna regla
+     más específica) el botón queda con texto oscuro sobre fondo oscuro,
+     ilegible. #e8f4fd es el mismo claro que usa .about-modal por defecto */
+  color: #e8f4fd;
   font-size: 11px;
   font-weight: 700;
   cursor: pointer;
@@ -2353,9 +2430,17 @@ body.light-mode .toast {
   touch-action: manipulation;
 }
 
-.dark-mode .mini-stat-chip { background: var(--gray-50); border-color: var(--gray-100); }
+.dark-mode .mini-stat-chip { background: var(--gray-50); border-color: var(--gray-100); color: var(--navy); }
 .mini-stat-chip:hover { background: rgba(255,255,255,0.09); }
 .dark-mode .mini-stat-chip:hover { background: var(--gray-100); }
+
+/* anillo de foco propio (teclado / :focus-visible) en vez del que pone el
+   navegador por defecto — en algunos navegadores ese anillo por defecto es
+   celeste fijo, no del color de acento elegido, y quedaba desentonado */
+.mini-stat-chip:focus-visible {
+  outline: 2px solid var(--sky);
+  outline-offset: 2px;
+}
 
 .about-body {
   flex: 1;
@@ -2503,14 +2588,18 @@ details[open] .sec-chevron { transform: rotate(90deg); }
   padding: 7px 12px;
   border-radius: 10px;
   background: rgba(255,255,255,0.05);
-  color: inherit;
+  /* color fijo (no inherit) — mismo motivo que .mini-stat-chip: más a
+     prueba de que algo de afuera (extensión de "modo oscuro forzado" del
+     navegador, alto contraste del sistema) reescriba mal un solo elemento
+     de la fila y deje el texto invisible sin tocar el ícono */
+  color: #e8f4fd;
   text-decoration: none;
   font-size: 12.5px;
   font-weight: 600;
   transition: background 0.15s ease, transform 0.15s ease;
 }
 
-.dark-mode .contact-row a { background: var(--gray-50); }
+.dark-mode .contact-row a { background: var(--gray-50); color: var(--navy); }
 .contact-row a:hover { background: rgba(var(--sky-rgb),0.14); transform: translateX(2px); }
 
 .contact-row .c-icon {
@@ -2520,15 +2609,32 @@ details[open] .sec-chevron { transform: rotate(90deg); }
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   font-size: 12px;
   color: #fff;
   flex-shrink: 0;
 }
 
+.contact-row .c-icon img { display: block; max-width: 100%; max-height: 100%; }
+
 .c-icon.ig { background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af); }
 .c-icon.yt { background: #ff0000; }
 .c-icon.gh { background: #24292e; }
 .c-icon.mail-c { background: var(--navy-soft); }
+.c-icon.donar-revolut { background: #191c1f; }
+.c-icon.donar-mp      { background: #00b1ea; }
+
+/* mensaje de agradecimiento debajo de las opciones de donación (modal ☕) */
+.donar-gracias {
+  margin: 14px 2px 4px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  background: rgba(var(--sky-rgb), 0.08);
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
 
 .contact-row small {
   display: block;

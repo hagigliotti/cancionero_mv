@@ -433,7 +433,6 @@ function openSong(id) {
 
 
         ${renderAudioLink(song, s)}
-        <br>
       </div>
 
       ${renderEquivalenciasHtml(song)}
@@ -593,8 +592,8 @@ function renderList(letter) {
   list.innerHTML = expanded.map(item => `
     <li ${dataAction("openSong", [item.song.id])}>
       <div style="display:flex; justify-content:space-between; align-items:center;">
-        <span>${item.displayTitle}${getMarcaLibroHtml(item.song)}</span>
-        <span style="opacity:0.7; font-size:14px;">
+        <span class="list-row-title">${item.displayTitle}${getMarcaLibroHtml(item.song)}</span>
+        <span class="list-row-flags">
           ${renderLanguageFlags(item.song, true, false, true)}${renderBanderasEquivalentes(item.song, true)}
         </span>
       </div>
@@ -869,7 +868,7 @@ function renderHymnRange(start, end) {
     return `
       <li ${dataAction("openSong", [item.song.id])}>
         <div style="display:flex; justify-content:space-between;">
-          <span>${label}${getMarcaLibroHtml(item.song)}</span>
+          <span class="list-row-title">${label}${getMarcaLibroHtml(item.song)}</span>
           <span class="lang-flags-list">
             ${renderLanguageFlags(item.song, true, false, true)}${renderBanderasEquivalentes(item.song, true)}
           </span>

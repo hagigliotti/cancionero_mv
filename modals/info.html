@@ -17,7 +17,6 @@
     <div class="about-mini-stats mini-personas">
       <button type="button" class="mini-stat-chip" id="infoBtnAutores" data-action="abrirValoresModal" data-args='["autor"]'>Autores</button>
       <button type="button" class="mini-stat-chip" id="infoBtnCompositores" data-action="abrirValoresModal" data-args='["compositor"]'>Compositores</button>
-      <button type="button" class="mini-stat-chip" id="infoBtnCoautores" data-action="abrirValoresModal" data-args='["coautor"]'>Coautores</button>
       <button type="button" class="mini-stat-chip" id="infoBtnTraductores" data-action="abrirValoresModal" data-args='["traductor"]'>Traductores</button>
       <button type="button" class="mini-stat-chip" id="infoBtnArregladores" data-action="abrirValoresModal" data-args='["arreglo"]'>Arregladores</button>
     </div>
@@ -246,11 +245,11 @@
 
     <div class="about-contact">
       <div class="about-contact-actions">
-        <a href="#" class="menu-action-btn contact-c" data-action="abrirContactoModal">
+        <a href="#" class="menu-action-btn contact-c" data-action="abrirContactoModal" data-args="[true]">
           <span class="menu-action-icon">✉️</span>
           <span id="infoBtnContacto">Contacto</span>
         </a>
-        <a href="https://www.paypal.com/" target="_blank" rel="noopener noreferrer" class="menu-action-btn donate-c">
+        <a href="#" class="menu-action-btn donate-c" data-action="abrirDonarModal" data-args="[true]">
           <span class="menu-action-icon">☕</span>
           <span>Buy me a coffee</span>
         </a>

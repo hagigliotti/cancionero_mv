@@ -285,6 +285,13 @@ function cerrarEquivModal() {
   document.getElementById("equivModal").style.display = "none";
 }
 
+// a diferencia de la ✕ (que solo cierra), esto vuelve al modal de
+// Información de la app — de donde siempre se llega a Equivalencias
+function volverAInfoDesdeEquiv() {
+  cerrarEquivModal();
+  info();
+}
+
 function setEquivFiltro(libroId) {
   equivFiltroLibro = libroId || "";
   renderEquivalenciasModal();
@@ -666,19 +673,20 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=201",
-    "modals/revised.html?v=201",
-    "modals/people.html?v=201",
-    "modals/valores.html?v=201",
-    "modals/share.html?v=201",
-    "modals/contacto.html?v=201",
-    "modals/afinometro.html?v=201",
-    "modals/biblioteca.html?v=201",
-    "modals/listas.html?v=201",
-    "modals/notepad.html?v=201",
-    "modals/oracion.html?v=201",
-    "modals/equivalencias.html?v=201",
-    "modals/visor.html?v=201"
+    "modals/info.html?v=208",
+    "modals/revised.html?v=208",
+    "modals/people.html?v=208",
+    "modals/valores.html?v=208",
+    "modals/share.html?v=208",
+    "modals/contacto.html?v=208",
+    "modals/afinometro.html?v=208",
+    "modals/biblioteca.html?v=208",
+    "modals/listas.html?v=208",
+    "modals/notepad.html?v=208",
+    "modals/oracion.html?v=208",
+    "modals/equivalencias.html?v=208",
+    "modals/visor.html?v=208",
+    "modals/donar.html?v=208"
   ];
 
   for (const path of modales) {
@@ -707,6 +715,10 @@ function cerrarPeopleModal() {
 async function init() {
 
   await cargarModales(); // 👈 AQUI
+
+  // recién ahora existen en el DOM (los modales se insertaron async) — ver initDragScroll
+  initDragScroll(document.getElementById("equivModalFiltros"));
+  initDragScroll(document.getElementById("valoresModalLibros"));
 
   const saved = localStorage.getItem("tablatura");
   tablaturaVisible = saved !== "off";
@@ -1361,8 +1373,8 @@ function search(q) {
     return `
       <li ${dataAction("selectSong", [c.id])}>
         <div style="display:flex; justify-content:space-between; gap:10px;">
-          <span>${baseTitle}${getMarcaLibroHtml(c)}</span>
-          <span style="opacity:0.7; font-size:14px;">${flags}${renderBanderasEquivalentes(c, true)}</span>
+          <span class="list-row-title">${baseTitle}${getMarcaLibroHtml(c)}</span>
+          <span class="list-row-flags">${flags}${renderBanderasEquivalentes(c, true)}</span>
         </div>
       </li>
     `;
@@ -1624,15 +1636,16 @@ function renderAudioLink(song, idiomaData) {
     enlaces.push(`<a href="#" class="mp3" ${dataAction("abrirMp3Modal", [mp3Url])}>🎧 mp3</a>`);
   }
 
+  // PPS y PPSX son la misma presentación en 2 formatos: un solo botón (ícono
+  // de pantalla, son proyecciones), prefiriendo el PPSX (más compatible con
+  // el visor de Office) y usando el PPS solo si no hay PPSX
   const presentaciones = normalizeArrayField(idiomaData?.presentacion).filter(Boolean);
   const ppsxUrl = presentaciones.find(u => /\.ppsx$/i.test(u));
   const ppsUrl = presentaciones.find(u => /\.pps$/i.test(u) && !/\.ppsx$/i.test(u));
+  const presentacionUrl = ppsxUrl || ppsUrl;
 
-  if (ppsxUrl) {
-    enlaces.push(`<a href="#" class="ppsx" ${dataAction("abrirPresentacionModal", [ppsxUrl, "PPSX"])}>📽️ PPSX</a>`);
-  }
-  if (ppsUrl) {
-    enlaces.push(`<a href="#" class="pps" ${dataAction("abrirPresentacionModal", [ppsUrl, "PPS"])}>📊 PPS</a>`);
+  if (presentacionUrl) {
+    enlaces.push(`<a href="#" class="presentacion" ${dataAction("abrirPresentacionModal", [presentacionUrl, t("presentacion")])}>🖥️ ${t("presentacion")}</a>`);
   }
 
   if (!enlaces.length) return "";
@@ -2052,11 +2065,28 @@ let peopleModalOrigen = null;
 // valores de un campo de personas de una canción. Autor/coautor/compositor/
 // tags están a nivel canción; traductor y arreglo viven dentro de cada idioma
 // (song.idiomas[lang]) — se juntan los de todos los idiomas cargados
+//
+// "autor" incluye también a los coautores (ver getPersonaRoles): coautor ya
+// no tiene su propio botón/listado separado, se fusionó en Autores — pero
+// sigue siendo un campo aparte en la canción (Autor/Coautor en la ficha)
 function getCamposPersona(song, tipo) {
   if (tipo === "traductor" || tipo === "arreglo") {
     return Object.values(song.idiomas || {}).flatMap(l => normalizeArrayField(l?.[tipo]));
   }
+  if (tipo === "autor") {
+    return [...normalizeArrayField(song.autor), ...normalizeArrayField(song.coautor)];
+  }
   return normalizeArrayField(song[tipo]);
+}
+
+// para el listado fusionado de Autores: qué rol(es) tiene esta persona en
+// esta canción puntual — sirve para decidir el ícono de su fila (👤 si
+// alguna vez figura como autor, 👥 si SOLO aparece como coautor)
+function getPersonaRoles(song, nombre) {
+  const roles = new Set();
+  if (normalizeArrayField(song.autor).some(p => (p || "").toString().trim() === nombre)) roles.add("autor");
+  if (normalizeArrayField(song.coautor).some(p => (p || "").toString().trim() === nombre)) roles.add("coautor");
+  return roles;
 }
 
 function openPersonModal(nombre, tipo, origen) {
@@ -2160,6 +2190,7 @@ function getDistinctValues(tipo, filtroIdioma, filtroLibro = "") {
   }
 
   const librosDe = new Map();   // valor -> libros donde aparece
+  const rolesDe = new Map();    // valor -> roles ("autor"/"coautor") vistos, solo tipo==="autor"
 
   data.forEach(song => {
     const libroId = getLibroIdDeSong(song);
@@ -2170,6 +2201,12 @@ function getDistinctValues(tipo, filtroIdioma, filtroLibro = "") {
       counts.set(limpio, (counts.get(limpio) || 0) + 1);
       if (!librosDe.has(limpio)) librosDe.set(limpio, new Set());
       if (libroId) librosDe.get(limpio).add(libroId);
+
+      if (tipo === "autor") {
+        if (!rolesDe.has(limpio)) rolesDe.set(limpio, new Set());
+        const rolesEnEsteCanto = getPersonaRoles(song, limpio);
+        rolesEnEsteCanto.forEach(r => rolesDe.get(limpio).add(r));
+      }
     });
   });
 
@@ -2181,7 +2218,9 @@ function getDistinctValues(tipo, filtroIdioma, filtroLibro = "") {
       nombre: tipo === "tags" ? getTagDisplay(raw, filtroIdioma) : raw,
       raw,
       count,
-      libros: [...(librosDe.get(raw) || [])]
+      libros: [...(librosDe.get(raw) || [])],
+      // solo apareció como coautor, nunca como autor propiamente dicho
+      soloCoautor: tipo === "autor" && !!rolesDe.get(raw)?.size && !rolesDe.get(raw).has("autor")
     }))
     .sort((a, b) => a.nombre.localeCompare(b.nombre, "es", { sensitivity: "base" }));
 }
@@ -2238,9 +2277,10 @@ function renderValoresModal(tipo, filtroIdioma) {
 
   // chips de libros (no aplica al listado de idiomas)
   const librosEl = document.getElementById("valoresModalLibros");
+  const librosNavEl = document.getElementById("valoresModalLibrosNav");
   if (librosEl) {
     if (tipo === "idioma") {
-      librosEl.classList.add("hidden");
+      librosNavEl?.classList.add("hidden");
       librosEl.innerHTML = "";
     } else {
       const porLibro = getLibrosVisiblesOrdenados()
@@ -2253,7 +2293,7 @@ function renderValoresModal(tipo, filtroIdioma) {
         `<button type="button" class="mini-stat-chip${valoresFiltroLibro === id ? " activo" : ""}" ${dataAction("setValoresFiltroLibro", [id])}>${escapeHtml(texto)}</button>`;
 
       librosEl.innerHTML = chip("", t("equiv_todos")) + porLibro.map(x => chip(x.id, `${x.nombre} (${x.n})`)).join("");
-      librosEl.classList.remove("hidden");
+      librosNavEl?.classList.remove("hidden");
     }
   }
 
@@ -2270,11 +2310,13 @@ function renderValoresModal(tipo, filtroIdioma) {
 
   const letrasVistas = [];
 
-  valores.forEach(({ nombre, raw, codigo, count, libros }) => {
+  valores.forEach(({ nombre, raw, codigo, count, libros, soloCoautor }) => {
     const letra = getIndexLetter(nombre);
     if (!letrasVistas.includes(letra)) letrasVistas.push(letra);
 
-    const filaIcon = tipo === "idioma" ? getFlagEmoji(codigo) : icon;
+    // en Autores (fusionado con Coautores): 👥 para quienes SOLO figuran
+    // como coautor en todas sus canciones, 👤 si alguna vez es autor
+    const filaIcon = tipo === "idioma" ? getFlagEmoji(codigo) : (soloCoautor ? "👥" : icon);
 
     // marcas de los libros donde aparece (solo cuando se está mirando todos los libros)
     const marcas = (tipo !== "idioma" && !valoresFiltroLibro && libros?.length)
@@ -2287,7 +2329,9 @@ function renderValoresModal(tipo, filtroIdioma) {
     div.dataset.letter = letra;
     div.innerHTML = `
       <span class="song-row-icon">${filaIcon}</span>
-      <span class="song-row-title">${escapeHtml(nombre)}${marcas ? " " + marcas : ""}</span>
+      <span class="song-row-title">
+        <span class="song-row-title-text">${escapeHtml(nombre)}</span>${marcas}
+      </span>
       <span class="valor-count">${count}</span>
     `;
     div.addEventListener("click", () => {
@@ -2556,7 +2600,6 @@ function actualizarInfoIdioma() {
   setText("infoLblIdiomas", "idiomas");
   setText("infoBtnAutores", "pl_autores");
   setText("infoBtnCompositores", "pl_compositores");
-  setText("infoBtnCoautores", "pl_coautores");
   setText("infoBtnTraductores", "pl_traductores");
   setText("infoBtnArregladores", "pl_arregladores");
   setText("infoBtnTemas", "temas");
@@ -2569,6 +2612,17 @@ function actualizarInfoIdioma() {
   document.querySelectorAll(".about-close").forEach(b => b.setAttribute("aria-label", t("cerrar")));
   const backValores = document.getElementById("valoresModalBack");
   if (backValores) backValores.textContent = `← ${t("info_app")}`;
+  const backEquiv = document.getElementById("equivModalBack");
+  if (backEquiv) backEquiv.textContent = `← ${t("info_app")}`;
+  const backContacto = document.getElementById("contactoModalBack");
+  if (backContacto) backContacto.textContent = `← ${t("info_app")}`;
+  const backDonar = document.getElementById("donarModalBack");
+  if (backDonar) backDonar.textContent = `← ${t("info_app")}`;
+  setText("donarModalTitle", "donar_titulo");
+  setText("donarModalSubtitulo", "donar_subtitulo");
+  setText("donarRevolutDesc", "donar_revolut_desc");
+  setText("donarMpDesc", "donar_mp_desc");
+  setText("donarGracias", "donar_gracias");
   setText("valoresModalMetaTxt", "valores_meta");
   setText("valoresModalIdiomaLbl", "idioma_lbl");
   setText("peopleModalIdiomaLbl", "idioma_lbl");
@@ -2660,16 +2714,58 @@ function cerrarShareModal() {
   if (modal) modal.style.display = "none";
 }
 
-// MODAL CONTACTO — accesible desde el menú principal y desde el pie del
-// modal de Información de la app (ver .about-contact-actions)
-function abrirContactoModal() {
+// MODAL CONTACTO — accesible desde el menú principal Y desde el pie del
+// modal de Información de la app (ver .about-contact-actions); fromInfo
+// distingue por cuál de los dos caminos se llegó, para saber si tiene
+// sentido mostrar "← Información de la app" (si se vino del menú, no hay
+// Info para volver)
+let contactoModalFromInfo = false;
+
+function abrirContactoModal(fromInfo = false) {
+  contactoModalFromInfo = fromInfo;
+  if (fromInfo) cerrarInfo();
+
   const modal = document.getElementById("contactoModal");
   if (modal) modal.style.display = "block";
+
+  document.getElementById("contactoModalBack")?.classList.toggle("hidden", !fromInfo);
 }
 
 function cerrarContactoModal() {
   const modal = document.getElementById("contactoModal");
   if (modal) modal.style.display = "none";
+}
+
+function volverAInfoDesdeContacto() {
+  cerrarContactoModal();
+  info();
+}
+
+// MODAL DONAR ("Buy me a coffee") — mismo patrón que Contacto: accesible
+// desde el menú principal y desde el pie de Información de la app. Antes
+// "Buy me a coffee" era un link directo a Revolut (o a paypal.com, según
+// desde dónde se abriera — ninguno de los dos era intencional); ahora abre
+// este modal para elegir entre Revolut y Mercado Pago
+let donarModalFromInfo = false;
+
+function abrirDonarModal(fromInfo = false) {
+  donarModalFromInfo = fromInfo;
+  if (fromInfo) cerrarInfo();
+
+  const modal = document.getElementById("donarModal");
+  if (modal) modal.style.display = "block";
+
+  document.getElementById("donarModalBack")?.classList.toggle("hidden", !fromInfo);
+}
+
+function cerrarDonarModal() {
+  const modal = document.getElementById("donarModal");
+  if (modal) modal.style.display = "none";
+}
+
+function volverAInfoDesdeDonar() {
+  cerrarDonarModal();
+  info();
 }
 
 // compartir nativo: abre el panel de compartir del sistema operativo
@@ -2716,9 +2812,13 @@ function scrollHimnoRangos(dir) {
   scrollTira("himnoRangos", dir);
 }
 
-// ===== ARRASTRAR CON EL MOUSE PARA MOVER LA TIRA (click + drag) =====
-(function initAlfabetoDrag() {
-  const el = document.getElementById("alfabeto");
+// ===== ARRASTRAR CON EL MOUSE PARA MOVER UNA TIRA HORIZONTAL (click + drag) =====
+// en touch ya se arrastra solo (scroll nativo); esto es para mouse (PC/Mac),
+// que si no queda sin forma de recorrer la tira salvo con las flechitas (si
+// las tiene) — lo pide initDragScroll(el) para cualquier tira horizontal:
+// #alfabeto, #himnoRangos y las filas de chips de libro (.about-mini-stats)
+// de Equivalencias/Valores, que no tienen flechitas
+function initDragScroll(el) {
   if (!el) return;
 
   let isDown = false;
@@ -2744,14 +2844,30 @@ function scrollHimnoRangos(dir) {
 
   window.addEventListener("mouseup", () => { isDown = false; });
 
-  // si hubo arrastre, cancelar el click para no disparar selectLetter() sin querer
+  // si hubo arrastre, cancelar el click para no disparar la acción del
+  // botón/letra tocado sin querer (el usuario quería scrollear, no elegir)
   el.addEventListener("click", e => {
     if (moved) {
       e.stopPropagation();
       e.preventDefault();
     }
   }, true);
-})();
+
+  // rueda del mouse/trackpad: la mayoría solo manda scroll VERTICAL (deltaY)
+  // al pasar por arriba de una tira horizontal — lo convertimos a scroll
+  // horizontal en vez de dejar que mueva la página de fondo. Si el mouse
+  // manda scroll horizontal real (deltaX, ej. trackpad con swipe lateral o
+  // mouse con rueda inclinable) se respeta tal cual
+  el.addEventListener("wheel", e => {
+    if (el.scrollWidth <= el.clientWidth) return; // no hay nada para scrollear
+    const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+    if (!delta) return;
+    e.preventDefault();
+    el.scrollLeft += delta;
+  }, { passive: false });
+}
+
+initDragScroll(document.getElementById("alfabeto"));
 
 
 // ==================================================================================================================================
