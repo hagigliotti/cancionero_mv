@@ -68,7 +68,7 @@
      mismo pastel de siempre). --bg-night no tenía este problema porque su
      capa de abajo (el linear-gradient navy) ya era opaca de por sí */
   --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(var(--sky-rgb),0.09) 62%, rgba(var(--sky-rgb),0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
-  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(var(--sky-rgb),0.14), transparent 65%),
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(var(--sky-rgb),0.14) 0%, rgba(var(--sky-rgb), 0.056) 45%, transparent 85%),
               linear-gradient(180deg, #0d1e30 0%, #0d1e30 28%, #122033 62%, #1a2e45 100%);
 }
 
@@ -96,7 +96,7 @@
 body[data-accent="naranja"] {
   --sky: #fb923c; --sky-dark: #f97316; --sky-rgb: 251, 146, 60;
   --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(251, 146, 60,0.09) 62%, rgba(251, 146, 60,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
-  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(251, 146, 60,0.16), transparent 65%),
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(251, 146, 60,0.16) 0%, rgba(251, 146, 60, 0.064) 45%, transparent 85%),
               linear-gradient(180deg, #1f150d 0%, #1f150d 28%, #241a10 62%, #2e2313 100%);
   --proj-tint: rgba(251, 146, 60,0.10);
   --modal-bg:       linear-gradient(165deg, #1f150d 0%, #2e2313 100%);
@@ -105,7 +105,7 @@ body[data-accent="naranja"] {
 body[data-accent="rosa"] {
   --sky: #f472b6; --sky-dark: #ec4899; --sky-rgb: 244, 114, 182;
   --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(244, 114, 182,0.09) 62%, rgba(244, 114, 182,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
-  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(244, 114, 182,0.16), transparent 65%),
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(244, 114, 182,0.16) 0%, rgba(244, 114, 182, 0.064) 45%, transparent 85%),
               linear-gradient(180deg, #1f0f18 0%, #1f0f18 28%, #24131c 62%, #2e1823 100%);
   --proj-tint: rgba(244, 114, 182,0.10);
   --modal-bg:       linear-gradient(165deg, #1f0f18 0%, #2e1823 100%);
@@ -114,7 +114,7 @@ body[data-accent="rosa"] {
 body[data-accent="coral"] {
   --sky: #ff8a75; --sky-dark: #f2624a; --sky-rgb: 255, 138, 117;
   --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(255, 138, 117,0.09) 62%, rgba(255, 138, 117,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
-  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(255, 138, 117,0.16), transparent 65%),
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(255, 138, 117,0.16) 0%, rgba(255, 138, 117, 0.064) 45%, transparent 85%),
               linear-gradient(180deg, #1f120d 0%, #1f120d 28%, #241610 62%, #2e1c13 100%);
   --proj-tint: rgba(255, 138, 117,0.10);
   --modal-bg:       linear-gradient(165deg, #1f120d 0%, #2e1c13 100%);
@@ -123,7 +123,7 @@ body[data-accent="coral"] {
 body[data-accent="violeta"] {
   --sky: #a78bfa; --sky-dark: #8b5cf6; --sky-rgb: 167, 139, 250;
   --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(167, 139, 250,0.09) 62%, rgba(167, 139, 250,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
-  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(167, 139, 250,0.16), transparent 65%),
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(167, 139, 250,0.16) 0%, rgba(167, 139, 250, 0.064) 45%, transparent 85%),
               linear-gradient(180deg, #150f28 0%, #150f28 28%, #1a1330 62%, #221a3d 100%);
   --proj-tint: rgba(167, 139, 250,0.10);
   --modal-bg:       linear-gradient(165deg, #150f28 0%, #221a3d 100%);
@@ -132,7 +132,7 @@ body[data-accent="violeta"] {
 body[data-accent="lila"] {
   --sky: #e0a3e8; --sky-dark: #c65fd4; --sky-rgb: 224, 163, 232;
   --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(224, 163, 232,0.09) 62%, rgba(224, 163, 232,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
-  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(224, 163, 232,0.16), transparent 65%),
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(224, 163, 232,0.16) 0%, rgba(224, 163, 232, 0.064) 45%, transparent 85%),
               linear-gradient(180deg, #1c1024 0%, #1c1024 28%, #21142b 62%, #2a1935 100%);
   --proj-tint: rgba(224, 163, 232,0.10);
   --modal-bg:       linear-gradient(165deg, #1c1024 0%, #2a1935 100%);
@@ -141,7 +141,7 @@ body[data-accent="lila"] {
 body[data-accent="turquesa"] {
   --sky: #2dd4bf; --sky-dark: #14b8a6; --sky-rgb: 45, 212, 191;
   --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(45, 212, 191,0.09) 62%, rgba(45, 212, 191,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
-  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(45, 212, 191,0.16), transparent 65%),
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(45, 212, 191,0.16) 0%, rgba(45, 212, 191, 0.064) 45%, transparent 85%),
               linear-gradient(180deg, #0d1f1d 0%, #0d1f1d 28%, #112423 62%, #162e2c 100%);
   --proj-tint: rgba(45, 212, 191,0.10);
   --modal-bg:       linear-gradient(165deg, #0d1f1d 0%, #162e2c 100%);
@@ -150,7 +150,7 @@ body[data-accent="turquesa"] {
 body[data-accent="verde"] {
   --sky: #4ade80; --sky-dark: #22c55e; --sky-rgb: 74, 222, 128;
   --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(74, 222, 128,0.09) 62%, rgba(74, 222, 128,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
-  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(74, 222, 128,0.16), transparent 65%),
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(74, 222, 128,0.16) 0%, rgba(74, 222, 128, 0.064) 45%, transparent 85%),
               linear-gradient(180deg, #0d1f16 0%, #0d1f16 28%, #11241a 62%, #162e21 100%);
   --proj-tint: rgba(74, 222, 128,0.10);
   --modal-bg:       linear-gradient(165deg, #0d1f16 0%, #162e21 100%);
@@ -159,7 +159,7 @@ body[data-accent="verde"] {
 body[data-accent="amarillo"] {
   --sky: #fbbf24; --sky-dark: #f59e0b; --sky-rgb: 251, 191, 36;
   --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(251, 191, 36,0.09) 62%, rgba(251, 191, 36,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
-  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(251, 191, 36,0.16), transparent 65%),
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(251, 191, 36,0.16) 0%, rgba(251, 191, 36, 0.064) 45%, transparent 85%),
               linear-gradient(180deg, #1f1a0d 0%, #1f1a0d 28%, #241f10 62%, #2e2813 100%);
   --proj-tint: rgba(251, 191, 36,0.10);
   --modal-bg:       linear-gradient(165deg, #1f1a0d 0%, #2e2813 100%);
@@ -168,7 +168,7 @@ body[data-accent="amarillo"] {
 body[data-accent="gris"] {
   --sky: #64748b; --sky-dark: #334155; --sky-rgb: 100, 116, 139;
   --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(100, 116, 139,0.09) 62%, rgba(100, 116, 139,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
-  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(100, 116, 139,0.16), transparent 65%),
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(100, 116, 139,0.16) 0%, rgba(100, 116, 139, 0.064) 45%, transparent 85%),
               linear-gradient(180deg, #131313 0%, #131313 28%, #191919 62%, #212121 100%);
   --proj-tint: rgba(100, 116, 139,0.10);
   --modal-bg:       linear-gradient(165deg, #131313 0%, #212121 100%);
@@ -182,7 +182,7 @@ body[data-accent="gris"] {
 body[data-accent="monocromo"] {
   --sky: #a3a3a3; --sky-dark: #404040; --sky-rgb: 163, 163, 163;
   --bg-day:   linear-gradient(180deg, #ffffff 0%, #ffffff 28%, rgba(163, 163, 163,0.09) 62%, rgba(163, 163, 163,0.20) 100%), linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
-  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(163, 163, 163,0.16), transparent 65%),
+  --bg-night: radial-gradient(110% 55% at 20% 35%, rgba(163, 163, 163,0.16) 0%, rgba(163, 163, 163, 0.064) 45%, transparent 85%),
               linear-gradient(180deg, #121212 0%, #121212 28%, #181818 62%, #202020 100%);
   --proj-tint: rgba(163, 163, 163,0.10);
   --modal-bg:       linear-gradient(165deg, #121212 0%, #202020 100%);
@@ -512,7 +512,15 @@ body.modal-open {
   background: var(--modal-bg);
   color: #e8f4fd;
   border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
-  box-shadow: var(--shadow-lg);
+  /* --shadow-lg (0 8px 40px) está pensada para modales centrados, con luz
+     "de arriba" — en un panel lateral de alto completo esa sombra con
+     desplazamiento vertical quedaba rara: se notaba mucho más pegada a la
+     esquina superior derecha que al resto del borde derecho, como una
+     mancha diagonal (justo donde el borde redondeado se encuentra con el
+     fondo oscurecido de atrás). Acá va horizontal, hacia la derecha —
+     coherente con que el panel entra deslizando desde la izquierda — pareja
+     en toda la altura, sin ese efecto de mancha en la esquina */
+  box-shadow: 6px 0 28px rgba(0,0,0,.22);
   z-index: 1000;
   overflow: hidden;
   border-right: 1px solid rgba(255,255,255,0.08);
@@ -1765,12 +1773,16 @@ body.dark-mode.projector .teleprompter-bar {
   font-size: 12.5px;
   font-weight: 700;
   cursor: pointer;
-  background: var(--sky);
-  color: #06202e;
+  /* navy claro (no --sky): el aviso ya es oscuro (var(--navy)) y --sky es
+     el color de acento elegible (celeste por defecto, pero puede ser
+     cualquier otro) — un botón celeste bien saturado ahí adentro quedaba
+     fuera de tono con el resto, siempre "azul" sin importar el tema */
+  background: var(--navy-soft);
+  color: #fff;
   transition: var(--trans);
 }
 
-.update-banner button:hover { background: var(--sky-dark); }
+.update-banner button:hover { background: var(--navy-mid); }
 
 .update-banner-close {
   background: rgba(255,255,255,0.12) !important;
