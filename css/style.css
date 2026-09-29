@@ -1894,6 +1894,29 @@ body[data-accent="gris"] .update-banner button:not(.update-banner-close) { color
   border-radius: var(--radius-md);
 }
 
+.visor-mp3-opciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.visor-mp3-opcion {
+  padding: 8px 16px;
+  border: 1px solid var(--sky-dark);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--sky-dark);
+  font: inherit;
+  cursor: pointer;
+}
+
+.visor-mp3-opcion.activa {
+  background: var(--sky-dark);
+  color: #fff;
+}
+
 .visor-audio {
   width: 100%;
   margin-top: 24px;
