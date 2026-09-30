@@ -59,7 +59,8 @@
           "https://raw.githubusercontent.com/hagigliotti/cancionero_media/main/himnario_ar/presentaciones/pps/001.pps"
         ],
         "mp3": [
-          "https://raw.githubusercontent.com/hagigliotti/cancionero_media/main/himnario_ar/audio/001.mp3"
+          "https://raw.githubusercontent.com/hagigliotti/cancionero_media/main/himnario_ar/audio/vocal/001.mp3",
+          "https://raw.githubusercontent.com/hagigliotti/cancionero_media/main/himnario_ar/audio/playbacks/001.mp3"
         ],
         "partitura": [
           "https://raw.githubusercontent.com/hagigliotti/cancionero_media/main/himnario_ar/partituras/001.pdf"
