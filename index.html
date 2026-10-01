@@ -9,10 +9,10 @@
   <title>Cancionero App</title>
 
   <!-- PWA / APARIENCIA DE APP -->
-  <link rel="manifest" href="manifest.webmanifest?v=213">
-  <link rel="icon" href="imagenes/icons/favicon-32.png?v=213" sizes="32x32">
-  <link rel="icon" href="imagenes/icons/favicon-16.png?v=213" sizes="16x16">
-  <link rel="apple-touch-icon" href="imagenes/icons/apple-touch-icon.png?v=213">
+  <link rel="manifest" href="manifest.webmanifest?v=226">
+  <link rel="icon" href="imagenes/icons/favicon-32.png?v=226" sizes="32x32">
+  <link rel="icon" href="imagenes/icons/favicon-16.png?v=226" sizes="16x16">
+  <link rel="apple-touch-icon" href="imagenes/icons/apple-touch-icon.png?v=226">
 
   <meta name="theme-color" content="#122033">
   <meta name="mobile-web-app-capable" content="yes">
@@ -21,11 +21,11 @@
   <meta name="apple-mobile-web-app-title" content="Cancionero App">
 
   <!-- ICONOS (font-awesome, copia local mínima: se ven también sin internet) -->
-  <link rel="stylesheet" href="css/fontawesome-min.css?v=213">
+  <link rel="stylesheet" href="css/fontawesome-min.css?v=226">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css?v=213">
-  <link rel="stylesheet" href="css/notepad.css?v=213">
+  <link rel="stylesheet" href="css/style.css?v=226">
+  <link rel="stylesheet" href="css/notepad.css?v=226">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XS6DM59CNT"></script>
@@ -76,6 +76,7 @@
             <div class="app-badges">
               <button type="button" class="app-badge active" title="Cancionero" aria-label="Cancionero (estás acá)" data-action="closeMenu">🎶</button>
               <button type="button" class="app-badge" title="Mis Pedidos de Oración" aria-label="Mis Pedidos de Oración" data-action="abrirPedidosOracion">🛐</button>
+              <button type="button" class="app-badge" title="Mis Playlists" aria-label="Mis Playlists" data-action="abrirReproductor">🎧</button>
             </div>
             <h2>Cancionero App</h2>
             <div class="about-meta" id="txtMenu">Menú</div>
@@ -110,6 +111,8 @@
               <p class="contact-label" id="txtMiMusica">Mi música</p>
 
               <div class="menu-item" data-action="abrirMisListas"><span class="sec-icon">⭐</span> <span id="txtMisListas">Mis Listas</span></div>
+
+              <div class="menu-item" data-action="abrirReproductor"><span class="sec-icon">🎧</span> <span id="txtMisPlaylists">Mis Playlists</span></div>
 
               <div class="menu-item" data-action="abrirNotepad">
                 <span class="sec-icon">🎙️</span> <span id="txtBlocMusical">Bloc musical</span>
@@ -324,18 +327,20 @@
 
 
 <!-- ======================================== JS ======================================== -->
-<script src="js/tag-translations.js?v=213"></script>
-<script src="js/lenguage.js?v=213"></script>
-<script src="js/info-textos.js?v=213"></script>
-<script src="js/utils.js?v=213"></script>
-<script src="js/theme.js?v=213"></script>
-<script src="js/tv.js?v=213"></script>
-<script src="js/offline.js?v=213"></script>
-<script src="js/afinometro.js?v=213"></script>
-<script src="js/app.js?v=213"></script>
-<script src="js/songbook.js?v=213"></script>
-<script src="js/notepad.js?v=213"></script>
-<script src="js/oracion.js?v=213"></script>
+<script src="js/tag-translations.js?v=226"></script>
+<script src="js/lenguage.js?v=226"></script>
+<script src="js/info-textos.js?v=226"></script>
+<script src="js/utils.js?v=226"></script>
+<script src="js/theme.js?v=226"></script>
+<script src="js/tv.js?v=226"></script>
+<script src="js/offline.js?v=226"></script>
+<script src="js/afinometro.js?v=226"></script>
+<script src="js/audios.js?v=226"></script>
+<script src="js/app.js?v=226"></script>
+<script src="js/songbook.js?v=226"></script>
+<script src="js/notepad.js?v=226"></script>
+<script src="js/oracion.js?v=226"></script>
+<script src="js/reproductor.js?v=226"></script>
 
 <!-- ======================================== PWA OFFLINE ======================================== -->
 <div id="updateBanner" class="update-banner">

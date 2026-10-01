@@ -673,20 +673,21 @@ function renderRevisadoPersonas(value) {
 // ===================== MODALES DINÁMICOS ===================== Para abrir modal Acerca de... desde otro archivo
 async function cargarModales() {
   const modales = [
-    "modals/info.html?v=213",
-    "modals/revised.html?v=213",
-    "modals/people.html?v=213",
-    "modals/valores.html?v=213",
-    "modals/share.html?v=213",
-    "modals/contacto.html?v=213",
-    "modals/afinometro.html?v=213",
-    "modals/biblioteca.html?v=213",
-    "modals/listas.html?v=213",
-    "modals/notepad.html?v=213",
-    "modals/oracion.html?v=213",
-    "modals/equivalencias.html?v=213",
-    "modals/visor.html?v=213",
-    "modals/donar.html?v=213"
+    "modals/info.html?v=226",
+    "modals/revised.html?v=226",
+    "modals/people.html?v=226",
+    "modals/valores.html?v=226",
+    "modals/share.html?v=226",
+    "modals/contacto.html?v=226",
+    "modals/afinometro.html?v=226",
+    "modals/biblioteca.html?v=226",
+    "modals/listas.html?v=226",
+    "modals/notepad.html?v=226",
+    "modals/oracion.html?v=226",
+    "modals/equivalencias.html?v=226",
+    "modals/visor.html?v=226",
+    "modals/donar.html?v=226",
+    "modals/reproductor.html?v=226"
   ];
 
   for (const path of modales) {
@@ -713,6 +714,8 @@ function cerrarPeopleModal() {
 
 // ===================== INIT ===============================================================   =====================
 async function init() {
+
+  cargarAudios(); // en paralelo: no frena el arranque (ver js/audios.js)
 
   await cargarModales(); // 👈 AQUI
 
@@ -1603,10 +1606,10 @@ function renderChordLine(line) {
 
 // ===================== AUDIO =====================
 // Junta, en la misma línea "Audio:", el link externo (YouTube/Spotify/Apple
-// Music) con los accesos que se abren en un visor DENTRO de la app —el mp3
-// en un reproductor, y las presentaciones PPS/PPSX en pantalla completa—
-// para que nada de esto se descargue solo (ver abrirMp3Modal /
-// abrirPresentacionModal en este mismo archivo)
+// Music) con los accesos que se abren DENTRO de la app —el mp3 en el
+// reproductor de Mis Playlists (reproductor.js), y las presentaciones
+// PPS/PPSX en pantalla completa (abrirPresentacionModal en este archivo)—
+// para que nada de esto se descargue
 function renderAudioLink(song, idiomaData) {
   const enlaces = [];
 
@@ -1633,13 +1636,12 @@ function renderAudioLink(song, idiomaData) {
     enlaces.push(`<a href="${url}" target="_blank" rel="noopener noreferrer" class="${claseLabel}">${icon} ${label}</a>`);
   }
 
-  const mp3Urls = normalizeArrayField(idiomaData?.mp3).filter(Boolean);
+  // rutas desde data/audios.json (ver js/audios.js), no desde el campo "mp3"
+  const mp3Urls = getMp3Urls(song, idiomaActual);
   if (mp3Urls.length) {
-    // título del modal: "1 - Cantad alegres al Señor" (sin número si no tiene)
-    const titulo = normalizeArrayField(idiomaData?.titulo).find(Boolean) || "";
-    const numero = idiomaData?.numero_himno || "";
-    const tituloModal = [numero, titulo].filter(Boolean).join(" - ") || "mp3";
-    enlaces.push(`<a href="#" class="mp3" ${dataAction("abrirMp3Modal", [mp3Urls, tituloModal])}>🎧 mp3</a>`);
+    // abre el reproductor (Mis Playlists) en este canto, con su versión
+    // con voz y la pista si existe (ver rpReproducirCancion en reproductor.js)
+    enlaces.push(`<a href="#" class="mp3" ${dataAction("rpReproducirCancion", [song.id])}>🎧 mp3</a>`);
   }
 
   // PPS y PPSX son la misma presentación en 2 formatos: un solo botón (ícono
@@ -1664,11 +1666,9 @@ function renderAudioLink(song, idiomaData) {
   `;
 }
 
-// ===================== VISOR (mp3 / PPS-PPSX / partitura) =====================
-// Un solo modal reutilizado para las tres cosas, para no tener que armar y
-// mantener 3 modales casi iguales. cerrarVisorModal vacía el body: además de
-// limpiar, eso corta la reproducción del audio y descarta el iframe/canvas
-// al cerrar (si no, el mp3 seguiría sonando de fondo).
+// ===================== VISOR (PPS-PPSX / partitura) =====================
+// Un solo modal reutilizado para las dos cosas. cerrarVisorModal vacía el body: además de
+// limpiar, eso descarta el iframe/canvas al cerrar.
 function abrirVisorModal(titulo) {
   const modal = document.getElementById("visorModal");
   const body = document.getElementById("visorModalBody");
@@ -1686,47 +1686,6 @@ function cerrarVisorModal() {
 
   const body = document.getElementById("visorModalBody");
   if (body) body.innerHTML = "";
-}
-
-// etiqueta de cada versión del mp3 según la carpeta donde está
-// (.../audio/vocal/001.mp3 → "Con voz", .../audio/playbacks/001.mp3 → pista)
-function etiquetaMp3(url, i) {
-  if (/playback|instrumental|pista/i.test(url)) return `🎹 ${t("mp3_playback")}`;
-  if (/vocal|voz/i.test(url)) return `🎤 ${t("mp3_vocal")}`;
-  return `🎧 ${i + 1}`;
-}
-
-// urls: una o varias versiones del mismo himno (con voz / playback). Si hay
-// más de una, arriba del reproductor aparecen botones para cambiar entre
-// ellas sin cerrar el modal
-function abrirMp3Modal(urls, titulo) {
-  const lista = normalizeArrayField(urls).filter(Boolean);
-  if (!lista.length) return;
-
-  const body = abrirVisorModal(`🎧 ${titulo || "mp3"}`);
-  if (!body) return;
-
-  const selector = lista.length > 1
-    ? `<div class="visor-mp3-opciones">${lista.map((u, i) =>
-        `<button type="button" class="visor-mp3-opcion${i === 0 ? " activa" : ""}" data-idx="${i}">${escapeHtml(etiquetaMp3(u, i))}</button>`
-      ).join("")}</div>`
-    : "";
-
-  // controlslist="nodownload" saca el botón "Descargar" del menú del
-  // reproductor, y sin menú contextual no aparece "Guardar audio como..."
-  body.innerHTML = `${selector}<audio class="visor-audio" controls autoplay controlslist="nodownload noplaybackrate" src="${escapeHtml(lista[0])}"></audio>`;
-
-  const audio = body.querySelector("audio");
-  audio?.addEventListener("contextmenu", e => e.preventDefault());
-
-  body.querySelectorAll(".visor-mp3-opcion").forEach(btn => {
-    btn.addEventListener("click", () => {
-      if (btn.classList.contains("activa")) return;
-      body.querySelectorAll(".visor-mp3-opcion").forEach(b => b.classList.toggle("activa", b === btn));
-      audio.src = lista[Number(btn.dataset.idx)];
-      audio.play().catch(() => {});
-    });
-  });
 }
 
 // PPS/PPSX no se pueden mostrar solos en el navegador (son binarios de

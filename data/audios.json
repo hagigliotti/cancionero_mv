@@ -1,0 +1,67 @@
+{
+  "_comentario1": "Dónde están los mp3 de cada libro. La clave de cada libro es su \"id\" en libros.json.",
+  "_comentario2": "{num} = número de himno con 3 dígitos (1 → 001). {id} = el \"id\" de la canción en su .json (ej. amigos_de_esperanza).",
+  "_comentario3": "Cada ruta puede ser un texto o una lista de textos: se usa la PRIMERA que exista de verdad en el repositorio.",
+  "_comentario4": "La app consulta a GitHub qué archivos existen (una vez cada 6 horas), así que solo aparecen los cantos que tienen mp3 subido.",
+  "_comentario5": "Libros que todavía no están en libros.json (bautista, metodista, etc.) quedan listos: cuando se cree el libro con ese id, toma estas rutas solo.",
+
+  "base": "https://raw.githubusercontent.com/hagigliotti/cancionero_media/main/",
+
+  "libros": {
+    "cancionero": {
+      "vocal":    "cancionero_app/audio/vocal/{id}.mp3",
+      "playback": "cancionero_app/audio/playbacks/{id}.mp3"
+    },
+    "himnario": {
+      "vocal":    "himnario_ar/audio/vocal/{num}.mp3",
+      "playback": "himnario_ar/audio/playbacks/{num}.mp3"
+    },
+    "himnario_1962": {
+      "vocal":    "himnario_ar/audio62/vocal/{num}.mp3",
+      "playback": "himnario_ar/audio62/playbacks/{num}.mp3"
+    },
+    "innario": {
+      "vocal":    "innario_it/audio/vocal/{num}.mp3",
+      "playback": "innario_it/audio/playbacks/{num}.mp3"
+    },
+    "melodias_de_victoria": {
+      "_comentario": "Hoy los mp3 están sueltos en audio/ (sin carpeta vocal/): la 2da ruta los toma igual hasta que se muevan a audio/vocal/",
+      "vocal":    ["otros_himnarios/melodias_de_victoria/audio/vocal/{num}.mp3", "otros_himnarios/melodias_de_victoria/audio/{num}.mp3"],
+      "playback": "otros_himnarios/melodias_de_victoria/audio/playbacks/{num}.mp3"
+    },
+
+    "himnario_bautista": {
+      "vocal":    "otros_himnarios/himnario_bautista/audio/vocal/{num}.mp3",
+      "playback": "otros_himnarios/himnario_bautista/audio/playbacks/{num}.mp3"
+    },
+    "himnario_metodista": {
+      "vocal":    "otros_himnarios/himnario_metodista/audio/vocal/{num}.mp3",
+      "playback": "otros_himnarios/himnario_metodista/audio/playbacks/{num}.mp3"
+    },
+    "himnario_mormon": {
+      "vocal":    "otros_himnarios/himnario_mormon/audio/vocal/{num}.mp3",
+      "playback": "otros_himnarios/himnario_mormon/audio/playbacks/{num}.mp3"
+    },
+    "himnario_protestante": {
+      "vocal":    "otros_himnarios/himnario_protestante/audio/vocal/{num}.mp3",
+      "playback": "otros_himnarios/himnario_protestante/audio/playbacks/{num}.mp3"
+    },
+
+    "gesangbuch_de": {
+      "vocal":    "gesangbuch_de/audios/vocal/{num}.mp3",
+      "playback": "gesangbuch_de/audios/playbacks/{num}.mp3"
+    },
+    "hinario_pt": {
+      "vocal":    "hinario_pt/audios/vocal/{num}.mp3",
+      "playback": "hinario_pt/audios/playbacks/{num}.mp3"
+    },
+    "hymnaire_fr": {
+      "vocal":    "hymnaire_fr/audios/vocal/{num}.mp3",
+      "playback": "hymnaire_fr/audios/playbacks/{num}.mp3"
+    },
+    "hymnal_en": {
+      "vocal":    "hymnal_en/audios/vocal/{num}.mp3",
+      "playback": "hymnal_en/audios/playbacks/{num}.mp3"
+    }
+  }
+}

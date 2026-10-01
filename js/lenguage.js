@@ -108,6 +108,7 @@ function actualizarMenuIdioma() {
   setText("txtBiblioteca", "biblioteca");
   setText("txtMiMusica", "mi_musica");
   setText("txtMisListas", "mis_listas");
+  if (typeof rpTraducirFijos === "function") rpTraducirFijos();
   setText("txtBlocMusical", "bloc_musical");
   setText("txtHerramientas", "herramientas");
   setText("txtTamanoLetra", "tamano_letra");
