@@ -63,6 +63,11 @@ const RP_LABELS = {
   temporizador_on:   { es: "La música se detiene en {n} min", en: "Music stops in {n} min", it: "La musica si ferma tra {n} min", pt: "A música para em {n} min", fr: "La musique s'arrête dans {n} min", de: "Musik stoppt in {n} Min." },
   minimizar:         { es: "Minimizar (sigue sonando)", en: "Minimize (keeps playing)", it: "Riduci (continua a suonare)", pt: "Minimizar (continua tocando)", fr: "Réduire (continue la lecture)", de: "Minimieren (spielt weiter)" },
   cerrar:            { es: "Cerrar y detener", en: "Close and stop", it: "Chiudi e ferma", pt: "Fechar e parar", fr: "Fermer et arrêter", de: "Schließen und stoppen" },
+  conectar:          { es: "Conectar a un dispositivo", en: "Connect to a device", it: "Collega a un dispositivo", pt: "Conectar a um dispositivo", fr: "Connecter à un appareil", de: "Mit einem Gerät verbinden" },
+  conectar_bt:       { es: "Conectá tu parlante o auriculares Bluetooth desde los ajustes del celular: la música sale por ahí sola.", en: "Pair your Bluetooth speaker or headphones from your phone settings: the music will play through them.", it: "Collega cassa o cuffie Bluetooth dalle impostazioni del telefono: la musica uscirà da lì.", pt: "Conecte sua caixa de som ou fone Bluetooth nas configurações do celular: a música sai por ali.", fr: "Connectez votre enceinte ou casque Bluetooth depuis les réglages du téléphone : la musique sortira par là.", de: "Verbinde Lautsprecher oder Kopfhörer per Bluetooth in den Handy-Einstellungen: Die Musik läuft dann darüber." },
+  conectado:         { es: "Conectado a {nombre}", en: "Connected to {nombre}", it: "Collegato a {nombre}", pt: "Conectado a {nombre}", fr: "Connecté à {nombre}", de: "Verbunden mit {nombre}" },
+  desconectado:      { es: "Se volvió a este dispositivo", en: "Back on this device", it: "Tornato su questo dispositivo", pt: "Voltou para este dispositivo", fr: "Retour sur cet appareil", de: "Wieder auf diesem Gerät" },
+  sin_letra:         { es: "Este canto todavía no tiene la letra cargada.", en: "This song doesn't have lyrics yet.", it: "Questo brano non ha ancora il testo.", pt: "Esta música ainda não tem a letra.", fr: "Ce titre n'a pas encore de paroles.", de: "Für diesen Titel gibt es noch keinen Text." },
   himno_n:           { es: "Himno {n}", en: "Hymn {n}", it: "Inno {n}", pt: "Hino {n}", fr: "Cantique {n}", de: "Lied {n}" },
   repetir_off:       { es: "Sin repetir", en: "Repeat off", it: "Ripetizione disattivata", pt: "Sem repetir", fr: "Répétition désactivée", de: "Wiederholen aus" },
   repetir_todo:      { es: "🔁 En bucle: se repite toda la lista", en: "🔁 Looping the whole list", it: "🔁 In loop: si ripete tutta la lista", pt: "🔁 Em loop: repete a lista toda", fr: "🔁 En boucle : toute la liste se répète", de: "🔁 Endlosschleife: ganze Liste wiederholen" },
@@ -97,6 +102,8 @@ const RP_ICONOS = {
   search:   "M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z",
   mic:      "M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z",
   nota:     "M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z",
+  altavoz:  "M17 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm-5 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm0 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-6a2 2 0 1 0 0 4 2 2 0 0 0 0-4z",
+  letraIco: "M4 6h16v2H4zm0 5h16v2H4zm0 5h10v2H4z",
   luna:     "M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z",
   libro:    "M4 6H2v14a2 2 0 0 0 2 2h14v-2H4V6zm16-4H8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0 14H8V4h12v12z",
   trash:    "M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z",
@@ -113,6 +120,12 @@ function rpIcono(nombre, clase = "") {
 // ===================== ESTADO =====================
 const rpAudio = new Audio();
 rpAudio.preload = "metadata";
+// AirPlay (iPhone/Mac) y Chromecast (Remote Playback) trabajan sobre un
+// <audio> que esté en la página: se agrega oculto, sin controles (no hay
+// menú de descarga)
+rpAudio.setAttribute("x-webkit-airplay", "allow");
+rpAudio.hidden = true;
+document.addEventListener("DOMContentLoaded", () => document.body.appendChild(rpAudio));
 
 const rp = {
   cola: [],              // ids de canciones en el orden en que van a sonar
@@ -247,7 +260,7 @@ function rpTrack(songId) {
   const data = song.idiomas[lang];
   const numero = data.numero_himno || "";
   const titulo = getSongTitle(song, lang);
-  const autores = rpLista(song.autor);
+  const autores = rpPersonas(song.autor);
 
   return {
     song, libro, lang, data, numero, titulo,
@@ -260,6 +273,11 @@ function rpTrack(songId) {
 // campo de personas/valores → array limpio (sin vacíos ni "-")
 function rpLista(v) {
   return normalizeArrayField(v).map(x => (x || "").toString().trim()).filter(x => x && x !== "-");
+}
+
+// personas: además sin "Desconocido" (no aporta nada en créditos ni debajo del título)
+function rpPersonas(v) {
+  return rpLista(v).filter(x => normalize(x) !== "DESCONOCIDO");
 }
 
 function rpEsPlayback(url) {
@@ -1337,6 +1355,7 @@ function rpRenderSonando() {
     </div>
 
     <div class="rp-son-extras">
+      <button type="button" class="rp-icon-btn rp-icon-gris${rpConectado ? " rp-verde" : ""}" ${dataAction("rpConectarDispositivo")} title="${escapeHtml(tRp("conectar"))}">${rpIcono("altavoz")}</button>
       ${tr.mp3s.length > 1 ? `
         <div class="rp-version-toggle">
           <button type="button" class="${rp.version === "vocal" ? "activa" : ""}" ${dataAction("rpCambiarVersion", ["vocal"])}>${rpIcono("mic")} ${escapeHtml(t("mp3_vocal"))}</button>
@@ -1346,6 +1365,8 @@ function rpRenderSonando() {
       <button type="button" class="rp-icon-btn rp-icon-gris${rp.timer ? " rp-verde" : ""}" ${dataAction("rpCiclarTimer")}>${rpIcono("luna")}${rp.timer ? `<small>${timerMin}'</small>` : ""}</button>
     </div>
 
+    <button type="button" class="rp-ver-letra" ${dataAction("rpVerLetra")}>${rpIcono("letraIco")} ${tRp("letra")} ${rpIcono("down")}</button>
+
     ${rpHtmlLetra(tr)}
     ${rpHtmlCreditos(tr)}
     ${rpHtmlAcerca(tr)}
@@ -1354,10 +1375,77 @@ function rpRenderSonando() {
   rpCargarPortadaEn(document.getElementById("rpCoverGrande"), "rp-tapa-grande");
 }
 
+// baja hasta la tarjeta de la letra (queda debajo de los controles)
+function rpVerLetra() {
+  const cont = document.getElementById("rpSonando");
+  const card = document.getElementById("rpCardLetra");
+  const barra = cont?.querySelector(".rp-son-top");
+  if (cont && card) cont.scrollTo({ top: card.offsetTop - (barra?.offsetHeight || 0) - 8, behavior: "smooth" });
+}
+
+// ===================== CONECTAR (AirPlay / Chromecast / Bluetooth) =====================
+// - iPhone/iPad/Mac (Safari): abre el selector de AirPlay, que además lista
+//   parlantes y auriculares Bluetooth
+// - Android/Chrome: Remote Playback API → selector de Chromecast / TV
+// - Chrome/Edge en computadora: elegir la salida de audio (parlante BT, etc.)
+// - si nada de eso está disponible: Bluetooth se conecta desde el sistema
+//   (la web no puede emparejar), y se avisa cómo
+let rpConectado = false;
+
+async function rpConectarDispositivo() {
+  try {
+    if (typeof rpAudio.webkitShowPlaybackTargetPicker === "function") {
+      rpAudio.webkitShowPlaybackTargetPicker();
+      return;
+    }
+
+    if (rpAudio.remote && typeof rpAudio.remote.prompt === "function") {
+      await rpAudio.remote.prompt();
+      return;
+    }
+
+    if (navigator.mediaDevices?.selectAudioOutput && typeof rpAudio.setSinkId === "function") {
+      const salida = await navigator.mediaDevices.selectAudioOutput();
+      await rpAudio.setSinkId(salida.deviceId);
+      showToast(tRp("conectado", { nombre: salida.label || "" }));
+      return;
+    }
+  } catch (err) {
+    // canceló el selector, o el dispositivo/navegador no lo soporta: se cae al aviso
+    if (err?.name === "NotAllowedError" || err?.name === "AbortError") return;
+    console.warn("No se pudo abrir el selector de dispositivos:", err);
+  }
+
+  showToast(tRp("conectar_bt"));
+}
+
+if (rpAudio.remote) {
+  rpAudio.remote.addEventListener("connect", () => { rpConectado = true; rpRenderSonando(); });
+  rpAudio.remote.addEventListener("disconnect", () => {
+    rpConectado = false;
+    showToast(tRp("desconectado"));
+    rpRenderSonando();
+  });
+}
+
+if (window.WebKitPlaybackTargetAvailabilityEvent) {
+  rpAudio.addEventListener("webkitcurrentplaybacktargetiswirelesschanged", () => {
+    rpConectado = !!rpAudio.webkitCurrentPlaybackTargetIsWireless;
+    rpRenderSonando();
+  });
+}
+
 // letra sola: sin acordes/tablatura y sin teleprónter, en una tarjeta como la de Spotify
 function rpHtmlLetra(tr) {
   const original = normalizeArrayField(tr.data.letra);
-  if (!original.some(l => l && l.trim() && l !== "br")) return "";
+  if (!original.some(l => l && l.trim() && l !== "br")) {
+    return `
+      <section class="rp-card rp-card-letra" id="rpCardLetra">
+        <h4>${tRp("letra")}</h4>
+        <p class="rp-acerca-nota">${tRp("sin_letra")}</p>
+      </section>
+    `;
+  }
 
   let html = "";
   original.forEach(linea => {
@@ -1380,7 +1468,7 @@ function rpHtmlLetra(tr) {
   });
 
   return `
-    <section class="rp-card rp-card-letra">
+    <section class="rp-card rp-card-letra" id="rpCardLetra">
       <h4>${tRp("letra")}</h4>
       <div class="rp-letra">${html}</div>
     </section>
@@ -1395,7 +1483,7 @@ function rpHtmlCreditos(tr) {
     ["compositor", song.compositor],
     ["arreglo", tr.data.arreglo],
     ["traductor", tr.data.traductor]
-  ].flatMap(([rol, v]) => rpLista(v).map(nombre => ({ rol, nombre })));
+  ].flatMap(([rol, v]) => rpPersonas(v).map(nombre => ({ rol, nombre })));
 
   if (!personas.length) return "";
 

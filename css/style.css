@@ -5516,3 +5516,49 @@ body.projector #accentPicker {
 
 /* renglón de la letra que coincide con la búsqueda (reproductor) */
 .rp-renglon { font-style: italic; color: #e0e0e0; overflow: hidden; text-overflow: ellipsis; }
+
+/* --- reproductor: zona del notch / barra de estado ---
+   La app usa viewport-fit=cover + barra de estado translúcida (iPhone con
+   la app instalada): sin estos márgenes, los botones de arriba (⌄, ←, ✕)
+   quedaban debajo de la hora/notch y no se podían tocar */
+@media (max-width: 600px) {
+  .rp-top { padding-top: calc(14px + env(safe-area-inset-top, 0px)); }
+  .rp-hero { padding-top: calc(60px + env(safe-area-inset-top, 0px)); }
+  .rp-top-flotante { padding-top: calc(10px + env(safe-area-inset-top, 0px)); }
+}
+
+/* barra de arriba de "reproduciendo": siempre visible (sticky) mientras se
+   baja a leer la letra, con el color de la portada de fondo */
+.rp-son-top {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  margin: 0 -24px;
+  padding: calc(10px + env(safe-area-inset-top, 0px)) 12px 8px;
+  background: var(--rp-color);
+}
+
+.rp-son-top .rp-icon-btn { background: rgba(0, 0, 0, 0.25); }
+
+.rp-sonando { padding-bottom: calc(32px + env(safe-area-inset-bottom, 0px)); }
+
+/* portada un poco más chica en celulares bajos: así asoma la tarjeta de
+   la letra y se nota que hay más para leer abajo */
+.rp-son-cover { max-width: min(360px, 38vh); margin: 18px auto 24px; }
+
+.rp-ver-letra {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 auto;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.rp-ver-letra .rp-ico { width: 18px; height: 18px; }
