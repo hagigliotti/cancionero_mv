@@ -2,7 +2,7 @@
 
 ## 🇬🇧 English
 
-Copyright (c) 2026 Hernando Gigliotti
+Copyright (c) 2026 Hernando A. Gigliotti
 
 ALL RIGHTS RESERVED
 
@@ -30,7 +30,7 @@ All rights reserved.
 
 ## 🇪🇸 Español
 
-Copyright (c) 2026 Hernando Gigliotti
+Copyright (c) 2026 Hernando A. Gigliotti
 
 TODOS LOS DERECHOS RESERVADOS
 
@@ -58,7 +58,7 @@ Todos los derechos reservados.
 
 ## 🇮🇹 Italiano
 
-Copyright (c) 2026 Hernando Gigliotti
+Copyright (c) 2026 Hernando A. Gigliotti
 
 TUTTI I DIRITTI RISERVATI
 
@@ -86,7 +86,7 @@ Tutti i diritti riservati.
 
 ## 🇵🇹 Português
 
-Copyright (c) 2026 Hernando Gigliotti
+Copyright (c) 2026 Hernando A. Gigliotti
 
 TODOS OS DIREITOS RESERVADOS
 
@@ -114,7 +114,7 @@ Todos os direitos reservados.
 
 ## 🇫🇷 Français
 
-Copyright (c) 2026 Hernando Gigliotti
+Copyright (c) 2026 Hernando A. Gigliotti
 
 TOUS DROITS RÉSERVÉS
 
@@ -142,7 +142,7 @@ Tous droits réservés.
 
 ## 🇩🇪 Deutsch
 
-Copyright (c) 2026 Hernando Gigliotti
+Copyright (c) 2026 Hernando A. Gigliotti
 
 ALLE RECHTE VORBEHALTEN
 

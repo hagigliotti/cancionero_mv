@@ -1,4 +1,4 @@
-const MANUAL_VERSION="2.68.3",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
+const MANUAL_VERSION="2.69.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
       <p><strong>Cancionero MV</strong> es una app gratuita, sin publicidad, para cantar y tocar: m\xE1s de 2.000 cantos e himnos con letra, acordes, audio, partituras y presentaciones, en varios idiomas.</p>
       <h4>C\xF3mo abrirla</h4>
       <ul>
@@ -23,6 +23,7 @@ const MANUAL_VERSION="2.68.3",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>Bandera</b> (derecha): idioma de la app y de las canciones. Ver el cap\xEDtulo <i>Idiomas</i>.</li>
         <li><b>Barra de letras</b> (abc, #, A, B, C\u2026): abre la lista de cantos que empiezan con esa letra. Las flechas \u25C0 \u25B6 a los costados la deslizan. En los himnarios aparece adem\xE1s una barra de <b>rangos de n\xFAmeros</b> (1-50, 51-100\u2026).</li>
         <li>Al bajar, el buscador y la barra de letras quedan fijos arriba.</li>
+        <li><b>Barras verticales</b> de letras o n\xFAmeros (en la lista de cantos, en Autores, Temas, Mis Listas, el Bloc musical y el reproductor): toc\xE1 una letra o desliz\xE1 el dedo por la barra; aparece un <b>globo de color</b> con la letra en grande.</li>
       </ul>`},{id:"libros",icono:"\u{1F4DA}",titulo:"Los libros",html:`
       <p>Se elige el libro en <b>\u2630 Men\xFA \u2192 Recursos \u2192 Libro</b>.</p>
       <ul>
@@ -143,7 +144,7 @@ const MANUAL_VERSION="2.68.3",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
       <h4>Dentro de un \xE1lbum o playlist</h4>
       <ul>
         <li>Buscador por t\xEDtulo, n\xFAmero, letra o autor.</li>
-        <li><b>Barra vertical</b> a la derecha: en los himnarios, n\xFAmeros arriba y <b>letras</b> abajo. Tocar una letra ordena por t\xEDtulo; tocar un n\xFAmero vuelve al orden por n\xFAmero. Se puede deslizar el dedo.</li>
+        <li><b>Barra vertical</b> a la derecha: en los himnarios, n\xFAmeros arriba y <b>letras</b> abajo. Tocar una letra ordena por t\xEDtulo; tocar un n\xFAmero vuelve al orden por n\xFAmero. Se puede deslizar el dedo: al costado aparece un globo de color con la letra o el n\xFAmero.</li>
         <li>\u25B6 reproduce desde el principio; \u{1F500} en orden aleatorio. Toc\xE1 un canto para empezar desde ah\xED.</li>
         <li>Men\xFA <b>\u22EF</b> de un canto: agregar a playlist, quitar de la playlist, subir/bajar, <b>Ver en el cancionero</b>.</li>
         <li>Men\xFA <b>\u22EF</b> de una playlist propia: <b>Compartir playlist</b> (manda un link: quien lo abre la recibe en su app), Cambiar nombre, Eliminar.</li>
@@ -246,6 +247,7 @@ const MANUAL_VERSION="2.68.3",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>Encontr\xE9 un error en una letra</b>: avis\xE1 desde <b>Contacto</b>.</li>
       </ul>`},{id:"novedades",icono:"\u{1F195}",titulo:"Novedades",html:`
       <ul>
+        <li><b>2.69.0</b> \u2014 Globo de color con la letra o el n\xFAmero en todas las barras verticales (tambi\xE9n se puede deslizar el dedo). \xABDesconocido\xBB y \xABAn\xF3nimo\xBB unificados como \xABAn\xF3nimo\xBB. Cr\xE9ditos con las iniciales: Hernando A. Gigliotti, Elisa B. Vilaltella, Rolando E. Gigliotti.</li>
         <li><b>2.68.3</b> \u2014 Coautores: Elisa B. Vilaltella y Rolando E. Gigliotti.</li>
         <li><b>2.68.2</b> \u2014 \xABWilliams S. Costa Jr.\xBB y \xABWilliams S. Costa Junior\xBB unificados. Elisa B. Vilaltella como coautora junto a Hernando A. Gigliotti.</li>
         <li><b>2.68.1</b> \u2014 Sin personas duplicadas: cada autor, compositor y traductor con un \xFAnico nombre en todos los libros (por ejemplo \xABWilson Almeida\xBB y \xABWilson F. Almeida\xBB son uno solo). Cr\xE9ditos iguales para el mismo canto en distintos libros.</li>

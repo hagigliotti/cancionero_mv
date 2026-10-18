@@ -24,7 +24,7 @@ const INFO_TEXTOS={en:{version:"Version",actualizado:"Updated",forzar:"\u{1F504}
           </div>
 
           <p>With the app installed, next time it opens straight from the icon on your screen \u2014 without typing the address again. The lyrics and chords of the songs are saved on the device (they work without internet); images, large files (PDFs, audio) and the Bible references of the songs (which open in Bible Gateway) still need internet.</p>
-        `,copy_b:`          <p>The <strong>\u201CCancionero MV\u201D</strong> was developed by Hernando Gigliotti and edited in collaboration with Elisa Vilaltella and Rolando Gigliotti.</p>
+        `,copy_b:`          <p>The <strong>\u201CCancionero MV\u201D</strong> was developed by Hernando A. Gigliotti and edited in collaboration with Elisa B. Vilaltella and Rolando E. Gigliotti.</p>
           <p>This non-profit material is a compilation for religious, community and educational purposes. The songs and their corresponding rights belong to their respective authors and publishers.</p>
           <p>The source code, the database structure, arrangements and content developed specifically for this project are the intellectual property of their authors and are protected by copyright laws.</p>
           <div class="callout">
@@ -33,7 +33,7 @@ const INFO_TEXTOS={en:{version:"Version",actualizado:"Updated",forzar:"\u{1F504}
           </div>
 
           <div class="legal-box">
-            <p><strong>Copyright (c) 2026 Hernando Gigliotti \u2014 ALL RIGHTS RESERVED</strong></p>
+            <p><strong>Copyright (c) 2026 Hernando A. Gigliotti \u2014 ALL RIGHTS RESERVED</strong></p>
             <p>This repository (code, tablatures, chords, metadata and images) is protected by international copyright laws. Copying, modification, distribution or commercial use without prior written permission is prohibited.</p>
             <p>Its presence on GitHub does not grant usage rights to third parties. Certain materials are included under exclusive, non-transferable permissions. Unauthorized replicas or forks \u2014 that is, those whose sole purpose is not to submit a contribution to this same repository through a pull request \u2014 are expressly prohibited.</p>
             <p>This project is governed by the laws of the Argentine Republic, in particular Law No. 11.723 on Intellectual Property (as amended by Decree 165/1994, which expressly protects software as a literary work), without prejudice to the additional protection granted by the Berne Convention and the WTO TRIPS Agreement.</p>
@@ -69,7 +69,7 @@ const INFO_TEXTOS={en:{version:"Version",actualizado:"Updated",forzar:"\u{1F504}
           </div>
 
           <p>Con l'app installata, la prossima volta si apre direttamente dall'icona sullo schermo \u2014 senza riscrivere l'indirizzo. I testi e gli accordi dei canti restano salvati sul dispositivo (funzionano senza internet); le immagini, i file grandi (PDF, audio) e i riferimenti biblici dei canti (che si aprono su Bible Gateway) continuano a richiedere internet.</p>
-        `,copy_b:`          <p>Il <strong>\u201CCancionero MV\u201D</strong> \xE8 stato sviluppato da Hernando Gigliotti ed editato in collaborazione con Elisa Vilaltella e Rolando Gigliotti.</p>
+        `,copy_b:`          <p>Il <strong>\u201CCancionero MV\u201D</strong> \xE8 stato sviluppato da Hernando A. Gigliotti ed editato in collaborazione con Elisa B. Vilaltella e Rolando E. Gigliotti.</p>
           <p>Questo materiale senza scopo di lucro \xE8 una raccolta con finalit\xE0 religiose, comunitarie ed educative. I canti e i relativi diritti appartengono ai rispettivi autori ed editori.</p>
           <p>Il codice sorgente, la struttura del database, gli arrangiamenti e i contenuti sviluppati specificamente per questo progetto sono propriet\xE0 intellettuale dei loro autori e sono protetti dalle leggi sul diritto d'autore.</p>
           <div class="callout">
@@ -78,7 +78,7 @@ const INFO_TEXTOS={en:{version:"Version",actualizado:"Updated",forzar:"\u{1F504}
           </div>
 
           <div class="legal-box">
-            <p><strong>Copyright (c) 2026 Hernando Gigliotti \u2014 TUTTI I DIRITTI RISERVATI</strong></p>
+            <p><strong>Copyright (c) 2026 Hernando A. Gigliotti \u2014 TUTTI I DIRITTI RISERVATI</strong></p>
             <p>Questo repository (codice, tablature, accordi, metadati e immagini) \xE8 protetto dalle leggi internazionali sul diritto d'autore. \xC8 vietata la copia, la modifica, la distribuzione o l'uso commerciale senza previa autorizzazione scritta.</p>
             <p>La presenza su GitHub non concede diritti d'uso a terzi. Alcuni materiali sono inclusi in base a permessi esclusivi non trasferibili. Le repliche o i fork non autorizzati \u2014 cio\xE8 quelli che non abbiano come unico scopo l'invio di un contributo a questo stesso repository tramite una pull request \u2014 sono espressamente vietati.</p>
             <p>Questo progetto \xE8 regolato dalle leggi della Repubblica Argentina, in particolare dalla Legge n. 11.723 sulla Propriet\xE0 Intellettuale (con le modifiche del Decreto 165/1994, che protegge espressamente il software come opera letteraria), fatta salva la protezione aggiuntiva offerta dalla Convenzione di Berna e dall'Accordo TRIPS dell'OMC.</p>
@@ -114,7 +114,7 @@ const INFO_TEXTOS={en:{version:"Version",actualizado:"Updated",forzar:"\u{1F504}
           </div>
 
           <p>Com o app instalado, da pr\xF3xima vez ele abre direto pelo \xEDcone na sua tela \u2014 sem digitar o endere\xE7o de novo. As letras e os acordes dos cantos ficam guardados no dispositivo (funcionam sem internet); as imagens, os arquivos grandes (PDFs, \xE1udios) e as refer\xEAncias b\xEDblicas dos cantos (que abrem no Bible Gateway) continuam precisando de internet.</p>
-        `,copy_b:`          <p>O <strong>\u201CCancionero MV\u201D</strong> foi desenvolvido por Hernando Gigliotti e editado em colabora\xE7\xE3o com Elisa Vilaltella e Rolando Gigliotti.</p>
+        `,copy_b:`          <p>O <strong>\u201CCancionero MV\u201D</strong> foi desenvolvido por Hernando A. Gigliotti e editado em colabora\xE7\xE3o com Elisa B. Vilaltella e Rolando E. Gigliotti.</p>
           <p>Este material sem fins lucrativos \xE9 uma compila\xE7\xE3o com fins religiosos, comunit\xE1rios e educativos. Os cantos e os seus respectivos direitos pertencem aos seus respectivos autores e editoras.</p>
           <p>O c\xF3digo-fonte, a estrutura do banco de dados, arranjos e conte\xFAdos desenvolvidos especificamente para este projeto s\xE3o propriedade intelectual dos seus autores e est\xE3o protegidos pelas leis de direitos autorais.</p>
           <div class="callout">
@@ -123,7 +123,7 @@ const INFO_TEXTOS={en:{version:"Version",actualizado:"Updated",forzar:"\u{1F504}
           </div>
 
           <div class="legal-box">
-            <p><strong>Copyright (c) 2026 Hernando Gigliotti \u2014 TODOS OS DIREITOS RESERVADOS</strong></p>
+            <p><strong>Copyright (c) 2026 Hernando A. Gigliotti \u2014 TODOS OS DIREITOS RESERVADOS</strong></p>
             <p>Este reposit\xF3rio (c\xF3digo, tablaturas, acordes, metadados e imagens) est\xE1 protegido por leis internacionais de direitos autorais. Fica proibida a c\xF3pia, modifica\xE7\xE3o, distribui\xE7\xE3o ou uso comercial sem permiss\xE3o pr\xE9via por escrito.</p>
             <p>A presen\xE7a no GitHub n\xE3o concede direitos de uso a terceiros. Certos materiais s\xE3o inclu\xEDdos sob permiss\xF5es exclusivas n\xE3o transfer\xEDveis. As r\xE9plicas ou bifurca\xE7\xF5es (forks) n\xE3o autorizadas \u2014 ou seja, aquelas que n\xE3o tenham como \xFAnico fim enviar uma contribui\xE7\xE3o a este mesmo reposit\xF3rio por meio de um pull request \u2014 est\xE3o expressamente proibidas.</p>
             <p>Este projeto rege-se pelas leis da Rep\xFAblica Argentina, em particular pela Lei N.\xBA 11.723 de Propriedade Intelectual (com as modifica\xE7\xF5es do Decreto 165/1994, que protege expressamente o software como obra liter\xE1ria), sem preju\xEDzo da prote\xE7\xE3o adicional concedida pela Conven\xE7\xE3o de Berna e pelo Acordo TRIPS da OMC.</p>
@@ -159,7 +159,7 @@ const INFO_TEXTOS={en:{version:"Version",actualizado:"Updated",forzar:"\u{1F504}
           </div>
 
           <p>Une fois l'application install\xE9e, la prochaine fois elle s'ouvre directement depuis l'ic\xF4ne sur votre \xE9cran \u2014 sans retaper l'adresse. Les paroles et les accords des chants sont enregistr\xE9s sur l'appareil (ils fonctionnent sans internet) ; les images, les fichiers volumineux (PDF, audios) et les r\xE9f\xE9rences bibliques des chants (qui s'ouvrent dans Bible Gateway) n\xE9cessitent toujours internet.</p>
-        `,copy_b:`          <p>Le <strong>\xAB Cancionero MV \xBB</strong> a \xE9t\xE9 d\xE9velopp\xE9 par Hernando Gigliotti et \xE9dit\xE9 en collaboration avec Elisa Vilaltella et Rolando Gigliotti.</p>
+        `,copy_b:`          <p>Le <strong>\xAB Cancionero MV \xBB</strong> a \xE9t\xE9 d\xE9velopp\xE9 par Hernando A. Gigliotti et \xE9dit\xE9 en collaboration avec Elisa B. Vilaltella et Rolando E. Gigliotti.</p>
           <p>Ce mat\xE9riel \xE0 but non lucratif est une compilation \xE0 des fins religieuses, communautaires et \xE9ducatives. Les chants et leurs droits correspondants appartiennent \xE0 leurs auteurs et \xE9diteurs respectifs.</p>
           <p>Le code source, la structure de la base de donn\xE9es, les arrangements et les contenus d\xE9velopp\xE9s sp\xE9cifiquement pour ce projet sont la propri\xE9t\xE9 intellectuelle de leurs auteurs et sont prot\xE9g\xE9s par les lois sur le droit d'auteur.</p>
           <div class="callout">
@@ -168,7 +168,7 @@ const INFO_TEXTOS={en:{version:"Version",actualizado:"Updated",forzar:"\u{1F504}
           </div>
 
           <div class="legal-box">
-            <p><strong>Copyright (c) 2026 Hernando Gigliotti \u2014 TOUS DROITS R\xC9SERV\xC9S</strong></p>
+            <p><strong>Copyright (c) 2026 Hernando A. Gigliotti \u2014 TOUS DROITS R\xC9SERV\xC9S</strong></p>
             <p>Ce d\xE9p\xF4t (code, tablatures, accords, m\xE9tadonn\xE9es et images) est prot\xE9g\xE9 par les lois internationales sur le droit d'auteur. Toute copie, modification, distribution ou utilisation commerciale sans autorisation \xE9crite pr\xE9alable est interdite.</p>
             <p>Sa pr\xE9sence sur GitHub n'accorde aucun droit d'utilisation \xE0 des tiers. Certains mat\xE9riaux sont inclus sous des autorisations exclusives non transf\xE9rables. Les r\xE9pliques ou bifurcations (forks) non autoris\xE9es \u2014 c'est-\xE0-dire celles qui n'ont pas pour seul but d'envoyer une contribution \xE0 ce m\xEAme d\xE9p\xF4t au moyen d'une pull request \u2014 sont express\xE9ment interdites.</p>
             <p>Ce projet est r\xE9gi par les lois de la R\xE9publique argentine, en particulier par la Loi n\xB0 11.723 sur la Propri\xE9t\xE9 intellectuelle (avec les modifications du D\xE9cret 165/1994, qui prot\xE8ge express\xE9ment le logiciel en tant qu'\u0153uvre litt\xE9raire), sans pr\xE9judice de la protection suppl\xE9mentaire accord\xE9e par la Convention de Berne et l'Accord ADPIC/TRIPS de l'OMC.</p>
@@ -204,7 +204,7 @@ const INFO_TEXTOS={en:{version:"Version",actualizado:"Updated",forzar:"\u{1F504}
           </div>
 
           <p>Ist die App installiert, \xF6ffnet sie sich beim n\xE4chsten Mal direkt \xFCber das Symbol auf deinem Bildschirm \u2014 ohne die Adresse erneut einzugeben. Text und Akkorde der Lieder sind auf dem Ger\xE4t gespeichert (sie funktionieren ohne Internet); Bilder, gro\xDFe Dateien (PDFs, Audios) und die Bibelstellen der Lieder (die sich in Bible Gateway \xF6ffnen) ben\xF6tigen weiterhin Internet.</p>
-        `,copy_b:`          <p>Das <strong>\u201ECancionero MV\u201C</strong> wurde von Hernando Gigliotti entwickelt und in Zusammenarbeit mit Elisa Vilaltella und Rolando Gigliotti herausgegeben.</p>
+        `,copy_b:`          <p>Das <strong>\u201ECancionero MV\u201C</strong> wurde von Hernando A. Gigliotti entwickelt und in Zusammenarbeit mit Elisa B. Vilaltella und Rolando E. Gigliotti herausgegeben.</p>
           <p>Dieses nicht gewinnorientierte Material ist eine Zusammenstellung zu religi\xF6sen, gemeinschaftlichen und bildenden Zwecken. Die Lieder und die entsprechenden Rechte geh\xF6ren ihren jeweiligen Autoren und Verlagen.</p>
           <p>Der Quellcode, die Struktur der Datenbank, Arrangements und speziell f\xFCr dieses Projekt entwickelte Inhalte sind geistiges Eigentum ihrer Urheber und durch das Urheberrecht gesch\xFCtzt.</p>
           <div class="callout">
@@ -213,7 +213,7 @@ const INFO_TEXTOS={en:{version:"Version",actualizado:"Updated",forzar:"\u{1F504}
           </div>
 
           <div class="legal-box">
-            <p><strong>Copyright (c) 2026 Hernando Gigliotti \u2014 ALLE RECHTE VORBEHALTEN</strong></p>
+            <p><strong>Copyright (c) 2026 Hernando A. Gigliotti \u2014 ALLE RECHTE VORBEHALTEN</strong></p>
             <p>Dieses Repository (Code, Tabulaturen, Akkorde, Metadaten und Bilder) ist durch internationale Urheberrechtsgesetze gesch\xFCtzt. Kopieren, \xC4ndern, Verbreiten oder kommerzielle Nutzung ohne vorherige schriftliche Genehmigung ist untersagt.</p>
             <p>Die Pr\xE4senz auf GitHub gew\xE4hrt Dritten keine Nutzungsrechte. Bestimmte Materialien sind aufgrund exklusiver, nicht \xFCbertragbarer Genehmigungen enthalten. Nicht autorisierte Kopien oder Abspaltungen (Forks) \u2014 das hei\xDFt solche, deren einziger Zweck nicht darin besteht, \xFCber einen Pull Request einen Beitrag zu diesem Repository einzureichen \u2014 sind ausdr\xFCcklich untersagt.</p>
             <p>Dieses Projekt unterliegt den Gesetzen der Argentinischen Republik, insbesondere dem Gesetz Nr. 11.723 \xFCber geistiges Eigentum (mit den \xC4nderungen des Dekrets 165/1994, das Software ausdr\xFCcklich als literarisches Werk sch\xFCtzt), unbeschadet des zus\xE4tzlichen Schutzes durch die Berner \xDCbereinkunft und das TRIPS-Abkommen der WTO.</p>
