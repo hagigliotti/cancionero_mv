@@ -1,4 +1,4 @@
-const MANUAL_VERSION="2.67.5",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
+const MANUAL_VERSION="2.68.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
       <p><strong>Cancionero MV</strong> es una app gratuita, sin publicidad, para cantar y tocar: m\xE1s de 2.000 cantos e himnos con letra, acordes, audio, partituras y presentaciones, en varios idiomas.</p>
       <h4>C\xF3mo abrirla</h4>
       <ul>
@@ -13,6 +13,7 @@ const MANUAL_VERSION="2.67.5",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
       <h4>Actualizaciones</h4>
       <ul>
         <li>La app se actualiza sola. Cuando hay una versi\xF3n nueva aparece un aviso abajo: tocalo para cargarla.</li>
+        <li>Si algo se ve viejo o raro: <b>\u2630 Men\xFA \u2192 Informaci\xF3n de la app \u2192 \u{1F504} Forzar actualizaci\xF3n</b>. Baja la app entera de nuevo; tus listas, playlists, notas y ajustes no se pierden. Necesita internet.</li>
         <li>Si algo nuevo no aparece, cerr\xE1 la pesta\xF1a (o la app) y volv\xE9 a abrirla.</li>
       </ul>`},{id:"pantalla",icono:"\u{1F3E0}",titulo:"La pantalla principal",html:`
       <ul>
@@ -189,7 +190,7 @@ const MANUAL_VERSION="2.67.5",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li>Cada recurso indica a qui\xE9n pertenecen los derechos y, si corresponde, el <b>permiso</b> de uso.</li>
       </ul>`},{id:"info",icono:"\u2139\uFE0F",titulo:"Informaci\xF3n de la app",html:`
       <ul>
-        <li><b>\u2630 Men\xFA \u2192 Informaci\xF3n de la app</b>: versi\xF3n y fecha de actualizaci\xF3n.</li>
+        <li><b>\u2630 Men\xFA \u2192 Informaci\xF3n de la app</b>: versi\xF3n y fecha de actualizaci\xF3n, y el bot\xF3n <b>\u{1F504} Forzar actualizaci\xF3n</b> (baja la app entera de nuevo sin perder tus listas ni ajustes).</li>
         <li><b>Estad\xEDsticas</b>: cantidad de canciones, traducidas e idiomas.</li>
         <li>Listados de <b>Autores, Compositores, Traductores, Arregladores, Temas</b> y <b>Equivalencias</b> (el mismo canto en distintos libros), con filtro por idioma o por libro.</li>
         <li>En esos listados, un canto que est\xE1 en varios libros aparece <b>una sola vez</b>, con un bot\xF3n por libro (por ejemplo <b>'09 #394 \xB7 '62 #196</b>: libro y n\xFAmero de himno): toc\xE1 la fila para abrirlo, o el bot\xF3n del libro que prefieras.</li>
@@ -245,6 +246,7 @@ const MANUAL_VERSION="2.67.5",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>Encontr\xE9 un error en una letra</b>: avis\xE1 desde <b>Contacto</b>.</li>
       </ul>`},{id:"novedades",icono:"\u{1F195}",titulo:"Novedades",html:`
       <ul>
+        <li><b>2.68.0</b> \u2014 Bot\xF3n <b>\u{1F504} Forzar actualizaci\xF3n</b> en Informaci\xF3n de la app.</li>
         <li><b>2.67.5</b> \u2014 iPhone: el cursor del buscador ya no aparece m\xE1s abajo que el texto.</li>
         <li><b>2.67.4</b> \u2014 En la b\xFAsqueda, el mismo canto de dos libros aparece una sola vez (con la marca del otro libro al lado de la bandera). \xAB\xA1Cu\xE1n firme cimiento!\xBB: autor John Rippon.</li>
         <li><b>2.67.3</b> \u2014 Los cr\xE9ditos que eran el nombre de una colecci\xF3n (por ejemplo \xABA Selection of Hymns, 1787\xBB) pasan a \xABAn\xF3nimo\xBB, \xABMelod\xEDa tradicional\xBB o al autor real; la colecci\xF3n queda en la nota del himno. Botones de libro con \xAB#\xBB del n\xFAmero de himno.</li>
