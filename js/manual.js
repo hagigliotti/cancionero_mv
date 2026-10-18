@@ -1,4 +1,4 @@
-const MANUAL_VERSION="2.74.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
+const MANUAL_VERSION="2.75.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
       <p><strong>Cancionero MV</strong> es una app gratuita, sin publicidad, para cantar y tocar: m\xE1s de 2.000 cantos e himnos con letra, acordes, audio, partituras y presentaciones, en varios idiomas.</p>
       <h4>C\xF3mo abrirla</h4>
       <ul>
@@ -81,6 +81,7 @@ const MANUAL_VERSION="2.74.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li>Para <b>agregar</b> uno, toc\xE1 el <b>+</b> donde va (tambi\xE9n en renglones que no tienen acordes).</li>
         <li>Tocando la <b>letra</b> de un rengl\xF3n se corrige el texto (los acordes van entre corchetes: <code>[G]Hola</code>).</li>
         <li>En la pesta\xF1a <b>\u{1F4CB} Datos</b> se corrige todo lo dem\xE1s: t\xEDtulo, otros t\xEDtulos, t\xEDtulo original, autor, coautor, compositor, traductor, arreglo, a\xF1o, tonalidad, BPM, comp\xE1s, ritmo, referencia b\xEDblica, temas y nota (en los campos con varios valores, uno por rengl\xF3n). Lo que cambiaste queda marcado en naranja.</li>
+        <li>Mientras escrib\xEDs aparecen <b>sugerencias</b> (toc\xE1 una para agregarla): personas que ya est\xE1n en la app para autor, coautor, compositor, traductor y arreglo; ritmos; temas; tonalidades (por ejemplo \xABfa\xBB \u2192 <i>Fa Mayor (F)</i>); compases; y libros de la Biblia en la referencia b\xEDblica.</li>
         <li><b>Guardar</b> muestra el antes y despu\xE9s. Con tu <b>nombre y apellido</b> (obligatorios) y un comentario opcional, <b>Enviar</b> le manda la correcci\xF3n al autor de la app, que la revisa. Si est\xE1 bien, aparece en una pr\xF3xima actualizaci\xF3n.</li>
       </ul>
       <h4>Guitarra, bajo y ukelele</h4>
@@ -258,6 +259,7 @@ const MANUAL_VERSION="2.74.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>Encontr\xE9 un error en una letra</b>: avis\xE1 desde <b>Contacto</b>.</li>
       </ul>`},{id:"novedades",icono:"\u{1F195}",titulo:"Novedades",html:`
       <ul>
+        <li><b>2.75.0</b> \u2014 Corregir un canto \u2192 Datos: sugerencias mientras escrib\xEDs (personas, ritmos, temas, tonalidades, compases y libros de la Biblia).</li>
         <li><b>2.74.0</b> \u2014 \u2630 Men\xFA \u2192 Herramientas \u2192 <b>\u270F\uFE0F Editar canciones</b> (Activo / Inactivo): al activarlo aparece el l\xE1piz en las canciones; toc\xE1ndolo de nuevo se deja de editar.</li>
         <li><b>2.73.1</b> \u2014 Antes de corregir un canto se pide confirmaci\xF3n. Sin tablatura, las palabras ya no se cortan ni quedan con espacios de m\xE1s.</li>
         <li><b>2.73.0</b> \u2014 \u270F\uFE0F Corregir un canto: adem\xE1s de los acordes, el texto de la letra y todos los datos (autor, compositor, ritmo, referencia b\xEDblica, temas, etc.).</li>
