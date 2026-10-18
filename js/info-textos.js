@@ -1,0 +1,226 @@
+const INFO_TEXTOS={en:{version:"Version",actualizado:"Updated",contacto:"Contact",queEs_t:"What Cancionero MV is",func_t:"User manual",instalar_t:"How to install the app",copy_t:"Copyright and license",creditos_t:"Credits",fuentes_t:"Content sources",queEs_b:`          <p><strong>Cancionero MV</strong> is a web app designed for musicians, worship teams and song leaders: it brings together a songbook, a hymnal and camp songs in one place, with chords, key, time signature and everything needed to play or lead a song without relying on several PDFs or loose notebooks.</p>
+          <p>It works both for personal use \u2014 practicing, tuning an instrument, transposing a song to another key \u2014 and for live moments: on the music stand, in rehearsal, or projected on the screen during the service.</p>
+        `,func_b:'<p>Everything the app does, explained step by step (books, search, chords and diagrams, transposing, teleprompter, lists, playlists, metronome and tuner, music notepad, prayer requests, projector and TV mode, and more). The full manual is in Spanish.</p><button type="button" class="manual-abrir-btn" data-action="abrirManual" data-args="[true]">\u{1F4D8} Open the user manual</button>',instalar_b:`          <p><strong>Nothing needs to be installed</strong> \u2014 Cancionero works straight from the browser, online, just by opening the link. Installing it is optional: it lets you open it without the browser bar and makes it work without internet.</p>
+
+          <div class="callout">
+            \u{1F4F1} <strong>iPhone (it has to be Safari, it doesn't work from Chrome):</strong><br>
+            Open the site in Safari \u2192 tap the share icon (the square with the arrow pointing up) \u2192 scroll and choose <strong>"Add to Home Screen"</strong> \u2192 confirm with <strong>Add</strong>.
+          </div>
+
+          <div class="callout">
+            \u{1F916} <strong>Android (Chrome):</strong><br>
+            Open the site in Chrome \u2192 tap the 3 dots (top right) \u2192 choose <strong>"Install app"</strong> (or "Add to Home screen") \u2192 confirm.
+          </div>
+
+          <div class="callout">
+            \u{1F4BB} <strong>Windows PC (Chrome / Edge):</strong><br>
+            Open the site \u2192 look for the install icon in the address bar (a screen with an arrow, or a \u2295) \u2192 <strong>Install</strong>. If you don't see it, go to the browser's 3 dots \u2192 <strong>"Install Cancionero MV..."</strong>.
+          </div>
+
+          <div class="callout">
+            \u{1F5A5}\uFE0F <strong>Mac:</strong><br>
+            In <strong>Safari</strong> (macOS Sonoma or newer): menu <strong>File \u2192 Add to Dock...</strong><br>
+            In <strong>Chrome/Edge</strong>: same as on PC, the install icon in the address bar.
+          </div>
+
+          <p>With the app installed, next time it opens straight from the icon on your screen \u2014 without typing the address again. The lyrics and chords of the songs are saved on the device (they work without internet); images, large files (PDFs, audio) and the Bible references of the songs (which open in Bible Gateway) still need internet.</p>
+        `,copy_b:`          <p>The <strong>\u201CCancionero MV\u201D</strong> was developed by Hernando Gigliotti and edited in collaboration with Elisa Vilaltella and Rolando Gigliotti.</p>
+          <p>This non-profit material is a compilation for religious, community and educational purposes. The songs and their corresponding rights belong to their respective authors and publishers.</p>
+          <p>The source code, the database structure, arrangements and content developed specifically for this project are the intellectual property of their authors and are protected by copyright laws.</p>
+          <div class="callout">
+            \u{1F87A} If you would like to add a song or let me know about an error, please write to me.<br>
+            \u{1F878} If any rights holder wishes to have their content modified or removed, they can get in touch and we will proceed immediately.
+          </div>
+
+          <div class="legal-box">
+            <p><strong>Copyright (c) 2026 Hernando Gigliotti \u2014 ALL RIGHTS RESERVED</strong></p>
+            <p>This repository (code, tablatures, chords, metadata and images) is protected by international copyright laws. Copying, modification, distribution or commercial use without prior written permission is prohibited.</p>
+            <p>Its presence on GitHub does not grant usage rights to third parties. Certain materials are included under exclusive, non-transferable permissions. Unauthorized replicas or forks \u2014 that is, those whose sole purpose is not to submit a contribution to this same repository through a pull request \u2014 are expressly prohibited.</p>
+            <p>This project is governed by the laws of the Argentine Republic, in particular Law No. 11.723 on Intellectual Property (as amended by Decree 165/1994, which expressly protects software as a literary work), without prejudice to the additional protection granted by the Berne Convention and the WTO TRIPS Agreement.</p>
+            <p>For users and rights holders in Italy, this material is also protected by Legge 22 aprile 1941, n. 633 (the Copyright Law), whose art. 2, no. 8 \u2014added by Legislative Decree 518/1992\u2014 expressly extends that protection to software, and by Directive 2009/24/EC of the European Parliament and of the Council, which harmonizes the legal protection of computer programs throughout the European Union.</p>
+            <p>In the rest of the European Union, Directive 2001/29/EC (InfoSoc, on the rights of reproduction, communication to the public and distribution), Directive 2004/48/EC (on the enforcement of intellectual property rights, which regulates the procedures and measures to enforce them) and Directive 2006/116/EC, which sets the term of protection at 70 years after the author's death, also apply.</p>
+            <p><em>For inquiries or authorizations, contact the rights holder.</em></p>
+          </div>
+
+          <p style="font-size:10.5px; opacity:0.55; margin-top:14px; line-height:1.5;">\u{1F399}\uFE0F Microphone: it is used only for the Tuner (detecting the note you play or sing) and for recording in the Music notepad \u2014 it is not used for any other purpose, and it never records anything unless you tap the corresponding button.<br><br>Music notepad: the recordings you make with that function are a personal reminder for private use, stored only on your device \u2014 the app does not upload them to any server. Recording your own version of a song does not transfer to you the rights to the original work; those rights remain with its author. You decide what to record with this function, and you are responsible for that content.<br><br>\u{1F4F7} Camera/photos: it is used only if you choose to add a photo to a request in My Prayer Requests \u2014 it never turns on by itself. That photo, like the rest of your requests, is stored only on your device and is not uploaded to any server.</p>
+        `},it:{version:"Versione",actualizado:"Aggiornato",contacto:"Contatto",queEs_t:"Cos'\xE8 il Cancionero MV",func_t:"Manuale d'uso",instalar_t:"Come installare l'app",copy_t:"Copyright e licenza",creditos_t:"Crediti",fuentes_t:"Fonti dei contenuti",queEs_b:`          <p>Il <strong>Cancionero MV</strong> \xE8 un'applicazione web pensata per musicisti, gruppi di lode e direttori di canto: riunisce canzoniere, innario e canti da campo in un unico posto, con accordi, tonalit\xE0, tempo e tutto il necessario per suonare o dirigere un canto senza dipendere da vari PDF o quaderni sparsi.</p>
+          <p>Serve sia per l'uso personale \u2014 esercitarsi, accordare lo strumento, trasportare un canto in un'altra tonalit\xE0 \u2014 sia per i momenti dal vivo: sul leggio, alle prove, o proiettato sullo schermo durante il servizio.</p>
+        `,func_b:`<p>Tutto ci\xF2 che fa l'app, spiegato passo dopo passo (libri, ricerca, accordi e diagrammi, trasporto, gobbo, liste, playlist, metronomo e accordatore, blocco musicale, richieste di preghiera, proiettore e modalit\xE0 TV e altro). Il manuale completo \xE8 in spagnolo.</p><button type="button" class="manual-abrir-btn" data-action="abrirManual" data-args="[true]">\u{1F4D8} Apri il manuale d'uso</button>`,instalar_b:`          <p><strong>Non serve installare nulla</strong> \u2014 il Cancionero funziona direttamente dal browser, online, aprendo semplicemente il link. Installarlo \xE8 facoltativo: serve per aprirlo senza la barra del browser e perch\xE9 funzioni senza internet.</p>
+
+          <div class="callout">
+            \u{1F4F1} <strong>iPhone (deve essere Safari, non funziona da Chrome):</strong><br>
+            Apri il sito in Safari \u2192 tocca l'icona di condivisione (il quadrato con la freccia verso l'alto) \u2192 scorri e scegli <strong>"Aggiungi alla schermata Home"</strong> \u2192 conferma con <strong>Aggiungi</strong>.
+          </div>
+
+          <div class="callout">
+            \u{1F916} <strong>Android (Chrome):</strong><br>
+            Apri il sito in Chrome \u2192 tocca i 3 puntini (in alto a destra) \u2192 scegli <strong>"Installa app"</strong> (o "Aggiungi a schermata Home") \u2192 conferma.
+          </div>
+
+          <div class="callout">
+            \u{1F4BB} <strong>PC con Windows (Chrome / Edge):</strong><br>
+            Apri il sito \u2192 cerca l'icona di installazione nella barra degli indirizzi (uno schermo con una freccia, o un \u2295) \u2192 <strong>Installa</strong>. Se non la vedi, vai ai 3 puntini del browser \u2192 <strong>"Installa Cancionero MV..."</strong>.
+          </div>
+
+          <div class="callout">
+            \u{1F5A5}\uFE0F <strong>Mac:</strong><br>
+            In <strong>Safari</strong> (macOS Sonoma o pi\xF9 recente): menu <strong>File \u2192 Aggiungi al Dock...</strong><br>
+            In <strong>Chrome/Edge</strong>: come su PC, l'icona di installazione nella barra degli indirizzi.
+          </div>
+
+          <p>Con l'app installata, la prossima volta si apre direttamente dall'icona sullo schermo \u2014 senza riscrivere l'indirizzo. I testi e gli accordi dei canti restano salvati sul dispositivo (funzionano senza internet); le immagini, i file grandi (PDF, audio) e i riferimenti biblici dei canti (che si aprono su Bible Gateway) continuano a richiedere internet.</p>
+        `,copy_b:`          <p>Il <strong>\u201CCancionero MV\u201D</strong> \xE8 stato sviluppato da Hernando Gigliotti ed editato in collaborazione con Elisa Vilaltella e Rolando Gigliotti.</p>
+          <p>Questo materiale senza scopo di lucro \xE8 una raccolta con finalit\xE0 religiose, comunitarie ed educative. I canti e i relativi diritti appartengono ai rispettivi autori ed editori.</p>
+          <p>Il codice sorgente, la struttura del database, gli arrangiamenti e i contenuti sviluppati specificamente per questo progetto sono propriet\xE0 intellettuale dei loro autori e sono protetti dalle leggi sul diritto d'autore.</p>
+          <div class="callout">
+            \u{1F87A} Se desideri aggiungere un canto o segnalarmi un errore, scrivimi pure.<br>
+            \u{1F878} Se un titolare desidera la modifica o la rimozione dei propri contenuti, pu\xF2 contattarmi per procedere immediatamente.
+          </div>
+
+          <div class="legal-box">
+            <p><strong>Copyright (c) 2026 Hernando Gigliotti \u2014 TUTTI I DIRITTI RISERVATI</strong></p>
+            <p>Questo repository (codice, tablature, accordi, metadati e immagini) \xE8 protetto dalle leggi internazionali sul diritto d'autore. \xC8 vietata la copia, la modifica, la distribuzione o l'uso commerciale senza previa autorizzazione scritta.</p>
+            <p>La presenza su GitHub non concede diritti d'uso a terzi. Alcuni materiali sono inclusi in base a permessi esclusivi non trasferibili. Le repliche o i fork non autorizzati \u2014 cio\xE8 quelli che non abbiano come unico scopo l'invio di un contributo a questo stesso repository tramite una pull request \u2014 sono espressamente vietati.</p>
+            <p>Questo progetto \xE8 regolato dalle leggi della Repubblica Argentina, in particolare dalla Legge n. 11.723 sulla Propriet\xE0 Intellettuale (con le modifiche del Decreto 165/1994, che protegge espressamente il software come opera letteraria), fatta salva la protezione aggiuntiva offerta dalla Convenzione di Berna e dall'Accordo TRIPS dell'OMC.</p>
+            <p>Per gli utenti e i titolari di contenuti in Italia, questo materiale \xE8 inoltre protetto dalla Legge 22 aprile 1941, n. 633 (Legge sul diritto d'autore), il cui art. 2, n. 8 \u2014inserito dal D.Lgs. 518/1992\u2014 estende espressamente tale protezione al software, e dalla Direttiva 2009/24/CE del Parlamento europeo e del Consiglio, che armonizza la tutela giuridica dei programmi per elaboratore in tutta l'Unione Europea.</p>
+            <p>Nel resto dell'Unione Europea sono inoltre applicabili la Direttiva 2001/29/CE (InfoSoc, sui diritti di riproduzione, comunicazione al pubblico e distribuzione), la Direttiva 2004/48/CE (sul rispetto dei diritti di propriet\xE0 intellettuale, che regola le procedure e le misure per farli valere) e la Direttiva 2006/116/CE, che fissa in 70 anni dopo la morte dell'autore il termine di protezione.</p>
+            <p><em>Per richieste o autorizzazioni, contattare il titolare dei diritti.</em></p>
+          </div>
+
+          <p style="font-size:10.5px; opacity:0.55; margin-top:14px; line-height:1.5;">\u{1F399}\uFE0F Microfono: viene usato esclusivamente per l'Accordatore (rilevare la nota che suoni o canti) e per registrare nel Blocco musicale \u2014 non viene usato per nessun altro scopo, e non registra mai nulla senza che tu tocchi il pulsante corrispondente.<br><br>Blocco musicale: le registrazioni che fai con questa funzione sono un promemoria personale a uso privato, salvate solo sul tuo dispositivo \u2014 l'app non le carica su nessun server. Registrare una versione propria di un canto non ti trasferisce i diritti dell'opera originale; quei diritti restano del suo autore. Sei tu a decidere cosa registrare con questa funzione, e sei responsabile di quel contenuto.<br><br>\u{1F4F7} Fotocamera/foto: viene usata solo se scegli di aggiungere una foto a una richiesta in Le Mie Richieste di Preghiera \u2014 non si attiva mai da sola. Quella foto, come il resto delle tue richieste, resta salvata solo sul tuo dispositivo e non viene caricata su nessun server.</p>
+        `},pt:{version:"Vers\xE3o",actualizado:"Atualizado",contacto:"Contato",queEs_t:"O que \xE9 o Cancionero MV",func_t:"Manual do usu\xE1rio",instalar_t:"Como instalar o app",copy_t:"Direitos autorais e licen\xE7a",creditos_t:"Cr\xE9ditos",fuentes_t:"Fontes do conte\xFAdo",queEs_b:`          <p>O <strong>Cancionero MV</strong> \xE9 um aplicativo web pensado para m\xFAsicos, equipes de louvor e regentes: re\xFAne cancioneiro, hin\xE1rio e cantos de acampamento em um s\xF3 lugar, com acordes, tom, compasso e tudo o que \xE9 necess\xE1rio para tocar ou conduzir um canto sem depender de v\xE1rios PDFs ou cadernos soltos.</p>
+          <p>Serve tanto para o uso pessoal \u2014 praticar, afinar o instrumento, transpor um canto para outro tom \u2014 quanto para o momento ao vivo: na estante, no ensaio, ou projetado na tela durante o culto.</p>
+        `,func_b:'<p>Tudo o que o app faz, explicado passo a passo (livros, busca, acordes e diagramas, transposi\xE7\xE3o, teleprompter, listas, playlists, metr\xF4nomo e afinador, bloco musical, pedidos de ora\xE7\xE3o, projetor e modo TV, e mais). O manual completo est\xE1 em espanhol.</p><button type="button" class="manual-abrir-btn" data-action="abrirManual" data-args="[true]">\u{1F4D8} Abrir o manual do usu\xE1rio</button>',instalar_b:`          <p><strong>N\xE3o \xE9 preciso instalar nada</strong> \u2014 o Cancionero funciona direto do navegador, online, bastando abrir o link. Instal\xE1-lo \xE9 opcional: serve para abri-lo sem a barra do navegador e para que funcione sem internet.</p>
+
+          <div class="callout">
+            \u{1F4F1} <strong>iPhone (tem que ser o Safari, n\xE3o funciona pelo Chrome):</strong><br>
+            Abra o site no Safari \u2192 toque no \xEDcone de compartilhar (o quadrado com a seta para cima) \u2192 deslize e escolha <strong>"Adicionar \xE0 Tela de In\xEDcio"</strong> \u2192 confirme com <strong>Adicionar</strong>.
+          </div>
+
+          <div class="callout">
+            \u{1F916} <strong>Android (Chrome):</strong><br>
+            Abra o site no Chrome \u2192 toque nos 3 pontinhos (no alto, \xE0 direita) \u2192 escolha <strong>"Instalar app"</strong> (ou "Adicionar \xE0 tela inicial") \u2192 confirme.
+          </div>
+
+          <div class="callout">
+            \u{1F4BB} <strong>PC com Windows (Chrome / Edge):</strong><br>
+            Abra o site \u2192 procure o \xEDcone de instalar na barra de endere\xE7os (uma tela com uma seta, ou um \u2295) \u2192 <strong>Instalar</strong>. Se n\xE3o o vir, v\xE1 aos 3 pontinhos do navegador \u2192 <strong>"Instalar Cancionero MV..."</strong>.
+          </div>
+
+          <div class="callout">
+            \u{1F5A5}\uFE0F <strong>Mac:</strong><br>
+            No <strong>Safari</strong> (macOS Sonoma ou mais novo): menu <strong>Arquivo \u2192 Adicionar ao Dock...</strong><br>
+            No <strong>Chrome/Edge</strong>: igual ao PC, o \xEDcone de instalar na barra de endere\xE7os.
+          </div>
+
+          <p>Com o app instalado, da pr\xF3xima vez ele abre direto pelo \xEDcone na sua tela \u2014 sem digitar o endere\xE7o de novo. As letras e os acordes dos cantos ficam guardados no dispositivo (funcionam sem internet); as imagens, os arquivos grandes (PDFs, \xE1udios) e as refer\xEAncias b\xEDblicas dos cantos (que abrem no Bible Gateway) continuam precisando de internet.</p>
+        `,copy_b:`          <p>O <strong>\u201CCancionero MV\u201D</strong> foi desenvolvido por Hernando Gigliotti e editado em colabora\xE7\xE3o com Elisa Vilaltella e Rolando Gigliotti.</p>
+          <p>Este material sem fins lucrativos \xE9 uma compila\xE7\xE3o com fins religiosos, comunit\xE1rios e educativos. Os cantos e os seus respectivos direitos pertencem aos seus respectivos autores e editoras.</p>
+          <p>O c\xF3digo-fonte, a estrutura do banco de dados, arranjos e conte\xFAdos desenvolvidos especificamente para este projeto s\xE3o propriedade intelectual dos seus autores e est\xE3o protegidos pelas leis de direitos autorais.</p>
+          <div class="callout">
+            \u{1F87A} Se voc\xEA quiser adicionar um canto ou me comunicar algum erro, por favor escreva-me.<br>
+            \u{1F878} Se algum titular desejar a modifica\xE7\xE3o ou a retirada do seu conte\xFAdo, pode entrar em contato para que se proceda imediatamente.
+          </div>
+
+          <div class="legal-box">
+            <p><strong>Copyright (c) 2026 Hernando Gigliotti \u2014 TODOS OS DIREITOS RESERVADOS</strong></p>
+            <p>Este reposit\xF3rio (c\xF3digo, tablaturas, acordes, metadados e imagens) est\xE1 protegido por leis internacionais de direitos autorais. Fica proibida a c\xF3pia, modifica\xE7\xE3o, distribui\xE7\xE3o ou uso comercial sem permiss\xE3o pr\xE9via por escrito.</p>
+            <p>A presen\xE7a no GitHub n\xE3o concede direitos de uso a terceiros. Certos materiais s\xE3o inclu\xEDdos sob permiss\xF5es exclusivas n\xE3o transfer\xEDveis. As r\xE9plicas ou bifurca\xE7\xF5es (forks) n\xE3o autorizadas \u2014 ou seja, aquelas que n\xE3o tenham como \xFAnico fim enviar uma contribui\xE7\xE3o a este mesmo reposit\xF3rio por meio de um pull request \u2014 est\xE3o expressamente proibidas.</p>
+            <p>Este projeto rege-se pelas leis da Rep\xFAblica Argentina, em particular pela Lei N.\xBA 11.723 de Propriedade Intelectual (com as modifica\xE7\xF5es do Decreto 165/1994, que protege expressamente o software como obra liter\xE1ria), sem preju\xEDzo da prote\xE7\xE3o adicional concedida pela Conven\xE7\xE3o de Berna e pelo Acordo TRIPS da OMC.</p>
+            <p>Para os usu\xE1rios e titulares de conte\xFAdo na It\xE1lia, este material est\xE1 tamb\xE9m protegido pela Legge 22 aprile 1941, n. 633 (Lei do direito de autor), cujo art. 2, n. 8 \u2014incorporado pelo D.Lgs. 518/1992\u2014 estende expressamente essa prote\xE7\xE3o ao software, e pela Diretiva 2009/24/CE do Parlamento Europeu e do Conselho, que harmoniza a prote\xE7\xE3o jur\xEDdica dos programas de computador em toda a Uni\xE3o Europeia.</p>
+            <p>No resto da Uni\xE3o Europeia s\xE3o tamb\xE9m aplic\xE1veis a Diretiva 2001/29/CE (InfoSoc, sobre os direitos de reprodu\xE7\xE3o, comunica\xE7\xE3o ao p\xFAblico e distribui\xE7\xE3o), a Diretiva 2004/48/CE (sobre o respeito dos direitos de propriedade intelectual, que regula os procedimentos e medidas para faz\xEA-los valer) e a Diretiva 2006/116/CE, que fixa em 70 anos ap\xF3s a morte do autor o prazo de prote\xE7\xE3o.</p>
+            <p><em>Para consultas ou autoriza\xE7\xF5es, entre em contato com o titular dos direitos.</em></p>
+          </div>
+
+          <p style="font-size:10.5px; opacity:0.55; margin-top:14px; line-height:1.5;">\u{1F399}\uFE0F Microfone: \xE9 usado unicamente para o Afinador (detectar a nota que voc\xEA toca ou canta) e para gravar no Bloco musical \u2014 n\xE3o \xE9 usado para nenhum outro fim, e nunca grava nada sem que voc\xEA toque no bot\xE3o correspondente.<br><br>Bloco musical: as grava\xE7\xF5es que voc\xEA fizer com essa fun\xE7\xE3o s\xE3o um lembrete pessoal de uso privado, guardadas unicamente no seu dispositivo \u2014 o app n\xE3o as envia a nenhum servidor. Gravar uma vers\xE3o pr\xF3pria de um canto n\xE3o lhe transfere os direitos da obra original; esses direitos continuam sendo do seu autor. Voc\xEA decide o que gravar com esta fun\xE7\xE3o, e \xE9 respons\xE1vel por esse conte\xFAdo.<br><br>\u{1F4F7} C\xE2mera/fotos: \xE9 usada unicamente se voc\xEA escolher adicionar uma foto a um pedido em Meus Pedidos de Ora\xE7\xE3o \u2014 nunca se ativa sozinha. Essa foto, assim como o resto dos seus pedidos, fica guardada apenas no seu dispositivo e n\xE3o \xE9 enviada a nenhum servidor.</p>
+        `},fr:{version:"Version",actualizado:"Mis \xE0 jour",contacto:"Contact",queEs_t:"Qu'est-ce que le Cancionero MV",func_t:"Manuel d'utilisation",instalar_t:"Comment installer l'application",copy_t:"Droit d'auteur et licence",creditos_t:"Cr\xE9dits",fuentes_t:"Sources du contenu",queEs_b:`          <p>Le <strong>Cancionero MV</strong> est une application web pens\xE9e pour les musiciens, les \xE9quipes de louange et les directeurs de chant : elle r\xE9unit recueil de chants, livre de cantiques et chants de camp au m\xEAme endroit, avec les accords, la tonalit\xE9, la mesure et tout ce qu'il faut pour jouer ou diriger un chant sans d\xE9pendre de plusieurs PDF ou cahiers \xE9pars.</p>
+          <p>Elle sert aussi bien \xE0 l'usage personnel \u2014 s'exercer, accorder l'instrument, transposer un chant dans une autre tonalit\xE9 \u2014 qu'aux moments en direct : sur le pupitre, en r\xE9p\xE9tition, ou projet\xE9e sur l'\xE9cran pendant le culte.</p>
+        `,func_b:`<p>Tout ce que fait l'application, expliqu\xE9 pas \xE0 pas (livres, recherche, accords et diagrammes, transposition, t\xE9l\xE9prompteur, listes, playlists, m\xE9tronome et accordeur, bloc musical, demandes de pri\xE8re, projecteur et mode TV, etc.). Le manuel complet est en espagnol.</p><button type="button" class="manual-abrir-btn" data-action="abrirManual" data-args="[true]">\u{1F4D8} Ouvrir le manuel d'utilisation</button>`,instalar_b:`          <p><strong>Il n'est pas n\xE9cessaire d'installer quoi que ce soit</strong> \u2014 le Cancionero fonctionne directement dans le navigateur, en ligne, en ouvrant simplement le lien. L'installer est facultatif : cela permet de l'ouvrir sans la barre du navigateur et de le faire fonctionner sans internet.</p>
+
+          <div class="callout">
+            \u{1F4F1} <strong>iPhone (il faut utiliser Safari, cela ne fonctionne pas depuis Chrome) :</strong><br>
+            Ouvrez le site dans Safari \u2192 touchez l'ic\xF4ne de partage (le carr\xE9 avec la fl\xE8che vers le haut) \u2192 faites d\xE9filer et choisissez <strong>\xAB Sur l'\xE9cran d'accueil \xBB</strong> \u2192 confirmez avec <strong>Ajouter</strong>.
+          </div>
+
+          <div class="callout">
+            \u{1F916} <strong>Android (Chrome) :</strong><br>
+            Ouvrez le site dans Chrome \u2192 touchez les 3 points (en haut \xE0 droite) \u2192 choisissez <strong>\xAB Installer l'application \xBB</strong> (ou \xAB Ajouter \xE0 l'\xE9cran d'accueil \xBB) \u2192 confirmez.
+          </div>
+
+          <div class="callout">
+            \u{1F4BB} <strong>PC Windows (Chrome / Edge) :</strong><br>
+            Ouvrez le site \u2192 cherchez l'ic\xF4ne d'installation dans la barre d'adresse (un \xE9cran avec une fl\xE8che, ou un \u2295) \u2192 <strong>Installer</strong>. Si vous ne la voyez pas, allez dans les 3 points du navigateur \u2192 <strong>\xAB Installer Cancionero MV... \xBB</strong>.
+          </div>
+
+          <div class="callout">
+            \u{1F5A5}\uFE0F <strong>Mac :</strong><br>
+            Dans <strong>Safari</strong> (macOS Sonoma ou plus r\xE9cent) : menu <strong>Fichier \u2192 Ajouter au Dock...</strong><br>
+            Dans <strong>Chrome/Edge</strong> : comme sur PC, l'ic\xF4ne d'installation dans la barre d'adresse.
+          </div>
+
+          <p>Une fois l'application install\xE9e, la prochaine fois elle s'ouvre directement depuis l'ic\xF4ne sur votre \xE9cran \u2014 sans retaper l'adresse. Les paroles et les accords des chants sont enregistr\xE9s sur l'appareil (ils fonctionnent sans internet) ; les images, les fichiers volumineux (PDF, audios) et les r\xE9f\xE9rences bibliques des chants (qui s'ouvrent dans Bible Gateway) n\xE9cessitent toujours internet.</p>
+        `,copy_b:`          <p>Le <strong>\xAB Cancionero MV \xBB</strong> a \xE9t\xE9 d\xE9velopp\xE9 par Hernando Gigliotti et \xE9dit\xE9 en collaboration avec Elisa Vilaltella et Rolando Gigliotti.</p>
+          <p>Ce mat\xE9riel \xE0 but non lucratif est une compilation \xE0 des fins religieuses, communautaires et \xE9ducatives. Les chants et leurs droits correspondants appartiennent \xE0 leurs auteurs et \xE9diteurs respectifs.</p>
+          <p>Le code source, la structure de la base de donn\xE9es, les arrangements et les contenus d\xE9velopp\xE9s sp\xE9cifiquement pour ce projet sont la propri\xE9t\xE9 intellectuelle de leurs auteurs et sont prot\xE9g\xE9s par les lois sur le droit d'auteur.</p>
+          <div class="callout">
+            \u{1F87A} Si vous souhaitez ajouter un chant ou me signaler une erreur, \xE9crivez-moi.<br>
+            \u{1F878} Si un titulaire souhaite la modification ou le retrait de son contenu, il peut me contacter pour que l'on proc\xE8de imm\xE9diatement.
+          </div>
+
+          <div class="legal-box">
+            <p><strong>Copyright (c) 2026 Hernando Gigliotti \u2014 TOUS DROITS R\xC9SERV\xC9S</strong></p>
+            <p>Ce d\xE9p\xF4t (code, tablatures, accords, m\xE9tadonn\xE9es et images) est prot\xE9g\xE9 par les lois internationales sur le droit d'auteur. Toute copie, modification, distribution ou utilisation commerciale sans autorisation \xE9crite pr\xE9alable est interdite.</p>
+            <p>Sa pr\xE9sence sur GitHub n'accorde aucun droit d'utilisation \xE0 des tiers. Certains mat\xE9riaux sont inclus sous des autorisations exclusives non transf\xE9rables. Les r\xE9pliques ou bifurcations (forks) non autoris\xE9es \u2014 c'est-\xE0-dire celles qui n'ont pas pour seul but d'envoyer une contribution \xE0 ce m\xEAme d\xE9p\xF4t au moyen d'une pull request \u2014 sont express\xE9ment interdites.</p>
+            <p>Ce projet est r\xE9gi par les lois de la R\xE9publique argentine, en particulier par la Loi n\xB0 11.723 sur la Propri\xE9t\xE9 intellectuelle (avec les modifications du D\xE9cret 165/1994, qui prot\xE8ge express\xE9ment le logiciel en tant qu'\u0153uvre litt\xE9raire), sans pr\xE9judice de la protection suppl\xE9mentaire accord\xE9e par la Convention de Berne et l'Accord ADPIC/TRIPS de l'OMC.</p>
+            <p>Pour les utilisateurs et titulaires de contenu en Italie, ce mat\xE9riel est en outre prot\xE9g\xE9 par la Legge 22 aprile 1941, n. 633 (Loi sur le droit d'auteur), dont l'art. 2, n. 8 \u2014introduit par le D.Lgs. 518/1992\u2014 \xE9tend express\xE9ment cette protection au logiciel, et par la Directive 2009/24/CE du Parlement europ\xE9en et du Conseil, qui harmonise la protection juridique des programmes d'ordinateur dans toute l'Union europ\xE9enne.</p>
+            <p>Dans le reste de l'Union europ\xE9enne sont en outre applicables la Directive 2001/29/CE (InfoSoc, sur les droits de reproduction, de communication au public et de distribution), la Directive 2004/48/CE (relative au respect des droits de propri\xE9t\xE9 intellectuelle, qui r\xE9git les proc\xE9dures et mesures pour les faire valoir) et la Directive 2006/116/CE, qui fixe \xE0 70 ans apr\xE8s la mort de l'auteur la dur\xE9e de protection.</p>
+            <p><em>Pour toute demande ou autorisation, contactez le titulaire des droits.</em></p>
+          </div>
+
+          <p style="font-size:10.5px; opacity:0.55; margin-top:14px; line-height:1.5;">\u{1F399}\uFE0F Micro : il est utilis\xE9 uniquement pour l'Accordeur (d\xE9tecter la note que vous jouez ou chantez) et pour enregistrer dans le Bloc-notes musical \u2014 il n'est utilis\xE9 \xE0 aucune autre fin, et n'enregistre jamais rien sans que vous touchiez le bouton correspondant.<br><br>Bloc-notes musical : les enregistrements que vous faites avec cette fonction sont un aide-m\xE9moire personnel \xE0 usage priv\xE9, conserv\xE9s uniquement sur votre appareil \u2014 l'application ne les envoie \xE0 aucun serveur. Enregistrer votre propre version d'un chant ne vous transf\xE8re pas les droits de l'\u0153uvre originale ; ces droits restent \xE0 son auteur. C'est vous qui d\xE9cidez ce que vous enregistrez avec cette fonction, et vous \xEAtes responsable de ce contenu.<br><br>\u{1F4F7} Appareil photo/photos : il est utilis\xE9 uniquement si vous choisissez d'ajouter une photo \xE0 une demande dans Mes Demandes de Pri\xE8re \u2014 il ne s'active jamais tout seul. Cette photo, comme le reste de vos demandes, est conserv\xE9e uniquement sur votre appareil et n'est envoy\xE9e \xE0 aucun serveur.</p>
+        `},de:{version:"Version",actualizado:"Aktualisiert",contacto:"Kontakt",queEs_t:"Was das Cancionero MV ist",func_t:"Benutzerhandbuch",instalar_t:"So installierst du die App",copy_t:"Urheberrecht und Lizenz",creditos_t:"Mitwirkende",fuentes_t:"Quellen der Inhalte",queEs_b:`          <p>Das <strong>Cancionero MV</strong> ist eine Web-App f\xFCr Musiker, Lobpreisteams und Chorleiter: Sie vereint Liederbuch, Gesangbuch und Freizeitlieder an einem Ort, mit Akkorden, Tonart, Taktart und allem, was n\xF6tig ist, um ein Lied zu spielen oder zu leiten, ohne von mehreren PDFs oder losen Heften abh\xE4ngig zu sein.</p>
+          <p>Sie dient sowohl der pers\xF6nlichen Nutzung \u2014 \xFCben, das Instrument stimmen, ein Lied in eine andere Tonart transponieren \u2014 als auch dem Live-Einsatz: auf dem Notenst\xE4nder, in der Probe oder projiziert auf die Leinwand w\xE4hrend des Gottesdienstes.</p>
+        `,func_b:'<p>Alles, was die App kann, Schritt f\xFCr Schritt erkl\xE4rt (B\xFCcher, Suche, Akkorde und Diagramme, Transponieren, Teleprompter, Listen, Playlists, Metronom und Stimmger\xE4t, Musiknotizblock, Gebetsanliegen, Beamer- und TV-Modus und mehr). Das vollst\xE4ndige Handbuch ist auf Spanisch.</p><button type="button" class="manual-abrir-btn" data-action="abrirManual" data-args="[true]">\u{1F4D8} Benutzerhandbuch \xF6ffnen</button>',instalar_b:`          <p><strong>Es muss nichts installiert werden</strong> \u2014 das Cancionero funktioniert direkt im Browser, online, einfach durch \xD6ffnen des Links. Die Installation ist optional: Sie dient dazu, es ohne die Browserleiste zu \xF6ffnen und damit es ohne Internet funktioniert.</p>
+
+          <div class="callout">
+            \u{1F4F1} <strong>iPhone (es muss Safari sein, aus Chrome funktioniert es nicht):</strong><br>
+            \xD6ffne die Seite in Safari \u2192 tippe auf das Teilen-Symbol (das Quadrat mit dem Pfeil nach oben) \u2192 scrolle und w\xE4hle <strong>\u201EZum Home-Bildschirm\u201C</strong> \u2192 best\xE4tige mit <strong>Hinzuf\xFCgen</strong>.
+          </div>
+
+          <div class="callout">
+            \u{1F916} <strong>Android (Chrome):</strong><br>
+            \xD6ffne die Seite in Chrome \u2192 tippe auf die 3 Punkte (oben rechts) \u2192 w\xE4hle <strong>\u201EApp installieren\u201C</strong> (oder \u201EZum Startbildschirm hinzuf\xFCgen\u201C) \u2192 best\xE4tige.
+          </div>
+
+          <div class="callout">
+            \u{1F4BB} <strong>Windows-PC (Chrome / Edge):</strong><br>
+            \xD6ffne die Seite \u2192 suche das Installationssymbol in der Adressleiste (ein Bildschirm mit einem Pfeil oder ein \u2295) \u2192 <strong>Installieren</strong>. Wenn du es nicht siehst, gehe zu den 3 Punkten des Browsers \u2192 <strong>\u201ECancionero MV installieren...\u201C</strong>.
+          </div>
+
+          <div class="callout">
+            \u{1F5A5}\uFE0F <strong>Mac:</strong><br>
+            In <strong>Safari</strong> (macOS Sonoma oder neuer): Men\xFC <strong>Ablage \u2192 Zum Dock hinzuf\xFCgen...</strong><br>
+            In <strong>Chrome/Edge</strong>: wie am PC, das Installationssymbol in der Adressleiste.
+          </div>
+
+          <p>Ist die App installiert, \xF6ffnet sie sich beim n\xE4chsten Mal direkt \xFCber das Symbol auf deinem Bildschirm \u2014 ohne die Adresse erneut einzugeben. Text und Akkorde der Lieder sind auf dem Ger\xE4t gespeichert (sie funktionieren ohne Internet); Bilder, gro\xDFe Dateien (PDFs, Audios) und die Bibelstellen der Lieder (die sich in Bible Gateway \xF6ffnen) ben\xF6tigen weiterhin Internet.</p>
+        `,copy_b:`          <p>Das <strong>\u201ECancionero MV\u201C</strong> wurde von Hernando Gigliotti entwickelt und in Zusammenarbeit mit Elisa Vilaltella und Rolando Gigliotti herausgegeben.</p>
+          <p>Dieses nicht gewinnorientierte Material ist eine Zusammenstellung zu religi\xF6sen, gemeinschaftlichen und bildenden Zwecken. Die Lieder und die entsprechenden Rechte geh\xF6ren ihren jeweiligen Autoren und Verlagen.</p>
+          <p>Der Quellcode, die Struktur der Datenbank, Arrangements und speziell f\xFCr dieses Projekt entwickelte Inhalte sind geistiges Eigentum ihrer Urheber und durch das Urheberrecht gesch\xFCtzt.</p>
+          <div class="callout">
+            \u{1F87A} Wenn du ein Lied hinzuf\xFCgen oder mir einen Fehler mitteilen m\xF6chtest, schreib mir bitte.<br>
+            \u{1F878} Wenn ein Rechteinhaber die \xC4nderung oder Entfernung seines Inhalts w\xFCnscht, kann er sich melden, damit umgehend verfahren wird.
+          </div>
+
+          <div class="legal-box">
+            <p><strong>Copyright (c) 2026 Hernando Gigliotti \u2014 ALLE RECHTE VORBEHALTEN</strong></p>
+            <p>Dieses Repository (Code, Tabulaturen, Akkorde, Metadaten und Bilder) ist durch internationale Urheberrechtsgesetze gesch\xFCtzt. Kopieren, \xC4ndern, Verbreiten oder kommerzielle Nutzung ohne vorherige schriftliche Genehmigung ist untersagt.</p>
+            <p>Die Pr\xE4senz auf GitHub gew\xE4hrt Dritten keine Nutzungsrechte. Bestimmte Materialien sind aufgrund exklusiver, nicht \xFCbertragbarer Genehmigungen enthalten. Nicht autorisierte Kopien oder Abspaltungen (Forks) \u2014 das hei\xDFt solche, deren einziger Zweck nicht darin besteht, \xFCber einen Pull Request einen Beitrag zu diesem Repository einzureichen \u2014 sind ausdr\xFCcklich untersagt.</p>
+            <p>Dieses Projekt unterliegt den Gesetzen der Argentinischen Republik, insbesondere dem Gesetz Nr. 11.723 \xFCber geistiges Eigentum (mit den \xC4nderungen des Dekrets 165/1994, das Software ausdr\xFCcklich als literarisches Werk sch\xFCtzt), unbeschadet des zus\xE4tzlichen Schutzes durch die Berner \xDCbereinkunft und das TRIPS-Abkommen der WTO.</p>
+            <p>F\xFCr Nutzer und Inhaber von Inhalten in Italien ist dieses Material au\xDFerdem durch die Legge 22 aprile 1941, n. 633 (Urheberrechtsgesetz) gesch\xFCtzt, deren Art. 2, Nr. 8 \u2014eingef\xFCgt durch das D.Lgs. 518/1992\u2014 diesen Schutz ausdr\xFCcklich auf Software erstreckt, sowie durch die Richtlinie 2009/24/EG des Europ\xE4ischen Parlaments und des Rates, die den Rechtsschutz von Computerprogrammen in der gesamten Europ\xE4ischen Union harmonisiert.</p>
+            <p>Im \xFCbrigen Gebiet der Europ\xE4ischen Union sind au\xDFerdem die Richtlinie 2001/29/EG (InfoSoc, \xFCber die Rechte der Vervielf\xE4ltigung, \xF6ffentlichen Wiedergabe und Verbreitung), die Richtlinie 2004/48/EG (zur Durchsetzung der Rechte des geistigen Eigentums, die die Verfahren und Ma\xDFnahmen zu ihrer Durchsetzung regelt) und die Richtlinie 2006/116/EG anwendbar, die die Schutzdauer auf 70 Jahre nach dem Tod des Urhebers festlegt.</p>
+            <p><em>F\xFCr Anfragen oder Genehmigungen wenden Sie sich an den Rechteinhaber.</em></p>
+          </div>
+
+          <p style="font-size:10.5px; opacity:0.55; margin-top:14px; line-height:1.5;">\u{1F399}\uFE0F Mikrofon: Es wird ausschlie\xDFlich f\xFCr das Stimmger\xE4t (die Note erkennen, die du spielst oder singst) und f\xFCr Aufnahmen im Musiknotizblock verwendet \u2014 f\xFCr keinen anderen Zweck \u2014 und nimmt nie etwas auf, ohne dass du die entsprechende Taste antippst.<br><br>Musiknotizblock: Die Aufnahmen, die du mit dieser Funktion machst, sind eine pers\xF6nliche Ged\xE4chtnisst\xFCtze f\xFCr den privaten Gebrauch und werden nur auf deinem Ger\xE4t gespeichert \u2014 die App l\xE4dt sie auf keinen Server hoch. Eine eigene Version eines Liedes aufzunehmen \xFCbertr\xE4gt dir nicht die Rechte am Originalwerk; diese Rechte bleiben bei seinem Urheber. Du entscheidest, was du mit dieser Funktion aufnimmst, und bist f\xFCr diesen Inhalt verantwortlich.<br><br>\u{1F4F7} Kamera/Fotos: Sie werden nur verwendet, wenn du dich entscheidest, einem Anliegen in Meine Gebetsanliegen ein Foto hinzuzuf\xFCgen \u2014 sie schalten sich nie von selbst ein. Dieses Foto wird, wie der Rest deiner Anliegen, nur auf deinem Ger\xE4t gespeichert und nicht auf einen Server hochgeladen.</p>
+        `}};
