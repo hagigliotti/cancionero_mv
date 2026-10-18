@@ -1,4 +1,4 @@
-const MANUAL_VERSION="2.72.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
+const MANUAL_VERSION="2.73.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
       <p><strong>Cancionero MV</strong> es una app gratuita, sin publicidad, para cantar y tocar: m\xE1s de 2.000 cantos e himnos con letra, acordes, audio, partituras y presentaciones, en varios idiomas.</p>
       <h4>C\xF3mo abrirla</h4>
       <ul>
@@ -73,11 +73,13 @@ const MANUAL_VERSION="2.72.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li>Si en un mismo lugar hay varios acordes (por ejemplo [Am - G - C]) suenan uno tras otro.</li>
         <li>El instrumento se elige en la ventanita, en <b>\u2630 Men\xFA \u2192 Herramientas \u2192 Diagrama de acordes</b> o en la pesta\xF1a Acordes del afinador. Con <b>Ninguno</b> el acorde suena pero no aparece la ventanita.</li>
       </ul>
-      <h4>\u270F\uFE0F Corregir los acordes</h4>
+      <h4>\u270F\uFE0F Corregir un canto</h4>
       <ul>
         <li>Si un acorde est\xE1 mal puesto, toc\xE1 <b>\u270F\uFE0F</b> al lado de la \u2B50 del t\xEDtulo. La letra pasa a modo edici\xF3n (siempre en la tonalidad original).</li>
         <li>Toc\xE1 un acorde: abajo aparecen <b>\u25C0 \u25B6</b> para correrlo letra por letra, el acorde para <b>cambiarlo</b> (nota, \u266F/\u266D y tipo, o escrito a mano como D/F#) y <b>\u{1F5D1}</b> para borrarlo. Al elegirlo suena.</li>
         <li>Para <b>agregar</b> uno, toc\xE1 el <b>+</b> donde va (tambi\xE9n en renglones que no tienen acordes).</li>
+        <li>Tocando la <b>letra</b> de un rengl\xF3n se corrige el texto (los acordes van entre corchetes: <code>[G]Hola</code>).</li>
+        <li>En la pesta\xF1a <b>\u{1F4CB} Datos</b> se corrige todo lo dem\xE1s: t\xEDtulo, otros t\xEDtulos, t\xEDtulo original, autor, coautor, compositor, traductor, arreglo, a\xF1o, tonalidad, BPM, comp\xE1s, ritmo, referencia b\xEDblica, temas y nota (en los campos con varios valores, uno por rengl\xF3n). Lo que cambiaste queda marcado en naranja.</li>
         <li><b>Guardar</b> muestra el antes y despu\xE9s. Con tu <b>nombre y apellido</b> (obligatorios) y un comentario opcional, <b>Enviar</b> le manda la correcci\xF3n al autor de la app, que la revisa. Si est\xE1 bien, aparece en una pr\xF3xima actualizaci\xF3n.</li>
       </ul>
       <h4>Guitarra, bajo y ukelele</h4>
@@ -255,6 +257,7 @@ const MANUAL_VERSION="2.72.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>Encontr\xE9 un error en una letra</b>: avis\xE1 desde <b>Contacto</b>.</li>
       </ul>`},{id:"novedades",icono:"\u{1F195}",titulo:"Novedades",html:`
       <ul>
+        <li><b>2.73.0</b> \u2014 \u270F\uFE0F Corregir un canto: adem\xE1s de los acordes, el texto de la letra y todos los datos (autor, compositor, ritmo, referencia b\xEDblica, temas, etc.).</li>
         <li><b>2.72.0</b> \u2014 \u270F\uFE0F <b>Corregir acordes</b>: mover, cambiar, borrar o agregar acordes en un canto y enviar la correcci\xF3n (con nombre y apellido).</li>
         <li><b>2.71.0</b> \u2014 Informaci\xF3n de la app: totales de Partituras y MP3 (toc\xE1ndolos se ve la lista); Contacto y Buy me a coffee en un rengl\xF3n; \xABCompositores\xBB entra en su bot\xF3n. La ficha solo ofrece la partitura si ya est\xE1 subida.</li>
         <li><b>2.70.0</b> \u2014 Cantos que est\xE1n en varios libros: despu\xE9s del t\xEDtulo, la marca del libro donde est\xE1s ('09, '62, MV, C, IA). Piano del afinador: la tecla tocada se pinta.</li>
