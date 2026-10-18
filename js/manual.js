@@ -1,4 +1,4 @@
-const MANUAL_VERSION="2.73.1",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
+const MANUAL_VERSION="2.74.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
       <p><strong>Cancionero MV</strong> es una app gratuita, sin publicidad, para cantar y tocar: m\xE1s de 2.000 cantos e himnos con letra, acordes, audio, partituras y presentaciones, en varios idiomas.</p>
       <h4>C\xF3mo abrirla</h4>
       <ul>
@@ -75,7 +75,8 @@ const MANUAL_VERSION="2.73.1",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
       </ul>
       <h4>\u270F\uFE0F Corregir un canto</h4>
       <ul>
-        <li>Si un acorde est\xE1 mal puesto, toc\xE1 <b>\u270F\uFE0F</b> al lado de la \u2B50 del t\xEDtulo y confirm\xE1 con <b>\xABS\xED, corregir\xBB</b>. La letra pasa a modo edici\xF3n (siempre en la tonalidad original).</li>
+        <li>Primero activ\xE1 <b>\u2630 Men\xFA \u2192 Herramientas \u2192 \u270F\uFE0F Editar canciones</b> (Activo / Inactivo). Al activarlo aparece un aviso y desde ah\xED cada canci\xF3n muestra un <b>l\xE1piz \u270F\uFE0F</b> al lado de la \u2B50.</li>
+        <li>Toc\xE1 el <b>\u270F\uFE0F</b>: la letra pasa a modo edici\xF3n (siempre en la tonalidad original). Para <b>dejar de editar</b>, volv\xE9 a tocar el l\xE1piz (si hay cambios sin enviar, pregunta si los descart\xE1s).</li>
         <li>Toc\xE1 un acorde: abajo aparecen <b>\u25C0 \u25B6</b> para correrlo letra por letra, el acorde para <b>cambiarlo</b> (nota, \u266F/\u266D y tipo, o escrito a mano como D/F#) y <b>\u{1F5D1}</b> para borrarlo. Al elegirlo suena.</li>
         <li>Para <b>agregar</b> uno, toc\xE1 el <b>+</b> donde va (tambi\xE9n en renglones que no tienen acordes).</li>
         <li>Tocando la <b>letra</b> de un rengl\xF3n se corrige el texto (los acordes van entre corchetes: <code>[G]Hola</code>).</li>
@@ -257,6 +258,7 @@ const MANUAL_VERSION="2.73.1",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>Encontr\xE9 un error en una letra</b>: avis\xE1 desde <b>Contacto</b>.</li>
       </ul>`},{id:"novedades",icono:"\u{1F195}",titulo:"Novedades",html:`
       <ul>
+        <li><b>2.74.0</b> \u2014 \u2630 Men\xFA \u2192 Herramientas \u2192 <b>\u270F\uFE0F Editar canciones</b> (Activo / Inactivo): al activarlo aparece el l\xE1piz en las canciones; toc\xE1ndolo de nuevo se deja de editar.</li>
         <li><b>2.73.1</b> \u2014 Antes de corregir un canto se pide confirmaci\xF3n. Sin tablatura, las palabras ya no se cortan ni quedan con espacios de m\xE1s.</li>
         <li><b>2.73.0</b> \u2014 \u270F\uFE0F Corregir un canto: adem\xE1s de los acordes, el texto de la letra y todos los datos (autor, compositor, ritmo, referencia b\xEDblica, temas, etc.).</li>
         <li><b>2.72.0</b> \u2014 \u270F\uFE0F <b>Corregir acordes</b>: mover, cambiar, borrar o agregar acordes en un canto y enviar la correcci\xF3n (con nombre y apellido).</li>

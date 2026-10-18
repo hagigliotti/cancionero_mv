@@ -109,11 +109,11 @@ function hasHymnNumbersInCurrentLanguage(){return getLibroSongs(libroActual).som
 
     </div>
 
-  `,g=e.idiomas?.[idiomaActual]?.nota,p=Array.isArray(g)?g.map(c=>(c||"").trim()).filter(c=>c!==""):typeof g=="string"?g.trim():"",I=Array.isArray(p)?p.length>0:p!=="";document.getElementById("contenido").innerHTML=`
+  `,g=e.idiomas?.[idiomaActual]?.nota,p=Array.isArray(g)?g.map(c=>(c||"").trim()).filter(c=>c!==""):typeof g=="string"?g.trim():"",T=Array.isArray(p)?p.length>0:p!=="";document.getElementById("contenido").innerHTML=`
   <div class="song-title-row" id="songTitleRow" data-song-id="${escapeHtml(e.id)}" data-lang="${escapeHtml(idiomaActual)}">
     <h2 class="song-title-text">${s}${m}</h2>
     <button type="button" class="fav-add-btn" ${dataAction("abrirMisListas",[e.id])} title="Agregar a una lista">\u2B50</button>
-    ${Array.isArray(i.letra)&&i.letra.length&&typeof editorAcordesActivo=="function"&&editorAcordesActivo()?`<button type="button" class="editar-acordes-btn" ${dataAction("abrirEditorAcordes")} title="${escapeHtml(tEd("editar"))}" aria-label="${escapeHtml(tEd("editar"))}">\u270F\uFE0F</button>`:""}
+    ${Array.isArray(i.letra)&&i.letra.length&&typeof editorAcordesActivo=="function"&&editorAcordesActivo()?`<button type="button" class="editar-acordes-btn" ${dataAction("edTocarLapiz")} title="${escapeHtml(tEd("editar"))}" aria-label="${escapeHtml(tEd("editar"))}">\u270F\uFE0F</button>`:""}
 
     <div class="teleprompter-bar" id="teleprompterBar" data-bpm="${normalizeMeta(e,"tempo_bpm")||""}">
       <span class="teleprompter-label">${t("teleprompter")}</span>
@@ -132,7 +132,7 @@ function hasHymnNumbersInCurrentLanguage(){return getLibroSongs(libroActual).som
     ${renderLyrics(i.letra)}
   </div>
 
-  ${I?`
+  ${T?`
         <div class="song-note">
           ${Array.isArray(p)?p.map(c=>`<p>${c}</p>`).join(""):p.split(`
 `).map(c=>`<p>${c}</p>`).join("")}
