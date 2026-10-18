@@ -1,4 +1,4 @@
-const MANUAL_VERSION="2.69.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
+const MANUAL_VERSION="2.69.1",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
       <p><strong>Cancionero MV</strong> es una app gratuita, sin publicidad, para cantar y tocar: m\xE1s de 2.000 cantos e himnos con letra, acordes, audio, partituras y presentaciones, en varios idiomas.</p>
       <h4>C\xF3mo abrirla</h4>
       <ul>
@@ -163,12 +163,13 @@ const MANUAL_VERSION="2.69.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
       </ul>`},{id:"afinador",icono:"\u{1F4DF}",titulo:"Metr\xF3nomo y afinador",html:`
       <p><b>\u2630 Men\xFA \u2192 Herramientas \u2192 Metr\xF3nomo y Afinador</b> (o tocando la tonalidad, BPM o comp\xE1s de un canto).</p>
       <ul>
-        <li><b>\u{1F3AF} Afinador</b>: General, Guitarra, Bajo, Viol\xEDn o Ukelele; referencia <b>La4 = 440 Hz</b> (ajustable con \u2212 / +); <b>\u{1F3A4} Activar micr\xF3fono</b> y toc\xE1 o cant\xE1: indica la nota y si est\xE1s alto o bajo.</li>
+        <li><b>\u{1F3AF} Afinador</b>: General, Guitarra, Bajo, Viol\xEDn o Ukelele; referencia <b>La4 = 440 Hz</b> (ajustable con \u2212 / +); <b>\u{1F3A4} Activar micr\xF3fono</b> y toc\xE1 o cant\xE1: indica la nota y si est\xE1s alto o bajo. Tocando una cuerda o nota suena primero la referencia y despu\xE9s se activa el micr\xF3fono.</li>
         <li><b>\u{1F941} Metr\xF3nomo</b>: BPM con \u2212 / +, <b>\u{1F446} Tap tempo</b> (toc\xE1 al ritmo), <b>Comp\xE1s</b> (1/4 a 7/8), <b>Subdivisi\xF3n</b> (\u2669 \u266A \u266A\xB3 \u266C), <b>Acento</b> en el tiempo que elijas, <b>\u25B6\uFE0F Play</b> y <b>\u{1F50A} Sonido</b>.</li>
         <li><b>\u{1F3B5} Notas</b>: piano para tocar cualquier nota, con octava ajustable.</li>
         <li><b>\u{1F3B6} Acordes</b>: eleg\xED la nota y el tipo (Mayor, menor, 7, Maj7, min7, sus2, sus4, dim, dim7, m7b5, aug, 6, m6); muestra sus notas, el diagrama y lo hace sonar.</li>
-        <li><b>\u{1F3BC} Escalas</b>: escalas de cada tonalidad.</li>
-        <li><b>\u{1F535} Quintas</b>: c\xEDrculo de cuartas y quintas; toc\xE1 una tonalidad para escucharla.</li>
+        <li><b>\u{1F3BC} Escalas</b>: escalas de cada tonalidad. Al elegir la nota suena; al elegir Mayor o menor suena su acorde; \u25B6 toca cada escala.</li>
+        <li><b>\u{1F535} Quintas</b>: c\xEDrculo de cuartas y quintas; toc\xE1 una tonalidad para escucharla y sus acordes para o\xEDrlos.</li>
+        <li>Todo suena: notas, acordes, diagramas (toc\xE1 el diagrama para o\xEDr el acorde), escalas y metr\xF3nomo. En iPhone suena aunque el celular est\xE9 en silencio.</li>
       </ul>`},{id:"bloc",icono:"\u{1F399}\uFE0F",titulo:"Bloc musical",html:`
       <p>Para grabar una idea antes de olvidarla. <b>\u2630 Men\xFA \u2192 Mi m\xFAsica \u2192 Bloc musical</b>.</p>
       <ul>
@@ -247,6 +248,7 @@ const MANUAL_VERSION="2.69.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>Encontr\xE9 un error en una letra</b>: avis\xE1 desde <b>Contacto</b>.</li>
       </ul>`},{id:"novedades",icono:"\u{1F195}",titulo:"Novedades",html:`
       <ul>
+        <li><b>2.69.1</b> \u2014 Metr\xF3nomo y afinador: barra de pesta\xF1as y botones con el color del tema; todo suena (cuerdas del afinador, ra\xEDz y tipo de escala, diagrama del acorde) y en iPhone suena aunque est\xE9 en silencio.</li>
         <li><b>2.69.0</b> \u2014 Globo de color con la letra o el n\xFAmero en todas las barras verticales (tambi\xE9n se puede deslizar el dedo). \xABDesconocido\xBB y \xABAn\xF3nimo\xBB unificados como \xABAn\xF3nimo\xBB. Cr\xE9ditos con las iniciales: Hernando A. Gigliotti, Elisa B. Vilaltella, Rolando E. Gigliotti.</li>
         <li><b>2.68.3</b> \u2014 Coautores: Elisa B. Vilaltella y Rolando E. Gigliotti.</li>
         <li><b>2.68.2</b> \u2014 \xABWilliams S. Costa Jr.\xBB y \xABWilliams S. Costa Junior\xBB unificados. Elisa B. Vilaltella como coautora junto a Hernando A. Gigliotti.</li>
@@ -264,8 +266,8 @@ const MANUAL_VERSION="2.69.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>2.63.0</b> \u2014 Bot\xF3n Aa (may\xFAsculas), vers\xEDculo siempre al cambiar de libro, nuevos coritos del Coritario J\xF3venes.</li>
         <li><b>2.62.0</b> \u2014 Saludo de feliz s\xE1bado.</li>
         <li><b>2.61.0</b> \u2014 Avisos de canciones nuevas en el reproductor, audios m4a.</li>
-      </ul>`}];let manualDesdeInfo=!1;function abrirManual(o=!1){manualDesdeInfo=o,o&&typeof cerrarInfo=="function"&&cerrarInfo(),typeof closeMenu=="function"&&closeMenu();const e=document.getElementById("manualModal");if(!e)return;renderManual(),e.style.display="block",document.getElementById("manualModalBack")?.classList.toggle("hidden",!o);const l=document.getElementById("manualBuscar");l&&(l.value=""),e.querySelector(".about-body")?.scrollTo(0,0)}function cerrarManual(){const o=document.getElementById("manualModal");o&&(o.style.display="none")}function volverAInfoDesdeManual(){cerrarManual(),typeof info=="function"&&info()}function renderManual(o=""){const e=document.getElementById("manualContenido"),l=document.getElementById("manualIndice"),r=document.getElementById("manualModalMeta");if(!e)return;r&&(r.textContent=`Versi\xF3n ${MANUAL_VERSION} \xB7 actualizado ${MANUAL_FECHA}`);const s=a=>typeof normalize=="function"?normalize(a):a.toLowerCase(),i=s(o.trim()),t=a=>s(a.titulo+" "+a.html.replace(/<[^>]+>/g," ")),n=MANUAL_CAPITULOS.filter(a=>!i||t(a).includes(i));l&&(l.innerHTML=n.map(a=>`<button type="button" class="manual-indice-item" ${dataAction("irACapituloManual",[a.id])}>${a.icono} ${escapeHtml(a.titulo)}</button>`).join("")),e.innerHTML=n.length?n.map(a=>`
+      </ul>`}];let manualDesdeInfo=!1;function abrirManual(e=!1){manualDesdeInfo=e,e&&typeof cerrarInfo=="function"&&cerrarInfo(),typeof closeMenu=="function"&&closeMenu();const o=document.getElementById("manualModal");if(!o)return;renderManual(),o.style.display="block",document.getElementById("manualModalBack")?.classList.toggle("hidden",!e);const l=document.getElementById("manualBuscar");l&&(l.value=""),o.querySelector(".about-body")?.scrollTo(0,0)}function cerrarManual(){const e=document.getElementById("manualModal");e&&(e.style.display="none")}function volverAInfoDesdeManual(){cerrarManual(),typeof info=="function"&&info()}function renderManual(e=""){const o=document.getElementById("manualContenido"),l=document.getElementById("manualIndice"),r=document.getElementById("manualModalMeta");if(!o)return;r&&(r.textContent=`Versi\xF3n ${MANUAL_VERSION} \xB7 actualizado ${MANUAL_FECHA}`);const s=a=>typeof normalize=="function"?normalize(a):a.toLowerCase(),i=s(e.trim()),t=a=>s(a.titulo+" "+a.html.replace(/<[^>]+>/g," ")),n=MANUAL_CAPITULOS.filter(a=>!i||t(a).includes(i));l&&(l.innerHTML=n.map(a=>`<button type="button" class="manual-indice-item" ${dataAction("irACapituloManual",[a.id])}>${a.icono} ${escapeHtml(a.titulo)}</button>`).join("")),o.innerHTML=n.length?n.map(a=>`
         <details class="about-section manual-cap" id="manual-${a.id}"${i?" open":""}>
           <summary><span class="sec-icon">${a.icono}</span><span>${escapeHtml(a.titulo)}</span><span class="sec-chevron">\u25B8</span></summary>
           <div class="about-panel">${a.html}</div>
-        </details>`).join(""):`<p class="manual-vacio">No hay resultados para \xAB${escapeHtml(o)}\xBB.</p>`}function irACapituloManual(o){const e=document.getElementById("manual-"+o);e&&(e.open=!0,e.scrollIntoView({behavior:"smooth",block:"start"}))}function buscarEnManual(o){renderManual(o||"")}
+        </details>`).join(""):`<p class="manual-vacio">No hay resultados para \xAB${escapeHtml(e)}\xBB.</p>`}function irACapituloManual(e){const o=document.getElementById("manual-"+e);o&&(o.open=!0,o.scrollIntoView({behavior:"smooth",block:"start"}))}function buscarEnManual(e){renderManual(e||"")}
