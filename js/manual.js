@@ -1,4 +1,4 @@
-const MANUAL_VERSION="2.68.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
+const MANUAL_VERSION="2.68.1",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
       <p><strong>Cancionero MV</strong> es una app gratuita, sin publicidad, para cantar y tocar: m\xE1s de 2.000 cantos e himnos con letra, acordes, audio, partituras y presentaciones, en varios idiomas.</p>
       <h4>C\xF3mo abrirla</h4>
       <ul>
@@ -246,6 +246,7 @@ const MANUAL_VERSION="2.68.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>Encontr\xE9 un error en una letra</b>: avis\xE1 desde <b>Contacto</b>.</li>
       </ul>`},{id:"novedades",icono:"\u{1F195}",titulo:"Novedades",html:`
       <ul>
+        <li><b>2.68.1</b> \u2014 Sin personas duplicadas: cada autor, compositor y traductor con un \xFAnico nombre en todos los libros (por ejemplo \xABWilson Almeida\xBB y \xABWilson F. Almeida\xBB son uno solo). Cr\xE9ditos iguales para el mismo canto en distintos libros.</li>
         <li><b>2.68.0</b> \u2014 Bot\xF3n <b>\u{1F504} Forzar actualizaci\xF3n</b> en Informaci\xF3n de la app.</li>
         <li><b>2.67.5</b> \u2014 iPhone: el cursor del buscador ya no aparece m\xE1s abajo que el texto.</li>
         <li><b>2.67.4</b> \u2014 En la b\xFAsqueda, el mismo canto de dos libros aparece una sola vez (con la marca del otro libro al lado de la bandera). \xAB\xA1Cu\xE1n firme cimiento!\xBB: autor John Rippon.</li>
