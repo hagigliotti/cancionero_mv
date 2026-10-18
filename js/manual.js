@@ -1,4 +1,4 @@
-const MANUAL_VERSION="2.71.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
+const MANUAL_VERSION="2.72.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
       <p><strong>Cancionero MV</strong> es una app gratuita, sin publicidad, para cantar y tocar: m\xE1s de 2.000 cantos e himnos con letra, acordes, audio, partituras y presentaciones, en varios idiomas.</p>
       <h4>C\xF3mo abrirla</h4>
       <ul>
@@ -72,6 +72,13 @@ const MANUAL_VERSION="2.71.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li>Tocando un acorde de la letra <b>suena</b> y se abre una ventanita con <b>c\xF3mo se toca</b> en el instrumento elegido.</li>
         <li>Si en un mismo lugar hay varios acordes (por ejemplo [Am - G - C]) suenan uno tras otro.</li>
         <li>El instrumento se elige en la ventanita, en <b>\u2630 Men\xFA \u2192 Herramientas \u2192 Diagrama de acordes</b> o en la pesta\xF1a Acordes del afinador. Con <b>Ninguno</b> el acorde suena pero no aparece la ventanita.</li>
+      </ul>
+      <h4>\u270F\uFE0F Corregir los acordes</h4>
+      <ul>
+        <li>Si un acorde est\xE1 mal puesto, toc\xE1 <b>\u270F\uFE0F</b> al lado de la \u2B50 del t\xEDtulo. La letra pasa a modo edici\xF3n (siempre en la tonalidad original).</li>
+        <li>Toc\xE1 un acorde: abajo aparecen <b>\u25C0 \u25B6</b> para correrlo letra por letra, el acorde para <b>cambiarlo</b> (nota, \u266F/\u266D y tipo, o escrito a mano como D/F#) y <b>\u{1F5D1}</b> para borrarlo. Al elegirlo suena.</li>
+        <li>Para <b>agregar</b> uno, toc\xE1 el <b>+</b> donde va (tambi\xE9n en renglones que no tienen acordes).</li>
+        <li><b>Guardar</b> muestra el antes y despu\xE9s. Con tu <b>nombre y apellido</b> (obligatorios) y un comentario opcional, <b>Enviar</b> le manda la correcci\xF3n al autor de la app, que la revisa. Si est\xE1 bien, aparece en una pr\xF3xima actualizaci\xF3n.</li>
       </ul>
       <h4>Guitarra, bajo y ukelele</h4>
       <ul>
@@ -248,6 +255,7 @@ const MANUAL_VERSION="2.71.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>Encontr\xE9 un error en una letra</b>: avis\xE1 desde <b>Contacto</b>.</li>
       </ul>`},{id:"novedades",icono:"\u{1F195}",titulo:"Novedades",html:`
       <ul>
+        <li><b>2.72.0</b> \u2014 \u270F\uFE0F <b>Corregir acordes</b>: mover, cambiar, borrar o agregar acordes en un canto y enviar la correcci\xF3n (con nombre y apellido).</li>
         <li><b>2.71.0</b> \u2014 Informaci\xF3n de la app: totales de Partituras y MP3 (toc\xE1ndolos se ve la lista); Contacto y Buy me a coffee en un rengl\xF3n; \xABCompositores\xBB entra en su bot\xF3n. La ficha solo ofrece la partitura si ya est\xE1 subida.</li>
         <li><b>2.70.0</b> \u2014 Cantos que est\xE1n en varios libros: despu\xE9s del t\xEDtulo, la marca del libro donde est\xE1s ('09, '62, MV, C, IA). Piano del afinador: la tecla tocada se pinta.</li>
         <li><b>2.69.1</b> \u2014 Metr\xF3nomo y afinador: barra de pesta\xF1as y botones con el color del tema; todo suena (cuerdas del afinador, ra\xEDz y tipo de escala, diagrama del acorde) y en iPhone suena aunque est\xE9 en silencio.</li>
@@ -268,7 +276,7 @@ const MANUAL_VERSION="2.71.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>2.63.0</b> \u2014 Bot\xF3n Aa (may\xFAsculas), vers\xEDculo siempre al cambiar de libro, nuevos coritos del Coritario J\xF3venes.</li>
         <li><b>2.62.0</b> \u2014 Saludo de feliz s\xE1bado.</li>
         <li><b>2.61.0</b> \u2014 Avisos de canciones nuevas en el reproductor, audios m4a.</li>
-      </ul>`}];let manualDesdeInfo=!1;function abrirManual(e=!1){manualDesdeInfo=e,e&&typeof cerrarInfo=="function"&&cerrarInfo(),typeof closeMenu=="function"&&closeMenu();const o=document.getElementById("manualModal");if(!o)return;renderManual(),o.style.display="block",document.getElementById("manualModalBack")?.classList.toggle("hidden",!e);const l=document.getElementById("manualBuscar");l&&(l.value=""),o.querySelector(".about-body")?.scrollTo(0,0)}function cerrarManual(){const e=document.getElementById("manualModal");e&&(e.style.display="none")}function volverAInfoDesdeManual(){cerrarManual(),typeof info=="function"&&info()}function renderManual(e=""){const o=document.getElementById("manualContenido"),l=document.getElementById("manualIndice"),r=document.getElementById("manualModalMeta");if(!o)return;r&&(r.textContent=`Versi\xF3n ${MANUAL_VERSION} \xB7 actualizado ${MANUAL_FECHA}`);const s=a=>typeof normalize=="function"?normalize(a):a.toLowerCase(),i=s(e.trim()),t=a=>s(a.titulo+" "+a.html.replace(/<[^>]+>/g," ")),n=MANUAL_CAPITULOS.filter(a=>!i||t(a).includes(i));l&&(l.innerHTML=n.map(a=>`<button type="button" class="manual-indice-item" ${dataAction("irACapituloManual",[a.id])}>${a.icono} ${escapeHtml(a.titulo)}</button>`).join("")),o.innerHTML=n.length?n.map(a=>`
+      </ul>`}];let manualDesdeInfo=!1;function abrirManual(e=!1){manualDesdeInfo=e,e&&typeof cerrarInfo=="function"&&cerrarInfo(),typeof closeMenu=="function"&&closeMenu();const o=document.getElementById("manualModal");if(!o)return;renderManual(),o.style.display="block",document.getElementById("manualModalBack")?.classList.toggle("hidden",!e);const l=document.getElementById("manualBuscar");l&&(l.value=""),o.querySelector(".about-body")?.scrollTo(0,0)}function cerrarManual(){const e=document.getElementById("manualModal");e&&(e.style.display="none")}function volverAInfoDesdeManual(){cerrarManual(),typeof info=="function"&&info()}function renderManual(e=""){const o=document.getElementById("manualContenido"),l=document.getElementById("manualIndice"),n=document.getElementById("manualModalMeta");if(!o)return;n&&(n.textContent=`Versi\xF3n ${MANUAL_VERSION} \xB7 actualizado ${MANUAL_FECHA}`);const s=a=>typeof normalize=="function"?normalize(a):a.toLowerCase(),i=s(e.trim()),t=a=>s(a.titulo+" "+a.html.replace(/<[^>]+>/g," ")),r=MANUAL_CAPITULOS.filter(a=>!i||t(a).includes(i));l&&(l.innerHTML=r.map(a=>`<button type="button" class="manual-indice-item" ${dataAction("irACapituloManual",[a.id])}>${a.icono} ${escapeHtml(a.titulo)}</button>`).join("")),o.innerHTML=r.length?r.map(a=>`
         <details class="about-section manual-cap" id="manual-${a.id}"${i?" open":""}>
           <summary><span class="sec-icon">${a.icono}</span><span>${escapeHtml(a.titulo)}</span><span class="sec-chevron">\u25B8</span></summary>
           <div class="about-panel">${a.html}</div>
