@@ -1,4 +1,4 @@
-const MANUAL_VERSION="2.69.1",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
+const MANUAL_VERSION="2.70.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
       <p><strong>Cancionero MV</strong> es una app gratuita, sin publicidad, para cantar y tocar: m\xE1s de 2.000 cantos e himnos con letra, acordes, audio, partituras y presentaciones, en varios idiomas.</p>
       <h4>C\xF3mo abrirla</h4>
       <ul>
@@ -59,7 +59,7 @@ const MANUAL_VERSION="2.69.1",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>Tonalidad</b>, <b>BPM</b> y <b>Comp\xE1s</b>: toc\xE1ndolos se abre el afinador o el metr\xF3nomo con ese dato.</li>
         <li><b>Ritmo</b>, <b>Partitura</b> (si existe, se abre adentro de la app), <b>Temas</b> (toc\xE1 uno para ver todos los cantos de ese tema), <b>Revisado</b>.</li>
         <li><b>Audio</b>: enlaces a Spotify, YouTube o Apple Music, y <b>\u{1F3A7} mp3</b> para escucharlo en el reproductor de la app. <b>\u{1F5A5}\uFE0F Presentaci\xF3n</b> abre las diapositivas.</li>
-        <li><b>Tambi\xE9n en</b>: el mismo canto en otros libros (por ejemplo \xABOh, qu\xE9 esperanza\xBB \u2194 Himnario 2009 n.\xBA 181).</li>
+        <li><b>Tambi\xE9n en</b>: el mismo canto en otros libros (por ejemplo \xABOh, qu\xE9 esperanza\xBB \u2194 Himnario 2009 n.\xBA 181). En esos cantos, despu\xE9s del t\xEDtulo aparece la marca del libro donde est\xE1s ('09, '62, MV, C, IA).</li>
       </ul>
       <h4>La letra</h4>
       <ul>
@@ -165,7 +165,7 @@ const MANUAL_VERSION="2.69.1",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
       <ul>
         <li><b>\u{1F3AF} Afinador</b>: General, Guitarra, Bajo, Viol\xEDn o Ukelele; referencia <b>La4 = 440 Hz</b> (ajustable con \u2212 / +); <b>\u{1F3A4} Activar micr\xF3fono</b> y toc\xE1 o cant\xE1: indica la nota y si est\xE1s alto o bajo. Tocando una cuerda o nota suena primero la referencia y despu\xE9s se activa el micr\xF3fono.</li>
         <li><b>\u{1F941} Metr\xF3nomo</b>: BPM con \u2212 / +, <b>\u{1F446} Tap tempo</b> (toc\xE1 al ritmo), <b>Comp\xE1s</b> (1/4 a 7/8), <b>Subdivisi\xF3n</b> (\u2669 \u266A \u266A\xB3 \u266C), <b>Acento</b> en el tiempo que elijas, <b>\u25B6\uFE0F Play</b> y <b>\u{1F50A} Sonido</b>.</li>
-        <li><b>\u{1F3B5} Notas</b>: piano para tocar cualquier nota, con octava ajustable.</li>
+        <li><b>\u{1F3B5} Notas</b>: piano para tocar cualquier nota (la tecla elegida se pinta del color del tema), con octava ajustable.</li>
         <li><b>\u{1F3B6} Acordes</b>: eleg\xED la nota y el tipo (Mayor, menor, 7, Maj7, min7, sus2, sus4, dim, dim7, m7b5, aug, 6, m6); muestra sus notas, el diagrama y lo hace sonar.</li>
         <li><b>\u{1F3BC} Escalas</b>: escalas de cada tonalidad. Al elegir la nota suena; al elegir Mayor o menor suena su acorde; \u25B6 toca cada escala.</li>
         <li><b>\u{1F535} Quintas</b>: c\xEDrculo de cuartas y quintas; toc\xE1 una tonalidad para escucharla y sus acordes para o\xEDrlos.</li>
@@ -248,6 +248,7 @@ const MANUAL_VERSION="2.69.1",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>Encontr\xE9 un error en una letra</b>: avis\xE1 desde <b>Contacto</b>.</li>
       </ul>`},{id:"novedades",icono:"\u{1F195}",titulo:"Novedades",html:`
       <ul>
+        <li><b>2.70.0</b> \u2014 Cantos que est\xE1n en varios libros: despu\xE9s del t\xEDtulo, la marca del libro donde est\xE1s ('09, '62, MV, C, IA). Piano del afinador: la tecla tocada se pinta.</li>
         <li><b>2.69.1</b> \u2014 Metr\xF3nomo y afinador: barra de pesta\xF1as y botones con el color del tema; todo suena (cuerdas del afinador, ra\xEDz y tipo de escala, diagrama del acorde) y en iPhone suena aunque est\xE9 en silencio.</li>
         <li><b>2.69.0</b> \u2014 Globo de color con la letra o el n\xFAmero en todas las barras verticales (tambi\xE9n se puede deslizar el dedo). \xABDesconocido\xBB y \xABAn\xF3nimo\xBB unificados como \xABAn\xF3nimo\xBB. Cr\xE9ditos con las iniciales: Hernando A. Gigliotti, Elisa B. Vilaltella, Rolando E. Gigliotti.</li>
         <li><b>2.68.3</b> \u2014 Coautores: Elisa B. Vilaltella y Rolando E. Gigliotti.</li>
