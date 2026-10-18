@@ -1,4 +1,4 @@
-const MANUAL_VERSION="2.70.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
+const MANUAL_VERSION="2.71.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
       <p><strong>Cancionero MV</strong> es una app gratuita, sin publicidad, para cantar y tocar: m\xE1s de 2.000 cantos e himnos con letra, acordes, audio, partituras y presentaciones, en varios idiomas.</p>
       <h4>C\xF3mo abrirla</h4>
       <ul>
@@ -193,7 +193,7 @@ const MANUAL_VERSION="2.70.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
       </ul>`},{id:"info",icono:"\u2139\uFE0F",titulo:"Informaci\xF3n de la app",html:`
       <ul>
         <li><b>\u2630 Men\xFA \u2192 Informaci\xF3n de la app</b>: versi\xF3n y fecha de actualizaci\xF3n, y el bot\xF3n <b>\u{1F504} Forzar actualizaci\xF3n</b> (baja la app entera de nuevo sin perder tus listas ni ajustes).</li>
-        <li><b>Estad\xEDsticas</b>: cantidad de canciones, traducidas e idiomas.</li>
+        <li><b>Estad\xEDsticas</b>: cantidad de canciones, traducidas, idiomas, <b>partituras</b> y <b>MP3</b> (en total y en el libro que est\xE1s mirando). Tocando Idiomas, Partituras o MP3 se abre la lista de esos cantos. Solo se cuentan las partituras y MP3 que ya est\xE1n subidos.</li>
         <li>Listados de <b>Autores, Compositores, Traductores, Arregladores, Temas</b> y <b>Equivalencias</b> (el mismo canto en distintos libros), con filtro por idioma o por libro.</li>
         <li>En esos listados, un canto que est\xE1 en varios libros aparece <b>una sola vez</b>, con un bot\xF3n por libro (por ejemplo <b>'09 #394 \xB7 '62 #196</b>: libro y n\xFAmero de himno): toc\xE1 la fila para abrirlo, o el bot\xF3n del libro que prefieras.</li>
         <li>Este <b>\u{1F4D8} Manual de usuario</b>, c\xF3mo instalar la app, copyright, cr\xE9ditos y fuentes.</li>
@@ -248,6 +248,7 @@ const MANUAL_VERSION="2.70.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>Encontr\xE9 un error en una letra</b>: avis\xE1 desde <b>Contacto</b>.</li>
       </ul>`},{id:"novedades",icono:"\u{1F195}",titulo:"Novedades",html:`
       <ul>
+        <li><b>2.71.0</b> \u2014 Informaci\xF3n de la app: totales de Partituras y MP3 (toc\xE1ndolos se ve la lista); Contacto y Buy me a coffee en un rengl\xF3n; \xABCompositores\xBB entra en su bot\xF3n. La ficha solo ofrece la partitura si ya est\xE1 subida.</li>
         <li><b>2.70.0</b> \u2014 Cantos que est\xE1n en varios libros: despu\xE9s del t\xEDtulo, la marca del libro donde est\xE1s ('09, '62, MV, C, IA). Piano del afinador: la tecla tocada se pinta.</li>
         <li><b>2.69.1</b> \u2014 Metr\xF3nomo y afinador: barra de pesta\xF1as y botones con el color del tema; todo suena (cuerdas del afinador, ra\xEDz y tipo de escala, diagrama del acorde) y en iPhone suena aunque est\xE9 en silencio.</li>
         <li><b>2.69.0</b> \u2014 Globo de color con la letra o el n\xFAmero en todas las barras verticales (tambi\xE9n se puede deslizar el dedo). \xABDesconocido\xBB y \xABAn\xF3nimo\xBB unificados como \xABAn\xF3nimo\xBB. Cr\xE9ditos con las iniciales: Hernando A. Gigliotti, Elisa B. Vilaltella, Rolando E. Gigliotti.</li>
