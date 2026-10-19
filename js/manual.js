@@ -1,4 +1,4 @@
-const MANUAL_VERSION="2.76.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
+const MANUAL_VERSION="2.76.1",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
       <p><strong>Cancionero MV</strong> es una app gratuita, sin publicidad, para cantar y tocar: m\xE1s de 2.000 cantos e himnos con letra, acordes, audio, partituras y presentaciones, en varios idiomas.</p>
       <h4>C\xF3mo abrirla</h4>
       <ul>
@@ -206,6 +206,7 @@ const MANUAL_VERSION="2.76.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>\u2630 Men\xFA \u2192 Informaci\xF3n de la app</b>: versi\xF3n y fecha de actualizaci\xF3n, y el bot\xF3n <b>\u{1F504} Forzar actualizaci\xF3n</b> (baja la app entera de nuevo sin perder tus listas ni ajustes).</li>
         <li><b>Estad\xEDsticas</b>: cantidad de canciones, traducidas, idiomas, <b>partituras</b> y <b>MP3</b> (en total y en el libro que est\xE1s mirando). Tocando Idiomas, Partituras o MP3 se abre la lista de esos cantos. Solo se cuentan las partituras y MP3 que ya est\xE1n subidos.</li>
         <li>Listados de <b>Autores, Compositores, Traductores, Arregladores, Temas</b> y <b>Equivalencias</b> (el mismo canto en distintos libros), con filtro por idioma o por libro.</li>
+        <li><b>C\xF3mo instalar la app \u2192 \xBFCu\xE1nto ocupa?</b>: unos 5 MB (la m\xFAsica, presentaciones y partituras no se guardan, se usan desde internet) y cu\xE1nto ocupa ahora en tu dispositivo.</li>
         <li>En esos listados, un canto que est\xE1 en varios libros aparece <b>una sola vez</b>, con un bot\xF3n por libro (por ejemplo <b>'09 #394 \xB7 '62 #196</b>: libro y n\xFAmero de himno): toc\xE1 la fila para abrirlo, o el bot\xF3n del libro que prefieras.</li>
         <li>Este <b>\u{1F4D8} Manual de usuario</b>, c\xF3mo instalar la app, copyright, cr\xE9ditos y fuentes.</li>
       </ul>`},{id:"apariencia",icono:"\u{1F3A8}",titulo:"Apariencia: d\xEDa, noche y colores",html:`
@@ -259,6 +260,7 @@ const MANUAL_VERSION="2.76.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>Encontr\xE9 un error en una letra</b>: avis\xE1 desde <b>Contacto</b>.</li>
       </ul>`},{id:"novedades",icono:"\u{1F195}",titulo:"Novedades",html:`
       <ul>
+        <li><b>2.76.1</b> \u2014 Informaci\xF3n de la app \u2192 C\xF3mo instalar la app: cu\xE1nto ocupa la app (unos 5 MB) y cu\xE1nto ocupa ahora en tu dispositivo.</li>
         <li><b>2.76.0</b> \u2014 Partitura: zoom con dos dedos (vertical u horizontal) y doble toque, con buena nitidez.</li>
         <li><b>2.75.1</b> \u2014 Referencia b\xEDblica: los libros de la Biblia se sugieren solo en el idioma del canto.</li>
         <li><b>2.75.0</b> \u2014 Corregir un canto \u2192 Datos: sugerencias mientras escrib\xEDs (personas, ritmos, temas, tonalidades, compases y libros de la Biblia).</li>
