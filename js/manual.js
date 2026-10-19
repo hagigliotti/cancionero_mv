@@ -1,4 +1,4 @@
-const MANUAL_VERSION="2.75.1",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
+const MANUAL_VERSION="2.76.0",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
       <p><strong>Cancionero MV</strong> es una app gratuita, sin publicidad, para cantar y tocar: m\xE1s de 2.000 cantos e himnos con letra, acordes, audio, partituras y presentaciones, en varios idiomas.</p>
       <h4>C\xF3mo abrirla</h4>
       <ul>
@@ -57,7 +57,7 @@ const MANUAL_VERSION="2.75.1",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>Original / Otros t\xEDtulos</b>, <b>Autor</b>, <b>Compositor</b>, <b>Traductor</b>, <b>A\xF1o</b>. Tocando un nombre ves todos sus cantos.</li>
         <li><b>Referencia b\xEDblica</b> con enlace al pasaje.</li>
         <li><b>Tonalidad</b>, <b>BPM</b> y <b>Comp\xE1s</b>: toc\xE1ndolos se abre el afinador o el metr\xF3nomo con ese dato.</li>
-        <li><b>Ritmo</b>, <b>Partitura</b> (si existe, se abre adentro de la app), <b>Temas</b> (toc\xE1 uno para ver todos los cantos de ese tema), <b>Revisado</b>.</li>
+        <li><b>Ritmo</b>, <b>Partitura</b> (si existe, se abre adentro de la app; ah\xED se puede <b>agrandar con dos dedos</b>, con el celular vertical u horizontal, o con doble toque; con la compu, \u2318/Ctrl + rueda o pellizco del trackpad), <b>Temas</b> (toc\xE1 uno para ver todos los cantos de ese tema), <b>Revisado</b>.</li>
         <li><b>Audio</b>: enlaces a Spotify, YouTube o Apple Music, y <b>\u{1F3A7} mp3</b> para escucharlo en el reproductor de la app. <b>\u{1F5A5}\uFE0F Presentaci\xF3n</b> abre las diapositivas.</li>
         <li><b>Tambi\xE9n en</b>: el mismo canto en otros libros (por ejemplo \xABOh, qu\xE9 esperanza\xBB \u2194 Himnario 2009 n.\xBA 181). En esos cantos, despu\xE9s del t\xEDtulo aparece la marca del libro donde est\xE1s ('09, '62, MV, C, IA).</li>
       </ul>
@@ -259,6 +259,7 @@ const MANUAL_VERSION="2.75.1",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>Encontr\xE9 un error en una letra</b>: avis\xE1 desde <b>Contacto</b>.</li>
       </ul>`},{id:"novedades",icono:"\u{1F195}",titulo:"Novedades",html:`
       <ul>
+        <li><b>2.76.0</b> \u2014 Partitura: zoom con dos dedos (vertical u horizontal) y doble toque, con buena nitidez.</li>
         <li><b>2.75.1</b> \u2014 Referencia b\xEDblica: los libros de la Biblia se sugieren solo en el idioma del canto.</li>
         <li><b>2.75.0</b> \u2014 Corregir un canto \u2192 Datos: sugerencias mientras escrib\xEDs (personas, ritmos, temas, tonalidades, compases y libros de la Biblia).</li>
         <li><b>2.74.0</b> \u2014 \u2630 Men\xFA \u2192 Herramientas \u2192 <b>\u270F\uFE0F Editar canciones</b> (Activo / Inactivo): al activarlo aparece el l\xE1piz en las canciones; toc\xE1ndolo de nuevo se deja de editar.</li>
