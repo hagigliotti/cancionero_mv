@@ -1,4 +1,4 @@
-const MANUAL_VERSION="2.82.0",MANUAL_FECHA="21/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
+const MANUAL_VERSION="2.83.0",MANUAL_FECHA="21/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
       <p><strong>Cancionero MV</strong> es una app gratuita, sin publicidad, para cantar y tocar: m\xE1s de 2.000 cantos e himnos con letra, acordes, audio, partituras y presentaciones, en varios idiomas.</p>
       <h4>C\xF3mo abrirla</h4>
       <ul>
@@ -55,7 +55,7 @@ const MANUAL_VERSION="2.82.0",MANUAL_FECHA="21/10/2026",MANUAL_CAPITULOS=[{id:"i
       <ul>
         <li><b>Idiomas</b>: una bandera por cada idioma en que est\xE1 la letra. Toc\xE1 una para cambiar.</li>
         <li><b>Original / Otros t\xEDtulos</b>, <b>Autor</b>, <b>Compositor</b>, <b>Traductor</b>, <b>A\xF1o</b>. Tocando un nombre ves todos sus cantos.</li>
-        <li><b>Referencia b\xEDblica</b> con enlace al pasaje.</li>
+        <li><b>Referencia b\xEDblica</b>: tocala para leer el pasaje en la Biblia de la app.</li>
         <li><b>Tonalidad</b>, <b>BPM</b> y <b>Comp\xE1s</b>: toc\xE1ndolos se abre el afinador o el metr\xF3nomo con ese dato.</li>
         <li><b>Ritmo</b>, <b>Partitura</b> (si existe, se abre adentro de la app; ah\xED se puede <b>agrandar con dos dedos</b>, con el celular vertical u horizontal, o con doble toque; con la compu, \u2318/Ctrl + rueda o pellizco del trackpad), <b>Temas</b> (toc\xE1 uno para ver todos los cantos de ese tema), <b>Revisado</b>.</li>
         <li><b>Audio</b>: enlaces a Spotify, YouTube o Apple Music, y <b>\u{1F3A7} mp3</b> para escucharlo en el reproductor de la app. <b>\u{1F5A5}\uFE0F Presentaci\xF3n</b> abre las diapositivas.</li>
@@ -192,7 +192,7 @@ const MANUAL_VERSION="2.82.0",MANUAL_FECHA="21/10/2026",MANUAL_CAPITULOS=[{id:"i
       </ul>`},{id:"oracion",icono:"\u{1F6D0}",titulo:"Mis Pedidos de Oraci\xF3n",html:`
       <p>Se abre con <b>\u{1F6D0}</b> arriba del men\xFA.</p>
       <ul>
-        <li>Escrib\xED el pedido y toc\xE1 <b>+ Agregar pedido</b>. Pod\xE9s sumarle <b>\u{1F4F7} una foto</b>, <b>\u{1F4D6} un vers\xEDculo</b> o <b>\u{1F3B5} un canto</b>.</li>
+        <li>Escrib\xED el pedido y toc\xE1 <b>+ Agregar pedido</b>. Pod\xE9s sumarle <b>\u{1F4F7} una foto</b>, <b>\u{1F4D6} un vers\xEDculo</b> (tocalo para leerlo en la Biblia de la app) o <b>\u{1F3B5} un canto</b>.</li>
         <li>Cada pedido se puede editar, borrar o marcar como <b>\u2705 respondido</b>.</li>
         <li><b>Listas</b> (+ Crear lista) para agruparlos (familia, iglesia\u2026); se pueden renombrar, eliminar y mover pedidos entre listas.</li>
         <li><b>\u2699\uFE0F Organizar y respaldar</b>: Exportar / Importar.</li>
@@ -202,15 +202,26 @@ const MANUAL_VERSION="2.82.0",MANUAL_FECHA="21/10/2026",MANUAL_CAPITULOS=[{id:"i
       <p>Todo sigue el <b>idioma de la app</b> (con guaran\xED se usa espa\xF1ol); se puede cambiar con la bandera de cada pantalla sin cambiar el idioma de la app.</p>`},{id:"biblia",icono:"\u{1F4DC}",titulo:"Santa Biblia",html:`
       <h4>Abrirla</h4>
       <ul>
-        <li>Desde <b>\u{1F4D6} \u2192 Santa Biblia</b> o <b>Biblioteca \u2192 Biblia \u2192 Leer</b>: se abre la <b>bienvenida</b>, con el buscador, <b>\u25B6 Seguir leyendo</b> (el \xFAltimo cap\xEDtulo que le\xEDste) y los libros del <b>Antiguo</b> y del <b>Nuevo Testamento</b>. Toc\xE1 un libro y despu\xE9s el cap\xEDtulo.</li>
+        <li>Desde <b>\u{1F4D6} \u2192 Santa Biblia</b> o <b>Biblioteca \u2192 Biblia \u2192 Leer</b>: se abre la <b>bienvenida</b>, con el buscador, <b>\u25B6 Seguir leyendo</b> (el \xFAltimo cap\xEDtulo que le\xEDste), <b>\u{1F58D}\uFE0F Mis vers\xEDculos marcados</b> y los libros del <b>Antiguo</b> y del <b>Nuevo Testamento</b>. Toc\xE1 un libro y despu\xE9s el cap\xEDtulo.</li>
         <li>Tocando cualquier <b>cita b\xEDblica</b> de la app: el vers\xEDculo del d\xEDa y las citas de las Meditaciones, la <b>referencia b\xEDblica</b> de un canto o himno, el vers\xEDculo de un <b>pedido de oraci\xF3n</b> y las lecturas del A\xF1o b\xEDblico. Se abre el cap\xEDtulo con los vers\xEDculos citados <b>resaltados</b>, sin salir de la app; al cerrarla volv\xE9s a donde estabas.</li>
       </ul>
       <h4>Leer</h4>
       <ul>
         <li><b>\u2039 \u203A</b>, deslizar el dedo o las flechas del teclado: cap\xEDtulo anterior / siguiente. Tambi\xE9n se puede elegir el libro y el cap\xEDtulo en las dos listas de arriba.</li>
-        <li><b>\u{1F3E0}</b>: vuelve a la bienvenida (o a los \xFAltimos resultados de b\xFAsqueda).</li>
+        <li><b>\u{1F3E0}</b>: vuelve al men\xFA de la Biblia (bienvenida, mis vers\xEDculos marcados y libros). Ah\xED <b>\u{1F558} \xDAltimas lecturas</b> muestra los 3 \xFAltimos pasajes que le\xEDste: el primero (<b>\u25B6 Seguir leyendo</b>) te devuelve al que estabas si tocaste \u{1F3E0} sin querer.</li>
         <li><b>Aa</b> (may\xFAsculas), <b>A- A A+</b> (tama\xF1o de letra).</li>
         <li><b>Solo la cita / Cap\xEDtulo entero</b>, <b>\u{1F4CB} Copiar</b> (los vers\xEDculos con la referencia y la versi\xF3n) y <b>Otras versiones (internet)</b>.</li>
+      </ul>
+      <h4>Marcar, anotar, compartir y comparar</h4>
+      <ul>
+        <li>Toc\xE1 <b>uno o varios vers\xEDculos</b> para seleccionarlos (quedan con un borde punteado). Abajo aparece una barra con:</li>
+        <li><b>Resaltador</b>: amarillo, verde, celeste, rosa o naranja; <b>\u2300</b> quita el color.</li>
+        <li><b>\u{1F4DD} Nota</b>: tu comentario personal sobre ese pasaje. Los vers\xEDculos con nota muestran \u{1F4DD}; tocalo para leerla, cambiarla o borrarla.</li>
+        <li><b>\u{1F4E4} Compartir</b> (WhatsApp, mail, etc.) y <b>\u{1F4CB} Copiar</b> los vers\xEDculos con su referencia y versi\xF3n.</li>
+        <li><b>\u{1F310} Comparar</b>: muestra los vers\xEDculos al lado de <b>otra versi\xF3n de cualquier idioma</b> (elegila en la lista).</li>
+        <li><b>\u2715</b> o tocar de nuevo un vers\xEDculo lo deselecciona.</li>
+        <li>En el men\xFA de la Biblia (\u{1F3E0}), <b>\u{1F58D}\uFE0F Mis vers\xEDculos marcados</b> lista todo lo que marcaste y anotaste; toc\xE1 uno para ir a ese pasaje.</li>
+        <li>Las marcas y notas valen para todas las versiones y se guardan solo en tu dispositivo. En <b>Mis vers\xEDculos marcados</b>, <b>\u2B07\uFE0F Guardar mis marcas y notas</b> baja un archivo y <b>\u2B06\uFE0F Cargar</b> las pasa a otro celular o navegador.</li>
       </ul>
       <h4>Versiones</h4>
       <ul>
@@ -226,6 +237,7 @@ const MANUAL_VERSION="2.82.0",MANUAL_FECHA="21/10/2026",MANUAL_CAPITULOS=[{id:"i
           </ul>
         </li>
         <li>Versiones modernas como Reina-Valera 1960, Nueva Versi\xF3n Internacional o Dios Habla Hoy tienen derechos de autor y no se pueden incluir; para leerlas est\xE1 <b>Otras versiones (internet)</b>.</li>
+        <li>Las versiones cat\xF3licas (Platense, Douay-Rheims, Crampon, Menge) y la World English Bible traen adem\xE1s los <b>deuterocan\xF3nicos</b> (Tob\xEDas, Judit, Sabidur\xEDa, Eclesi\xE1stico, Baruc, 1 y 2 Macabeos), que aparecen entre el Antiguo y el Nuevo Testamento.</li>
         <li>Douay-Rheims y Platense numeran los Salmos como la Vulgata (el Salmo 23 es el 22): la app lo avisa.</li>
       </ul>
       <h4>Buscar</h4>
@@ -239,26 +251,29 @@ const MANUAL_VERSION="2.82.0",MANUAL_FECHA="21/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li>Cada libro que abr\xEDs queda guardado en el dispositivo. La primera b\xFAsqueda en una versi\xF3n baja la Biblia entera (unos 4 MB) y despu\xE9s se busca sin conexi\xF3n.</li>
       </ul>`},{id:"meditaciones",icono:"\u{1F54A}\uFE0F",titulo:"Meditaciones (devocionales)",html:`
       <ul>
-        <li>Se abren desde <b>\u{1F4D6} \u2192 Meditaciones</b>, <b>\u2630 Men\xFA \u2192 Recursos \u2192 Meditaciones</b> o la <b>Biblioteca</b> (ah\xED cada libro tiene <b>Leer la de hoy</b>).</li>
+        <li>Los libros de meditaciones se activan escribiendo <b>meditaciones</b> en el buscador principal (escribi\xE9ndolo de nuevo se vuelven a ocultar). Despu\xE9s se abren desde <b>\u{1F4D6} \u2192 Meditaciones</b>, <b>\u2630 Men\xFA \u2192 Recursos \u2192 Meditaciones</b> o la <b>Biblioteca</b> (ah\xED cada libro tiene <b>Leer la de hoy</b> y <b>Descargar</b>).</li>
+        <li>El libro que eleg\xEDs queda guardado: la pr\xF3xima vez abre el mismo (uno por idioma).</li>
         <li>Arriba: la <b>bandera</b> (idioma de los libros), el <b>libro</b> y su autor. Al cambiar el idioma de la app cambia la lista de libros.</li>
         <li>Abre siempre en el <b>d\xEDa de hoy</b>. <b>\u2039 \u203A</b>, deslizar el dedo o las flechas cambian de d\xEDa; <b>\u{1F5D3}\uFE0F</b> abre el calendario y <b>Hoy</b> vuelve a hoy. El 29 de febrero no est\xE1 en los libros.</li>
         <li>Cada d\xEDa: t\xEDtulo, <b>vers\xEDculo</b> con su cita (tocala para leerla en la Biblia), otras citas, el mensaje (las citas dentro del texto tambi\xE9n se tocan), la fuente y las notas del libro.</li>
         <li><b>\u{1F50E}</b>: busca un tema en <b>todo el libro</b> (t\xEDtulo, vers\xEDculo, mensaje y notas). Muestra los d\xEDas con un fragmento y las palabras marcadas; toc\xE1 uno para ir a ese d\xEDa y <b>\u2039 Resultados</b> para volver.</li>
         <li><b>\u{1F3B5} Para cantar hoy</b>: hasta 3 cantos o himnos sobre el tema del d\xEDa. Al tocar uno aparece un mini reproductor (si tiene MP3) y la letra, sin salir de la meditaci\xF3n; los 3 forman la lista de reproducci\xF3n. <b>Abrir en el cancionero</b> lleva al canto y el bot\xF3n flotante <b>\u2039 Volver a la meditaci\xF3n</b> te trae de vuelta.</li>
         <li><b>\u{1F6D0} Orar con esta meditaci\xF3n</b>: <b>Nuevo pedido con este vers\xEDculo</b> abre tus Pedidos de oraci\xF3n con el vers\xEDculo del d\xEDa ya cargado; <b>Mis pedidos de oraci\xF3n</b> los abre arriba de la meditaci\xF3n (al cerrarlos volv\xE9s al mismo d\xEDa). Muestra cu\xE1ntos pedidos esperan respuesta.</li>
-        <li><b>\u2B50 Guardar en Mis Listas</b>, <b>Compartir</b> y <b>Mis notas</b> (se guardan solas, por libro y por d\xEDa, en tu dispositivo).</li>
+        <li><b>\u2B50 Guardar en Mis Listas</b>, <b>Compartir</b> y <b>Mis notas</b> (se guardan solas, por libro y por d\xEDa, en tu dispositivo). Debajo de las notas, <b>\u2B07\uFE0F Guardar mis notas</b> y <b>\u2B06\uFE0F Cargar notas</b> para pasarlas a otro dispositivo, como en Mis Listas.</li>
         <li><b>Aa</b>, <b>A- A A+</b> para la letra.</li>
+        <li>Al final de cada d\xEDa: <b>\u{1F4DC} Derechos</b> (Ellen G. White Estate, Inc.) y <b>\u23EC Descargar el libro</b> completo.</li>
       </ul>`},{id:"aniobiblico",icono:"\u{1F4C5}",titulo:"A\xF1o b\xEDblico",html:`
       <ul>
         <li>Un plan para leer <b>la Biblia completa en un a\xF1o</b>: 365 d\xEDas, en orden de G\xE9nesis a Apocalipsis, repartida por cantidad de vers\xEDculos para que cada d\xEDa lleve m\xE1s o menos el mismo tiempo. El 29 de febrero repite el 28.</li>
         <li>Se abre desde <b>\u{1F4D6} \u2192 A\xF1o b\xEDblico</b> o la <b>Biblioteca</b> (que muestra la lectura de hoy y tu progreso).</li>
         <li>Toc\xE1 la lectura del d\xEDa (\xABLucas 2-3\xBB) para leerla en la Biblia de la app, con tu versi\xF3n elegida.</li>
+        <li><b>\u25B6 Empezar hoy (d\xEDa 1)</b>: en vez de seguir el calendario (1 de enero = d\xEDa 1), el plan arranca el d\xEDa que vos eleg\xEDs, as\xED no empez\xE1s atrasado. Se puede volver al calendario cuando quieras.</li>
         <li><b>\u2610 Marcar como le\xEDdo</b>, barra de progreso, <b>Ir al primer d\xEDa sin leer</b> y <b>Empezar de nuevo</b>. <b>\u2039 \u203A</b> y <b>Hoy</b> para moverte por los d\xEDas.</li>
         <li>Los d\xEDas le\xEDdos se guardan solo en este dispositivo.</li>
       </ul>`},{id:"biblioteca",icono:"\u{1F4DA}",titulo:"Biblioteca",html:`
       <ul>
         <li><b>\u2630 Men\xFA \u2192 Recursos \u2192 Biblioteca</b>. Muestra solo lo del <b>idioma de la app</b> y cambia sola al cambiar la bandera:</li>
-        <li><b>\u{1F4DC} Biblia</b> (la versi\xF3n elegida para ese idioma) \xB7 <b>\u{1F4C5} A\xF1o b\xEDblico</b> (lectura de hoy y progreso) \xB7 <b>\u{1F4DA} Libros</b> para leer o descargar, con sus derechos y permisos \xB7 <b>\u{1F54A}\uFE0F Meditaciones</b> (cada libro con <b>Leer la de hoy</b>).</li>
+        <li><b>\u{1F4DC} Biblia</b> (la versi\xF3n elegida para ese idioma) \xB7 <b>\u{1F4C5} A\xF1o b\xEDblico</b> (lectura de hoy y progreso) \xB7 <b>\u{1F4DA} Libros</b> para leer o descargar, con sus derechos y permisos \xB7 <b>\u{1F54A}\uFE0F Meditaciones</b> (cada libro con sus derechos, <b>Leer la de hoy</b> y <b>Descargar</b>; aparecen despu\xE9s de escribir \xABmeditaciones\xBB en el buscador).</li>
         <li>El buscador filtra por t\xEDtulo o autor en todas las secciones.</li>
       </ul>`},{id:"info",icono:"\u2139\uFE0F",titulo:"Informaci\xF3n de la app",html:`
       <ul>
@@ -272,7 +287,7 @@ const MANUAL_VERSION="2.82.0",MANUAL_FECHA="21/10/2026",MANUAL_CAPITULOS=[{id:"i
       <ul>
         <li><b>\u{1F576}\uFE0F / \u{1F453}</b> (arriba del men\xFA): cambia entre modo <b>noche</b> (fondo oscuro) y modo <b>d\xEDa</b> (fondo claro).</li>
         <li><b>\u2630 Men\xFA \u2192 Ajustes \u2192 Color del tema</b>: 13 opciones \u2014 Blanco, Rojo, Coral, Naranja, Amarillo, Verde, Turquesa, Celeste, Azul, Violeta, Lila, Rosa y <b>Kindle</b>. Cada c\xEDrculo muestra el color y su fondo nocturno.</li>
-        <li><b>Kindle</b> (papel y tinta): toda la app como un lector de libros electr\xF3nicos \u2014 de d\xEDa, papel crema con letras marr\xF3n oscuro; de noche, fondo carb\xF3n con letras color papel; letra con serifa, sin sombras ni brillos y fotos un poco sepia. Ideal para leer la Biblia y las meditaciones. (Reemplaza al antiguo \xABGris\xBB; quien lo ten\xEDa elegido pasa a \xABBlanco\xBB.)</li>
+        <li><b>Kindle</b> (papel y tinta): toda la app como un lector de libros electr\xF3nicos \u2014 de d\xEDa, papel crema con letras marr\xF3n oscuro; de noche, fondo carb\xF3n con letras color papel; letra <b>Literata</b> (pensada para leer en pantallas), papel con un grano suave, \xEDconos en tinta, texto justificado, t\xEDtulos en versalitas, botones de contorno, sin sombras ni brillos y fotos un poco sepia. Ideal para leer la Biblia y las meditaciones. (Reemplaza al antiguo \xABGris\xBB; quien lo ten\xEDa elegido pasa a \xABBlanco\xBB.)</li>
         <li>El color se aplica a botones, acordes, fondo y barra del celular.</li>
       </ul>`},{id:"iglesia",icono:"\u{1F4FD}\uFE0F",titulo:"Modo iglesia: proyector y TV",html:`
       <h4>Proyector (computadora)</h4>
@@ -306,7 +321,7 @@ const MANUAL_VERSION="2.82.0",MANUAL_FECHA="21/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>Buy me a coffee</b>: donaciones por Revolut o Mercado Pago, para sostener la app.</li>
       </ul>`},{id:"privacidad",icono:"\u{1F512}",titulo:"Privacidad",html:`
       <ul>
-        <li>Mis Listas, Mis Playlists, el Bloc musical, los Pedidos de oraci\xF3n, las notas de las Meditaciones, los d\xEDas le\xEDdos del A\xF1o b\xEDblico, la versi\xF3n de la Biblia elegida, el tema, el color y el idioma se guardan <b>solo en tu dispositivo</b>. No se suben a ning\xFAn servidor.</li>
+        <li>Mis Listas, Mis Playlists, el Bloc musical, los Pedidos de oraci\xF3n, las notas de las Meditaciones, las marcas y notas de la Biblia, los d\xEDas le\xEDdos del A\xF1o b\xEDblico, la versi\xF3n de la Biblia elegida, el tema, el color y el idioma se guardan <b>solo en tu dispositivo</b>. No se suben a ning\xFAn servidor.</li>
         <li>El <b>micr\xF3fono</b> se usa solo para el afinador y para grabar en el Bloc, y \xFAnicamente cuando lo activ\xE1s.</li>
         <li>La <b>c\xE1mara/fotos</b> se usan solo si agreg\xE1s una foto a un pedido de oraci\xF3n.</li>
         <li>Para pasar tus datos a otro dispositivo us\xE1 <b>Exportar / Importar</b> en cada secci\xF3n.</li>
@@ -318,8 +333,10 @@ const MANUAL_VERSION="2.82.0",MANUAL_FECHA="21/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>La pantalla qued\xF3 agrandada</b>: hac\xE9 zoom con dos dedos para volver; la app ya no se agranda sola al tocar un campo.</li>
         <li><b>Cambi\xE9 de celular</b>: us\xE1 Exportar en el viejo e Importar en el nuevo (Mis Listas, Bloc, Pedidos de oraci\xF3n).</li>
         <li><b>Encontr\xE9 un error en una letra</b>: avis\xE1 desde <b>Contacto</b>.</li>
+        <li><b>No veo las Meditaciones</b>: escrib\xED <b>meditaciones</b> en el buscador.</li>
       </ul>`},{id:"novedades",icono:"\u{1F195}",titulo:"Novedades",html:`
       <ul>
+        <li><b>2.83.0</b> \u2014 Biblia: toc\xE1 vers\xEDculos para <b>resaltarlos</b> con colores, agregar una <b>nota</b>, <b>compartir</b>, copiar o <b>comparar con otra versi\xF3n</b> de cualquier idioma; <b>\u{1F58D}\uFE0F Mis vers\xEDculos marcados</b>; \u{1F3E0} abre el men\xFA de la Biblia; libros <b>deuterocan\xF3nicos</b> en las versiones que los traen. Meditaciones: se activan escribiendo \xABmeditaciones\xBB en el buscador, con derechos y descarga de cada libro. A\xF1o b\xEDblico: <b>Empezar hoy</b>. Tema Kindle mejorado (letra Literata, papel, \xEDconos en tinta). Manual, Fuentes y Cr\xE9ditos traducidos a todos los idiomas. \u{1F558} \xDAltimas 3 lecturas de la Biblia. Guardar y cargar las notas de las Meditaciones y las marcas de la Biblia.</li>
         <li><b>2.82.0</b> \u2014 Biblia: 35 versiones libres en 6 idiomas (elegilas con la bandera). Meditaciones: <b>\u{1F6D0} Orar con esta meditaci\xF3n</b> (pedido con el vers\xEDculo del d\xEDa). Men\xFA \u{1F4D6} en el orden Santa Biblia, Meditaciones, A\xF1o b\xEDblico. Nuevo tema de color <b>Kindle</b> (papel y tinta) en lugar de Gris. Manual e Informaci\xF3n de la app actualizados.</li>
         <li><b>2.81.0</b> \u2014 Biblia: buscador de palabras, frases y citas en toda la Biblia, bienvenida con libros y cap\xEDtulos, \u{1F3E0} y Aa. Meditaciones: \u{1F50E} buscar un tema en todo el libro. Bot\xF3n \u{1F4D6} del men\xFA con Santa Biblia, Meditaciones y A\xF1o b\xEDblico. Biblioteca en orden Biblia, A\xF1o b\xEDblico, Libros, Meditaciones.</li>
         <li><b>2.80.0</b> \u2014 Biblioteca por idioma (solo lo del idioma de la app): Biblia, A\xF1o b\xEDblico (nuevo: la Biblia en un a\xF1o) y Meditaciones.</li>
@@ -354,8 +371,8 @@ const MANUAL_VERSION="2.82.0",MANUAL_FECHA="21/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>2.63.0</b> \u2014 Bot\xF3n Aa (may\xFAsculas), vers\xEDculo siempre al cambiar de libro, nuevos coritos del Coritario J\xF3venes.</li>
         <li><b>2.62.0</b> \u2014 Saludo de feliz s\xE1bado.</li>
         <li><b>2.61.0</b> \u2014 Avisos de canciones nuevas en el reproductor, audios m4a.</li>
-      </ul>`}];let manualDesdeInfo=!1;function abrirManual(e=!1){manualDesdeInfo=e,e&&typeof cerrarInfo=="function"&&cerrarInfo(),typeof closeMenu=="function"&&closeMenu();const o=document.getElementById("manualModal");if(!o)return;renderManual(),o.style.display="block",document.getElementById("manualModalBack")?.classList.toggle("hidden",!e);const l=document.getElementById("manualBuscar");l&&(l.value=""),o.querySelector(".about-body")?.scrollTo(0,0)}function cerrarManual(){const e=document.getElementById("manualModal");e&&(e.style.display="none")}function volverAInfoDesdeManual(){cerrarManual(),typeof info=="function"&&info()}function renderManual(e=""){const o=document.getElementById("manualContenido"),l=document.getElementById("manualIndice"),n=document.getElementById("manualModalMeta");if(!o)return;n&&(n.textContent=`Versi\xF3n ${MANUAL_VERSION} \xB7 actualizado ${MANUAL_FECHA}`);const s=a=>typeof normalize=="function"?normalize(a):a.toLowerCase(),i=s(e.trim()),t=a=>s(a.titulo+" "+a.html.replace(/<[^>]+>/g," ")),r=MANUAL_CAPITULOS.filter(a=>!i||t(a).includes(i));l&&(l.innerHTML=r.map(a=>`<button type="button" class="manual-indice-item" ${dataAction("irACapituloManual",[a.id])}>${a.icono} ${escapeHtml(a.titulo)}</button>`).join("")),o.innerHTML=r.length?r.map(a=>`
-        <details class="about-section manual-cap" id="manual-${a.id}"${i?" open":""}>
-          <summary><span class="sec-icon">${a.icono}</span><span>${escapeHtml(a.titulo)}</span><span class="sec-chevron">\u25B8</span></summary>
-          <div class="about-panel">${a.html}</div>
-        </details>`).join(""):`<p class="manual-vacio">No hay resultados para \xAB${escapeHtml(e)}\xBB.</p>`}function irACapituloManual(e){const o=document.getElementById("manual-"+e);o&&(o.open=!0,o.scrollIntoView({behavior:"smooth",block:"start"}))}function buscarEnManual(e){renderManual(e||"")}
+      </ul>`}];var MANUAL_I18N=window.MANUAL_I18N||{};window.MANUAL_I18N=MANUAL_I18N;const MANUAL_UI_ES={titulo:"Manual de usuario",buscar:"\u{1F50E} Buscar en el manual (ej. cejilla, playlist, QR\u2026)",meta:"Versi\xF3n {v} \xB7 actualizado {f}",vacio:"No hay resultados para \xAB{q}\xBB.",volver:"\u2190 Informaci\xF3n de la app"};function manualLang(){const a=typeof idiomaActual<"u"?idiomaActual:"es";return a==="gn"?"es":a}function manualUI(a){const e=manualLang();return MANUAL_I18N[e]?.ui?.[a]||MANUAL_UI_ES[a]}function manualCapitulos(){const a=MANUAL_I18N[manualLang()]?.caps||{};return MANUAL_CAPITULOS.map(e=>a[e.id]?{...e,titulo:a[e.id].titulo||e.titulo,html:a[e.id].html||e.html}:e)}function manualCargarIdioma(){const a=manualLang();return a==="es"||MANUAL_I18N[a]||!["en","it","pt","fr","de"].includes(a)?Promise.resolve():new Promise(e=>{const l=document.createElement("script");l.src=`js/manual/${a}.js?v=281`,l.onload=e,l.onerror=e,document.head.appendChild(l)})}let manualDesdeInfo=!1;function abrirManual(a=!1){manualDesdeInfo=a,a&&typeof cerrarInfo=="function"&&cerrarInfo(),typeof closeMenu=="function"&&closeMenu();const e=document.getElementById("manualModal");if(!e)return;renderManual(),e.style.display="block",manualCargarIdioma().then(()=>{e.style.display==="block"&&renderManual(document.getElementById("manualBuscar")?.value||"")}),document.getElementById("manualModalBack")?.classList.toggle("hidden",!a);const l=document.getElementById("manualBuscar");l&&(l.value=""),e.querySelector(".about-body")?.scrollTo(0,0)}function cerrarManual(){const a=document.getElementById("manualModal");a&&(a.style.display="none")}function volverAInfoDesdeManual(){cerrarManual(),typeof info=="function"&&info()}function renderManual(a=""){const e=document.getElementById("manualContenido"),l=document.getElementById("manualIndice"),n=document.getElementById("manualModalMeta");if(!e)return;n&&(n.textContent=manualUI("meta").replace("{v}",MANUAL_VERSION).replace("{f}",MANUAL_FECHA));const s=document.getElementById("manualModalTitulo");s&&(s.textContent=manualUI("titulo"));const t=document.getElementById("manualBuscar");t&&(t.placeholder=manualUI("buscar"));const b=document.getElementById("manualModalBack");b&&(b.textContent=manualUI("volver"));const c=o=>typeof normalize=="function"?normalize(o):o.toLowerCase(),i=c(a.trim()),d=o=>c(o.titulo+" "+o.html.replace(/<[^>]+>/g," ")),r=manualCapitulos().filter(o=>!i||d(o).includes(i));l&&(l.innerHTML=r.map(o=>`<button type="button" class="manual-indice-item" ${dataAction("irACapituloManual",[o.id])}>${o.icono} ${escapeHtml(o.titulo)}</button>`).join("")),e.innerHTML=r.length?r.map(o=>`
+        <details class="about-section manual-cap" id="manual-${o.id}"${i?" open":""}>
+          <summary><span class="sec-icon">${o.icono}</span><span>${escapeHtml(o.titulo)}</span><span class="sec-chevron">\u25B8</span></summary>
+          <div class="about-panel">${o.html}</div>
+        </details>`).join(""):`<p class="manual-vacio">${escapeHtml(manualUI("vacio").replace("{q}",a))}</p>`}function irACapituloManual(a){const e=document.getElementById("manual-"+a);e&&(e.open=!0,e.scrollIntoView({behavior:"smooth",block:"start"}))}function buscarEnManual(a){renderManual(a||"")}
