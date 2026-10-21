@@ -1,4 +1,4 @@
-const MANUAL_VERSION="2.76.1",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
+const MANUAL_VERSION="2.82.0",MANUAL_FECHA="21/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
       <p><strong>Cancionero MV</strong> es una app gratuita, sin publicidad, para cantar y tocar: m\xE1s de 2.000 cantos e himnos con letra, acordes, audio, partituras y presentaciones, en varios idiomas.</p>
       <h4>C\xF3mo abrirla</h4>
       <ul>
@@ -197,10 +197,69 @@ const MANUAL_VERSION="2.76.1",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>Listas</b> (+ Crear lista) para agruparlos (familia, iglesia\u2026); se pueden renombrar, eliminar y mover pedidos entre listas.</li>
         <li><b>\u2699\uFE0F Organizar y respaldar</b>: Exportar / Importar.</li>
         <li>Todo, incluidas las fotos, queda solo en tu dispositivo.</li>
-      </ul>`},{id:"biblioteca",icono:"\u{1F4D6}",titulo:"Biblioteca",html:`
+      </ul>`},{id:"lectura",icono:"\u{1F4D6}",titulo:"Biblia, Meditaciones y A\xF1o b\xEDblico (bot\xF3n \u{1F4D6})",html:`
+      <p>Arriba del <b>\u2630 Men\xFA</b>, el bot\xF3n <b>\u{1F4D6}</b> abre un men\xFA con tres opciones: <b>\u{1F4DC} Santa Biblia</b>, <b>\u{1F54A}\uFE0F Meditaciones</b> y <b>\u{1F4C5} A\xF1o b\xEDblico</b>. Las tres tambi\xE9n est\xE1n en <b>\u2630 Men\xFA \u2192 Recursos \u2192 Biblioteca</b>.</p>
+      <p>Todo sigue el <b>idioma de la app</b> (con guaran\xED se usa espa\xF1ol); se puede cambiar con la bandera de cada pantalla sin cambiar el idioma de la app.</p>`},{id:"biblia",icono:"\u{1F4DC}",titulo:"Santa Biblia",html:`
+      <h4>Abrirla</h4>
       <ul>
-        <li><b>\u2630 Men\xFA \u2192 Recursos \u2192 Biblioteca</b>: libros y recursos para leer o descargar, con buscador por t\xEDtulo o autor.</li>
-        <li>Cada recurso indica a qui\xE9n pertenecen los derechos y, si corresponde, el <b>permiso</b> de uso.</li>
+        <li>Desde <b>\u{1F4D6} \u2192 Santa Biblia</b> o <b>Biblioteca \u2192 Biblia \u2192 Leer</b>: se abre la <b>bienvenida</b>, con el buscador, <b>\u25B6 Seguir leyendo</b> (el \xFAltimo cap\xEDtulo que le\xEDste) y los libros del <b>Antiguo</b> y del <b>Nuevo Testamento</b>. Toc\xE1 un libro y despu\xE9s el cap\xEDtulo.</li>
+        <li>Tocando cualquier <b>cita b\xEDblica</b> de la app: el vers\xEDculo del d\xEDa y las citas de las Meditaciones, la <b>referencia b\xEDblica</b> de un canto o himno, el vers\xEDculo de un <b>pedido de oraci\xF3n</b> y las lecturas del A\xF1o b\xEDblico. Se abre el cap\xEDtulo con los vers\xEDculos citados <b>resaltados</b>, sin salir de la app; al cerrarla volv\xE9s a donde estabas.</li>
+      </ul>
+      <h4>Leer</h4>
+      <ul>
+        <li><b>\u2039 \u203A</b>, deslizar el dedo o las flechas del teclado: cap\xEDtulo anterior / siguiente. Tambi\xE9n se puede elegir el libro y el cap\xEDtulo en las dos listas de arriba.</li>
+        <li><b>\u{1F3E0}</b>: vuelve a la bienvenida (o a los \xFAltimos resultados de b\xFAsqueda).</li>
+        <li><b>Aa</b> (may\xFAsculas), <b>A- A A+</b> (tama\xF1o de letra).</li>
+        <li><b>Solo la cita / Cap\xEDtulo entero</b>, <b>\u{1F4CB} Copiar</b> (los vers\xEDculos con la referencia y la versi\xF3n) y <b>Otras versiones (internet)</b>.</li>
+      </ul>
+      <h4>Versiones</h4>
+      <ul>
+        <li>La <b>bandera</b> abre la lista de versiones, agrupadas por idioma. La que elijas queda guardada para ese idioma.</li>
+        <li>Son 35 versiones completas (Antiguo y Nuevo Testamento), todas de <b>dominio p\xFAblico</b> o con <b>licencia libre</b>:
+          <ul>
+            <li><b>Espa\xF1ol</b>: Reina-Valera 1909, Reina-Valera 1865, La Biblia en Espa\xF1ol Sencillo, Versi\xF3n Biblia Libre, Palabra de Dios para ti, Biblia Platense (Straubinger).</li>
+            <li><b>English</b>: King James, World English Bible, Berean Standard Bible, American Standard Version, New Heart English Bible, Young's Literal, Darby, Douay-Rheims, Bible in Basic English, Webster, Geneva 1599.</li>
+            <li><b>Italiano</b>: Riveduta (Luzzi), Diodati 1885.</li>
+            <li><b>Fran\xE7ais</b>: Ostervald, David Martin 1744, Darby, Crampon 1923.</li>
+            <li><b>Deutsch</b>: Luther 1912, Luther 1545, Elberfelder 1905 y 1871, Menge, Z\xFCrcher 1931, Textbibel, Gr\xFCnewald.</li>
+            <li><b>Portugu\xEAs</b>: Almeida, B\xEDblia Livre, B\xEDblia Livre (Textus Receptus), Nova Vers\xE3o de Acesso Livre.</li>
+          </ul>
+        </li>
+        <li>Versiones modernas como Reina-Valera 1960, Nueva Versi\xF3n Internacional o Dios Habla Hoy tienen derechos de autor y no se pueden incluir; para leerlas est\xE1 <b>Otras versiones (internet)</b>.</li>
+        <li>Douay-Rheims y Platense numeran los Salmos como la Vulgata (el Salmo 23 es el 22): la app lo avisa.</li>
+      </ul>
+      <h4>Buscar</h4>
+      <ul>
+        <li>Escrib\xED una <b>cita</b> (\xABJuan 3:16\xBB, \xABsalmos 23\xBB) y aparece <b>Ir a</b>.</li>
+        <li>Escrib\xED <b>palabras o una frase</b> (\xABamor de Dios\xBB): busca en toda la Biblia de la versi\xF3n elegida, sin importar acentos ni may\xFAsculas, y marca las palabras. Primero salen los vers\xEDculos con la frase exacta. Una palabra encuentra tambi\xE9n sus formas m\xE1s largas (\xABoraci\xF3n\xBB \u2192 \xABoraciones\xBB); las de hasta 3 letras (\xABfe\xBB, \xABluz\xBB) tienen que estar enteras.</li>
+        <li>Toc\xE1 un resultado para leerlo en su cap\xEDtulo; <b>\u2039 Resultados</b> vuelve a la lista.</li>
+      </ul>
+      <h4>Sin internet</h4>
+      <ul>
+        <li>Cada libro que abr\xEDs queda guardado en el dispositivo. La primera b\xFAsqueda en una versi\xF3n baja la Biblia entera (unos 4 MB) y despu\xE9s se busca sin conexi\xF3n.</li>
+      </ul>`},{id:"meditaciones",icono:"\u{1F54A}\uFE0F",titulo:"Meditaciones (devocionales)",html:`
+      <ul>
+        <li>Se abren desde <b>\u{1F4D6} \u2192 Meditaciones</b>, <b>\u2630 Men\xFA \u2192 Recursos \u2192 Meditaciones</b> o la <b>Biblioteca</b> (ah\xED cada libro tiene <b>Leer la de hoy</b>).</li>
+        <li>Arriba: la <b>bandera</b> (idioma de los libros), el <b>libro</b> y su autor. Al cambiar el idioma de la app cambia la lista de libros.</li>
+        <li>Abre siempre en el <b>d\xEDa de hoy</b>. <b>\u2039 \u203A</b>, deslizar el dedo o las flechas cambian de d\xEDa; <b>\u{1F5D3}\uFE0F</b> abre el calendario y <b>Hoy</b> vuelve a hoy. El 29 de febrero no est\xE1 en los libros.</li>
+        <li>Cada d\xEDa: t\xEDtulo, <b>vers\xEDculo</b> con su cita (tocala para leerla en la Biblia), otras citas, el mensaje (las citas dentro del texto tambi\xE9n se tocan), la fuente y las notas del libro.</li>
+        <li><b>\u{1F50E}</b>: busca un tema en <b>todo el libro</b> (t\xEDtulo, vers\xEDculo, mensaje y notas). Muestra los d\xEDas con un fragmento y las palabras marcadas; toc\xE1 uno para ir a ese d\xEDa y <b>\u2039 Resultados</b> para volver.</li>
+        <li><b>\u{1F3B5} Para cantar hoy</b>: hasta 3 cantos o himnos sobre el tema del d\xEDa. Al tocar uno aparece un mini reproductor (si tiene MP3) y la letra, sin salir de la meditaci\xF3n; los 3 forman la lista de reproducci\xF3n. <b>Abrir en el cancionero</b> lleva al canto y el bot\xF3n flotante <b>\u2039 Volver a la meditaci\xF3n</b> te trae de vuelta.</li>
+        <li><b>\u{1F6D0} Orar con esta meditaci\xF3n</b>: <b>Nuevo pedido con este vers\xEDculo</b> abre tus Pedidos de oraci\xF3n con el vers\xEDculo del d\xEDa ya cargado; <b>Mis pedidos de oraci\xF3n</b> los abre arriba de la meditaci\xF3n (al cerrarlos volv\xE9s al mismo d\xEDa). Muestra cu\xE1ntos pedidos esperan respuesta.</li>
+        <li><b>\u2B50 Guardar en Mis Listas</b>, <b>Compartir</b> y <b>Mis notas</b> (se guardan solas, por libro y por d\xEDa, en tu dispositivo).</li>
+        <li><b>Aa</b>, <b>A- A A+</b> para la letra.</li>
+      </ul>`},{id:"aniobiblico",icono:"\u{1F4C5}",titulo:"A\xF1o b\xEDblico",html:`
+      <ul>
+        <li>Un plan para leer <b>la Biblia completa en un a\xF1o</b>: 365 d\xEDas, en orden de G\xE9nesis a Apocalipsis, repartida por cantidad de vers\xEDculos para que cada d\xEDa lleve m\xE1s o menos el mismo tiempo. El 29 de febrero repite el 28.</li>
+        <li>Se abre desde <b>\u{1F4D6} \u2192 A\xF1o b\xEDblico</b> o la <b>Biblioteca</b> (que muestra la lectura de hoy y tu progreso).</li>
+        <li>Toc\xE1 la lectura del d\xEDa (\xABLucas 2-3\xBB) para leerla en la Biblia de la app, con tu versi\xF3n elegida.</li>
+        <li><b>\u2610 Marcar como le\xEDdo</b>, barra de progreso, <b>Ir al primer d\xEDa sin leer</b> y <b>Empezar de nuevo</b>. <b>\u2039 \u203A</b> y <b>Hoy</b> para moverte por los d\xEDas.</li>
+        <li>Los d\xEDas le\xEDdos se guardan solo en este dispositivo.</li>
+      </ul>`},{id:"biblioteca",icono:"\u{1F4DA}",titulo:"Biblioteca",html:`
+      <ul>
+        <li><b>\u2630 Men\xFA \u2192 Recursos \u2192 Biblioteca</b>. Muestra solo lo del <b>idioma de la app</b> y cambia sola al cambiar la bandera:</li>
+        <li><b>\u{1F4DC} Biblia</b> (la versi\xF3n elegida para ese idioma) \xB7 <b>\u{1F4C5} A\xF1o b\xEDblico</b> (lectura de hoy y progreso) \xB7 <b>\u{1F4DA} Libros</b> para leer o descargar, con sus derechos y permisos \xB7 <b>\u{1F54A}\uFE0F Meditaciones</b> (cada libro con <b>Leer la de hoy</b>).</li>
+        <li>El buscador filtra por t\xEDtulo o autor en todas las secciones.</li>
       </ul>`},{id:"info",icono:"\u2139\uFE0F",titulo:"Informaci\xF3n de la app",html:`
       <ul>
         <li><b>\u2630 Men\xFA \u2192 Informaci\xF3n de la app</b>: versi\xF3n y fecha de actualizaci\xF3n, y el bot\xF3n <b>\u{1F504} Forzar actualizaci\xF3n</b> (baja la app entera de nuevo sin perder tus listas ni ajustes).</li>
@@ -212,7 +271,8 @@ const MANUAL_VERSION="2.76.1",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
       </ul>`},{id:"apariencia",icono:"\u{1F3A8}",titulo:"Apariencia: d\xEDa, noche y colores",html:`
       <ul>
         <li><b>\u{1F576}\uFE0F / \u{1F453}</b> (arriba del men\xFA): cambia entre modo <b>noche</b> (fondo oscuro) y modo <b>d\xEDa</b> (fondo claro).</li>
-        <li><b>\u2630 Men\xFA \u2192 Ajustes \u2192 Color del tema</b>: 13 colores \u2014 Blanco, Rojo, Coral, Naranja, Amarillo, Verde, Turquesa, Celeste, Azul, Violeta, Lila, Rosa y Gris. Cada c\xEDrculo muestra el color y su fondo nocturno.</li>
+        <li><b>\u2630 Men\xFA \u2192 Ajustes \u2192 Color del tema</b>: 13 opciones \u2014 Blanco, Rojo, Coral, Naranja, Amarillo, Verde, Turquesa, Celeste, Azul, Violeta, Lila, Rosa y <b>Kindle</b>. Cada c\xEDrculo muestra el color y su fondo nocturno.</li>
+        <li><b>Kindle</b> (papel y tinta): toda la app como un lector de libros electr\xF3nicos \u2014 de d\xEDa, papel crema con letras marr\xF3n oscuro; de noche, fondo carb\xF3n con letras color papel; letra con serifa, sin sombras ni brillos y fotos un poco sepia. Ideal para leer la Biblia y las meditaciones. (Reemplaza al antiguo \xABGris\xBB; quien lo ten\xEDa elegido pasa a \xABBlanco\xBB.)</li>
         <li>El color se aplica a botones, acordes, fondo y barra del celular.</li>
       </ul>`},{id:"iglesia",icono:"\u{1F4FD}\uFE0F",titulo:"Modo iglesia: proyector y TV",html:`
       <h4>Proyector (computadora)</h4>
@@ -246,7 +306,7 @@ const MANUAL_VERSION="2.76.1",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>Buy me a coffee</b>: donaciones por Revolut o Mercado Pago, para sostener la app.</li>
       </ul>`},{id:"privacidad",icono:"\u{1F512}",titulo:"Privacidad",html:`
       <ul>
-        <li>Mis Listas, Mis Playlists, el Bloc musical, los Pedidos de oraci\xF3n, el tema, el color y el idioma se guardan <b>solo en tu dispositivo</b>. No se suben a ning\xFAn servidor.</li>
+        <li>Mis Listas, Mis Playlists, el Bloc musical, los Pedidos de oraci\xF3n, las notas de las Meditaciones, los d\xEDas le\xEDdos del A\xF1o b\xEDblico, la versi\xF3n de la Biblia elegida, el tema, el color y el idioma se guardan <b>solo en tu dispositivo</b>. No se suben a ning\xFAn servidor.</li>
         <li>El <b>micr\xF3fono</b> se usa solo para el afinador y para grabar en el Bloc, y \xFAnicamente cuando lo activ\xE1s.</li>
         <li>La <b>c\xE1mara/fotos</b> se usan solo si agreg\xE1s una foto a un pedido de oraci\xF3n.</li>
         <li>Para pasar tus datos a otro dispositivo us\xE1 <b>Exportar / Importar</b> en cada secci\xF3n.</li>
@@ -260,6 +320,12 @@ const MANUAL_VERSION="2.76.1",MANUAL_FECHA="18/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>Encontr\xE9 un error en una letra</b>: avis\xE1 desde <b>Contacto</b>.</li>
       </ul>`},{id:"novedades",icono:"\u{1F195}",titulo:"Novedades",html:`
       <ul>
+        <li><b>2.82.0</b> \u2014 Biblia: 35 versiones libres en 6 idiomas (elegilas con la bandera). Meditaciones: <b>\u{1F6D0} Orar con esta meditaci\xF3n</b> (pedido con el vers\xEDculo del d\xEDa). Men\xFA \u{1F4D6} en el orden Santa Biblia, Meditaciones, A\xF1o b\xEDblico. Nuevo tema de color <b>Kindle</b> (papel y tinta) en lugar de Gris. Manual e Informaci\xF3n de la app actualizados.</li>
+        <li><b>2.81.0</b> \u2014 Biblia: buscador de palabras, frases y citas en toda la Biblia, bienvenida con libros y cap\xEDtulos, \u{1F3E0} y Aa. Meditaciones: \u{1F50E} buscar un tema en todo el libro. Bot\xF3n \u{1F4D6} del men\xFA con Santa Biblia, Meditaciones y A\xF1o b\xEDblico. Biblioteca en orden Biblia, A\xF1o b\xEDblico, Libros, Meditaciones.</li>
+        <li><b>2.80.0</b> \u2014 Biblioteca por idioma (solo lo del idioma de la app): Biblia, A\xF1o b\xEDblico (nuevo: la Biblia en un a\xF1o) y Meditaciones.</li>
+        <li><b>2.79.0</b> \u2014 Lector de la Biblia dentro de la app: las citas de meditaciones, cantos y pedidos de oraci\xF3n se abren sin salir de la app, con los vers\xEDculos resaltados y uso sin conexi\xF3n.</li>
+        <li><b>2.78.0</b> \u2014 Meditaciones: cantar sin salir (mini reproductor y letra de los 3 cantos sugeridos), Aa / A- / A / A+, bandera de idioma y autor del libro.</li>
+        <li><b>2.77.0</b> \u2014 \u{1F54A}\uFE0F Meditaciones: un devocional para cada d\xEDa en 6 idiomas, con vers\xEDculo y citas, cantos sugeridos, favoritos en Mis Listas, compartir y notas.</li>
         <li><b>2.76.1</b> \u2014 Informaci\xF3n de la app \u2192 C\xF3mo instalar la app: cu\xE1nto ocupa la app (unos 5 MB) y cu\xE1nto ocupa ahora en tu dispositivo.</li>
         <li><b>2.76.0</b> \u2014 Partitura: zoom con dos dedos (vertical u horizontal) y doble toque, con buena nitidez.</li>
         <li><b>2.75.1</b> \u2014 Referencia b\xEDblica: los libros de la Biblia se sugieren solo en el idioma del canto.</li>
