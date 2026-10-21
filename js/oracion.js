@@ -26,7 +26,7 @@ const ORACION_LABELS={titulo:{es:"Mis Pedidos de Oraci\xF3n",en:"My Prayer Reque
          <img class="oracion-foto-preview" data-foto-id="${e.id}" alt="${tOracion("chip_foto")}">
          <button type="button" class="lista-remove-btn" ${dataAction("quitarFotoPedido",[e.id])} title="${tOracion("quitar_foto")}">\u2715</button>
        </div>`:`<button type="button" class="chip oracion-add-chip" ${dataAction("oracionElegirFoto",[e.id])}>${tOracion("agregar_foto")}</button>`,i=e.versiculo?`<div class="lista-song-row">
-         <a href="https://www.biblegateway.com/passage/?search=${encodeURIComponent(e.versiculo)}&version=RVR1960" target="_blank" rel="noopener noreferrer">\u{1F4D6} ${escapeHtml(e.versiculo)}</a>
+         <span>\u{1F4D6} ${typeof bibLinkearTexto=="function"?bibLinkearTexto(e.versiculo):`<a href="https://www.biblegateway.com/passage/?search=${encodeURIComponent(e.versiculo)}&version=RVR1960" target="_blank" rel="noopener noreferrer">${escapeHtml(e.versiculo)}</a>`}</span>
          <button type="button" class="lista-remove-btn" ${dataAction("quitarVersiculoPedido",[e.id])} title="${tOracion("quitar_versiculo")}">\u2715</button>
        </div>`:`<button type="button" class="chip oracion-add-chip" ${dataAction("oracionPedirVersiculo",[e.id])}>${tOracion("agregar_versiculo")}</button>`,n=e.songId?`<div class="lista-song-row">
          <span ${dataAction("cerrarPedidosOracion,openSong",[e.songId])}>\u{1F3B5} ${escapeHtml(e.songTitulo||"")}</span>

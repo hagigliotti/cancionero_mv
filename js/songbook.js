@@ -32,7 +32,7 @@ function hasHymnNumbersInCurrentLanguage(){return getLibroSongs(libroActual).som
 
       <div>
         <b>${t("referencia_biblica")}:</b>
-        ${normalizeReferenciaBiblica(e.referencia_biblica).length?normalizeReferenciaBiblica(e.referencia_biblica).map(c=>`<a href="${`https://www.biblegateway.com/passage/?search=${encodeURIComponent(c)}&version=RVR1960`}" target="_blank">${c}</a>`).join(", "):t("no")}
+        ${normalizeReferenciaBiblica(e.referencia_biblica).length?typeof bibLinkearTexto=="function"?bibLinkearTexto(normalizeReferenciaBiblica(e.referencia_biblica).join(", ")):normalizeReferenciaBiblica(e.referencia_biblica).map(c=>`<a href="${`https://www.biblegateway.com/passage/?search=${encodeURIComponent(c)}&version=RVR1960`}" target="_blank">${c}</a>`).join(", "):t("no")}
       </div>
 
       <div class="song-metro" ${dataAction("abrirMetronomoDesdeMenu")} style="cursor:pointer;">
@@ -86,7 +86,7 @@ function hasHymnNumbersInCurrentLanguage(){return getLibroSongs(libroActual).som
 
       <div>
         <b class="temas-label-link" ${dataAction("abrirValoresModal",["tags",null,{fromInfo:!1}])} title="Ver todos los tags">${t("temas")}:</b>
-        ${e.tags?.length?[...e.tags].map(c=>c?.toString().trim()).filter(Boolean).sort((c,f)=>getTagDisplay(c,idiomaActual).localeCompare(getTagDisplay(f,idiomaActual),"es",{sensitivity:"base"})).map(c=>{const f=getTagDisplay(c,idiomaActual);return`<span class="tag-link" ${dataAction("openPersonModal",[c,"tags",{tipo:"tags",filtroIdioma:idiomaActual,fromInfo:!1}])}>${f}</span>`}).join(", "):t("desconocido")} |
+        ${e.tags?.length?[...e.tags].map(c=>c?.toString().trim()).filter(Boolean).sort((c,g)=>getTagDisplay(c,idiomaActual).localeCompare(getTagDisplay(g,idiomaActual),"es",{sensitivity:"base"})).map(c=>{const g=getTagDisplay(c,idiomaActual);return`<span class="tag-link" ${dataAction("openPersonModal",[c,"tags",{tipo:"tags",filtroIdioma:idiomaActual,fromInfo:!1}])}>${g}</span>`}).join(", "):t("desconocido")} |
 
         <b>${t("revisado")}:</b>
           <span
@@ -109,7 +109,7 @@ function hasHymnNumbersInCurrentLanguage(){return getLibroSongs(libroActual).som
 
     </div>
 
-  `,g=e.idiomas?.[idiomaActual]?.nota,p=Array.isArray(g)?g.map(c=>(c||"").trim()).filter(c=>c!==""):typeof g=="string"?g.trim():"",T=Array.isArray(p)?p.length>0:p!=="";document.getElementById("contenido").innerHTML=`
+  `,f=e.idiomas?.[idiomaActual]?.nota,p=Array.isArray(f)?f.map(c=>(c||"").trim()).filter(c=>c!==""):typeof f=="string"?f.trim():"",T=Array.isArray(p)?p.length>0:p!=="";document.getElementById("contenido").innerHTML=`
   <div class="song-title-row" id="songTitleRow" data-song-id="${escapeHtml(e.id)}" data-lang="${escapeHtml(idiomaActual)}">
     <h2 class="song-title-text">${s}${m}</h2>
     <button type="button" class="fav-add-btn" ${dataAction("abrirMisListas",[e.id])} title="Agregar a una lista">\u2B50</button>
