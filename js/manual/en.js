@@ -105,17 +105,17 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li>Tap a card to hear the note.</li>
 </ul>
 <h4>Chord sheet</h4>
-<ul><li><b>\u2630 Menu \u2192 Tools \u2192 Chords (Show/Hide)</b>: shows or hides the chords above the lyrics.</li></ul>`},transponer:{titulo:"Transpose and \xABTransport\xBB",html:`
+<ul><li><b>\u2630 Menu \u2192 Tools \u2192 Chords (Show/Hide)</b>: shows or hides the chords above the lyrics.</li></ul>`},transponer:{titulo:"Transpose and \xABTransposed chords\xBB",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Tools \u2192 Transpose key</b>: <b>\u266D</b> lowers a half step, <b>\u266F</b> raises a half step, <b>\u266E</b> goes back to the original key. All chords in the lyrics change.</li>
 <li>If the song is transposed, the chord window shows <b>two diagrams</b>: <b>Transposed</b> (sounds like the song) and <b>Original</b> (as written).</li>
-<li><b>Transport \u2014 On/Off</b> (in the same menu) decides which one is the main one (highlighted and played):
+<li><b>Transposed chords \u2014 On/Off</b> (in the same menu) decides which one is the main one (highlighted and played):
 <ul>
 <li><b>On</b>: the transposed one, to play exactly like the song.</li>
 <li><b>Off</b>: the original; on guitar and ukulele it also says <b>\xABWith a capo on fret N it sounds like the song\xBB</b>.</li>
 </ul>
 </li>
-<li>Wind instruments use the chord according to Transport and mention the other one.</li>
+<li>Wind instruments use the chord according to \xABTransposed chords\xBB and mention the other one.</li>
 </ul>`},texto:{titulo:"Text size and capitals",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Tools \u2192 Text size</b>:
@@ -339,6 +339,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>I don't see Devotionals</b>: type <b>meditaciones</b> in the search box.</li>
 </ul>`},novedades:{titulo:"What's new",html:`
 <ul>
+<li><b>2.87.1</b> \u2014 \xABTransport\xBB is now called <b>Transposed chords</b>; QR code text fixed; On/Off and Show/Hide buttons announce their state to screen readers.</li>
 <li><b>2.87.0</b> \u2014 Sheet music: <b>\u2039 \u203A</b> previous/next hymn and <b>\u{1F50E} search</b> by number, title or lyrics (also in other books); top bar matches the phone's status bar and pages use the full width on phones. <b>\u{1F4AC} Notices</b> when showing/hiding or turning things on/off (can be turned off in Settings). <b>Updating the app</b> returns to the same song or window. Teleprompter hidden and tuner on guitar by default. \xABPresentation\xBB and stanza numbers with better contrast in every color.</li>
 <li><b>2.86.0</b> \u2014 <b>Bible</b> icon: <b>\u{1F4D6} open book</b> (Devotionals \u{1F54A}\uFE0F, Library \u{1F4DA}). <b>Full-screen sheet music</b>, with \u{1F3A7} to listen to its song and \u23EE \u23EF \u23ED \u{1F500}: the sheet music follows the player. \xABView sheet music\xBB works on more devices (older iPhone/iPad and TVs, networks that blocked the viewer).</li>
 <li><b>2.85.1</b> \u2014 The \u2328\uFE0F on-screen keyboard also appears with TV mode turned on on a computer (extended monitor or projector), and in windows it always types in that window's field.</li>

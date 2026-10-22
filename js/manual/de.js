@@ -105,17 +105,17 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li>Beim Antippen einer Karte h\xF6rst du den Ton.</li>
 </ul>
 <h4>Akkordanzeige</h4>
-<ul><li><b>\u2630 Men\xFC \u2192 Werkzeuge \u2192 Akkorde (Anzeigen/Ausblenden)</b>: zeigt oder verbirgt die Akkorde \xFCber dem Text.</li></ul>`},transponer:{titulo:"Transponieren und \xABTransport\xBB",html:`
+<ul><li><b>\u2630 Men\xFC \u2192 Werkzeuge \u2192 Akkorde (Anzeigen/Ausblenden)</b>: zeigt oder verbirgt die Akkorde \xFCber dem Text.</li></ul>`},transponer:{titulo:"Transponieren und \xABTransponierte Akkorde\xBB",html:`
 <ul>
 <li><b>\u2630 Men\xFC \u2192 Werkzeuge \u2192 Tonart transponieren</b>: <b>\u266D</b> einen Halbton tiefer, <b>\u266F</b> einen Halbton h\xF6her, <b>\u266E</b> zur\xFCck zur Originaltonart. Alle Akkorde des Textes \xE4ndern sich.</li>
 <li>Ist das Lied transponiert, zeigt das Akkordfenster <b>zwei Griffbilder</b>: <b>Transponiert</b> (klingt wie das Lied) und <b>Original</b> (wie notiert).</li>
-<li><b>Transport \u2014 Ein/Aus</b> (im selben Men\xFC) legt fest, welches das Hauptbild ist (hervorgehoben und h\xF6rbar):
+<li><b>Transponierte Akkorde \u2014 Ein/Aus</b> (im selben Men\xFC) legt fest, welches das Hauptbild ist (hervorgehoben und h\xF6rbar):
 <ul>
 <li><b>Ein</b>: das transponierte, um genau wie das Lied zu spielen.</li>
 <li><b>Aus</b>: das Original; bei Gitarre und Ukulele steht zus\xE4tzlich <b>\xABMit Kapodaster im N. Bund klingt es wie das Lied\xBB</b>.</li>
 </ul>
 </li>
-<li>Blasinstrumente verwenden den Akkord gem\xE4\xDF Transport und nennen den anderen.</li>
+<li>Blasinstrumente verwenden den Akkord gem\xE4\xDF \xABTransponierte Akkorde\xBB und nennen den anderen.</li>
 </ul>`},texto:{titulo:"Schriftgr\xF6\xDFe und Gro\xDFbuchstaben",html:`
 <ul>
 <li><b>\u2630 Men\xFC \u2192 Werkzeuge \u2192 Schriftgr\xF6\xDFe</b>:
@@ -339,6 +339,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>Ich sehe die Andachten nicht</b>: schreibe <b>meditaciones</b> in die Suche.</li>
 </ul>`},novedades:{titulo:"Neuigkeiten",html:`
 <ul>
+<li><b>2.87.1</b> \u2014 \xABTransport\xBB hei\xDFt jetzt <b>Transponierte Akkorde</b>; Text des QR-Codes korrigiert; Ein/Aus- und Anzeigen/Ausblenden-Tasten melden ihren Zustand an Bildschirmleser.</li>
 <li><b>2.87.0</b> \u2014 Noten: <b>\u2039 \u203A</b> vorheriges/n\xE4chstes Lied und <b>\u{1F50E} Suche</b> nach Nummer, Titel oder Text (auch in anderen B\xFCchern); obere Leiste in der Farbe der Statusleiste und Seiten in voller Breite auf dem Handy. <b>\u{1F4AC} Hinweise</b> beim Anzeigen/Ausblenden oder Ein-/Ausschalten (in den Einstellungen abschaltbar). Beim <b>Aktualisieren der App</b> geht es zum selben Lied oder Fenster zur\xFCck. Teleprompter standardm\xE4\xDFig ausgeblendet, Stimmger\xE4t auf Gitarre. \xABPr\xE4sentation\xBB und Strophennummern mit besserem Kontrast in allen Farben.</li>
 <li><b>2.86.0</b> \u2014 Symbol der <b>Bibel: \u{1F4D6} offenes Buch</b> (Andachten \u{1F54A}\uFE0F, Bibliothek \u{1F4DA}). <b>Noten im Vollbild</b>, mit \u{1F3A7} zum Anh\xF6ren und \u23EE \u23EF \u23ED \u{1F500}: die Noten folgen dem Player. \xABNoten ansehen\xBB funktioniert auf mehr Ger\xE4ten (\xE4ltere iPhone/iPad und Fernseher, Netzwerke, die den Viewer blockierten).</li>
 <li><b>2.85.1</b> \u2014 Die \u2328\uFE0F Bildschirmtastatur erscheint auch mit aktiviertem TV-Modus am Computer (erweiterter Monitor oder Beamer) und schreibt in Fenstern immer in das Feld dieses Fensters.</li>

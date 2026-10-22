@@ -105,17 +105,17 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li>En touchant une carte, on entend la note.</li>
 </ul>
 <h4>Grille d'accords</h4>
-<ul><li><b>\u2630 Menu \u2192 Outils \u2192 Accords (Afficher/Masquer)</b> : affiche ou masque les accords au-dessus des paroles.</li></ul>`},transponer:{titulo:"Transposer et \xABTransport\xBB",html:`
+<ul><li><b>\u2630 Menu \u2192 Outils \u2192 Accords (Afficher/Masquer)</b> : affiche ou masque les accords au-dessus des paroles.</li></ul>`},transponer:{titulo:"Transposer et \xABAccords transpos\xE9s\xBB",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Outils \u2192 Transposer la tonalit\xE9</b> : <b>\u266D</b> baisse d'un demi-ton, <b>\u266F</b> monte d'un demi-ton, <b>\u266E</b> revient \xE0 la tonalit\xE9 d'origine. Tous les accords des paroles changent.</li>
 <li>Si le chant est transpos\xE9, la fen\xEAtre de l'accord montre <b>deux diagrammes</b> : <b>Transpos\xE9</b> (sonne comme le chant) et <b>Original</b> (comme il est \xE9crit).</li>
-<li><b>Transport \u2014 Activ\xE9/D\xE9sactiv\xE9</b> (dans le m\xEAme menu) d\xE9cide lequel est le principal (mis en \xE9vidence et jou\xE9) :
+<li><b>Accords transpos\xE9s \u2014 Activ\xE9/D\xE9sactiv\xE9</b> (dans le m\xEAme menu) d\xE9cide lequel est le principal (mis en \xE9vidence et jou\xE9) :
 <ul>
 <li><b>Activ\xE9</b> : le transpos\xE9, pour jouer comme le chant.</li>
 <li><b>D\xE9sactiv\xE9</b> : l'original ; \xE0 la guitare et au ukul\xE9l\xE9 il indique aussi <b>\xABAvec un capodastre \xE0 la case N, cela sonne comme le chant\xBB</b>.</li>
 </ul>
 </li>
-<li>Les vents utilisent l'accord selon le Transport et pr\xE9cisent l'autre.</li>
+<li>Les vents utilisent l'accord selon \xABAccords transpos\xE9s\xBB et pr\xE9cisent l'autre.</li>
 </ul>`},texto:{titulo:"Taille du texte et majuscules",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Outils \u2192 Taille du texte</b> :
@@ -339,6 +339,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>Je ne vois pas les M\xE9ditations</b> : \xE9crivez <b>meditaciones</b> dans la recherche.</li>
 </ul>`},novedades:{titulo:"Nouveaut\xE9s",html:`
 <ul>
+<li><b>2.87.1</b> \u2014 \xABTransport\xBB s'appelle maintenant <b>Accords transpos\xE9s</b> ; texte du code QR corrig\xE9 ; les boutons Activ\xE9/D\xE9sactiv\xE9 et Afficher/Masquer annoncent leur \xE9tat aux lecteurs d'\xE9cran.</li>
 <li><b>2.87.0</b> \u2014 Partition : <b>\u2039 \u203A</b> cantique pr\xE9c\xE9dent/suivant et <b>\u{1F50E} recherche</b> par num\xE9ro, titre ou paroles (aussi dans d'autres livres) ; barre du haut de la couleur de la barre du t\xE9l\xE9phone et pages sur toute la largeur sur t\xE9l\xE9phone. <b>\u{1F4AC} Avis</b> en affichant/masquant ou activant/d\xE9sactivant (d\xE9sactivables dans les R\xE9glages). En <b>mettant \xE0 jour l'app</b>, on revient au m\xEAme chant ou \xE0 la m\xEAme fen\xEAtre. T\xE9l\xE9prompteur masqu\xE9 et accordeur sur la guitare par d\xE9faut. \xABPr\xE9sentation\xBB et num\xE9ros de strophe mieux contrast\xE9s dans toutes les couleurs.</li>
 <li><b>2.86.0</b> \u2014 Ic\xF4ne de la <b>Bible : \u{1F4D6} livre ouvert</b> (M\xE9ditations \u{1F54A}\uFE0F, Biblioth\xE8que \u{1F4DA}). <b>Partition en plein \xE9cran</b>, avec \u{1F3A7} pour \xE9couter le chant et \u23EE \u23EF \u23ED \u{1F500} : la partition suit le lecteur. \xAB Voir la partition \xBB fonctionne sur plus d'appareils (anciens iPhone/iPad et TV, r\xE9seaux qui bloquaient la visionneuse).</li>
 <li><b>2.85.1</b> \u2014 Le \u2328\uFE0F clavier \xE0 l'\xE9cran appara\xEEt aussi avec le mode TV activ\xE9 sur l'ordinateur (\xE9cran \xE9tendu ou projecteur), et dans les fen\xEAtres il \xE9crit toujours dans le champ de cette fen\xEAtre.</li>

@@ -105,17 +105,17 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li>Toccando una scheda si sente la nota.</li>
 </ul>
 <h4>Intavolatura</h4>
-<ul><li><b>\u2630 Menu \u2192 Strumenti \u2192 Accordi (Mostra/Nascondi)</b>: mostra o nasconde gli accordi sopra il testo.</li></ul>`},transponer:{titulo:"Trasporre e \xABTrasporto\xBB",html:`
+<ul><li><b>\u2630 Menu \u2192 Strumenti \u2192 Accordi (Mostra/Nascondi)</b>: mostra o nasconde gli accordi sopra il testo.</li></ul>`},transponer:{titulo:"Trasporre e \xABAccordi trasposti\xBB",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Strumenti \u2192 Trasporre la tonalit\xE0</b>: <b>\u266D</b> abbassa di un semitono, <b>\u266F</b> alza di un semitono, <b>\u266E</b> torna alla tonalit\xE0 originale. Cambiano tutti gli accordi del testo.</li>
 <li>Se il canto \xE8 trasposto, la finestrella dell'accordo mostra <b>due diagrammi</b>: <b>Trasposto</b> (suona come il canto) e <b>Originale</b> (come \xE8 scritto).</li>
-<li><b>Trasporto \u2014 Attivo/Inattivo</b> (nello stesso menu) decide quale \xE8 il principale (evidenziato e quello che suona):
+<li><b>Accordi trasposti \u2014 Attivo/Inattivo</b> (nello stesso menu) decide quale \xE8 il principale (evidenziato e quello che suona):
 <ul>
 <li><b>Attivo</b>: il trasposto, per suonare uguale al canto.</li>
 <li><b>Inattivo</b>: l'originale; su chitarra e ukulele dice anche <b>\xABCon il capotasto al tasto N suona come il canto\xBB</b>.</li>
 </ul>
 </li>
-<li>I fiati usano l'accordo secondo il Trasporto e indicano l'altro.</li>
+<li>I fiati usano l'accordo secondo \xABAccordi trasposti\xBB e indicano l'altro.</li>
 </ul>`},texto:{titulo:"Dimensione del testo e maiuscole",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Strumenti \u2192 Dimensione del testo</b>:
@@ -339,6 +339,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>Non vedo le Meditazioni</b>: scrivi <b>meditaciones</b> nella ricerca.</li>
 </ul>`},novedades:{titulo:"Novit\xE0",html:`
 <ul>
+<li><b>2.87.1</b> \u2014 \xABTrasporto\xBB ora si chiama <b>Accordi trasposti</b>; testo del codice QR corretto; i pulsanti Attivo/Inattivo e Mostra/Nascondi annunciano il loro stato ai lettori di schermo.</li>
 <li><b>2.87.0</b> \u2014 Spartito: <b>\u2039 \u203A</b> inno precedente/successivo e <b>\u{1F50E} ricerca</b> per numero, titolo o testo (anche in altri libri); barra in alto dello stesso colore della barra del telefono e pagine a tutta larghezza sul telefono. <b>\u{1F4AC} Avvisi</b> quando si mostra/nasconde o si attiva/disattiva (si spengono nelle Impostazioni). <b>Aggiornando l'app</b> si torna allo stesso canto o finestra. Gobbo nascosto e accordatore sulla chitarra di default. \xABPresentazione\xBB e numeri delle strofe con miglior contrasto in tutti i colori.</li>
 <li><b>2.86.0</b> \u2014 Icona della <b>Bibbia: \u{1F4D6} libro aperto</b> (Meditazioni \u{1F54A}\uFE0F, Biblioteca \u{1F4DA}). <b>Spartito a schermo intero</b>, con \u{1F3A7} per ascoltarne il brano e \u23EE \u23EF \u23ED \u{1F500}: lo spartito segue il lettore. \xABVedi spartito\xBB funziona su pi\xF9 dispositivi (iPhone/iPad e TV vecchi, reti che bloccavano il visore).</li>
 <li><b>2.85.1</b> \u2014 La \u2328\uFE0F tastiera su schermo appare anche con la Modalit\xE0 TV attivata sul computer (monitor esteso o proiettore) e nelle finestre scrive sempre nel campo di quella finestra.</li>
@@ -373,7 +374,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>2.67.2</b> \u2014 Negli elenchi di autori, compositori, traduttori e temi, ogni canto compare una sola volta con un pulsante per libro.</li>
 <li><b>2.67.1</b> \u2014 Autori, compositori e traduttori con il nome completo e ogni persona una sola volta negli elenchi.</li>
 <li><b>2.67.0</b> \u2014 Manuale d'uso completo dentro l'app.</li>
-<li><b>2.66.x</b> \u2014 Pianoforte: accordo centrato, ogni nota suona da sola, posizione a parte. Originale e trasposto affiancati secondo il \xABTrasporto\xBB, con capotasto. Chitarra corretta. 13 colori. Grigio di giorno in grigio chiaro.</li>
+<li><b>2.66.x</b> \u2014 Pianoforte: accordo centrato, ogni nota suona da sola, posizione a parte. Originale e trasposto affiancati secondo \xABAccordi trasposti\xBB, con capotasto. Chitarra corretta. 13 colori. Grigio di giorno in grigio chiaro.</li>
 <li><b>2.65.0</b> \u2014 Diagrammi per fiati (flauto traverso, flauto dolce, clarinetto, tromba, sax contralto e tenore). Codice QR in modalit\xE0 TV.</li>
 <li><b>2.64.0</b> \u2014 Playlist in evidenza (\xABConquistadores\xBB) e condivisione delle playlist tramite link.</li>
 <li><b>2.63.0</b> \u2014 Pulsante Aa (maiuscole), versetto sempre visibile cambiando libro, nuovi cori del Coritario J\xF3venes.</li>

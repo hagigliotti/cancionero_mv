@@ -105,17 +105,17 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li>Tocando um cart\xE3o voc\xEA ouve a nota.</li>
 </ul>
 <h4>Cifra</h4>
-<ul><li><b>\u2630 Menu \u2192 Ferramentas \u2192 Acordes (Mostrar/Ocultar)</b>: mostra ou oculta os acordes sobre a letra.</li></ul>`},transponer:{titulo:"Transpor e \xABTransporte\xBB",html:`
+<ul><li><b>\u2630 Menu \u2192 Ferramentas \u2192 Acordes (Mostrar/Ocultar)</b>: mostra ou oculta os acordes sobre a letra.</li></ul>`},transponer:{titulo:"Transpor e \xABAcordes transpostos\xBB",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Ferramentas \u2192 Transpor tom</b>: <b>\u266D</b> desce meio tom, <b>\u266F</b> sobe meio tom, <b>\u266E</b> volta ao tom original. Todos os acordes da letra mudam.</li>
 <li>Se o c\xE2ntico est\xE1 transposto, a janelinha do acorde mostra <b>dois diagramas</b>: <b>Transposto</b> (soa como o c\xE2ntico) e <b>Original</b> (como est\xE1 escrito).</li>
-<li><b>Transporte \u2014 Ativo/Inativo</b> (no mesmo menu) decide qual \xE9 o principal (destacado e o que soa):
+<li><b>Acordes transpostos \u2014 Ativo/Inativo</b> (no mesmo menu) decide qual \xE9 o principal (destacado e o que soa):
 <ul>
 <li><b>Ativo</b>: o transposto, para tocar igual ao c\xE2ntico.</li>
 <li><b>Inativo</b>: o original; no viol\xE3o e no ukulele diz tamb\xE9m <b>\xABCom capotraste na casa N soa como o c\xE2ntico\xBB</b>.</li>
 </ul>
 </li>
-<li>Os sopros usam o acorde segundo o Transporte e indicam o outro.</li>
+<li>Os sopros usam o acorde segundo \xABAcordes transpostos\xBB e indicam o outro.</li>
 </ul>`},texto:{titulo:"Tamanho da letra e mai\xFAsculas",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Ferramentas \u2192 Tamanho da letra</b>:
@@ -339,6 +339,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>N\xE3o vejo as Medita\xE7\xF5es</b>: escreva <b>meditaciones</b> na busca.</li>
 </ul>`},novedades:{titulo:"Novidades",html:`
 <ul>
+<li><b>2.87.1</b> \u2014 \xABTransporte\xBB agora se chama <b>Acordes transpostos</b>; texto do c\xF3digo QR corrigido; os bot\xF5es Ativo/Inativo e Mostrar/Ocultar anunciam seu estado aos leitores de tela.</li>
 <li><b>2.87.0</b> \u2014 Partitura: <b>\u2039 \u203A</b> hino anterior/seguinte e <b>\u{1F50E} busca</b> por n\xFAmero, t\xEDtulo ou letra (tamb\xE9m em outros livros); barra de cima da cor da barra do celular e p\xE1ginas na largura toda no celular. <b>\u{1F4AC} Avisos</b> ao mostrar/ocultar ou ativar/desativar (desligam-se em Ajustes). Ao <b>atualizar o app</b> volta-se ao mesmo c\xE2ntico ou janela. Teleprompter oculto e afinador no viol\xE3o por padr\xE3o. \xABApresenta\xE7\xE3o\xBB e n\xFAmeros das estrofes com melhor contraste em todas as cores.</li>
 <li><b>2.86.0</b> \u2014 \xCDcone da <b>B\xEDblia: \u{1F4D6} livro aberto</b> (Medita\xE7\xF5es \u{1F54A}\uFE0F, Biblioteca \u{1F4DA}). <b>Partitura em tela cheia</b>, com \u{1F3A7} para ouvir a m\xFAsica e \u23EE \u23EF \u23ED \u{1F500}: a partitura acompanha o player. \xABVer partitura\xBB funciona em mais aparelhos (iPhone/iPad e TVs antigos, redes que bloqueavam o visualizador).</li>
 <li><b>2.85.1</b> \u2014 O \u2328\uFE0F teclado na tela tamb\xE9m aparece com o Modo TV ativado no computador (monitor estendido ou projetor) e nas janelas escreve sempre no campo daquela janela.</li>
