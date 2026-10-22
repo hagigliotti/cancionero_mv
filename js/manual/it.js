@@ -24,7 +24,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>Barra delle lettere</b> (abc, #, A, B, C\u2026): apre l'elenco dei canti che iniziano con quella lettera. Le frecce \u25C0 \u25B6 la fanno scorrere. Negli innari compare anche una barra di <b>intervalli di numeri</b> (1-50, 51-100\u2026).</li>
 <li>Scorrendo in basso, la ricerca e la barra delle lettere restano fisse in alto.</li>
 <li><b>Barre verticali</b> di lettere o numeri (elenco dei canti, Autori, Temi, Le mie liste, Blocco musicale e lettore): tocca una lettera o fai scorrere il dito; compare un <b>fumetto colorato</b> con la lettera in grande.</li>
-<li><b>Icone in cima al menu</b>, in quest'ordine: <b>\u{1F3B6} note</b> (chiude il menu), <b>\u{1F3A7} Le mie playlist</b>, <b>\u{1F6D0} Richieste di preghiera</b> e <b>\u{1F4DC} Bibbia, Meditazioni e Anno biblico</b>. Nelle finestre di Bibbia, Meditazioni, Anno biblico, Preghiera e lettore, <b>toccando l'icona in alto a sinistra si apre il menu</b>.</li>
+<li><b>Icone in cima al menu</b>, in quest'ordine: <b>\u{1F3B6} note</b> (chiude il menu), <b>\u{1F3A7} Le mie playlist</b>, <b>\u{1F6D0} Richieste di preghiera</b> e <b>\u{1F4D6} Bibbia, Meditazioni e Anno biblico</b>. Nelle finestre di Bibbia, Meditazioni, Anno biblico, Preghiera e lettore, <b>toccando l'icona in alto a sinistra si apre il menu</b>.</li>
 <li><b>\u2328\uFE0F Tastiera su schermo</b> (solo su computer: monitor esteso, schermo touch o proiettore): il pulsante \u2328\uFE0F accanto alla \u2715 della ricerca e delle finestre con campi di testo apre una tastiera per scrivere senza quella fisica. Si apre anche <b>scorrendo dal bordo inferiore fino a met\xE0 schermo</b>. Ha \xF1, accenti (\xB4 + vocale), maiuscole, simboli (?#), \u21B5 per cercare o inviare e \u2715 (o Esc) per chiuderla. Il <b>layout segue la lingua dell'app</b> (QWERTY, AZERTY in francese, QWERTZ in tedesco, con \xE8 \xF2 \xE0 in italiano, \xF1 in spagnolo, \xE7 \xE3 in portoghese, \u1EBD \u1EF9 in guaran\xED); il tasto <b>\u{1F310}</b> passa a un altro senza cambiare la lingua. Appare anche con la <b>Modalit\xE0 TV</b> attivata sul computer. Non appare su telefoni, tablet o televisori, che hanno gi\xE0 la loro tastiera.</li>
 </ul>`},libros:{titulo:"I libri",html:`
 <p>Il libro si sceglie in <b>\u2630 Menu \u2192 Risorse \u2192 Libro</b>.</p>
@@ -59,7 +59,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>Originale / Altri titoli</b>, <b>Autore</b>, <b>Compositore</b>, <b>Traduttore</b>, <b>Anno</b>. Toccando un nome vedi tutti i suoi canti.</li>
 <li><b>Riferimento biblico</b>: toccalo per leggere il passo nella Bibbia dell'app.</li>
 <li><b>Tonalit\xE0</b>, <b>BPM</b> e <b>Tempo</b>: toccandoli si apre l'accordatore o il metronomo con quel dato.</li>
-<li><b>Ritmo</b>, <b>Spartito</b> (se c'\xE8, si apre dentro l'app; si pu\xF2 <b>ingrandire con due dita</b>, in verticale o in orizzontale, o con doppio tocco; al computer, \u2318/Ctrl + rotella o pizzico sul trackpad), <b>Temi</b> (toccane uno per vedere tutti i canti di quel tema), <b>Revisionato</b>.</li>
+<li><b>Ritmo</b>, <b>Spartito</b> (se c'\xE8, il pulsante <b>\u{1F3BC} Vedi spartito</b> lo apre <b>a schermo intero</b>: ogni pagina entra intera e sugli schermi larghi se ne vedono due affiancate. Si ingrandisce <b>con due dita</b> o doppio tocco; al computer con <b>\u2212 / +</b>, doppio clic o \u2318/Ctrl + rotella. In alto, <b>\u{1F3A7} Ascolta</b> mette il suo brano nel lettore e compaiono <b>\u23EE \u23EF \u23ED \u{1F500}</b>: passando al successivo, al precedente o in casuale <b>cambia anche lo spartito</b>; il \u{1F3A7} della barra apre il lettore. La <b>\u2715</b> lo chiude), <b>Temi</b> (toccane uno per vedere tutti i canti di quel tema), <b>Revisionato</b>.</li>
 <li><b>Audio</b>: link a Spotify, YouTube o Apple Music, e <b>\u{1F3A7} mp3</b> per ascoltarlo nel lettore dell'app. <b>\u{1F5A5}\uFE0F Presentazione</b> apre le diapositive.</li>
 <li><b>Anche in</b>: lo stesso canto in altri libri (per esempio \xABOh, qu\xE9 esperanza\xBB \u2194 Innario 2009 n. 181). In questi canti, dopo il titolo compare la sigla del libro in cui sei ('09, '62, MV, C, IA).</li>
 </ul>
@@ -200,7 +200,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>\u2699\uFE0F Organizza e salva</b>: Esporta / Importa.</li>
 <li>Tutto, foto comprese, resta solo sul tuo dispositivo.</li>
 </ul>`},lectura:{titulo:"Bibbia, Meditazioni e Bibbia in un anno (pulsante \u{1F4D6})",html:`
-<p>In alto nel <b>\u2630 Menu</b>, il pulsante <b>\u{1F4D6}</b> apre un menu con tre opzioni: <b>\u{1F4DC} Sacra Bibbia</b>, <b>\u{1F54A}\uFE0F Meditazioni</b> e <b>\u{1F4C5} Bibbia in un anno</b>. Tutte e tre sono anche in <b>\u2630 Menu \u2192 Risorse \u2192 Biblioteca</b>.</p>
+<p>In alto nel <b>\u2630 Menu</b>, il pulsante <b>\u{1F4D6}</b> apre un menu con tre opzioni: <b>\u{1F4D6} Sacra Bibbia</b>, <b>\u{1F54A}\uFE0F Meditazioni</b> e <b>\u{1F4C5} Bibbia in un anno</b>. Tutte e tre sono anche in <b>\u2630 Menu \u2192 Risorse \u2192 Biblioteca</b>.</p>
 <p>Tutto segue la <b>lingua dell'app</b> (con il guaran\xED si usa lo spagnolo); si pu\xF2 cambiare con la bandiera di ogni schermata senza cambiare la lingua dell'app.</p>`},biblia:{titulo:"Sacra Bibbia",html:`
 <h4>Aprirla</h4>
 <ul>
@@ -275,7 +275,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 </ul>`},biblioteca:{titulo:"Biblioteca",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Risorse \u2192 Biblioteca</b>. Mostra solo ci\xF2 che \xE8 nella <b>lingua dell'app</b> e cambia da sola cambiando la bandiera:</li>
-<li><b>\u{1F4DC} Bibbia</b> (la versione scelta per quella lingua) \xB7 <b>\u{1F4C5} Bibbia in un anno</b> (lettura di oggi e progressi) \xB7 <b>\u{1F4DA} Libri</b> da leggere o scaricare, con diritti e permessi \xB7 <b>\u{1F54A}\uFE0F Meditazioni</b> (ogni libro con i suoi diritti, <b>Leggi quella di oggi</b> e <b>Scarica</b>; compaiono dopo aver scritto \xABmeditaciones\xBB nella ricerca).</li>
+<li><b>\u{1F4D6} Bibbia</b> (la versione scelta per quella lingua) \xB7 <b>\u{1F4C5} Bibbia in un anno</b> (lettura di oggi e progressi) \xB7 <b>\u{1F4DA} Libri</b> da leggere o scaricare, con diritti e permessi \xB7 <b>\u{1F54A}\uFE0F Meditazioni</b> (ogni libro con i suoi diritti, <b>Leggi quella di oggi</b> e <b>Scarica</b>; compaiono dopo aver scritto \xABmeditaciones\xBB nella ricerca).</li>
 <li>La ricerca filtra per titolo o autore in tutte le sezioni.</li>
 </ul>`},info:{titulo:"Informazioni sull'app",html:`
 <ul>
@@ -338,6 +338,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>Non vedo le Meditazioni</b>: scrivi <b>meditaciones</b> nella ricerca.</li>
 </ul>`},novedades:{titulo:"Novit\xE0",html:`
 <ul>
+<li><b>2.86.0</b> \u2014 Icona della <b>Bibbia: \u{1F4D6} libro aperto</b> (Meditazioni \u{1F54A}\uFE0F, Biblioteca \u{1F4DA}). <b>Spartito a schermo intero</b>, con \u{1F3A7} per ascoltarne il brano e \u23EE \u23EF \u23ED \u{1F500}: lo spartito segue il lettore. \xABVedi spartito\xBB funziona su pi\xF9 dispositivi (iPhone/iPad e TV vecchi, reti che bloccavano il visore).</li>
 <li><b>2.85.1</b> \u2014 La \u2328\uFE0F tastiera su schermo appare anche con la Modalit\xE0 TV attivata sul computer (monitor esteso o proiettore) e nelle finestre scrive sempre nel campo di quella finestra.</li>
 <li><b>2.85.0</b> \u2014 La <b>\u2328\uFE0F tastiera su schermo</b> cambia secondo la lingua (spagnolo, inglese, portoghese, italiano, francese AZERTY, tedesco QWERTZ, guaran\xED) e il tasto \u{1F310} passa dall'una all'altra.</li>
 <li><b>2.84.0</b> \u2014 Nuovo ordine delle icone del menu (\u{1F3B6} \u{1F3A7} \u{1F6D0} \u{1F4DC}); l'icona in alto di ogni finestra apre il menu. <b>\u2328\uFE0F Tastiera su schermo</b> per computer con monitor esteso o schermo touch (pulsante accanto alla \u2715 o scorrendo dal basso).</li>

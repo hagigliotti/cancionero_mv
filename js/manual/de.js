@@ -24,7 +24,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>Buchstabenleiste</b> (abc, #, A, B, C\u2026): \xF6ffnet die Liste der Lieder mit diesem Anfangsbuchstaben. Die Pfeile \u25C0 \u25B6 verschieben sie. In Gesangb\xFCchern gibt es zus\xE4tzlich eine Leiste mit <b>Nummernbereichen</b> (1-50, 51-100\u2026).</li>
 <li>Beim Scrollen bleiben Suche und Buchstabenleiste oben fixiert.</li>
 <li><b>Senkrechte Leisten</b> mit Buchstaben oder Zahlen (Liedliste, Autoren, Themen, Meine Listen, Musik-Notizblock und Player): tippe einen Buchstaben an oder fahre mit dem Finger entlang; eine <b>farbige Blase</b> zeigt den Buchstaben gro\xDF.</li>
-<li><b>Symbole oben im Men\xFC</b>, in dieser Reihenfolge: <b>\u{1F3B6} Noten</b> (schlie\xDFt das Men\xFC), <b>\u{1F3A7} Meine Playlists</b>, <b>\u{1F6D0} Gebetsanliegen</b> und <b>\u{1F4DC} Bibel, Andachten und Bibeljahr</b>. In den Fenstern Bibel, Andachten, Bibeljahr, Gebet und Player <b>\xF6ffnet das Symbol oben links das Men\xFC</b>.</li>
+<li><b>Symbole oben im Men\xFC</b>, in dieser Reihenfolge: <b>\u{1F3B6} Noten</b> (schlie\xDFt das Men\xFC), <b>\u{1F3A7} Meine Playlists</b>, <b>\u{1F6D0} Gebetsanliegen</b> und <b>\u{1F4D6} Bibel, Andachten und Bibeljahr</b>. In den Fenstern Bibel, Andachten, Bibeljahr, Gebet und Player <b>\xF6ffnet das Symbol oben links das Men\xFC</b>.</li>
 <li><b>\u2328\uFE0F Bildschirmtastatur</b> (nur am Computer: erweiterter Monitor, Touchscreen oder Beamer): Die Taste \u2328\uFE0F neben dem \u2715 der Suche und der Fenster mit Textfeldern \xF6ffnet eine Tastatur zum Schreiben ohne physische Tastatur. Sie \xF6ffnet sich auch durch <b>Wischen vom unteren Rand bis zur Bildschirmmitte</b>. Sie hat \xF1, Akzente (\xB4 + Vokal), Gro\xDFschreibung, Symbole (?#), \u21B5 zum Suchen oder Senden und \u2715 (oder Esc) zum Schlie\xDFen. Das <b>Layout folgt der App-Sprache</b> (QWERTZ auf Deutsch, AZERTY auf Franz\xF6sisch, QWERTY mit \xF1 auf Spanisch, \xE8 \xF2 \xE0 auf Italienisch, \xE7 \xE3 auf Portugiesisch, \u1EBD \u1EF9 auf Guaran\xED); die Taste <b>\u{1F310}</b> wechselt zu einem anderen, ohne die Sprache zu \xE4ndern. Sie erscheint auch, wenn der <b>TV-Modus</b> am Computer aktiviert ist. Auf Handys, Tablets und Fernsehern erscheint sie nicht, da diese eine eigene Tastatur haben.</li>
 </ul>`},libros:{titulo:"Die B\xFCcher",html:`
 <p>Das Buch w\xE4hlst du unter <b>\u2630 Men\xFC \u2192 Ressourcen \u2192 Buch</b>.</p>
@@ -59,7 +59,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>Original / Weitere Titel</b>, <b>Autor</b>, <b>Komponist</b>, <b>\xDCbersetzer</b>, <b>Jahr</b>. Beim Antippen eines Namens siehst du alle seine Lieder.</li>
 <li><b>Bibelstelle</b>: antippen, um sie in der Bibel der App zu lesen.</li>
 <li><b>Tonart</b>, <b>BPM</b> und <b>Takt</b>: antippen \xF6ffnet Stimmger\xE4t oder Metronom mit diesem Wert.</li>
-<li><b>Rhythmus</b>, <b>Noten</b> (falls vorhanden, \xF6ffnen sie sich in der App; <b>mit zwei Fingern zoomen</b>, hoch- oder querformat, oder per Doppeltipp; am Computer \u2318/Strg + Mausrad oder Trackpad-Geste), <b>Themen</b> (tippe eines an, um alle Lieder dazu zu sehen), <b>Gepr\xFCft</b>.</li>
+<li><b>Rhythmus</b>, <b>Noten</b> (falls vorhanden, \xF6ffnet die Taste <b>\u{1F3BC} Noten ansehen</b> sie <b>im Vollbild</b>: jede Seite passt ganz hinein, auf breiten Bildschirmen stehen zwei nebeneinander. Zoomen <b>mit zwei Fingern</b> oder Doppeltipp; am Computer mit <b>\u2212 / +</b>, Doppelklick oder \u2318/Strg + Mausrad. Oben spielt <b>\u{1F3A7} Anh\xF6ren</b> das Lied im Player ab und zeigt <b>\u23EE \u23EF \u23ED \u{1F500}</b>: beim n\xE4chsten, vorherigen oder zuf\xE4lligen Lied <b>wechseln auch die Noten</b>; das \u{1F3A7} dieser Leiste \xF6ffnet den Player. Das <b>\u2715</b> schlie\xDFt sie), <b>Themen</b> (tippe eines an, um alle Lieder dazu zu sehen), <b>Gepr\xFCft</b>.</li>
 <li><b>Audio</b>: Links zu Spotify, YouTube oder Apple Music und <b>\u{1F3A7} mp3</b> zum H\xF6ren im Player der App. <b>\u{1F5A5}\uFE0F Pr\xE4sentation</b> \xF6ffnet die Folien.</li>
 <li><b>Auch in</b>: dasselbe Lied in anderen B\xFCchern. Bei diesen Liedern steht nach dem Titel die Kennung des Buches, in dem du bist ('09, '62, MV, C, IA).</li>
 </ul>
@@ -200,7 +200,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>\u2699\uFE0F Ordnen und sichern</b>: Exportieren / Importieren.</li>
 <li>Alles, auch die Fotos, bleibt nur auf deinem Ger\xE4t.</li>
 </ul>`},lectura:{titulo:"Bibel, Andachten und Bibel in einem Jahr (Taste \u{1F4D6})",html:`
-<p>Oben im <b>\u2630 Men\xFC</b> \xF6ffnet die Taste <b>\u{1F4D6}</b> ein Men\xFC mit drei Optionen: <b>\u{1F4DC} Heilige Schrift</b>, <b>\u{1F54A}\uFE0F Andachten</b> und <b>\u{1F4C5} Bibel in einem Jahr</b>. Alle drei gibt es auch unter <b>\u2630 Men\xFC \u2192 Ressourcen \u2192 Bibliothek</b>.</p>
+<p>Oben im <b>\u2630 Men\xFC</b> \xF6ffnet die Taste <b>\u{1F4D6}</b> ein Men\xFC mit drei Optionen: <b>\u{1F4D6} Heilige Schrift</b>, <b>\u{1F54A}\uFE0F Andachten</b> und <b>\u{1F4C5} Bibel in einem Jahr</b>. Alle drei gibt es auch unter <b>\u2630 Men\xFC \u2192 Ressourcen \u2192 Bibliothek</b>.</p>
 <p>Alles folgt der <b>Sprache der App</b> (bei Guaran\xED wird Spanisch verwendet); mit der Flagge jeder Ansicht kannst du sie \xE4ndern, ohne die Sprache der App zu wechseln.</p>`},biblia:{titulo:"Heilige Schrift",html:`
 <h4>\xD6ffnen</h4>
 <ul>
@@ -275,7 +275,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 </ul>`},biblioteca:{titulo:"Bibliothek",html:`
 <ul>
 <li><b>\u2630 Men\xFC \u2192 Ressourcen \u2192 Bibliothek</b>. Sie zeigt nur, was in der <b>Sprache der App</b> ist, und \xE4ndert sich beim Wechsel der Flagge von selbst:</li>
-<li><b>\u{1F4DC} Bibel</b> (die f\xFCr diese Sprache gew\xE4hlte \xDCbersetzung) \xB7 <b>\u{1F4C5} Bibel in einem Jahr</b> (heutige Lesung und Fortschritt) \xB7 <b>\u{1F4DA} B\xFCcher</b> zum Lesen oder Herunterladen, mit Rechten und Genehmigungen \xB7 <b>\u{1F54A}\uFE0F Andachten</b> (jedes Buch mit seinen Rechten, <b>Heutige lesen</b> und <b>Herunterladen</b>; sie erscheinen, nachdem \xABmeditaciones\xBB in die Suche geschrieben wurde).</li>
+<li><b>\u{1F4D6} Bibel</b> (die f\xFCr diese Sprache gew\xE4hlte \xDCbersetzung) \xB7 <b>\u{1F4C5} Bibel in einem Jahr</b> (heutige Lesung und Fortschritt) \xB7 <b>\u{1F4DA} B\xFCcher</b> zum Lesen oder Herunterladen, mit Rechten und Genehmigungen \xB7 <b>\u{1F54A}\uFE0F Andachten</b> (jedes Buch mit seinen Rechten, <b>Heutige lesen</b> und <b>Herunterladen</b>; sie erscheinen, nachdem \xABmeditaciones\xBB in die Suche geschrieben wurde).</li>
 <li>Die Suche filtert in allen Bereichen nach Titel oder Autor.</li>
 </ul>`},info:{titulo:"App-Informationen",html:`
 <ul>
@@ -338,6 +338,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>Ich sehe die Andachten nicht</b>: schreibe <b>meditaciones</b> in die Suche.</li>
 </ul>`},novedades:{titulo:"Neuigkeiten",html:`
 <ul>
+<li><b>2.86.0</b> \u2014 Symbol der <b>Bibel: \u{1F4D6} offenes Buch</b> (Andachten \u{1F54A}\uFE0F, Bibliothek \u{1F4DA}). <b>Noten im Vollbild</b>, mit \u{1F3A7} zum Anh\xF6ren und \u23EE \u23EF \u23ED \u{1F500}: die Noten folgen dem Player. \xABNoten ansehen\xBB funktioniert auf mehr Ger\xE4ten (\xE4ltere iPhone/iPad und Fernseher, Netzwerke, die den Viewer blockierten).</li>
 <li><b>2.85.1</b> \u2014 Die \u2328\uFE0F Bildschirmtastatur erscheint auch mit aktiviertem TV-Modus am Computer (erweiterter Monitor oder Beamer) und schreibt in Fenstern immer in das Feld dieses Fensters.</li>
 <li><b>2.85.0</b> \u2014 Die <b>\u2328\uFE0F Bildschirmtastatur</b> passt sich der Sprache an (Spanisch, Englisch, Portugiesisch, Italienisch, Franz\xF6sisch AZERTY, Deutsch QWERTZ, Guaran\xED); die Taste \u{1F310} wechselt zwischen ihnen.</li>
 <li><b>2.84.0</b> \u2014 Neue Reihenfolge der Men\xFCsymbole (\u{1F3B6} \u{1F3A7} \u{1F6D0} \u{1F4DC}); das obere Symbol jedes Fensters \xF6ffnet das Men\xFC. <b>\u2328\uFE0F Bildschirmtastatur</b> f\xFCr Computer mit erweitertem Monitor oder Touchscreen (Taste neben dem \u2715 oder vom unteren Rand wischen).</li>

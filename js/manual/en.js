@@ -24,7 +24,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>Letter bar</b> (abc, #, A, B, C\u2026): opens the list of songs starting with that letter. The \u25C0 \u25B6 arrows scroll it. Hymnals also show a bar of <b>number ranges</b> (1-50, 51-100\u2026).</li>
 <li>When you scroll down, the search box and the letter bar stay fixed at the top.</li>
 <li><b>Vertical bars</b> of letters or numbers (song list, Authors, Topics, My Lists, Music notepad and the player): tap a letter or slide your finger along the bar; a <b>colored bubble</b> shows the letter in large size.</li>
-<li><b>Icons at the top of the menu</b>, in this order: <b>\u{1F3B6} notes</b> (closes the menu), <b>\u{1F3A7} My Playlists</b>, <b>\u{1F6D0} Prayer requests</b> and <b>\u{1F4DC} Bible, Devotionals and Bible in a Year</b>. In the Bible, Devotionals, Bible in a Year, Prayer and player windows, <b>tapping the top-left icon opens the menu</b>.</li>
+<li><b>Icons at the top of the menu</b>, in this order: <b>\u{1F3B6} notes</b> (closes the menu), <b>\u{1F3A7} My Playlists</b>, <b>\u{1F6D0} Prayer requests</b> and <b>\u{1F4D6} Bible, Devotionals and Bible in a Year</b>. In the Bible, Devotionals, Bible in a Year, Prayer and player windows, <b>tapping the top-left icon opens the menu</b>.</li>
 <li><b>\u2328\uFE0F On-screen keyboard</b> (computers only: extended monitor, touch screen or projector): the \u2328\uFE0F button next to the \u2715 of the search box and of windows with text fields opens a keyboard to type without the physical one. It also opens by <b>swiping up from the bottom edge to the middle of the screen</b>. It has \xF1, accents (\xB4 + vowel), shift, symbols (?#), \u21B5 to search or send and \u2715 (or Esc) to close it. The <b>layout follows the app language</b> (QWERTY, AZERTY for French, QWERTZ for German, with \xF1 in Spanish, \xE8 \xF2 \xE0 in Italian, \xE7 \xE3 in Portuguese, \u1EBD \u1EF9 in Guarani); the <b>\u{1F310}</b> key switches to another one without changing the app language. It also appears with <b>TV mode</b> turned on on a computer. It doesn't appear on phones, tablets or TV sets, which have their own keyboard.</li>
 </ul>`},libros:{titulo:"The books",html:`
 <p>Choose the book in <b>\u2630 Menu \u2192 Resources \u2192 Book</b>.</p>
@@ -59,7 +59,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>Original / Other titles</b>, <b>Author</b>, <b>Composer</b>, <b>Translator</b>, <b>Year</b>. Tap a name to see all their songs.</li>
 <li><b>Bible reference</b>: tap it to read the passage in the app's Bible.</li>
 <li><b>Key</b>, <b>BPM</b> and <b>Time signature</b>: tap them to open the tuner or the metronome with that value.</li>
-<li><b>Rhythm</b>, <b>Sheet music</b> (if available, it opens inside the app; you can <b>zoom with two fingers</b>, in portrait or landscape, or with a double tap; on a computer, \u2318/Ctrl + wheel or trackpad pinch), <b>Topics</b> (tap one to see all songs on that topic), <b>Reviewed</b>.</li>
+<li><b>Rhythm</b>, <b>Sheet music</b> (if available, the <b>\u{1F3BC} View sheet music</b> button opens it <b>full screen</b>: each page fits whole and wide screens show two side by side. Zoom <b>with two fingers</b> or a double tap; on a computer with <b>\u2212 / +</b>, double click or \u2318/Ctrl + wheel. At the top, <b>\u{1F3A7} Listen</b> plays its song in the player and shows <b>\u23EE \u23EF \u23ED \u{1F500}</b>: going to the next, previous or a shuffled song <b>also changes the sheet music</b>; the \u{1F3A7} in that bar opens the player. The <b>\u2715</b> closes it), <b>Topics</b> (tap one to see all songs on that topic), <b>Reviewed</b>.</li>
 <li><b>Audio</b>: links to Spotify, YouTube or Apple Music, and <b>\u{1F3A7} mp3</b> to listen in the app's player. <b>\u{1F5A5}\uFE0F Slides</b> opens the presentation.</li>
 <li><b>Also in</b>: the same song in other books (for example \xABOh, qu\xE9 esperanza\xBB \u2194 2009 Hymnal no. 181). In those songs, the mark of the book you are in appears after the title ('09, '62, MV, C, IA).</li>
 </ul>
@@ -200,7 +200,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>\u2699\uFE0F Organize and back up</b>: Export / Import.</li>
 <li>Everything, photos included, stays only on your device.</li>
 </ul>`},lectura:{titulo:"Bible, Devotionals and Bible in a Year (\u{1F4D6} button)",html:`
-<p>At the top of the <b>\u2630 Menu</b>, the <b>\u{1F4D6}</b> button opens a menu with three options: <b>\u{1F4DC} Holy Bible</b>, <b>\u{1F54A}\uFE0F Devotionals</b> and <b>\u{1F4C5} Bible in a Year</b>. All three are also in <b>\u2630 Menu \u2192 Resources \u2192 Library</b>.</p>
+<p>At the top of the <b>\u2630 Menu</b>, the <b>\u{1F4D6}</b> button opens a menu with three options: <b>\u{1F4D6} Holy Bible</b>, <b>\u{1F54A}\uFE0F Devotionals</b> and <b>\u{1F4C5} Bible in a Year</b>. All three are also in <b>\u2630 Menu \u2192 Resources \u2192 Library</b>.</p>
 <p>Everything follows the <b>app language</b> (Guarani uses Spanish); you can change it with the flag on each screen without changing the app language.</p>`},biblia:{titulo:"Holy Bible",html:`
 <h4>Opening it</h4>
 <ul>
@@ -275,7 +275,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 </ul>`},biblioteca:{titulo:"Library",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Resources \u2192 Library</b>. It shows only what is in the <b>app language</b> and changes when you change the flag:</li>
-<li><b>\u{1F4DC} Bible</b> (the version chosen for that language) \xB7 <b>\u{1F4C5} Bible in a Year</b> (today's reading and progress) \xB7 <b>\u{1F4DA} Books</b> to read or download, with their rights and permissions \xB7 <b>\u{1F54A}\uFE0F Devotionals</b> (each book with its rights, <b>Read today's</b> and <b>Download</b>; they appear after typing \xABmeditaciones\xBB in the search box).</li>
+<li><b>\u{1F4D6} Bible</b> (the version chosen for that language) \xB7 <b>\u{1F4C5} Bible in a Year</b> (today's reading and progress) \xB7 <b>\u{1F4DA} Books</b> to read or download, with their rights and permissions \xB7 <b>\u{1F54A}\uFE0F Devotionals</b> (each book with its rights, <b>Read today's</b> and <b>Download</b>; they appear after typing \xABmeditaciones\xBB in the search box).</li>
 <li>The search box filters by title or author in every section.</li>
 </ul>`},info:{titulo:"App information",html:`
 <ul>
@@ -338,6 +338,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>I don't see Devotionals</b>: type <b>meditaciones</b> in the search box.</li>
 </ul>`},novedades:{titulo:"What's new",html:`
 <ul>
+<li><b>2.86.0</b> \u2014 <b>Bible</b> icon: <b>\u{1F4D6} open book</b> (Devotionals \u{1F54A}\uFE0F, Library \u{1F4DA}). <b>Full-screen sheet music</b>, with \u{1F3A7} to listen to its song and \u23EE \u23EF \u23ED \u{1F500}: the sheet music follows the player. \xABView sheet music\xBB works on more devices (older iPhone/iPad and TVs, networks that blocked the viewer).</li>
 <li><b>2.85.1</b> \u2014 The \u2328\uFE0F on-screen keyboard also appears with TV mode turned on on a computer (extended monitor or projector), and in windows it always types in that window's field.</li>
 <li><b>2.85.0</b> \u2014 The <b>\u2328\uFE0F on-screen keyboard</b> changes with the language (Spanish, English, Portuguese, Italian, French AZERTY, German QWERTZ, Guarani) and the \u{1F310} key switches between them.</li>
 <li><b>2.84.0</b> \u2014 New order of the menu icons (\u{1F3B6} \u{1F3A7} \u{1F6D0} \u{1F4DC}); the top icon of each window opens the menu. <b>\u2328\uFE0F On-screen keyboard</b> for computers with an extended monitor or touch screen (button next to the \u2715 or swipe up from the bottom).</li>

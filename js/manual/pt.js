@@ -24,7 +24,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>Barra de letras</b> (abc, #, A, B, C\u2026): abre a lista de c\xE2nticos que come\xE7am com essa letra. As setas \u25C0 \u25B6 a deslizam. Nos hin\xE1rios aparece tamb\xE9m uma barra de <b>faixas de n\xFAmeros</b> (1-50, 51-100\u2026).</li>
 <li>Ao rolar, a busca e a barra de letras ficam fixas em cima.</li>
 <li><b>Barras verticais</b> de letras ou n\xFAmeros (lista de c\xE2nticos, Autores, Temas, Minhas Listas, Bloco musical e player): toque uma letra ou deslize o dedo pela barra; aparece um <b>bal\xE3o colorido</b> com a letra em tamanho grande.</li>
-<li><b>\xCDcones no topo do menu</b>, nesta ordem: <b>\u{1F3B6} notas</b> (fecha o menu), <b>\u{1F3A7} Minhas Playlists</b>, <b>\u{1F6D0} Pedidos de ora\xE7\xE3o</b> e <b>\u{1F4DC} B\xEDblia, Medita\xE7\xF5es e Ano b\xEDblico</b>. Nas janelas da B\xEDblia, Medita\xE7\xF5es, Ano b\xEDblico, Ora\xE7\xE3o e player, <b>tocar no \xEDcone do canto superior esquerdo abre o menu</b>.</li>
+<li><b>\xCDcones no topo do menu</b>, nesta ordem: <b>\u{1F3B6} notas</b> (fecha o menu), <b>\u{1F3A7} Minhas Playlists</b>, <b>\u{1F6D0} Pedidos de ora\xE7\xE3o</b> e <b>\u{1F4D6} B\xEDblia, Medita\xE7\xF5es e Ano b\xEDblico</b>. Nas janelas da B\xEDblia, Medita\xE7\xF5es, Ano b\xEDblico, Ora\xE7\xE3o e player, <b>tocar no \xEDcone do canto superior esquerdo abre o menu</b>.</li>
 <li><b>\u2328\uFE0F Teclado na tela</b> (s\xF3 no computador: monitor estendido, tela sens\xEDvel ao toque ou projetor): o bot\xE3o \u2328\uFE0F ao lado do \u2715 da busca e das janelas com campos de texto abre um teclado para digitar sem o teclado f\xEDsico. Tamb\xE9m abre <b>deslizando da borda de baixo at\xE9 o meio da tela</b>. Tem \xF1, acentos (\xB4 + vogal), mai\xFAscula, s\xEDmbolos (?#), \u21B5 para buscar ou enviar e \u2715 (ou Esc) para fechar. O <b>layout segue o idioma do app</b> (QWERTY, AZERTY em franc\xEAs, QWERTZ em alem\xE3o, com \xE7 \xE3 em portugu\xEAs, \xF1 em espanhol, \xE8 \xF2 \xE0 em italiano, \u1EBD \u1EF9 em guarani); a tecla <b>\u{1F310}</b> passa para outro sem mudar o idioma. Tamb\xE9m aparece com o <b>Modo TV</b> ativado no computador. N\xE3o aparece em celulares, tablets nem televisores, que j\xE1 t\xEAm seu pr\xF3prio teclado.</li>
 </ul>`},libros:{titulo:"Os livros",html:`
 <p>O livro se escolhe em <b>\u2630 Menu \u2192 Recursos \u2192 Livro</b>.</p>
@@ -59,7 +59,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>Original / Outros t\xEDtulos</b>, <b>Autor</b>, <b>Compositor</b>, <b>Tradutor</b>, <b>Ano</b>. Tocando um nome voc\xEA v\xEA todos os seus c\xE2nticos.</li>
 <li><b>Refer\xEAncia b\xEDblica</b>: toque para ler a passagem na B\xEDblia do app.</li>
 <li><b>Tom</b>, <b>BPM</b> e <b>Compasso</b>: tocando neles abre o afinador ou o metr\xF4nomo com esse dado.</li>
-<li><b>Ritmo</b>, <b>Partitura</b> (se existir, abre dentro do app; d\xE1 para <b>ampliar com dois dedos</b>, na vertical ou na horizontal, ou com toque duplo; no computador, \u2318/Ctrl + roda ou pin\xE7a no trackpad), <b>Temas</b> (toque um para ver todos os c\xE2nticos desse tema), <b>Revisado</b>.</li>
+<li><b>Ritmo</b>, <b>Partitura</b> (se existir, o bot\xE3o <b>\u{1F3BC} Ver partitura</b> a abre <b>em tela cheia</b>: cada p\xE1gina cabe inteira e em telas largas aparecem duas lado a lado. Amplia-se <b>com dois dedos</b> ou toque duplo; no computador com <b>\u2212 / +</b>, clique duplo ou \u2318/Ctrl + roda. No alto, <b>\u{1F3A7} Ouvir</b> p\xF5e a m\xFAsica no player e aparecem <b>\u23EE \u23EF \u23ED \u{1F500}</b>: ao passar para a pr\xF3xima, a anterior ou no aleat\xF3rio <b>a partitura tamb\xE9m muda</b>; o \u{1F3A7} dessa barra abre o player. O <b>\u2715</b> fecha), <b>Temas</b> (toque um para ver todos os c\xE2nticos desse tema), <b>Revisado</b>.</li>
 <li><b>\xC1udio</b>: links para Spotify, YouTube ou Apple Music, e <b>\u{1F3A7} mp3</b> para ouvir no player do app. <b>\u{1F5A5}\uFE0F Apresenta\xE7\xE3o</b> abre os slides.</li>
 <li><b>Tamb\xE9m em</b>: o mesmo c\xE2ntico em outros livros (por exemplo \xABOh, qu\xE9 esperanza\xBB \u2194 Hin\xE1rio 2009 n.\xBA 181). Nesses c\xE2nticos, depois do t\xEDtulo aparece a marca do livro onde voc\xEA est\xE1 ('09, '62, MV, C, IA).</li>
 </ul>
@@ -200,7 +200,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>\u2699\uFE0F Organizar e fazer backup</b>: Exportar / Importar.</li>
 <li>Tudo, inclusive as fotos, fica s\xF3 no seu dispositivo.</li>
 </ul>`},lectura:{titulo:"B\xEDblia, Medita\xE7\xF5es e Ano b\xEDblico (bot\xE3o \u{1F4D6})",html:`
-<p>Em cima do <b>\u2630 Menu</b>, o bot\xE3o <b>\u{1F4D6}</b> abre um menu com tr\xEAs op\xE7\xF5es: <b>\u{1F4DC} B\xEDblia Sagrada</b>, <b>\u{1F54A}\uFE0F Medita\xE7\xF5es</b> e <b>\u{1F4C5} Ano b\xEDblico</b>. As tr\xEAs tamb\xE9m est\xE3o em <b>\u2630 Menu \u2192 Recursos \u2192 Biblioteca</b>.</p>
+<p>Em cima do <b>\u2630 Menu</b>, o bot\xE3o <b>\u{1F4D6}</b> abre um menu com tr\xEAs op\xE7\xF5es: <b>\u{1F4D6} B\xEDblia Sagrada</b>, <b>\u{1F54A}\uFE0F Medita\xE7\xF5es</b> e <b>\u{1F4C5} Ano b\xEDblico</b>. As tr\xEAs tamb\xE9m est\xE3o em <b>\u2630 Menu \u2192 Recursos \u2192 Biblioteca</b>.</p>
 <p>Tudo segue o <b>idioma do app</b> (com guarani usa-se o espanhol); d\xE1 para mudar com a bandeira de cada tela sem mudar o idioma do app.</p>`},biblia:{titulo:"B\xEDblia Sagrada",html:`
 <h4>Abrir</h4>
 <ul>
@@ -275,7 +275,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 </ul>`},biblioteca:{titulo:"Biblioteca",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Recursos \u2192 Biblioteca</b>. Mostra s\xF3 o que est\xE1 no <b>idioma do app</b> e muda sozinha ao trocar a bandeira:</li>
-<li><b>\u{1F4DC} B\xEDblia</b> (a vers\xE3o escolhida para esse idioma) \xB7 <b>\u{1F4C5} Ano b\xEDblico</b> (leitura de hoje e progresso) \xB7 <b>\u{1F4DA} Livros</b> para ler ou baixar, com direitos e permiss\xF5es \xB7 <b>\u{1F54A}\uFE0F Medita\xE7\xF5es</b> (cada livro com seus direitos, <b>Ler a de hoje</b> e <b>Baixar</b>; aparecem depois de escrever \xABmeditaciones\xBB na busca).</li>
+<li><b>\u{1F4D6} B\xEDblia</b> (a vers\xE3o escolhida para esse idioma) \xB7 <b>\u{1F4C5} Ano b\xEDblico</b> (leitura de hoje e progresso) \xB7 <b>\u{1F4DA} Livros</b> para ler ou baixar, com direitos e permiss\xF5es \xB7 <b>\u{1F54A}\uFE0F Medita\xE7\xF5es</b> (cada livro com seus direitos, <b>Ler a de hoje</b> e <b>Baixar</b>; aparecem depois de escrever \xABmeditaciones\xBB na busca).</li>
 <li>A busca filtra por t\xEDtulo ou autor em todas as se\xE7\xF5es.</li>
 </ul>`},info:{titulo:"Informa\xE7\xF5es do app",html:`
 <ul>
@@ -338,6 +338,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>N\xE3o vejo as Medita\xE7\xF5es</b>: escreva <b>meditaciones</b> na busca.</li>
 </ul>`},novedades:{titulo:"Novidades",html:`
 <ul>
+<li><b>2.86.0</b> \u2014 \xCDcone da <b>B\xEDblia: \u{1F4D6} livro aberto</b> (Medita\xE7\xF5es \u{1F54A}\uFE0F, Biblioteca \u{1F4DA}). <b>Partitura em tela cheia</b>, com \u{1F3A7} para ouvir a m\xFAsica e \u23EE \u23EF \u23ED \u{1F500}: a partitura acompanha o player. \xABVer partitura\xBB funciona em mais aparelhos (iPhone/iPad e TVs antigos, redes que bloqueavam o visualizador).</li>
 <li><b>2.85.1</b> \u2014 O \u2328\uFE0F teclado na tela tamb\xE9m aparece com o Modo TV ativado no computador (monitor estendido ou projetor) e nas janelas escreve sempre no campo daquela janela.</li>
 <li><b>2.85.0</b> \u2014 O <b>\u2328\uFE0F teclado na tela</b> muda conforme o idioma (espanhol, ingl\xEAs, portugu\xEAs, italiano, franc\xEAs AZERTY, alem\xE3o QWERTZ, guarani) e a tecla \u{1F310} passa de um para outro.</li>
 <li><b>2.84.0</b> \u2014 Nova ordem dos \xEDcones do menu (\u{1F3B6} \u{1F3A7} \u{1F6D0} \u{1F4DC}); o \xEDcone no topo de cada janela abre o menu. <b>\u2328\uFE0F Teclado na tela</b> para computadores com monitor estendido ou tela sens\xEDvel ao toque (bot\xE3o ao lado do \u2715 ou deslizando de baixo).</li>

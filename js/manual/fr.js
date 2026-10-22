@@ -24,7 +24,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>Barre des lettres</b> (abc, #, A, B, C\u2026) : ouvre la liste des chants qui commencent par cette lettre. Les fl\xE8ches \u25C0 \u25B6 la font d\xE9filer. Dans les recueils de cantiques appara\xEEt aussi une barre de <b>tranches de num\xE9ros</b> (1-50, 51-100\u2026).</li>
 <li>En faisant d\xE9filer, la recherche et la barre des lettres restent fix\xE9es en haut.</li>
 <li><b>Barres verticales</b> de lettres ou de num\xE9ros (liste des chants, Auteurs, Th\xE8mes, Mes listes, Bloc musical et lecteur) : touchez une lettre ou glissez le doigt ; une <b>bulle color\xE9e</b> affiche la lettre en grand.</li>
-<li><b>Ic\xF4nes en haut du menu</b>, dans cet ordre : <b>\u{1F3B6} notes</b> (ferme le menu), <b>\u{1F3A7} Mes playlists</b>, <b>\u{1F6D0} Demandes de pri\xE8re</b> et <b>\u{1F4DC} Bible, M\xE9ditations et Ann\xE9e biblique</b>. Dans les fen\xEAtres Bible, M\xE9ditations, Ann\xE9e biblique, Pri\xE8re et lecteur, <b>toucher l'ic\xF4ne en haut \xE0 gauche ouvre le menu</b>.</li>
+<li><b>Ic\xF4nes en haut du menu</b>, dans cet ordre : <b>\u{1F3B6} notes</b> (ferme le menu), <b>\u{1F3A7} Mes playlists</b>, <b>\u{1F6D0} Demandes de pri\xE8re</b> et <b>\u{1F4D6} Bible, M\xE9ditations et Ann\xE9e biblique</b>. Dans les fen\xEAtres Bible, M\xE9ditations, Ann\xE9e biblique, Pri\xE8re et lecteur, <b>toucher l'ic\xF4ne en haut \xE0 gauche ouvre le menu</b>.</li>
 <li><b>\u2328\uFE0F Clavier \xE0 l'\xE9cran</b> (ordinateur uniquement : \xE9cran \xE9tendu, \xE9cran tactile ou projecteur) : le bouton \u2328\uFE0F \xE0 c\xF4t\xE9 du \u2715 de la recherche et des fen\xEAtres avec des champs de texte ouvre un clavier pour \xE9crire sans le clavier physique. Il s'ouvre aussi en <b>glissant depuis le bord inf\xE9rieur jusqu'au milieu de l'\xE9cran</b>. Il a \xF1, accents (\xB4 + voyelle), majuscule, symboles (?#), \u21B5 pour chercher ou envoyer et \u2715 (ou \xC9chap) pour le fermer. La <b>disposition suit la langue de l'app</b> (AZERTY en fran\xE7ais, QWERTZ en allemand, QWERTY avec \xF1 en espagnol, \xE8 \xF2 \xE0 en italien, \xE7 \xE3 en portugais, \u1EBD \u1EF9 en guarani) ; la touche <b>\u{1F310}</b> passe \xE0 une autre sans changer la langue. Il appara\xEEt aussi avec le <b>mode TV</b> activ\xE9 sur l'ordinateur. Il n'appara\xEEt pas sur t\xE9l\xE9phone, tablette ou t\xE9l\xE9viseur, qui ont d\xE9j\xE0 leur propre clavier.</li>
 </ul>`},libros:{titulo:"Les livres",html:`
 <p>Le livre se choisit dans <b>\u2630 Menu \u2192 Ressources \u2192 Livre</b>.</p>
@@ -59,7 +59,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>Original / Autres titres</b>, <b>Auteur</b>, <b>Compositeur</b>, <b>Traducteur</b>, <b>Ann\xE9e</b>. En touchant un nom, vous voyez tous ses chants.</li>
 <li><b>R\xE9f\xE9rence biblique</b> : touchez-la pour lire le passage dans la Bible de l'application.</li>
 <li><b>Tonalit\xE9</b>, <b>BPM</b> et <b>Mesure</b> : en les touchant s'ouvre l'accordeur ou le m\xE9tronome avec cette valeur.</li>
-<li><b>Rythme</b>, <b>Partition</b> (si elle existe, elle s'ouvre dans l'application ; on peut <b>zoomer \xE0 deux doigts</b>, en portrait ou en paysage, ou par double toucher ; sur ordinateur, \u2318/Ctrl + molette ou pincement sur le pav\xE9 tactile), <b>Th\xE8mes</b> (touchez-en un pour voir tous les chants de ce th\xE8me), <b>R\xE9vis\xE9</b>.</li>
+<li><b>Rythme</b>, <b>Partition</b> (si elle existe, le bouton <b>\u{1F3BC} Voir la partition</b> l'ouvre <b>en plein \xE9cran</b> : chaque page tient enti\xE8re et sur les \xE9crans larges on en voit deux c\xF4te \xE0 c\xF4te. On zoome <b>\xE0 deux doigts</b> ou par double toucher ; sur ordinateur avec <b>\u2212 / +</b>, double clic ou \u2318/Ctrl + molette. En haut, <b>\u{1F3A7} \xC9couter</b> lance le chant dans le lecteur et affiche <b>\u23EE \u23EF \u23ED \u{1F500}</b> : en passant au suivant, au pr\xE9c\xE9dent ou en al\xE9atoire <b>la partition change aussi</b> ; le \u{1F3A7} de cette barre ouvre le lecteur. Le <b>\u2715</b> la ferme), <b>Th\xE8mes</b> (touchez-en un pour voir tous les chants de ce th\xE8me), <b>R\xE9vis\xE9</b>.</li>
 <li><b>Audio</b> : liens vers Spotify, YouTube ou Apple Music, et <b>\u{1F3A7} mp3</b> pour l'\xE9couter dans le lecteur de l'application. <b>\u{1F5A5}\uFE0F Pr\xE9sentation</b> ouvre les diapositives.</li>
 <li><b>Aussi dans</b> : le m\xEAme chant dans d'autres livres. Dans ces chants, apr\xE8s le titre appara\xEEt la marque du livre o\xF9 vous \xEAtes ('09, '62, MV, C, IA).</li>
 </ul>
@@ -200,7 +200,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>\u2699\uFE0F Organiser et sauvegarder</b> : Exporter / Importer.</li>
 <li>Tout, photos comprises, reste uniquement sur votre appareil.</li>
 </ul>`},lectura:{titulo:"Bible, M\xE9ditations et La Bible en un an (bouton \u{1F4D6})",html:`
-<p>En haut du <b>\u2630 Menu</b>, le bouton <b>\u{1F4D6}</b> ouvre un menu avec trois options : <b>\u{1F4DC} Sainte Bible</b>, <b>\u{1F54A}\uFE0F M\xE9ditations</b> et <b>\u{1F4C5} La Bible en un an</b>. Les trois sont aussi dans <b>\u2630 Menu \u2192 Ressources \u2192 Biblioth\xE8que</b>.</p>
+<p>En haut du <b>\u2630 Menu</b>, le bouton <b>\u{1F4D6}</b> ouvre un menu avec trois options : <b>\u{1F4D6} Sainte Bible</b>, <b>\u{1F54A}\uFE0F M\xE9ditations</b> et <b>\u{1F4C5} La Bible en un an</b>. Les trois sont aussi dans <b>\u2630 Menu \u2192 Ressources \u2192 Biblioth\xE8que</b>.</p>
 <p>Tout suit la <b>langue de l'application</b> (avec le guarani on utilise l'espagnol) ; on peut la changer avec le drapeau de chaque \xE9cran sans changer la langue de l'application.</p>`},biblia:{titulo:"Sainte Bible",html:`
 <h4>L'ouvrir</h4>
 <ul>
@@ -275,7 +275,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 </ul>`},biblioteca:{titulo:"Biblioth\xE8que",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Ressources \u2192 Biblioth\xE8que</b>. Elle montre seulement ce qui est dans la <b>langue de l'application</b> et change toute seule en changeant de drapeau :</li>
-<li><b>\u{1F4DC} Bible</b> (la version choisie pour cette langue) \xB7 <b>\u{1F4C5} La Bible en un an</b> (lecture du jour et progression) \xB7 <b>\u{1F4DA} Livres</b> \xE0 lire ou t\xE9l\xE9charger, avec leurs droits et autorisations \xB7 <b>\u{1F54A}\uFE0F M\xE9ditations</b> (chaque livre avec ses droits, <b>Lire celle du jour</b> et <b>T\xE9l\xE9charger</b> ; elles apparaissent apr\xE8s avoir \xE9crit \xABmeditaciones\xBB dans la recherche).</li>
+<li><b>\u{1F4D6} Bible</b> (la version choisie pour cette langue) \xB7 <b>\u{1F4C5} La Bible en un an</b> (lecture du jour et progression) \xB7 <b>\u{1F4DA} Livres</b> \xE0 lire ou t\xE9l\xE9charger, avec leurs droits et autorisations \xB7 <b>\u{1F54A}\uFE0F M\xE9ditations</b> (chaque livre avec ses droits, <b>Lire celle du jour</b> et <b>T\xE9l\xE9charger</b> ; elles apparaissent apr\xE8s avoir \xE9crit \xABmeditaciones\xBB dans la recherche).</li>
 <li>La recherche filtre par titre ou auteur dans toutes les sections.</li>
 </ul>`},info:{titulo:"Informations sur l'application",html:`
 <ul>
@@ -338,6 +338,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>Je ne vois pas les M\xE9ditations</b> : \xE9crivez <b>meditaciones</b> dans la recherche.</li>
 </ul>`},novedades:{titulo:"Nouveaut\xE9s",html:`
 <ul>
+<li><b>2.86.0</b> \u2014 Ic\xF4ne de la <b>Bible : \u{1F4D6} livre ouvert</b> (M\xE9ditations \u{1F54A}\uFE0F, Biblioth\xE8que \u{1F4DA}). <b>Partition en plein \xE9cran</b>, avec \u{1F3A7} pour \xE9couter le chant et \u23EE \u23EF \u23ED \u{1F500} : la partition suit le lecteur. \xAB Voir la partition \xBB fonctionne sur plus d'appareils (anciens iPhone/iPad et TV, r\xE9seaux qui bloquaient la visionneuse).</li>
 <li><b>2.85.1</b> \u2014 Le \u2328\uFE0F clavier \xE0 l'\xE9cran appara\xEEt aussi avec le mode TV activ\xE9 sur l'ordinateur (\xE9cran \xE9tendu ou projecteur), et dans les fen\xEAtres il \xE9crit toujours dans le champ de cette fen\xEAtre.</li>
 <li><b>2.85.0</b> \u2014 Le <b>\u2328\uFE0F clavier \xE0 l'\xE9cran</b> change selon la langue (espagnol, anglais, portugais, italien, fran\xE7ais AZERTY, allemand QWERTZ, guarani) et la touche \u{1F310} passe de l'un \xE0 l'autre.</li>
 <li><b>2.84.0</b> \u2014 Nouvel ordre des ic\xF4nes du menu (\u{1F3B6} \u{1F3A7} \u{1F6D0} \u{1F4DC}) ; l'ic\xF4ne en haut de chaque fen\xEAtre ouvre le menu. <b>\u2328\uFE0F Clavier \xE0 l'\xE9cran</b> pour les ordinateurs avec \xE9cran \xE9tendu ou tactile (bouton \xE0 c\xF4t\xE9 du \u2715 ou en glissant depuis le bas).</li>
