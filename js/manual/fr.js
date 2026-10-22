@@ -199,8 +199,8 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>Listes</b> (+ Cr\xE9er une liste) pour les regrouper (famille, \xE9glise\u2026) ; on peut les renommer, les supprimer et d\xE9placer des demandes entre listes.</li>
 <li><b>\u2699\uFE0F Organiser et sauvegarder</b> : Exporter / Importer.</li>
 <li>Tout, photos comprises, reste uniquement sur votre appareil.</li>
-</ul>`},lectura:{titulo:"Bible, M\xE9ditations et La Bible en un an (bouton \u{1F4D6})",html:`
-<p>En haut du <b>\u2630 Menu</b>, le bouton <b>\u{1F4D6}</b> ouvre un menu avec trois options : <b>\u{1F4D6} Sainte Bible</b>, <b>\u{1F54A}\uFE0F M\xE9ditations</b> et <b>\u{1F4C5} La Bible en un an</b>. Les trois sont aussi dans <b>\u2630 Menu \u2192 Ressources \u2192 Biblioth\xE8que</b>.</p>
+</ul>`},lectura:{titulo:"Bible, M\xE9ditations, La Bible en un an et #RPSP (bouton \u{1F4D6})",html:`
+<p>En haut du <b>\u2630 Menu</b>, le bouton <b>\u{1F4D6}</b> ouvre un menu avec quatre options : <b>\u{1F4D6} Sainte Bible</b>, <b>\u{1F54A}\uFE0F M\xE9ditations</b>, <b>\u{1F4C5} La Bible en un an</b> et <b>\u{1F525} #RPSP</b>. Toutes sont aussi dans <b>\u2630 Menu \u2192 Ressources \u2192 Biblioth\xE8que</b>.</p>
 <p>Tout suit la <b>langue de l'application</b> (avec le guarani on utilise l'espagnol) ; on peut la changer avec le drapeau de chaque \xE9cran sans changer la langue de l'application.</p>`},biblia:{titulo:"Sainte Bible",html:`
 <h4>L'ouvrir</h4>
 <ul>
@@ -272,6 +272,13 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>\u25B6 Commencer aujourd'hui (jour 1)</b> : au lieu de suivre le calendrier (1er janvier = jour 1), le plan commence le jour que vous choisissez, ainsi vous ne partez pas en retard. Vous pouvez revenir au calendrier quand vous voulez.</li>
 <li><b>\u2610 Marquer comme lu</b>, barre de progression, <b>Aller au premier jour non lu</b> et <b>Recommencer</b>. <b>\u2039 \u203A</b> et <b>Aujourd'hui</b> pour vous d\xE9placer entre les jours.</li>
 <li>Les jours lus sont enregistr\xE9s uniquement sur cet appareil.</li>
+</ul>`},rpsp:{titulo:"#RPSP \xB7 Ranim\xE9s par sa Parole",html:`
+<ul>
+<li>Un plan de l'\xC9glise adventiste pour lire <b>toute la Bible, un chapitre par jour</b>, dans l'ordre : le m\xEAme chapitre le m\xEAme jour dans le monde entier. Apr\xE8s <b>Apocalypse 22</b>, on recommence \xE0 <b>Gen\xE8se 1</b>, sans fin.</li>
+<li>S'ouvre depuis <b>\u{1F4D6} \u2192 #RPSP</b> ou la <b>Biblioth\xE8que</b> (qui montre le chapitre du jour).</li>
+<li>Le <b>chapitre entier</b> appara\xEEt dans la fen\xEAtre, dans la <b>version</b> choisie (la m\xEAme que la Bible de l'app). Touchez un verset pour l'ouvrir dans la Bible et le surligner, l'annoter, le partager ou le comparer.</li>
+<li><b>\u2039</b> va aux jours pr\xE9c\xE9dents, jusqu'\xE0 <b>Gen\xE8se 1</b> du tour actuel ; on ne peut pas d\xE9passer aujourd'hui. Toucher la date \u{1F5D3}\uFE0F permet de choisir un jour dans le calendrier. <b>Aujourd'hui</b> revient au chapitre du jour.</li>
+<li><b>\u2610 Marquer comme lu</b>, nombre de chapitres lus dans ce tour et <b>Aller au dernier non lu</b>. Enregistr\xE9 uniquement sur cet appareil.</li>
 </ul>`},biblioteca:{titulo:"Biblioth\xE8que",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Ressources \u2192 Biblioth\xE8que</b>. Elle montre seulement ce qui est dans la <b>langue de l'application</b> et change toute seule en changeant de drapeau :</li>
@@ -339,6 +346,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>Je ne vois pas les M\xE9ditations</b> : \xE9crivez <b>meditaciones</b> dans la recherche.</li>
 </ul>`},novedades:{titulo:"Nouveaut\xE9s",html:`
 <ul>
+<li><b>2.89.0</b> \u2014 Nouveau <b>\u{1F525} #RPSP \xB7 Ranim\xE9s par sa Parole</b> : un chapitre de la Bible par jour (le m\xEAme dans le monde entier), avec le chapitre entier dans la version choisie, les jours pr\xE9c\xE9dents jusqu'\xE0 Gen\xE8se 1 et marquer comme lu. Dans \u{1F4D6} et la Biblioth\xE8que.</li>
 <li><b>2.88.0</b> \u2014 Partition : \xABCliquez ici\xBB \xE0 nouveau ; <b>\u2715</b> pour arr\xEAter l'\xE9coute ; <b>\u21A9</b> revient \xE0 la partition pr\xE9c\xE9dente. Avis aussi pour l'instrument, la tonalit\xE9, la couleur, jour/nuit et le livre. Drapeaux de la liste plus serr\xE9s. Th\xE8me Noir et blanc : la lettre choisie se lit bien de jour comme de nuit.</li>
 <li><b>2.87.1</b> \u2014 \xABTransport\xBB s'appelle maintenant <b>Accords transpos\xE9s</b> ; texte du code QR corrig\xE9 ; les boutons Activ\xE9/D\xE9sactiv\xE9 et Afficher/Masquer annoncent leur \xE9tat aux lecteurs d'\xE9cran.</li>
 <li><b>2.87.0</b> \u2014 Partition : <b>\u2039 \u203A</b> cantique pr\xE9c\xE9dent/suivant et <b>\u{1F50E} recherche</b> par num\xE9ro, titre ou paroles (aussi dans d'autres livres) ; barre du haut de la couleur de la barre du t\xE9l\xE9phone et pages sur toute la largeur sur t\xE9l\xE9phone. <b>\u{1F4AC} Avis</b> en affichant/masquant ou activant/d\xE9sactivant (d\xE9sactivables dans les R\xE9glages). En <b>mettant \xE0 jour l'app</b>, on revient au m\xEAme chant ou \xE0 la m\xEAme fen\xEAtre. T\xE9l\xE9prompteur masqu\xE9 et accordeur sur la guitare par d\xE9faut. \xABPr\xE9sentation\xBB et num\xE9ros de strophe mieux contrast\xE9s dans toutes les couleurs.</li>

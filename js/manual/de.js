@@ -199,8 +199,8 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>Listen</b> (+ Liste erstellen), um sie zu gruppieren (Familie, Gemeinde\u2026); sie lassen sich umbenennen, l\xF6schen und Anliegen zwischen Listen verschieben.</li>
 <li><b>\u2699\uFE0F Ordnen und sichern</b>: Exportieren / Importieren.</li>
 <li>Alles, auch die Fotos, bleibt nur auf deinem Ger\xE4t.</li>
-</ul>`},lectura:{titulo:"Bibel, Andachten und Bibel in einem Jahr (Taste \u{1F4D6})",html:`
-<p>Oben im <b>\u2630 Men\xFC</b> \xF6ffnet die Taste <b>\u{1F4D6}</b> ein Men\xFC mit drei Optionen: <b>\u{1F4D6} Heilige Schrift</b>, <b>\u{1F54A}\uFE0F Andachten</b> und <b>\u{1F4C5} Bibel in einem Jahr</b>. Alle drei gibt es auch unter <b>\u2630 Men\xFC \u2192 Ressourcen \u2192 Bibliothek</b>.</p>
+</ul>`},lectura:{titulo:"Bibel, Andachten, Bibel in einem Jahr und #RPSP (Taste \u{1F4D6})",html:`
+<p>Oben im <b>\u2630 Men\xFC</b> \xF6ffnet die Taste <b>\u{1F4D6}</b> ein Men\xFC mit vier Optionen: <b>\u{1F4D6} Heilige Schrift</b>, <b>\u{1F54A}\uFE0F Andachten</b>, <b>\u{1F4C5} Bibel in einem Jahr</b> und <b>\u{1F525} #RPSP</b>. Alle gibt es auch unter <b>\u2630 Men\xFC \u2192 Ressourcen \u2192 Bibliothek</b>.</p>
 <p>Alles folgt der <b>Sprache der App</b> (bei Guaran\xED wird Spanisch verwendet); mit der Flagge jeder Ansicht kannst du sie \xE4ndern, ohne die Sprache der App zu wechseln.</p>`},biblia:{titulo:"Heilige Schrift",html:`
 <h4>\xD6ffnen</h4>
 <ul>
@@ -272,6 +272,13 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>\u25B6 Heute beginnen (Tag 1)</b>: statt dem Kalender zu folgen (1. Januar = Tag 1) beginnt der Plan an dem Tag, den du w\xE4hlst, so f\xE4ngst du nicht im R\xFCckstand an. Du kannst jederzeit zum Kalender zur\xFCckkehren.</li>
 <li><b>\u2610 Als gelesen markieren</b>, Fortschrittsleiste, <b>Zum ersten ungelesenen Tag</b> und <b>Neu beginnen</b>. <b>\u2039 \u203A</b> und <b>Heute</b>, um dich durch die Tage zu bewegen.</li>
 <li>Gelesene Tage werden nur auf diesem Ger\xE4t gespeichert.</li>
+</ul>`},rpsp:{titulo:"#RPSP \xB7 Erweckt durch sein Wort",html:`
+<ul>
+<li>Ein Plan der Adventgemeinde, um <b>die ganze Bibel zu lesen, ein Kapitel pro Tag</b>, der Reihe nach: dasselbe Kapitel am selben Tag auf der ganzen Welt. Nach <b>Offenbarung 22</b> beginnt es wieder mit <b>1. Mose 1</b>, ohne Ende.</li>
+<li>\xD6ffnen \xFCber <b>\u{1F4D6} \u2192 #RPSP</b> oder die <b>Bibliothek</b> (zeigt das heutige Kapitel).</li>
+<li>Das <b>ganze Kapitel</b> erscheint im Fenster, in der gew\xE4hlten <b>\xDCbersetzung</b> (dieselbe wie in der Bibel der App). Tippe auf einen Vers, um ihn in der Bibel zu \xF6ffnen und zu markieren, zu notieren, zu teilen oder zu vergleichen.</li>
+<li><b>\u2039</b> geht zu fr\xFCheren Tagen, bis <b>1. Mose 1</b> des aktuellen Durchgangs; \xFCber heute hinaus geht es nicht. Mit dem Datum \u{1F5D3}\uFE0F w\xE4hlt man einen Tag im Kalender. <b>Heute</b> f\xFChrt zum heutigen Kapitel zur\xFCck.</li>
+<li><b>\u2610 Als gelesen markieren</b>, wie viele Kapitel in diesem Durchgang gelesen wurden und <b>Zum letzten ungelesenen</b>. Wird nur auf diesem Ger\xE4t gespeichert.</li>
 </ul>`},biblioteca:{titulo:"Bibliothek",html:`
 <ul>
 <li><b>\u2630 Men\xFC \u2192 Ressourcen \u2192 Bibliothek</b>. Sie zeigt nur, was in der <b>Sprache der App</b> ist, und \xE4ndert sich beim Wechsel der Flagge von selbst:</li>
@@ -339,6 +346,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>Ich sehe die Andachten nicht</b>: schreibe <b>meditaciones</b> in die Suche.</li>
 </ul>`},novedades:{titulo:"Neuigkeiten",html:`
 <ul>
+<li><b>2.89.0</b> \u2014 Neu: <b>\u{1F525} #RPSP \xB7 Erweckt durch sein Wort</b>: ein Bibelkapitel pro Tag (weltweit dasselbe), mit dem ganzen Kapitel in der gew\xE4hlten \xDCbersetzung, fr\xFCheren Tagen bis 1. Mose 1 und als gelesen markieren. Im \u{1F4D6} und in der Bibliothek.</li>
 <li><b>2.88.0</b> \u2014 Noten: wieder \xABHier klicken\xBB; <b>\u2715</b> beendet das Anh\xF6ren; <b>\u21A9</b> zur\xFCck zu den vorherigen Noten. Hinweise auch bei Instrument, Tonart, Farbe, Tag/Nacht und Buch. Flaggen in der Liste enger. Thema Schwarz-Wei\xDF: der gew\xE4hlte Buchstabe ist tags und nachts lesbar.</li>
 <li><b>2.87.1</b> \u2014 \xABTransport\xBB hei\xDFt jetzt <b>Transponierte Akkorde</b>; Text des QR-Codes korrigiert; Ein/Aus- und Anzeigen/Ausblenden-Tasten melden ihren Zustand an Bildschirmleser.</li>
 <li><b>2.87.0</b> \u2014 Noten: <b>\u2039 \u203A</b> vorheriges/n\xE4chstes Lied und <b>\u{1F50E} Suche</b> nach Nummer, Titel oder Text (auch in anderen B\xFCchern); obere Leiste in der Farbe der Statusleiste und Seiten in voller Breite auf dem Handy. <b>\u{1F4AC} Hinweise</b> beim Anzeigen/Ausblenden oder Ein-/Ausschalten (in den Einstellungen abschaltbar). Beim <b>Aktualisieren der App</b> geht es zum selben Lied oder Fenster zur\xFCck. Teleprompter standardm\xE4\xDFig ausgeblendet, Stimmger\xE4t auf Gitarre. \xABPr\xE4sentation\xBB und Strophennummern mit besserem Kontrast in allen Farben.</li>

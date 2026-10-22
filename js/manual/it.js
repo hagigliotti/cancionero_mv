@@ -199,8 +199,8 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>Liste</b> (+ Crea lista) per raggrupparle (famiglia, chiesa\u2026); si possono rinominare, eliminare e spostare richieste tra le liste.</li>
 <li><b>\u2699\uFE0F Organizza e salva</b>: Esporta / Importa.</li>
 <li>Tutto, foto comprese, resta solo sul tuo dispositivo.</li>
-</ul>`},lectura:{titulo:"Bibbia, Meditazioni e Bibbia in un anno (pulsante \u{1F4D6})",html:`
-<p>In alto nel <b>\u2630 Menu</b>, il pulsante <b>\u{1F4D6}</b> apre un menu con tre opzioni: <b>\u{1F4D6} Sacra Bibbia</b>, <b>\u{1F54A}\uFE0F Meditazioni</b> e <b>\u{1F4C5} Bibbia in un anno</b>. Tutte e tre sono anche in <b>\u2630 Menu \u2192 Risorse \u2192 Biblioteca</b>.</p>
+</ul>`},lectura:{titulo:"Bibbia, Meditazioni, Bibbia in un anno e #RPSP (pulsante \u{1F4D6})",html:`
+<p>In alto nel <b>\u2630 Menu</b>, il pulsante <b>\u{1F4D6}</b> apre un menu con quattro opzioni: <b>\u{1F4D6} Sacra Bibbia</b>, <b>\u{1F54A}\uFE0F Meditazioni</b>, <b>\u{1F4C5} Bibbia in un anno</b> e <b>\u{1F525} #RPSP</b>. Tutte sono anche in <b>\u2630 Menu \u2192 Risorse \u2192 Biblioteca</b>.</p>
 <p>Tutto segue la <b>lingua dell'app</b> (con il guaran\xED si usa lo spagnolo); si pu\xF2 cambiare con la bandiera di ogni schermata senza cambiare la lingua dell'app.</p>`},biblia:{titulo:"Sacra Bibbia",html:`
 <h4>Aprirla</h4>
 <ul>
@@ -272,6 +272,13 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>\u25B6 Inizia oggi (giorno 1)</b>: invece di seguire il calendario (1\xB0 gennaio = giorno 1), il piano parte dal giorno che scegli tu, cos\xEC non inizi in ritardo. Puoi tornare al calendario quando vuoi.</li>
 <li><b>\u2610 Segna come letto</b>, barra di avanzamento, <b>Vai al primo giorno non letto</b> e <b>Ricomincia</b>. <b>\u2039 \u203A</b> e <b>Oggi</b> per spostarti tra i giorni.</li>
 <li>I giorni letti si salvano solo su questo dispositivo.</li>
+</ul>`},rpsp:{titulo:"#RPSP \xB7 Risvegliati dalla Sua Parola",html:`
+<ul>
+<li>Un piano della Chiesa Avventista per leggere <b>tutta la Bibbia, un capitolo al giorno</b>, in ordine: lo stesso capitolo lo stesso giorno in tutto il mondo. Dopo <b>Apocalisse 22</b> ricomincia da <b>Genesi 1</b>, senza fine.</li>
+<li>Si apre da <b>\u{1F4D6} \u2192 #RPSP</b> o dalla <b>Biblioteca</b> (che mostra il capitolo di oggi).</li>
+<li>Il <b>capitolo intero</b> appare nella finestra, nella <b>versione</b> che scegli (la stessa della Bibbia dell'app). Tocca un versetto per aprirlo nella Bibbia ed evidenziarlo, annotarlo, condividerlo o confrontarlo.</li>
+<li><b>\u2039</b> va ai giorni precedenti, fino a <b>Genesi 1</b> del giro attuale; non si pu\xF2 andare oltre oggi. Toccando la data \u{1F5D3}\uFE0F si sceglie un giorno dal calendario. <b>Oggi</b> torna al capitolo di oggi.</li>
+<li><b>\u2610 Segna come letto</b>, quanti capitoli hai letto in questo giro e <b>Vai all'ultimo non letto</b>. Si salva solo su questo dispositivo.</li>
 </ul>`},biblioteca:{titulo:"Biblioteca",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Risorse \u2192 Biblioteca</b>. Mostra solo ci\xF2 che \xE8 nella <b>lingua dell'app</b> e cambia da sola cambiando la bandiera:</li>
@@ -339,6 +346,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>Non vedo le Meditazioni</b>: scrivi <b>meditaciones</b> nella ricerca.</li>
 </ul>`},novedades:{titulo:"Novit\xE0",html:`
 <ul>
+<li><b>2.89.0</b> \u2014 Nuovo <b>\u{1F525} #RPSP \xB7 Risvegliati dalla Sua Parola</b>: un capitolo della Bibbia al giorno (lo stesso in tutto il mondo), con il capitolo intero nella versione che scegli, giorni precedenti fino a Genesi 1 e segna come letto. In \u{1F4D6} e nella Biblioteca.</li>
 <li><b>2.88.0</b> \u2014 Spartito: di nuovo \xABClicca qui\xBB; <b>\u2715</b> per smettere di ascoltare; <b>\u21A9</b> torna allo spartito precedente. Avvisi anche per strumento, tonalit\xE0, colore, giorno/notte e libro. Bandierine della lista pi\xF9 vicine. Tema Bianco e nero: la lettera scelta si legge bene di giorno e di notte.</li>
 <li><b>2.87.1</b> \u2014 \xABTrasporto\xBB ora si chiama <b>Accordi trasposti</b>; testo del codice QR corretto; i pulsanti Attivo/Inattivo e Mostra/Nascondi annunciano il loro stato ai lettori di schermo.</li>
 <li><b>2.87.0</b> \u2014 Spartito: <b>\u2039 \u203A</b> inno precedente/successivo e <b>\u{1F50E} ricerca</b> per numero, titolo o testo (anche in altri libri); barra in alto dello stesso colore della barra del telefono e pagine a tutta larghezza sul telefono. <b>\u{1F4AC} Avvisi</b> quando si mostra/nasconde o si attiva/disattiva (si spengono nelle Impostazioni). <b>Aggiornando l'app</b> si torna allo stesso canto o finestra. Gobbo nascosto e accordatore sulla chitarra di default. \xABPresentazione\xBB e numeri delle strofe con miglior contrasto in tutti i colori.</li>

@@ -199,8 +199,8 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>Lists</b> (+ Create list) to group them (family, church\u2026); they can be renamed, deleted, and requests moved between lists.</li>
 <li><b>\u2699\uFE0F Organize and back up</b>: Export / Import.</li>
 <li>Everything, photos included, stays only on your device.</li>
-</ul>`},lectura:{titulo:"Bible, Devotionals and Bible in a Year (\u{1F4D6} button)",html:`
-<p>At the top of the <b>\u2630 Menu</b>, the <b>\u{1F4D6}</b> button opens a menu with three options: <b>\u{1F4D6} Holy Bible</b>, <b>\u{1F54A}\uFE0F Devotionals</b> and <b>\u{1F4C5} Bible in a Year</b>. All three are also in <b>\u2630 Menu \u2192 Resources \u2192 Library</b>.</p>
+</ul>`},lectura:{titulo:"Bible, Devotionals, Bible in a Year and #RPSP (\u{1F4D6} button)",html:`
+<p>At the top of the <b>\u2630 Menu</b>, the <b>\u{1F4D6}</b> button opens a menu with four options: <b>\u{1F4D6} Holy Bible</b>, <b>\u{1F54A}\uFE0F Devotionals</b>, <b>\u{1F4C5} Bible in a Year</b> and <b>\u{1F525} #RPSP</b>. All of them are also in <b>\u2630 Menu \u2192 Resources \u2192 Library</b>.</p>
 <p>Everything follows the <b>app language</b> (Guarani uses Spanish); you can change it with the flag on each screen without changing the app language.</p>`},biblia:{titulo:"Holy Bible",html:`
 <h4>Opening it</h4>
 <ul>
@@ -272,6 +272,13 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>\u25B6 Start today (day 1)</b>: instead of following the calendar (January 1 = day 1), the plan starts on the day you choose, so you don't start behind. You can go back to the calendar whenever you want.</li>
 <li><b>\u2610 Mark as read</b>, progress bar, <b>Go to the first unread day</b> and <b>Start over</b>. <b>\u2039 \u203A</b> and <b>Today</b> to move through the days.</li>
 <li>Days read are saved only on this device.</li>
+</ul>`},rpsp:{titulo:"#RPSP \xB7 Revived by His Word",html:`
+<ul>
+<li>A plan of the Adventist Church to read <b>the whole Bible, one chapter a day</b>, in order: the same chapter on the same day all over the world. After <b>Revelation 22</b> it starts again at <b>Genesis 1</b>, endlessly.</li>
+<li>Open it from <b>\u{1F4D6} \u2192 #RPSP</b> or the <b>Library</b> (which shows today's chapter).</li>
+<li>The <b>whole chapter</b> appears in the window, in the <b>version</b> you choose (the same one the app's Bible uses). Tap a verse to open it in the Bible to highlight, add a note, share or compare.</li>
+<li><b>\u2039</b> goes to previous days, back to <b>Genesis 1</b> of the current round; you can't go past today. Tap the \u{1F5D3}\uFE0F date to pick a day on the calendar. <b>Today</b> returns to today's chapter.</li>
+<li><b>\u2610 Mark as read</b>, how many chapters you read in this round and <b>Go to the last unread</b>. Saved only on this device.</li>
 </ul>`},biblioteca:{titulo:"Library",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Resources \u2192 Library</b>. It shows only what is in the <b>app language</b> and changes when you change the flag:</li>
@@ -339,6 +346,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>I don't see Devotionals</b>: type <b>meditaciones</b> in the search box.</li>
 </ul>`},novedades:{titulo:"What's new",html:`
 <ul>
+<li><b>2.89.0</b> \u2014 New <b>\u{1F525} #RPSP \xB7 Revived by His Word</b>: one Bible chapter a day (the same worldwide), with the whole chapter in the version you choose, previous days back to Genesis 1 and mark as read. In \u{1F4D6} and the Library.</li>
 <li><b>2.88.0</b> \u2014 Sheet music: \xABClick here\xBB again; <b>\u2715</b> to stop listening; <b>\u21A9</b> back to the previous score. Notices also for instrument, key, color, day/night and book changes. Flags in the list closer together. Black and white theme: the selected letter is readable by day and night.</li>
 <li><b>2.87.1</b> \u2014 \xABTransport\xBB is now called <b>Transposed chords</b>; QR code text fixed; On/Off and Show/Hide buttons announce their state to screen readers.</li>
 <li><b>2.87.0</b> \u2014 Sheet music: <b>\u2039 \u203A</b> previous/next hymn and <b>\u{1F50E} search</b> by number, title or lyrics (also in other books); top bar matches the phone's status bar and pages use the full width on phones. <b>\u{1F4AC} Notices</b> when showing/hiding or turning things on/off (can be turned off in Settings). <b>Updating the app</b> returns to the same song or window. Teleprompter hidden and tuner on guitar by default. \xABPresentation\xBB and stanza numbers with better contrast in every color.</li>

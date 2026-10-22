@@ -199,8 +199,8 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>Listas</b> (+ Criar lista) para agrup\xE1-los (fam\xEDlia, igreja\u2026); d\xE1 para renomear, excluir e mover pedidos entre listas.</li>
 <li><b>\u2699\uFE0F Organizar e fazer backup</b>: Exportar / Importar.</li>
 <li>Tudo, inclusive as fotos, fica s\xF3 no seu dispositivo.</li>
-</ul>`},lectura:{titulo:"B\xEDblia, Medita\xE7\xF5es e Ano b\xEDblico (bot\xE3o \u{1F4D6})",html:`
-<p>Em cima do <b>\u2630 Menu</b>, o bot\xE3o <b>\u{1F4D6}</b> abre um menu com tr\xEAs op\xE7\xF5es: <b>\u{1F4D6} B\xEDblia Sagrada</b>, <b>\u{1F54A}\uFE0F Medita\xE7\xF5es</b> e <b>\u{1F4C5} Ano b\xEDblico</b>. As tr\xEAs tamb\xE9m est\xE3o em <b>\u2630 Menu \u2192 Recursos \u2192 Biblioteca</b>.</p>
+</ul>`},lectura:{titulo:"B\xEDblia, Medita\xE7\xF5es, Ano b\xEDblico e #RPSP (bot\xE3o \u{1F4D6})",html:`
+<p>Em cima do <b>\u2630 Menu</b>, o bot\xE3o <b>\u{1F4D6}</b> abre um menu com quatro op\xE7\xF5es: <b>\u{1F4D6} B\xEDblia Sagrada</b>, <b>\u{1F54A}\uFE0F Medita\xE7\xF5es</b>, <b>\u{1F4C5} Ano b\xEDblico</b> e <b>\u{1F525} #RPSP</b>. Todas tamb\xE9m est\xE3o em <b>\u2630 Menu \u2192 Recursos \u2192 Biblioteca</b>.</p>
 <p>Tudo segue o <b>idioma do app</b> (com guarani usa-se o espanhol); d\xE1 para mudar com a bandeira de cada tela sem mudar o idioma do app.</p>`},biblia:{titulo:"B\xEDblia Sagrada",html:`
 <h4>Abrir</h4>
 <ul>
@@ -272,6 +272,13 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>\u25B6 Come\xE7ar hoje (dia 1)</b>: em vez de seguir o calend\xE1rio (1\xBA de janeiro = dia 1), o plano come\xE7a no dia que voc\xEA escolher, assim n\xE3o come\xE7a atrasado. D\xE1 para voltar ao calend\xE1rio quando quiser.</li>
 <li><b>\u2610 Marcar como lido</b>, barra de progresso, <b>Ir ao primeiro dia n\xE3o lido</b> e <b>Come\xE7ar de novo</b>. <b>\u2039 \u203A</b> e <b>Hoje</b> para andar pelos dias.</li>
 <li>Os dias lidos ficam salvos s\xF3 neste dispositivo.</li>
+</ul>`},rpsp:{titulo:"#RPSP \xB7 Reavivados por Sua Palavra",html:`
+<ul>
+<li>Plano da Igreja Adventista para ler <b>toda a B\xEDblia, um cap\xEDtulo por dia</b>, em ordem: o mesmo cap\xEDtulo no mesmo dia no mundo inteiro. Depois de <b>Apocalipse 22</b> recome\xE7a em <b>G\xEAnesis 1</b>, sem fim.</li>
+<li>Abre-se em <b>\u{1F4D6} \u2192 #RPSP</b> ou na <b>Biblioteca</b> (que mostra o cap\xEDtulo de hoje).</li>
+<li>O <b>cap\xEDtulo inteiro</b> aparece na janela, na <b>vers\xE3o</b> que voc\xEA escolher (a mesma da B\xEDblia do app). Toque num vers\xEDculo para abri-lo na B\xEDblia e destacar, anotar, compartilhar ou comparar.</li>
+<li><b>\u2039</b> vai aos dias anteriores, at\xE9 <b>G\xEAnesis 1</b> da volta atual; para frente n\xE3o passa de hoje. Tocando na data \u{1F5D3}\uFE0F escolhe-se um dia no calend\xE1rio. <b>Hoje</b> volta ao cap\xEDtulo de hoje.</li>
+<li><b>\u2610 Marcar como lido</b>, quantos cap\xEDtulos voc\xEA leu nesta volta e <b>Ir ao \xFAltimo n\xE3o lido</b>. Fica salvo s\xF3 neste aparelho.</li>
 </ul>`},biblioteca:{titulo:"Biblioteca",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Recursos \u2192 Biblioteca</b>. Mostra s\xF3 o que est\xE1 no <b>idioma do app</b> e muda sozinha ao trocar a bandeira:</li>
@@ -339,6 +346,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>N\xE3o vejo as Medita\xE7\xF5es</b>: escreva <b>meditaciones</b> na busca.</li>
 </ul>`},novedades:{titulo:"Novidades",html:`
 <ul>
+<li><b>2.89.0</b> \u2014 Novo <b>\u{1F525} #RPSP \xB7 Reavivados por Sua Palavra</b>: um cap\xEDtulo da B\xEDblia por dia (o mesmo no mundo inteiro), com o cap\xEDtulo inteiro na vers\xE3o que voc\xEA escolher, dias anteriores at\xE9 G\xEAnesis 1 e marcar como lido. No \u{1F4D6} e na Biblioteca.</li>
 <li><b>2.88.0</b> \u2014 Partitura: \xABClique aqui\xBB de novo; <b>\u2715</b> para parar de ouvir; <b>\u21A9</b> volta \xE0 partitura anterior. Avisos tamb\xE9m ao mudar instrumento, tom, cor, dia/noite e livro. Bandeirinhas da lista mais juntas. Tema Preto e branco: a letra escolhida fica leg\xEDvel de dia e de noite.</li>
 <li><b>2.87.1</b> \u2014 \xABTransporte\xBB agora se chama <b>Acordes transpostos</b>; texto do c\xF3digo QR corrigido; os bot\xF5es Ativo/Inativo e Mostrar/Ocultar anunciam seu estado aos leitores de tela.</li>
 <li><b>2.87.0</b> \u2014 Partitura: <b>\u2039 \u203A</b> hino anterior/seguinte e <b>\u{1F50E} busca</b> por n\xFAmero, t\xEDtulo ou letra (tamb\xE9m em outros livros); barra de cima da cor da barra do celular e p\xE1ginas na largura toda no celular. <b>\u{1F4AC} Avisos</b> ao mostrar/ocultar ou ativar/desativar (desligam-se em Ajustes). Ao <b>atualizar o app</b> volta-se ao mesmo c\xE2ntico ou janela. Teleprompter oculto e afinador no viol\xE3o por padr\xE3o. \xABApresenta\xE7\xE3o\xBB e n\xFAmeros das estrofes com melhor contraste em todas as cores.</li>
