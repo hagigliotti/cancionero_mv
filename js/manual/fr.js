@@ -59,7 +59,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>Original / Autres titres</b>, <b>Auteur</b>, <b>Compositeur</b>, <b>Traducteur</b>, <b>Ann\xE9e</b>. En touchant un nom, vous voyez tous ses chants.</li>
 <li><b>R\xE9f\xE9rence biblique</b> : touchez-la pour lire le passage dans la Bible de l'application.</li>
 <li><b>Tonalit\xE9</b>, <b>BPM</b> et <b>Mesure</b> : en les touchant s'ouvre l'accordeur ou le m\xE9tronome avec cette valeur.</li>
-<li><b>Rythme</b>, <b>Partition</b> (si elle existe, le bouton <b>\u{1F3BC} Voir la partition</b> l'ouvre <b>en plein \xE9cran</b> : chaque page tient enti\xE8re et sur les \xE9crans larges on en voit deux c\xF4te \xE0 c\xF4te. On zoome <b>\xE0 deux doigts</b> ou par double toucher ; sur ordinateur avec <b>\u2212 / +</b>, double clic ou \u2318/Ctrl + molette. En haut, <b>\u{1F3A7} \xC9couter</b> lance le chant dans le lecteur et affiche <b>\u23EE \u23EF \u23ED \u{1F500}</b> : en passant au suivant, au pr\xE9c\xE9dent ou en al\xE9atoire <b>la partition change aussi</b> ; le \u{1F3A7} de cette barre ouvre le lecteur. Le <b>\u2715</b> la ferme), <b>Th\xE8mes</b> (touchez-en un pour voir tous les chants de ce th\xE8me), <b>R\xE9vis\xE9</b>.</li>
+<li><b>Rythme</b>, <b>Partition</b> (si elle existe, le bouton <b>\u{1F3BC} Voir la partition</b> l'ouvre <b>en plein \xE9cran</b> : chaque page tient enti\xE8re et sur les \xE9crans larges on en voit deux c\xF4te \xE0 c\xF4te. On zoome <b>\xE0 deux doigts</b> ou par double toucher ; sur ordinateur avec <b>\u2212 / +</b>, double clic ou \u2318/Ctrl + molette. En haut, <b>\u{1F3A7} \xC9couter</b> lance le chant dans le lecteur et affiche <b>\u23EE \u23EF \u23ED \u{1F500}</b> : en passant au suivant, au pr\xE9c\xE9dent ou en al\xE9atoire <b>la partition change aussi</b> ; le \u{1F3A7} de cette barre ouvre le lecteur. En haut, <b>\u2039 \u203A</b> passent au cantique pr\xE9c\xE9dent ou suivant qui a une partition, et toucher le <b>titre \u{1F50E}</b> ouvre une recherche par <b>num\xE9ro, titre ou paroles</b>, dans ce livre ou dans tous ceux qui ont des partitions. Le <b>\u2715</b> la ferme), <b>Th\xE8mes</b> (touchez-en un pour voir tous les chants de ce th\xE8me), <b>R\xE9vis\xE9</b>.</li>
 <li><b>Audio</b> : liens vers Spotify, YouTube ou Apple Music, et <b>\u{1F3A7} mp3</b> pour l'\xE9couter dans le lecteur de l'application. <b>\u{1F5A5}\uFE0F Pr\xE9sentation</b> ouvre les diapositives.</li>
 <li><b>Aussi dans</b> : le m\xEAme chant dans d'autres livres. Dans ces chants, apr\xE8s le titre appara\xEEt la marque du livre o\xF9 vous \xEAtes ('09, '62, MV, C, IA).</li>
 </ul>
@@ -129,7 +129,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <ul>
 <li>Dans le chant ouvert : <b>\u25B6</b> fait d\xE9filer les paroles toutes seules ; <b>\u23F8</b> les arr\xEAte.</li>
 <li><b>\u2212</b> / <b>+</b> changent la vitesse (affich\xE9e, par exemple, \xAB1.0x\xBB).</li>
-<li><b>\u2630 Menu \u2192 Outils \u2192 T\xE9l\xE9prompteur (Afficher/Masquer)</b> affiche ou masque cette barre.</li>
+<li><b>\u2630 Menu \u2192 Outils \u2192 T\xE9l\xE9prompteur (Afficher/Masquer)</b> affiche ou masque cette barre. <b>Elle est masqu\xE9e au d\xE9part</b> : il faut l'afficher la premi\xE8re fois.</li>
 </ul>`},idiomas:{titulo:"Langues",html:`
 <ul>
 <li>L'application est en <b>espagnol, anglais, italien, portugais, fran\xE7ais et allemand</b> ; les chants aussi en guarani et dans d'autres langues.</li>
@@ -291,6 +291,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>\u2630 Menu \u2192 R\xE9glages \u2192 Couleur du th\xE8me</b> : 13 options \u2014 Blanc, Rouge, Corail, Orange, Jaune, Vert, Turquoise, Bleu clair, Bleu, Violet, Lilas, Rose et <b>Kindle</b>. Chaque cercle montre la couleur et son fond nocturne.</li>
 <li><b>Kindle</b> (papier et encre) : toute l'application comme une liseuse \u2014 le jour, papier cr\xE8me avec texte brun fonc\xE9 ; la nuit, fond anthracite avec texte couleur papier ; police <b>Literata</b> (con\xE7ue pour lire sur \xE9cran), papier au grain l\xE9ger, ic\xF4nes couleur encre, texte justifi\xE9, titres en petites capitales, boutons \xE0 contour, sans ombres ni reflets et photos l\xE9g\xE8rement s\xE9pia. Id\xE9al pour lire la Bible et les m\xE9ditations. (Il remplace l'ancien \xABGris\xBB ; ceux qui l'avaient choisi passent \xE0 \xABBlanc\xBB.)</li>
 <li>La couleur s'applique aux boutons, aux accords, au fond et \xE0 la barre du t\xE9l\xE9phone.</li>
+<li><b>\u2630 Menu \u2192 R\xE9glages \u2192 \u{1F4AC} Avis et aides</b> : quand un bouton passe de Afficher \xE0 Masquer ou de Actif \xE0 Inactif, un petit avis en bas indique l'\xE9tat (par exemple \xAB\u{1F3B8} Tablature : affich\xE9\xBB). On peut le d\xE9sactiver l\xE0.</li>
 </ul>`},iglesia:{titulo:"Mode \xE9glise : projecteur et TV",html:`
 <h4>Projecteur (ordinateur)</h4>
 <ul>
@@ -338,6 +339,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>Je ne vois pas les M\xE9ditations</b> : \xE9crivez <b>meditaciones</b> dans la recherche.</li>
 </ul>`},novedades:{titulo:"Nouveaut\xE9s",html:`
 <ul>
+<li><b>2.87.0</b> \u2014 Partition : <b>\u2039 \u203A</b> cantique pr\xE9c\xE9dent/suivant et <b>\u{1F50E} recherche</b> par num\xE9ro, titre ou paroles (aussi dans d'autres livres) ; barre du haut de la couleur de la barre du t\xE9l\xE9phone et pages sur toute la largeur sur t\xE9l\xE9phone. <b>\u{1F4AC} Avis</b> en affichant/masquant ou activant/d\xE9sactivant (d\xE9sactivables dans les R\xE9glages). En <b>mettant \xE0 jour l'app</b>, on revient au m\xEAme chant ou \xE0 la m\xEAme fen\xEAtre. T\xE9l\xE9prompteur masqu\xE9 et accordeur sur la guitare par d\xE9faut. \xABPr\xE9sentation\xBB et num\xE9ros de strophe mieux contrast\xE9s dans toutes les couleurs.</li>
 <li><b>2.86.0</b> \u2014 Ic\xF4ne de la <b>Bible : \u{1F4D6} livre ouvert</b> (M\xE9ditations \u{1F54A}\uFE0F, Biblioth\xE8que \u{1F4DA}). <b>Partition en plein \xE9cran</b>, avec \u{1F3A7} pour \xE9couter le chant et \u23EE \u23EF \u23ED \u{1F500} : la partition suit le lecteur. \xAB Voir la partition \xBB fonctionne sur plus d'appareils (anciens iPhone/iPad et TV, r\xE9seaux qui bloquaient la visionneuse).</li>
 <li><b>2.85.1</b> \u2014 Le \u2328\uFE0F clavier \xE0 l'\xE9cran appara\xEEt aussi avec le mode TV activ\xE9 sur l'ordinateur (\xE9cran \xE9tendu ou projecteur), et dans les fen\xEAtres il \xE9crit toujours dans le champ de cette fen\xEAtre.</li>
 <li><b>2.85.0</b> \u2014 Le <b>\u2328\uFE0F clavier \xE0 l'\xE9cran</b> change selon la langue (espagnol, anglais, portugais, italien, fran\xE7ais AZERTY, allemand QWERTZ, guarani) et la touche \u{1F310} passe de l'un \xE0 l'autre.</li>

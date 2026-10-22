@@ -59,7 +59,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>Originale / Altri titoli</b>, <b>Autore</b>, <b>Compositore</b>, <b>Traduttore</b>, <b>Anno</b>. Toccando un nome vedi tutti i suoi canti.</li>
 <li><b>Riferimento biblico</b>: toccalo per leggere il passo nella Bibbia dell'app.</li>
 <li><b>Tonalit\xE0</b>, <b>BPM</b> e <b>Tempo</b>: toccandoli si apre l'accordatore o il metronomo con quel dato.</li>
-<li><b>Ritmo</b>, <b>Spartito</b> (se c'\xE8, il pulsante <b>\u{1F3BC} Vedi spartito</b> lo apre <b>a schermo intero</b>: ogni pagina entra intera e sugli schermi larghi se ne vedono due affiancate. Si ingrandisce <b>con due dita</b> o doppio tocco; al computer con <b>\u2212 / +</b>, doppio clic o \u2318/Ctrl + rotella. In alto, <b>\u{1F3A7} Ascolta</b> mette il suo brano nel lettore e compaiono <b>\u23EE \u23EF \u23ED \u{1F500}</b>: passando al successivo, al precedente o in casuale <b>cambia anche lo spartito</b>; il \u{1F3A7} della barra apre il lettore. La <b>\u2715</b> lo chiude), <b>Temi</b> (toccane uno per vedere tutti i canti di quel tema), <b>Revisionato</b>.</li>
+<li><b>Ritmo</b>, <b>Spartito</b> (se c'\xE8, il pulsante <b>\u{1F3BC} Vedi spartito</b> lo apre <b>a schermo intero</b>: ogni pagina entra intera e sugli schermi larghi se ne vedono due affiancate. Si ingrandisce <b>con due dita</b> o doppio tocco; al computer con <b>\u2212 / +</b>, doppio clic o \u2318/Ctrl + rotella. In alto, <b>\u{1F3A7} Ascolta</b> mette il suo brano nel lettore e compaiono <b>\u23EE \u23EF \u23ED \u{1F500}</b>: passando al successivo, al precedente o in casuale <b>cambia anche lo spartito</b>; il \u{1F3A7} della barra apre il lettore. In alto, <b>\u2039 \u203A</b> passano all'inno precedente o successivo con spartito, e toccando il <b>titolo \u{1F50E}</b> si apre una ricerca per <b>numero, titolo o testo</b>, in quel libro o in tutti quelli con spartiti. La <b>\u2715</b> lo chiude), <b>Temi</b> (toccane uno per vedere tutti i canti di quel tema), <b>Revisionato</b>.</li>
 <li><b>Audio</b>: link a Spotify, YouTube o Apple Music, e <b>\u{1F3A7} mp3</b> per ascoltarlo nel lettore dell'app. <b>\u{1F5A5}\uFE0F Presentazione</b> apre le diapositive.</li>
 <li><b>Anche in</b>: lo stesso canto in altri libri (per esempio \xABOh, qu\xE9 esperanza\xBB \u2194 Innario 2009 n. 181). In questi canti, dopo il titolo compare la sigla del libro in cui sei ('09, '62, MV, C, IA).</li>
 </ul>
@@ -129,7 +129,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <ul>
 <li>Nel canto aperto: <b>\u25B6</b> fa scorrere il testo da solo; <b>\u23F8</b> lo ferma.</li>
 <li><b>\u2212</b> / <b>+</b> cambiano la velocit\xE0 (si vede, per esempio, \xAB1.0x\xBB).</li>
-<li><b>\u2630 Menu \u2192 Strumenti \u2192 Gobbo (Mostra/Nascondi)</b> mostra o nasconde quella barra.</li>
+<li><b>\u2630 Menu \u2192 Strumenti \u2192 Gobbo (Mostra/Nascondi)</b> mostra o nasconde quella barra. <b>All'inizio \xE8 nascosta</b>: va mostrata la prima volta.</li>
 </ul>`},idiomas:{titulo:"Lingue",html:`
 <ul>
 <li>L'app \xE8 in <b>spagnolo, inglese, italiano, portoghese, francese e tedesco</b>; i canti anche in guaran\xED e altre lingue.</li>
@@ -291,6 +291,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>\u2630 Menu \u2192 Impostazioni \u2192 Colore del tema</b>: 13 opzioni \u2014 Bianco, Rosso, Corallo, Arancione, Giallo, Verde, Turchese, Celeste, Blu, Viola, Lilla, Rosa e <b>Kindle</b>. Ogni cerchio mostra il colore e il suo sfondo notturno.</li>
 <li><b>Kindle</b> (carta e inchiostro): tutta l'app come un lettore di libri elettronici \u2014 di giorno, carta crema con testo marrone scuro; di notte, sfondo antracite con testo color carta; carattere <b>Literata</b> (pensato per leggere sugli schermi), carta con una grana leggera, icone color inchiostro, testo giustificato, titoli in maiuscoletto, pulsanti con contorno, senza ombre n\xE9 riflessi e foto leggermente seppia. Ideale per leggere la Bibbia e le meditazioni. (Sostituisce il vecchio \xABGrigio\xBB; chi lo aveva scelto passa a \xABBianco\xBB.)</li>
 <li>Il colore si applica a pulsanti, accordi, sfondo e barra del cellulare.</li>
+<li><b>\u2630 Menu \u2192 Impostazioni \u2192 \u{1F4AC} Avvisi e aiuti</b>: quando un pulsante passa da Mostra a Nascondi o da Attivo a Inattivo, in basso compare un piccolo avviso che dice com'\xE8 rimasto (per esempio \xAB\u{1F3B8} Tablatura: visibile\xBB). Si pu\xF2 disattivare l\xEC.</li>
 </ul>`},iglesia:{titulo:"Modalit\xE0 chiesa: proiettore e TV",html:`
 <h4>Proiettore (computer)</h4>
 <ul>
@@ -338,6 +339,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>Non vedo le Meditazioni</b>: scrivi <b>meditaciones</b> nella ricerca.</li>
 </ul>`},novedades:{titulo:"Novit\xE0",html:`
 <ul>
+<li><b>2.87.0</b> \u2014 Spartito: <b>\u2039 \u203A</b> inno precedente/successivo e <b>\u{1F50E} ricerca</b> per numero, titolo o testo (anche in altri libri); barra in alto dello stesso colore della barra del telefono e pagine a tutta larghezza sul telefono. <b>\u{1F4AC} Avvisi</b> quando si mostra/nasconde o si attiva/disattiva (si spengono nelle Impostazioni). <b>Aggiornando l'app</b> si torna allo stesso canto o finestra. Gobbo nascosto e accordatore sulla chitarra di default. \xABPresentazione\xBB e numeri delle strofe con miglior contrasto in tutti i colori.</li>
 <li><b>2.86.0</b> \u2014 Icona della <b>Bibbia: \u{1F4D6} libro aperto</b> (Meditazioni \u{1F54A}\uFE0F, Biblioteca \u{1F4DA}). <b>Spartito a schermo intero</b>, con \u{1F3A7} per ascoltarne il brano e \u23EE \u23EF \u23ED \u{1F500}: lo spartito segue il lettore. \xABVedi spartito\xBB funziona su pi\xF9 dispositivi (iPhone/iPad e TV vecchi, reti che bloccavano il visore).</li>
 <li><b>2.85.1</b> \u2014 La \u2328\uFE0F tastiera su schermo appare anche con la Modalit\xE0 TV attivata sul computer (monitor esteso o proiettore) e nelle finestre scrive sempre nel campo di quella finestra.</li>
 <li><b>2.85.0</b> \u2014 La <b>\u2328\uFE0F tastiera su schermo</b> cambia secondo la lingua (spagnolo, inglese, portoghese, italiano, francese AZERTY, tedesco QWERTZ, guaran\xED) e il tasto \u{1F310} passa dall'una all'altra.</li>

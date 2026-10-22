@@ -59,7 +59,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>Original / Other titles</b>, <b>Author</b>, <b>Composer</b>, <b>Translator</b>, <b>Year</b>. Tap a name to see all their songs.</li>
 <li><b>Bible reference</b>: tap it to read the passage in the app's Bible.</li>
 <li><b>Key</b>, <b>BPM</b> and <b>Time signature</b>: tap them to open the tuner or the metronome with that value.</li>
-<li><b>Rhythm</b>, <b>Sheet music</b> (if available, the <b>\u{1F3BC} View sheet music</b> button opens it <b>full screen</b>: each page fits whole and wide screens show two side by side. Zoom <b>with two fingers</b> or a double tap; on a computer with <b>\u2212 / +</b>, double click or \u2318/Ctrl + wheel. At the top, <b>\u{1F3A7} Listen</b> plays its song in the player and shows <b>\u23EE \u23EF \u23ED \u{1F500}</b>: going to the next, previous or a shuffled song <b>also changes the sheet music</b>; the \u{1F3A7} in that bar opens the player. The <b>\u2715</b> closes it), <b>Topics</b> (tap one to see all songs on that topic), <b>Reviewed</b>.</li>
+<li><b>Rhythm</b>, <b>Sheet music</b> (if available, the <b>\u{1F3BC} View sheet music</b> button opens it <b>full screen</b>: each page fits whole and wide screens show two side by side. Zoom <b>with two fingers</b> or a double tap; on a computer with <b>\u2212 / +</b>, double click or \u2318/Ctrl + wheel. At the top, <b>\u{1F3A7} Listen</b> plays its song in the player and shows <b>\u23EE \u23EF \u23ED \u{1F500}</b>: going to the next, previous or a shuffled song <b>also changes the sheet music</b>; the \u{1F3A7} in that bar opens the player. At the top, <b>\u2039 \u203A</b> go to the previous or next hymn with sheet music, and tapping the <b>title \u{1F50E}</b> opens a search by <b>number, title or lyrics</b>, in that book or in all books with sheet music. The <b>\u2715</b> closes it), <b>Topics</b> (tap one to see all songs on that topic), <b>Reviewed</b>.</li>
 <li><b>Audio</b>: links to Spotify, YouTube or Apple Music, and <b>\u{1F3A7} mp3</b> to listen in the app's player. <b>\u{1F5A5}\uFE0F Slides</b> opens the presentation.</li>
 <li><b>Also in</b>: the same song in other books (for example \xABOh, qu\xE9 esperanza\xBB \u2194 2009 Hymnal no. 181). In those songs, the mark of the book you are in appears after the title ('09, '62, MV, C, IA).</li>
 </ul>
@@ -129,7 +129,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <ul>
 <li>In the open song: <b>\u25B6</b> scrolls the lyrics by itself; <b>\u23F8</b> stops it.</li>
 <li><b>\u2212</b> / <b>+</b> change the speed (shown, for example, as \xAB1.0x\xBB).</li>
-<li><b>\u2630 Menu \u2192 Tools \u2192 Teleprompter (Show/Hide)</b> shows or hides that bar.</li>
+<li><b>\u2630 Menu \u2192 Tools \u2192 Teleprompter (Show/Hide)</b> shows or hides that bar. <b>It starts hidden</b>: show it the first time.</li>
 </ul>`},idiomas:{titulo:"Languages",html:`
 <ul>
 <li>The app is in <b>Spanish, English, Italian, Portuguese, French and German</b>; songs are also in Guarani and other languages.</li>
@@ -291,6 +291,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>\u2630 Menu \u2192 Settings \u2192 Theme color</b>: 13 options \u2014 White, Red, Coral, Orange, Yellow, Green, Turquoise, Light blue, Blue, Violet, Lilac, Pink and <b>Kindle</b>. Each circle shows the color and its night background.</li>
 <li><b>Kindle</b> (paper and ink): the whole app like an e-reader \u2014 by day, cream paper with dark brown text; by night, charcoal background with paper-colored text; <b>Literata</b> typeface (designed for reading on screens), paper with a soft grain, ink-colored icons, justified text, small-caps headings, outlined buttons, no shadows or glows and slightly sepia photos. Ideal for reading the Bible and devotionals. (It replaces the old \xABGray\xBB; anyone who had it selected now has \xABWhite\xBB.)</li>
 <li>The color applies to buttons, chords, background and the phone's status bar.</li>
+<li><b>\u2630 Menu \u2192 Settings \u2192 \u{1F4AC} Notices and tips</b>: when a button switches between Show and Hide or On and Off, a small notice at the bottom says how it ended up (e.g. \xAB\u{1F3B8} Tablature: shown\xBB). You can turn it off there.</li>
 </ul>`},iglesia:{titulo:"Church mode: projector and TV",html:`
 <h4>Projector (computer)</h4>
 <ul>
@@ -338,6 +339,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>I don't see Devotionals</b>: type <b>meditaciones</b> in the search box.</li>
 </ul>`},novedades:{titulo:"What's new",html:`
 <ul>
+<li><b>2.87.0</b> \u2014 Sheet music: <b>\u2039 \u203A</b> previous/next hymn and <b>\u{1F50E} search</b> by number, title or lyrics (also in other books); top bar matches the phone's status bar and pages use the full width on phones. <b>\u{1F4AC} Notices</b> when showing/hiding or turning things on/off (can be turned off in Settings). <b>Updating the app</b> returns to the same song or window. Teleprompter hidden and tuner on guitar by default. \xABPresentation\xBB and stanza numbers with better contrast in every color.</li>
 <li><b>2.86.0</b> \u2014 <b>Bible</b> icon: <b>\u{1F4D6} open book</b> (Devotionals \u{1F54A}\uFE0F, Library \u{1F4DA}). <b>Full-screen sheet music</b>, with \u{1F3A7} to listen to its song and \u23EE \u23EF \u23ED \u{1F500}: the sheet music follows the player. \xABView sheet music\xBB works on more devices (older iPhone/iPad and TVs, networks that blocked the viewer).</li>
 <li><b>2.85.1</b> \u2014 The \u2328\uFE0F on-screen keyboard also appears with TV mode turned on on a computer (extended monitor or projector), and in windows it always types in that window's field.</li>
 <li><b>2.85.0</b> \u2014 The <b>\u2328\uFE0F on-screen keyboard</b> changes with the language (Spanish, English, Portuguese, Italian, French AZERTY, German QWERTZ, Guarani) and the \u{1F310} key switches between them.</li>

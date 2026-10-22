@@ -59,7 +59,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>Original / Outros t\xEDtulos</b>, <b>Autor</b>, <b>Compositor</b>, <b>Tradutor</b>, <b>Ano</b>. Tocando um nome voc\xEA v\xEA todos os seus c\xE2nticos.</li>
 <li><b>Refer\xEAncia b\xEDblica</b>: toque para ler a passagem na B\xEDblia do app.</li>
 <li><b>Tom</b>, <b>BPM</b> e <b>Compasso</b>: tocando neles abre o afinador ou o metr\xF4nomo com esse dado.</li>
-<li><b>Ritmo</b>, <b>Partitura</b> (se existir, o bot\xE3o <b>\u{1F3BC} Ver partitura</b> a abre <b>em tela cheia</b>: cada p\xE1gina cabe inteira e em telas largas aparecem duas lado a lado. Amplia-se <b>com dois dedos</b> ou toque duplo; no computador com <b>\u2212 / +</b>, clique duplo ou \u2318/Ctrl + roda. No alto, <b>\u{1F3A7} Ouvir</b> p\xF5e a m\xFAsica no player e aparecem <b>\u23EE \u23EF \u23ED \u{1F500}</b>: ao passar para a pr\xF3xima, a anterior ou no aleat\xF3rio <b>a partitura tamb\xE9m muda</b>; o \u{1F3A7} dessa barra abre o player. O <b>\u2715</b> fecha), <b>Temas</b> (toque um para ver todos os c\xE2nticos desse tema), <b>Revisado</b>.</li>
+<li><b>Ritmo</b>, <b>Partitura</b> (se existir, o bot\xE3o <b>\u{1F3BC} Ver partitura</b> a abre <b>em tela cheia</b>: cada p\xE1gina cabe inteira e em telas largas aparecem duas lado a lado. Amplia-se <b>com dois dedos</b> ou toque duplo; no computador com <b>\u2212 / +</b>, clique duplo ou \u2318/Ctrl + roda. No alto, <b>\u{1F3A7} Ouvir</b> p\xF5e a m\xFAsica no player e aparecem <b>\u23EE \u23EF \u23ED \u{1F500}</b>: ao passar para a pr\xF3xima, a anterior ou no aleat\xF3rio <b>a partitura tamb\xE9m muda</b>; o \u{1F3A7} dessa barra abre o player. No alto, <b>\u2039 \u203A</b> passam ao hino anterior ou seguinte que tenha partitura, e tocando no <b>t\xEDtulo \u{1F50E}</b> abre-se uma busca por <b>n\xFAmero, t\xEDtulo ou letra</b>, nesse livro ou em todos os que t\xEAm partituras. O <b>\u2715</b> fecha), <b>Temas</b> (toque um para ver todos os c\xE2nticos desse tema), <b>Revisado</b>.</li>
 <li><b>\xC1udio</b>: links para Spotify, YouTube ou Apple Music, e <b>\u{1F3A7} mp3</b> para ouvir no player do app. <b>\u{1F5A5}\uFE0F Apresenta\xE7\xE3o</b> abre os slides.</li>
 <li><b>Tamb\xE9m em</b>: o mesmo c\xE2ntico em outros livros (por exemplo \xABOh, qu\xE9 esperanza\xBB \u2194 Hin\xE1rio 2009 n.\xBA 181). Nesses c\xE2nticos, depois do t\xEDtulo aparece a marca do livro onde voc\xEA est\xE1 ('09, '62, MV, C, IA).</li>
 </ul>
@@ -129,7 +129,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <ul>
 <li>No c\xE2ntico aberto: <b>\u25B6</b> faz a letra descer sozinha; <b>\u23F8</b> para.</li>
 <li><b>\u2212</b> / <b>+</b> mudam a velocidade (aparece, por exemplo, \xAB1.0x\xBB).</li>
-<li><b>\u2630 Menu \u2192 Ferramentas \u2192 Teleprompter (Mostrar/Ocultar)</b> mostra ou oculta essa barra.</li>
+<li><b>\u2630 Menu \u2192 Ferramentas \u2192 Teleprompter (Mostrar/Ocultar)</b> mostra ou oculta essa barra. <b>Come\xE7a oculta</b>: \xE9 preciso mostr\xE1-la na primeira vez.</li>
 </ul>`},idiomas:{titulo:"Idiomas",html:`
 <ul>
 <li>O app est\xE1 em <b>espanhol, ingl\xEAs, italiano, portugu\xEAs, franc\xEAs e alem\xE3o</b>; os c\xE2nticos tamb\xE9m em guarani e outros idiomas.</li>
@@ -291,6 +291,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>\u2630 Menu \u2192 Ajustes \u2192 Cor do tema</b>: 13 op\xE7\xF5es \u2014 Branco, Vermelho, Coral, Laranja, Amarelo, Verde, Turquesa, Azul-claro, Azul, Violeta, Lil\xE1s, Rosa e <b>Kindle</b>. Cada c\xEDrculo mostra a cor e seu fundo noturno.</li>
 <li><b>Kindle</b> (papel e tinta): o app inteiro como um leitor de livros eletr\xF4nicos \u2014 de dia, papel creme com letras marrom-escuras; de noite, fundo grafite com letras cor de papel; fonte <b>Literata</b> (pensada para ler em telas), papel com uma textura suave, \xEDcones cor de tinta, texto justificado, t\xEDtulos em versalete, bot\xF5es com contorno, sem sombras nem brilhos e fotos levemente s\xE9pia. Ideal para ler a B\xEDblia e as medita\xE7\xF5es. (Substitui o antigo \xABCinza\xBB; quem o tinha escolhido passa para \xABBranco\xBB.)</li>
 <li>A cor se aplica a bot\xF5es, acordes, fundo e barra do celular.</li>
+<li><b>\u2630 Menu \u2192 Ajustes \u2192 \u{1F4AC} Avisos e ajudas</b>: quando um bot\xE3o passa de Mostrar a Ocultar ou de Ativo a Inativo, aparece embaixo um pequeno aviso dizendo como ficou (por exemplo \xAB\u{1F3B8} Tablatura: vis\xEDvel\xBB). D\xE1 para desativar ali.</li>
 </ul>`},iglesia:{titulo:"Modo igreja: projetor e TV",html:`
 <h4>Projetor (computador)</h4>
 <ul>
@@ -338,6 +339,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>N\xE3o vejo as Medita\xE7\xF5es</b>: escreva <b>meditaciones</b> na busca.</li>
 </ul>`},novedades:{titulo:"Novidades",html:`
 <ul>
+<li><b>2.87.0</b> \u2014 Partitura: <b>\u2039 \u203A</b> hino anterior/seguinte e <b>\u{1F50E} busca</b> por n\xFAmero, t\xEDtulo ou letra (tamb\xE9m em outros livros); barra de cima da cor da barra do celular e p\xE1ginas na largura toda no celular. <b>\u{1F4AC} Avisos</b> ao mostrar/ocultar ou ativar/desativar (desligam-se em Ajustes). Ao <b>atualizar o app</b> volta-se ao mesmo c\xE2ntico ou janela. Teleprompter oculto e afinador no viol\xE3o por padr\xE3o. \xABApresenta\xE7\xE3o\xBB e n\xFAmeros das estrofes com melhor contraste em todas as cores.</li>
 <li><b>2.86.0</b> \u2014 \xCDcone da <b>B\xEDblia: \u{1F4D6} livro aberto</b> (Medita\xE7\xF5es \u{1F54A}\uFE0F, Biblioteca \u{1F4DA}). <b>Partitura em tela cheia</b>, com \u{1F3A7} para ouvir a m\xFAsica e \u23EE \u23EF \u23ED \u{1F500}: a partitura acompanha o player. \xABVer partitura\xBB funciona em mais aparelhos (iPhone/iPad e TVs antigos, redes que bloqueavam o visualizador).</li>
 <li><b>2.85.1</b> \u2014 O \u2328\uFE0F teclado na tela tamb\xE9m aparece com o Modo TV ativado no computador (monitor estendido ou projetor) e nas janelas escreve sempre no campo daquela janela.</li>
 <li><b>2.85.0</b> \u2014 O <b>\u2328\uFE0F teclado na tela</b> muda conforme o idioma (espanhol, ingl\xEAs, portugu\xEAs, italiano, franc\xEAs AZERTY, alem\xE3o QWERTZ, guarani) e a tecla \u{1F310} passa de um para outro.</li>
