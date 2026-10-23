@@ -348,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>Je ne vois pas les M\xE9ditations</b> : \xE9crivez <b>meditaciones</b> dans la recherche.</li>
 </ul>`},novedades:{titulo:"Nouveaut\xE9s",html:`
 <ul>
+<li><b>2.91.1</b> \u2014 Bible : le drapeau montre les langues et, en touchant l'une d'elles, ses versions apparaissent en dessous (comme dans #RPSP). Prend moins de place.</li>
 <li><b>2.91.0</b> \u2014 La Bible en un an et #RPSP : <b>drapeau</b> pour lire dans une autre langue et choix de la <b>version</b> en haut, comme dans les M\xE9ditations. Bible sur t\xE9l\xE9phone : la liste des langues et versions montre une langue par ligne et les versions d\xE9filent sur le c\xF4t\xE9 (sur iPhone, toutes sont visibles).</li>
 <li><b>2.90.0</b> \u2014 Une seule <b>\u{1F4BE} Sauvegarde</b> (Informations de l'app, \xE0 c\xF4t\xE9 de \xABForcer la mise \xE0 jour\xBB) : exporte et importe tout d'un coup ; remplace les Exporter/Importer de chaque section. Sigle du plan dans chaque langue (#RPSP, #RBHW, #RDSP\u2026) et nouvelle description. \xABAvis et alertes\xBB.</li>
 <li><b>2.89.0</b> \u2014 Nouveau <b>\u{1F525} #RPSP \xB7 Ranim\xE9s par sa Parole</b> : un chapitre de la Bible par jour (le m\xEAme dans le monde entier), avec le chapitre entier dans la version choisie, les jours pr\xE9c\xE9dents jusqu'\xE0 Gen\xE8se 1 et marquer comme lu. Dans \u{1F4D6} et la Biblioth\xE8que.</li>

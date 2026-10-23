@@ -348,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>Ich sehe die Andachten nicht</b>: schreibe <b>meditaciones</b> in die Suche.</li>
 </ul>`},novedades:{titulo:"Neuigkeiten",html:`
 <ul>
+<li><b>2.91.1</b> \u2014 Bibel: Die Flagge zeigt die Sprachen, und beim Tippen auf eine erscheinen darunter ihre \xDCbersetzungen (wie bei #EDSW). Braucht weniger Platz.</li>
 <li><b>2.91.0</b> \u2014 Bibel in einem Jahr und #EDSW: <b>Flagge</b>, um in einer anderen Sprache zu lesen, und Auswahl der <b>\xDCbersetzung</b> oben, wie bei den Andachten. Bibel auf dem Handy: Die Liste der Sprachen und \xDCbersetzungen zeigt eine Sprache pro Zeile, die \xDCbersetzungen lassen sich seitlich wischen (auf dem iPhone sind jetzt alle sichtbar).</li>
 <li><b>2.90.0</b> \u2014 Eine einzige <b>\u{1F4BE} Sicherung</b> (App-Informationen, neben \xABUpdate erzwingen\xBB): exportiert und importiert alles auf einmal; ersetzt Exportieren/Importieren jedes Bereichs. K\xFCrzel des Plans in jeder Sprache (#RPSP, #RBHW, #RDSP\u2026) und neue Beschreibung. \xABHinweise und Warnungen\xBB.</li>
 <li><b>2.89.0</b> \u2014 Neu: <b>\u{1F525} #EDSW \xB7 Erweckt durch sein Wort</b>: ein Bibelkapitel pro Tag (weltweit dasselbe), mit dem ganzen Kapitel in der gew\xE4hlten \xDCbersetzung, fr\xFCheren Tagen bis 1. Mose 1 und als gelesen markieren. Im \u{1F4D6} und in der Bibliothek.</li>

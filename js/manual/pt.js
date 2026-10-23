@@ -348,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>N\xE3o vejo as Medita\xE7\xF5es</b>: escreva <b>meditaciones</b> na busca.</li>
 </ul>`},novedades:{titulo:"Novidades",html:`
 <ul>
+<li><b>2.91.1</b> \u2014 B\xEDblia: a bandeira mostra os idiomas e, ao tocar em um, aparecem embaixo suas vers\xF5es (como no #RPSP). Ocupa menos espa\xE7o.</li>
 <li><b>2.91.0</b> \u2014 Ano b\xEDblico e #RPSP: <b>bandeira</b> para ler em outro idioma e seletor de <b>vers\xE3o</b> no alto, como nas Medita\xE7\xF5es. B\xEDblia no celular: a lista de idiomas e vers\xF5es mostra um idioma por linha e as vers\xF5es deslizam para o lado (no iPhone agora aparecem todas).</li>
 <li><b>2.90.0</b> \u2014 Um \xFAnico <b>\u{1F4BE} Backup</b> (Informa\xE7\xF5es do app, ao lado de \xABFor\xE7ar atualiza\xE7\xE3o\xBB): exporta e importa tudo de uma vez; substitui o Exportar/Importar de cada se\xE7\xE3o. Sigla do plano em cada idioma (#RPSP, #RBHW, #RDSP\u2026) e nova descri\xE7\xE3o. \xABAvisos e alertas\xBB.</li>
 <li><b>2.89.0</b> \u2014 Novo <b>\u{1F525} #RPSP \xB7 Reavivados por Sua Palavra</b>: um cap\xEDtulo da B\xEDblia por dia (o mesmo no mundo inteiro), com o cap\xEDtulo inteiro na vers\xE3o que voc\xEA escolher, dias anteriores at\xE9 G\xEAnesis 1 e marcar como lido. No \u{1F4D6} e na Biblioteca.</li>

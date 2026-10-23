@@ -348,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>Non vedo le Meditazioni</b>: scrivi <b>meditaciones</b> nella ricerca.</li>
 </ul>`},novedades:{titulo:"Novit\xE0",html:`
 <ul>
+<li><b>2.91.1</b> \u2014 Bibbia: la bandiera mostra le lingue e, toccandone una, sotto compaiono le sue versioni (come in #RDSP). Occupa meno spazio.</li>
 <li><b>2.91.0</b> \u2014 Bibbia in un anno e #RDSP: <b>bandiera</b> per leggere in un'altra lingua e selettore della <b>versione</b> in alto, come nelle Meditazioni. Bibbia sul telefono: l'elenco di lingue e versioni mostra una lingua per riga e le versioni scorrono di lato (sull'iPhone ora si vedono tutte).</li>
 <li><b>2.90.0</b> \u2014 Un unico <b>\u{1F4BE} Backup</b> (Informazioni sull'app, accanto a \xABForza aggiornamento\xBB): esporta e importa tutto in una volta; sostituisce Esporta/Importa di ogni sezione. Sigla del piano in ogni lingua (#RPSP, #RBHW, #RDSP\u2026) e nuova descrizione. \xABAvvisi e allerte\xBB.</li>
 <li><b>2.89.0</b> \u2014 Nuovo <b>\u{1F525} #RDSP \xB7 Ravvivati dalla Sua Parola</b>: un capitolo della Bibbia al giorno (lo stesso in tutto il mondo), con il capitolo intero nella versione che scegli, giorni precedenti fino a Genesi 1 e segna come letto. In \u{1F4D6} e nella Biblioteca.</li>

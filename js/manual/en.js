@@ -348,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>I don't see Devotionals</b>: type <b>meditaciones</b> in the search box.</li>
 </ul>`},novedades:{titulo:"What's new",html:`
 <ul>
+<li><b>2.91.1</b> \u2014 Bible: the flag shows the languages and, when you tap one, its versions appear below (as in #RBHW). It takes up less space.</li>
 <li><b>2.91.0</b> \u2014 Bible in a Year and #RBHW: a <b>flag</b> to read in another language and a <b>version</b> selector at the top, as in Devotionals. Bible on phones: the list of languages and versions shows one language per row and the versions slide sideways (all of them are now visible on iPhone).</li>
 <li><b>2.90.0</b> \u2014 A single <b>\u{1F4BE} Backup</b> (App information, next to \xABForce update\xBB): exports and imports everything at once; replaces each section's Export/Import. Plan acronym in each language (#RPSP, #RBHW, #RDSP\u2026) and new description. \xABNotices and alerts\xBB.</li>
 <li><b>2.89.0</b> \u2014 New <b>\u{1F525} #RBHW \xB7 Revived by His Word</b>: one Bible chapter a day (the same worldwide), with the whole chapter in the version you choose, previous days back to Genesis 1 and mark as read. In \u{1F4D6} and the Library.</li>
