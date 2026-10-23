@@ -272,6 +272,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>\u25B6 Inizia oggi (giorno 1)</b>: invece di seguire il calendario (1\xB0 gennaio = giorno 1), il piano parte dal giorno che scegli tu, cos\xEC non inizi in ritardo. Puoi tornare al calendario quando vuoi.</li>
 <li><b>\u2610 Segna come letto</b>, barra di avanzamento, <b>Vai al primo giorno non letto</b> e <b>Ricomincia</b>. <b>\u2039 \u203A</b> e <b>Oggi</b> per spostarti tra i giorni.</li>
 <li>I giorni letti si salvano solo su questo dispositivo.</li>
+<li>La <b>bandiera</b> in alto sceglie la <b>lingua</b> della lettura (pu\xF2 essere diversa da quella dell'app, come nelle Meditazioni) e accanto si sceglie la <b>versione</b> della Bibbia.</li>
 </ul>`},rpsp:{titulo:"#RDSP \xB7 Ravvivati dalla Sua Parola",html:`
 <ul>
 <li>Un programma della Chiesa Cristiana Avventista del Settimo Giorno per leggere la Bibbia in cinque anni, con scritti scelti di Ellen G. White: <b>un capitolo della Bibbia al giorno</b>, in ordine, lo stesso in tutto il mondo. Dopo <b>Apocalisse 22</b> ricomincia da <b>Genesi 1</b>, senza fine.</li>
@@ -279,6 +280,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li>Il <b>capitolo intero</b> appare nella finestra, nella <b>versione</b> che scegli (la stessa della Bibbia dell'app). Tocca un versetto per aprirlo nella Bibbia ed evidenziarlo, annotarlo, condividerlo o confrontarlo.</li>
 <li><b>\u2039</b> va ai giorni precedenti, fino a <b>Genesi 1</b> del giro attuale; non si pu\xF2 andare oltre oggi. Toccando la data \u{1F5D3}\uFE0F si sceglie un giorno dal calendario. <b>Oggi</b> torna al capitolo di oggi.</li>
 <li><b>\u2610 Segna come letto</b>, quanti capitoli hai letto in questo giro e <b>Vai all'ultimo non letto</b>. Si salva solo su questo dispositivo.</li>
+<li>La <b>bandiera</b> in alto sceglie la <b>lingua</b> della lettura (pu\xF2 essere diversa da quella dell'app, come nelle Meditazioni) e accanto si sceglie la <b>versione</b> della Bibbia.</li>
 </ul>`},biblioteca:{titulo:"Biblioteca",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Risorse \u2192 Biblioteca</b>. Mostra solo ci\xF2 che \xE8 nella <b>lingua dell'app</b> e cambia da sola cambiando la bandiera:</li>
@@ -346,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>Non vedo le Meditazioni</b>: scrivi <b>meditaciones</b> nella ricerca.</li>
 </ul>`},novedades:{titulo:"Novit\xE0",html:`
 <ul>
+<li><b>2.91.0</b> \u2014 Bibbia in un anno e #RDSP: <b>bandiera</b> per leggere in un'altra lingua e selettore della <b>versione</b> in alto, come nelle Meditazioni. Bibbia sul telefono: l'elenco di lingue e versioni mostra una lingua per riga e le versioni scorrono di lato (sull'iPhone ora si vedono tutte).</li>
 <li><b>2.90.0</b> \u2014 Un unico <b>\u{1F4BE} Backup</b> (Informazioni sull'app, accanto a \xABForza aggiornamento\xBB): esporta e importa tutto in una volta; sostituisce Esporta/Importa di ogni sezione. Sigla del piano in ogni lingua (#RPSP, #RBHW, #RDSP\u2026) e nuova descrizione. \xABAvvisi e allerte\xBB.</li>
 <li><b>2.89.0</b> \u2014 Nuovo <b>\u{1F525} #RDSP \xB7 Ravvivati dalla Sua Parola</b>: un capitolo della Bibbia al giorno (lo stesso in tutto il mondo), con il capitolo intero nella versione che scegli, giorni precedenti fino a Genesi 1 e segna come letto. In \u{1F4D6} e nella Biblioteca.</li>
 <li><b>2.88.0</b> \u2014 Spartito: di nuovo \xABClicca qui\xBB; <b>\u2715</b> per smettere di ascoltare; <b>\u21A9</b> torna allo spartito precedente. Avvisi anche per strumento, tonalit\xE0, colore, giorno/notte e libro. Bandierine della lista pi\xF9 vicine. Tema Bianco e nero: la lettera scelta si legge bene di giorno e di notte.</li>

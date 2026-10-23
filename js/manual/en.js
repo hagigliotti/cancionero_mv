@@ -272,6 +272,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>\u25B6 Start today (day 1)</b>: instead of following the calendar (January 1 = day 1), the plan starts on the day you choose, so you don't start behind. You can go back to the calendar whenever you want.</li>
 <li><b>\u2610 Mark as read</b>, progress bar, <b>Go to the first unread day</b> and <b>Start over</b>. <b>\u2039 \u203A</b> and <b>Today</b> to move through the days.</li>
 <li>Days read are saved only on this device.</li>
+<li>The <b>flag</b> at the top chooses the reading <b>language</b> (it can differ from the app's, as in Devotionals) and next to it you choose the Bible <b>version</b>.</li>
 </ul>`},rpsp:{titulo:"#RBHW \xB7 Revived by His Word",html:`
 <ul>
 <li>A Seventh-day Adventist Church program for reading the Bible in five years, along with selected writings of Ellen G. White: <b>one Bible chapter a day</b>, in order, the same all over the world. After <b>Revelation 22</b> it starts again at <b>Genesis 1</b>, endlessly.</li>
@@ -279,6 +280,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li>The <b>whole chapter</b> appears in the window, in the <b>version</b> you choose (the same one the app's Bible uses). Tap a verse to open it in the Bible to highlight, add a note, share or compare.</li>
 <li><b>\u2039</b> goes to previous days, back to <b>Genesis 1</b> of the current round; you can't go past today. Tap the \u{1F5D3}\uFE0F date to pick a day on the calendar. <b>Today</b> returns to today's chapter.</li>
 <li><b>\u2610 Mark as read</b>, how many chapters you read in this round and <b>Go to the last unread</b>. Saved only on this device.</li>
+<li>The <b>flag</b> at the top chooses the reading <b>language</b> (it can differ from the app's, as in Devotionals) and next to it you choose the Bible <b>version</b>.</li>
 </ul>`},biblioteca:{titulo:"Library",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Resources \u2192 Library</b>. It shows only what is in the <b>app language</b> and changes when you change the flag:</li>
@@ -346,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>I don't see Devotionals</b>: type <b>meditaciones</b> in the search box.</li>
 </ul>`},novedades:{titulo:"What's new",html:`
 <ul>
+<li><b>2.91.0</b> \u2014 Bible in a Year and #RBHW: a <b>flag</b> to read in another language and a <b>version</b> selector at the top, as in Devotionals. Bible on phones: the list of languages and versions shows one language per row and the versions slide sideways (all of them are now visible on iPhone).</li>
 <li><b>2.90.0</b> \u2014 A single <b>\u{1F4BE} Backup</b> (App information, next to \xABForce update\xBB): exports and imports everything at once; replaces each section's Export/Import. Plan acronym in each language (#RPSP, #RBHW, #RDSP\u2026) and new description. \xABNotices and alerts\xBB.</li>
 <li><b>2.89.0</b> \u2014 New <b>\u{1F525} #RBHW \xB7 Revived by His Word</b>: one Bible chapter a day (the same worldwide), with the whole chapter in the version you choose, previous days back to Genesis 1 and mark as read. In \u{1F4D6} and the Library.</li>
 <li><b>2.88.0</b> \u2014 Sheet music: \xABClick here\xBB again; <b>\u2715</b> to stop listening; <b>\u21A9</b> back to the previous score. Notices also for instrument, key, color, day/night and book changes. Flags in the list closer together. Black and white theme: the selected letter is readable by day and night.</li>

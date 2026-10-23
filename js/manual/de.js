@@ -272,6 +272,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>\u25B6 Heute beginnen (Tag 1)</b>: statt dem Kalender zu folgen (1. Januar = Tag 1) beginnt der Plan an dem Tag, den du w\xE4hlst, so f\xE4ngst du nicht im R\xFCckstand an. Du kannst jederzeit zum Kalender zur\xFCckkehren.</li>
 <li><b>\u2610 Als gelesen markieren</b>, Fortschrittsleiste, <b>Zum ersten ungelesenen Tag</b> und <b>Neu beginnen</b>. <b>\u2039 \u203A</b> und <b>Heute</b>, um dich durch die Tage zu bewegen.</li>
 <li>Gelesene Tage werden nur auf diesem Ger\xE4t gespeichert.</li>
+<li>Die <b>Flagge</b> oben w\xE4hlt die <b>Sprache</b> der Lesung (kann eine andere sein als die der App, wie bei den Andachten), daneben w\xE4hlt man die <b>\xDCbersetzung</b> der Bibel.</li>
 </ul>`},rpsp:{titulo:"#EDSW \xB7 Erweckt durch sein Wort",html:`
 <ul>
 <li>Ein Programm der Siebenten-Tags-Adventisten, um die Bibel in f\xFCnf Jahren zu lesen, zusammen mit ausgew\xE4hlten Schriften von Ellen G. White: <b>ein Bibelkapitel pro Tag</b>, der Reihe nach, weltweit dasselbe. Nach <b>Offenbarung 22</b> beginnt es wieder mit <b>1. Mose 1</b>, ohne Ende.</li>
@@ -279,6 +280,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li>Das <b>ganze Kapitel</b> erscheint im Fenster, in der gew\xE4hlten <b>\xDCbersetzung</b> (dieselbe wie in der Bibel der App). Tippe auf einen Vers, um ihn in der Bibel zu \xF6ffnen und zu markieren, zu notieren, zu teilen oder zu vergleichen.</li>
 <li><b>\u2039</b> geht zu fr\xFCheren Tagen, bis <b>1. Mose 1</b> des aktuellen Durchgangs; \xFCber heute hinaus geht es nicht. Mit dem Datum \u{1F5D3}\uFE0F w\xE4hlt man einen Tag im Kalender. <b>Heute</b> f\xFChrt zum heutigen Kapitel zur\xFCck.</li>
 <li><b>\u2610 Als gelesen markieren</b>, wie viele Kapitel in diesem Durchgang gelesen wurden und <b>Zum letzten ungelesenen</b>. Wird nur auf diesem Ger\xE4t gespeichert.</li>
+<li>Die <b>Flagge</b> oben w\xE4hlt die <b>Sprache</b> der Lesung (kann eine andere sein als die der App, wie bei den Andachten), daneben w\xE4hlt man die <b>\xDCbersetzung</b> der Bibel.</li>
 </ul>`},biblioteca:{titulo:"Bibliothek",html:`
 <ul>
 <li><b>\u2630 Men\xFC \u2192 Ressourcen \u2192 Bibliothek</b>. Sie zeigt nur, was in der <b>Sprache der App</b> ist, und \xE4ndert sich beim Wechsel der Flagge von selbst:</li>
@@ -346,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>Ich sehe die Andachten nicht</b>: schreibe <b>meditaciones</b> in die Suche.</li>
 </ul>`},novedades:{titulo:"Neuigkeiten",html:`
 <ul>
+<li><b>2.91.0</b> \u2014 Bibel in einem Jahr und #EDSW: <b>Flagge</b>, um in einer anderen Sprache zu lesen, und Auswahl der <b>\xDCbersetzung</b> oben, wie bei den Andachten. Bibel auf dem Handy: Die Liste der Sprachen und \xDCbersetzungen zeigt eine Sprache pro Zeile, die \xDCbersetzungen lassen sich seitlich wischen (auf dem iPhone sind jetzt alle sichtbar).</li>
 <li><b>2.90.0</b> \u2014 Eine einzige <b>\u{1F4BE} Sicherung</b> (App-Informationen, neben \xABUpdate erzwingen\xBB): exportiert und importiert alles auf einmal; ersetzt Exportieren/Importieren jedes Bereichs. K\xFCrzel des Plans in jeder Sprache (#RPSP, #RBHW, #RDSP\u2026) und neue Beschreibung. \xABHinweise und Warnungen\xBB.</li>
 <li><b>2.89.0</b> \u2014 Neu: <b>\u{1F525} #EDSW \xB7 Erweckt durch sein Wort</b>: ein Bibelkapitel pro Tag (weltweit dasselbe), mit dem ganzen Kapitel in der gew\xE4hlten \xDCbersetzung, fr\xFCheren Tagen bis 1. Mose 1 und als gelesen markieren. Im \u{1F4D6} und in der Bibliothek.</li>
 <li><b>2.88.0</b> \u2014 Noten: wieder \xABHier klicken\xBB; <b>\u2715</b> beendet das Anh\xF6ren; <b>\u21A9</b> zur\xFCck zu den vorherigen Noten. Hinweise auch bei Instrument, Tonart, Farbe, Tag/Nacht und Buch. Flaggen in der Liste enger. Thema Schwarz-Wei\xDF: der gew\xE4hlte Buchstabe ist tags und nachts lesbar.</li>

@@ -272,6 +272,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>\u25B6 Commencer aujourd'hui (jour 1)</b> : au lieu de suivre le calendrier (1er janvier = jour 1), le plan commence le jour que vous choisissez, ainsi vous ne partez pas en retard. Vous pouvez revenir au calendrier quand vous voulez.</li>
 <li><b>\u2610 Marquer comme lu</b>, barre de progression, <b>Aller au premier jour non lu</b> et <b>Recommencer</b>. <b>\u2039 \u203A</b> et <b>Aujourd'hui</b> pour vous d\xE9placer entre les jours.</li>
 <li>Les jours lus sont enregistr\xE9s uniquement sur cet appareil.</li>
+<li>Le <b>drapeau</b> en haut choisit la <b>langue</b> de lecture (elle peut diff\xE9rer de celle de l'app, comme dans les M\xE9ditations) et \xE0 c\xF4t\xE9 on choisit la <b>version</b> de la Bible.</li>
 </ul>`},rpsp:{titulo:"#RPSP \xB7 Ranim\xE9s par sa Parole",html:`
 <ul>
 <li>Un programme de l'\xC9glise adventiste du septi\xE8me jour pour lire la Bible en cinq ans, avec des \xE9crits choisis d'Ellen G. White : <b>un chapitre de la Bible par jour</b>, dans l'ordre, le m\xEAme dans le monde entier. Apr\xE8s <b>Apocalypse 22</b>, on recommence \xE0 <b>Gen\xE8se 1</b>, sans fin.</li>
@@ -279,6 +280,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li>Le <b>chapitre entier</b> appara\xEEt dans la fen\xEAtre, dans la <b>version</b> choisie (la m\xEAme que la Bible de l'app). Touchez un verset pour l'ouvrir dans la Bible et le surligner, l'annoter, le partager ou le comparer.</li>
 <li><b>\u2039</b> va aux jours pr\xE9c\xE9dents, jusqu'\xE0 <b>Gen\xE8se 1</b> du tour actuel ; on ne peut pas d\xE9passer aujourd'hui. Toucher la date \u{1F5D3}\uFE0F permet de choisir un jour dans le calendrier. <b>Aujourd'hui</b> revient au chapitre du jour.</li>
 <li><b>\u2610 Marquer comme lu</b>, nombre de chapitres lus dans ce tour et <b>Aller au dernier non lu</b>. Enregistr\xE9 uniquement sur cet appareil.</li>
+<li>Le <b>drapeau</b> en haut choisit la <b>langue</b> de lecture (elle peut diff\xE9rer de celle de l'app, comme dans les M\xE9ditations) et \xE0 c\xF4t\xE9 on choisit la <b>version</b> de la Bible.</li>
 </ul>`},biblioteca:{titulo:"Biblioth\xE8que",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Ressources \u2192 Biblioth\xE8que</b>. Elle montre seulement ce qui est dans la <b>langue de l'application</b> et change toute seule en changeant de drapeau :</li>
@@ -346,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>Je ne vois pas les M\xE9ditations</b> : \xE9crivez <b>meditaciones</b> dans la recherche.</li>
 </ul>`},novedades:{titulo:"Nouveaut\xE9s",html:`
 <ul>
+<li><b>2.91.0</b> \u2014 La Bible en un an et #RPSP : <b>drapeau</b> pour lire dans une autre langue et choix de la <b>version</b> en haut, comme dans les M\xE9ditations. Bible sur t\xE9l\xE9phone : la liste des langues et versions montre une langue par ligne et les versions d\xE9filent sur le c\xF4t\xE9 (sur iPhone, toutes sont visibles).</li>
 <li><b>2.90.0</b> \u2014 Une seule <b>\u{1F4BE} Sauvegarde</b> (Informations de l'app, \xE0 c\xF4t\xE9 de \xABForcer la mise \xE0 jour\xBB) : exporte et importe tout d'un coup ; remplace les Exporter/Importer de chaque section. Sigle du plan dans chaque langue (#RPSP, #RBHW, #RDSP\u2026) et nouvelle description. \xABAvis et alertes\xBB.</li>
 <li><b>2.89.0</b> \u2014 Nouveau <b>\u{1F525} #RPSP \xB7 Ranim\xE9s par sa Parole</b> : un chapitre de la Bible par jour (le m\xEAme dans le monde entier), avec le chapitre entier dans la version choisie, les jours pr\xE9c\xE9dents jusqu'\xE0 Gen\xE8se 1 et marquer comme lu. Dans \u{1F4D6} et la Biblioth\xE8que.</li>
 <li><b>2.88.0</b> \u2014 Partition : \xABCliquez ici\xBB \xE0 nouveau ; <b>\u2715</b> pour arr\xEAter l'\xE9coute ; <b>\u21A9</b> revient \xE0 la partition pr\xE9c\xE9dente. Avis aussi pour l'instrument, la tonalit\xE9, la couleur, jour/nuit et le livre. Drapeaux de la liste plus serr\xE9s. Th\xE8me Noir et blanc : la lettre choisie se lit bien de jour comme de nuit.</li>
