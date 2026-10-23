@@ -31,7 +31,7 @@ const RP_LABELS={titulo:{es:"Mis Playlists",en:"My Playlists",it:"Le mie playlis
         <span class="rp-item-sub">${tRp("crear_playlist_sub")}</span>
       </div>
     </div>
-  `;let l="";return rp.filtro!=="libros"&&(l+=s+n.map(r).join("")),rp.filtro!=="playlists"&&(l+=o.map(i).join("")),rp.filtro==="libros"&&!o.length&&(l=`<p class="rp-vacio">${tRp("sin_libros")}</p>`),`
+  `;let l="";return rp.filtro!=="libros"&&(l+=s+n.map(r).join("")),rp.filtro!=="playlists"&&(l+=o.map(i).join("")),rp.filtro==="libros"&&!o.length&&(l=`<p class="rp-vacio">${tRp("sin_libros")}</p>`),rp.filtro!=="libros"&&typeof abrirBackups=="function"&&(l+=`<button type="button" class="rp-backup-btn" ${dataAction("abrirBackups")}>${escapeHtml(tBk("boton_largo"))}</button>`),`
     <div class="rp-top">
       <button type="button" class="rp-icon-btn" ${dataAction("minimizarReproductor")} title="${escapeHtml(tRp("minimizar"))}">${rpIcono("down")}</button>
       <span class="rp-top-badge badge-menu" ${dataAction("abrirMenuDesdeModal")} role="button" tabindex="0" title="Men\xFA" aria-label="Men\xFA">\u{1F3A7}</span>

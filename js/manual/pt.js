@@ -142,7 +142,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>Criar</b>: escreva o nome e toque <b>+ Criar</b>.</li>
 <li><b>Adicionar ou tirar um c\xE2ntico</b>: toque a \u2B50 do c\xE2ntico e marque ou desmarque a lista.</li>
 <li>Toque uma lista para ver e abrir seus c\xE2nticos; \u2715 para tirar um; tamb\xE9m \xE9 poss\xEDvel excluir a lista.</li>
-<li><b>\u2699\uFE0F Organizar e fazer backup</b>: <b>Exportar</b> salva um arquivo com suas listas e <b>Importar</b> as carrega em outro celular ou navegador.</li>
+<li><b>\u2699\uFE0F Organizar e fazer backup</b>: o bot\xE3o <b>\u{1F4BE} Backup</b> salva em um s\xF3 arquivo tudo seu (listas, playlists, pedidos, bloco, notas, destaques\u2026) para passar a outro celular ou navegador.</li>
 <li>As listas ficam salvas s\xF3 no seu dispositivo.</li>
 </ul>`},reproductor:{titulo:"Minhas Playlists (player de m\xFAsica)",html:`
 <p>Abre com <b>\u{1F3A7}</b> (em cima do menu ou em <b>Minha m\xFAsica \u2192 Minhas Playlists</b>) ou com <b>\u{1F3A7} mp3</b> num c\xE2ntico.</p>
@@ -189,7 +189,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li>Escreva um nome e toque <b>+ Nova</b>.</li>
 <li>Dentro: toque o bot\xE3o vermelho para <b>gravar</b>; \u25B6\uFE0F para ouvir. Voc\xEA pode anotar letra e acordes, tom, ritmo e BPM.</li>
 <li><b>\u2B07\uFE0F Baixar</b> o \xE1udio ou <b>\u{1F5D1}\uFE0F Excluir</b> a ideia.</li>
-<li><b>\u2699\uFE0F Organizar e fazer backup</b>: Exportar / Importar para pass\xE1-las a outro dispositivo.</li>
+<li><b>\u2699\uFE0F Organizar e fazer backup</b>: <b>\u{1F4BE} Backup</b> (um s\xF3 arquivo com tudo, grava\xE7\xF5es inclu\xEDdas).</li>
 <li>As grava\xE7\xF5es ficam s\xF3 no seu dispositivo. O microfone \xE9 usado apenas quando voc\xEA toca em gravar.</li>
 </ul>`},oracion:{titulo:"Meus Pedidos de Ora\xE7\xE3o",html:`
 <p>Abre com <b>\u{1F6D0}</b> em cima do menu.</p>
@@ -197,7 +197,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li>Escreva o pedido e toque <b>+ Adicionar pedido</b>. Voc\xEA pode juntar <b>\u{1F4F7} uma foto</b>, <b>\u{1F4D6} um vers\xEDculo</b> (toque para l\xEA-lo na B\xEDblia do app) ou <b>\u{1F3B5} um c\xE2ntico</b>.</li>
 <li>Cada pedido pode ser editado, apagado ou marcado como <b>\u2705 respondido</b>.</li>
 <li><b>Listas</b> (+ Criar lista) para agrup\xE1-los (fam\xEDlia, igreja\u2026); d\xE1 para renomear, excluir e mover pedidos entre listas.</li>
-<li><b>\u2699\uFE0F Organizar e fazer backup</b>: Exportar / Importar.</li>
+<li><b>\u2699\uFE0F Organizar e fazer backup</b>: <b>\u{1F4BE} Backup</b> (um s\xF3 arquivo com tudo, fotos inclu\xEDdas).</li>
 <li>Tudo, inclusive as fotos, fica s\xF3 no seu dispositivo.</li>
 </ul>`},lectura:{titulo:"B\xEDblia, Medita\xE7\xF5es, Ano b\xEDblico e #RPSP (bot\xE3o \u{1F4D6})",html:`
 <p>Em cima do <b>\u2630 Menu</b>, o bot\xE3o <b>\u{1F4D6}</b> abre um menu com quatro op\xE7\xF5es: <b>\u{1F4D6} B\xEDblia Sagrada</b>, <b>\u{1F54A}\uFE0F Medita\xE7\xF5es</b>, <b>\u{1F4C5} Ano b\xEDblico</b> e <b>\u{1F525} #RPSP</b>. Todas tamb\xE9m est\xE3o em <b>\u2630 Menu \u2192 Recursos \u2192 Biblioteca</b>.</p>
@@ -274,7 +274,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li>Os dias lidos ficam salvos s\xF3 neste dispositivo.</li>
 </ul>`},rpsp:{titulo:"#RPSP \xB7 Reavivados por Sua Palavra",html:`
 <ul>
-<li>Plano da Igreja Adventista para ler <b>toda a B\xEDblia, um cap\xEDtulo por dia</b>, em ordem: o mesmo cap\xEDtulo no mesmo dia no mundo inteiro. Depois de <b>Apocalipse 22</b> recome\xE7a em <b>G\xEAnesis 1</b>, sem fim.</li>
+<li>Um programa da Igreja Adventista do S\xE9timo Dia de leitura da B\xEDblia em cinco anos e de escritos selecionados de Ellen G. White: <b>um cap\xEDtulo da B\xEDblia por dia</b>, em ordem, o mesmo no mundo inteiro. Depois de <b>Apocalipse 22</b> recome\xE7a em <b>G\xEAnesis 1</b>, sem fim.</li>
 <li>Abre-se em <b>\u{1F4D6} \u2192 #RPSP</b> ou na <b>Biblioteca</b> (que mostra o cap\xEDtulo de hoje).</li>
 <li>O <b>cap\xEDtulo inteiro</b> aparece na janela, na <b>vers\xE3o</b> que voc\xEA escolher (a mesma da B\xEDblia do app). Toque num vers\xEDculo para abri-lo na B\xEDblia e destacar, anotar, compartilhar ou comparar.</li>
 <li><b>\u2039</b> vai aos dias anteriores, at\xE9 <b>G\xEAnesis 1</b> da volta atual; para frente n\xE3o passa de hoje. Tocando na data \u{1F5D3}\uFE0F escolhe-se um dia no calend\xE1rio. <b>Hoje</b> volta ao cap\xEDtulo de hoje.</li>
@@ -298,7 +298,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>\u2630 Menu \u2192 Ajustes \u2192 Cor do tema</b>: 13 op\xE7\xF5es \u2014 Branco, Vermelho, Coral, Laranja, Amarelo, Verde, Turquesa, Azul-claro, Azul, Violeta, Lil\xE1s, Rosa e <b>Kindle</b>. Cada c\xEDrculo mostra a cor e seu fundo noturno.</li>
 <li><b>Kindle</b> (papel e tinta): o app inteiro como um leitor de livros eletr\xF4nicos \u2014 de dia, papel creme com letras marrom-escuras; de noite, fundo grafite com letras cor de papel; fonte <b>Literata</b> (pensada para ler em telas), papel com uma textura suave, \xEDcones cor de tinta, texto justificado, t\xEDtulos em versalete, bot\xF5es com contorno, sem sombras nem brilhos e fotos levemente s\xE9pia. Ideal para ler a B\xEDblia e as medita\xE7\xF5es. (Substitui o antigo \xABCinza\xBB; quem o tinha escolhido passa para \xABBranco\xBB.)</li>
 <li>A cor se aplica a bot\xF5es, acordes, fundo e barra do celular.</li>
-<li><b>\u2630 Menu \u2192 Ajustes \u2192 \u{1F4AC} Avisos e ajudas</b>: quando um bot\xE3o passa de Mostrar a Ocultar ou de Ativo a Inativo, aparece embaixo um pequeno aviso dizendo como ficou (por exemplo \xAB\u{1F3B8} Tablatura: vis\xEDvel\xBB). Tamb\xE9m avisa ao mudar o instrumento do diagrama, o tom (\u266D \u266E \u266F), a cor do tema, o modo dia/noite e o livro. D\xE1 para desativar ali.</li>
+<li><b>\u2630 Menu \u2192 Ajustes \u2192 \u{1F4AC} Avisos e alertas</b>: quando um bot\xE3o passa de Mostrar a Ocultar ou de Ativo a Inativo, aparece embaixo um pequeno aviso dizendo como ficou (por exemplo \xAB\u{1F3B8} Tablatura: vis\xEDvel\xBB). Tamb\xE9m avisa ao mudar o instrumento do diagrama, o tom (\u266D \u266E \u266F), a cor do tema, o modo dia/noite e o livro. D\xE1 para desativar ali.</li>
 </ul>`},iglesia:{titulo:"Modo igreja: projetor e TV",html:`
 <h4>Projetor (computador)</h4>
 <ul>
@@ -334,18 +334,19 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li>Minhas Listas, Minhas Playlists, o Bloco musical, os Pedidos de ora\xE7\xE3o, as notas das Medita\xE7\xF5es, as marcas e notas da B\xEDblia, os dias lidos do Ano b\xEDblico, a vers\xE3o da B\xEDblia escolhida, o tema, a cor e o idioma ficam salvos <b>s\xF3 no seu dispositivo</b>. Nada \xE9 enviado a nenhum servidor.</li>
 <li>O <b>microfone</b> \xE9 usado s\xF3 para o afinador e para gravar no Bloco, e apenas quando voc\xEA o ativa.</li>
 <li>A <b>c\xE2mera/fotos</b> s\xE3o usadas s\xF3 se voc\xEA adicionar uma foto a um pedido de ora\xE7\xE3o.</li>
-<li>Para passar seus dados a outro dispositivo use <b>Exportar / Importar</b> em cada se\xE7\xE3o.</li>
+<li>Para passar seus dados a outro dispositivo use <b>\u{1F4BE} Backup</b> (em Informa\xE7\xF5es do app, ao lado de \xABFor\xE7ar atualiza\xE7\xE3o\xBB): exporta e importa tudo de uma vez.</li>
 </ul>`},problemas:{titulo:"Perguntas frequentes e problemas",html:`
 <ul>
 <li><b>N\xE3o vejo uma novidade</b>: feche a aba ou o app e abra de novo.</li>
 <li><b>Um \xE1udio n\xE3o toca</b>: confira a conex\xE3o com a internet e se o celular n\xE3o est\xE1 no silencioso.</li>
 <li><b>O acorde n\xE3o abre a janelinha</b>: em Diagrama de acordes est\xE1 escolhido \xABNenhum\xBB, ou voc\xEA est\xE1 no modo projetor/TV.</li>
 <li><b>A tela ficou ampliada</b>: fa\xE7a zoom com dois dedos para voltar; o app n\xE3o amplia mais sozinho ao tocar num campo.</li>
-<li><b>Troquei de celular</b>: use Exportar no antigo e Importar no novo (Minhas Listas, Bloco, Pedidos de ora\xE7\xE3o).</li>
+<li><b>Troquei de celular</b>: no antigo, <b>Informa\xE7\xF5es do app \u2192 \u{1F4BE} Backup \u2192 Exportar tudo</b>; no novo, <b>Importar</b> esse arquivo. Passa tudo junto: listas, playlists, pedidos, bloco, notas, destaques da B\xEDblia, planos de leitura e ajustes.</li>
 <li><b>Encontrei um erro numa letra</b>: avise pelo <b>Contato</b>.</li>
 <li><b>N\xE3o vejo as Medita\xE7\xF5es</b>: escreva <b>meditaciones</b> na busca.</li>
 </ul>`},novedades:{titulo:"Novidades",html:`
 <ul>
+<li><b>2.90.0</b> \u2014 Um \xFAnico <b>\u{1F4BE} Backup</b> (Informa\xE7\xF5es do app, ao lado de \xABFor\xE7ar atualiza\xE7\xE3o\xBB): exporta e importa tudo de uma vez; substitui o Exportar/Importar de cada se\xE7\xE3o. Sigla do plano em cada idioma (#RPSP, #RBHW, #RDSP\u2026) e nova descri\xE7\xE3o. \xABAvisos e alertas\xBB.</li>
 <li><b>2.89.0</b> \u2014 Novo <b>\u{1F525} #RPSP \xB7 Reavivados por Sua Palavra</b>: um cap\xEDtulo da B\xEDblia por dia (o mesmo no mundo inteiro), com o cap\xEDtulo inteiro na vers\xE3o que voc\xEA escolher, dias anteriores at\xE9 G\xEAnesis 1 e marcar como lido. No \u{1F4D6} e na Biblioteca.</li>
 <li><b>2.88.0</b> \u2014 Partitura: \xABClique aqui\xBB de novo; <b>\u2715</b> para parar de ouvir; <b>\u21A9</b> volta \xE0 partitura anterior. Avisos tamb\xE9m ao mudar instrumento, tom, cor, dia/noite e livro. Bandeirinhas da lista mais juntas. Tema Preto e branco: a letra escolhida fica leg\xEDvel de dia e de noite.</li>
 <li><b>2.87.1</b> \u2014 \xABTransporte\xBB agora se chama <b>Acordes transpostos</b>; texto do c\xF3digo QR corrigido; os bot\xF5es Ativo/Inativo e Mostrar/Ocultar anunciam seu estado aos leitores de tela.</li>

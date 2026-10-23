@@ -142,7 +142,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>Cr\xE9er</b> : \xE9crivez le nom et touchez <b>+ Cr\xE9er</b>.</li>
 <li><b>Ajouter ou retirer un chant</b> : touchez la \u2B50 du chant et cochez ou d\xE9cochez la liste.</li>
 <li>Touchez une liste pour voir et ouvrir ses chants ; \u2715 pour en retirer un ; on peut aussi supprimer la liste.</li>
-<li><b>\u2699\uFE0F Organiser et sauvegarder</b> : <b>Exporter</b> enregistre un fichier avec vos listes et <b>Importer</b> les charge sur un autre t\xE9l\xE9phone ou navigateur.</li>
+<li><b>\u2699\uFE0F Organiser et sauvegarder</b> : le bouton <b>\u{1F4BE} Sauvegarde</b> enregistre toutes vos donn\xE9es dans un seul fichier (listes, playlists, demandes, bloc, notes, surlignages\u2026) pour les passer sur un autre t\xE9l\xE9phone ou navigateur.</li>
 <li>Les listes sont enregistr\xE9es uniquement sur votre appareil.</li>
 </ul>`},reproductor:{titulo:"Mes playlists (lecteur de musique)",html:`
 <p>Il s'ouvre avec <b>\u{1F3A7}</b> (en haut du menu ou dans <b>Ma musique \u2192 Mes playlists</b>) ou avec <b>\u{1F3A7} mp3</b> dans un chant.</p>
@@ -189,7 +189,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li>\xC9crivez un nom et touchez <b>+ Nouvelle</b>.</li>
 <li>\xC0 l'int\xE9rieur : touchez le bouton rouge pour <b>enregistrer</b> ; \u25B6\uFE0F pour \xE9couter. Vous pouvez noter paroles et accords, tonalit\xE9, rythme et BPM.</li>
 <li><b>\u2B07\uFE0F T\xE9l\xE9charger</b> l'audio ou <b>\u{1F5D1}\uFE0F Supprimer</b> l'id\xE9e.</li>
-<li><b>\u2699\uFE0F Organiser et sauvegarder</b> : Exporter / Importer pour les passer sur un autre appareil.</li>
+<li><b>\u2699\uFE0F Organiser et sauvegarder</b> : <b>\u{1F4BE} Sauvegarde</b> (un seul fichier avec tout, enregistrements compris).</li>
 <li>Les enregistrements restent uniquement sur votre appareil. Le micro n'est utilis\xE9 que lorsque vous touchez enregistrer.</li>
 </ul>`},oracion:{titulo:"Mes demandes de pri\xE8re",html:`
 <p>S'ouvre avec <b>\u{1F6D0}</b> en haut du menu.</p>
@@ -197,7 +197,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li>\xC9crivez la demande et touchez <b>+ Ajouter la demande</b>. Vous pouvez y joindre <b>\u{1F4F7} une photo</b>, <b>\u{1F4D6} un verset</b> (touchez-le pour le lire dans la Bible de l'application) ou <b>\u{1F3B5} un chant</b>.</li>
 <li>Chaque demande peut \xEAtre modifi\xE9e, supprim\xE9e ou marqu\xE9e comme <b>\u2705 exauc\xE9e</b>.</li>
 <li><b>Listes</b> (+ Cr\xE9er une liste) pour les regrouper (famille, \xE9glise\u2026) ; on peut les renommer, les supprimer et d\xE9placer des demandes entre listes.</li>
-<li><b>\u2699\uFE0F Organiser et sauvegarder</b> : Exporter / Importer.</li>
+<li><b>\u2699\uFE0F Organiser et sauvegarder</b> : <b>\u{1F4BE} Sauvegarde</b> (un seul fichier avec tout, photos comprises).</li>
 <li>Tout, photos comprises, reste uniquement sur votre appareil.</li>
 </ul>`},lectura:{titulo:"Bible, M\xE9ditations, La Bible en un an et #RPSP (bouton \u{1F4D6})",html:`
 <p>En haut du <b>\u2630 Menu</b>, le bouton <b>\u{1F4D6}</b> ouvre un menu avec quatre options : <b>\u{1F4D6} Sainte Bible</b>, <b>\u{1F54A}\uFE0F M\xE9ditations</b>, <b>\u{1F4C5} La Bible en un an</b> et <b>\u{1F525} #RPSP</b>. Toutes sont aussi dans <b>\u2630 Menu \u2192 Ressources \u2192 Biblioth\xE8que</b>.</p>
@@ -274,7 +274,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li>Les jours lus sont enregistr\xE9s uniquement sur cet appareil.</li>
 </ul>`},rpsp:{titulo:"#RPSP \xB7 Ranim\xE9s par sa Parole",html:`
 <ul>
-<li>Un plan de l'\xC9glise adventiste pour lire <b>toute la Bible, un chapitre par jour</b>, dans l'ordre : le m\xEAme chapitre le m\xEAme jour dans le monde entier. Apr\xE8s <b>Apocalypse 22</b>, on recommence \xE0 <b>Gen\xE8se 1</b>, sans fin.</li>
+<li>Un programme de l'\xC9glise adventiste du septi\xE8me jour pour lire la Bible en cinq ans, avec des \xE9crits choisis d'Ellen G. White : <b>un chapitre de la Bible par jour</b>, dans l'ordre, le m\xEAme dans le monde entier. Apr\xE8s <b>Apocalypse 22</b>, on recommence \xE0 <b>Gen\xE8se 1</b>, sans fin.</li>
 <li>S'ouvre depuis <b>\u{1F4D6} \u2192 #RPSP</b> ou la <b>Biblioth\xE8que</b> (qui montre le chapitre du jour).</li>
 <li>Le <b>chapitre entier</b> appara\xEEt dans la fen\xEAtre, dans la <b>version</b> choisie (la m\xEAme que la Bible de l'app). Touchez un verset pour l'ouvrir dans la Bible et le surligner, l'annoter, le partager ou le comparer.</li>
 <li><b>\u2039</b> va aux jours pr\xE9c\xE9dents, jusqu'\xE0 <b>Gen\xE8se 1</b> du tour actuel ; on ne peut pas d\xE9passer aujourd'hui. Toucher la date \u{1F5D3}\uFE0F permet de choisir un jour dans le calendrier. <b>Aujourd'hui</b> revient au chapitre du jour.</li>
@@ -298,7 +298,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>\u2630 Menu \u2192 R\xE9glages \u2192 Couleur du th\xE8me</b> : 13 options \u2014 Blanc, Rouge, Corail, Orange, Jaune, Vert, Turquoise, Bleu clair, Bleu, Violet, Lilas, Rose et <b>Kindle</b>. Chaque cercle montre la couleur et son fond nocturne.</li>
 <li><b>Kindle</b> (papier et encre) : toute l'application comme une liseuse \u2014 le jour, papier cr\xE8me avec texte brun fonc\xE9 ; la nuit, fond anthracite avec texte couleur papier ; police <b>Literata</b> (con\xE7ue pour lire sur \xE9cran), papier au grain l\xE9ger, ic\xF4nes couleur encre, texte justifi\xE9, titres en petites capitales, boutons \xE0 contour, sans ombres ni reflets et photos l\xE9g\xE8rement s\xE9pia. Id\xE9al pour lire la Bible et les m\xE9ditations. (Il remplace l'ancien \xABGris\xBB ; ceux qui l'avaient choisi passent \xE0 \xABBlanc\xBB.)</li>
 <li>La couleur s'applique aux boutons, aux accords, au fond et \xE0 la barre du t\xE9l\xE9phone.</li>
-<li><b>\u2630 Menu \u2192 R\xE9glages \u2192 \u{1F4AC} Avis et aides</b> : quand un bouton passe de Afficher \xE0 Masquer ou de Actif \xE0 Inactif, un petit avis en bas indique l'\xE9tat (par exemple \xAB\u{1F3B8} Tablature : affich\xE9\xBB). Il appara\xEEt aussi quand on change l'instrument du diagramme, la tonalit\xE9 (\u266D \u266E \u266F), la couleur du th\xE8me, le mode jour/nuit et le livre. On peut le d\xE9sactiver l\xE0.</li>
+<li><b>\u2630 Menu \u2192 R\xE9glages \u2192 \u{1F4AC} Avis et alertes</b> : quand un bouton passe de Afficher \xE0 Masquer ou de Actif \xE0 Inactif, un petit avis en bas indique l'\xE9tat (par exemple \xAB\u{1F3B8} Tablature : affich\xE9\xBB). Il appara\xEEt aussi quand on change l'instrument du diagramme, la tonalit\xE9 (\u266D \u266E \u266F), la couleur du th\xE8me, le mode jour/nuit et le livre. On peut le d\xE9sactiver l\xE0.</li>
 </ul>`},iglesia:{titulo:"Mode \xE9glise : projecteur et TV",html:`
 <h4>Projecteur (ordinateur)</h4>
 <ul>
@@ -334,18 +334,19 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li>Mes listes, Mes playlists, le Bloc musical, les Demandes de pri\xE8re, les notes des M\xE9ditations, les surlignages et notes de la Bible, les jours lus de La Bible en un an, la version de la Bible choisie, le th\xE8me, la couleur et la langue sont enregistr\xE9s <b>uniquement sur votre appareil</b>. Rien n'est envoy\xE9 \xE0 un serveur.</li>
 <li>Le <b>micro</b> n'est utilis\xE9 que pour l'accordeur et pour enregistrer dans le Bloc, et seulement quand vous l'activez.</li>
 <li>L'<b>appareil photo/les photos</b> ne sont utilis\xE9s que si vous ajoutez une photo \xE0 une demande de pri\xE8re.</li>
-<li>Pour passer vos donn\xE9es sur un autre appareil, utilisez <b>Exporter / Importer</b> dans chaque section.</li>
+<li>Pour passer vos donn\xE9es sur un autre appareil, utilisez <b>\u{1F4BE} Sauvegarde</b> (dans Informations de l'app, \xE0 c\xF4t\xE9 de \xABForcer la mise \xE0 jour\xBB) : tout s'exporte et s'importe d'un coup.</li>
 </ul>`},problemas:{titulo:"Questions fr\xE9quentes et probl\xE8mes",html:`
 <ul>
 <li><b>Je ne vois pas une nouveaut\xE9</b> : fermez l'onglet ou l'application et rouvrez-la.</li>
 <li><b>Un audio ne joue pas</b> : v\xE9rifiez la connexion internet et que le t\xE9l\xE9phone n'est pas en silencieux.</li>
 <li><b>L'accord n'ouvre pas la fen\xEAtre</b> : \xABAucun\xBB est choisi dans Diagramme des accords, ou vous \xEAtes en mode projecteur/TV.</li>
 <li><b>L'\xE9cran est rest\xE9 agrandi</b> : zoomez \xE0 deux doigts pour revenir ; l'application ne s'agrandit plus toute seule en touchant un champ.</li>
-<li><b>J'ai chang\xE9 de t\xE9l\xE9phone</b> : utilisez Exporter sur l'ancien et Importer sur le nouveau (Mes listes, Bloc, Demandes de pri\xE8re).</li>
+<li><b>J'ai chang\xE9 de t\xE9l\xE9phone</b> : sur l'ancien, <b>Informations de l'app \u2192 \u{1F4BE} Sauvegarde \u2192 Tout exporter</b> ; sur le nouveau, <b>Importer</b> ce fichier. Tout passe ensemble : listes, playlists, demandes, bloc, notes, surlignages de la Bible, plans de lecture et r\xE9glages.</li>
 <li><b>J'ai trouv\xE9 une erreur dans des paroles</b> : signalez-la depuis <b>Contact</b>.</li>
 <li><b>Je ne vois pas les M\xE9ditations</b> : \xE9crivez <b>meditaciones</b> dans la recherche.</li>
 </ul>`},novedades:{titulo:"Nouveaut\xE9s",html:`
 <ul>
+<li><b>2.90.0</b> \u2014 Une seule <b>\u{1F4BE} Sauvegarde</b> (Informations de l'app, \xE0 c\xF4t\xE9 de \xABForcer la mise \xE0 jour\xBB) : exporte et importe tout d'un coup ; remplace les Exporter/Importer de chaque section. Sigle du plan dans chaque langue (#RPSP, #RBHW, #RDSP\u2026) et nouvelle description. \xABAvis et alertes\xBB.</li>
 <li><b>2.89.0</b> \u2014 Nouveau <b>\u{1F525} #RPSP \xB7 Ranim\xE9s par sa Parole</b> : un chapitre de la Bible par jour (le m\xEAme dans le monde entier), avec le chapitre entier dans la version choisie, les jours pr\xE9c\xE9dents jusqu'\xE0 Gen\xE8se 1 et marquer comme lu. Dans \u{1F4D6} et la Biblioth\xE8que.</li>
 <li><b>2.88.0</b> \u2014 Partition : \xABCliquez ici\xBB \xE0 nouveau ; <b>\u2715</b> pour arr\xEAter l'\xE9coute ; <b>\u21A9</b> revient \xE0 la partition pr\xE9c\xE9dente. Avis aussi pour l'instrument, la tonalit\xE9, la couleur, jour/nuit et le livre. Drapeaux de la liste plus serr\xE9s. Th\xE8me Noir et blanc : la lettre choisie se lit bien de jour comme de nuit.</li>
 <li><b>2.87.1</b> \u2014 \xABTransport\xBB s'appelle maintenant <b>Accords transpos\xE9s</b> ; texte du code QR corrig\xE9 ; les boutons Activ\xE9/D\xE9sactiv\xE9 et Afficher/Masquer annoncent leur \xE9tat aux lecteurs d'\xE9cran.</li>

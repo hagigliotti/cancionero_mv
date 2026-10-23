@@ -142,7 +142,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>Erstellen</b>: Namen eingeben und <b>+ Erstellen</b> tippen.</li>
 <li><b>Lied hinzuf\xFCgen oder entfernen</b>: tippe auf den \u2B50 des Liedes und hake die Liste an oder ab.</li>
 <li>Tippe eine Liste an, um ihre Lieder zu sehen und zu \xF6ffnen; \u2715 entfernt eines; die Liste kann auch gel\xF6scht werden.</li>
-<li><b>\u2699\uFE0F Ordnen und sichern</b>: <b>Exportieren</b> speichert eine Datei mit deinen Listen, <b>Importieren</b> l\xE4dt sie auf ein anderes Handy oder in einen anderen Browser.</li>
+<li><b>\u2699\uFE0F Ordnen und sichern</b>: Die Taste <b>\u{1F4BE} Sicherung</b> speichert alle deine Daten in einer Datei (Listen, Playlists, Anliegen, Notizblock, Notizen, Markierungen\u2026), um sie auf ein anderes Handy oder in einen anderen Browser zu bringen.</li>
 <li>Die Listen werden nur auf deinem Ger\xE4t gespeichert.</li>
 </ul>`},reproductor:{titulo:"Meine Playlists (Musikplayer)",html:`
 <p>\xD6ffnet sich mit <b>\u{1F3A7}</b> (oben im Men\xFC oder unter <b>Meine Musik \u2192 Meine Playlists</b>) oder mit <b>\u{1F3A7} mp3</b> in einem Lied.</p>
@@ -189,7 +189,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li>Namen eingeben und <b>+ Neu</b> tippen.</li>
 <li>Darin: rote Taste zum <b>Aufnehmen</b>; \u25B6\uFE0F zum Anh\xF6ren. Du kannst Text und Akkorde, Tonart, Rhythmus und BPM notieren.</li>
 <li><b>\u2B07\uFE0F Herunterladen</b> des Audios oder <b>\u{1F5D1}\uFE0F L\xF6schen</b> der Idee.</li>
-<li><b>\u2699\uFE0F Ordnen und sichern</b>: Exportieren / Importieren, um sie auf ein anderes Ger\xE4t zu bringen.</li>
+<li><b>\u2699\uFE0F Ordnen und sichern</b>: <b>\u{1F4BE} Sicherung</b> (eine Datei mit allem, Aufnahmen inklusive).</li>
 <li>Die Aufnahmen bleiben nur auf deinem Ger\xE4t. Das Mikrofon wird nur benutzt, wenn du auf Aufnehmen tippst.</li>
 </ul>`},oracion:{titulo:"Meine Gebetsanliegen",html:`
 <p>\xD6ffnet sich mit <b>\u{1F6D0}</b> oben im Men\xFC.</p>
@@ -197,10 +197,10 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li>Schreibe das Anliegen und tippe <b>+ Anliegen hinzuf\xFCgen</b>. Du kannst <b>\u{1F4F7} ein Foto</b>, <b>\u{1F4D6} einen Vers</b> (antippen, um ihn in der Bibel der App zu lesen) oder <b>\u{1F3B5} ein Lied</b> hinzuf\xFCgen.</li>
 <li>Jedes Anliegen kann bearbeitet, gel\xF6scht oder als <b>\u2705 erh\xF6rt</b> markiert werden.</li>
 <li><b>Listen</b> (+ Liste erstellen), um sie zu gruppieren (Familie, Gemeinde\u2026); sie lassen sich umbenennen, l\xF6schen und Anliegen zwischen Listen verschieben.</li>
-<li><b>\u2699\uFE0F Ordnen und sichern</b>: Exportieren / Importieren.</li>
+<li><b>\u2699\uFE0F Ordnen und sichern</b>: <b>\u{1F4BE} Sicherung</b> (eine Datei mit allem, Fotos inklusive).</li>
 <li>Alles, auch die Fotos, bleibt nur auf deinem Ger\xE4t.</li>
-</ul>`},lectura:{titulo:"Bibel, Andachten, Bibel in einem Jahr und #RPSP (Taste \u{1F4D6})",html:`
-<p>Oben im <b>\u2630 Men\xFC</b> \xF6ffnet die Taste <b>\u{1F4D6}</b> ein Men\xFC mit vier Optionen: <b>\u{1F4D6} Heilige Schrift</b>, <b>\u{1F54A}\uFE0F Andachten</b>, <b>\u{1F4C5} Bibel in einem Jahr</b> und <b>\u{1F525} #RPSP</b>. Alle gibt es auch unter <b>\u2630 Men\xFC \u2192 Ressourcen \u2192 Bibliothek</b>.</p>
+</ul>`},lectura:{titulo:"Bibel, Andachten, Bibel in einem Jahr und #EDSW (Taste \u{1F4D6})",html:`
+<p>Oben im <b>\u2630 Men\xFC</b> \xF6ffnet die Taste <b>\u{1F4D6}</b> ein Men\xFC mit vier Optionen: <b>\u{1F4D6} Heilige Schrift</b>, <b>\u{1F54A}\uFE0F Andachten</b>, <b>\u{1F4C5} Bibel in einem Jahr</b> und <b>\u{1F525} #EDSW</b>. Alle gibt es auch unter <b>\u2630 Men\xFC \u2192 Ressourcen \u2192 Bibliothek</b>.</p>
 <p>Alles folgt der <b>Sprache der App</b> (bei Guaran\xED wird Spanisch verwendet); mit der Flagge jeder Ansicht kannst du sie \xE4ndern, ohne die Sprache der App zu wechseln.</p>`},biblia:{titulo:"Heilige Schrift",html:`
 <h4>\xD6ffnen</h4>
 <ul>
@@ -272,10 +272,10 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>\u25B6 Heute beginnen (Tag 1)</b>: statt dem Kalender zu folgen (1. Januar = Tag 1) beginnt der Plan an dem Tag, den du w\xE4hlst, so f\xE4ngst du nicht im R\xFCckstand an. Du kannst jederzeit zum Kalender zur\xFCckkehren.</li>
 <li><b>\u2610 Als gelesen markieren</b>, Fortschrittsleiste, <b>Zum ersten ungelesenen Tag</b> und <b>Neu beginnen</b>. <b>\u2039 \u203A</b> und <b>Heute</b>, um dich durch die Tage zu bewegen.</li>
 <li>Gelesene Tage werden nur auf diesem Ger\xE4t gespeichert.</li>
-</ul>`},rpsp:{titulo:"#RPSP \xB7 Erweckt durch sein Wort",html:`
+</ul>`},rpsp:{titulo:"#EDSW \xB7 Erweckt durch sein Wort",html:`
 <ul>
-<li>Ein Plan der Adventgemeinde, um <b>die ganze Bibel zu lesen, ein Kapitel pro Tag</b>, der Reihe nach: dasselbe Kapitel am selben Tag auf der ganzen Welt. Nach <b>Offenbarung 22</b> beginnt es wieder mit <b>1. Mose 1</b>, ohne Ende.</li>
-<li>\xD6ffnen \xFCber <b>\u{1F4D6} \u2192 #RPSP</b> oder die <b>Bibliothek</b> (zeigt das heutige Kapitel).</li>
+<li>Ein Programm der Siebenten-Tags-Adventisten, um die Bibel in f\xFCnf Jahren zu lesen, zusammen mit ausgew\xE4hlten Schriften von Ellen G. White: <b>ein Bibelkapitel pro Tag</b>, der Reihe nach, weltweit dasselbe. Nach <b>Offenbarung 22</b> beginnt es wieder mit <b>1. Mose 1</b>, ohne Ende.</li>
+<li>\xD6ffnen \xFCber <b>\u{1F4D6} \u2192 #EDSW</b> oder die <b>Bibliothek</b> (zeigt das heutige Kapitel).</li>
 <li>Das <b>ganze Kapitel</b> erscheint im Fenster, in der gew\xE4hlten <b>\xDCbersetzung</b> (dieselbe wie in der Bibel der App). Tippe auf einen Vers, um ihn in der Bibel zu \xF6ffnen und zu markieren, zu notieren, zu teilen oder zu vergleichen.</li>
 <li><b>\u2039</b> geht zu fr\xFCheren Tagen, bis <b>1. Mose 1</b> des aktuellen Durchgangs; \xFCber heute hinaus geht es nicht. Mit dem Datum \u{1F5D3}\uFE0F w\xE4hlt man einen Tag im Kalender. <b>Heute</b> f\xFChrt zum heutigen Kapitel zur\xFCck.</li>
 <li><b>\u2610 Als gelesen markieren</b>, wie viele Kapitel in diesem Durchgang gelesen wurden und <b>Zum letzten ungelesenen</b>. Wird nur auf diesem Ger\xE4t gespeichert.</li>
@@ -298,7 +298,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>\u2630 Men\xFC \u2192 Einstellungen \u2192 Themenfarbe</b>: 13 Optionen \u2014 Wei\xDF, Rot, Koralle, Orange, Gelb, Gr\xFCn, T\xFCrkis, Hellblau, Blau, Violett, Flieder, Rosa und <b>Kindle</b>. Jeder Kreis zeigt die Farbe und ihren Nachthintergrund.</li>
 <li><b>Kindle</b> (Papier und Tinte): die ganze App wie ein E-Book-Reader \u2014 tags\xFCber cremefarbenes Papier mit dunkelbrauner Schrift; nachts anthrazitfarbener Hintergrund mit papierfarbener Schrift; Schriftart <b>Literata</b> (zum Lesen auf Bildschirmen gemacht), Papier mit leichter K\xF6rnung, tintenfarbene Symbole, Blocksatz, \xDCberschriften in Kapit\xE4lchen, umrandete Tasten, ohne Schatten oder Glanz und leicht sepiafarbene Fotos. Ideal zum Lesen der Bibel und der Andachten. (Ersetzt das fr\xFChere \xABGrau\xBB; wer es gew\xE4hlt hatte, hat jetzt \xABWei\xDF\xBB.)</li>
 <li>Die Farbe gilt f\xFCr Tasten, Akkorde, Hintergrund und die Statusleiste des Handys.</li>
-<li><b>\u2630 Men\xFC \u2192 Einstellungen \u2192 \u{1F4AC} Hinweise und Hilfen</b>: Wenn eine Taste zwischen Anzeigen und Ausblenden oder Aktiv und Inaktiv wechselt, zeigt unten ein kleiner Hinweis den neuen Zustand (z. B. \xAB\u{1F3B8} Tabulatur: sichtbar\xBB). Er erscheint auch beim Wechsel des Diagramm-Instruments, der Tonart (\u266D \u266E \u266F), der Themenfarbe, des Tag-/Nachtmodus und des Buchs. Dort l\xE4sst es sich ausschalten.</li>
+<li><b>\u2630 Men\xFC \u2192 Einstellungen \u2192 \u{1F4AC} Hinweise und Warnungen</b>: Wenn eine Taste zwischen Anzeigen und Ausblenden oder Aktiv und Inaktiv wechselt, zeigt unten ein kleiner Hinweis den neuen Zustand (z. B. \xAB\u{1F3B8} Tabulatur: sichtbar\xBB). Er erscheint auch beim Wechsel des Diagramm-Instruments, der Tonart (\u266D \u266E \u266F), der Themenfarbe, des Tag-/Nachtmodus und des Buchs. Dort l\xE4sst es sich ausschalten.</li>
 </ul>`},iglesia:{titulo:"Gemeindemodus: Beamer und TV",html:`
 <h4>Beamer (Computer)</h4>
 <ul>
@@ -334,19 +334,20 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li>Meine Listen, Meine Playlists, der Musik-Notizblock, die Gebetsanliegen, die Notizen der Andachten, Markierungen und Notizen in der Bibel, die gelesenen Tage von Bibel in einem Jahr, die gew\xE4hlte Bibel\xFCbersetzung, Thema, Farbe und Sprache werden <b>nur auf deinem Ger\xE4t</b> gespeichert. Nichts wird auf einen Server hochgeladen.</li>
 <li>Das <b>Mikrofon</b> wird nur f\xFCr das Stimmger\xE4t und zum Aufnehmen im Notizblock benutzt, und nur, wenn du es einschaltest.</li>
 <li><b>Kamera/Fotos</b> werden nur benutzt, wenn du einem Gebetsanliegen ein Foto hinzuf\xFCgst.</li>
-<li>Um deine Daten auf ein anderes Ger\xE4t zu bringen, nutze <b>Exportieren / Importieren</b> im jeweiligen Bereich.</li>
+<li>Um deine Daten auf ein anderes Ger\xE4t zu bringen, nutze <b>\u{1F4BE} Sicherung</b> (in den App-Informationen, neben \xABUpdate erzwingen\xBB): alles wird auf einmal exportiert und importiert.</li>
 </ul>`},problemas:{titulo:"H\xE4ufige Fragen und Probleme",html:`
 <ul>
 <li><b>Ich sehe eine Neuerung nicht</b>: schlie\xDFe den Tab oder die App und \xF6ffne sie erneut.</li>
 <li><b>Ein Audio spielt nicht</b>: pr\xFCfe die Internetverbindung und ob das Handy stumm geschaltet ist.</li>
 <li><b>Der Akkord \xF6ffnet kein Fenster</b>: unter Akkorddiagramm ist \xABKeins\xBB gew\xE4hlt, oder du bist im Beamer-/TV-Modus.</li>
 <li><b>Der Bildschirm bleibt vergr\xF6\xDFert</b>: mit zwei Fingern zur\xFCckzoomen; die App vergr\xF6\xDFert sich beim Antippen eines Feldes nicht mehr von selbst.</li>
-<li><b>Ich habe das Handy gewechselt</b>: Exportieren auf dem alten, Importieren auf dem neuen (Meine Listen, Notizblock, Gebetsanliegen).</li>
+<li><b>Ich habe das Handy gewechselt</b>: auf dem alten <b>App-Informationen \u2192 \u{1F4BE} Sicherung \u2192 Alles exportieren</b>; auf dem neuen diese Datei <b>importieren</b>. Alles geht zusammen: Listen, Playlists, Anliegen, Notizblock, Notizen, Bibelmarkierungen, Lesepl\xE4ne und Einstellungen.</li>
 <li><b>Ich habe einen Fehler in einem Text gefunden</b>: melde ihn \xFCber <b>Kontakt</b>.</li>
 <li><b>Ich sehe die Andachten nicht</b>: schreibe <b>meditaciones</b> in die Suche.</li>
 </ul>`},novedades:{titulo:"Neuigkeiten",html:`
 <ul>
-<li><b>2.89.0</b> \u2014 Neu: <b>\u{1F525} #RPSP \xB7 Erweckt durch sein Wort</b>: ein Bibelkapitel pro Tag (weltweit dasselbe), mit dem ganzen Kapitel in der gew\xE4hlten \xDCbersetzung, fr\xFCheren Tagen bis 1. Mose 1 und als gelesen markieren. Im \u{1F4D6} und in der Bibliothek.</li>
+<li><b>2.90.0</b> \u2014 Eine einzige <b>\u{1F4BE} Sicherung</b> (App-Informationen, neben \xABUpdate erzwingen\xBB): exportiert und importiert alles auf einmal; ersetzt Exportieren/Importieren jedes Bereichs. K\xFCrzel des Plans in jeder Sprache (#RPSP, #RBHW, #RDSP\u2026) und neue Beschreibung. \xABHinweise und Warnungen\xBB.</li>
+<li><b>2.89.0</b> \u2014 Neu: <b>\u{1F525} #EDSW \xB7 Erweckt durch sein Wort</b>: ein Bibelkapitel pro Tag (weltweit dasselbe), mit dem ganzen Kapitel in der gew\xE4hlten \xDCbersetzung, fr\xFCheren Tagen bis 1. Mose 1 und als gelesen markieren. Im \u{1F4D6} und in der Bibliothek.</li>
 <li><b>2.88.0</b> \u2014 Noten: wieder \xABHier klicken\xBB; <b>\u2715</b> beendet das Anh\xF6ren; <b>\u21A9</b> zur\xFCck zu den vorherigen Noten. Hinweise auch bei Instrument, Tonart, Farbe, Tag/Nacht und Buch. Flaggen in der Liste enger. Thema Schwarz-Wei\xDF: der gew\xE4hlte Buchstabe ist tags und nachts lesbar.</li>
 <li><b>2.87.1</b> \u2014 \xABTransport\xBB hei\xDFt jetzt <b>Transponierte Akkorde</b>; Text des QR-Codes korrigiert; Ein/Aus- und Anzeigen/Ausblenden-Tasten melden ihren Zustand an Bildschirmleser.</li>
 <li><b>2.87.0</b> \u2014 Noten: <b>\u2039 \u203A</b> vorheriges/n\xE4chstes Lied und <b>\u{1F50E} Suche</b> nach Nummer, Titel oder Text (auch in anderen B\xFCchern); obere Leiste in der Farbe der Statusleiste und Seiten in voller Breite auf dem Handy. <b>\u{1F4AC} Hinweise</b> beim Anzeigen/Ausblenden oder Ein-/Ausschalten (in den Einstellungen abschaltbar). Beim <b>Aktualisieren der App</b> geht es zum selben Lied oder Fenster zur\xFCck. Teleprompter standardm\xE4\xDFig ausgeblendet, Stimmger\xE4t auf Gitarre. \xABPr\xE4sentation\xBB und Strophennummern mit besserem Kontrast in allen Farben.</li>

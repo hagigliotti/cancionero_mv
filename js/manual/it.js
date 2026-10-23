@@ -142,7 +142,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>Creare</b>: scrivi il nome e tocca <b>+ Crea</b>.</li>
 <li><b>Aggiungere o togliere un canto</b>: tocca la \u2B50 del canto e seleziona o deseleziona la lista.</li>
 <li>Tocca una lista per vedere i suoi canti e aprirli; \u2715 per toglierne uno; si pu\xF2 anche eliminare la lista.</li>
-<li><b>\u2699\uFE0F Organizza e salva</b>: <b>Esporta</b> salva un file con le tue liste e <b>Importa</b> le carica su un altro cellulare o browser.</li>
+<li><b>\u2699\uFE0F Organizza e salva</b>: il pulsante <b>\u{1F4BE} Backup</b> salva in un solo file tutti i tuoi dati (liste, playlist, richieste, blocco, note, evidenziazioni\u2026) per passarli a un altro cellulare o browser.</li>
 <li>Le liste si salvano solo sul tuo dispositivo.</li>
 </ul>`},reproductor:{titulo:"Le mie playlist (lettore musicale)",html:`
 <p>Si apre con <b>\u{1F3A7}</b> (in alto nel menu o in <b>La mia musica \u2192 Le mie playlist</b>) o con <b>\u{1F3A7} mp3</b> in un canto.</p>
@@ -189,7 +189,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li>Scrivi un nome e tocca <b>+ Nuova</b>.</li>
 <li>Dentro: tocca il pulsante rosso per <b>registrare</b>; \u25B6\uFE0F per ascoltare. Puoi annotare testo e accordi, tonalit\xE0, ritmo e BPM.</li>
 <li><b>\u2B07\uFE0F Scarica</b> l'audio o <b>\u{1F5D1}\uFE0F Elimina</b> l'idea.</li>
-<li><b>\u2699\uFE0F Organizza e salva</b>: Esporta / Importa per passarle a un altro dispositivo.</li>
+<li><b>\u2699\uFE0F Organizza e salva</b>: <b>\u{1F4BE} Backup</b> (un solo file con tutto, registrazioni incluse).</li>
 <li>Le registrazioni restano solo sul tuo dispositivo. Il microfono si usa solo quando tocchi registra.</li>
 </ul>`},oracion:{titulo:"Le mie richieste di preghiera",html:`
 <p>Si apre con <b>\u{1F6D0}</b> in alto nel menu.</p>
@@ -197,10 +197,10 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li>Scrivi la richiesta e tocca <b>+ Aggiungi richiesta</b>. Puoi aggiungere <b>\u{1F4F7} una foto</b>, <b>\u{1F4D6} un versetto</b> (toccalo per leggerlo nella Bibbia dell'app) o <b>\u{1F3B5} un canto</b>.</li>
 <li>Ogni richiesta si pu\xF2 modificare, cancellare o segnare come <b>\u2705 esaudita</b>.</li>
 <li><b>Liste</b> (+ Crea lista) per raggrupparle (famiglia, chiesa\u2026); si possono rinominare, eliminare e spostare richieste tra le liste.</li>
-<li><b>\u2699\uFE0F Organizza e salva</b>: Esporta / Importa.</li>
+<li><b>\u2699\uFE0F Organizza e salva</b>: <b>\u{1F4BE} Backup</b> (un solo file con tutto, foto incluse).</li>
 <li>Tutto, foto comprese, resta solo sul tuo dispositivo.</li>
-</ul>`},lectura:{titulo:"Bibbia, Meditazioni, Bibbia in un anno e #RPSP (pulsante \u{1F4D6})",html:`
-<p>In alto nel <b>\u2630 Menu</b>, il pulsante <b>\u{1F4D6}</b> apre un menu con quattro opzioni: <b>\u{1F4D6} Sacra Bibbia</b>, <b>\u{1F54A}\uFE0F Meditazioni</b>, <b>\u{1F4C5} Bibbia in un anno</b> e <b>\u{1F525} #RPSP</b>. Tutte sono anche in <b>\u2630 Menu \u2192 Risorse \u2192 Biblioteca</b>.</p>
+</ul>`},lectura:{titulo:"Bibbia, Meditazioni, Bibbia in un anno e #RDSP (pulsante \u{1F4D6})",html:`
+<p>In alto nel <b>\u2630 Menu</b>, il pulsante <b>\u{1F4D6}</b> apre un menu con quattro opzioni: <b>\u{1F4D6} Sacra Bibbia</b>, <b>\u{1F54A}\uFE0F Meditazioni</b>, <b>\u{1F4C5} Bibbia in un anno</b> e <b>\u{1F525} #RDSP</b>. Tutte sono anche in <b>\u2630 Menu \u2192 Risorse \u2192 Biblioteca</b>.</p>
 <p>Tutto segue la <b>lingua dell'app</b> (con il guaran\xED si usa lo spagnolo); si pu\xF2 cambiare con la bandiera di ogni schermata senza cambiare la lingua dell'app.</p>`},biblia:{titulo:"Sacra Bibbia",html:`
 <h4>Aprirla</h4>
 <ul>
@@ -272,10 +272,10 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>\u25B6 Inizia oggi (giorno 1)</b>: invece di seguire il calendario (1\xB0 gennaio = giorno 1), il piano parte dal giorno che scegli tu, cos\xEC non inizi in ritardo. Puoi tornare al calendario quando vuoi.</li>
 <li><b>\u2610 Segna come letto</b>, barra di avanzamento, <b>Vai al primo giorno non letto</b> e <b>Ricomincia</b>. <b>\u2039 \u203A</b> e <b>Oggi</b> per spostarti tra i giorni.</li>
 <li>I giorni letti si salvano solo su questo dispositivo.</li>
-</ul>`},rpsp:{titulo:"#RPSP \xB7 Risvegliati dalla Sua Parola",html:`
+</ul>`},rpsp:{titulo:"#RDSP \xB7 Ravvivati dalla Sua Parola",html:`
 <ul>
-<li>Un piano della Chiesa Avventista per leggere <b>tutta la Bibbia, un capitolo al giorno</b>, in ordine: lo stesso capitolo lo stesso giorno in tutto il mondo. Dopo <b>Apocalisse 22</b> ricomincia da <b>Genesi 1</b>, senza fine.</li>
-<li>Si apre da <b>\u{1F4D6} \u2192 #RPSP</b> o dalla <b>Biblioteca</b> (che mostra il capitolo di oggi).</li>
+<li>Un programma della Chiesa Cristiana Avventista del Settimo Giorno per leggere la Bibbia in cinque anni, con scritti scelti di Ellen G. White: <b>un capitolo della Bibbia al giorno</b>, in ordine, lo stesso in tutto il mondo. Dopo <b>Apocalisse 22</b> ricomincia da <b>Genesi 1</b>, senza fine.</li>
+<li>Si apre da <b>\u{1F4D6} \u2192 #RDSP</b> o dalla <b>Biblioteca</b> (che mostra il capitolo di oggi).</li>
 <li>Il <b>capitolo intero</b> appare nella finestra, nella <b>versione</b> che scegli (la stessa della Bibbia dell'app). Tocca un versetto per aprirlo nella Bibbia ed evidenziarlo, annotarlo, condividerlo o confrontarlo.</li>
 <li><b>\u2039</b> va ai giorni precedenti, fino a <b>Genesi 1</b> del giro attuale; non si pu\xF2 andare oltre oggi. Toccando la data \u{1F5D3}\uFE0F si sceglie un giorno dal calendario. <b>Oggi</b> torna al capitolo di oggi.</li>
 <li><b>\u2610 Segna come letto</b>, quanti capitoli hai letto in questo giro e <b>Vai all'ultimo non letto</b>. Si salva solo su questo dispositivo.</li>
@@ -298,7 +298,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>\u2630 Menu \u2192 Impostazioni \u2192 Colore del tema</b>: 13 opzioni \u2014 Bianco, Rosso, Corallo, Arancione, Giallo, Verde, Turchese, Celeste, Blu, Viola, Lilla, Rosa e <b>Kindle</b>. Ogni cerchio mostra il colore e il suo sfondo notturno.</li>
 <li><b>Kindle</b> (carta e inchiostro): tutta l'app come un lettore di libri elettronici \u2014 di giorno, carta crema con testo marrone scuro; di notte, sfondo antracite con testo color carta; carattere <b>Literata</b> (pensato per leggere sugli schermi), carta con una grana leggera, icone color inchiostro, testo giustificato, titoli in maiuscoletto, pulsanti con contorno, senza ombre n\xE9 riflessi e foto leggermente seppia. Ideale per leggere la Bibbia e le meditazioni. (Sostituisce il vecchio \xABGrigio\xBB; chi lo aveva scelto passa a \xABBianco\xBB.)</li>
 <li>Il colore si applica a pulsanti, accordi, sfondo e barra del cellulare.</li>
-<li><b>\u2630 Menu \u2192 Impostazioni \u2192 \u{1F4AC} Avvisi e aiuti</b>: quando un pulsante passa da Mostra a Nascondi o da Attivo a Inattivo, in basso compare un piccolo avviso che dice com'\xE8 rimasto (per esempio \xAB\u{1F3B8} Tablatura: visibile\xBB). Avvisa anche quando si cambia lo strumento del diagramma, la tonalit\xE0 (\u266D \u266E \u266F), il colore del tema, la modalit\xE0 giorno/notte e il libro. Si pu\xF2 disattivare l\xEC.</li>
+<li><b>\u2630 Menu \u2192 Impostazioni \u2192 \u{1F4AC} Avvisi e allerte</b>: quando un pulsante passa da Mostra a Nascondi o da Attivo a Inattivo, in basso compare un piccolo avviso che dice com'\xE8 rimasto (per esempio \xAB\u{1F3B8} Tablatura: visibile\xBB). Avvisa anche quando si cambia lo strumento del diagramma, la tonalit\xE0 (\u266D \u266E \u266F), il colore del tema, la modalit\xE0 giorno/notte e il libro. Si pu\xF2 disattivare l\xEC.</li>
 </ul>`},iglesia:{titulo:"Modalit\xE0 chiesa: proiettore e TV",html:`
 <h4>Proiettore (computer)</h4>
 <ul>
@@ -334,19 +334,20 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li>Le mie liste, Le mie playlist, il Blocco musicale, le Richieste di preghiera, le note delle Meditazioni, le evidenziazioni e note della Bibbia, i giorni letti della Bibbia in un anno, la versione della Bibbia scelta, il tema, il colore e la lingua si salvano <b>solo sul tuo dispositivo</b>. Non si caricano su nessun server.</li>
 <li>Il <b>microfono</b> si usa solo per l'accordatore e per registrare nel Blocco, e solo quando lo attivi.</li>
 <li>La <b>fotocamera/foto</b> si usano solo se aggiungi una foto a una richiesta di preghiera.</li>
-<li>Per passare i tuoi dati a un altro dispositivo usa <b>Esporta / Importa</b> in ogni sezione.</li>
+<li>Per passare i tuoi dati a un altro dispositivo usa <b>\u{1F4BE} Backup</b> (in Informazioni sull'app, accanto a \xABForza aggiornamento\xBB): esporta e importa tutto in una volta.</li>
 </ul>`},problemas:{titulo:"Domande frequenti e problemi",html:`
 <ul>
 <li><b>Non vedo una novit\xE0</b>: chiudi la scheda o l'app e riaprila.</li>
 <li><b>Un audio non suona</b>: controlla la connessione e che il cellulare non sia in silenzioso.</li>
 <li><b>L'accordo non apre la finestrella</b>: in Diagramma degli accordi \xE8 scelto \xABNessuno\xBB, oppure sei in modalit\xE0 proiettore/TV.</li>
 <li><b>Lo schermo \xE8 rimasto ingrandito</b>: fai zoom con due dita per tornare; l'app non si ingrandisce pi\xF9 da sola toccando un campo.</li>
-<li><b>Ho cambiato cellulare</b>: usa Esporta sul vecchio e Importa sul nuovo (Le mie liste, Blocco, Richieste di preghiera).</li>
+<li><b>Ho cambiato cellulare</b>: sul vecchio, <b>Informazioni sull'app \u2192 \u{1F4BE} Backup \u2192 Esporta tutto</b>; sul nuovo, <b>Importa</b> quel file. Passa tutto insieme: liste, playlist, richieste, blocco, note, evidenziazioni della Bibbia, piani di lettura e impostazioni.</li>
 <li><b>Ho trovato un errore in un testo</b>: segnalalo da <b>Contatto</b>.</li>
 <li><b>Non vedo le Meditazioni</b>: scrivi <b>meditaciones</b> nella ricerca.</li>
 </ul>`},novedades:{titulo:"Novit\xE0",html:`
 <ul>
-<li><b>2.89.0</b> \u2014 Nuovo <b>\u{1F525} #RPSP \xB7 Risvegliati dalla Sua Parola</b>: un capitolo della Bibbia al giorno (lo stesso in tutto il mondo), con il capitolo intero nella versione che scegli, giorni precedenti fino a Genesi 1 e segna come letto. In \u{1F4D6} e nella Biblioteca.</li>
+<li><b>2.90.0</b> \u2014 Un unico <b>\u{1F4BE} Backup</b> (Informazioni sull'app, accanto a \xABForza aggiornamento\xBB): esporta e importa tutto in una volta; sostituisce Esporta/Importa di ogni sezione. Sigla del piano in ogni lingua (#RPSP, #RBHW, #RDSP\u2026) e nuova descrizione. \xABAvvisi e allerte\xBB.</li>
+<li><b>2.89.0</b> \u2014 Nuovo <b>\u{1F525} #RDSP \xB7 Ravvivati dalla Sua Parola</b>: un capitolo della Bibbia al giorno (lo stesso in tutto il mondo), con il capitolo intero nella versione che scegli, giorni precedenti fino a Genesi 1 e segna come letto. In \u{1F4D6} e nella Biblioteca.</li>
 <li><b>2.88.0</b> \u2014 Spartito: di nuovo \xABClicca qui\xBB; <b>\u2715</b> per smettere di ascoltare; <b>\u21A9</b> torna allo spartito precedente. Avvisi anche per strumento, tonalit\xE0, colore, giorno/notte e libro. Bandierine della lista pi\xF9 vicine. Tema Bianco e nero: la lettera scelta si legge bene di giorno e di notte.</li>
 <li><b>2.87.1</b> \u2014 \xABTrasporto\xBB ora si chiama <b>Accordi trasposti</b>; testo del codice QR corretto; i pulsanti Attivo/Inattivo e Mostra/Nascondi annunciano il loro stato ai lettori di schermo.</li>
 <li><b>2.87.0</b> \u2014 Spartito: <b>\u2039 \u203A</b> inno precedente/successivo e <b>\u{1F50E} ricerca</b> per numero, titolo o testo (anche in altri libri); barra in alto dello stesso colore della barra del telefono e pagine a tutta larghezza sul telefono. <b>\u{1F4AC} Avvisi</b> quando si mostra/nasconde o si attiva/disattiva (si spengono nelle Impostazioni). <b>Aggiornando l'app</b> si torna allo stesso canto o finestra. Gobbo nascosto e accordatore sulla chitarra di default. \xABPresentazione\xBB e numeri delle strofe con miglior contrasto in tutti i colori.</li>
