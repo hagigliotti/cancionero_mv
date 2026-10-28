@@ -18,7 +18,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 </ul>`},pantalla:{titulo:"L'\xE9cran principal",html:`
 <ul>
 <li><b>Logo</b> en haut. Dessous, le <b>verset d'accueil</b> (Psaume 146:2), visible quand aucun chant n'est ouvert, y compris en changeant de livre.</li>
-<li><b>\u2630 Menu</b> (gauche) : toutes les options et tous les r\xE9glages.</li>
+<li><b>\u2630 Menu</b> (\xE0 gauche) : organis\xE9 en sections qui s'ouvrent et se ferment en touchant leur titre (toujours ferm\xE9es au d\xE9part ; sous chacune on voit en gris son contenu) : <b>\u{1F3BC} Ce chant</b>, <b>\u{1F3B9} Instruments</b> (Piano, Guitare acoustique bient\xF4t), <b>\u{1F39A}\uFE0F Outils</b> (M\xE9tronome et Accordeur, Bloc-notes musical), <b>\u{1F3B5} Ma musique</b>, <b>\u{1F4DA} Lire</b>, <b>\u2699\uFE0F R\xE9glages</b> et, en bas, <b>\u26EA Mode \xE9glise</b> (projecteur et TV, sur ordinateur). En pied : Partager, Buy me a coffee, Contact, Informations et Manuel.</li>
 <li><b>\u{1F50E} Recherche</b> (centre) : voir le chapitre <i>Chercher</i>. La <b>\u2715</b> l'efface et revient \xE0 l'accueil.</li>
 <li><b>Drapeau</b> (droite) : langue de l'application et des chants. Voir le chapitre <i>Langues</i>.</li>
 <li><b>Barre des lettres</b> (abc, #, A, B, C\u2026) : ouvre la liste des chants qui commencent par cette lettre. Les fl\xE8ches \u25C0 \u25B6 la font d\xE9filer. Dans les recueils de cantiques appara\xEEt aussi une barre de <b>tranches de num\xE9ros</b> (1-50, 51-100\u2026).</li>
@@ -348,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>Je ne vois pas les M\xE9ditations</b> : \xE9crivez <b>meditaciones</b> dans la recherche.</li>
 </ul>`},novedades:{titulo:"Nouveaut\xE9s",html:`
 <ul>
+<li><b>2.94.0</b> \u2014 Nouveau menu \u2630 en sections qui s'ouvrent et se ferment : Ce chant, Instruments (Piano), Outils, Ma musique, Lire, R\xE9glages et Mode \xE9glise en bas.</li>
 <li><b>2.93.1</b> \u2014 iPhone : le son (piano, notes, accords, m\xE9tronome) ne reste plus muet apr\xE8s une interruption (appel, autre app, \xE9cran verrouill\xE9) ; le bouton \xAB Jouer du piano \xBB s'ouvre toujours.</li>
 <li><b>2.93.0</b> \u2014 \u{1F3B9} <b>Piano complet</b> (M\xE9tronome et Accordeur \u2192 Notes \u2192 Jouer du piano) : 2 octaves, vrai son de piano ou orgue, plusieurs touches \xE0 la fois, p\xE9dale et finition noire et bois ou blanche ; sur t\xE9l\xE9phone il s'utilise couch\xE9. Le petit piano de Notes r\xE9pond maintenant \xE0 chaque toucher.</li>
 <li><b>2.91.1</b> \u2014 Bible : le drapeau montre les langues et, en touchant l'une d'elles, ses versions apparaissent en dessous (comme dans #RPSP). Prend moins de place.</li>

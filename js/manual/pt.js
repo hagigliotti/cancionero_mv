@@ -18,7 +18,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 </ul>`},pantalla:{titulo:"A tela principal",html:`
 <ul>
 <li><b>Logo</b> em cima. Abaixo, o <b>vers\xEDculo de boas-vindas</b> (Salmo 146:2), que aparece sempre que n\xE3o h\xE1 um c\xE2ntico aberto, tamb\xE9m ao trocar de livro.</li>
-<li><b>\u2630 Menu</b> (esquerda): todas as op\xE7\xF5es e ajustes.</li>
+<li><b>\u2630 Menu</b> (esquerda): organizado em se\xE7\xF5es que abrem e fecham tocando o t\xEDtulo (sempre come\xE7am fechadas; embaixo de cada uma aparece em cinza o que cont\xE9m): <b>\u{1F3BC} Esta can\xE7\xE3o</b>, <b>\u{1F3B9} Instrumentos</b> (Piano, Viol\xE3o em breve), <b>\u{1F39A}\uFE0F Ferramentas</b> (Metr\xF4nomo e Afinador, Bloco musical), <b>\u{1F3B5} Minha m\xFAsica</b>, <b>\u{1F4DA} Ler</b>, <b>\u2699\uFE0F Ajustes</b> e, embaixo, <b>\u26EA Modo igreja</b> (projetor e TV, no computador). No rodap\xE9: Compartilhar, Buy me a coffee, Contato, Informa\xE7\xF5es e Manual.</li>
 <li><b>\u{1F50E} Busca</b> (centro): veja o cap\xEDtulo <i>Buscar</i>. O <b>\u2715</b> apaga e volta ao in\xEDcio.</li>
 <li><b>Bandeira</b> (direita): idioma do app e dos c\xE2nticos. Veja o cap\xEDtulo <i>Idiomas</i>.</li>
 <li><b>Barra de letras</b> (abc, #, A, B, C\u2026): abre a lista de c\xE2nticos que come\xE7am com essa letra. As setas \u25C0 \u25B6 a deslizam. Nos hin\xE1rios aparece tamb\xE9m uma barra de <b>faixas de n\xFAmeros</b> (1-50, 51-100\u2026).</li>
@@ -348,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>N\xE3o vejo as Medita\xE7\xF5es</b>: escreva <b>meditaciones</b> na busca.</li>
 </ul>`},novedades:{titulo:"Novidades",html:`
 <ul>
+<li><b>2.94.0</b> \u2014 Novo menu \u2630 em se\xE7\xF5es que abrem e fecham: Esta can\xE7\xE3o, Instrumentos (Piano), Ferramentas, Minha m\xFAsica, Ler, Ajustes e Modo igreja embaixo.</li>
 <li><b>2.93.1</b> \u2014 iPhone: o som (piano, notas, acordes, metr\xF4nomo) n\xE3o fica mais mudo depois de uma interrup\xE7\xE3o (chamada, outro app, tela bloqueada); o bot\xE3o \xABTocar o piano\xBB sempre abre.</li>
 <li><b>2.93.0</b> \u2014 \u{1F3B9} <b>Piano completo</b> (Metr\xF4nomo e Afinador \u2192 Notas \u2192 Tocar o piano): 2 oitavas, som de piano de verdade ou \xF3rg\xE3o, v\xE1rias teclas ao mesmo tempo, pedal e acabamento preto com madeira ou branco; no celular usa-se deitado. O piano pequeno de Notas agora responde a cada toque.</li>
 <li><b>2.91.1</b> \u2014 B\xEDblia: a bandeira mostra os idiomas e, ao tocar em um, aparecem embaixo suas vers\xF5es (como no #RPSP). Ocupa menos espa\xE7o.</li>

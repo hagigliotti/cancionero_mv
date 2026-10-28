@@ -18,7 +18,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 </ul>`},pantalla:{titulo:"The main screen",html:`
 <ul>
 <li><b>Logo</b> at the top. Below it, the <b>welcome verse</b> (Psalm 146:2), shown whenever no song is open, also when you change book.</li>
-<li><b>\u2630 Menu</b> (left): all options and settings.</li>
+<li><b>\u2630 Menu</b> (left): organized in sections that open and close by tapping their title (they always start closed; under each one you see in grey what it contains): <b>\u{1F3BC} This song</b> (size, transpose, diagram, tablature, transposed chords, teleprompter, edit; first when a song is open), <b>\u{1F3B9} Instruments</b> (Piano, Acoustic guitar soon), <b>\u{1F39A}\uFE0F Tools</b> (Metronome and Tuner, Music notepad), <b>\u{1F3B5} My music</b> (My Lists, My Playlists), <b>\u{1F4DA} Read</b> (Book, Library, Meditations), <b>\u2699\uFE0F Settings</b> (language, color, notices) and, at the bottom, <b>\u26EA Church mode</b> (projector and TV, on a computer). At the foot: Share, Buy me a coffee, Contact, App information and Manual.</li>
 <li><b>\u{1F50E} Search</b> (center): see the chapter <i>Search</i>. The <b>\u2715</b> clears it and goes back home.</li>
 <li><b>Flag</b> (right): language of the app and of the songs. See the chapter <i>Languages</i>.</li>
 <li><b>Letter bar</b> (abc, #, A, B, C\u2026): opens the list of songs starting with that letter. The \u25C0 \u25B6 arrows scroll it. Hymnals also show a bar of <b>number ranges</b> (1-50, 51-100\u2026).</li>
@@ -348,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>I don't see Devotionals</b>: type <b>meditaciones</b> in the search box.</li>
 </ul>`},novedades:{titulo:"What's new",html:`
 <ul>
+<li><b>2.94.0</b> \u2014 New \u2630 menu in sections that open and close: This song, Instruments (Piano), Tools, My music, Read, Settings and Church mode at the bottom. Information and Manual move to the foot.</li>
 <li><b>2.93.1</b> \u2014 iPhone: sound (piano, notes, chords, metronome) no longer goes silent after an interruption (call, another app, locked screen); the \xABPlay the piano\xBB button always opens.</li>
 <li><b>2.93.0</b> \u2014 \u{1F3B9} <b>Full piano</b> (Metronome and Tuner \u2192 Notes \u2192 Play the piano): 2 octaves, real piano or organ sound, several keys at once, pedal and black-with-wood or white finish; on a phone it's used sideways. The small piano in Notes now responds to every tap.</li>
 <li><b>2.91.1</b> \u2014 Bible: the flag shows the languages and, when you tap one, its versions appear below (as in #RBHW). It takes up less space.</li>

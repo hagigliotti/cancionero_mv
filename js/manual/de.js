@@ -18,7 +18,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 </ul>`},pantalla:{titulo:"Der Startbildschirm",html:`
 <ul>
 <li><b>Logo</b> oben. Darunter der <b>Begr\xFC\xDFungsvers</b> (Psalm 146,2), sichtbar, wenn kein Lied offen ist, auch beim Wechsel des Buches.</li>
-<li><b>\u2630 Men\xFC</b> (links): alle Optionen und Einstellungen.</li>
+<li><b>\u2630 Men\xFC</b> (links): in Abschnitte gegliedert, die sich durch Tippen auf den Titel \xF6ffnen und schlie\xDFen (sie beginnen immer geschlossen; darunter steht grau, was sie enthalten): <b>\u{1F3BC} Dieses Lied</b>, <b>\u{1F3B9} Instrumente</b> (Klavier, Akustikgitarre bald), <b>\u{1F39A}\uFE0F Werkzeuge</b> (Metronom und Stimmger\xE4t, Musiknotizblock), <b>\u{1F3B5} Meine Musik</b>, <b>\u{1F4DA} Lesen</b>, <b>\u2699\uFE0F Einstellungen</b> und unten <b>\u26EA Kirchenmodus</b> (Beamer und TV, am Computer). Unten: Teilen, Buy me a coffee, Kontakt, Informationen und Handbuch.</li>
 <li><b>\u{1F50E} Suche</b> (Mitte): siehe Kapitel <i>Suchen</i>. Das <b>\u2715</b> l\xF6scht sie und kehrt zum Start zur\xFCck.</li>
 <li><b>Flagge</b> (rechts): Sprache der App und der Lieder. Siehe Kapitel <i>Sprachen</i>.</li>
 <li><b>Buchstabenleiste</b> (abc, #, A, B, C\u2026): \xF6ffnet die Liste der Lieder mit diesem Anfangsbuchstaben. Die Pfeile \u25C0 \u25B6 verschieben sie. In Gesangb\xFCchern gibt es zus\xE4tzlich eine Leiste mit <b>Nummernbereichen</b> (1-50, 51-100\u2026).</li>
@@ -348,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>Ich sehe die Andachten nicht</b>: schreibe <b>meditaciones</b> in die Suche.</li>
 </ul>`},novedades:{titulo:"Neuigkeiten",html:`
 <ul>
+<li><b>2.94.0</b> \u2014 Neues \u2630 Men\xFC in auf- und zuklappbaren Abschnitten: Dieses Lied, Instrumente (Klavier), Werkzeuge, Meine Musik, Lesen, Einstellungen und unten Kirchenmodus.</li>
 <li><b>2.93.1</b> \u2014 iPhone: Der Ton (Klavier, Noten, Akkorde, Metronom) bleibt nach einer Unterbrechung (Anruf, andere App, gesperrter Bildschirm) nicht mehr stumm; \xABKlavier spielen\xBB \xF6ffnet sich immer.</li>
 <li><b>2.93.0</b> \u2014 \u{1F3B9} <b>Vollst\xE4ndiges Klavier</b> (Metronom und Stimmger\xE4t \u2192 Noten \u2192 Klavier spielen): 2 Oktaven, echter Klavier- oder Orgelklang, mehrere Tasten gleichzeitig, Pedal und Geh\xE4use Schwarz mit Holz oder Wei\xDF; auf dem Handy quer. Das kleine Klavier in Noten reagiert jetzt auf jede Ber\xFChrung.</li>
 <li><b>2.91.1</b> \u2014 Bibel: Die Flagge zeigt die Sprachen, und beim Tippen auf eine erscheinen darunter ihre \xDCbersetzungen (wie bei #EDSW). Braucht weniger Platz.</li>

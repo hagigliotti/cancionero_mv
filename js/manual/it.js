@@ -18,7 +18,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 </ul>`},pantalla:{titulo:"La schermata principale",html:`
 <ul>
 <li><b>Logo</b> in alto. Sotto, il <b>versetto di benvenuto</b> (Salmo 146:2), visibile quando non c'\xE8 un canto aperto, anche quando cambi libro.</li>
-<li><b>\u2630 Menu</b> (sinistra): tutte le opzioni e le impostazioni.</li>
+<li><b>\u2630 Menu</b> (a sinistra): organizzato in sezioni che si aprono e chiudono toccando il titolo (partono sempre chiuse; sotto ognuna si vede in grigio cosa contiene): <b>\u{1F3BC} Questo canto</b>, <b>\u{1F3B9} Strumenti</b> (Pianoforte, Chitarra acustica presto), <b>\u{1F39A}\uFE0F Strumenti di lavoro</b> (Metronomo e Accordatore, Blocco musicale), <b>\u{1F3B5} La mia musica</b>, <b>\u{1F4DA} Leggere</b>, <b>\u2699\uFE0F Impostazioni</b> e, in fondo, <b>\u26EA Modalit\xE0 chiesa</b> (proiettore e TV, sul computer). In basso: Condividi, Buy me a coffee, Contatto, Informazioni e Manuale.</li>
 <li><b>\u{1F50E} Ricerca</b> (centro): vedi il capitolo <i>Cercare</i>. La <b>\u2715</b> la cancella e torna all'inizio.</li>
 <li><b>Bandiera</b> (destra): lingua dell'app e dei canti. Vedi il capitolo <i>Lingue</i>.</li>
 <li><b>Barra delle lettere</b> (abc, #, A, B, C\u2026): apre l'elenco dei canti che iniziano con quella lettera. Le frecce \u25C0 \u25B6 la fanno scorrere. Negli innari compare anche una barra di <b>intervalli di numeri</b> (1-50, 51-100\u2026).</li>
@@ -348,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>Non vedo le Meditazioni</b>: scrivi <b>meditaciones</b> nella ricerca.</li>
 </ul>`},novedades:{titulo:"Novit\xE0",html:`
 <ul>
+<li><b>2.94.0</b> \u2014 Nuovo menu \u2630 in sezioni che si aprono e chiudono: Questo canto, Strumenti (Pianoforte), Strumenti di lavoro, La mia musica, Leggere, Impostazioni e Modalit\xE0 chiesa in fondo.</li>
 <li><b>2.93.1</b> \u2014 iPhone: il suono (pianoforte, note, accordi, metronomo) non resta pi\xF9 muto dopo un'interruzione (chiamata, altra app, schermo bloccato); il pulsante \xABSuona il pianoforte\xBB si apre sempre.</li>
 <li><b>2.93.0</b> \u2014 \u{1F3B9} <b>Pianoforte completo</b> (Metronomo e Accordatore \u2192 Note \u2192 Suona il pianoforte): 2 ottave, suono di pianoforte vero o organo, pi\xF9 tasti insieme, pedale e finitura nera con legno o bianca; sul telefono si usa in orizzontale. Il pianoforte piccolo di Note ora risponde a ogni tocco.</li>
 <li><b>2.91.1</b> \u2014 Bibbia: la bandiera mostra le lingue e, toccandone una, sotto compaiono le sue versioni (come in #RDSP). Occupa meno spazio.</li>
