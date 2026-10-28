@@ -348,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>Non vedo le Meditazioni</b>: scrivi <b>meditaciones</b> nella ricerca.</li>
 </ul>`},novedades:{titulo:"Novit\xE0",html:`
 <ul>
+<li><b>2.94.2</b> \u2014 Menu: \xABDimensione del testo\xBB passa a Impostazioni; \xABCanto\xBB resta sempre in alto. Gli avvisi usano il colore del tema e si distinguono dallo sfondo.</li>
 <li><b>2.94.0</b> \u2014 Nuovo menu \u2630 in sezioni che si aprono e chiudono: Questo canto, Strumenti (Pianoforte), Strumenti di lavoro, La mia musica, Leggere, Impostazioni e Modalit\xE0 chiesa in fondo.</li>
 <li><b>2.93.1</b> \u2014 iPhone: il suono (pianoforte, note, accordi, metronomo) non resta pi\xF9 muto dopo un'interruzione (chiamata, altra app, schermo bloccato); il pulsante \xABSuona il pianoforte\xBB si apre sempre.</li>
 <li><b>2.93.0</b> \u2014 \u{1F3B9} <b>Pianoforte completo</b> (Metronomo e Accordatore \u2192 Note \u2192 Suona il pianoforte): 2 ottave, suono di pianoforte vero o organo, pi\xF9 tasti insieme, pedale e finitura nera con legno o bianca; sul telefono si usa in orizzontale. Il pianoforte piccolo di Note ora risponde a ogni tocco.</li>

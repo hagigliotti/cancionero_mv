@@ -348,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>Je ne vois pas les M\xE9ditations</b> : \xE9crivez <b>meditaciones</b> dans la recherche.</li>
 </ul>`},novedades:{titulo:"Nouveaut\xE9s",html:`
 <ul>
+<li><b>2.94.2</b> \u2014 Menu : \xAB Taille du texte \xBB passe dans R\xE9glages ; \xAB Chant \xBB reste toujours en haut. Les avis prennent la couleur du th\xE8me et se d\xE9tachent du fond.</li>
 <li><b>2.94.0</b> \u2014 Nouveau menu \u2630 en sections qui s'ouvrent et se ferment : Ce chant, Instruments (Piano), Outils, Ma musique, Lire, R\xE9glages et Mode \xE9glise en bas.</li>
 <li><b>2.93.1</b> \u2014 iPhone : le son (piano, notes, accords, m\xE9tronome) ne reste plus muet apr\xE8s une interruption (appel, autre app, \xE9cran verrouill\xE9) ; le bouton \xAB Jouer du piano \xBB s'ouvre toujours.</li>
 <li><b>2.93.0</b> \u2014 \u{1F3B9} <b>Piano complet</b> (M\xE9tronome et Accordeur \u2192 Notes \u2192 Jouer du piano) : 2 octaves, vrai son de piano ou orgue, plusieurs touches \xE0 la fois, p\xE9dale et finition noire et bois ou blanche ; sur t\xE9l\xE9phone il s'utilise couch\xE9. Le petit piano de Notes r\xE9pond maintenant \xE0 chaque toucher.</li>

@@ -348,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>Ich sehe die Andachten nicht</b>: schreibe <b>meditaciones</b> in die Suche.</li>
 </ul>`},novedades:{titulo:"Neuigkeiten",html:`
 <ul>
+<li><b>2.94.2</b> \u2014 Men\xFC: \xABSchriftgr\xF6\xDFe\xBB ist jetzt unter Einstellungen; \xABLied\xBB bleibt immer oben. Hinweise nutzen die Themenfarbe und heben sich vom Hintergrund ab.</li>
 <li><b>2.94.0</b> \u2014 Neues \u2630 Men\xFC in auf- und zuklappbaren Abschnitten: Dieses Lied, Instrumente (Klavier), Werkzeuge, Meine Musik, Lesen, Einstellungen und unten Kirchenmodus.</li>
 <li><b>2.93.1</b> \u2014 iPhone: Der Ton (Klavier, Noten, Akkorde, Metronom) bleibt nach einer Unterbrechung (Anruf, andere App, gesperrter Bildschirm) nicht mehr stumm; \xABKlavier spielen\xBB \xF6ffnet sich immer.</li>
 <li><b>2.93.0</b> \u2014 \u{1F3B9} <b>Vollst\xE4ndiges Klavier</b> (Metronom und Stimmger\xE4t \u2192 Noten \u2192 Klavier spielen): 2 Oktaven, echter Klavier- oder Orgelklang, mehrere Tasten gleichzeitig, Pedal und Geh\xE4use Schwarz mit Holz oder Wei\xDF; auf dem Handy quer. Das kleine Klavier in Noten reagiert jetzt auf jede Ber\xFChrung.</li>
