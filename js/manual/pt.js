@@ -348,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>N\xE3o vejo as Medita\xE7\xF5es</b>: escreva <b>meditaciones</b> na busca.</li>
 </ul>`},novedades:{titulo:"Novidades",html:`
 <ul>
+<li><b>2.93.1</b> \u2014 iPhone: o som (piano, notas, acordes, metr\xF4nomo) n\xE3o fica mais mudo depois de uma interrup\xE7\xE3o (chamada, outro app, tela bloqueada); o bot\xE3o \xABTocar o piano\xBB sempre abre.</li>
 <li><b>2.93.0</b> \u2014 \u{1F3B9} <b>Piano completo</b> (Metr\xF4nomo e Afinador \u2192 Notas \u2192 Tocar o piano): 2 oitavas, som de piano de verdade ou \xF3rg\xE3o, v\xE1rias teclas ao mesmo tempo, pedal e acabamento preto com madeira ou branco; no celular usa-se deitado. O piano pequeno de Notas agora responde a cada toque.</li>
 <li><b>2.91.1</b> \u2014 B\xEDblia: a bandeira mostra os idiomas e, ao tocar em um, aparecem embaixo suas vers\xF5es (como no #RPSP). Ocupa menos espa\xE7o.</li>
 <li><b>2.91.0</b> \u2014 Ano b\xEDblico e #RPSP: <b>bandeira</b> para ler em outro idioma e seletor de <b>vers\xE3o</b> no alto, como nas Medita\xE7\xF5es. B\xEDblia no celular: a lista de idiomas e vers\xF5es mostra um idioma por linha e as vers\xF5es deslizam para o lado (no iPhone agora aparecem todas).</li>

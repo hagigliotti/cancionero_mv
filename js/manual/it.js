@@ -348,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>Non vedo le Meditazioni</b>: scrivi <b>meditaciones</b> nella ricerca.</li>
 </ul>`},novedades:{titulo:"Novit\xE0",html:`
 <ul>
+<li><b>2.93.1</b> \u2014 iPhone: il suono (pianoforte, note, accordi, metronomo) non resta pi\xF9 muto dopo un'interruzione (chiamata, altra app, schermo bloccato); il pulsante \xABSuona il pianoforte\xBB si apre sempre.</li>
 <li><b>2.93.0</b> \u2014 \u{1F3B9} <b>Pianoforte completo</b> (Metronomo e Accordatore \u2192 Note \u2192 Suona il pianoforte): 2 ottave, suono di pianoforte vero o organo, pi\xF9 tasti insieme, pedale e finitura nera con legno o bianca; sul telefono si usa in orizzontale. Il pianoforte piccolo di Note ora risponde a ogni tocco.</li>
 <li><b>2.91.1</b> \u2014 Bibbia: la bandiera mostra le lingue e, toccandone una, sotto compaiono le sue versioni (come in #RDSP). Occupa meno spazio.</li>
 <li><b>2.91.0</b> \u2014 Bibbia in un anno e #RDSP: <b>bandiera</b> per leggere in un'altra lingua e selettore della <b>versione</b> in alto, come nelle Meditazioni. Bibbia sul telefono: l'elenco di lingue e versioni mostra una lingua per riga e le versioni scorrono di lato (sull'iPhone ora si vedono tutte).</li>

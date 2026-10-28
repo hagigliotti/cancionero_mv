@@ -348,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>Je ne vois pas les M\xE9ditations</b> : \xE9crivez <b>meditaciones</b> dans la recherche.</li>
 </ul>`},novedades:{titulo:"Nouveaut\xE9s",html:`
 <ul>
+<li><b>2.93.1</b> \u2014 iPhone : le son (piano, notes, accords, m\xE9tronome) ne reste plus muet apr\xE8s une interruption (appel, autre app, \xE9cran verrouill\xE9) ; le bouton \xAB Jouer du piano \xBB s'ouvre toujours.</li>
 <li><b>2.93.0</b> \u2014 \u{1F3B9} <b>Piano complet</b> (M\xE9tronome et Accordeur \u2192 Notes \u2192 Jouer du piano) : 2 octaves, vrai son de piano ou orgue, plusieurs touches \xE0 la fois, p\xE9dale et finition noire et bois ou blanche ; sur t\xE9l\xE9phone il s'utilise couch\xE9. Le petit piano de Notes r\xE9pond maintenant \xE0 chaque toucher.</li>
 <li><b>2.91.1</b> \u2014 Bible : le drapeau montre les langues et, en touchant l'une d'elles, ses versions apparaissent en dessous (comme dans #RPSP). Prend moins de place.</li>
 <li><b>2.91.0</b> \u2014 La Bible en un an et #RPSP : <b>drapeau</b> pour lire dans une autre langue et choix de la <b>version</b> en haut, comme dans les M\xE9ditations. Bible sur t\xE9l\xE9phone : la liste des langues et versions montre une langue par ligne et les versions d\xE9filent sur le c\xF4t\xE9 (sur iPhone, toutes sont visibles).</li>

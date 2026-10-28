@@ -348,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>I don't see Devotionals</b>: type <b>meditaciones</b> in the search box.</li>
 </ul>`},novedades:{titulo:"What's new",html:`
 <ul>
+<li><b>2.93.1</b> \u2014 iPhone: sound (piano, notes, chords, metronome) no longer goes silent after an interruption (call, another app, locked screen); the \xABPlay the piano\xBB button always opens.</li>
 <li><b>2.93.0</b> \u2014 \u{1F3B9} <b>Full piano</b> (Metronome and Tuner \u2192 Notes \u2192 Play the piano): 2 octaves, real piano or organ sound, several keys at once, pedal and black-with-wood or white finish; on a phone it's used sideways. The small piano in Notes now responds to every tap.</li>
 <li><b>2.91.1</b> \u2014 Bible: the flag shows the languages and, when you tap one, its versions appear below (as in #RBHW). It takes up less space.</li>
 <li><b>2.91.0</b> \u2014 Bible in a Year and #RBHW: a <b>flag</b> to read in another language and a <b>version</b> selector at the top, as in Devotionals. Bible on phones: the list of languages and versions shows one language per row and the versions slide sideways (all of them are now visible on iPhone).</li>

@@ -1,4 +1,4 @@
-const MANUAL_VERSION="2.93.0",MANUAL_FECHA="28/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
+const MANUAL_VERSION="2.93.1",MANUAL_FECHA="28/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
       <p><strong>Cancionero MV</strong> es una app gratuita, sin publicidad, para cantar y tocar: m\xE1s de 2.000 cantos e himnos con letra, acordes, audio, partituras y presentaciones, en varios idiomas.</p>
       <h4>C\xF3mo abrirla</h4>
       <ul>
@@ -348,6 +348,7 @@ const MANUAL_VERSION="2.93.0",MANUAL_FECHA="28/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>No veo las Meditaciones</b>: escrib\xED <b>meditaciones</b> en el buscador.</li>
       </ul>`},{id:"novedades",icono:"\u{1F195}",titulo:"Novedades",html:`
       <ul>
+        <li><b>2.93.1</b> \u2014 iPhone: el sonido (piano, notas, acordes, metr\xF3nomo) ya no queda mudo despu\xE9s de una interrupci\xF3n (llamada, otra app, pantalla bloqueada); el bot\xF3n \xABTocar el piano\xBB abre siempre.</li>
         <li><b>2.93.0</b> \u2014 \u{1F3B9} <b>Piano completo</b> (Metr\xF3nomo y Afinador \u2192 Notas \u2192 Tocar el piano): 2 octavas, sonido de piano real u \xF3rgano, varias teclas a la vez, pedal y acabado negro con madera o blanco; en el celular se usa horizontal. El piano chico de Notas ahora responde a cada toque. Las correcciones por mail traen el canto entero, tal cual va en su archivo.</li>
         <li><b>2.91.1</b> \u2014 Biblia: la bandera muestra los idiomas y, al tocar uno, aparecen debajo sus versiones (como en #RPSP). Ocupa menos lugar.</li>
         <li><b>2.91.0</b> \u2014 A\xF1o b\xEDblico y #RPSP: <b>bandera</b> para leer en otro idioma y selector de <b>versi\xF3n</b> arriba, como en Meditaciones. Biblia en el celular: la lista de idiomas y versiones muestra un idioma por rengl\xF3n y las versiones se deslizan hacia el costado (en el iPhone ya se ven todos).</li>

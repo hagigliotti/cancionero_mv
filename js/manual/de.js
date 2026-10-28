@@ -348,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>Ich sehe die Andachten nicht</b>: schreibe <b>meditaciones</b> in die Suche.</li>
 </ul>`},novedades:{titulo:"Neuigkeiten",html:`
 <ul>
+<li><b>2.93.1</b> \u2014 iPhone: Der Ton (Klavier, Noten, Akkorde, Metronom) bleibt nach einer Unterbrechung (Anruf, andere App, gesperrter Bildschirm) nicht mehr stumm; \xABKlavier spielen\xBB \xF6ffnet sich immer.</li>
 <li><b>2.93.0</b> \u2014 \u{1F3B9} <b>Vollst\xE4ndiges Klavier</b> (Metronom und Stimmger\xE4t \u2192 Noten \u2192 Klavier spielen): 2 Oktaven, echter Klavier- oder Orgelklang, mehrere Tasten gleichzeitig, Pedal und Geh\xE4use Schwarz mit Holz oder Wei\xDF; auf dem Handy quer. Das kleine Klavier in Noten reagiert jetzt auf jede Ber\xFChrung.</li>
 <li><b>2.91.1</b> \u2014 Bibel: Die Flagge zeigt die Sprachen, und beim Tippen auf eine erscheinen darunter ihre \xDCbersetzungen (wie bei #EDSW). Braucht weniger Platz.</li>
 <li><b>2.91.0</b> \u2014 Bibel in einem Jahr und #EDSW: <b>Flagge</b>, um in einer anderen Sprache zu lesen, und Auswahl der <b>\xDCbersetzung</b> oben, wie bei den Andachten. Bibel auf dem Handy: Die Liste der Sprachen und \xDCbersetzungen zeigt eine Sprache pro Zeile, die \xDCbersetzungen lassen sich seitlich wischen (auf dem iPhone sind jetzt alle sichtbar).</li>
