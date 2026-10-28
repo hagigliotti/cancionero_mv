@@ -178,7 +178,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <ul>
 <li><b>\u{1F3AF} Tuner</b>: General, Guitar, Bass, Violin or Ukulele; reference <b>A4 = 440 Hz</b> (adjustable with \u2212 / +); <b>\u{1F3A4} Turn on microphone</b> and play or sing: it shows the note and whether you are sharp or flat. Tapping a string or note first plays the reference and then turns on the microphone.</li>
 <li><b>\u{1F941} Metronome</b>: BPM with \u2212 / +, <b>\u{1F446} Tap tempo</b> (tap along), <b>Time signature</b> (1/4 to 7/8), <b>Subdivision</b> (\u2669 \u266A \u266A\xB3 \u266C), <b>Accent</b> on the beat you choose, <b>\u25B6\uFE0F Play</b> and <b>\u{1F50A} Sound</b>.</li>
-<li><b>\u{1F3B5} Notes</b>: piano to play any note (the chosen key is painted in the theme color), with adjustable octave.</li>
+<li><b>\u{1F3B5} Notes</b>: piano to play any note (it sounds as soon as your finger touches it, with a real piano sound), with adjustable octave. <b>\u{1F3B9} Play the piano</b> opens it full screen: 2 octaves (\u25C0 \u25B6 to go up or down), several keys at once, slide your finger along the keyboard, <b>Pedal</b>, <b>Piano</b> or <b>Organ</b> sound, <b>Notes</b> to show each key's name and \u25D0 to choose the finish (black with wood or white). On a phone it appears sideways: turn the phone. On a computer play it with the keys A W S E D F T G Y H U J K (Z / X change octave). The \u2715 closes it.</li>
 <li><b>\u{1F3B6} Chords</b>: choose the note and type (Major, minor, 7, Maj7, min7, sus2, sus4, dim, dim7, m7b5, aug, 6, m6); shows its notes and diagram and plays it.</li>
 <li><b>\u{1F3BC} Scales</b>: scales of each key. Choosing the note plays it; choosing Major or minor plays its chord; \u25B6 plays each scale.</li>
 <li><b>\u{1F535} Fifths</b>: circle of fourths and fifths; tap a key to hear it and its chords.</li>
@@ -348,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>I don't see Devotionals</b>: type <b>meditaciones</b> in the search box.</li>
 </ul>`},novedades:{titulo:"What's new",html:`
 <ul>
+<li><b>2.93.0</b> \u2014 \u{1F3B9} <b>Full piano</b> (Metronome and Tuner \u2192 Notes \u2192 Play the piano): 2 octaves, real piano or organ sound, several keys at once, pedal and black-with-wood or white finish; on a phone it's used sideways. The small piano in Notes now responds to every tap.</li>
 <li><b>2.91.1</b> \u2014 Bible: the flag shows the languages and, when you tap one, its versions appear below (as in #RBHW). It takes up less space.</li>
 <li><b>2.91.0</b> \u2014 Bible in a Year and #RBHW: a <b>flag</b> to read in another language and a <b>version</b> selector at the top, as in Devotionals. Bible on phones: the list of languages and versions shows one language per row and the versions slide sideways (all of them are now visible on iPhone).</li>
 <li><b>2.90.0</b> \u2014 A single <b>\u{1F4BE} Backup</b> (App information, next to \xABForce update\xBB): exports and imports everything at once; replaces each section's Export/Import. Plan acronym in each language (#RPSP, #RBHW, #RDSP\u2026) and new description. \xABNotices and alerts\xBB.</li>

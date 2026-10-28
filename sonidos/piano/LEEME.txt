@@ -1,0 +1,5 @@
+Sonidos de piano: "Salamander Grand Piano V3" de Alexander Holm (Yamaha C5),
+licencia Creative Commons Atribución 3.0 (CC BY 3.0).
+https://archive.org/details/SalamanderGrandPianoV3
+Versión en mp3 (una muestra cada 3 semitonos) tomada de Tone.js (tonejs.github.io/audio/salamander).
+Los usa js/piano.js (piano completo del Metrónomo y Afinador).

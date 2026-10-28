@@ -1,4 +1,4 @@
-const MANUAL_VERSION="2.91.1",MANUAL_FECHA="23/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
+const MANUAL_VERSION="2.93.0",MANUAL_FECHA="28/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
       <p><strong>Cancionero MV</strong> es una app gratuita, sin publicidad, para cantar y tocar: m\xE1s de 2.000 cantos e himnos con letra, acordes, audio, partituras y presentaciones, en varios idiomas.</p>
       <h4>C\xF3mo abrirla</h4>
       <ul>
@@ -178,7 +178,7 @@ const MANUAL_VERSION="2.91.1",MANUAL_FECHA="23/10/2026",MANUAL_CAPITULOS=[{id:"i
       <ul>
         <li><b>\u{1F3AF} Afinador</b>: General, Guitarra, Bajo, Viol\xEDn o Ukelele; referencia <b>La4 = 440 Hz</b> (ajustable con \u2212 / +); <b>\u{1F3A4} Activar micr\xF3fono</b> y toc\xE1 o cant\xE1: indica la nota y si est\xE1s alto o bajo. Tocando una cuerda o nota suena primero la referencia y despu\xE9s se activa el micr\xF3fono.</li>
         <li><b>\u{1F941} Metr\xF3nomo</b>: BPM con \u2212 / +, <b>\u{1F446} Tap tempo</b> (toc\xE1 al ritmo), <b>Comp\xE1s</b> (1/4 a 7/8), <b>Subdivisi\xF3n</b> (\u2669 \u266A \u266A\xB3 \u266C), <b>Acento</b> en el tiempo que elijas, <b>\u25B6\uFE0F Play</b> y <b>\u{1F50A} Sonido</b>.</li>
-        <li><b>\u{1F3B5} Notas</b>: piano para tocar cualquier nota (la tecla elegida se pinta del color del tema), con octava ajustable.</li>
+        <li><b>\u{1F3B5} Notas</b>: piano para tocar cualquier nota (suena al apoyar el dedo, con sonido de piano real), con octava ajustable. <b>\u{1F3B9} Tocar el piano</b> lo abre a pantalla completa: 2 octavas (\u25C0 \u25B6 para subir o bajar), varias teclas a la vez, deslizar el dedo por el teclado, <b>Pedal</b>, sonido de <b>Piano</b> o <b>\xD3rgano</b>, <b>Notas</b> para ver el nombre de cada tecla y \u25D0 para elegir el acabado (negro con madera o blanco). En el celular aparece acostado: gir\xE1 el tel\xE9fono. Con la compu se toca con las teclas A W S E D F T G Y H U J K (Z / X cambian de octava). La \u2715 lo cierra.</li>
         <li><b>\u{1F3B6} Acordes</b>: eleg\xED la nota y el tipo (Mayor, menor, 7, Maj7, min7, sus2, sus4, dim, dim7, m7b5, aug, 6, m6); muestra sus notas, el diagrama y lo hace sonar.</li>
         <li><b>\u{1F3BC} Escalas</b>: escalas de cada tonalidad. Al elegir la nota suena; al elegir Mayor o menor suena su acorde; \u25B6 toca cada escala.</li>
         <li><b>\u{1F535} Quintas</b>: c\xEDrculo de cuartas y quintas; toc\xE1 una tonalidad para escucharla y sus acordes para o\xEDrlos.</li>
@@ -348,6 +348,7 @@ const MANUAL_VERSION="2.91.1",MANUAL_FECHA="23/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>No veo las Meditaciones</b>: escrib\xED <b>meditaciones</b> en el buscador.</li>
       </ul>`},{id:"novedades",icono:"\u{1F195}",titulo:"Novedades",html:`
       <ul>
+        <li><b>2.93.0</b> \u2014 \u{1F3B9} <b>Piano completo</b> (Metr\xF3nomo y Afinador \u2192 Notas \u2192 Tocar el piano): 2 octavas, sonido de piano real u \xF3rgano, varias teclas a la vez, pedal y acabado negro con madera o blanco; en el celular se usa horizontal. El piano chico de Notas ahora responde a cada toque. Las correcciones por mail traen el canto entero, tal cual va en su archivo.</li>
         <li><b>2.91.1</b> \u2014 Biblia: la bandera muestra los idiomas y, al tocar uno, aparecen debajo sus versiones (como en #RPSP). Ocupa menos lugar.</li>
         <li><b>2.91.0</b> \u2014 A\xF1o b\xEDblico y #RPSP: <b>bandera</b> para leer en otro idioma y selector de <b>versi\xF3n</b> arriba, como en Meditaciones. Biblia en el celular: la lista de idiomas y versiones muestra un idioma por rengl\xF3n y las versiones se deslizan hacia el costado (en el iPhone ya se ven todos).</li>
         <li><b>2.90.0</b> \u2014 <b>\u{1F4BE} Backup</b> \xFAnico (Informaci\xF3n de la app, al lado de \xABForzar actualizaci\xF3n\xBB): exporta e importa todo de una vez; reemplaza los Exportar/Importar de cada secci\xF3n. Sigla del plan en cada idioma (#RPSP, #RBHW, #RDSP\u2026) y nueva descripci\xF3n. \xABAvisos y alertas\xBB.</li>

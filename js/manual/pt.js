@@ -178,7 +178,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <ul>
 <li><b>\u{1F3AF} Afinador</b>: Geral, Viol\xE3o, Baixo, Violino ou Ukulele; refer\xEAncia <b>L\xE14 = 440 Hz</b> (ajust\xE1vel com \u2212 / +); <b>\u{1F3A4} Ativar microfone</b> e toque ou cante: indica a nota e se est\xE1 alto ou baixo. Tocando uma corda ou nota soa primeiro a refer\xEAncia e depois ativa o microfone.</li>
 <li><b>\u{1F941} Metr\xF4nomo</b>: BPM com \u2212 / +, <b>\u{1F446} Tap tempo</b> (toque no ritmo), <b>Compasso</b> (1/4 a 7/8), <b>Subdivis\xE3o</b> (\u2669 \u266A \u266A\xB3 \u266C), <b>Acento</b> no tempo que escolher, <b>\u25B6\uFE0F Play</b> e <b>\u{1F50A} Som</b>.</li>
-<li><b>\u{1F3B5} Notas</b>: piano para tocar qualquer nota (a tecla escolhida fica pintada da cor do tema), com oitava ajust\xE1vel.</li>
+<li><b>\u{1F3B5} Notas</b>: piano para tocar qualquer nota (soa assim que o dedo encosta, com som de piano de verdade), com oitava ajust\xE1vel. <b>\u{1F3B9} Tocar o piano</b> abre em tela cheia: 2 oitavas (\u25C0 \u25B6 para subir ou descer), v\xE1rias teclas ao mesmo tempo, deslizar o dedo pelo teclado, <b>Pedal</b>, som de <b>Piano</b> ou <b>\xD3rg\xE3o</b>, <b>Notas</b> para ver o nome de cada tecla e \u25D0 para escolher o acabamento (preto com madeira ou branco). No celular aparece deitado: gire o telefone. No computador toca-se com as teclas A W S E D F T G Y H U J K (Z / X mudam de oitava). O \u2715 fecha.</li>
 <li><b>\u{1F3B6} Acordes</b>: escolha a nota e o tipo (Maior, menor, 7, Maj7, min7, sus2, sus4, dim, dim7, m7b5, aug, 6, m6); mostra suas notas, o diagrama e o faz soar.</li>
 <li><b>\u{1F3BC} Escalas</b>: escalas de cada tom. Ao escolher a nota ela soa; ao escolher Maior ou menor soa o acorde; \u25B6 toca cada escala.</li>
 <li><b>\u{1F535} Quintas</b>: c\xEDrculo de quartas e quintas; toque um tom para ouvi-lo e seus acordes.</li>
@@ -348,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>N\xE3o vejo as Medita\xE7\xF5es</b>: escreva <b>meditaciones</b> na busca.</li>
 </ul>`},novedades:{titulo:"Novidades",html:`
 <ul>
+<li><b>2.93.0</b> \u2014 \u{1F3B9} <b>Piano completo</b> (Metr\xF4nomo e Afinador \u2192 Notas \u2192 Tocar o piano): 2 oitavas, som de piano de verdade ou \xF3rg\xE3o, v\xE1rias teclas ao mesmo tempo, pedal e acabamento preto com madeira ou branco; no celular usa-se deitado. O piano pequeno de Notas agora responde a cada toque.</li>
 <li><b>2.91.1</b> \u2014 B\xEDblia: a bandeira mostra os idiomas e, ao tocar em um, aparecem embaixo suas vers\xF5es (como no #RPSP). Ocupa menos espa\xE7o.</li>
 <li><b>2.91.0</b> \u2014 Ano b\xEDblico e #RPSP: <b>bandeira</b> para ler em outro idioma e seletor de <b>vers\xE3o</b> no alto, como nas Medita\xE7\xF5es. B\xEDblia no celular: a lista de idiomas e vers\xF5es mostra um idioma por linha e as vers\xF5es deslizam para o lado (no iPhone agora aparecem todas).</li>
 <li><b>2.90.0</b> \u2014 Um \xFAnico <b>\u{1F4BE} Backup</b> (Informa\xE7\xF5es do app, ao lado de \xABFor\xE7ar atualiza\xE7\xE3o\xBB): exporta e importa tudo de uma vez; substitui o Exportar/Importar de cada se\xE7\xE3o. Sigla do plano em cada idioma (#RPSP, #RBHW, #RDSP\u2026) e nova descri\xE7\xE3o. \xABAvisos e alertas\xBB.</li>

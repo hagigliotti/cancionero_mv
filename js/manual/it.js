@@ -178,7 +178,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <ul>
 <li><b>\u{1F3AF} Accordatore</b>: Generale, Chitarra, Basso, Violino o Ukulele; riferimento <b>La4 = 440 Hz</b> (regolabile con \u2212 / +); <b>\u{1F3A4} Attiva microfono</b> e suona o canta: indica la nota e se sei crescente o calante. Toccando una corda o una nota suona prima il riferimento e poi si attiva il microfono.</li>
 <li><b>\u{1F941} Metronomo</b>: BPM con \u2212 / +, <b>\u{1F446} Tap tempo</b> (tocca a ritmo), <b>Tempo</b> (da 1/4 a 7/8), <b>Suddivisione</b> (\u2669 \u266A \u266A\xB3 \u266C), <b>Accento</b> sul tempo che scegli, <b>\u25B6\uFE0F Play</b> e <b>\u{1F50A} Suono</b>.</li>
-<li><b>\u{1F3B5} Note</b>: pianoforte per suonare qualsiasi nota (il tasto scelto si colora con il colore del tema), con ottava regolabile.</li>
+<li><b>\u{1F3B5} Note</b>: pianoforte per suonare qualsiasi nota (suona appena il dito tocca il tasto, con suono di pianoforte vero), con ottava regolabile. <b>\u{1F3B9} Suona il pianoforte</b> lo apre a schermo intero: 2 ottave (\u25C0 \u25B6 per salire o scendere), pi\xF9 tasti insieme, far scorrere il dito sulla tastiera, <b>Pedale</b>, suono di <b>Pianoforte</b> o <b>Organo</b>, <b>Note</b> per vedere il nome di ogni tasto e \u25D0 per scegliere la finitura (nero con legno o bianco). Sul telefono appare in orizzontale: gira il telefono. Dal computer si suona con i tasti A W S E D F T G Y H U J K (Z / X cambiano ottava). La \u2715 lo chiude.</li>
 <li><b>\u{1F3B6} Accordi</b>: scegli la nota e il tipo (Maggiore, minore, 7, Maj7, min7, sus2, sus4, dim, dim7, m7b5, aug, 6, m6); mostra le sue note e il diagramma e lo fa suonare.</li>
 <li><b>\u{1F3BC} Scale</b>: scale di ogni tonalit\xE0. Scegliendo la nota suona; scegliendo Maggiore o minore suona il suo accordo; \u25B6 suona ogni scala.</li>
 <li><b>\u{1F535} Quinte</b>: circolo delle quarte e delle quinte; tocca una tonalit\xE0 per ascoltarla e i suoi accordi.</li>
@@ -348,6 +348,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>Non vedo le Meditazioni</b>: scrivi <b>meditaciones</b> nella ricerca.</li>
 </ul>`},novedades:{titulo:"Novit\xE0",html:`
 <ul>
+<li><b>2.93.0</b> \u2014 \u{1F3B9} <b>Pianoforte completo</b> (Metronomo e Accordatore \u2192 Note \u2192 Suona il pianoforte): 2 ottave, suono di pianoforte vero o organo, pi\xF9 tasti insieme, pedale e finitura nera con legno o bianca; sul telefono si usa in orizzontale. Il pianoforte piccolo di Note ora risponde a ogni tocco.</li>
 <li><b>2.91.1</b> \u2014 Bibbia: la bandiera mostra le lingue e, toccandone una, sotto compaiono le sue versioni (come in #RDSP). Occupa meno spazio.</li>
 <li><b>2.91.0</b> \u2014 Bibbia in un anno e #RDSP: <b>bandiera</b> per leggere in un'altra lingua e selettore della <b>versione</b> in alto, come nelle Meditazioni. Bibbia sul telefono: l'elenco di lingue e versioni mostra una lingua per riga e le versioni scorrono di lato (sull'iPhone ora si vedono tutte).</li>
 <li><b>2.90.0</b> \u2014 Un unico <b>\u{1F4BE} Backup</b> (Informazioni sull'app, accanto a \xABForza aggiornamento\xBB): esporta e importa tutto in una volta; sostituisce Esporta/Importa di ogni sezione. Sigla del piano in ogni lingua (#RPSP, #RBHW, #RDSP\u2026) e nuova descrizione. \xABAvvisi e allerte\xBB.</li>
