@@ -294,6 +294,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>Comment installer l'application \u2192 Combien de place ?</b> : environ 5 Mo (musique, pr\xE9sentations et partitions ne sont pas enregistr\xE9es, elles s'utilisent depuis internet) et la place qu'elle occupe maintenant sur votre appareil.</li>
 <li>Dans ces listes, un chant pr\xE9sent dans plusieurs livres n'appara\xEEt <b>qu'une fois</b>, avec un bouton par livre (par exemple <b>'09 #394 \xB7 '62 #196</b> : livre et num\xE9ro du cantique) : touchez la ligne pour l'ouvrir, ou le bouton du livre pr\xE9f\xE9r\xE9.</li>
 <li>Ce <b>\u{1F4D8} Manuel d'utilisation</b>, comment installer l'application, copyright, cr\xE9dits et sources.</li>
+<li><b>\u{1F6E1}\uFE0F Confidentialit\xE9</b> : quelles donn\xE9es l'app utilise et o\xF9 elles vont, ce qui a \xE9t\xE9 fait avec l'intelligence artificielle, l'\xE9tat des <b>cookies</b> (modifiable) et le bouton <b>\u{1F5D1}\uFE0F Effacer toutes mes donn\xE9es</b>, qui efface tout ce qui est enregistr\xE9 sur l'appareil. La premi\xE8re fois, un avis demande d'<b>accepter ou refuser</b> les cookies Google Analytics.</li>
 </ul>`},apariencia:{titulo:"Apparence : jour, nuit et couleurs",html:`
 <ul>
 <li><b>\u{1F576}\uFE0F / \u{1F453}</b> (en haut du menu) : bascule entre le mode <b>nuit</b> (fond sombre) et le mode <b>jour</b> (fond clair).</li>
@@ -348,6 +349,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>Je ne vois pas les M\xE9ditations</b> : \xE9crivez <b>meditaciones</b> dans la recherche.</li>
 </ul>`},novedades:{titulo:"Nouveaut\xE9s",html:`
 <ul>
+<li><b>2.95.0</b> \u2014 \u{1F6E1}\uFE0F Confidentialit\xE9 dans Informations (donn\xE9es, IA, cookies et \xAB Effacer toutes mes donn\xE9es \xBB) ; avis cookies : Google Analytics seulement si vous acceptez. Sauvegardes et corrections plus s\xFBres, et avis en cas de probl\xE8me.</li>
 <li><b>2.94.2</b> \u2014 Menu : \xAB Taille du texte \xBB passe dans R\xE9glages ; \xAB Chant \xBB reste toujours en haut. Les avis prennent la couleur du th\xE8me et se d\xE9tachent du fond.</li>
 <li><b>2.94.0</b> \u2014 Nouveau menu \u2630 en sections qui s'ouvrent et se ferment : Ce chant, Instruments (Piano), Outils, Ma musique, Lire, R\xE9glages et Mode \xE9glise en bas.</li>
 <li><b>2.93.1</b> \u2014 iPhone : le son (piano, notes, accords, m\xE9tronome) ne reste plus muet apr\xE8s une interruption (appel, autre app, \xE9cran verrouill\xE9) ; le bouton \xAB Jouer du piano \xBB s'ouvre toujours.</li>
