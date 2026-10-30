@@ -1,4 +1,4 @@
-function hasHymnNumbersInCurrentLanguage(){return getLibroSongs(libroActual).some(a=>{const e=parseInt(a.idiomas?.[idiomaActual]?.numero_himno,10);return!isNaN(e)&&e>0})}function naturalSort(a,e){const n=a.match(/(\D+)|(\d+)/g),i=e.match(/(\D+)|(\d+)/g),o=Math.min(n.length,i.length);for(let r=0;r<o;r++){const s=n[r],l=i[r],m=Number(s),d=Number(l);if(!isNaN(m)&&!isNaN(d)){if(m!==d)return m-d}else if(s!==l)return s.localeCompare(l,void 0,{sensitivity:"base"})}return n.length-i.length}function cleanTitleForIndex(a){return normalize(a).trim().replace(/^[¿¡!?"'“”‘’()\[\]\s]+/,"")}function getIndexLetter(a){const n=cleanTitleForIndex(a).charAt(0).toUpperCase();return n.match(/[A-ZÁÉÍÓÚÑ0-9]/i)?n:"#"}function normalizePersonField(a){return a?(Array.isArray(a)?a:[a]).map(n=>(n||"").trim()).filter(n=>n&&n!=="-"):[]}const ORDEN_LIBROS_EQUIV=["himnario","himnario_1962","melodias_de_victoria","cancionero","innario"];function calcularBanderasEquivalentes(a){const e=new Set(Object.keys(a.idiomas||{}).map(o=>a.idiomas[o]?.idioma_real||o)),n=ORDEN_LIBROS_EQUIV,i=new Map;return getEquivalenciasDe(a).forEach(o=>{const r=getSongPorIdRapido(o.id);r&&Object.keys(r.idiomas||{}).forEach(s=>{const l=r.idiomas[s];if(!l?.titulo)return;const m=l.idioma_real||s;if(e.has(m))return;const d=n.indexOf(o.libro),u=i.get(m);(!u||d<u.rank)&&i.set(m,{eq:o,lang:s,rank:d,audio:!!l.audio_url})})}),i}function renderBanderasEquivalentes(a,e=!1){const n=calcularBanderasEquivalentes(a),i=marcasEquivalentesPorIdioma(a);return[...n.entries()].sort((o,r)=>(FLAG_NAMES[o[0]]||o[0]).localeCompare(FLAG_NAMES[r[0]]||r[0])).map(([o,r])=>{const s=getLibroDef(r.eq.libro),l=ladoBanderaHtml(e&&r.audio,marcasLibrosHtml(i.get(o))),m=`${IDIOMA_NOMBRES[o]||o} \u2014 ${s?.nombre||r.eq.libro}${r.eq.numero?" #"+r.eq.numero:""}`;return`<span class="flag flag-lado" ${dataAction("abrirEquivalente",[r.eq.id,r.lang])} title="${escapeHtml(m)}"><span class="flag-emoji" data-flag-lang="${o}">${getFlagEmoji(o)}</span>${l}</span>`}).join("")}function marcasEquivalentesPorIdioma(a){const e=new Map,n=getLibroIdDeSong(a),i=getLibroDef(n);if(n&&n!==libroActual&&i?.marca){const o=i.idiomaDefault||"es",r=Object.keys(a.idiomas||{}).find(s=>a.idiomas[s]?.titulo&&(a.idiomas[s].idioma_real||s)===o);if(r){const s=a.idiomas[r].numero_himno;e.set(o,[{eq:{id:a.id,libro:n,numero:s},lang:r,numeros:s?[s]:[],propio:!0}])}}return getEquivalenciasDe(a).forEach(o=>{const r=getSongPorIdRapido(o.id);if(!r)return;const s=getLibroDef(o.libro)?.idiomaDefault||"es";Object.keys(r.idiomas||{}).forEach(l=>{const m=r.idiomas[l];if(!m?.titulo)return;const d=m.idioma_real||l;if(d!==s)return;const u=e.get(d)||[],$=u.find(b=>b.eq.libro===o.libro);$?o.numero&&$.numeros.push(o.numero):u.push({eq:o,lang:l,numeros:o.numero?[o.numero]:[]}),e.set(d,u)})}),e.forEach(o=>o.sort((r,s)=>(s.propio?1:0)-(r.propio?1:0)||ORDEN_LIBROS_EQUIV.indexOf(r.eq.libro)-ORDEN_LIBROS_EQUIV.indexOf(s.eq.libro))),e}function marcasLibrosHtml(a){return a?.length?a.map(e=>{const n=getLibroDef(e.eq.libro);if(!n?.marca)return"";const i=`${n.nombre}${e.numeros.length?" #"+e.numeros.join(", #"):""}`;return`<small class="libro-marca marca-equiv" ${dataAction("abrirEquivalente",[e.eq.id,e.lang])} title="${escapeHtml(i)}">${escapeHtml(n.marca)}</small>`}).join(""):""}function ladoBanderaHtml(a,e){const n=a?'<span class="flag-audio-note">\u266A</span>':"";return n||e?`<span class="flag-side">${n}${e}</span>`:""}function renderEquivalenciasHtml(a){const e=getEquivalenciasDe(a);if(!e.length)return"";const n=e.map(i=>{const o=getLibroDef(i.libro)?.nombre||i.libro,r=i.numero?`${o} #${i.numero}`:`${o}: ${i.titulo}`,s=[i.tipo==="parcial"?"Letra o m\xFAsica con diferencias, u otra traducci\xF3n":"Mismo canto",i.confianza==="baja"?"a confirmar":"",i.nota||""].filter(Boolean).join(" \xB7 ");return`<span class="equiv-link" ${dataAction("abrirEquivalente",[i.id])} title="${escapeHtml(s)}">${escapeHtml(r)}</span>`}).join(", ");return`<div><b>${t("tambien_en")}:</b> ${n}</div>`}function openSong(a){mostrarCancionActual();const e=getTodasLasCanciones().find(c=>c.id===a||c.slug===a);if(!e){document.getElementById("contenido").innerHTML=`<p>${t("cancion_no_disp_libro")}</p>`,updateClearSearchBtn();return}const n=detectLibroBySong(e);libroActual===n&&(renderAlphabet(),updateAppTitle());let i=e?.idiomas?.[idiomaActual];if(!i){const c=Object.keys(e.idiomas||{});c.length>0&&(idiomaActual=c[0],i=e.idiomas[idiomaActual])}if(!i){document.getElementById("contenido").innerHTML=`<p>${t("cancion_no_disp_idioma")}</p>`,updateClearSearchBtn();return}closeList(),listaVisible=!1,letraActiva=null,ocultarMensajeInicio(),stopTeleprompter(),teleprompterSpeedMult=1;const o=getNumeroHimno(e),r=i.titulo||e.titulo_original||"Sin t\xEDtulo",s=o?`${o} - ${r}`:r,l=getLibroDef(getLibroIdDeSong(e)),m=l?.marca&&getEquivalenciasDe(e).length?`<small class="libro-marca titulo-libro-marca" title="${escapeHtml(l.nombre)}">${escapeHtml(l.marca)}</small>`:"",d=(e.idiomas?.[idiomaActual]?.titulo2||[]).map(c=>(c||"").trim()).filter(c=>c&&c!=="-"),u=d.length?` | <b>${t("otros_titulos")}:</b> ${d.join(", ")}`:"",b=(Array.isArray(e.titulo_original)?e.titulo_original:e.titulo_original?[e.titulo_original]:[]).map(c=>(c||"").trim()).filter(c=>c&&c!=="-"),A=normalizePersonField(i.traductor),v=A.length?`${renderPersonLinks("Traductor",A)} | `:"",h=normalizePersonField(i.arreglo),y=h.length?`${renderPersonLinks("Arreglo",h)} | `:"",L=normalizeArrayField(i.partitura).map(rutaPartituraExistente).filter(Boolean).length?`<button type="button" class="partitura-btn" ${dataAction("abrirPartituraCancion",[e.id,idiomaActual])}>${t("click_aqui")}</button>`:t("no"),E=`
+function hasHymnNumbersInCurrentLanguage(){return getLibroSongs(libroActual).some(o=>{const e=parseInt(o.idiomas?.[idiomaActual]?.numero_himno,10);return!isNaN(e)&&e>0})}function naturalSort(o,e){const n=o.match(/(\D+)|(\d+)/g),r=e.match(/(\D+)|(\d+)/g),a=Math.min(n.length,r.length);for(let i=0;i<a;i++){const s=n[i],l=r[i],m=Number(s),d=Number(l);if(!isNaN(m)&&!isNaN(d)){if(m!==d)return m-d}else if(s!==l)return s.localeCompare(l,void 0,{sensitivity:"base"})}return n.length-r.length}function cleanTitleForIndex(o){return normalize(o).trim().replace(/^[¿¡!?"'“”‘’()\[\]\s]+/,"")}function getIndexLetter(o){const n=cleanTitleForIndex(o).charAt(0).toUpperCase();return n.match(/[A-ZÁÉÍÓÚÑ0-9]/i)?n:"#"}function normalizePersonField(o){return o?(Array.isArray(o)?o:[o]).map(n=>(n||"").trim()).filter(n=>n&&n!=="-"):[]}const ORDEN_LIBROS_EQUIV=["himnario","himnario_1962","melodias_de_victoria","cancionero","innario"];function calcularBanderasEquivalentes(o){const e=new Set(Object.keys(o.idiomas||{}).map(a=>o.idiomas[a]?.idioma_real||a)),n=ORDEN_LIBROS_EQUIV,r=new Map;return getEquivalenciasDe(o).forEach(a=>{const i=getSongPorIdRapido(a.id);i&&Object.keys(i.idiomas||{}).forEach(s=>{const l=i.idiomas[s];if(!l?.titulo)return;const m=l.idioma_real||s;if(e.has(m))return;const d=n.indexOf(a.libro),u=r.get(m);(!u||d<u.rank)&&r.set(m,{eq:a,lang:s,rank:d,audio:!!l.audio_url})})}),r}function renderBanderasEquivalentes(o,e=!1){const n=calcularBanderasEquivalentes(o),r=marcasEquivalentesPorIdioma(o);return[...n.entries()].sort((a,i)=>(FLAG_NAMES[a[0]]||a[0]).localeCompare(FLAG_NAMES[i[0]]||i[0])).map(([a,i])=>{const s=getLibroDef(i.eq.libro),l=ladoBanderaHtml(e&&i.audio,marcasLibrosHtml(r.get(a))),m=`${IDIOMA_NOMBRES[a]||a} \u2014 ${s?.nombre||i.eq.libro}${i.eq.numero?" #"+i.eq.numero:""}`;return`<span class="flag flag-lado" ${dataAction("abrirEquivalente",[i.eq.id,i.lang])} title="${escapeHtml(m)}"><span class="flag-emoji" data-flag-lang="${a}">${getFlagEmoji(a)}</span>${l}</span>`}).join("")}function marcasEquivalentesPorIdioma(o){const e=new Map,n=getLibroIdDeSong(o),r=getLibroDef(n);if(n&&n!==libroActual&&r?.marca){const a=r.idiomaDefault||"es",i=Object.keys(o.idiomas||{}).find(s=>o.idiomas[s]?.titulo&&(o.idiomas[s].idioma_real||s)===a);if(i){const s=o.idiomas[i].numero_himno;e.set(a,[{eq:{id:o.id,libro:n,numero:s},lang:i,numeros:s?[s]:[],propio:!0}])}}return getEquivalenciasDe(o).forEach(a=>{const i=getSongPorIdRapido(a.id);if(!i)return;const s=getLibroDef(a.libro)?.idiomaDefault||"es";Object.keys(i.idiomas||{}).forEach(l=>{const m=i.idiomas[l];if(!m?.titulo)return;const d=m.idioma_real||l;if(d!==s)return;const u=e.get(d)||[],f=u.find($=>$.eq.libro===a.libro);f?a.numero&&f.numeros.push(a.numero):u.push({eq:a,lang:l,numeros:a.numero?[a.numero]:[]}),e.set(d,u)})}),e.forEach(a=>a.sort((i,s)=>(s.propio?1:0)-(i.propio?1:0)||ORDEN_LIBROS_EQUIV.indexOf(i.eq.libro)-ORDEN_LIBROS_EQUIV.indexOf(s.eq.libro))),e}function marcasLibrosHtml(o){return o?.length?o.map(e=>{const n=getLibroDef(e.eq.libro);if(!n?.marca)return"";const r=`${n.nombre}${e.numeros.length?" #"+e.numeros.join(", #"):""}`;return`<small class="libro-marca marca-equiv" ${dataAction("abrirEquivalente",[e.eq.id,e.lang])} title="${escapeHtml(r)}">${escapeHtml(n.marca)}</small>`}).join(""):""}function ladoBanderaHtml(o,e){const n=o?'<span class="flag-audio-note">\u266A</span>':"";return n||e?`<span class="flag-side">${n}${e}</span>`:""}function renderEquivalenciasHtml(o){const e=getEquivalenciasDe(o);if(!e.length)return"";const n=e.map(r=>{const a=getLibroDef(r.libro)?.nombre||r.libro,i=r.numero?`${a} #${r.numero}`:`${a}: ${r.titulo}`,s=[r.tipo==="parcial"?"Letra o m\xFAsica con diferencias, u otra traducci\xF3n":"Mismo canto",r.confianza==="baja"?"a confirmar":"",r.nota||""].filter(Boolean).join(" \xB7 ");return`<span class="equiv-link" ${dataAction("abrirEquivalente",[r.id])} title="${escapeHtml(s)}">${escapeHtml(i)}</span>`}).join(", ");return`<div><b>${t("tambien_en")}:</b> ${n}</div>`}function openSong(o){mostrarCancionActual();const e=getTodasLasCanciones().find(c=>c.id===o||c.slug===o);if(!e){document.getElementById("contenido").innerHTML=`<p>${t("cancion_no_disp_libro")}</p>`,updateClearSearchBtn();return}const n=detectLibroBySong(e);libroActual===n&&(renderAlphabet(),updateAppTitle());const r=varianteDeCancion(e);let a=e?.idiomas?.[r];if(!a){const c=Object.keys(e.idiomas||{}).filter(b=>!esVarianteRegional(b));c.length>0&&(idiomaActual=c[0],a=e.idiomas[idiomaActual])}if(!a){document.getElementById("contenido").innerHTML=`<p>${t("cancion_no_disp_idioma")}</p>`,updateClearSearchBtn();return}closeList(),listaVisible=!1,letraActiva=null,ocultarMensajeInicio(),stopTeleprompter(),teleprompterSpeedMult=1;const i=getNumeroHimno(e),s=a.titulo||e.titulo_original||"Sin t\xEDtulo",l=i?`${i} - ${s}`:s,m=getLibroDef(getLibroIdDeSong(e)),d=m?.marca&&getEquivalenciasDe(e).length?`<small class="libro-marca titulo-libro-marca" title="${escapeHtml(m.nombre)}">${escapeHtml(m.marca)}</small>`:"",u=(a.titulo2||[]).map(c=>(c||"").trim()).filter(c=>c&&c!=="-"),f=u.length?` | <b>${t("otros_titulos")}:</b> ${u.join(", ")}`:"",A=(Array.isArray(e.titulo_original)?e.titulo_original:e.titulo_original?[e.titulo_original]:[]).map(c=>(c||"").trim()).filter(c=>c&&c!=="-"),h=normalizePersonField(a.traductor),y=h.length?`${renderPersonLinks("Traductor",h)} | `:"",v=normalizePersonField(a.arreglo),L=v.length?`${renderPersonLinks("Arreglo",v)} | `:"",E=normalizeArrayField(a.partitura).map(rutaPartituraExistente).filter(Boolean).length?`<button type="button" class="partitura-btn" ${dataAction("abrirPartituraCancion",[e.id,r])}>${t("click_aqui")}</button>`:t("no"),M=`
     <div class="song-meta">
 
       <div class="flags">
@@ -7,10 +7,10 @@ function hasHymnNumbersInCurrentLanguage(){return getLibroSongs(libroActual).som
 
       <div>
         <b>${t("original")}:</b>
-          ${b.length?`
-              <i><span class="original-title">"${b.join(", ")}"</span></i>
+          ${A.length?`
+              <i><span class="original-title">"${A.join(", ")}"</span></i>
             `:""}
-        ${u}
+        ${f}
       </div>
 
       <div>
@@ -23,9 +23,9 @@ function hasHymnNumbersInCurrentLanguage(){return getLibroSongs(libroActual).som
         ${renderPersonLinks("Compositor",e.compositor)}
         ${e.compositor?" | ":""}
 
-        ${y}
+        ${L}
 
-        ${v}
+        ${y}
 
         <b>${t("anio")}:</b> ${traducirValorFijo(normalizeSimple(e.year))}
       </div>
@@ -81,39 +81,39 @@ function hasHymnNumbersInCurrentLanguage(){return getLibroSongs(libroActual).som
 
         <b>${t("ritmo")}:</b> ${traducirValorFijo(formatRitmo(e.ritmo))||t("desconocido")} |
 
-        <b>${t("partitura")}:</b> ${L}
+        <b>${t("partitura")}:</b> ${E}
       </div>
 
       <div>
         <b class="temas-label-link" ${dataAction("abrirValoresModal",["tags",null,{fromInfo:!1}])} title="Ver todos los tags">${t("temas")}:</b>
-        ${e.tags?.length?[...e.tags].map(c=>c?.toString().trim()).filter(Boolean).sort((c,g)=>getTagDisplay(c,idiomaActual).localeCompare(getTagDisplay(g,idiomaActual),"es",{sensitivity:"base"})).map(c=>{const g=getTagDisplay(c,idiomaActual);return`<span class="tag-link" ${dataAction("openPersonModal",[c,"tags",{tipo:"tags",filtroIdioma:idiomaActual,fromInfo:!1}])}>${g}</span>`}).join(", "):t("desconocido")} |
+        ${e.tags?.length?[...e.tags].map(c=>c?.toString().trim()).filter(Boolean).sort((c,b)=>getTagDisplay(c,idiomaActual).localeCompare(getTagDisplay(b,idiomaActual),"es",{sensitivity:"base"})).map(c=>{const b=getTagDisplay(c,idiomaActual);return`<span class="tag-link" ${dataAction("openPersonModal",[c,"tags",{tipo:"tags",filtroIdioma:idiomaActual,fromInfo:!1}])}>${b}</span>`}).join(", "):t("desconocido")} |
 
         <b>${t("revisado")}:</b>
           <span
             class="song-meta-revisado"
-            data-revisado='${JSON.stringify(e.idiomas?.[idiomaActual]?.revisado)}'
+            data-revisado='${JSON.stringify(a.revisado)}'
             ${dataAction("openRevisadoList",["@el"])}
           >
-            ${formatRevisadoEstado(e.idiomas?.[idiomaActual]?.revisado)}
+            ${formatRevisadoEstado(a.revisado)}
           </span>
 
           <span class="revisado-personas">
-            ${renderRevisadoPersonas(e.idiomas?.[idiomaActual]?.revisado)}
+            ${renderRevisadoPersonas(a.revisado)}
           </span>
 
 
-        ${renderAudioLink(e,i)}
+        ${renderAudioLink(e,a)}
       </div>
 
       ${renderEquivalenciasHtml(e)}
 
     </div>
 
-  `,f=e.idiomas?.[idiomaActual]?.nota,p=Array.isArray(f)?f.map(c=>(c||"").trim()).filter(c=>c!==""):typeof f=="string"?f.trim():"",M=Array.isArray(p)?p.length>0:p!=="";document.getElementById("contenido").innerHTML=`
+  `,g=e.idiomas?.[idiomaActual]?.nota,p=Array.isArray(g)?g.map(c=>(c||"").trim()).filter(c=>c!==""):typeof g=="string"?g.trim():"",T=Array.isArray(p)?p.length>0:p!=="";document.getElementById("contenido").innerHTML=`
   <div class="song-title-row" id="songTitleRow" data-song-id="${escapeHtml(e.id)}" data-lang="${escapeHtml(idiomaActual)}">
-    <h2 class="song-title-text">${s}${m}</h2>
+    <h2 class="song-title-text">${l}${d}</h2>
     <button type="button" class="fav-add-btn" ${dataAction("abrirMisListas",[e.id])} title="Agregar a una lista">\u2B50</button>
-    ${Array.isArray(i.letra)&&i.letra.length&&typeof editorAcordesActivo=="function"&&editorAcordesActivo()?`<button type="button" class="editar-acordes-btn" ${dataAction("edTocarLapiz")} title="${escapeHtml(tEd("editar"))}" aria-label="${escapeHtml(tEd("editar"))}">\u270F\uFE0F</button>`:""}
+    ${Array.isArray(a.letra)&&a.letra.length&&typeof editorAcordesActivo=="function"&&editorAcordesActivo()?`<button type="button" class="editar-acordes-btn" ${dataAction("edTocarLapiz")} title="${escapeHtml(tEd("editar"))}" aria-label="${escapeHtml(tEd("editar"))}">\u270F\uFE0F</button>`:""}
 
     <div class="teleprompter-bar" id="teleprompterBar" data-bpm="${normalizeMeta(e,"tempo_bpm")||""}">
       <span class="teleprompter-label">${t("teleprompter")}</span>
@@ -126,38 +126,38 @@ function hasHymnNumbersInCurrentLanguage(){return getLibroSongs(libroActual).som
     </div>
   </div>
 
-  ${E}
+  ${M}
 
   <div class="lyrics">
-    ${renderLyrics(i.letra)}
+    ${renderLyrics(a.letra)}
   </div>
 
-  ${M?`
+  ${T?`
         <div class="song-note">
           ${Array.isArray(p)?p.map(c=>`<p>${c}</p>`).join(""):p.split(`
 `).map(c=>`<p>${c}</p>`).join("")}
         </div>
       `:""}
-`,applyTablaturaState(),applyTeleprompterBarVisibility(),resetTranspose(),window.scrollTo({top:0,behavior:"smooth"}),updateClearSearchBtn()}function selectLetter(a){if(letraActiva===a&&listaVisible){closeList(),letraActiva=null,highlightLetter(null),document.getElementById("contenido").innerHTML.trim()?mostrarCancionActual():mostrarMensajeInicio();return}abrirLetra(a)}function abrirLetra(a){letraActiva=a,listaVisible=!0,ocultarMensajeInicio(),ocultarCancionActual(),openList(),renderList(a),highlightLetter(a),window.scrollTo({top:0,behavior:"smooth"})}function renderList(a){const e=document.getElementById("indice");let n=getSortedData(),i=[];n.forEach(o=>{getAllSongTitles(o).forEach(s=>{i.push({song:o,displayTitle:buildDisplayTitle(o,s),rawTitle:s})})}),a&&a!=="*"&&(i=i.filter(o=>{const r=cleanTitleForIndex(o.rawTitle);return a==="#"?/^\d/.test(r):getIndexLetter(r)===a})),i.sort((o,r)=>naturalSort(cleanTitleForIndex(o.displayTitle),cleanTitleForIndex(r.displayTitle))),e.innerHTML=i.map(o=>`
-    <li ${dataAction("openSong",[o.song.id])}>
+`,applyTablaturaState(),applyTeleprompterBarVisibility(),resetTranspose(),window.scrollTo({top:0,behavior:"smooth"}),updateClearSearchBtn()}function selectLetter(o){if(letraActiva===o&&listaVisible){closeList(),letraActiva=null,highlightLetter(null),document.getElementById("contenido").innerHTML.trim()?mostrarCancionActual():mostrarMensajeInicio();return}abrirLetra(o)}function abrirLetra(o){letraActiva=o,listaVisible=!0,ocultarMensajeInicio(),ocultarCancionActual(),openList(),renderList(o),highlightLetter(o),window.scrollTo({top:0,behavior:"smooth"})}function renderList(o){const e=document.getElementById("indice");let n=getSortedData(),r=[];n.forEach(a=>{getAllSongTitles(a).forEach(s=>{r.push({song:a,displayTitle:buildDisplayTitle(a,s),rawTitle:s})})}),o&&o!=="*"&&(r=r.filter(a=>{const i=cleanTitleForIndex(a.rawTitle);return o==="#"?/^\d/.test(i):getIndexLetter(i)===o})),r.sort((a,i)=>naturalSort(cleanTitleForIndex(a.displayTitle),cleanTitleForIndex(i.displayTitle))),e.innerHTML=r.map(a=>`
+    <li ${dataAction("openSong",[a.song.id])}>
       <div style="display:flex; justify-content:space-between; align-items:center;">
-        <span class="list-row-title">${o.displayTitle}</span>
+        <span class="list-row-title">${a.displayTitle}</span>
         <span class="list-row-flags">
-          ${renderLanguageFlags(o.song,!0,!1,!0)}${renderBanderasEquivalentes(o.song,!0)}
+          ${renderLanguageFlags(a.song,!0,!1,!0)}${renderBanderasEquivalentes(a.song,!0)}
         </span>
       </div>
     </li>
-  `).join("")}function buildDisplayTitle(a,e){const n=a?.idiomas?.[idiomaActual];if(getLibroDef(libroActual)?.numeroHimno){const i=parseInt(n?.numero_himno,10);if(!isNaN(i)&&i>0)return`${i} - ${e}`}return e}function getHymnNumbersByLanguage(a){return getLibroSongs(libroActual).map(e=>parseInt(e.idiomas?.[a]?.numero_himno,10)).filter(e=>!isNaN(e)).sort((e,n)=>e-n)}function buildHymnRanges(a){const e=getHymnNumbersByLanguage(a);if(!e.length)return[];const n=e[0],i=e[e.length-1],o=50,r=[];for(let s=Math.floor(n/o)*o+1;s<=i;s+=o){const l=Math.min(s+o-1,i);e.some(d=>d>=s&&d<=l)&&r.push([s,l])}return r}function expandSongTitles(a){const e=a.idiomas?.[idiomaActual]||{},n=e.titulo||[],i=e.titulo2||[];return[...normalizeField(n),...normalizeField(i)].map(r=>(r||"").trim()).filter(Boolean).map(r=>({song:a,title:r}))}function getSortedData(){const a=[...getDataActual()];return getLibroDef(libroActual)?.numeroHimno?a.sort((e,n)=>{const i=parseInt(e.idiomas?.[idiomaActual]?.numero_himno||0,10),o=parseInt(n.idiomas?.[idiomaActual]?.numero_himno||0,10);return i-o}):a.sort((e,n)=>{const i=getSongSortKey(e).num,o=getSongSortKey(n).num;return i-o})}function getSongSortKey(a){const n=(a.idiomas?.[idiomaActual]?.titulo||"").match(/^(\d+)/);return n?{type:"number",num:parseInt(n[1],10)}:{type:"text",num:999999}}function renderAlphabet(){const a=document.getElementById("alfabeto"),e=getDataActual();let n=new Set;e.forEach(l=>{const m=l.idiomas?.[idiomaActual]?.titulo;if(!m)return;const d=m.replace(/^[¿¡!?\s"'“”‘’]+/,""),u=normalize(d.charAt(0));u&&(/^\d/.test(u)?n.add("#"):n.add(u))});let i=Array.from(n).sort();getLibroDef(libroActual)?.numeroHimno?i=i.filter(l=>l!=="#"):i.includes("#")||i.unshift("#"),i.unshift("*"),a.innerHTML=`
+  `).join("")}function buildDisplayTitle(o,e){const n=o?.idiomas?.[idiomaActual];if(getLibroDef(libroActual)?.numeroHimno){const r=parseInt(n?.numero_himno,10);if(!isNaN(r)&&r>0)return`${r} - ${e}`}return e}function getHymnNumbersByLanguage(o){return getLibroSongs(libroActual).map(e=>parseInt(e.idiomas?.[o]?.numero_himno,10)).filter(e=>!isNaN(e)).sort((e,n)=>e-n)}function buildHymnRanges(o){const e=getHymnNumbersByLanguage(o);if(!e.length)return[];const n=e[0],r=e[e.length-1],a=50,i=[];for(let s=Math.floor(n/a)*a+1;s<=r;s+=a){const l=Math.min(s+a-1,r);e.some(d=>d>=s&&d<=l)&&i.push([s,l])}return i}function expandSongTitles(o){const e=o.idiomas?.[idiomaActual]||{},n=e.titulo||[],r=e.titulo2||[];return[...normalizeField(n),...normalizeField(r)].map(i=>(i||"").trim()).filter(Boolean).map(i=>({song:o,title:i}))}function getSortedData(){const o=[...getDataActual()];return getLibroDef(libroActual)?.numeroHimno?o.sort((e,n)=>{const r=parseInt(e.idiomas?.[idiomaActual]?.numero_himno||0,10),a=parseInt(n.idiomas?.[idiomaActual]?.numero_himno||0,10);return r-a}):o.sort((e,n)=>{const r=getSongSortKey(e).num,a=getSongSortKey(n).num;return r-a})}function getSongSortKey(o){const n=(o.idiomas?.[idiomaActual]?.titulo||"").match(/^(\d+)/);return n?{type:"number",num:parseInt(n[1],10)}:{type:"text",num:999999}}function renderAlphabet(){const o=document.getElementById("alfabeto"),e=getDataActual();let n=new Set;e.forEach(l=>{const m=l.idiomas?.[idiomaActual]?.titulo;if(!m)return;const d=m.replace(/^[¿¡!?\s"'“”‘’]+/,""),u=normalize(d.charAt(0));u&&(/^\d/.test(u)?n.add("#"):n.add(u))});let r=Array.from(n).sort();getLibroDef(libroActual)?.numeroHimno?r=r.filter(l=>l!=="#"):r.includes("#")||r.unshift("#"),r.unshift("*"),o.innerHTML=`
     <div class="alpha-row">
 
-      ${i.map(l=>`
+      ${r.map(l=>`
         <button class="alpha" data-letter="${l}" ${dataAction("selectLetter",[l])}>
           ${l==="*"?"\u{1F524}":l==="#"?"#\uFE0F\u20E3":l}
         </button>
       `).join("")}
 
     </div>
-  `;const o=document.getElementById("himnoRangosNav"),r=document.getElementById("himnoRangos");if(o&&r){const l=getLibroDef(libroActual)?.numeroHimno?buildHymnRanges(idiomaActual):[];l.length>0?(o.classList.remove("hidden"),r.innerHTML=`
+  `;const a=document.getElementById("himnoRangosNav"),i=document.getElementById("himnoRangos");if(a&&i){const l=getLibroDef(libroActual)?.numeroHimno?buildHymnRanges(idiomaActual):[];l.length>0?(a.classList.remove("hidden"),i.innerHTML=`
         <div class="alpha-row">
           ${l.map(m=>`
             <button class="alpha" ${dataAction("selectRange",[m[0],m[1]])}>
@@ -165,15 +165,15 @@ function hasHymnNumbersInCurrentLanguage(){return getLibroSongs(libroActual).som
             </button>
           `).join("")}
         </div>
-      `):(o.classList.add("hidden"),r.innerHTML=""),window.syncHeaderOffsets?.()}const s=document.getElementById("letterRail");s&&(s.innerHTML=i.map(l=>`
+      `):(a.classList.add("hidden"),i.innerHTML=""),window.syncHeaderOffsets?.()}const s=document.getElementById("letterRail");s&&(s.innerHTML=r.map(l=>`
       <span data-letter="${l}">${l==="*"?"\u25CF":l==="#"?"#":l}</span>
-    `).join("")),highlightLetter(letraActiva)}function highlightLetter(a){let e=null;document.querySelectorAll("#alfabeto [data-letter]").forEach(n=>{const i=a!==null&&n.dataset.letter===a;n.classList.toggle("active",i),i&&(e=n)}),document.querySelectorAll("#letterRail [data-letter]").forEach(n=>{n.classList.toggle("active",a!==null&&n.dataset.letter===a)}),e&&e.scrollIntoView({behavior:"smooth",inline:"center",block:"nearest"})}function selectRange(a,e){stopTeleprompter(),ocultarMensajeInicio(),ocultarCancionActual(),openList(),renderHymnRange(a,e),letraActiva=null,highlightLetter(null),listaVisible=!0,window.scrollTo({top:0,behavior:"smooth"})}function renderHymnRange(a,e){const n=document.getElementById("indice"),i=getLibroSongs(libroActual).map(o=>{const r=parseInt(o.idiomas?.[idiomaActual]?.numero_himno,10);return{song:o,num:r}}).filter(o=>o.num>=a&&o.num<=e).sort((o,r)=>o.num-r.num);n.innerHTML=i.map(o=>{const r=o.song.idiomas?.[idiomaActual]||{},s=parseInt(r.numero_himno,10),l=r.titulo||o.song.titulo_original||"Sin t\xEDtulo",m=isNaN(s)?`${l}`:`${s} - ${l}`;return`
-      <li ${dataAction("openSong",[o.song.id])}>
+    `).join("")),highlightLetter(letraActiva)}function highlightLetter(o){let e=null;document.querySelectorAll("#alfabeto [data-letter]").forEach(n=>{const r=o!==null&&n.dataset.letter===o;n.classList.toggle("active",r),r&&(e=n)}),document.querySelectorAll("#letterRail [data-letter]").forEach(n=>{n.classList.toggle("active",o!==null&&n.dataset.letter===o)}),e&&e.scrollIntoView({behavior:"smooth",inline:"center",block:"nearest"})}function selectRange(o,e){stopTeleprompter(),ocultarMensajeInicio(),ocultarCancionActual(),openList(),renderHymnRange(o,e),letraActiva=null,highlightLetter(null),listaVisible=!0,window.scrollTo({top:0,behavior:"smooth"})}function renderHymnRange(o,e){const n=document.getElementById("indice"),r=getLibroSongs(libroActual).map(a=>{const i=parseInt(a.idiomas?.[idiomaActual]?.numero_himno,10);return{song:a,num:i}}).filter(a=>a.num>=o&&a.num<=e).sort((a,i)=>a.num-i.num);n.innerHTML=r.map(a=>{const i=a.song.idiomas?.[idiomaActual]||{},s=parseInt(i.numero_himno,10),l=i.titulo||a.song.titulo_original||"Sin t\xEDtulo",m=isNaN(s)?`${l}`:`${s} - ${l}`;return`
+      <li ${dataAction("openSong",[a.song.id])}>
         <div style="display:flex; justify-content:space-between;">
           <span class="list-row-title">${m}</span>
           <span class="lang-flags-list">
-            ${renderLanguageFlags(o.song,!0,!1,!0)}${renderBanderasEquivalentes(o.song,!0)}
+            ${renderLanguageFlags(a.song,!0,!1,!0)}${renderBanderasEquivalentes(a.song,!0)}
           </span>
         </div>
       </li>
-    `}).join("")}function getAlphabetData(){return getLibroSongs(libroActual)}let teleprompterActive=!1,teleprompterSpeedMult=1,teleprompterLastTs=null,teleprompterRAF=null,teleprompterRestante=0;const TELEPROMPTER_DEFAULT_BPM=80,TELEPROMPTER_PX_PER_BEAT=10;function getTeleprompterPxPerSecond(){const a=document.getElementById("teleprompterBar"),e=parseInt(a?.dataset.bpm,10);return(!isNaN(e)&&e>0?e:TELEPROMPTER_DEFAULT_BPM)/60*TELEPROMPTER_PX_PER_BEAT*teleprompterSpeedMult}function toggleTeleprompter(){teleprompterActive?stopTeleprompter():startTeleprompter()}function startTeleprompter(){const a=document.getElementById("teleprompterBar");if(!a)return;teleprompterActive=!0,teleprompterLastTs=null,teleprompterRestante=0;const e=document.getElementById("teleprompterPlayBtn");e&&(e.textContent="\u23F8",e.classList.add("active")),a.classList.add("active");const n=i=>{if(teleprompterActive){if(teleprompterLastTs!==null){const o=(i-teleprompterLastTs)/1e3;teleprompterRestante+=getTeleprompterPxPerSecond()*o;const r=Math.floor(teleprompterRestante);if(r>=1&&(window.scrollBy(0,r),teleprompterRestante-=r),window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-2){stopTeleprompter();return}}teleprompterLastTs=i,teleprompterRAF=requestAnimationFrame(n)}};teleprompterRAF=requestAnimationFrame(n)}function stopTeleprompter(){teleprompterActive=!1,teleprompterLastTs=null,teleprompterRAF&&(cancelAnimationFrame(teleprompterRAF),teleprompterRAF=null);const a=document.getElementById("teleprompterPlayBtn");a&&(a.textContent="\u25B6",a.classList.remove("active")),document.getElementById("teleprompterBar")?.classList.remove("active")}function adjustTeleprompterSpeed(a){teleprompterSpeedMult=Math.min(3,Math.max(.4,+(teleprompterSpeedMult+a*.1).toFixed(1)));const e=document.getElementById("teleprompterSpeedLabel");e&&(e.textContent=teleprompterSpeedMult.toFixed(1)+"x")}
+    `}).join("")}function getAlphabetData(){return getLibroSongs(libroActual)}let teleprompterActive=!1,teleprompterSpeedMult=1,teleprompterLastTs=null,teleprompterRAF=null,teleprompterRestante=0;const TELEPROMPTER_DEFAULT_BPM=80,TELEPROMPTER_PX_PER_BEAT=10;function getTeleprompterPxPerSecond(){const o=document.getElementById("teleprompterBar"),e=parseInt(o?.dataset.bpm,10);return(!isNaN(e)&&e>0?e:TELEPROMPTER_DEFAULT_BPM)/60*TELEPROMPTER_PX_PER_BEAT*teleprompterSpeedMult}function toggleTeleprompter(){teleprompterActive?stopTeleprompter():startTeleprompter()}function startTeleprompter(){const o=document.getElementById("teleprompterBar");if(!o)return;teleprompterActive=!0,teleprompterLastTs=null,teleprompterRestante=0;const e=document.getElementById("teleprompterPlayBtn");e&&(e.textContent="\u23F8",e.classList.add("active")),o.classList.add("active");const n=r=>{if(teleprompterActive){if(teleprompterLastTs!==null){const a=(r-teleprompterLastTs)/1e3;teleprompterRestante+=getTeleprompterPxPerSecond()*a;const i=Math.floor(teleprompterRestante);if(i>=1&&(window.scrollBy(0,i),teleprompterRestante-=i),window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-2){stopTeleprompter();return}}teleprompterLastTs=r,teleprompterRAF=requestAnimationFrame(n)}};teleprompterRAF=requestAnimationFrame(n)}function stopTeleprompter(){teleprompterActive=!1,teleprompterLastTs=null,teleprompterRAF&&(cancelAnimationFrame(teleprompterRAF),teleprompterRAF=null);const o=document.getElementById("teleprompterPlayBtn");o&&(o.textContent="\u25B6",o.classList.remove("active")),document.getElementById("teleprompterBar")?.classList.remove("active")}function adjustTeleprompterSpeed(o){teleprompterSpeedMult=Math.min(3,Math.max(.4,+(teleprompterSpeedMult+o*.1).toFixed(1)));const e=document.getElementById("teleprompterSpeedLabel");e&&(e.textContent=teleprompterSpeedMult.toFixed(1)+"x")}

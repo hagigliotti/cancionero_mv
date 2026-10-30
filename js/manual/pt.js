@@ -294,7 +294,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>Como instalar o app \u2192 Quanto ocupa?</b>: uns 5 MB (m\xFAsica, apresenta\xE7\xF5es e partituras n\xE3o s\xE3o salvas, s\xE3o usadas pela internet) e quanto ocupa agora no seu dispositivo.</li>
 <li>Nessas listas, um c\xE2ntico que est\xE1 em v\xE1rios livros aparece <b>uma vez s\xF3</b>, com um bot\xE3o por livro (por exemplo <b>'09 #394 \xB7 '62 #196</b>: livro e n\xFAmero do hino): toque a linha para abri-lo, ou o bot\xE3o do livro que preferir.</li>
 <li>Este <b>\u{1F4D8} Manual do usu\xE1rio</b>, como instalar o app, copyright, cr\xE9ditos e fontes.</li>
-<li><b>\u{1F6E1}\uFE0F Privacidade</b>: quais dados o app usa e para onde v\xE3o, o que foi feito com intelig\xEAncia artificial, o estado dos <b>cookies</b> (pode ser alterado) e o bot\xE3o <b>\u{1F5D1}\uFE0F Apagar todos os meus dados</b>, que apaga tudo o que est\xE1 salvo no dispositivo. Na primeira vez, um aviso pede para <b>aceitar ou recusar</b> os cookies do Google Analytics.</li>
+<li><b>\u{1F6E1}\uFE0F Privacidade</b>: quais dados o aplicativo utiliza e com que finalidade, o uso de intelig\xEAncia artificial e o estado dos <b>cookies de estat\xEDsticas</b>, que pode ser alterado. No fim da se\xE7\xE3o h\xE1 a op\xE7\xE3o de apagar os dados guardados no dispositivo. No primeiro acesso, um aviso pede para <b>aceitar ou recusar</b> os cookies.</li>
 </ul>`},apariencia:{titulo:"Apar\xEAncia: dia, noite e cores",html:`
 <ul>
 <li><b>\u{1F576}\uFE0F / \u{1F453}</b> (em cima do menu): alterna entre modo <b>noite</b> (fundo escuro) e modo <b>dia</b> (fundo claro).</li>
@@ -349,6 +349,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>N\xE3o vejo as Medita\xE7\xF5es</b>: escreva <b>meditaciones</b> na busca.</li>
 </ul>`},novedades:{titulo:"Novidades",html:`
 <ul>
+<li><b>2.96.0</b> \u2014 Textos de Privacidade e do aviso de cookies reescritos; a op\xE7\xE3o de apagar dados passa a ser um link discreto. \u{1F1E8}\u{1F1F4} A vers\xE3o colombiana de uma letra \xE9 escolhida na ficha do c\xE2ntico e n\xE3o aparece mais entre os idiomas. Autoria de \xABSalmo 91\xBB e \xABVolvamos\xBB: Pablo Canalis.</li>
 <li><b>2.95.0</b> \u2014 \u{1F6E1}\uFE0F Privacidade em Informa\xE7\xF5es do app (dados, IA, cookies e \xABApagar todos os meus dados\xBB); aviso de cookies: Google Analytics s\xF3 se voc\xEA aceitar. Backups e corre\xE7\xF5es mais seguros, e aviso se algo falhar.</li>
 <li><b>2.94.2</b> \u2014 Menu: \xABTamanho da letra\xBB passa para Ajustes; \xABCan\xE7\xE3o\xBB fica sempre no topo. Os avisos usam a cor do tema e se destacam do fundo.</li>
 <li><b>2.94.0</b> \u2014 Novo menu \u2630 em se\xE7\xF5es que abrem e fecham: Esta can\xE7\xE3o, Instrumentos (Piano), Ferramentas, Minha m\xFAsica, Ler, Ajustes e Modo igreja embaixo.</li>

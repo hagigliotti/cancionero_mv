@@ -294,7 +294,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>Come installare l'app \u2192 Quanto occupa?</b>: circa 5 MB (musica, presentazioni e spartiti non si salvano, si usano da internet) e quanto occupa ora sul tuo dispositivo.</li>
 <li>In quegli elenchi, un canto presente in pi\xF9 libri compare <b>una sola volta</b>, con un pulsante per libro (per esempio <b>'09 #394 \xB7 '62 #196</b>: libro e numero dell'inno): tocca la riga per aprirlo, o il pulsante del libro che preferisci.</li>
 <li>Questo <b>\u{1F4D8} Manuale d'uso</b>, come installare l'app, copyright, crediti e fonti.</li>
-<li><b>\u{1F6E1}\uFE0F Privacy</b>: quali dati usa l'app e dove vanno, cosa \xE8 stato fatto con l'intelligenza artificiale, lo stato dei <b>cookie</b> (modificabile) e il pulsante <b>\u{1F5D1}\uFE0F Elimina tutti i miei dati</b>, che cancella tutto ci\xF2 che \xE8 salvato sul dispositivo. La prima volta un avviso chiede di <b>accettare o rifiutare</b> i cookie di Google Analytics.</li>
+<li><b>\u{1F6E1}\uFE0F Privacy</b>: quali dati utilizza l'applicazione e per quale scopo, l'uso dell'intelligenza artificiale e lo stato dei <b>cookie statistici</b>, modificabile. In fondo alla sezione si trova l'opzione per eliminare i dati salvati sul dispositivo. Al primo accesso compare un avviso per <b>accettare o rifiutare</b> i cookie.</li>
 </ul>`},apariencia:{titulo:"Aspetto: giorno, notte e colori",html:`
 <ul>
 <li><b>\u{1F576}\uFE0F / \u{1F453}</b> (in alto nel menu): passa dalla modalit\xE0 <b>notte</b> (sfondo scuro) alla modalit\xE0 <b>giorno</b> (sfondo chiaro).</li>
@@ -349,6 +349,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>Non vedo le Meditazioni</b>: scrivi <b>meditaciones</b> nella ricerca.</li>
 </ul>`},novedades:{titulo:"Novit\xE0",html:`
 <ul>
+<li><b>2.96.0</b> \u2014 Testi della Privacy e dell'avviso cookie riscritti; l'opzione per eliminare i dati diventa un link discreto. \u{1F1E8}\u{1F1F4} La versione colombiana di un testo si sceglie dalla scheda del canto e non compare pi\xF9 tra le lingue. Autore di \xABSalmo 91\xBB e \xABVolvamos\xBB: Pablo Canalis.</li>
 <li><b>2.95.0</b> \u2014 \u{1F6E1}\uFE0F Privacy in Informazioni (dati, IA, cookie ed \xABElimina tutti i miei dati\xBB); avviso cookie: Google Analytics solo se accetti. Backup e correzioni pi\xF9 sicuri, e avviso se qualcosa non funziona.</li>
 <li><b>2.94.2</b> \u2014 Menu: \xABDimensione del testo\xBB passa a Impostazioni; \xABCanto\xBB resta sempre in alto. Gli avvisi usano il colore del tema e si distinguono dallo sfondo.</li>
 <li><b>2.94.0</b> \u2014 Nuovo menu \u2630 in sezioni che si aprono e chiudono: Questo canto, Strumenti (Pianoforte), Strumenti di lavoro, La mia musica, Leggere, Impostazioni e Modalit\xE0 chiesa in fondo.</li>

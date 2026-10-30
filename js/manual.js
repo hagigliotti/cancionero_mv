@@ -1,4 +1,4 @@
-const MANUAL_VERSION="2.95.0",MANUAL_FECHA="30/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
+const MANUAL_VERSION="2.96.0",MANUAL_FECHA="30/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
       <p><strong>Cancionero MV</strong> es una app gratuita, sin publicidad, para cantar y tocar: m\xE1s de 2.000 cantos e himnos con letra, acordes, audio, partituras y presentaciones, en varios idiomas.</p>
       <h4>C\xF3mo abrirla</h4>
       <ul>
@@ -294,7 +294,7 @@ const MANUAL_VERSION="2.95.0",MANUAL_FECHA="30/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>C\xF3mo instalar la app \u2192 \xBFCu\xE1nto ocupa?</b>: unos 5 MB (la m\xFAsica, presentaciones y partituras no se guardan, se usan desde internet) y cu\xE1nto ocupa ahora en tu dispositivo.</li>
         <li>En esos listados, un canto que est\xE1 en varios libros aparece <b>una sola vez</b>, con un bot\xF3n por libro (por ejemplo <b>'09 #394 \xB7 '62 #196</b>: libro y n\xFAmero de himno): toc\xE1 la fila para abrirlo, o el bot\xF3n del libro que prefieras.</li>
         <li>Este <b>\u{1F4D8} Manual de usuario</b>, c\xF3mo instalar la app, copyright, cr\xE9ditos y fuentes.</li>
-      <li><b>\u{1F6E1}\uFE0F Privacidad</b>: qu\xE9 datos usa la app y a qui\xE9n van, qu\xE9 se hizo con inteligencia artificial, el estado de las <b>cookies</b> (se pueden cambiar) y el bot\xF3n <b>\u{1F5D1}\uFE0F Borrar todos mis datos</b>, que borra todo lo guardado en ese dispositivo. La primera vez aparece un aviso para <b>aceptar o rechazar</b> las cookies de Google Analytics.</li>
+      <li><b>\u{1F6E1}\uFE0F Privacidad</b>: qu\xE9 datos utiliza la aplicaci\xF3n y con qu\xE9 fin, el uso de inteligencia artificial y el estado de las <b>cookies de estad\xEDsticas</b>, que puede modificarse. Al final de la secci\xF3n figura la opci\xF3n para borrar los datos guardados en el dispositivo. En el primer acceso se muestra un aviso para <b>aceptar o rechazar</b> las cookies.</li>
       </ul>`},{id:"apariencia",icono:"\u{1F3A8}",titulo:"Apariencia: d\xEDa, noche y colores",html:`
       <ul>
         <li><b>\u{1F576}\uFE0F / \u{1F453}</b> (arriba del men\xFA): cambia entre modo <b>noche</b> (fondo oscuro) y modo <b>d\xEDa</b> (fondo claro).</li>
@@ -349,6 +349,7 @@ const MANUAL_VERSION="2.95.0",MANUAL_FECHA="30/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>No veo las Meditaciones</b>: escrib\xED <b>meditaciones</b> en el buscador.</li>
       </ul>`},{id:"novedades",icono:"\u{1F195}",titulo:"Novedades",html:`
       <ul>
+        <li><b>2.96.0</b> \u2014 Textos de Privacidad y del aviso de cookies redactados de nuevo; la opci\xF3n de borrar datos pasa a un enlace discreto. \u{1F1E8}\u{1F1F4} La versi\xF3n colombiana de una letra se elige desde la ficha de la canci\xF3n y ya no figura entre los idiomas. Autor\xEDa de \xABSalmo 91\xBB y \xABVolvamos\xBB: Pablo Canalis.</li>
         <li><b>2.95.0</b> \u2014 \u{1F6E1}\uFE0F Privacidad en Informaci\xF3n de la app (datos, IA, cookies y \xABBorrar todos mis datos\xBB); aviso de cookies: Google Analytics solo si acept\xE1s. M\xE1s seguridad en backups y correcciones, y aviso si algo falla.</li>
         <li><b>2.94.2</b> \u2014 Men\xFA: \xABTama\xF1o de letra\xBB pasa a Ajustes; \xABCanci\xF3n\xBB queda siempre arriba. Los avisos usan el color del tema y se distinguen del fondo.</li>
         <li><b>2.94.0</b> \u2014 \u2630 Men\xFA nuevo, en secciones que se abren y cierran: Esta canci\xF3n, Instrumentos (Piano), Herramientas, Mi m\xFAsica, Leer, Ajustes y Modo iglesia abajo. Informaci\xF3n y Manual pasan al pie.</li>

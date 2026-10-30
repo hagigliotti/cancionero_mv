@@ -294,7 +294,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>How to install the app \u2192 How much space?</b>: about 5 MB (music, slides and sheet music are not stored, they are used from the internet) and how much it takes now on your device.</li>
 <li>In those lists, a song that is in several books appears <b>only once</b>, with one button per book (for example <b>'09 #394 \xB7 '62 #196</b>: book and hymn number): tap the row to open it, or the button of the book you prefer.</li>
 <li>This <b>\u{1F4D8} User manual</b>, how to install the app, copyright, credits and sources.</li>
-<li><b>\u{1F6E1}\uFE0F Privacy</b>: what data the app uses and where it goes, what was made with artificial intelligence, the <b>cookie</b> status (can be changed) and the <b>\u{1F5D1}\uFE0F Delete all my data</b> button, which deletes everything saved on that device. The first time, a notice asks you to <b>accept or decline</b> Google Analytics cookies.</li>
+<li><b>\u{1F6E1}\uFE0F Privacy</b>: what data the app uses and for what purpose, the use of artificial intelligence and the status of the <b>statistics cookies</b>, which can be changed. At the end of the section there is an option to delete the data stored on the device. On first use, a notice asks to <b>accept or decline</b> the cookies.</li>
 </ul>`},apariencia:{titulo:"Appearance: day, night and colors",html:`
 <ul>
 <li><b>\u{1F576}\uFE0F / \u{1F453}</b> (at the top of the menu): switches between <b>night</b> mode (dark background) and <b>day</b> mode (light background).</li>
@@ -349,6 +349,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>I don't see Devotionals</b>: type <b>meditaciones</b> in the search box.</li>
 </ul>`},novedades:{titulo:"What's new",html:`
 <ul>
+<li><b>2.96.0</b> \u2014 Privacy and cookie notice texts rewritten; the delete-data option is now a discreet link. \u{1F1E8}\u{1F1F4} The Colombian version of a lyric is chosen from the song sheet and is no longer listed among the languages. Authorship of \xABSalmo 91\xBB and \xABVolvamos\xBB: Pablo Canalis.</li>
 <li><b>2.95.0</b> \u2014 \u{1F6E1}\uFE0F Privacy in App information (data, AI, cookies and \xABDelete all my data\xBB); cookie notice: Google Analytics only if you accept. Safer backups and corrections, and a notice if something fails.</li>
 <li><b>2.94.2</b> \u2014 Menu: \xABFont size\xBB moves to Settings; \xABSong\xBB always stays on top. Notices use the theme color and stand out from the background.</li>
 <li><b>2.94.0</b> \u2014 New \u2630 menu in sections that open and close: This song, Instruments (Piano), Tools, My music, Read, Settings and Church mode at the bottom. Information and Manual move to the foot.</li>

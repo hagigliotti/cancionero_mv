@@ -294,7 +294,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>App installieren \u2192 Wie viel Platz?</b>: etwa 5 MB (Musik, Pr\xE4sentationen und Noten werden nicht gespeichert, sondern aus dem Internet genutzt) und wie viel sie jetzt auf deinem Ger\xE4t belegt.</li>
 <li>In diesen Listen erscheint ein Lied, das in mehreren B\xFCchern steht, <b>nur einmal</b>, mit einer Taste pro Buch (zum Beispiel <b>'09 #394 \xB7 '62 #196</b>: Buch und Liednummer): tippe die Zeile an, um es zu \xF6ffnen, oder die Taste des gew\xFCnschten Buches.</li>
 <li>Dieses <b>\u{1F4D8} Benutzerhandbuch</b>, App installieren, Copyright, Mitwirkende und Quellen.</li>
-<li><b>\u{1F6E1}\uFE0F Datenschutz</b>: welche Daten die App nutzt und wohin sie gehen, was mit k\xFCnstlicher Intelligenz erstellt wurde, der <b>Cookie</b>-Status (\xE4nderbar) und die Schaltfl\xE4che <b>\u{1F5D1}\uFE0F Alle meine Daten l\xF6schen</b>, die alles auf dem Ger\xE4t Gespeicherte l\xF6scht. Beim ersten Mal fragt ein Hinweis, ob du die Google-Analytics-Cookies <b>akzeptierst oder ablehnst</b>.</li>
+<li><b>\u{1F6E1}\uFE0F Datenschutz</b>: welche Daten die App zu welchem Zweck verwendet, der Einsatz k\xFCnstlicher Intelligenz und der Status der <b>Statistik-Cookies</b>, der ge\xE4ndert werden kann. Am Ende des Abschnitts befindet sich die Option, die auf dem Ger\xE4t gespeicherten Daten zu l\xF6schen. Beim ersten Aufruf erscheint ein Hinweis, um die Cookies zu <b>akzeptieren oder abzulehnen</b>.</li>
 </ul>`},apariencia:{titulo:"Darstellung: Tag, Nacht und Farben",html:`
 <ul>
 <li><b>\u{1F576}\uFE0F / \u{1F453}</b> (oben im Men\xFC): wechselt zwischen <b>Nachtmodus</b> (dunkler Hintergrund) und <b>Tagmodus</b> (heller Hintergrund).</li>
@@ -349,6 +349,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>Ich sehe die Andachten nicht</b>: schreibe <b>meditaciones</b> in die Suche.</li>
 </ul>`},novedades:{titulo:"Neuigkeiten",html:`
 <ul>
+<li><b>2.96.0</b> \u2014 Texte zu Datenschutz und Cookie-Hinweis \xFCberarbeitet; die Option zum L\xF6schen der Daten ist jetzt ein unauff\xE4lliger Link. \u{1F1E8}\u{1F1F4} Die kolumbianische Fassung eines Liedtextes wird im Liedblatt gew\xE4hlt und erscheint nicht mehr unter den Sprachen. Urheber von \xABSalmo 91\xBB und \xABVolvamos\xBB: Pablo Canalis.</li>
 <li><b>2.95.0</b> \u2014 \u{1F6E1}\uFE0F Datenschutz in App-Informationen (Daten, KI, Cookies und \xABAlle meine Daten l\xF6schen\xBB); Cookie-Hinweis: Google Analytics nur mit Zustimmung. Sicherere Backups und Korrekturen und ein Hinweis, wenn etwas schiefgeht.</li>
 <li><b>2.94.2</b> \u2014 Men\xFC: \xABSchriftgr\xF6\xDFe\xBB ist jetzt unter Einstellungen; \xABLied\xBB bleibt immer oben. Hinweise nutzen die Themenfarbe und heben sich vom Hintergrund ab.</li>
 <li><b>2.94.0</b> \u2014 Neues \u2630 Men\xFC in auf- und zuklappbaren Abschnitten: Dieses Lied, Instrumente (Klavier), Werkzeuge, Meine Musik, Lesen, Einstellungen und unten Kirchenmodus.</li>
