@@ -349,6 +349,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>N\xE3o vejo as Medita\xE7\xF5es</b>: escreva <b>meditaciones</b> na busca.</li>
 </ul>`},novedades:{titulo:"Novidades",html:`
 <ul>
+<li><b>2.99.0</b> \u2014 \u{1F3BC} Vocalizes: pauta para aprender onde ficam as notas. Pauta dupla (sol em cima, f\xE1 embaixo) ou clave de sol, sol oitava abaixo, f\xE1 na 4\xAA e na 3\xAA, e d\xF3 na 1\xAA a 4\xAA. Acidentes como no tom, com sustenidos ou com bem\xF3is (D\xF3\u266F maior = d\xF3\u266F\u2013mi\u266F\u2013sol\u266F). A nota que soa aparece na pauta.</li>
 <li><b>2.98.0</b> \u2014 \u{1F3A4} Vocalizes: o percurso dos tons mostra a extens\xE3o de cada voz (S, C, T, B) com sua cor; acende a voz que pode cantar o tom que est\xE1 soando e marca a faixa da voz escolhida.</li>
 <li><b>2.97.0</b> \u2014 \u{1F3A4} Vocalizes para coro (Metr\xF4nomo e Afinador \u2192 Vocalizes, ou Menu \u2192 Ferramentas): arpejo d\xF3\u2013mi\u2013sol\u2013mi\u2013d\xF3 que sobe de meio em meio tom e desce, por voz ou para o coro todo, com piano e gr\xE1fico do que soa agora e do que vem. Bot\xE3o \xABS\xF3 notas\xBB para tirar o acorde.</li>
 <li><b>2.96.0</b> \u2014 Textos de Privacidade e do aviso de cookies reescritos; a op\xE7\xE3o de apagar dados passa a ser um link discreto. \u{1F1E8}\u{1F1F4} A vers\xE3o colombiana de uma letra \xE9 escolhida na ficha do c\xE2ntico e n\xE3o aparece mais entre os idiomas. Autoria de \xABSalmo 91\xBB e \xABVolvamos\xBB: Pablo Canalis.</li>

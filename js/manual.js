@@ -1,4 +1,4 @@
-const MANUAL_VERSION="2.98.0",MANUAL_FECHA="30/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
+const MANUAL_VERSION="2.99.0",MANUAL_FECHA="30/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
       <p><strong>Cancionero MV</strong> es una app gratuita, sin publicidad, para cantar y tocar: m\xE1s de 2.000 cantos e himnos con letra, acordes, audio, partituras y presentaciones, en varios idiomas.</p>
       <h4>C\xF3mo abrirla</h4>
       <ul>
@@ -349,6 +349,7 @@ const MANUAL_VERSION="2.98.0",MANUAL_FECHA="30/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>No veo las Meditaciones</b>: escrib\xED <b>meditaciones</b> en el buscador.</li>
       </ul>`},{id:"novedades",icono:"\u{1F195}",titulo:"Novedades",html:`
       <ul>
+        <li><b>2.99.0</b> \u2014 \u{1F3BC} Vocalizador: pentagrama para aprender d\xF3nde van las notas. Gran pentagrama (sol arriba, fa abajo) o clave de sol, sol octava baja, fa en 4\xAA y 3\xAA, y do en 1\xAA, 2\xAA, 3\xAA y 4\xAA. Alteraciones como en la tonalidad, con sostenidos o con bemoles (Do\u266F mayor = do\u266F\u2013mi\u266F\u2013sol\u266F). La nota que suena se ve en el pentagrama.</li>
         <li><b>2.98.0</b> \u2014 \u{1F3A4} Vocalizador: el recorrido de tonalidades muestra el segmento de cada voz (S, C, T, B) con su color; se ilumina la voz que puede cantar la tonalidad que suena y se marca la franja de la voz elegida.</li>
         <li><b>2.97.0</b> \u2014 \u{1F3A4} Vocalizador de coro (Metr\xF3nomo y Afinador \u2192 Vocalizar, o Men\xFA \u2192 Herramientas): arpegio do\u2013mi\u2013sol\u2013mi\u2013do que sube de a medio tono y baja, por voz o para todo el coro, con piano y gr\xE1fica de lo que suena y lo que viene. Bot\xF3n \xABSolo notas\xBB para quitar el acorde.</li>
         <li><b>2.96.0</b> \u2014 Textos de Privacidad y del aviso de cookies redactados de nuevo; la opci\xF3n de borrar datos pasa a un enlace discreto. \u{1F1E8}\u{1F1F4} La versi\xF3n colombiana de una letra se elige desde la ficha de la canci\xF3n y ya no figura entre los idiomas. Autor\xEDa de \xABSalmo 91\xBB y \xABVolvamos\xBB: Pablo Canalis.</li>
