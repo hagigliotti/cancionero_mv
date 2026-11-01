@@ -349,6 +349,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>I don't see Devotionals</b>: type <b>meditaciones</b> in the search box.</li>
 </ul>`},novedades:{titulo:"What's new",html:`
 <ul>
+<li><b>2.98.0</b> \u2014 \u{1F3A4} Warm-up: the keys chart shows each voice\u2019s range (S, A, T, B) in its own color; the voices that can sing the current key light up and the chosen voice\u2019s band is marked.</li>
 <li><b>2.97.0</b> \u2014 \u{1F3A4} Choir vocal warm-up (Metronome and Tuner \u2192 Warm-up, or Menu \u2192 Tools): do\u2013mi\u2013sol\u2013mi\u2013do arpeggio rising by semitones and coming down, per voice or for the whole choir, with piano and a chart of what plays now and next. \xABNotes only\xBB button to drop the chord.</li>
 <li><b>2.96.0</b> \u2014 Privacy and cookie notice texts rewritten; the delete-data option is now a discreet link. \u{1F1E8}\u{1F1F4} The Colombian version of a lyric is chosen from the song sheet and is no longer listed among the languages. Authorship of \xABSalmo 91\xBB and \xABVolvamos\xBB: Pablo Canalis.</li>
 <li><b>2.95.0</b> \u2014 \u{1F6E1}\uFE0F Privacy in App information (data, AI, cookies and \xABDelete all my data\xBB); cookie notice: Google Analytics only if you accept. Safer backups and corrections, and a notice if something fails.</li>

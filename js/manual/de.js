@@ -349,6 +349,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>Ich sehe die Andachten nicht</b>: schreibe <b>meditaciones</b> in die Suche.</li>
 </ul>`},novedades:{titulo:"Neuigkeiten",html:`
 <ul>
+<li><b>2.98.0</b> \u2014 \u{1F3A4} Einsingen: Der Tonartenverlauf zeigt den Umfang jeder Stimme (S, A, T, B) in eigener Farbe; die Stimme, die die aktuelle Tonart singen kann, leuchtet auf und das Band der gew\xE4hlten Stimme ist markiert.</li>
 <li><b>2.97.0</b> \u2014 \u{1F3A4} Chor-Einsingen (Metronom und Stimmger\xE4t \u2192 Einsingen, oder Men\xFC \u2192 Werkzeuge): Dreiklang C\u2013E\u2013G\u2013E\u2013C, der in Halbt\xF6nen steigt und wieder f\xE4llt, pro Stimme oder f\xFCr den ganzen Chor, mit Klavier und Grafik, was gerade klingt und was als N\xE4chstes kommt. Taste \xABNur T\xF6ne\xBB ohne Akkord.</li>
 <li><b>2.96.0</b> \u2014 Texte zu Datenschutz und Cookie-Hinweis \xFCberarbeitet; die Option zum L\xF6schen der Daten ist jetzt ein unauff\xE4lliger Link. \u{1F1E8}\u{1F1F4} Die kolumbianische Fassung eines Liedtextes wird im Liedblatt gew\xE4hlt und erscheint nicht mehr unter den Sprachen. Urheber von \xABSalmo 91\xBB und \xABVolvamos\xBB: Pablo Canalis.</li>
 <li><b>2.95.0</b> \u2014 \u{1F6E1}\uFE0F Datenschutz in App-Informationen (Daten, KI, Cookies und \xABAlle meine Daten l\xF6schen\xBB); Cookie-Hinweis: Google Analytics nur mit Zustimmung. Sicherere Backups und Korrekturen und ein Hinweis, wenn etwas schiefgeht.</li>
