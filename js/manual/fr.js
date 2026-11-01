@@ -349,6 +349,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>Je ne vois pas les M\xE9ditations</b> : \xE9crivez <b>meditaciones</b> dans la recherche.</li>
 </ul>`},novedades:{titulo:"Nouveaut\xE9s",html:`
 <ul>
+<li><b>2.97.0</b> \u2014 \u{1F3A4} Vocalises pour ch\u0153ur (M\xE9tronome et Accordeur \u2192 Vocalises, ou Menu \u2192 Outils) : arp\xE8ge do\u2013mi\u2013sol\u2013mi\u2013do qui monte par demi-tons puis redescend, par voix ou pour tout le ch\u0153ur, avec piano et graphique de ce qui sonne et de ce qui suit. Bouton \xAB Notes seules \xBB pour retirer l\u2019accord.</li>
 <li><b>2.96.0</b> \u2014 Textes de Confidentialit\xE9 et de l'avis cookies r\xE9\xE9crits ; l'option d'effacement des donn\xE9es devient un lien discret. \u{1F1E8}\u{1F1F4} La version colombienne d'un texte se choisit depuis la fiche du chant et ne figure plus parmi les langues. Auteur de \xAB Salmo 91 \xBB et \xAB Volvamos \xBB : Pablo Canalis.</li>
 <li><b>2.95.0</b> \u2014 \u{1F6E1}\uFE0F Confidentialit\xE9 dans Informations (donn\xE9es, IA, cookies et \xAB Effacer toutes mes donn\xE9es \xBB) ; avis cookies : Google Analytics seulement si vous acceptez. Sauvegardes et corrections plus s\xFBres, et avis en cas de probl\xE8me.</li>
 <li><b>2.94.2</b> \u2014 Menu : \xAB Taille du texte \xBB passe dans R\xE9glages ; \xAB Chant \xBB reste toujours en haut. Les avis prennent la couleur du th\xE8me et se d\xE9tachent du fond.</li>

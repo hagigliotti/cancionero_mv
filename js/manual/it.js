@@ -349,6 +349,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>Non vedo le Meditazioni</b>: scrivi <b>meditaciones</b> nella ricerca.</li>
 </ul>`},novedades:{titulo:"Novit\xE0",html:`
 <ul>
+<li><b>2.97.0</b> \u2014 \u{1F3A4} Vocalizzi per coro (Metronomo e Accordatore \u2192 Vocalizzi, o Menu \u2192 Strumenti): arpeggio do\u2013mi\u2013sol\u2013mi\u2013do che sale di semitono e poi scende, per voce o per tutto il coro, con pianoforte e grafico di ci\xF2 che suona e di ci\xF2 che viene. Pulsante \xABSolo note\xBB per togliere l\u2019accordo.</li>
 <li><b>2.96.0</b> \u2014 Testi della Privacy e dell'avviso cookie riscritti; l'opzione per eliminare i dati diventa un link discreto. \u{1F1E8}\u{1F1F4} La versione colombiana di un testo si sceglie dalla scheda del canto e non compare pi\xF9 tra le lingue. Autore di \xABSalmo 91\xBB e \xABVolvamos\xBB: Pablo Canalis.</li>
 <li><b>2.95.0</b> \u2014 \u{1F6E1}\uFE0F Privacy in Informazioni (dati, IA, cookie ed \xABElimina tutti i miei dati\xBB); avviso cookie: Google Analytics solo se accetti. Backup e correzioni pi\xF9 sicuri, e avviso se qualcosa non funziona.</li>
 <li><b>2.94.2</b> \u2014 Menu: \xABDimensione del testo\xBB passa a Impostazioni; \xABCanto\xBB resta sempre in alto. Gli avvisi usano il colore del tema e si distinguono dallo sfondo.</li>

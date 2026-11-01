@@ -349,6 +349,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>Ich sehe die Andachten nicht</b>: schreibe <b>meditaciones</b> in die Suche.</li>
 </ul>`},novedades:{titulo:"Neuigkeiten",html:`
 <ul>
+<li><b>2.97.0</b> \u2014 \u{1F3A4} Chor-Einsingen (Metronom und Stimmger\xE4t \u2192 Einsingen, oder Men\xFC \u2192 Werkzeuge): Dreiklang C\u2013E\u2013G\u2013E\u2013C, der in Halbt\xF6nen steigt und wieder f\xE4llt, pro Stimme oder f\xFCr den ganzen Chor, mit Klavier und Grafik, was gerade klingt und was als N\xE4chstes kommt. Taste \xABNur T\xF6ne\xBB ohne Akkord.</li>
 <li><b>2.96.0</b> \u2014 Texte zu Datenschutz und Cookie-Hinweis \xFCberarbeitet; die Option zum L\xF6schen der Daten ist jetzt ein unauff\xE4lliger Link. \u{1F1E8}\u{1F1F4} Die kolumbianische Fassung eines Liedtextes wird im Liedblatt gew\xE4hlt und erscheint nicht mehr unter den Sprachen. Urheber von \xABSalmo 91\xBB und \xABVolvamos\xBB: Pablo Canalis.</li>
 <li><b>2.95.0</b> \u2014 \u{1F6E1}\uFE0F Datenschutz in App-Informationen (Daten, KI, Cookies und \xABAlle meine Daten l\xF6schen\xBB); Cookie-Hinweis: Google Analytics nur mit Zustimmung. Sicherere Backups und Korrekturen und ein Hinweis, wenn etwas schiefgeht.</li>
 <li><b>2.94.2</b> \u2014 Men\xFC: \xABSchriftgr\xF6\xDFe\xBB ist jetzt unter Einstellungen; \xABLied\xBB bleibt immer oben. Hinweise nutzen die Themenfarbe und heben sich vom Hintergrund ab.</li>

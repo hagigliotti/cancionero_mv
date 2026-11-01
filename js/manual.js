@@ -1,4 +1,4 @@
-const MANUAL_VERSION="2.96.0",MANUAL_FECHA="30/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
+const MANUAL_VERSION="2.97.0",MANUAL_FECHA="30/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
       <p><strong>Cancionero MV</strong> es una app gratuita, sin publicidad, para cantar y tocar: m\xE1s de 2.000 cantos e himnos con letra, acordes, audio, partituras y presentaciones, en varios idiomas.</p>
       <h4>C\xF3mo abrirla</h4>
       <ul>
@@ -349,6 +349,7 @@ const MANUAL_VERSION="2.96.0",MANUAL_FECHA="30/10/2026",MANUAL_CAPITULOS=[{id:"i
         <li><b>No veo las Meditaciones</b>: escrib\xED <b>meditaciones</b> en el buscador.</li>
       </ul>`},{id:"novedades",icono:"\u{1F195}",titulo:"Novedades",html:`
       <ul>
+        <li><b>2.97.0</b> \u2014 \u{1F3A4} Vocalizador de coro (Metr\xF3nomo y Afinador \u2192 Vocalizar, o Men\xFA \u2192 Herramientas): arpegio do\u2013mi\u2013sol\u2013mi\u2013do que sube de a medio tono y baja, por voz o para todo el coro, con piano y gr\xE1fica de lo que suena y lo que viene. Bot\xF3n \xABSolo notas\xBB para quitar el acorde.</li>
         <li><b>2.96.0</b> \u2014 Textos de Privacidad y del aviso de cookies redactados de nuevo; la opci\xF3n de borrar datos pasa a un enlace discreto. \u{1F1E8}\u{1F1F4} La versi\xF3n colombiana de una letra se elige desde la ficha de la canci\xF3n y ya no figura entre los idiomas. Autor\xEDa de \xABSalmo 91\xBB y \xABVolvamos\xBB: Pablo Canalis.</li>
         <li><b>2.95.0</b> \u2014 \u{1F6E1}\uFE0F Privacidad en Informaci\xF3n de la app (datos, IA, cookies y \xABBorrar todos mis datos\xBB); aviso de cookies: Google Analytics solo si acept\xE1s. M\xE1s seguridad en backups y correcciones, y aviso si algo falla.</li>
         <li><b>2.94.2</b> \u2014 Men\xFA: \xABTama\xF1o de letra\xBB pasa a Ajustes; \xABCanci\xF3n\xBB queda siempre arriba. Los avisos usan el color del tema y se distinguen del fondo.</li>

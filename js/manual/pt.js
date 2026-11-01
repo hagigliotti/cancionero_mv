@@ -349,6 +349,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>N\xE3o vejo as Medita\xE7\xF5es</b>: escreva <b>meditaciones</b> na busca.</li>
 </ul>`},novedades:{titulo:"Novidades",html:`
 <ul>
+<li><b>2.97.0</b> \u2014 \u{1F3A4} Vocalizes para coro (Metr\xF4nomo e Afinador \u2192 Vocalizes, ou Menu \u2192 Ferramentas): arpejo d\xF3\u2013mi\u2013sol\u2013mi\u2013d\xF3 que sobe de meio em meio tom e desce, por voz ou para o coro todo, com piano e gr\xE1fico do que soa agora e do que vem. Bot\xE3o \xABS\xF3 notas\xBB para tirar o acorde.</li>
 <li><b>2.96.0</b> \u2014 Textos de Privacidade e do aviso de cookies reescritos; a op\xE7\xE3o de apagar dados passa a ser um link discreto. \u{1F1E8}\u{1F1F4} A vers\xE3o colombiana de uma letra \xE9 escolhida na ficha do c\xE2ntico e n\xE3o aparece mais entre os idiomas. Autoria de \xABSalmo 91\xBB e \xABVolvamos\xBB: Pablo Canalis.</li>
 <li><b>2.95.0</b> \u2014 \u{1F6E1}\uFE0F Privacidade em Informa\xE7\xF5es do app (dados, IA, cookies e \xABApagar todos os meus dados\xBB); aviso de cookies: Google Analytics s\xF3 se voc\xEA aceitar. Backups e corre\xE7\xF5es mais seguros, e aviso se algo falhar.</li>
 <li><b>2.94.2</b> \u2014 Menu: \xABTamanho da letra\xBB passa para Ajustes; \xABCan\xE7\xE3o\xBB fica sempre no topo. Os avisos usam a cor do tema e se destacam do fundo.</li>
