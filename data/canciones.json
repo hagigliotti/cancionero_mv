@@ -327,7 +327,7 @@
       "audio_url": "",
       "traductor": ["Anónimo"],
       "partitura": "No",
-      "revisado": "No",
+      "revisado": ["No"],
       "letra": [
         "1",
         "Abraham tenía muchos hijos",
@@ -10472,7 +10472,7 @@
       "audio_url": "",
       "traductor": [""],
       "partitura": "No",
-      "revisado": "No",
+      "revisado": ["No"],
       "letra": [
         "1",
         "Este es mi deseo de honrarte",
@@ -10554,7 +10554,7 @@
       "audio_url": "https://www.youtube.com/watch?v=9bQY2komrnA&list=RD9bQY2komrnA&start_radio=1",
       "traductor": [""],
       "partitura": "No",
-      "revisado": "No",      
+      "revisado": ["No"],      
       "letra": [
         "1",
         "This is my desire to honor you",
