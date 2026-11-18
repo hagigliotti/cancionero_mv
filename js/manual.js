@@ -1,4 +1,4 @@
-const MANUAL_VERSION="2.100.0",MANUAL_FECHA="30/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
+const MANUAL_VERSION="2.101.0",MANUAL_FECHA="30/10/2026",MANUAL_CAPITULOS=[{id:"inicio",icono:"\u{1F44B}",titulo:"Primeros pasos",html:`
       <p><strong>Cancionero MV</strong> es una app gratuita, sin publicidad, para cantar y tocar: m\xE1s de 2.000 cantos e himnos con letra, acordes, audio, partituras y presentaciones, en varios idiomas.</p>
       <h4>C\xF3mo abrirla</h4>
       <ul>
@@ -349,6 +349,7 @@ const MANUAL_VERSION="2.100.0",MANUAL_FECHA="30/10/2026",MANUAL_CAPITULOS=[{id:"
         <li><b>No veo las Meditaciones</b>: escrib\xED <b>meditaciones</b> en el buscador.</li>
       </ul>`},{id:"novedades",icono:"\u{1F195}",titulo:"Novedades",html:`
       <ul>
+        <li><b>2.101.0</b> \u2014 \u270F\uFE0F Editor m\xE1s f\xE1cil: \u21B6 Deshacer, \u{1F441} Ver c\xF3mo queda, ayuda paso a paso y bot\xF3n \u22EE en cada rengl\xF3n para agregar renglones, estrofas, Coro, Puente, Final y voces (Voz 1, Voz 2, Todos\u2026) o borrarlos. Signos sobre la letra: \u{1D110} calder\xF3n, f, ff, p, pp, mf, mp, &lt; &gt;. Puente, Final, Intro, Repite\u2026 con la misma placa que el coro. \u{1F524} Cifrado C D E o Do Re Mi (autom\xE1tico seg\xFAn el instrumento, o a elecci\xF3n en el men\xFA). Cr\xE9ditos: \xABCorrecciones de la comunidad\xBB.</li>
         <li><b>2.100.0</b> \u2014 \u{1F3BC} Aprender a leer m\xFAsica (Men\xFA \u2192 Herramientas, o Metr\xF3nomo y Afinador \u2192 Notas): todas las notas en l\xEDneas y espacios de cada clave (sol, fa, do y gran pentagrama), alteraciones \u266F \u266D \u266E \u{1D12A} \u{1D12B} y enarmon\xEDas, tonalidades con su armadura, escala y acordes de cada grado, acordes con su ortograf\xEDa, figuras, silencios y compases, y un juego para practicar. Toc\xE1 una nota para escucharla.</li>
         <li><b>2.99.0</b> \u2014 \u{1F3BC} Vocalizador: pentagrama para aprender d\xF3nde van las notas. Gran pentagrama (sol arriba, fa abajo) o clave de sol, sol octava baja, fa en 4\xAA y 3\xAA, y do en 1\xAA, 2\xAA, 3\xAA y 4\xAA. Alteraciones como en la tonalidad, con sostenidos o con bemoles (Do\u266F mayor = do\u266F\u2013mi\u266F\u2013sol\u266F). La nota que suena se ve en el pentagrama.</li>
         <li><b>2.98.0</b> \u2014 \u{1F3A4} Vocalizador: el recorrido de tonalidades muestra el segmento de cada voz (S, C, T, B) con su color; se ilumina la voz que puede cantar la tonalidad que suena y se marca la franja de la voz elegida.</li>
