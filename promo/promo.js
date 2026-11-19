@@ -513,11 +513,53 @@
       P = Array.from({ length: n }, () => ({ x: Math.random() * W, y: Math.random() * H, z: .3 + Math.random() * .9, r: .5 + Math.random() * 1.4, vy: .06 + Math.random() * .22, vx: (Math.random() - .5) * .08, a: .15 + Math.random() * .45, g: Math.random() < .14 ? GL[Math.floor(Math.random() * 3)] : null, s: 10 + Math.random() * 8, ph: Math.random() * 6.28 }));
     };
     size(); addEventListener('resize', size);
+
+    /* Cintas de sonido: ondas que fluyen detrás de toda la página y se mueven con el scroll */
+    const WAVES = [
+      { c: [245, 165, 36], a: .7, amp: .10, k: 1.6, sp: .00028, ph: 0, w: 1.6 },
+      { c: [255, 122, 69], a: .5, amp: .13, k: 1.1, sp: .00021, ph: 1.7, w: 1.2 },
+      { c: [91, 140, 255], a: .48, amp: .16, k: .8, sp: .00017, ph: 3.1, w: 1.2 },
+      { c: [245, 165, 36], a: .22, amp: .07, k: 2.4, sp: .00036, ph: 4.4, w: 1 },
+      { c: [160, 120, 255], a: .20, amp: .11, k: 1.35, sp: .00024, ph: 5.2, w: 1 }
+    ];
+    function drawWaves(t) {
+      const sy = scrollY, docH = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+      const prog = sy / docH;
+      const base = H * (.5 + .22 * Math.sin(prog * Math.PI * 3 + t / 14000));
+      const tilt = .28 * Math.sin(prog * Math.PI * 2.2 + t / 20000);
+      const step = Math.max(6, W / 160);
+      ctx.save(); ctx.globalCompositeOperation = 'lighter';
+      for (const wv of WAVES) {
+        const g = ctx.createLinearGradient(0, 0, W, 0);
+        const [r, gg, b] = wv.c;
+        g.addColorStop(0, 'rgba(' + r + ',' + gg + ',' + b + ',0)');
+        g.addColorStop(.25, 'rgba(' + r + ',' + gg + ',' + b + ',' + wv.a * .5 + ')');
+        g.addColorStop(.6, 'rgba(' + r + ',' + gg + ',' + b + ',' + wv.a + ')');
+        g.addColorStop(1, 'rgba(' + r + ',' + gg + ',' + b + ',0)');
+        ctx.strokeStyle = g; ctx.lineWidth = wv.w;
+        for (let layer = 0; layer < 3; layer++) {
+          ctx.beginPath();
+          for (let x = -step; x <= W + step; x += step) {
+            const u = x / W, env = Math.sin(Math.PI * Math.min(1, Math.max(0, u)));
+            const y = base + tilt * (x - W / 2)
+              + H * wv.amp * env * Math.sin(u * Math.PI * 2 * wv.k + t * wv.sp * 6 + wv.ph + prog * 8)
+              + H * wv.amp * .35 * Math.sin(u * Math.PI * 5 * wv.k - t * wv.sp * 9 + wv.ph) * env
+              + layer * 7 * env;
+            x === -step ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+          }
+          ctx.globalAlpha = layer === 0 ? 1 : .35 / layer;
+          ctx.stroke();
+          if (layer === 0) { ctx.save(); ctx.lineWidth = wv.w * 9; ctx.globalAlpha = .07; ctx.stroke(); ctx.restore(); }
+        }
+      }
+      ctx.restore(); ctx.globalAlpha = 1;
+    }
     let prevY = scrollY;
     const loop = t => {
       if (!run) return;
       const dy = scrollY - prevY; prevY = scrollY;
       ctx.clearRect(0, 0, W, H);
+      drawWaves(t);
       for (const p of P) {
         p.y -= p.vy * p.z + dy * p.z * .15; p.x += p.vx + Math.sin(t / 2400 + p.ph) * .08;
         if (p.y < -20) { p.y = H + 20; p.x = Math.random() * W; } if (p.y > H + 20) { p.y = -20; p.x = Math.random() * W; }
