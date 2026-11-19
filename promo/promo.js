@@ -62,8 +62,8 @@
   $$('.rv').forEach(el => io.observe(el));
 
   /* ---------- Teléfono del hero que sigue al puntero (resorte suave) ---------- */
-  const stage = $('#stage'), phone = $('#stage .phone');
-  if (stage && !reduce && matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  const stage = $('#stage'), phone = $('#stage .iphone');
+  if (stage && phone && !reduce && matchMedia('(hover: hover) and (pointer: fine)').matches) {
     let tx = -10, ty = 4, x = -10, y = 4, raf = 0;
     const tick = () => {
       x += (tx - x) * .08; y += (ty - y) * .08;

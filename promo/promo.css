@@ -824,3 +824,27 @@ section,.books{position:relative;z-index:1}
 .scr{border-radius:20.5% / 9.5%}
 .view{border-radius:18.5% / 8.6%}
 .sbar{padding:0 9cqi 0 12cqi}
+
+/* ===== v11: iPhone más fiel y hero vivo ===== */
+.iphone{border-radius:16.5% / 7.6%;padding:3px;
+  background:linear-gradient(90deg,#2c2e33 0%,#9a9da4 3%,#5d6067 9%,#3a3c41 30%,#2e3035 50%,#3a3c41 70%,#5d6067 91%,#9a9da4 97%,#2c2e33 100%);
+  box-shadow:0 0 0 .5px rgb(0 0 0 / .9),inset 0 1px 0 rgb(255 255 255 / .35),inset 0 -1px 0 rgb(0 0 0 / .5),0 70px 100px -40px rgb(0 0 0 / .95),0 30px 40px -25px rgb(0 0 0 / .7)}
+.scr{border-radius:15.5% / 7.1%;padding:2.6%;background:#000;box-shadow:inset 0 0 0 1px #1a1b1e}
+.view{border-radius:13.5% / 6.2%}
+.iphone::before,.iphone::after,.iphone .vol2{width:2.5px}
+.stage .iphone{width:min(290px,58vw)}
+/* flota suave aunque no muevas el mouse */
+@media (prefers-reduced-motion:no-preference){
+  .stage .iphone{animation:bob 6s ease-in-out infinite}
+  @keyframes bob{0%,100%{translate:0 0}50%{translate:0 -14px}}
+  .stage .tp{animation:bob 7s ease-in-out -2s infinite}
+}
+/* tarjeta de tono siempre visible dentro del hero */
+.hero{overflow:visible;overflow-x:clip;z-index:2}
+.stage{height:min(600px,74vh)}
+.tp{bottom:12%;left:-18%}
+@media (max-width:980px){.tp{left:0;bottom:6%}.stage{height:560px}}
+@media (max-width:640px){.stage{height:520px}.stage .iphone{width:min(230px,60vw)}.tp{bottom:0}}
+.stage{height:auto!important;padding:24px 0 56px}
+.tp{bottom:8%}
+@media (max-width:980px){.stage{padding:16px 0 120px}.tp{bottom:0}}
