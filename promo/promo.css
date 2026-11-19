@@ -707,3 +707,80 @@ section,.books{position:relative;z-index:1}
 }
 @media (max-width:980px){.thread-note{width:26px;height:26px;margin:-13px 0 0 -13px}.thread-note .ico{width:12px;height:12px}}
 @media (prefers-reduced-motion:reduce){.hero::before,.stage::before{animation:none}.thread-note{display:none}.js .h2.rv .hl{clip-path:none;translate:none}}
+
+/* ===== v8: compacto ===== */
+.sec{padding:clamp(2.75rem,5.5vw,4.25rem) 0}
+.sec[style*="padding-top:0"]{padding-top:0!important}
+.h2{font-size:clamp(1.9rem,3.4vw,2.9rem);margin-bottom:.75rem}
+.sub{font-size:1.02rem}
+.sec-head{margin-bottom:1.5rem}
+.hero{min-height:auto;padding:2rem 0 2.5rem}
+.hero h1{font-size:clamp(2.6rem,5.2vw,4.4rem);margin-bottom:1.1rem}
+.hero p.lead{margin-bottom:1.6rem;font-size:clamp(1.02rem,1.3vw,1.18rem)}
+.stage{height:min(560px,70vh)}
+.stage .iphone{width:min(250px,56vw)}
+.tp{width:min(320px,80vw);padding:.9rem 1rem}
+.books{padding:1rem 0}
+.book{font-size:clamp(1.1rem,1.8vw,1.45rem)}
+.numbers{padding:clamp(2.25rem,4.5vw,3.25rem) 0}
+.big-line{font-size:clamp(1.5rem,3vw,2.5rem);max-width:30ch}
+.finder{padding:1.15rem}
+.finder-box{height:3.2rem}
+.res{padding:.75rem .95rem}
+.player-grid{gap:3rem}
+.player-stage{height:540px}
+.galaxy{width:min(250px,64vw)}
+.iphone-back{width:min(205px,42vw);top:50px}
+.lp{padding:2.3rem .9rem .8rem;gap:.55rem}
+.tracks{margin-top:1.25rem;gap:.15rem}
+.trk{padding:.4rem .6rem .4rem .45rem}
+.trk img{width:2.4rem;height:2.4rem}
+.split{gap:clamp(1.75rem,4vw,3.25rem)}
+.split .panels{min-height:470px}
+.split-l .sub{margin-bottom:1.1rem}
+.vtabs{gap:.2rem}
+.vtabs button{padding:.55rem .8rem .55rem .6rem;grid-template-columns:2.4rem 1fr;gap:.75rem}
+.vt-ico{width:2.4rem;height:2.4rem;border-radius:12px}
+.vt-txt b{font-size:.98rem}
+.vt-txt small{font-size:.8rem}
+.mod{gap:2.25rem}
+.mod-phone .iphone{width:210px}
+.checks{gap:.6rem}
+.checks li{font-size:.95rem}
+#modos .proj-scene{aspect-ratio:16/9.6}
+#p-temas .iphone{width:185px}
+#p-tele .tele-win{height:250px}
+.cap{margin-top:.85rem;font-size:.92rem}
+.mgrid{gap:.75rem}
+.mgrid .cell{padding:1.15rem}
+.crop{min-height:150px}
+.crop-w{height:140px}
+.road{gap:.75rem}
+.road li{padding:1.15rem}
+.road .ico{width:1.8rem;height:1.8rem;margin-bottom:.6rem}
+.road h3{font-size:1.1rem}
+.links{margin-top:1.5rem;gap:.6rem}
+.link{padding:.95rem}
+.support{padding:.9rem 1rem .9rem 1.25rem}
+.final{padding:clamp(3rem,6vw,4.5rem) 0}
+.final .h2{font-size:clamp(2.2rem,5vw,3.8rem)}
+.final .sub{margin-bottom:1.6rem}
+@media (max-width:980px){
+  .stage{height:480px}
+  .player-stage{height:480px}
+  .split .panels{min-height:0}
+}
+@media (max-width:640px){
+  .hero{padding:1.25rem 0 2rem}
+  .stage{height:440px}
+  .stage .iphone{width:min(210px,58vw)}
+  .player-stage{height:450px}
+  .galaxy{width:min(220px,62vw)}
+  .mod-phone .iphone{width:190px}
+  #p-temas .iphone{width:170px}
+}
+.hero{padding-bottom:3.5rem}
+.stage{height:min(520px,66vh)}
+.tp{bottom:2%}
+#modos .proj-scene{aspect-ratio:16/11}
+.nav-links a{white-space:nowrap}
