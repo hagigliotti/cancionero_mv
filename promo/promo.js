@@ -33,6 +33,7 @@
   document.body.prepend(sentinel);
   new IntersectionObserver(([e]) => nav.classList.toggle('scrolled', !e.isIntersecting)).observe(sentinel);
 
+  $$('.h2.rv').forEach(h => { h.innerHTML = '<span class="hl">' + h.innerHTML + '</span>'; });
   /* ---------- Aparición al entrar en pantalla ---------- */
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
@@ -444,6 +445,101 @@
       };
       tick();
     });
+  }
+
+  /* ---------- Hilo musical que une toda la página ---------- */
+  const thread = ui('thread'), tNote = ui('threadNote'), mainEl = ui('main');
+  if (thread && mainEl) {
+    const NS = 'http://www.w3.org/2000/svg';
+    let path = null, L = 0, nodes = [], nodeEls = [], raf = 0, last = -1;
+    const mk = (tag, attrs) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; };
+    function build() {
+      const W = mainEl.clientWidth, H = mainEl.scrollHeight;
+      thread.setAttribute('width', W); thread.setAttribute('height', H); thread.setAttribute('viewBox', '0 0 ' + W + ' ' + H); thread.style.height = H + 'px';
+      const wrapW = Math.min(1240, W - 40), left = (W - wrapW) / 2;
+      const wide = left >= 70, gx = wide ? left - 38 : 10, amp = wide ? Math.min(26, left - 46) : 4;
+      const mTop = mainEl.getBoundingClientRect().top + scrollY;
+      const heads = $$('#main > section .h2, #main > section h1').filter(h => h.offsetParent);
+      nodes = heads.map(h => h.getBoundingClientRect().top + scrollY - mTop + h.offsetHeight * .45);
+      const ys = [0, ...nodes, H - 40];
+      let d = 'M' + gx + ' ' + ys[0];
+      for (let i = 0; i < ys.length - 1; i++) {
+        const y0 = ys[i], y1 = ys[i + 1], dy = y1 - y0, s = i % 2 ? -1 : 1;
+        d += ' C' + (gx + amp * s) + ' ' + (y0 + dy / 3) + ' ' + (gx - amp * s) + ' ' + (y0 + 2 * dy / 3) + ' ' + gx + ' ' + y1;
+      }
+      const base = ui('threadBase'), draw = ui('threadDraw'), nd = ui('threadNodes');
+      base.innerHTML = ''; draw.innerHTML = ''; nd.innerHTML = '';
+      (wide ? [-8, -4, 0, 4, 8] : [-2.5, 0, 2.5]).forEach(o => base.append(mk('path', { d, transform: 'translate(' + o + ' 0)' })));
+      draw.append(mk('path', { d, pathLength: 1, class: 'glow' }));
+      path = mk('path', { d, pathLength: 1 }); draw.append(path);
+      L = path.getTotalLength();
+      nodeEls = nodes.map(y => { const c = mk('circle', { cx: gx, cy: y, r: wide ? 4 : 3 }); nd.append(c); return c; });
+      last = -1; update();
+    }
+    function lengthAtY(y) {
+      let lo = 0, hi = L;
+      for (let i = 0; i < 22; i++) { const mid = (lo + hi) / 2; if (path.getPointAtLength(mid).y < y) lo = mid; else hi = mid; }
+      return lo;
+    }
+    function update() {
+      raf = 0; if (!path) return;
+      const mTop = mainEl.getBoundingClientRect().top + scrollY;
+      const target = scrollY + innerHeight * .55 - mTop;
+      if (Math.abs(target - last) < 1) return; last = target;
+      const len = Math.max(0, Math.min(L, lengthAtY(target)));
+      thread.style.setProperty('--tp', String(1 - len / L));
+      const pt = path.getPointAtLength(len);
+      tNote.style.transform = 'translate(' + pt.x + 'px,' + pt.y + 'px)';
+      tNote.classList.toggle('on', len > 4 && len < L - 4);
+      nodeEls.forEach((c, i) => c.classList.toggle('lit', nodes[i] <= target + 2));
+    }
+    const req = () => { if (!raf) raf = requestAnimationFrame(update); };
+    addEventListener('scroll', req, { passive: true });
+    let rt = 0; const rebuild = () => { clearTimeout(rt); rt = setTimeout(build, 150); };
+    addEventListener('resize', rebuild);
+    new ResizeObserver(rebuild).observe(mainEl);
+    (document.fonts ? document.fonts.ready : Promise.resolve()).then(build);
+  }
+
+  /* ---------- Fondo vivo: polvo de luz y notas ---------- */
+  const cv = ui('dust');
+  if (cv && !reduce) {
+    const ctx = cv.getContext('2d'); let W = 0, H = 0, dpr = 1, P = [], run = true;
+    const GL = ['♪', '♫', '♩'];
+    const size = () => {
+      dpr = Math.min(2, devicePixelRatio || 1); W = innerWidth; H = innerHeight;
+      cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const n = Math.min(70, Math.round(W * H / 24000));
+      P = Array.from({ length: n }, () => ({ x: Math.random() * W, y: Math.random() * H, z: .3 + Math.random() * .9, r: .5 + Math.random() * 1.4, vy: .06 + Math.random() * .22, vx: (Math.random() - .5) * .08, a: .15 + Math.random() * .45, g: Math.random() < .14 ? GL[Math.floor(Math.random() * 3)] : null, s: 10 + Math.random() * 8, ph: Math.random() * 6.28 }));
+    };
+    size(); addEventListener('resize', size);
+    let prevY = scrollY;
+    const loop = t => {
+      if (!run) return;
+      const dy = scrollY - prevY; prevY = scrollY;
+      ctx.clearRect(0, 0, W, H);
+      for (const p of P) {
+        p.y -= p.vy * p.z + dy * p.z * .15; p.x += p.vx + Math.sin(t / 2400 + p.ph) * .08;
+        if (p.y < -20) { p.y = H + 20; p.x = Math.random() * W; } if (p.y > H + 20) { p.y = -20; p.x = Math.random() * W; }
+        if (p.x < -20) p.x = W + 20; if (p.x > W + 20) p.x = -20;
+        const tw = .6 + .4 * Math.sin(t / 900 + p.ph);
+        if (p.g) { ctx.fillStyle = 'rgba(245,165,36,' + (p.a * .35 * tw) + ')'; ctx.font = p.s * p.z + 'px serif'; ctx.fillText(p.g, p.x, p.y); }
+        else { ctx.fillStyle = 'rgba(220,230,255,' + (p.a * tw * p.z) + ')'; ctx.beginPath(); ctx.arc(p.x, p.y, p.r * p.z, 0, 6.283); ctx.fill(); }
+      }
+      requestAnimationFrame(loop);
+    };
+    requestAnimationFrame(loop);
+    document.addEventListener('visibilitychange', () => { run = !document.hidden; if (run) requestAnimationFrame(loop); });
+  }
+
+  /* ---------- Foco de luz en tarjetas ---------- */
+  if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    $$('.cell, .link, .finder, .vtabs button, .tp, .support').forEach(el => el.classList.add('spot'));
+    document.addEventListener('pointermove', e => {
+      const el = e.target.closest && e.target.closest('.spot'); if (!el) return;
+      const r = el.getBoundingClientRect();
+      el.style.setProperty('--mx', (e.clientX - r.left) + 'px'); el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    }, { passive: true });
   }
 
 })();
