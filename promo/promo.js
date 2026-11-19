@@ -4,6 +4,27 @@
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+
+  /* ---------- Celulares realistas: barra de estado, isla, indicador de inicio ---------- */
+  const SB = {"img/sonando.webp":["#606e35","#ffffff"],"img/playlist.webp":["#277f86","#ffffff"],"img/temas/claro-celeste.webp":["#ffffff","#0b0b0c"],"img/temas/claro-naranja.webp":["#ffffff","#0b0b0c"],"img/temas/claro-rojo.webp":["#ffffff","#0b0b0c"],"img/temas/claro-verde.webp":["#ffffff","#0b0b0c"],"img/temas/claro-violeta.webp":["#ffffff","#0b0b0c"],"img/temas/oscuro-celeste.webp":["#0d2134","#ffffff"],"img/temas/oscuro-kindle.webp":["#171513","#ffffff"],"img/temas/oscuro-rosa.webp":["#23101b","#ffffff"],"img/mod/anio.webp":["#4d5560","#ffffff"],"img/mod/biblia.webp":["#ffffff","#0b0b0c"],"img/mod/oracion.webp":["#4d5560","#ffffff"],"img/mod/rpsp.webp":["#4d5560","#ffffff"]};
+  const sbFor = src => SB[(src || '').replace(/^.*?(img\/)/, 'img/')] || ['#ffffff', '#0b0b0c'];
+  const paintSB = (view, src) => { const [bg, fg] = sbFor(src); view.style.setProperty('--sb', bg); view.style.setProperty('--sf', fg); const h = view.querySelector('.home'); if (h) h.classList.toggle('light', fg === '#ffffff'); };
+  window.__paintSB = paintSB;
+  const now = new Date(), hhmm = now.getHours() + ':' + String(now.getMinutes()).padStart(2, '0');
+  $$('.iphone').forEach(ph => {
+    const island = ph.querySelector('.island'), content = ph.querySelector('img, .medit');
+    if (!content) return;
+    const scr = document.createElement('div'); scr.className = 'scr';
+    const view = document.createElement('div'); view.className = 'view';
+    view.innerHTML = '<div class="sbar" aria-hidden="true"><span>' + hhmm + '</span><span class="island"></span><span class="sb-ic"><svg class="ico"><use href="#i-signal"/></svg><svg class="ico"><use href="#i-wifi"/></svg><svg class="ico"><use href="#i-battery"/></svg></span></div>';
+    view.append(content); const home = document.createElement('span'); home.className = 'home'; home.setAttribute('aria-hidden', 'true'); view.append(home);
+    scr.append(view); if (island) island.remove();
+    const v2 = document.createElement('span'); v2.className = 'vol2'; v2.setAttribute('aria-hidden', 'true');
+    ph.append(v2, scr);
+    paintSB(view, content.tagName === 'IMG' ? content.getAttribute('src') : 'img/mod/biblia.webp');
+  });
+  $$('.lp-sbar span:first-child').forEach(s => (s.textContent = hhmm));
+
   /* ---------- Titular palabra por palabra ---------- */
   $$('[data-words]').forEach(h => {
     let i = 0;
@@ -356,7 +377,7 @@
       btns.forEach(x => x.setAttribute('aria-checked', String(x === b)));
       const src = 'img/temas/' + b.dataset.t + '.webp', pre = new Image(); pre.src = src;
       themeImg.classList.add('swap');
-      pre.onload = () => setTimeout(() => { themeImg.src = src; themeImg.alt = 'La app en tema ' + b.textContent.trim().toLowerCase(); themeImg.classList.remove('swap'); }, reduce ? 0 : 200);
+      pre.onload = () => setTimeout(() => { themeImg.src = src; const v = themeImg.closest('.view'); if (v) paintSB(v, src); themeImg.alt = 'La app en tema ' + b.textContent.trim().toLowerCase(); themeImg.classList.remove('swap'); }, reduce ? 0 : 200);
       if (user) { tAuto = false; clearInterval(tTimer); track('probar_tema', { tema: b.dataset.t }); }
     };
     btns.forEach((b, i) => b.addEventListener('click', () => setTheme(i, true)));
@@ -366,6 +387,7 @@
 
   /* ---------- Proyector: baja la pantalla y se enciende ---------- */
   const proj = ui('proj');
+  const zoneIn = el => { if (!el) return false; const r = el.getBoundingClientRect(); return r.top < innerHeight * .8 && r.bottom > innerHeight * .2; };
   const replay = (el, cls) => { if (!el) return; el.classList.remove(cls); void el.offsetWidth; requestAnimationFrame(() => el.classList.add(cls)); };
 
   /* ---------- Pestañas con avance automático ---------- */
@@ -380,8 +402,8 @@
       place();
       const b = btns[idx]; if (tablist.scrollWidth > tablist.clientWidth + 4) tablist.scrollTo({ left: b.offsetLeft - 16, behavior: reduce ? 'auto' : 'smooth' });
       const id = b.getAttribute('aria-controls');
-      if (id === 'p-proyector') replay(proj, 'on');
-      if (id === 'p-tv') replay($('#p-tv .tv'), 'in');
+      if (id === 'p-proyector' && zoneIn(proj)) replay(proj, 'on');
+      if (id === 'p-tv' && zoneIn($('#p-tv .tv'))) replay($('#p-tv .tv'), 'in');
       if (user) { auto = false; set.classList.remove('auto'); clearTimeout(timer); track('pestana_promo', { pestana: id }); }
       else if (auto) { set.classList.remove('auto'); void set.offsetWidth; set.classList.add('auto'); }
       schedule();
@@ -398,6 +420,14 @@
     addEventListener('resize', place); document.fonts && document.fonts.ready.then(place);
     show(0);
     set.classList.remove('auto');
+  });
+  // La pantalla baja (y la tele se enciende) cuando llegás a esa zona; al salir se reinicia
+  [[proj, 'on', '.proj-scene'], [$('#p-tv .tv'), 'in', '.tv']].forEach(([el, cls, sel]) => {
+    if (!el) return; const tgt = el.matches(sel) ? el : el.querySelector(sel) || el;
+    new IntersectionObserver(([e]) => {
+      if (e.isIntersecting && e.intersectionRatio >= .45) { if (!el.classList.contains(cls)) replay(el, cls); }
+      else if (!e.isIntersecting) el.classList.remove(cls);
+    }, { threshold: [0, .45] }).observe(tgt);
   });
   const md = ui('meditDate'); if (md) md.textContent = new Date().toLocaleDateString('es-AR', { weekday: 'long', day: 'numeric', month: 'long' });
 
