@@ -84,7 +84,10 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li>Tocando a <b>letra</b> de uma linha voc\xEA corrige o texto (os acordes v\xE3o entre colchetes: <code>[G]Ol\xE1</code>).</li>
 <li>Na aba <b>\u{1F4CB} Dados</b> se corrige todo o resto: t\xEDtulo, outros t\xEDtulos, t\xEDtulo original, autor, coautor, compositor, tradutor, arranjo, ano, tom, BPM, compasso, ritmo, refer\xEAncia b\xEDblica, temas e nota (nos campos com v\xE1rios valores, um por linha). O que voc\xEA mudou fica marcado em laranja.</li>
 <li>Enquanto escreve aparecem <b>sugest\xF5es</b> (toque uma para adicionar): pessoas que j\xE1 est\xE3o no app para autor, coautor, compositor, tradutor e arranjo; ritmos; temas; tons; compassos; e livros da B\xEDblia na refer\xEAncia (s\xF3 no idioma do c\xE2ntico).</li>
+<li>No menu <b>\u22EE</b> de cada linha, o que voc\xEA escolhe \xE9 adicionado <b>ali mesmo</b> (acima dessa linha; tamb\xE9m d\xE1 para escolher \xABAdicionar abaixo\xBB). Em <b>Partes</b> e <b>Vozes</b>, o <b>\uFF0B</b> adiciona uma nova se faltar (por exemplo \xABEstrofe final\xBB ou \xABQuarteto\xBB): fica salva no seu dispositivo e pode ser tirada com o \xD7.</li>
+<li><b>\u21B6 Desfazer</b> fica embaixo, ao lado de <b>Cancelar</b> e <b>Salvar</b>.</li>
 <li><b>Salvar</b> mostra o antes e o depois. Com seu <b>nome e sobrenome</b> (obrigat\xF3rios) e um coment\xE1rio opcional, <b>Enviar</b> manda a corre\xE7\xE3o ao autor do app, que a revisa. Se estiver certa, aparece numa pr\xF3xima atualiza\xE7\xE3o.</li>
+<li>Todas as corre\xE7\xF5es passam por um <b>m\xF3dulo de aprova\xE7\xE3o</b>: o autor revisa cada uma antes de public\xE1-la.</li>
 </ul>
 <h4>Viol\xE3o, baixo e ukulele</h4>
 <ul>
@@ -349,6 +352,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>N\xE3o vejo as Medita\xE7\xF5es</b>: escreva <b>meditaciones</b> na busca.</li>
 </ul>`},novedades:{titulo:"Novidades",html:`
 <ul>
+<li><b>2.108.0</b> \u2014 \u270F\uFE0F Editor: \u21B6 Desfazer ao lado de Cancelar e Salvar; o menu \u22EE adiciona ali mesmo; \uFF0B em Partes e Vozes para adicionar as que faltam; um aviso confirma se a corre\xE7\xE3o foi enviada. Acordes em cifra latina passados para C D E (aparecem conforme \u2630 Menu \u2192 Cifra) e \xABRit.\xBB dos cantos em italiano como etiqueta Ritornello.</li>
 <li><b>2.100.0</b> \u2014 \u{1F3BC} Aprender a ler m\xFAsica (Menu \u2192 Ferramentas, ou Metr\xF4nomo e Afinador \u2192 Notas): todas as notas nas linhas e espa\xE7os de cada clave (sol, f\xE1, d\xF3 e pauta dupla), acidentes \u266F \u266D \u266E \u{1D12A} \u{1D12B} e enarmonias, tonalidades com armadura, escala e acordes de cada grau, acordes com a grafia certa, figuras, pausas e compassos, e um jogo para praticar. Toque uma nota para ouvi-la.</li>
 <li><b>2.99.0</b> \u2014 \u{1F3BC} Vocalizes: pauta para aprender onde ficam as notas. Pauta dupla (sol em cima, f\xE1 embaixo) ou clave de sol, sol oitava abaixo, f\xE1 na 4\xAA e na 3\xAA, e d\xF3 na 1\xAA a 4\xAA. Acidentes como no tom, com sustenidos ou com bem\xF3is (D\xF3\u266F maior = d\xF3\u266F\u2013mi\u266F\u2013sol\u266F). A nota que soa aparece na pauta.</li>
 <li><b>2.98.0</b> \u2014 \u{1F3A4} Vocalizes: o percurso dos tons mostra a extens\xE3o de cada voz (S, C, T, B) com sua cor; acende a voz que pode cantar o tom que est\xE1 soando e marca a faixa da voz escolhida.</li>

@@ -84,7 +84,10 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li>Toccando il <b>testo</b> di una riga si corregge il testo (gli accordi vanno tra parentesi quadre: <code>[G]Ciao</code>).</li>
 <li>Nella scheda <b>\u{1F4CB} Dati</b> si corregge tutto il resto: titolo, altri titoli, titolo originale, autore, coautore, compositore, traduttore, arrangiamento, anno, tonalit\xE0, BPM, tempo, ritmo, riferimento biblico, temi e nota (nei campi con pi\xF9 valori, uno per riga). Ci\xF2 che hai cambiato resta segnato in arancione.</li>
 <li>Mentre scrivi compaiono <b>suggerimenti</b> (toccane uno per aggiungerlo): persone gi\xE0 presenti nell'app per autore, coautore, compositore, traduttore e arrangiamento; ritmi; temi; tonalit\xE0; tempi; e libri della Bibbia nel riferimento (solo nella lingua del canto: \xABmat\xBB \u2192 <i>Matteo</i> in italiano).</li>
+<li>Nel menu <b>\u22EE</b> di ogni riga, ci\xF2 che scegli si aggiunge <b>proprio l\xEC</b> (sopra quella riga; puoi anche scegliere \xABAggiungi sotto\xBB). In <b>Parti</b> e <b>Voci</b>, il <b>\uFF0B</b> ne aggiunge una nuova se manca (per esempio \xABStrofa finale\xBB o \xABQuartetto\xBB): resta salvata sul tuo dispositivo e si pu\xF2 togliere con la \xD7.</li>
+<li>Il pulsante <b>\u21B6</b> (annulla l'ultima modifica) \xE8 in basso, accanto ad <b>Annulla</b> e <b>Salva</b>.</li>
 <li><b>Salva</b> mostra il prima e il dopo. Con il tuo <b>nome e cognome</b> (obbligatori) e un commento facoltativo, <b>Invia</b> manda la correzione all'autore dell'app, che la controlla. Se \xE8 corretta, compare in un prossimo aggiornamento.</li>
+<li>Tutte le correzioni passano per un <b>modulo di approvazione</b>: l'autore le controlla una per una prima di pubblicarle.</li>
 </ul>
 <h4>Chitarra, basso e ukulele</h4>
 <ul>
@@ -349,6 +352,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>Non vedo le Meditazioni</b>: scrivi <b>meditaciones</b> nella ricerca.</li>
 </ul>`},novedades:{titulo:"Novit\xE0",html:`
 <ul>
+<li><b>2.108.0</b> \u2014 \u270F\uFE0F Editor: \u21B6 Annulla accanto a Salva; il menu \u22EE aggiunge proprio l\xEC; \uFF0B in Parti e Voci per aggiungere quelle che mancano; un avviso conferma se la correzione \xE8 stata inviata. Accordi in notazione latina passati a C D E (si vedono secondo \u2630 Menu \u2192 Notazione) e \xABRit.\xBB dei canti in italiano come etichetta Ritornello.</li>
 <li><b>2.100.0</b> \u2014 \u{1F3BC} Impara a leggere la musica (Menu \u2192 Strumenti, o Metronomo e Accordatore \u2192 Note): tutte le note su linee e spazi di ogni chiave (violino, basso, do e doppio pentagramma), alterazioni \u266F \u266D \u266E \u{1D12A} \u{1D12B} ed enarmonie, tonalit\xE0 con armatura, scala e accordi di ogni grado, accordi scritti correttamente, figure, pause e tempi, e un gioco per esercitarsi. Tocca una nota per ascoltarla.</li>
 <li><b>2.99.0</b> \u2014 \u{1F3BC} Vocalizzi: pentagramma per imparare dove vanno le note. Doppio pentagramma (violino sopra, basso sotto) o chiave di violino, violino ottava bassa, basso e baritono, e chiavi di do in 1\xAA\u20134\xAA. Alterazioni come nella tonalit\xE0, con diesis o con bemolle (Do\u266F maggiore = do\u266F\u2013mi\u266F\u2013sol\u266F). La nota che suona si vede sul pentagramma.</li>
 <li><b>2.98.0</b> \u2014 \u{1F3A4} Vocalizzi: il percorso delle tonalit\xE0 mostra l\u2019estensione di ogni voce (S, C, T, B) con il suo colore; si illumina la voce che pu\xF2 cantare la tonalit\xE0 che suona e si segna la fascia della voce scelta.</li>
