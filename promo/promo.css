@@ -653,3 +653,57 @@ footer .wrap{align-items:center}
 .split>*{min-width:0}
 .chip{display:grid;place-items:center;text-align:center}
 @media (max-width:640px){#modos .proj-scene{aspect-ratio:1/1}}
+
+/* ===== v6: alta gama, hilo musical y movimiento ===== */
+main{position:relative}
+.dust{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+/* Hilo: pentagrama que recorre la página */
+.thread{position:absolute;left:0;top:0;width:100%;pointer-events:none;z-index:0;overflow:visible}
+.thread path{fill:none;vector-effect:non-scaling-stroke}
+#threadBase path{stroke:rgb(190 210 240 / .07);stroke-width:1}
+#threadDraw path{stroke:url(#thg);stroke-width:1.4;stroke-dasharray:1;stroke-dashoffset:var(--tp,1)}
+#threadDraw path.glow{stroke-width:6;filter:url(#thblur);opacity:.55}
+#threadNodes circle{fill:var(--bg);stroke:rgb(190 210 240 / .25);stroke-width:1.5;transition:fill 400ms ease,stroke 400ms ease,r 400ms var(--ease-out)}
+#threadNodes circle.lit{fill:var(--accent);stroke:rgb(245 165 36 / .5);r:6}
+#threadNodes circle.lit+circle{opacity:1}
+.thread-note{position:absolute;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;display:grid;place-items:center;z-index:1;pointer-events:none;
+  background:radial-gradient(circle,rgb(245 165 36 / .95),rgb(245 165 36 / .65) 45%,transparent 70%);color:var(--accent-ink);box-shadow:0 0 30px 6px rgb(245 165 36 / .45);will-change:transform;opacity:0;transition:opacity 400ms ease}
+.thread-note.on{opacity:1}
+.thread-note .ico{width:16px;height:16px}
+section,.books{position:relative;z-index:1}
+
+/* Hero de alta gama: grilla y halo giratorio */
+.hero{position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-image:linear-gradient(rgb(190 210 240 / .06) 1px,transparent 1px),linear-gradient(90deg,rgb(190 210 240 / .06) 1px,transparent 1px);background-size:64px 64px;
+  mask-image:radial-gradient(70% 60% at 70% 40%,#000,transparent 75%);animation:gridpan 30s linear infinite}
+@keyframes gridpan{to{background-position:64px 64px,64px 64px}}
+.stage::before{content:"";position:absolute;width:130%;aspect-ratio:1;border-radius:50%;z-index:-1;pointer-events:none;
+  background:conic-gradient(from 0deg,transparent 0 55%,rgb(245 165 36 / .5) 70%,rgb(255 122 69 / .35) 78%,transparent 90%);filter:blur(40px);opacity:.7;animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(1turn)}}
+.hero h1{background:none}
+
+/* Títulos que se revelan con máscara */
+.js .h2.rv{opacity:1;filter:none;transform:none}
+.js .h2.rv .hl{display:inline-block;clip-path:inset(0 0 100% 0);translate:0 .5em;padding-bottom:.08em}
+.js .h2.rv.in .hl{clip-path:inset(-10% -5% -20% -5%);translate:0 0;transition:clip-path 1.1s var(--ease-out),translate 1.1s var(--ease-out)}
+
+/* Tarjetas con foco de luz que sigue al puntero */
+.spot{position:relative;isolation:isolate}
+.spot::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:-1;opacity:0;transition:opacity 300ms ease;
+  background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgb(245 165 36 / .12),transparent 45%)}
+.spot::before{content:"";position:absolute;inset:-1px;border-radius:inherit;pointer-events:none;padding:1px;opacity:0;transition:opacity 300ms ease;
+  background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgb(245 165 36 / .7),transparent 60%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+@media (hover:hover) and (pointer:fine){.spot:hover::after,.spot:hover::before{opacity:1}}
+
+/* Dispositivos que flotan con el scroll */
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference){
+    .mod-phone,.player-stage,.tvwrap,.themes-phone,.proj-scene,.m-tuner .crop{animation:floaty linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+    @keyframes floaty{from{translate:0 50px}to{translate:0 -50px}}
+    .books-track{animation-duration:38s}
+  }
+}
+@media (max-width:980px){.thread-note{width:26px;height:26px;margin:-13px 0 0 -13px}.thread-note .ico{width:12px;height:12px}}
+@media (prefers-reduced-motion:reduce){.hero::before,.stage::before{animation:none}.thread-note{display:none}.js .h2.rv .hl{clip-path:none;translate:none}}
