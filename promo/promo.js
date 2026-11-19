@@ -256,4 +256,128 @@
     });
   }
 
+  /* ---------- Números que cuentan ---------- */
+  const fmt = n => n.toLocaleString('es-AR');
+  const nio = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return; nio.unobserve(e.target);
+    $$('.n', e.target).forEach((el, k) => {
+      const to = +el.dataset.to; if (reduce) { el.textContent = fmt(to); return; }
+      const t0 = performance.now() + k * 120, dur = 1400;
+      const step = t => { const p = Math.min(1, Math.max(0, (t - t0) / dur)); el.textContent = fmt(Math.round(to * (1 - Math.pow(1 - p, 4)))); if (p < 1) requestAnimationFrame(step); };
+      el.textContent = '0'; requestAnimationFrame(step);
+    });
+  }), { threshold: .4 });
+  $$('.big-line').forEach(el => nio.observe(el));
+
+  /* ---------- Reproductor en vivo (mp3 reales de cancionero_media) ---------- */
+  const MEDIA = 'https://raw.githubusercontent.com/hagigliotti/cancionero_media/main/cancionero_app/audio/vocal/';
+  const COLORS = { amigos_de_esperanza: '#55602f', mis_cantos: '#3a5b80' };
+  const audio = $('#audio'), sec = $('#reproductor'), lp = $('#lp');
+  const ui = id => document.getElementById(id);
+  const mmss = s => (s = Math.max(0, Math.floor(s || 0)), Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'));
+  let TR = [], cur = 0, shuffle = false, repeat = false, started = false, lines = [];
+  const playIco = on => { ui('lpPlay').innerHTML = '<svg class="ico"><use href="#i-' + (on ? 'pause' : 'play') + '-fill"/></svg>'; ui('lpPlay').setAttribute('aria-label', on ? 'Pausar' : 'Reproducir');
+    ui('miniPlay').innerHTML = '<svg class="ico"><use href="#i-' + (on ? 'pause' : 'play') + '-fill"/></svg>'; ui('miniPlay').setAttribute('aria-label', on ? 'Pausar' : 'Reproducir'); };
+  function renderList() {
+    ui('tracks').innerHTML = TR.map((t, i) => '<li><button type="button" class="trk" data-i="' + i + '"' + (i === cur ? ' aria-current="true"' : '') + '><img src="img/covers/' + t.cv + '.webp" alt="" width="44" height="44" loading="lazy"><span><b>' + t.t + '</b><small>' + t.a + '</small></span><span class="dur"><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>' + mmss(t.d) + '</span></button></li>').join('');
+  }
+  function setTrack(i, play) {
+    cur = (i + TR.length) % TR.length; const t = TR[cur];
+    const img = ui('lpCover'); img.classList.add('swap');
+    setTimeout(() => { img.src = 'img/covers/' + t.cv + '.webp'; img.onload = () => img.classList.remove('swap'); }, reduce ? 0 : 220);
+    ui('lpTitle').textContent = t.t; ui('lpArtist').textContent = t.a; ui('lpDur').textContent = mmss(t.d); ui('lpCur').textContent = '0:00';
+    ui('miniCover').src = 'img/covers/' + t.cv + '.webp'; ui('miniTitle').textContent = t.t; ui('miniArtist').textContent = t.a;
+    const c = COLORS[t.cv] || '#3a4a60'; sec.style.setProperty('--tc', c);
+    ui('lpBar').value = 0; ui('lpBar').style.setProperty('--p', '0%');
+    lines = t.l; const box = ui('lpLyr');
+    box.innerHTML = '<div>' + t.l.map(x => x ? '<p>' + x.replace(/[<>&]/g, '') + '</p>' : '<p class="gap"></p>').join('') + '</div>';
+    $$('.trk', ui('tracks')).forEach((b, k) => b.setAttribute('aria-current', k === cur ? 'true' : 'false'));
+    audio.src = MEDIA + t.id + '.mp3';
+    if ('mediaSession' in navigator) navigator.mediaSession.metadata = new MediaMetadata({ title: t.t, artist: t.a, album: 'Cancionero MV', artwork: [{ src: new URL('img/covers/' + t.cv + '.webp', location.href).href, sizes: '480x480', type: 'image/webp' }] });
+    if (play) doPlay();
+  }
+  function doPlay() {
+    started = true; ui('lpPlay').classList.remove('pulse');
+    audio.play().then(() => track('reproducir_promo', { cancion: TR[cur].id })).catch(() => { ui('lpTitle').textContent = 'No se pudo reproducir'; });
+  }
+  const toggle = () => { if (audio.paused) { if (!audio.src) setTrack(cur, true); else doPlay(); } else audio.pause(); };
+  const next = auto => { if (repeat && auto) { audio.currentTime = 0; doPlay(); return; } setTrack(shuffle ? Math.floor(Math.random() * TR.length) : cur + 1, true); };
+  let lastLine = -1;
+  function syncLyrics() {
+    const box = ui('lpLyr'), wrap = box.firstElementChild; if (!wrap || !audio.duration) return;
+    const ps = $$('p:not(.gap)', wrap); if (!ps.length) return;
+    const k = Math.min(ps.length - 1, Math.floor(audio.currentTime / audio.duration * ps.length * 1.04));
+    if (k === lastLine) return; lastLine = k;
+    ps.forEach((p, j) => p.classList.toggle('on', j === k));
+    const y = ps[k].offsetTop - box.clientHeight * .32;
+    wrap.style.transform = 'translateY(' + (-Math.max(0, y)) + 'px)';
+  }
+  if (audio && lp) {
+    fetch('data/tracks.json').then(r => r.json()).then(d => { TR = d; renderList(); setTrack(0, false); audio.removeAttribute('src'); ui('lpPlay').classList.add('pulse');
+      const roll = ui('teleRoll'); if (roll) { const html = d[0].l.map(x => x ? '<p>' + x + '</p>' : '<p class="gap"></p>').join(''); roll.innerHTML = html + html; }
+    }).catch(() => {});
+    ui('tracks').addEventListener('click', e => { const b = e.target.closest('.trk'); if (b) { const i = +b.dataset.i; if (i === cur && audio.src && !audio.paused) audio.pause(); else setTrack(i, true); } });
+    ui('lpPlay').addEventListener('click', toggle);
+    ui('lpPrev').addEventListener('click', () => audio.currentTime > 4 ? (audio.currentTime = 0) : setTrack(cur - 1, true));
+    ui('lpNext').addEventListener('click', () => next(false));
+    ui('lpShuf').addEventListener('click', e => { shuffle = !shuffle; e.currentTarget.setAttribute('aria-pressed', shuffle); });
+    ui('lpRep').addEventListener('click', e => { repeat = !repeat; e.currentTarget.setAttribute('aria-pressed', repeat); });
+    ui('lpFav').addEventListener('click', e => { const on = e.currentTarget.getAttribute('aria-pressed') !== 'true'; e.currentTarget.setAttribute('aria-pressed', on); e.currentTarget.innerHTML = '<svg class="ico"><use href="#i-heart"/></svg>'; });
+    ui('lpBar').addEventListener('input', e => { if (audio.duration) audio.currentTime = e.target.value / 1000 * audio.duration; e.target.style.setProperty('--p', e.target.value / 10 + '%'); });
+    audio.addEventListener('play', () => { sec.classList.add('playing'); document.body.classList.add('is-playing'); playIco(true); updMini(); });
+    audio.addEventListener('pause', () => { sec.classList.remove('playing'); document.body.classList.remove('is-playing'); playIco(false); updMini(); });
+    audio.addEventListener('ended', () => next(true));
+    audio.addEventListener('loadedmetadata', () => { ui('lpDur').textContent = mmss(audio.duration); lastLine = -1; });
+    audio.addEventListener('timeupdate', () => {
+      const p = audio.duration ? audio.currentTime / audio.duration : 0;
+      ui('lpCur').textContent = mmss(audio.currentTime); ui('lpBar').value = Math.round(p * 1000); ui('lpBar').style.setProperty('--p', p * 100 + '%');
+      ui('miniProg').style.width = p * 100 + '%'; syncLyrics();
+    });
+    if ('mediaSession' in navigator) {
+      navigator.mediaSession.setActionHandler('play', doPlay); navigator.mediaSession.setActionHandler('pause', () => audio.pause());
+      navigator.mediaSession.setActionHandler('nexttrack', () => next(false)); navigator.mediaSession.setActionHandler('previoustrack', () => setTrack(cur - 1, true));
+    }
+    // Mini reproductor
+    const mini = ui('mini'); let secIn = false;
+    function updMini() { const on = !audio.paused && !secIn; mini.classList.toggle('show', on); mini.setAttribute('aria-hidden', String(!on)); ui('miniPlay').tabIndex = on ? 0 : -1; }
+    new IntersectionObserver(([e]) => { secIn = e.isIntersecting; updMini(); }, { threshold: .15 }).observe(sec);
+    ui('miniPlay').addEventListener('click', e => { e.stopPropagation(); toggle(); });
+    mini.addEventListener('click', () => sec.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' }));
+  }
+
+  /* ---------- Temas ---------- */
+  const themeImg = ui('themeImg'), sw = ui('swatches');
+  if (themeImg && sw) {
+    const btns = $$('button', sw); let ti = 0, tAuto = !reduce, tTimer = 0;
+    const setTheme = (i, user) => {
+      ti = (i + btns.length) % btns.length; const b = btns[ti];
+      btns.forEach(x => x.setAttribute('aria-checked', String(x === b)));
+      const src = 'img/temas/' + b.dataset.t + '.webp', pre = new Image(); pre.src = src;
+      themeImg.classList.add('swap');
+      pre.onload = () => setTimeout(() => { themeImg.src = src; themeImg.alt = 'La app en tema ' + b.textContent.trim().toLowerCase(); themeImg.classList.remove('swap'); }, reduce ? 0 : 200);
+      if (user) { tAuto = false; clearInterval(tTimer); track('probar_tema', { tema: b.dataset.t }); }
+    };
+    btns.forEach((b, i) => b.addEventListener('click', () => setTheme(i, true)));
+    sw.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); setTheme(ti + (e.key === 'ArrowRight' ? 1 : -1), true); btns[ti].focus(); } });
+    new IntersectionObserver(([e]) => { clearInterval(tTimer); if (e.isIntersecting && tAuto) tTimer = setInterval(() => setTheme(ti + 1), 2800); }, { threshold: .5 }).observe(themeImg);
+  }
+
+  /* ---------- Proyector: baja la pantalla y se enciende ---------- */
+  const proj = ui('proj');
+  if (proj) new IntersectionObserver(([e], o) => { if (e.isIntersecting) { proj.classList.add('on'); o.disconnect(); } }, { threshold: .35 }).observe($('.proj-scene'));
+
+  /* ---------- Idiomas ---------- */
+  const LANGS = [['Español','Caminamos en la luz de Dios'],['Zulú',"Siyahamba, ekukanyen' kwenkos'"],['English','We are marching in the light of God'],['Português','Caminhamos sob a luz de Deus'],['Français','Nous marchons dans la lumière de Dieu'],['Afrikaans','Ons marsjeer nou in die lig van God'],['Íslenska','Við göngum í ljósi Guðs'],['Kiswahili','Twatembea nuruni mwake']];
+  const lshow = $('.lang-show');
+  if (lshow) {
+    const dots = ui('langDots'); dots.innerHTML = LANGS.map(() => '<i></i>').join('');
+    let li = 0, lt = 0;
+    const paint = () => { ui('langName').textContent = LANGS[li][0]; ui('langLine').textContent = LANGS[li][1]; ui('langLine').lang = ''; $$('i', dots).forEach((d, k) => d.classList.toggle('on', k === li)); };
+    paint();
+    if (!reduce) new IntersectionObserver(([e]) => { clearInterval(lt); if (e.isIntersecting) lt = setInterval(() => { lshow.classList.add('swap'); setTimeout(() => { li = (li + 1) % LANGS.length; paint(); lshow.classList.remove('swap'); }, 300); }, 2400); }, { threshold: .4 }).observe(lshow);
+  }
+
+  /* ---------- Salidas a redes ---------- */
+  document.addEventListener('click', e => { const a = e.target.closest('[data-ga-out]'); if (a) track('contacto_promo', { destino: a.dataset.gaOut }); });
+
 })();
