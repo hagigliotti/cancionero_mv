@@ -44,6 +44,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 </ul>`},buscar:{titulo:"Chercher un chant",html:`
 <ul>
 <li>\xC9crivez dans la recherche : elle cherche \xE0 la fois dans le <b>titre</b>, les <b>paroles</b>, l'<b>auteur</b>, le <b>compositeur</b>, le <b>rythme</b>, les <b>th\xE8mes</b> et le <b>num\xE9ro du cantique</b>. Pas besoin du nom exact ni des accents.</li>
+<li>Elle est <b>tol\xE9rante</b> : elle trouve le chant m\xEAme avec des fautes de frappe ou seulement une phrase des paroles. Les titres et les autres noms connus du chant d'abord, le reste par pertinence.</li>
 <li>Elle cherche dans <b>tous les livres</b> \xE0 la fois ; chaque r\xE9sultat montre ses drapeaux et la marque de son livre. Si le m\xEAme chant est dans plusieurs livres, il n'appara\xEEt <b>qu'une fois</b>, celui du livre que vous consultez ; les autres livres apparaissent comme marque ('62, '09\u2026) \xE0 c\xF4t\xE9 du drapeau.</li>
 <li>Touchez un r\xE9sultat pour l'ouvrir. La <b>\u2715</b> efface la recherche.</li>
 <li>S'il n'y a pas de r\xE9sultats, l'application propose d'essayer d'autres mots.</li>
@@ -111,6 +112,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <ul><li><b>\u2630 Menu \u2192 Outils \u2192 Accords (Afficher/Masquer)</b> : affiche ou masque les accords au-dessus des paroles.</li></ul>`},transponer:{titulo:"Transposer et \xABAccords transpos\xE9s\xBB",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Outils \u2192 Transposer la tonalit\xE9</b> : <b>\u266D</b> baisse d'un demi-ton, <b>\u266F</b> monte d'un demi-ton, <b>\u266E</b> revient \xE0 la tonalit\xE9 d'origine. Tous les accords des paroles changent.</li>
+<li><b>\u2630 Menu \u2192 Ce chant \u2192 Notation</b> : <b>Auto</b> (selon l'instrument : guitare, basse et ukul\xE9l\xE9 en C D E ; piano et vents en Do R\xE9 Mi), <b>C D E</b> (anglo-saxonne) ou <b>Do R\xE9 Mi</b> (latine). Les accords de tous les chants changent.</li>
 <li>Si le chant est transpos\xE9, la fen\xEAtre de l'accord montre <b>deux diagrammes</b> : <b>Transpos\xE9</b> (sonne comme le chant) et <b>Original</b> (comme il est \xE9crit).</li>
 <li><b>Accords transpos\xE9s \u2014 Activ\xE9/D\xE9sactiv\xE9</b> (dans le m\xEAme menu) d\xE9cide lequel est le principal (mis en \xE9vidence et jou\xE9) :
 <ul>
@@ -292,6 +294,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 </ul>`},info:{titulo:"Informations sur l'application",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Informations sur l'application</b> : version et date de mise \xE0 jour, et le bouton <b>\u{1F504} Forcer la mise \xE0 jour</b> (ret\xE9l\xE9charge toute l'application sans perdre vos listes ni vos r\xE9glages).</li>
+<li><b>R\xE9vis\xE9s</b> (dans les statistiques) : trois onglets, <b>R\xE9vis\xE9s</b>, <b>Non r\xE9vis\xE9s</b> et <b>En r\xE9vision</b> (corrections de la communaut\xE9 en attente d'approbation, par ordre alphab\xE9tique). Les cr\xE9dits montrent le pr\xE9nom de la personne qui a r\xE9vis\xE9 chaque chant.</li>
 <li><b>Statistiques</b> : nombre de chants, traduits, langues, <b>partitions</b> et <b>MP3</b> (au total et dans le livre que vous consultez). En touchant Langues, Partitions ou MP3, la liste de ces chants s'ouvre. Seules les partitions et MP3 d\xE9j\xE0 ajout\xE9s sont compt\xE9s.</li>
 <li>Listes d'<b>Auteurs, Compositeurs, Traducteurs, Arrangeurs, Th\xE8mes</b> et <b>\xC9quivalences</b> (le m\xEAme chant dans diff\xE9rents livres), avec filtre par langue ou par livre.</li>
 <li><b>Comment installer l'application \u2192 Combien de place ?</b> : environ 5 Mo (musique, pr\xE9sentations et partitions ne sont pas enregistr\xE9es, elles s'utilisent depuis internet) et la place qu'elle occupe maintenant sur votre appareil.</li>
@@ -352,7 +355,14 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>Je ne vois pas les M\xE9ditations</b> : \xE9crivez <b>meditaciones</b> dans la recherche.</li>
 </ul>`},novedades:{titulo:"Nouveaut\xE9s",html:`
 <ul>
+<li><b>2.108.7</b> \u2014 Contact : nouvel e-mail et Instagram <b>@cancioneromv</b>. Manuel mis \xE0 jour.</li>
+<li><b>2.108.1 \xE0 2.108.6</b> \u2014 Envoi des corrections r\xE9par\xE9 (\xAB trop volumineux \xBB), avec un message si l'envoi a \xE9chou\xE9. Auteur et compositeur \xAB Anonyme \xBB deviennent \xAB Inconnu \xBB quand on ne sait pas (sauf dans les recueils d'hymnes). Signes \u{1D110} &lt; &gt; sans italique. Panneau de r\xE9vision avec \xAB Paroles actuelles \xBB et \xAB Nouvelles paroles \xBB.</li>
 <li><b>2.108.0</b> \u2014 \u270F\uFE0F \xC9diteur : \u21B6 Annuler \xE0 c\xF4t\xE9 d'Enregistrer ; le menu \u22EE ajoute juste l\xE0 ; \uFF0B dans Parties et Voix pour ajouter celles qui manquent ; un message confirme si la correction a \xE9t\xE9 envoy\xE9e. Accords en notation latine pass\xE9s en C D E (affich\xE9s selon \u2630 Menu \u2192 Notation) et \xAB Rit. \xBB des chants en italien affich\xE9 comme \xE9tiquette Ritornello.</li>
+<li><b>2.107.0</b> \u2014 Fen\xEAtre des r\xE9vis\xE9s avec trois onglets : R\xE9vis\xE9s, Non r\xE9vis\xE9s et En r\xE9vision (par ordre alphab\xE9tique et plus rapide).</li>
+<li><b>2.106.0</b> \u2014 \xAB En r\xE9vision \xBB visible par tous : on voit quels chants ont une correction en attente d'approbation.</li>
+<li><b>2.105.0</b> \u2014 \u{1F50E} Recherche plus tol\xE9rante : fautes de frappe, phrases des paroles, autres titres du chant d'abord et r\xE9sultats par pertinence.</li>
+<li><b>2.104.0</b> \u2014 \xAB En r\xE9vision \xBB remplace \xAB Chants douteux \xBB. D\xE9marrage plus rapide sur iPhone.</li>
+<li><b>2.103.0</b> \u2014 Cr\xE9dits de r\xE9vision avec le pr\xE9nom de la personne qui a r\xE9vis\xE9.</li>
 <li><b>2.100.0</b> \u2014 \u{1F3BC} Apprendre \xE0 lire la musique (Menu \u2192 Outils, ou M\xE9tronome et Accordeur \u2192 Notes) : toutes les notes sur les lignes et interlignes de chaque cl\xE9 (sol, fa, ut et grande port\xE9e), alt\xE9rations \u266F \u266D \u266E \u{1D12A} \u{1D12B} et enharmonies, tonalit\xE9s avec armure, gamme et accords de chaque degr\xE9, accords bien orthographi\xE9s, figures, silences et mesures, et un jeu pour s\u2019exercer. Touchez une note pour l\u2019\xE9couter.</li>
 <li><b>2.99.0</b> \u2014 \u{1F3BC} Vocalises : une port\xE9e pour apprendre o\xF9 vont les notes. Grande port\xE9e (sol en haut, fa en bas) ou cl\xE9 de sol, sol octave basse, fa 4e et 3e ligne, et ut 1re \xE0 4e ligne. Alt\xE9rations comme dans la tonalit\xE9, avec di\xE8ses ou b\xE9mols (Do\u266F majeur = do\u266F\u2013mi\u266F\u2013sol\u266F). La note jou\xE9e s\u2019affiche sur la port\xE9e.</li>
 <li><b>2.98.0</b> \u2014 \u{1F3A4} Vocalises : le parcours des tonalit\xE9s montre la tessiture de chaque voix (S, A, T, B) avec sa couleur ; la voix qui peut chanter la tonalit\xE9 en cours s\u2019allume et la bande de la voix choisie est marqu\xE9e.</li>

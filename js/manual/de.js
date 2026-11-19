@@ -44,6 +44,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 </ul>`},buscar:{titulo:"Ein Lied suchen",html:`
 <ul>
 <li>Schreibe in die Suche: sie durchsucht gleichzeitig <b>Titel</b>, <b>Text</b>, <b>Autor</b>, <b>Komponist</b>, <b>Rhythmus</b>, <b>Themen</b> und <b>Liednummer</b>. Weder der genaue Name noch Akzente sind n\xF6tig.</li>
+<li>Sie ist <b>fehlertolerant</b>: Sie findet das Lied auch mit Tippfehlern oder nur mit einer Zeile aus dem Text. Zuerst kommen die Titel und weiteren bekannten Namen des Liedes, der Rest nach Relevanz.</li>
 <li>Sie sucht in <b>allen B\xFCchern</b> gleichzeitig; jedes Ergebnis zeigt seine Flaggen und die Kennung des Buches. Steht dasselbe Lied in mehreren B\xFCchern, erscheint es <b>nur einmal</b>, aus dem Buch, das du gerade ansiehst; die anderen erscheinen als Kennung ('62, '09\u2026) neben der Flagge.</li>
 <li>Tippe ein Ergebnis an, um es zu \xF6ffnen. Das <b>\u2715</b> l\xF6scht die Suche.</li>
 <li>Gibt es keine Ergebnisse, schl\xE4gt die App andere W\xF6rter vor.</li>
@@ -111,6 +112,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <ul><li><b>\u2630 Men\xFC \u2192 Werkzeuge \u2192 Akkorde (Anzeigen/Ausblenden)</b>: zeigt oder verbirgt die Akkorde \xFCber dem Text.</li></ul>`},transponer:{titulo:"Transponieren und \xABTransponierte Akkorde\xBB",html:`
 <ul>
 <li><b>\u2630 Men\xFC \u2192 Werkzeuge \u2192 Tonart transponieren</b>: <b>\u266D</b> einen Halbton tiefer, <b>\u266F</b> einen Halbton h\xF6her, <b>\u266E</b> zur\xFCck zur Originaltonart. Alle Akkorde des Textes \xE4ndern sich.</li>
+<li><b>\u2630 Men\xFC \u2192 Dieses Lied \u2192 Notation</b>: <b>Auto</b> (je nach Instrument: Gitarre, Bass und Ukulele in C D E; Klavier und Bl\xE4ser in Do Re Mi), <b>C D E</b> (Buchstaben) oder <b>Do Re Mi</b> (Solmisation). Die Akkorde aller Lieder \xE4ndern sich.</li>
 <li>Ist das Lied transponiert, zeigt das Akkordfenster <b>zwei Griffbilder</b>: <b>Transponiert</b> (klingt wie das Lied) und <b>Original</b> (wie notiert).</li>
 <li><b>Transponierte Akkorde \u2014 Ein/Aus</b> (im selben Men\xFC) legt fest, welches das Hauptbild ist (hervorgehoben und h\xF6rbar):
 <ul>
@@ -292,6 +294,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 </ul>`},info:{titulo:"App-Informationen",html:`
 <ul>
 <li><b>\u2630 Men\xFC \u2192 App-Informationen</b>: Version und Aktualisierungsdatum sowie die Taste <b>\u{1F504} Update erzwingen</b> (l\xE4dt die ganze App neu, ohne Listen oder Einstellungen zu verlieren).</li>
+<li><b>Gepr\xFCft</b> (in der Statistik): drei Reiter, <b>Gepr\xFCft</b>, <b>Nicht gepr\xFCft</b> und <b>In Pr\xFCfung</b> (Korrekturen der Gemeinschaft, die auf Freigabe warten, alphabetisch). In den Credits steht der Vorname der Person, die das Lied gepr\xFCft hat.</li>
 <li><b>Statistik</b>: Anzahl der Lieder, \xFCbersetzten Lieder, Sprachen, <b>Noten</b> und <b>MP3</b> (insgesamt und im aktuellen Buch). Beim Antippen von Sprachen, Noten oder MP3 \xF6ffnet sich die Liste dieser Lieder. Gez\xE4hlt werden nur bereits hochgeladene Noten und MP3.</li>
 <li>Listen von <b>Autoren, Komponisten, \xDCbersetzern, Arrangeuren, Themen</b> und <b>Entsprechungen</b> (dasselbe Lied in verschiedenen B\xFCchern), mit Filter nach Sprache oder Buch.</li>
 <li><b>App installieren \u2192 Wie viel Platz?</b>: etwa 5 MB (Musik, Pr\xE4sentationen und Noten werden nicht gespeichert, sondern aus dem Internet genutzt) und wie viel sie jetzt auf deinem Ger\xE4t belegt.</li>
@@ -352,7 +355,14 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>Ich sehe die Andachten nicht</b>: schreibe <b>meditaciones</b> in die Suche.</li>
 </ul>`},novedades:{titulo:"Neuigkeiten",html:`
 <ul>
+<li><b>2.108.7</b> \u2014 Kontakt: neue E-Mail und Instagram <b>@cancioneromv</b>. Handbuch aktualisiert.</li>
+<li><b>2.108.1 bis 2.108.6</b> \u2014 Senden von Korrekturen repariert (\u201Ezu gro\xDF\u201C), mit Meldung, falls es nicht ging. Autor und Komponist \u201EAnonym\u201C werden zu \u201EUnbekannt\u201C, wenn er nicht bekannt ist (au\xDFer in den Gesangb\xFCchern). Zeichen \u{1D110} &lt; &gt; nicht mehr kursiv. Pr\xFCfbereich mit \u201EAktueller Text\u201C und \u201ENeuer Text\u201C.</li>
 <li><b>2.108.0</b> \u2014 \u270F\uFE0F Editor: \u21B6 R\xFCckg\xE4ngig neben Abbrechen und Speichern; das \u22EE-Men\xFC f\xFCgt genau dort ein; \uFF0B bei Teilen und Stimmen f\xFCr fehlende; eine Meldung best\xE4tigt, ob die Korrektur gesendet wurde. Akkorde in lateinischer Notation auf C D E umgestellt (angezeigt nach \u2630 Men\xFC \u2192 Notation) und \u201ERit.\u201C in italienischen Liedern als Ritornello-Etikett.</li>
+<li><b>2.107.0</b> \u2014 Fenster der gepr\xFCften Lieder mit drei Reitern: Gepr\xFCft, Nicht gepr\xFCft und In Pr\xFCfung (alphabetisch und schneller).</li>
+<li><b>2.106.0</b> \u2014 \u201EIn Pr\xFCfung\u201C f\xFCr alle sichtbar: Man sieht, welche Lieder eine Korrektur haben, die auf Freigabe wartet.</li>
+<li><b>2.105.0</b> \u2014 \u{1F50E} Fehlertolerante Suche: Tippfehler, Textzeilen, weitere Liedtitel zuerst und Ergebnisse nach Relevanz.</li>
+<li><b>2.104.0</b> \u2014 \u201EIn Pr\xFCfung\u201C ersetzt \u201EZweifelhafte Lieder\u201C. Schnellerer Start auf dem iPhone.</li>
+<li><b>2.103.0</b> \u2014 Pr\xFCf-Credits mit dem Vornamen der pr\xFCfenden Person.</li>
 <li><b>2.100.0</b> \u2014 \u{1F3BC} Noten lesen lernen (Men\xFC \u2192 Werkzeuge, oder Metronom und Stimmger\xE4t \u2192 Noten): alle Noten auf Linien und Zwischenr\xE4umen jedes Schl\xFCssels (Violin-, Bass-, C-Schl\xFCssel und Klaviersystem), Vorzeichen \u266F \u266D \u266E \u{1D12A} \u{1D12B} und enharmonische Verwechslung, Tonarten mit Vorzeichnung, Tonleiter und Stufenakkorden, richtig geschriebene Akkorde, Notenwerte, Pausen und Taktarten sowie ein \xDCbungsspiel. Tippe auf eine Note, um sie zu h\xF6ren.</li>
 <li><b>2.99.0</b> \u2014 \u{1F3BC} Einsingen: Notensystem zum Lernen, wo die Noten stehen. Klaviersystem (Violinschl\xFCssel oben, Bassschl\xFCssel unten) oder Violin-, oktavierter Violin-, Bass- und Baritonschl\xFCssel sowie C-Schl\xFCssel auf der 1.\u20134. Linie. Vorzeichen wie in der Tonart, mit Kreuzen oder Bs (Cis-Dur = Cis\u2013Eis\u2013Gis). Der klingende Ton erscheint im Notensystem.</li>
 <li><b>2.98.0</b> \u2014 \u{1F3A4} Einsingen: Der Tonartenverlauf zeigt den Umfang jeder Stimme (S, A, T, B) in eigener Farbe; die Stimme, die die aktuelle Tonart singen kann, leuchtet auf und das Band der gew\xE4hlten Stimme ist markiert.</li>
