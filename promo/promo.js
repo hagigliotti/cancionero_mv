@@ -153,6 +153,7 @@
   function renderNotation() {
     padBtns.forEach(b => { b.textContent = nameOf(b._c); b.setAttribute('aria-label', 'Tocar ' + nameOf(b._c)); });
     const notes = [0,2,4,5,7,9,11].map(i => (latino ? LA : AM)[i]);
+    if (!scale) { $$('[data-cifra]').forEach(b => b.setAttribute('aria-pressed', String((b.dataset.cifra === 'la') === latino))); $('#tpLat').setAttribute('aria-pressed', String(latino)); return; }
     const paint = () => { scale.innerHTML = notes.map(n => '<span>' + n + '</span>').join(''); };
     if (reduce || !scale.children.length) paint();
     else { scale.classList.add('swap'); setTimeout(() => { paint(); scale.classList.remove('swap'); }, 200); }
@@ -368,15 +369,15 @@
 
   /* ---------- Pestañas con avance automático ---------- */
   $$('[data-tabs]').forEach(set => {
-    const btns = $$('[role=tab]', set), ind = $('.tabs-ind', set), tablist = $('.tabs', set);
+    const btns = $$('[role=tab]', set), ind = $('.tabs-ind', set), tablist = $('[role=tablist]', set);
     const dur = +set.dataset.auto || 6500; set.style.setProperty('--dur', dur + 'ms');
     let idx = 0, timer = 0, auto = !reduce, inView = false, hover = false;
-    const place = () => { const b = btns[idx]; ind.style.width = b.offsetWidth + 'px'; ind.style.transform = 'translateX(' + (b.offsetLeft - 0) + 'px)'; };
+    const place = () => { if (!ind) return; const b = btns[idx]; ind.style.width = b.offsetWidth + 'px'; ind.style.transform = 'translateX(' + (b.offsetLeft - 0) + 'px)'; };
     function show(i, user) {
       idx = (i + btns.length) % btns.length;
       btns.forEach((b, k) => { const on = k === idx; b.setAttribute('aria-selected', String(on)); b.tabIndex = on ? 0 : -1; ui(b.getAttribute('aria-controls')).hidden = !on; });
       place();
-      const b = btns[idx]; if (tablist.scrollWidth > tablist.clientWidth) tablist.scrollTo({ left: b.offsetLeft - 16, behavior: reduce ? 'auto' : 'smooth' });
+      const b = btns[idx]; if (tablist.scrollWidth > tablist.clientWidth + 4) tablist.scrollTo({ left: b.offsetLeft - 16, behavior: reduce ? 'auto' : 'smooth' });
       const id = b.getAttribute('aria-controls');
       if (id === 'p-proyector') replay(proj, 'on');
       if (id === 'p-tv') replay($('#p-tv .tv'), 'in');
@@ -387,8 +388,8 @@
     function schedule() { clearTimeout(timer); if (auto && inView && !hover) timer = setTimeout(() => show(idx + 1), dur); }
     btns.forEach((b, i) => b.addEventListener('click', () => show(i, true)));
     tablist.addEventListener('keydown', e => {
-      const k = e.key; if (!['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(k)) return; e.preventDefault();
-      show(k === 'Home' ? 0 : k === 'End' ? btns.length - 1 : idx + (k === 'ArrowRight' ? 1 : -1), true); btns[idx].focus();
+      const k = e.key; if (!['ArrowRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown', 'Home', 'End'].includes(k)) return; e.preventDefault();
+      show(k === 'Home' ? 0 : k === 'End' ? btns.length - 1 : idx + (k === 'ArrowRight' || k === 'ArrowDown' ? 1 : -1), true); btns[idx].focus();
     });
     set.addEventListener('pointerenter', () => { hover = true; set.classList.add('paused'); clearTimeout(timer); });
     set.addEventListener('pointerleave', () => { hover = false; set.classList.remove('paused'); if (auto) show(idx); });
@@ -412,5 +413,37 @@
 
   /* ---------- Salidas a redes ---------- */
   document.addEventListener('click', e => { const a = e.target.closest('[data-ga-out]'); if (a) track('contacto_promo', { destino: a.dataset.gaOut }); });
+
+  /* ---------- Vocalizador: do-mi-sol-mi-do subiendo de a medio tono ---------- */
+  const vocBtn = $('#vocBtn');
+  if (vocBtn) {
+    const vNotes = $('#vocNotes'), vKey = $('#vocKey');
+    const OCT = n => Math.floor(n / 12) - 1;
+    const paintVoc = root => {
+      vKey.textContent = LA[root % 12] + ' mayor';
+      vNotes.innerHTML = [0, 4, 7, 4, 0].map(iv => { const m = root + iv; return '<span><b>' + LA[m % 12] + '</b><small>' + AM[m % 12] + OCT(m) + '</small></span>'; }).join('');
+    };
+    paintVoc(60);
+    let vTimer = 0, vOn = false;
+    const stopVoc = () => { vOn = false; clearTimeout(vTimer); vocBtn.querySelector('span').textContent = 'Probar'; vocBtn.querySelector('use').setAttribute('href', '#i-play-fill'); $$('span', vNotes).forEach(s => s.classList.remove('on')); };
+    vocBtn.addEventListener('click', () => {
+      if (vOn) return stopVoc();
+      actx = actx || new (window.AudioContext || window.webkitAudioContext)(); if (actx.state === 'suspended') actx.resume();
+      vOn = true; vocBtn.querySelector('span').textContent = 'Parar'; vocBtn.querySelector('use').setAttribute('href', '#i-pause-fill');
+      track('vocalizador_promo');
+      let root = 60, step = 0;
+      const tick = () => {
+        if (!vOn) return;
+        if (step === 0) paintVoc(root);
+        const iv = [0, 4, 7, 4, 0][step], spans = $$('span', vNotes);
+        spans.forEach((s, k) => s.classList.toggle('on', k === step));
+        note(root + iv, actx.currentTime + .02, .5);
+        step++;
+        if (step === 5) { step = 0; root++; if (root > 65) { vTimer = setTimeout(stopVoc, 700); return; } vTimer = setTimeout(tick, 900); return; }
+        vTimer = setTimeout(tick, 420);
+      };
+      tick();
+    });
+  }
 
 })();
