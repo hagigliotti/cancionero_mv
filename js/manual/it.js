@@ -44,6 +44,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 </ul>`},buscar:{titulo:"Cercare un canto",html:`
 <ul>
 <li>Scrivi nella ricerca: cerca insieme per <b>titolo</b>, <b>testo</b>, <b>autore</b>, <b>compositore</b>, <b>ritmo</b>, <b>temi</b> e <b>numero dell'inno</b>. Non servono il nome esatto n\xE9 gli accenti.</li>
+<li>\xC8 <b>tollerante</b>: trova il canto anche con errori di battitura o solo con una frase del testo. Prima i titoli e gli altri nomi noti del canto, poi il resto in ordine di pertinenza.</li>
 <li>Cerca in <b>tutti i libri</b> insieme; ogni risultato mostra le sue bandiere e la sigla del libro. Se lo stesso canto \xE8 in pi\xF9 libri (per esempio l'Innario 2009 e quello del 1962) compare <b>una sola volta</b>, quello del libro che stai guardando; gli altri libri appaiono come sigla ('62, '09\u2026) accanto alla bandiera.</li>
 <li>Tocca un risultato per aprirlo. La <b>\u2715</b> cancella la ricerca.</li>
 <li>Se non ci sono risultati, l'app suggerisce di provare con altre parole.</li>
@@ -111,6 +112,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <ul><li><b>\u2630 Menu \u2192 Strumenti \u2192 Accordi (Mostra/Nascondi)</b>: mostra o nasconde gli accordi sopra il testo.</li></ul>`},transponer:{titulo:"Trasporre e \xABAccordi trasposti\xBB",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Strumenti \u2192 Trasporre la tonalit\xE0</b>: <b>\u266D</b> abbassa di un semitono, <b>\u266F</b> alza di un semitono, <b>\u266E</b> torna alla tonalit\xE0 originale. Cambiano tutti gli accordi del testo.</li>
+<li><b>\u2630 Menu \u2192 Questo canto \u2192 Notazione</b>: <b>Auto</b> (secondo lo strumento: chitarra, basso e ukulele in C D E; pianoforte e fiati in Do Re Mi), <b>C D E</b> (americana) o <b>Do Re Mi</b> (latina). Cambiano gli accordi di tutti i canti.</li>
 <li>Se il canto \xE8 trasposto, la finestrella dell'accordo mostra <b>due diagrammi</b>: <b>Trasposto</b> (suona come il canto) e <b>Originale</b> (come \xE8 scritto).</li>
 <li><b>Accordi trasposti \u2014 Attivo/Inattivo</b> (nello stesso menu) decide quale \xE8 il principale (evidenziato e quello che suona):
 <ul>
@@ -292,6 +294,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 </ul>`},info:{titulo:"Informazioni sull'app",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Informazioni sull'app</b>: versione e data di aggiornamento, e il pulsante <b>\u{1F504} Forza aggiornamento</b> (riscarica tutta l'app senza perdere liste e impostazioni).</li>
+<li><b>Revisionati</b> (nelle statistiche): tre schede, <b>Revisionati</b>, <b>Non revisionati</b> e <b>In revisione</b> (correzioni della comunit\xE0 in attesa di approvazione, in ordine alfabetico). Nei crediti appare il nome di chi ha revisionato ogni canto.</li>
 <li><b>Statistiche</b>: numero di canti, tradotti, lingue, <b>spartiti</b> e <b>MP3</b> (in totale e nel libro che stai guardando). Toccando Lingue, Spartiti o MP3 si apre l'elenco di quei canti. Si contano solo gli spartiti e gli MP3 gi\xE0 caricati.</li>
 <li>Elenchi di <b>Autori, Compositori, Traduttori, Arrangiatori, Temi</b> ed <b>Equivalenze</b> (lo stesso canto in libri diversi), con filtro per lingua o per libro.</li>
 <li><b>Come installare l'app \u2192 Quanto occupa?</b>: circa 5 MB (musica, presentazioni e spartiti non si salvano, si usano da internet) e quanto occupa ora sul tuo dispositivo.</li>
@@ -352,7 +355,14 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.it={ui:{titulo:"Man
 <li><b>Non vedo le Meditazioni</b>: scrivi <b>meditaciones</b> nella ricerca.</li>
 </ul>`},novedades:{titulo:"Novit\xE0",html:`
 <ul>
+<li><b>2.108.7</b> \u2014 Contatti: nuova email e Instagram <b>@cancioneromv</b>. Manuale aggiornato.</li>
+<li><b>2.108.1 \u2013 2.108.6</b> \u2014 Invio delle correzioni sistemato (\xABtroppo grande\xBB), con avviso se non \xE8 stato possibile inviare. Autore e compositore \xABAnonimo\xBB diventano \xABSconosciuto\xBB quando non si sa (tranne negli innari). Segni \u{1D110} &lt; &gt; non pi\xF9 in corsivo. Pannello di revisione con \xABTesto attuale\xBB e \xABNuovo testo\xBB.</li>
 <li><b>2.108.0</b> \u2014 \u270F\uFE0F Editor: \u21B6 Annulla accanto a Salva; il menu \u22EE aggiunge proprio l\xEC; \uFF0B in Parti e Voci per aggiungere quelle che mancano; un avviso conferma se la correzione \xE8 stata inviata. Accordi in notazione latina passati a C D E (si vedono secondo \u2630 Menu \u2192 Notazione) e \xABRit.\xBB dei canti in italiano come etichetta Ritornello.</li>
+<li><b>2.107.0</b> \u2014 Finestra dei revisionati con tre schede: Revisionati, Non revisionati e In revisione (in ordine alfabetico e pi\xF9 veloce).</li>
+<li><b>2.106.0</b> \u2014 \xABIn revisione\xBB visibile a tutti: si vede quali canti hanno una correzione in attesa di approvazione.</li>
+<li><b>2.105.0</b> \u2014 \u{1F50E} Ricerca pi\xF9 tollerante: errori di battitura, frasi del testo, altri titoli del canto prima e risultati per pertinenza.</li>
+<li><b>2.104.0</b> \u2014 \xABIn revisione\xBB sostituisce \xABCanti dubbi\xBB. Avvio pi\xF9 veloce su iPhone.</li>
+<li><b>2.103.0</b> \u2014 Crediti di revisione con il nome di chi ha revisionato.</li>
 <li><b>2.100.0</b> \u2014 \u{1F3BC} Impara a leggere la musica (Menu \u2192 Strumenti, o Metronomo e Accordatore \u2192 Note): tutte le note su linee e spazi di ogni chiave (violino, basso, do e doppio pentagramma), alterazioni \u266F \u266D \u266E \u{1D12A} \u{1D12B} ed enarmonie, tonalit\xE0 con armatura, scala e accordi di ogni grado, accordi scritti correttamente, figure, pause e tempi, e un gioco per esercitarsi. Tocca una nota per ascoltarla.</li>
 <li><b>2.99.0</b> \u2014 \u{1F3BC} Vocalizzi: pentagramma per imparare dove vanno le note. Doppio pentagramma (violino sopra, basso sotto) o chiave di violino, violino ottava bassa, basso e baritono, e chiavi di do in 1\xAA\u20134\xAA. Alterazioni come nella tonalit\xE0, con diesis o con bemolle (Do\u266F maggiore = do\u266F\u2013mi\u266F\u2013sol\u266F). La nota che suona si vede sul pentagramma.</li>
 <li><b>2.98.0</b> \u2014 \u{1F3A4} Vocalizzi: il percorso delle tonalit\xE0 mostra l\u2019estensione di ogni voce (S, C, T, B) con il suo colore; si illumina la voce che pu\xF2 cantare la tonalit\xE0 che suona e si segna la fascia della voce scelta.</li>

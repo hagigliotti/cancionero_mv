@@ -44,6 +44,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 </ul>`},buscar:{titulo:"Search for a song",html:`
 <ul>
 <li>Type in the search box: it searches <b>title</b>, <b>lyrics</b>, <b>author</b>, <b>composer</b>, <b>rhythm</b>, <b>topics</b> and <b>hymn number</b> at the same time. You don't need the exact name or accents.</li>
+<li>It's <b>forgiving</b>: it finds the song even with typos or just a phrase from the lyrics. Titles and the song's other known names come first, the rest sorted by relevance.</li>
 <li>It searches <b>all books</b> at once; each result shows its flags and its book mark. If the same song is in several books (for example the 2009 and 1962 Hymnals) it appears <b>only once</b>, from the book you are viewing; the other books appear as a mark ('62, '09\u2026) next to the flag.</li>
 <li>Tap a result to open it. The <b>\u2715</b> clears the search.</li>
 <li>If there are no results, the app suggests trying other words.</li>
@@ -111,6 +112,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <ul><li><b>\u2630 Menu \u2192 Tools \u2192 Chords (Show/Hide)</b>: shows or hides the chords above the lyrics.</li></ul>`},transponer:{titulo:"Transpose and \xABTransposed chords\xBB",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Tools \u2192 Transpose key</b>: <b>\u266D</b> lowers a half step, <b>\u266F</b> raises a half step, <b>\u266E</b> goes back to the original key. All chords in the lyrics change.</li>
+<li><b>\u2630 Menu \u2192 This song \u2192 Chord names</b>: <b>Auto</b> (by instrument: guitar, bass and ukulele in C D E; piano and winds in Do Re Mi), <b>C D E</b> (letters) or <b>Do Re Mi</b> (solf\xE8ge). The chords of every song change.</li>
 <li>If the song is transposed, the chord window shows <b>two diagrams</b>: <b>Transposed</b> (sounds like the song) and <b>Original</b> (as written).</li>
 <li><b>Transposed chords \u2014 On/Off</b> (in the same menu) decides which one is the main one (highlighted and played):
 <ul>
@@ -292,6 +294,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 </ul>`},info:{titulo:"App information",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 App information</b>: version and update date, and the <b>\u{1F504} Force update</b> button (downloads the whole app again without losing your lists or settings).</li>
+<li><b>Reviewed</b> (in the statistics): three tabs, <b>Reviewed</b>, <b>Not reviewed</b> and <b>Under review</b> (community corrections awaiting approval, in alphabetical order). Credits show the first name of whoever reviewed each song.</li>
 <li><b>Statistics</b>: number of songs, translated songs, languages, <b>sheet music</b> and <b>MP3</b> (in total and in the book you are viewing). Tapping Languages, Sheet music or MP3 opens the list of those songs. Only sheet music and MP3s already uploaded are counted.</li>
 <li>Lists of <b>Authors, Composers, Translators, Arrangers, Topics</b> and <b>Equivalences</b> (the same song in different books), filtered by language or book.</li>
 <li><b>How to install the app \u2192 How much space?</b>: about 5 MB (music, slides and sheet music are not stored, they are used from the internet) and how much it takes now on your device.</li>
@@ -352,7 +355,14 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>I don't see Devotionals</b>: type <b>meditaciones</b> in the search box.</li>
 </ul>`},novedades:{titulo:"What's new",html:`
 <ul>
+<li><b>2.108.7</b> \u2014 Contact: new email and Instagram <b>@cancioneromv</b>. Manual updated.</li>
+<li><b>2.108.1 to 2.108.6</b> \u2014 Sending corrections fixed (\u201Ctoo large\u201D), with a message if it couldn't be sent. Author and composer \u201CAnonymous\u201D become \u201CUnknown\u201D when not known (except in the hymnals). Signs \u{1D110} &lt; &gt; no longer italic. Review panel with \u201CCurrent lyrics\u201D and \u201CNew lyrics\u201D.</li>
 <li><b>2.108.0</b> \u2014 \u270F\uFE0F Editor: \u21B6 Undo next to Cancel and Save; the \u22EE menu adds right there; \uFF0B in Sections and Voices to add missing ones; a message confirms whether the correction was sent. Chords written in Latin notation changed to C D E (shown according to \u2630 Menu \u2192 Chord names) and \u201CRit.\u201D in Italian songs shown as a Ritornello badge.</li>
+<li><b>2.107.0</b> \u2014 Reviewed window with three tabs: Reviewed, Not reviewed and Under review (alphabetical and faster).</li>
+<li><b>2.106.0</b> \u2014 \u201CUnder review\u201D visible to everyone: see which songs have a correction awaiting approval.</li>
+<li><b>2.105.0</b> \u2014 \u{1F50E} More forgiving search: typos, lyric phrases, other song titles first and results by relevance.</li>
+<li><b>2.104.0</b> \u2014 \u201CUnder review\u201D replaces \u201CDoubtful songs\u201D. Faster start on iPhone.</li>
+<li><b>2.103.0</b> \u2014 Review credits show the reviewer's first name.</li>
 <li><b>2.100.0</b> \u2014 \u{1F3BC} Learn to read music (Menu \u2192 Tools, or Metronome and Tuner \u2192 Notes): every note on the lines and spaces of each clef (treble, bass, C clefs and grand staff), accidentals \u266F \u266D \u266E \u{1D12A} \u{1D12B} and enharmonics, keys with their signature, scale and chords of each degree, chords spelled correctly, note values, rests and time signatures, and a practice game. Tap a note to hear it.</li>
 <li><b>2.99.0</b> \u2014 \u{1F3BC} Warm-up: a staff to learn where the notes go. Grand staff (treble above, bass below) or treble, treble 8vb, bass and baritone clefs, and C clefs on lines 1\u20134. Accidentals as in the key, with sharps or with flats (C\u266F major = C\u266F\u2013E\u266F\u2013G\u266F). The note being played shows on the staff.</li>
 <li><b>2.98.0</b> \u2014 \u{1F3A4} Warm-up: the keys chart shows each voice\u2019s range (S, A, T, B) in its own color; the voices that can sing the current key light up and the chosen voice\u2019s band is marked.</li>

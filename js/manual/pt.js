@@ -44,6 +44,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 </ul>`},buscar:{titulo:"Buscar um c\xE2ntico",html:`
 <ul>
 <li>Escreva na busca: procura ao mesmo tempo por <b>t\xEDtulo</b>, <b>letra</b>, <b>autor</b>, <b>compositor</b>, <b>ritmo</b>, <b>temas</b> e <b>n\xFAmero do hino</b>. N\xE3o precisa escrever o nome exato nem os acentos.</li>
+<li>\xC9 <b>tolerante</b>: encontra o canto mesmo com erros de digita\xE7\xE3o ou s\xF3 com uma frase da letra. Primeiro aparecem os t\xEDtulos e os outros nomes conhecidos do canto, e o resto por relev\xE2ncia.</li>
 <li>Busca em <b>todos os livros</b> de uma vez; cada resultado mostra suas bandeiras e a marca do livro. Se o mesmo c\xE2ntico est\xE1 em v\xE1rios livros (por exemplo o Hin\xE1rio 2009 e o de 1962) aparece <b>uma vez s\xF3</b>, o do livro que voc\xEA est\xE1 vendo; os outros aparecem como marca ('62, '09\u2026) ao lado da bandeira.</li>
 <li>Toque um resultado para abri-lo. O <b>\u2715</b> apaga a busca.</li>
 <li>Se n\xE3o houver resultados, o app sugere tentar outras palavras.</li>
@@ -111,6 +112,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <ul><li><b>\u2630 Menu \u2192 Ferramentas \u2192 Acordes (Mostrar/Ocultar)</b>: mostra ou oculta os acordes sobre a letra.</li></ul>`},transponer:{titulo:"Transpor e \xABAcordes transpostos\xBB",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Ferramentas \u2192 Transpor tom</b>: <b>\u266D</b> desce meio tom, <b>\u266F</b> sobe meio tom, <b>\u266E</b> volta ao tom original. Todos os acordes da letra mudam.</li>
+<li><b>\u2630 Menu \u2192 Este canto \u2192 Cifra</b>: <b>Auto</b> (conforme o instrumento: viol\xE3o, baixo e ukulele em C D E; piano e sopros em Do Re Mi), <b>C D E</b> (americana) ou <b>Do Re Mi</b> (latina). Mudam os acordes de todos os cantos.</li>
 <li>Se o c\xE2ntico est\xE1 transposto, a janelinha do acorde mostra <b>dois diagramas</b>: <b>Transposto</b> (soa como o c\xE2ntico) e <b>Original</b> (como est\xE1 escrito).</li>
 <li><b>Acordes transpostos \u2014 Ativo/Inativo</b> (no mesmo menu) decide qual \xE9 o principal (destacado e o que soa):
 <ul>
@@ -292,6 +294,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 </ul>`},info:{titulo:"Informa\xE7\xF5es do app",html:`
 <ul>
 <li><b>\u2630 Menu \u2192 Informa\xE7\xF5es do app</b>: vers\xE3o e data de atualiza\xE7\xE3o, e o bot\xE3o <b>\u{1F504} For\xE7ar atualiza\xE7\xE3o</b> (baixa o app inteiro de novo sem perder listas nem ajustes).</li>
+<li><b>Revisadas</b> (nas estat\xEDsticas): tr\xEAs abas, <b>Revisadas</b>, <b>N\xE3o revisadas</b> e <b>Em revis\xE3o</b> (corre\xE7\xF5es da comunidade aguardando aprova\xE7\xE3o, em ordem alfab\xE9tica). Nos cr\xE9ditos aparece o primeiro nome de quem revisou cada canto.</li>
 <li><b>Estat\xEDsticas</b>: quantidade de c\xE2nticos, traduzidos, idiomas, <b>partituras</b> e <b>MP3</b> (no total e no livro que voc\xEA est\xE1 vendo). Tocando Idiomas, Partituras ou MP3 abre a lista desses c\xE2nticos. S\xF3 contam as partituras e MP3 j\xE1 enviados.</li>
 <li>Listas de <b>Autores, Compositores, Tradutores, Arranjadores, Temas</b> e <b>Equival\xEAncias</b> (o mesmo c\xE2ntico em livros diferentes), com filtro por idioma ou por livro.</li>
 <li><b>Como instalar o app \u2192 Quanto ocupa?</b>: uns 5 MB (m\xFAsica, apresenta\xE7\xF5es e partituras n\xE3o s\xE3o salvas, s\xE3o usadas pela internet) e quanto ocupa agora no seu dispositivo.</li>
@@ -352,7 +355,14 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.pt={ui:{titulo:"Man
 <li><b>N\xE3o vejo as Medita\xE7\xF5es</b>: escreva <b>meditaciones</b> na busca.</li>
 </ul>`},novedades:{titulo:"Novidades",html:`
 <ul>
+<li><b>2.108.7</b> \u2014 Contato: novo e-mail e Instagram <b>@cancioneromv</b>. Manual atualizado.</li>
+<li><b>2.108.1 a 2.108.6</b> \u2014 Envio de corre\xE7\xF5es corrigido (\xABgrande demais\xBB), com aviso se n\xE3o foi poss\xEDvel enviar. Autor e compositor \xABAn\xF4nimo\xBB passam a \xABDesconhecido\xBB quando n\xE3o se sabe (exceto nos hin\xE1rios). Sinais \u{1D110} &lt; &gt; sem it\xE1lico. Painel de revis\xE3o com \xABLetra atual\xBB e \xABNova letra\xBB.</li>
 <li><b>2.108.0</b> \u2014 \u270F\uFE0F Editor: \u21B6 Desfazer ao lado de Cancelar e Salvar; o menu \u22EE adiciona ali mesmo; \uFF0B em Partes e Vozes para adicionar as que faltam; um aviso confirma se a corre\xE7\xE3o foi enviada. Acordes em cifra latina passados para C D E (aparecem conforme \u2630 Menu \u2192 Cifra) e \xABRit.\xBB dos cantos em italiano como etiqueta Ritornello.</li>
+<li><b>2.107.0</b> \u2014 Janela de revisadas com tr\xEAs abas: Revisadas, N\xE3o revisadas e Em revis\xE3o (em ordem alfab\xE9tica e mais r\xE1pida).</li>
+<li><b>2.106.0</b> \u2014 \xABEm revis\xE3o\xBB vis\xEDvel para todos: d\xE1 para ver quais cantos t\xEAm uma corre\xE7\xE3o aguardando aprova\xE7\xE3o.</li>
+<li><b>2.105.0</b> \u2014 \u{1F50E} Busca mais tolerante: erros de digita\xE7\xE3o, frases da letra, outros t\xEDtulos do canto primeiro e resultados por relev\xE2ncia.</li>
+<li><b>2.104.0</b> \u2014 \xABEm revis\xE3o\xBB substitui \xABCan\xE7\xF5es duvidosas\xBB. In\xEDcio mais r\xE1pido no iPhone.</li>
+<li><b>2.103.0</b> \u2014 Cr\xE9ditos de revis\xE3o com o primeiro nome de quem revisou.</li>
 <li><b>2.100.0</b> \u2014 \u{1F3BC} Aprender a ler m\xFAsica (Menu \u2192 Ferramentas, ou Metr\xF4nomo e Afinador \u2192 Notas): todas as notas nas linhas e espa\xE7os de cada clave (sol, f\xE1, d\xF3 e pauta dupla), acidentes \u266F \u266D \u266E \u{1D12A} \u{1D12B} e enarmonias, tonalidades com armadura, escala e acordes de cada grau, acordes com a grafia certa, figuras, pausas e compassos, e um jogo para praticar. Toque uma nota para ouvi-la.</li>
 <li><b>2.99.0</b> \u2014 \u{1F3BC} Vocalizes: pauta para aprender onde ficam as notas. Pauta dupla (sol em cima, f\xE1 embaixo) ou clave de sol, sol oitava abaixo, f\xE1 na 4\xAA e na 3\xAA, e d\xF3 na 1\xAA a 4\xAA. Acidentes como no tom, com sustenidos ou com bem\xF3is (D\xF3\u266F maior = d\xF3\u266F\u2013mi\u266F\u2013sol\u266F). A nota que soa aparece na pauta.</li>
 <li><b>2.98.0</b> \u2014 \u{1F3A4} Vocalizes: o percurso dos tons mostra a extens\xE3o de cada voz (S, C, T, B) com sua cor; acende a voz que pode cantar o tom que est\xE1 soando e marca a faixa da voz escolhida.</li>
