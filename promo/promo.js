@@ -516,10 +516,10 @@
 
     /* Cintas de sonido: ondas que fluyen detrás de toda la página y se mueven con el scroll */
     const WAVES = [
-      { c: [245, 165, 36], a: .7, amp: .10, k: 1.6, sp: .00028, ph: 0, w: 1.6 },
-      { c: [255, 122, 69], a: .5, amp: .13, k: 1.1, sp: .00021, ph: 1.7, w: 1.2 },
+      { c: [45, 212, 191], a: .7, amp: .10, k: 1.6, sp: .00028, ph: 0, w: 1.6 },
+      { c: [34, 211, 238], a: .5, amp: .13, k: 1.1, sp: .00021, ph: 1.7, w: 1.2 },
       { c: [91, 140, 255], a: .48, amp: .16, k: .8, sp: .00017, ph: 3.1, w: 1.2 },
-      { c: [245, 165, 36], a: .22, amp: .07, k: 2.4, sp: .00036, ph: 4.4, w: 1 },
+      { c: [45, 212, 191], a: .22, amp: .07, k: 2.4, sp: .00036, ph: 4.4, w: 1 },
       { c: [160, 120, 255], a: .20, amp: .11, k: 1.35, sp: .00024, ph: 5.2, w: 1 }
     ];
     function drawWaves(t) {
@@ -565,7 +565,7 @@
         if (p.y < -20) { p.y = H + 20; p.x = Math.random() * W; } if (p.y > H + 20) { p.y = -20; p.x = Math.random() * W; }
         if (p.x < -20) p.x = W + 20; if (p.x > W + 20) p.x = -20;
         const tw = .6 + .4 * Math.sin(t / 900 + p.ph);
-        if (p.g) { ctx.fillStyle = 'rgba(245,165,36,' + (p.a * .35 * tw) + ')'; ctx.font = p.s * p.z + 'px serif'; ctx.fillText(p.g, p.x, p.y); }
+        if (p.g) { ctx.fillStyle = 'rgba(45,212,191,' + (p.a * .35 * tw) + ')'; ctx.font = p.s * p.z + 'px serif'; ctx.fillText(p.g, p.x, p.y); }
         else { ctx.fillStyle = 'rgba(220,230,255,' + (p.a * tw * p.z) + ')'; ctx.beginPath(); ctx.arc(p.x, p.y, p.r * p.z, 0, 6.283); ctx.fill(); }
       }
       requestAnimationFrame(loop);
