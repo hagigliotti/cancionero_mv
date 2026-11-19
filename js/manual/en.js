@@ -84,7 +84,10 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li>Tapping the <b>lyrics</b> of a line lets you correct the text (chords go in brackets: <code>[G]Hello</code>).</li>
 <li>In the <b>\u{1F4CB} Data</b> tab you correct everything else: title, other titles, original title, author, co-author, composer, translator, arrangement, year, key, BPM, time signature, rhythm, Bible reference, topics and note (fields with several values: one per line). What you changed is marked in orange.</li>
 <li>While typing you get <b>suggestions</b> (tap one to add it): people already in the app for author, co-author, composer, translator and arrangement; rhythms; topics; keys (for example \xABfa\xBB \u2192 <i>Fa Mayor (F)</i>); time signatures; and Bible books in the reference (only in the song's language).</li>
+<li>In each line's <b>\u22EE</b> menu, what you pick is added <b>right there</b> (above that line; you can also choose \u201CAdd below\u201D). In <b>Sections</b> and <b>Voices</b>, the <b>\uFF0B</b> adds a new one if it's missing (e.g. \u201CFinal verse\u201D or \u201CQuartet\u201D): it's saved on your device and can be removed with the \xD7.</li>
+<li><b>\u21B6 Undo</b> is at the bottom, next to <b>Cancel</b> and <b>Save</b>.</li>
 <li><b>Save</b> shows the before and after. With your <b>first and last name</b> (required) and an optional comment, <b>Send</b> sends the correction to the app's author, who reviews it. If it's right, it appears in a future update.</li>
+<li>All corrections go through an <b>approval module</b>: the author reviews each one before it's published.</li>
 </ul>
 <h4>Guitar, bass and ukulele</h4>
 <ul>
@@ -349,6 +352,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>I don't see Devotionals</b>: type <b>meditaciones</b> in the search box.</li>
 </ul>`},novedades:{titulo:"What's new",html:`
 <ul>
+<li><b>2.108.0</b> \u2014 \u270F\uFE0F Editor: \u21B6 Undo next to Cancel and Save; the \u22EE menu adds right there; \uFF0B in Sections and Voices to add missing ones; a message confirms whether the correction was sent. Chords written in Latin notation changed to C D E (shown according to \u2630 Menu \u2192 Chord names) and \u201CRit.\u201D in Italian songs shown as a Ritornello badge.</li>
 <li><b>2.100.0</b> \u2014 \u{1F3BC} Learn to read music (Menu \u2192 Tools, or Metronome and Tuner \u2192 Notes): every note on the lines and spaces of each clef (treble, bass, C clefs and grand staff), accidentals \u266F \u266D \u266E \u{1D12A} \u{1D12B} and enharmonics, keys with their signature, scale and chords of each degree, chords spelled correctly, note values, rests and time signatures, and a practice game. Tap a note to hear it.</li>
 <li><b>2.99.0</b> \u2014 \u{1F3BC} Warm-up: a staff to learn where the notes go. Grand staff (treble above, bass below) or treble, treble 8vb, bass and baritone clefs, and C clefs on lines 1\u20134. Accidentals as in the key, with sharps or with flats (C\u266F major = C\u266F\u2013E\u266F\u2013G\u266F). The note being played shows on the staff.</li>
 <li><b>2.98.0</b> \u2014 \u{1F3A4} Warm-up: the keys chart shows each voice\u2019s range (S, A, T, B) in its own color; the voices that can sing the current key light up and the chosen voice\u2019s band is marked.</li>

@@ -84,7 +84,10 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li>Durch Antippen des <b>Textes</b> einer Zeile korrigierst du den Text (Akkorde stehen in eckigen Klammern: <code>[G]Hallo</code>).</li>
 <li>Im Tab <b>\u{1F4CB} Daten</b> korrigierst du alles andere: Titel, weitere Titel, Originaltitel, Autor, Mitautor, Komponist, \xDCbersetzer, Arrangement, Jahr, Tonart, BPM, Takt, Rhythmus, Bibelstelle, Themen und Notiz (Felder mit mehreren Werten: einer pro Zeile). Ge\xE4ndertes wird orange markiert.</li>
 <li>Beim Tippen erscheinen <b>Vorschl\xE4ge</b> (antippen zum \xDCbernehmen): Personen, die schon in der App sind, Rhythmen, Themen, Tonarten, Takte und Bibelb\xFCcher in der Bibelstelle (nur in der Sprache des Liedes).</li>
+<li>Im <b>\u22EE</b>-Men\xFC jeder Zeile wird das Gew\xE4hlte <b>genau dort</b> eingef\xFCgt (\xFCber dieser Zeile; du kannst auch \u201EDarunter einf\xFCgen\u201C w\xE4hlen). Bei <b>Teile</b> und <b>Stimmen</b> f\xFCgt das <b>\uFF0B</b> eine neue hinzu, wenn sie fehlt (z. B. \u201ESchlussstrophe\u201C oder \u201EQuartett\u201C): Sie wird auf deinem Ger\xE4t gespeichert und l\xE4sst sich mit dem \xD7 entfernen.</li>
+<li><b>\u21B6 R\xFCckg\xE4ngig</b> ist unten, neben <b>Abbrechen</b> und <b>Speichern</b>.</li>
 <li><b>Speichern</b> zeigt Vorher und Nachher. Mit deinem <b>Vor- und Nachnamen</b> (Pflicht) und einem optionalen Kommentar schickt <b>Senden</b> die Korrektur an den Autor der App, der sie pr\xFCft. Ist sie richtig, erscheint sie in einem der n\xE4chsten Updates.</li>
+<li>Alle Korrekturen laufen \xFCber ein <b>Freigabemodul</b>: Der Autor pr\xFCft jede einzelne, bevor sie ver\xF6ffentlicht wird.</li>
 </ul>
 <h4>Gitarre, Bass und Ukulele</h4>
 <ul>
@@ -349,6 +352,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.de={ui:{titulo:"Ben
 <li><b>Ich sehe die Andachten nicht</b>: schreibe <b>meditaciones</b> in die Suche.</li>
 </ul>`},novedades:{titulo:"Neuigkeiten",html:`
 <ul>
+<li><b>2.108.0</b> \u2014 \u270F\uFE0F Editor: \u21B6 R\xFCckg\xE4ngig neben Abbrechen und Speichern; das \u22EE-Men\xFC f\xFCgt genau dort ein; \uFF0B bei Teilen und Stimmen f\xFCr fehlende; eine Meldung best\xE4tigt, ob die Korrektur gesendet wurde. Akkorde in lateinischer Notation auf C D E umgestellt (angezeigt nach \u2630 Men\xFC \u2192 Notation) und \u201ERit.\u201C in italienischen Liedern als Ritornello-Etikett.</li>
 <li><b>2.100.0</b> \u2014 \u{1F3BC} Noten lesen lernen (Men\xFC \u2192 Werkzeuge, oder Metronom und Stimmger\xE4t \u2192 Noten): alle Noten auf Linien und Zwischenr\xE4umen jedes Schl\xFCssels (Violin-, Bass-, C-Schl\xFCssel und Klaviersystem), Vorzeichen \u266F \u266D \u266E \u{1D12A} \u{1D12B} und enharmonische Verwechslung, Tonarten mit Vorzeichnung, Tonleiter und Stufenakkorden, richtig geschriebene Akkorde, Notenwerte, Pausen und Taktarten sowie ein \xDCbungsspiel. Tippe auf eine Note, um sie zu h\xF6ren.</li>
 <li><b>2.99.0</b> \u2014 \u{1F3BC} Einsingen: Notensystem zum Lernen, wo die Noten stehen. Klaviersystem (Violinschl\xFCssel oben, Bassschl\xFCssel unten) oder Violin-, oktavierter Violin-, Bass- und Baritonschl\xFCssel sowie C-Schl\xFCssel auf der 1.\u20134. Linie. Vorzeichen wie in der Tonart, mit Kreuzen oder Bs (Cis-Dur = Cis\u2013Eis\u2013Gis). Der klingende Ton erscheint im Notensystem.</li>
 <li><b>2.98.0</b> \u2014 \u{1F3A4} Einsingen: Der Tonartenverlauf zeigt den Umfang jeder Stimme (S, A, T, B) in eigener Farbe; die Stimme, die die aktuelle Tonart singen kann, leuchtet auf und das Band der gew\xE4hlten Stimme ist markiert.</li>

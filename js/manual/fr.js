@@ -84,7 +84,10 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li>En touchant les <b>paroles</b> d'une ligne, on corrige le texte (les accords vont entre crochets : <code>[G]Bonjour</code>).</li>
 <li>Dans l'onglet <b>\u{1F4CB} Donn\xE9es</b> se corrige tout le reste : titre, autres titres, titre original, auteur, coauteur, compositeur, traducteur, arrangement, ann\xE9e, tonalit\xE9, BPM, mesure, rythme, r\xE9f\xE9rence biblique, th\xE8mes et note (champs \xE0 plusieurs valeurs : une par ligne). Ce que vous avez chang\xE9 est marqu\xE9 en orange.</li>
 <li>Pendant la saisie apparaissent des <b>suggestions</b> (touchez-en une pour l'ajouter) : personnes d\xE9j\xE0 pr\xE9sentes dans l'application, rythmes, th\xE8mes, tonalit\xE9s, mesures et livres de la Bible dans la r\xE9f\xE9rence (seulement dans la langue du chant).</li>
+<li>Dans le menu <b>\u22EE</b> de chaque ligne, ce que vous choisissez s'ajoute <b>juste l\xE0</b> (au-dessus de cette ligne ; on peut aussi choisir \xAB Ajouter en dessous \xBB). Dans <b>Parties</b> et <b>Voix</b>, le <b>\uFF0B</b> en ajoute une nouvelle si elle manque (par exemple \xAB Couplet final \xBB ou \xAB Quatuor \xBB) : elle est enregistr\xE9e sur votre appareil et peut \xEAtre retir\xE9e avec la \xD7.</li>
+<li>Le bouton <b>\u21B6</b> (annuler la derni\xE8re modification) est en bas, \xE0 c\xF4t\xE9 de <b>Annuler</b> et <b>Enregistrer</b>.</li>
 <li><b>Enregistrer</b> montre l'avant et l'apr\xE8s. Avec vos <b>nom et pr\xE9nom</b> (obligatoires) et un commentaire facultatif, <b>Envoyer</b> transmet la correction \xE0 l'auteur de l'application, qui la v\xE9rifie. Si elle est juste, elle appara\xEEt dans une prochaine mise \xE0 jour.</li>
+<li>Toutes les corrections passent par un <b>module d'approbation</b> : l'auteur les v\xE9rifie une \xE0 une avant de les publier.</li>
 </ul>
 <h4>Guitare, basse et ukul\xE9l\xE9</h4>
 <ul>
@@ -349,6 +352,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.fr={ui:{titulo:"Man
 <li><b>Je ne vois pas les M\xE9ditations</b> : \xE9crivez <b>meditaciones</b> dans la recherche.</li>
 </ul>`},novedades:{titulo:"Nouveaut\xE9s",html:`
 <ul>
+<li><b>2.108.0</b> \u2014 \u270F\uFE0F \xC9diteur : \u21B6 Annuler \xE0 c\xF4t\xE9 d'Enregistrer ; le menu \u22EE ajoute juste l\xE0 ; \uFF0B dans Parties et Voix pour ajouter celles qui manquent ; un message confirme si la correction a \xE9t\xE9 envoy\xE9e. Accords en notation latine pass\xE9s en C D E (affich\xE9s selon \u2630 Menu \u2192 Notation) et \xAB Rit. \xBB des chants en italien affich\xE9 comme \xE9tiquette Ritornello.</li>
 <li><b>2.100.0</b> \u2014 \u{1F3BC} Apprendre \xE0 lire la musique (Menu \u2192 Outils, ou M\xE9tronome et Accordeur \u2192 Notes) : toutes les notes sur les lignes et interlignes de chaque cl\xE9 (sol, fa, ut et grande port\xE9e), alt\xE9rations \u266F \u266D \u266E \u{1D12A} \u{1D12B} et enharmonies, tonalit\xE9s avec armure, gamme et accords de chaque degr\xE9, accords bien orthographi\xE9s, figures, silences et mesures, et un jeu pour s\u2019exercer. Touchez une note pour l\u2019\xE9couter.</li>
 <li><b>2.99.0</b> \u2014 \u{1F3BC} Vocalises : une port\xE9e pour apprendre o\xF9 vont les notes. Grande port\xE9e (sol en haut, fa en bas) ou cl\xE9 de sol, sol octave basse, fa 4e et 3e ligne, et ut 1re \xE0 4e ligne. Alt\xE9rations comme dans la tonalit\xE9, avec di\xE8ses ou b\xE9mols (Do\u266F majeur = do\u266F\u2013mi\u266F\u2013sol\u266F). La note jou\xE9e s\u2019affiche sur la port\xE9e.</li>
 <li><b>2.98.0</b> \u2014 \u{1F3A4} Vocalises : le parcours des tonalit\xE9s montre la tessiture de chaque voix (S, A, T, B) avec sa couleur ; la voix qui peut chanter la tonalit\xE9 en cours s\u2019allume et la bande de la voix choisie est marqu\xE9e.</li>
