@@ -364,7 +364,40 @@
 
   /* ---------- Proyector: baja la pantalla y se enciende ---------- */
   const proj = ui('proj');
-  if (proj) new IntersectionObserver(([e], o) => { if (e.isIntersecting) { proj.classList.add('on'); o.disconnect(); } }, { threshold: .35 }).observe($('.proj-scene'));
+  const replay = (el, cls) => { if (!el) return; el.classList.remove(cls); void el.offsetWidth; requestAnimationFrame(() => el.classList.add(cls)); };
+
+  /* ---------- Pestañas con avance automático ---------- */
+  $$('[data-tabs]').forEach(set => {
+    const btns = $$('[role=tab]', set), ind = $('.tabs-ind', set), tablist = $('.tabs', set);
+    const dur = +set.dataset.auto || 6500; set.style.setProperty('--dur', dur + 'ms');
+    let idx = 0, timer = 0, auto = !reduce, inView = false, hover = false;
+    const place = () => { const b = btns[idx]; ind.style.width = b.offsetWidth + 'px'; ind.style.transform = 'translateX(' + (b.offsetLeft - 0) + 'px)'; };
+    function show(i, user) {
+      idx = (i + btns.length) % btns.length;
+      btns.forEach((b, k) => { const on = k === idx; b.setAttribute('aria-selected', String(on)); b.tabIndex = on ? 0 : -1; ui(b.getAttribute('aria-controls')).hidden = !on; });
+      place();
+      const b = btns[idx]; if (tablist.scrollWidth > tablist.clientWidth) tablist.scrollTo({ left: b.offsetLeft - 16, behavior: reduce ? 'auto' : 'smooth' });
+      const id = b.getAttribute('aria-controls');
+      if (id === 'p-proyector') replay(proj, 'on');
+      if (id === 'p-tv') replay($('#p-tv .tv'), 'in');
+      if (user) { auto = false; set.classList.remove('auto'); clearTimeout(timer); track('pestana_promo', { pestana: id }); }
+      else if (auto) { set.classList.remove('auto'); void set.offsetWidth; set.classList.add('auto'); }
+      schedule();
+    }
+    function schedule() { clearTimeout(timer); if (auto && inView && !hover) timer = setTimeout(() => show(idx + 1), dur); }
+    btns.forEach((b, i) => b.addEventListener('click', () => show(i, true)));
+    tablist.addEventListener('keydown', e => {
+      const k = e.key; if (!['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(k)) return; e.preventDefault();
+      show(k === 'Home' ? 0 : k === 'End' ? btns.length - 1 : idx + (k === 'ArrowRight' ? 1 : -1), true); btns[idx].focus();
+    });
+    set.addEventListener('pointerenter', () => { hover = true; set.classList.add('paused'); clearTimeout(timer); });
+    set.addEventListener('pointerleave', () => { hover = false; set.classList.remove('paused'); if (auto) show(idx); });
+    new IntersectionObserver(([e]) => { inView = e.isIntersecting; if (inView && auto && !set.classList.contains('auto')) show(idx); else schedule(); }, { threshold: .35 }).observe(set);
+    addEventListener('resize', place); document.fonts && document.fonts.ready.then(place);
+    show(0);
+    set.classList.remove('auto');
+  });
+  const md = ui('meditDate'); if (md) md.textContent = new Date().toLocaleDateString('es-AR', { weekday: 'long', day: 'numeric', month: 'long' });
 
   /* ---------- Idiomas ---------- */
   const LANGS = [['Español','Caminamos en la luz de Dios'],['Zulú',"Siyahamba, ekukanyen' kwenkos'"],['English','We are marching in the light of God'],['Português','Caminhamos sob a luz de Deus'],['Français','Nous marchons dans la lumière de Dieu'],['Afrikaans','Ons marsjeer nou in die lig van God'],['Íslenska','Við göngum í ljósi Guðs'],['Kiswahili','Twatembea nuruni mwake']];
