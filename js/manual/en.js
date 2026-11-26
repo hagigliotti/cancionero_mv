@@ -18,7 +18,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 </ul>`},pantalla:{titulo:"The main screen",html:`
 <ul>
 <li><b>Logo</b> at the top. Below it, the <b>welcome verse</b> (Psalm 146:2), shown whenever no song is open, also when you change book.</li>
-<li><b>\u2630 Menu</b> (left): organized in sections that open and close by tapping their title (they always start closed; under each one you see in grey what it contains): <b>\u{1F3BC} This song</b> (transpose, diagram, tablature, transposed chords, teleprompter, edit; always on top, greyed out when no song is open), <b>\u{1F3B9} Instruments</b> (Piano, Acoustic guitar soon), <b>\u{1F39A}\uFE0F Tools</b> (Metronome and Tuner, Music notepad), <b>\u{1F3B5} My music</b> (My Lists, My Playlists), <b>\u{1F4DA} Read</b> (Book, Library, Meditations), <b>\u2699\uFE0F Settings</b> (font size, language, color, notices) and, at the bottom, <b>\u26EA Church mode</b> (projector and TV, on a computer). At the foot: Share, Buy me a coffee, Contact, App information and Manual.</li>
+<li><b>\u2630 Menu</b> (left): organized in sections that open and close by tapping their title (they always start closed; under each one you see in grey what it contains): <b>\u{1F3BC} This song</b> (transpose, diagram, tablature, transposed chords, teleprompter, edit; always on top, greyed out when no song is open), <b>\u{1F3B9} Instruments</b> (Piano, Acoustic guitar soon), <b>\u{1F39A}\uFE0F Tools</b> (Metronome and Tuner, Music notepad), <b>\u{1F3B5} My music</b> (My Lists, My Playlists), <b>\u{1F4DA} Library</b> (Songbook, Books, Meditations), <b>\u2699\uFE0F Settings</b> (font size, language, color, notices) and, at the bottom, <b>\u26EA Church mode</b> (projector and TV, on a computer). At the foot: Share, Buy me a coffee, Contact, App information and Manual.</li>
 <li><b>\u{1F50E} Search</b> (center): see the chapter <i>Search</i>. The <b>\u2715</b> clears it and goes back home.</li>
 <li><b>Flag</b> (right): language of the app and of the songs. See the chapter <i>Languages</i>.</li>
 <li><b>Letter bar</b> (abc, #, A, B, C\u2026): opens the list of songs starting with that letter. The \u25C0 \u25B6 arrows scroll it. Hymnals also show a bar of <b>number ranges</b> (1-50, 51-100\u2026).</li>
@@ -27,7 +27,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>Icons at the top of the menu</b>, in this order: <b>\u{1F3B6} notes</b> (closes the menu), <b>\u{1F3A7} My Playlists</b>, <b>\u{1F6D0} Prayer requests</b> and <b>\u{1F4D6} Bible, Devotionals and Bible in a Year</b>. In the Bible, Devotionals, Bible in a Year, Prayer and player windows, <b>tapping the top-left icon opens the menu</b>.</li>
 <li><b>\u2328\uFE0F On-screen keyboard</b> (computers only: extended monitor, touch screen or projector): the \u2328\uFE0F button next to the \u2715 of the search box and of windows with text fields opens a keyboard to type without the physical one. It also opens by <b>swiping up from the bottom edge to the middle of the screen</b>. It has \xF1, accents (\xB4 + vowel), shift, symbols (?#), \u21B5 to search or send and \u2715 (or Esc) to close it. The <b>layout follows the app language</b> (QWERTY, AZERTY for French, QWERTZ for German, with \xF1 in Spanish, \xE8 \xF2 \xE0 in Italian, \xE7 \xE3 in Portuguese, \u1EBD \u1EF9 in Guarani); the <b>\u{1F310}</b> key switches to another one without changing the app language. It also appears with <b>TV mode</b> turned on on a computer. It doesn't appear on phones, tablets or TV sets, which have their own keyboard.</li>
 </ul>`},libros:{titulo:"The books",html:`
-<p>Choose the book in <b>\u2630 Menu \u2192 Resources \u2192 Book</b>.</p>
+<p>Choose the book in <b>\u2630 Menu \u2192 Library \u2192 Songbook</b>.</p>
 <ul>
 <li><b>Cancionero MV</b> \u2014 choruses and songs (mark <b>C</b>).</li>
 <li><b>Himnario Adventista 2009</b> \u2014 by number (mark <b>'09</b>).</li>
@@ -205,7 +205,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li><b>\u2699\uFE0F Organize and back up</b>: <b>\u{1F4BE} Backup</b> (one file with everything, photos included).</li>
 <li>Everything, photos included, stays only on your device.</li>
 </ul>`},lectura:{titulo:"Bible, Devotionals, Bible in a Year and #RBHW (\u{1F4D6} button)",html:`
-<p>At the top of the <b>\u2630 Menu</b>, the <b>\u{1F4D6}</b> button opens a menu with four options: <b>\u{1F4D6} Holy Bible</b>, <b>\u{1F54A}\uFE0F Devotionals</b>, <b>\u{1F4C5} Bible in a Year</b> and <b>\u{1F525} #RBHW</b>. All of them are also in <b>\u2630 Menu \u2192 Resources \u2192 Library</b>.</p>
+<p>At the top of the <b>\u2630 Menu</b>, the <b>\u{1F4D6}</b> button opens a menu with four options: <b>\u{1F4D6} Holy Bible</b>, <b>\u{1F54A}\uFE0F Devotionals</b>, <b>\u{1F4C5} Bible in a Year</b> and <b>\u{1F525} #RBHW</b>. All of them are also in <b>\u2630 Menu \u2192 Library \u2192 Books</b>.</p>
 <p>Everything follows the <b>app language</b> (Guarani uses Spanish); you can change it with the flag on each screen without changing the app language.</p>`},biblia:{titulo:"Holy Bible",html:`
 <h4>Opening it</h4>
 <ul>
@@ -258,7 +258,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li>Every book you open is saved on the device. The first search in a version downloads the whole Bible (about 4 MB) and after that it searches offline.</li>
 </ul>`},meditaciones:{titulo:"Devotionals",html:`
 <ul>
-<li>The devotional books are unlocked by typing <b>meditaciones</b> in the main search box (typing it again hides them). Then open them from <b>\u{1F4D6} \u2192 Devotionals</b>, <b>\u2630 Menu \u2192 Resources \u2192 Devotionals</b> or the <b>Library</b> (where each book has <b>Read today's</b> and <b>Download</b>).</li>
+<li>The devotional books are unlocked by typing <b>meditaciones</b> in the main search box (typing it again hides them). Then open them from <b>\u{1F4D6} \u2192 Devotionals</b>, <b>\u2630 Menu \u2192 Library \u2192 Devotionals</b> or the <b>Library</b> (where each book has <b>Read today's</b> and <b>Download</b>).</li>
 <li>The book you choose is remembered: next time the same one opens (one per language).</li>
 <li>At the top: the <b>flag</b> (language of the books), the <b>book</b> and its author. When you change the app language, the list of books changes.</li>
 <li>It always opens on <b>today</b>. <b>\u2039 \u203A</b>, swiping or the arrows change the day; <b>\u{1F5D3}\uFE0F</b> opens the calendar and <b>Today</b> goes back to today. February 29 is not in the books.</li>
@@ -288,7 +288,7 @@ window.MANUAL_I18N=window.MANUAL_I18N||{},window.MANUAL_I18N.en={ui:{titulo:"Use
 <li>The <b>flag</b> at the top chooses the reading <b>language</b> (it can differ from the app's, as in Devotionals) and next to it you choose the Bible <b>version</b>.</li>
 </ul>`},biblioteca:{titulo:"Library",html:`
 <ul>
-<li><b>\u2630 Menu \u2192 Resources \u2192 Library</b>. It shows only what is in the <b>app language</b> and changes when you change the flag:</li>
+<li><b>\u2630 Menu \u2192 Library \u2192 Books</b>. It shows only what is in the <b>app language</b> and changes when you change the flag:</li>
 <li><b>\u{1F4D6} Bible</b> (the version chosen for that language) \xB7 <b>\u{1F4C5} Bible in a Year</b> (today's reading and progress) \xB7 <b>\u{1F4DA} Books</b> to read or download, with their rights and permissions \xB7 <b>\u{1F54A}\uFE0F Devotionals</b> (each book with its rights, <b>Read today's</b> and <b>Download</b>; they appear after typing \xABmeditaciones\xBB in the search box).</li>
 <li>The search box filters by title or author in every section.</li>
 </ul>`},info:{titulo:"App information",html:`
